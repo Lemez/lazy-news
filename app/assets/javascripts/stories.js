@@ -25,7 +25,7 @@ var TypeDict = {
 	"blogs"	: ["afropop", "afrobeat", "mondomix", "womex"]
 }
 
-	if ($('.all_by_date').css("display", "block")) {
+	if ($('.all_by_date').css("display", "inline")) {
 
 		// $('button#all_by_date').siblings('button').removeClass('active');
 
@@ -71,7 +71,10 @@ var TypeDict = {
 		 .html("<h2>" + myDate + "</h2>")
 		 .css("visibility", "visible"); // display date
 
-
+		 $(document)
+		 .find("div#mysource")
+		 .html("<h2>" + mySource + "</h2>")
+		 .css("visibility", "visible"); // display date
 
 		 $(document)
 		 .find("img#logo")
@@ -89,6 +92,9 @@ var TypeDict = {
 		$('header')
 				.find("#date")
 				.html(" ") 
+				.removeClass("on");
+		$('header')
+				.find("img")
 				.removeClass("on");
 
 		$(this).find("td").css("visibility", "hidden");

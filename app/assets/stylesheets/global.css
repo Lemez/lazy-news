@@ -159,12 +159,13 @@ nav button:hover {
 	padding-left: 5%;
 }
 
-#mysource {
+#mysource h4 {
 	float: left;
+	font-size: 18px;
 	padding-left: 5%;
 }
 
-#mydate h2, #mysource h2 {
+#mydate h2 {
 	font-family: 'Oxygen', sans-serif;
 	font-weight: 700;
 	line-height: 3;

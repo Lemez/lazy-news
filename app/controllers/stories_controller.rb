@@ -2,29 +2,35 @@ class StoriesController < ApplicationController
 
   def index
 
+    @stories = Story.all
+    @stories.each {|story| story.title = story.title.chomp!}
+
      @source_keys = []
-     Story.latest_order.each do |story|
+     @stories.latest_order.each do |story|
       @source_keys << story.area unless @source_keys.include?(story.area)
      end
 
 
-    @recent_musically = Story.musically.latest_order
-    @recent_techcrunch_edu = Story.techcrunch.is_education.latest_order
-    @recent_techcrunch_music = Story.techcrunch.is_music.latest_order
-    @recent_venturebeat = Story.venturebeat.is_education.latest_order
+    @recent_musically = @stories.musically.latest_order
+    @recent_techcrunch_edu = @stories.techcrunch.is_education.latest_order
+    @recent_techcrunch_music = @stories.techcrunch.is_music.latest_order
+    @recent_venturebeat_edu = @stories.venturebeat.is_education.latest_order
+    @recent_venturebeat_music = @stories.venturebeat.is_music.latest_order
 
 
-    @music_sources = Story.is_music.latest_order
-    @education_sources = Story.is_education.latest_order
+    @music_sources = @stories.is_music.latest_order
+    @education_sources = @stories.is_education.latest_order
 
 
-    @all_by_date = Story.ordered.limit(50)
-    @all_by_a_to_z = Story.a_to_z.limit(50)
+    @all_by_date = @stories.ordered.limit(50)
+    @all_by_a_to_z = @stories.a_to_z.limit(50)
 
     @sources = [ @recent_musically,      
                  @recent_techcrunch_music,
+                 @recent_venturebeat_music,
                  @recent_techcrunch_edu,
-                 @recent_venturebeat
+                 @recent_venturebeat_edu
+                 
               ]
 
   

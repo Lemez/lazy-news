@@ -36,8 +36,8 @@ namespace :grab_tasks do
 
      title = item.first_element_child().content
 
-     title = title.gsub! /\t*\n*/, ''.squeeze(" ").strip
-    
+     title = title.gsub! /\t*\n*/,''.squeeze(" ").strip
+     title = title.strip
      modified_line = item.first_element_child().next_element().content
      modified = modified_line[0...modified_line.index("by") -1].to_date
      #pic_url = item.first_element_child().next_element().next_element()["src"]
@@ -51,7 +51,7 @@ namespace :grab_tasks do
      end
 
      full_text = full_text[0...full_text.rindex("Tags ")]
-       p "article"
+
      pic_url = article_page.css('div.postContent a img').first["src"] rescue pic_url = "assets/music_ally.png"
 
      @raw_parameters = { :source => "musically",
@@ -62,7 +62,7 @@ namespace :grab_tasks do
                         :pic_url => pic_url,
                         :full_text => full_text}
 
-      p @raw_parameters
+      # p @raw_parameters
       save_parameters
 
    end
@@ -217,8 +217,7 @@ task :grab_techcrunch_edu => :environment do
   end
 
 
-
-  task :grab_venturebeat => :environment do
+  task :grab_venturebeat_edu => :environment do
    response = HTTParty.get('http://venturebeat.com/category/education/')
    doc = Nokogiri::HTML(response)
    xdoc = doc.css('article.post div a')
@@ -278,49 +277,69 @@ task :grab_techcrunch_edu => :environment do
       i += 1
 
     end
+ end 
 
 
-# //img[@class="date"]
-   
-#    table = doc.xpath('/html/article.has-thumbnail')
-#   imgs   = table.xpath('./img')
+  task :grab_venturebeat_music => :environment do
+   response = HTTParty.get('http://venturebeat.com/tag/music/')
+   doc = Nokogiri::HTML(response)
+   xdoc = doc.css('article.post div a')
+   ydoc = doc.css('article.post')
 
-#    imgs = doc.css('.river')['src']
-#    imgs.each {|pic| p pic}
+# ap xdoc.search('img').map{ |a| [a['src'], a.text] }[0, 9]
+    imgs = []
+    xdoc.xpath("//*[contains(@class, 'river')]").each {|node| imgs << node["src"] if node["src"]  }
+
+    @url = ''
+    urls = []
+    doc.css('article.post div a').each do |item|
+    if item['rel'] == 'bookmark'
+      if @url != item['href']
+        @url = item['href']
+        urls << @url
+      end
+    end
+  end
+
+   titles = []
+    doc.xpath('//h1/a').each {|node| titles << node.text }
+
+    modifieds = []
+    doc.xpath("//*[contains(@class, 'the-time')]").each {|node| modifieds << node.text.to_date }
+
+    fulltexts=[]
+    urls.each do |article|
+      text = []
+      doc = Nokogiri::HTML(HTTParty.get(article))
+      doc.xpath("//*[contains(@class, 'post-content')]/p").each {|node| text << node.text }
+      fulltexts << text.join(" ")
+    end
+
+      # p titles.length
+      # p urls.length
+      # p modifieds.length
+      # p imgs.length # images getting far too many inputs
+      # p fulltexts.length
 
 
-     # title = item.first_element_child().content
+    i = 0
+     while i < titles.length
 
-     # title = title.gsub! /\t*\n*/, ''.squeeze(" ").strip
-    
-     # modified_line = item.first_element_child().next_element().content
-     # modified = modified_line[0...modified_line.index("by") -1].to_date
-     # #pic_url = item.first_element_child().next_element().next_element()["src"]
-  
-     # url = item.first_element_child().next_element().next_element().next_element().first_element_child().next_element().first_element_child()['href']
-     # article_url = HTTParty.get(url)
-     # article_page = Nokogiri::HTML(article_url)
-     # full_text = ''
-     # article_page.css('div.postContent p').each do |para|
-     #   full_text += para.content
-     # end
+      @raw_parameters = { :source => "venturebeat",
+                        :area => "music",
+                       :title => titles[i],
+                       :url => urls[i],
+                       :modified => modifieds[i],
+                       :pic_url => imgs[i],
+                       :full_text => fulltexts[i]}
 
-     # full_text = full_text[0...full_text.rindex("Tags ")]
-     #   p "article"
-     # pic_url = article_page.css('div.postContent a img').first["src"] rescue pic_url = "assets/music_ally.png"
+      # p @raw_parameters  
+      # p '___________'
+      
+      save_parameters
+      i += 1
 
-     # @raw_parameters = { :source => "venturebeat",
-     #                    :area => "education",
-     #                    :title => title,
-     #                    :url => url,
-     #                    :modified => modified,
-     #                    :pic_url => pic_url,
-     #                    :full_text => full_text}
-
-     #  p @raw_parameters
-     #  save_parameters
-
-   
+    end
  end 
 
   private
