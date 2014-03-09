@@ -16,7 +16,8 @@ var LogoDict = {
 					  "musically" : "assets/music_ally.png",
 					  "techcrunch" : "assets/tc.png",
 					  "venturebeat" : "assets/VB_logo.jpg",
-					  "thenextweb" : "assets/TheNextWeb.png"
+					  "thenextweb" : "assets/TheNextWeb.png",
+					  "learnegg" : "assets/learnegg.png"
 					  
 					};
 

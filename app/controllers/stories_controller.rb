@@ -17,6 +17,7 @@ class StoriesController < ApplicationController
     @recent_venturebeat_edu = @stories.venturebeat.is_education.latest_order
     @recent_venturebeat_music = @stories.venturebeat.is_music.latest_order
     @recent_thenextweb_edu = @stories.thenextweb.is_education.latest_order
+    @recent_learnegg = @stories.learnegg.is_education.latest_order
 
     @music_sources = @stories.is_music.latest_order
     @education_sources = @stories.is_education.latest_order
@@ -27,9 +28,10 @@ class StoriesController < ApplicationController
     @sources = [ @recent_musically,      
                  @recent_techcrunch_music,
                  @recent_venturebeat_music,
+                 @recent_learnegg,
                  @recent_techcrunch_edu,
                  @recent_thenextweb_edu,
-                 @recent_venturebeat_edu
+                 @recent_venturebeat_edu,
               ]
 
   

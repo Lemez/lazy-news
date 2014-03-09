@@ -407,6 +407,57 @@ end
      end
  end 
 
+
+task :grab_learnegg => :environment do
+   response = HTTParty.get(' http://learnegg.com/')
+   doc = Nokogiri::HTML(response)
+   xdoc = doc.css('div.post')
+
+# ap xdoc.search('img').map{ |a| [a['src'], a.text] }[0, 9]
+    imgs = []
+    xdoc.xpath("//img")[2..-1].each {|node| imgs << node["src"] if node["src"]  }
+
+    urls = []
+    titles = []
+    xdoc.xpath("//*[contains(@rel, 'bookmark')]").each do |node|
+      urls << node["href"] if !urls.include?(node["href"])  
+      title = node.text.strip
+      titles << title if !urls.include?(title) and title.length>0 
+    end
+
+    # modifieds = []
+    # fulltexts = []
+
+    #  urls.each do |url|
+    #   text = []
+    #   index = 0
+    #   article = Nokogiri::HTML(HTTParty.get(url))
+    #   newdoc = article.css('div.grid')
+    #   newdoc.xpath("//*[contains(@itemprop, 'datePublished')]").each do |node|
+    #       modifieds << node.text.to_date if node.text 
+    #     end
+
+    i = 0
+     while i < titles.length
+
+      @raw_parameters = { :source => "learnegg",
+                        :area => "education",
+                       :title => titles[i],
+                       :url => urls[i],
+                       :modified => nil,
+                       :pic_url => imgs[i],
+                       :full_text => nil}
+
+      p @raw_parameters  
+      p '___________'
+      
+      save_parameters
+      i += 1
+
+     end
+ end 
+
+ 
   private
    def story_params
      params.require(:title, :url).permit(:pic, :modified)
@@ -415,10 +466,6 @@ end
    def valid_date
      self.modified <= Date.today
     end
-
-
-
-
 
  end
 

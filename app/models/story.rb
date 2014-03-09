@@ -37,7 +37,7 @@ scope :venturebeat, -> { where(source:"venturebeat") }
 scope :techcrunch, -> { where(source:"techcrunch") } 
 scope :musically, -> { where(source:"musically") }
 scope :thenextweb, -> { where(source:"thenextweb") }
-
+scope :learnegg, -> { where(source:"learnegg") }
 
 scope :is_music, -> {where(area:"music")}
 scope :is_education, -> {where(area:"education")}
