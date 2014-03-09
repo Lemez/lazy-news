@@ -289,6 +289,20 @@ img.downarrow {
     color: black;
 }
 
+.thenextweb tr {
+    border-bottom: 2px solid orangered;
+}
+
+.thenextweb ul li span {
+    color: orangered;
+}
+
+.thenextweb .square,
+    /*button#mondomix, */
+.thenextweb a:hover {
+    background-color: orangered;
+    color: black;
+}
 
 
 .all_by_date {

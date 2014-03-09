@@ -16,11 +16,10 @@ class StoriesController < ApplicationController
     @recent_techcrunch_music = @stories.techcrunch.is_music.latest_order
     @recent_venturebeat_edu = @stories.venturebeat.is_education.latest_order
     @recent_venturebeat_music = @stories.venturebeat.is_music.latest_order
-
+    @recent_thenextweb_edu = @stories.thenextweb.is_education.latest_order
 
     @music_sources = @stories.is_music.latest_order
     @education_sources = @stories.is_education.latest_order
-
 
     @all_by_date = @stories.ordered.limit(50)
     @all_by_a_to_z = @stories.a_to_z.limit(50)
@@ -29,8 +28,8 @@ class StoriesController < ApplicationController
                  @recent_techcrunch_music,
                  @recent_venturebeat_music,
                  @recent_techcrunch_edu,
+                 @recent_thenextweb_edu,
                  @recent_venturebeat_edu
-                 
               ]
 
   

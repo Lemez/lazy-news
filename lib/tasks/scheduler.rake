@@ -27,6 +27,8 @@ namespace :grab_tasks do
 
 
 
+
+
   task :grab_musically => :environment do
    response = HTTParty.get('http://musically.com/features-2/')
    doc = Nokogiri::HTML(response)
@@ -340,6 +342,69 @@ task :grab_techcrunch_edu => :environment do
       i += 1
 
     end
+end
+
+ task :grab_nextweb_edu => :environment do
+   response = HTTParty.get('http://thenextweb.com/?s=edtech&fq=&sort=date&order=desc#!y6Yk6
+')
+   doc = Nokogiri::HTML(response)
+   xdoc = doc.css('div.article-listing')
+
+# ap xdoc.search('img').map{ |a| [a['src'], a.text] }[0, 9]
+    imgs = []
+    xdoc.xpath("//*[contains(@class, 'wp-post-image')]").each {|node| imgs << node["src"] if node["src"]  }
+
+    urls = []
+    titles = []
+    xdoc.xpath("//*[contains(@class, 'post-link')]").each do |node|
+      urls << node["href"] if !urls.include?(node["href"])  
+      title = node.text.strip
+      titles << title if !urls.include?(title) and title.length>0 
+    end
+
+    modifieds = []
+    fulltexts = []
+
+    urls.each do |url|
+      text = []
+      index = 0
+      article = Nokogiri::HTML(HTTParty.get(url))
+      newdoc = article.css('div.article-head')
+      newdoc.xpath("//*[contains(@class, 'article-date')]").each do |node|
+        if node.text
+          date = node.text
+          i = date.index("'")
+          formatted = date[0...i] + '20' + date[i+1..-1]
+          modifieds << formatted.to_date  
+        end
+      end
+      # body = newdoc.xpath("//*[contains(@itemprop, 'articleBody')] and not(@class,'headline')")
+      # body.xpath("//p").each {|node| text << node.text }
+      newdoc.xpath("//p[not(@class)]").each {|node| text << node.text }
+
+      text = text.join(" ").strip
+      fulltexts << text[0...(text.index("\n\t"))]
+
+    end
+
+    i = 0
+     while i < titles.length
+
+      @raw_parameters = { :source => "thenextweb",
+                        :area => "education",
+                       :title => titles[i],
+                       :url => urls[i],
+                       :modified => modifieds[i],
+                       :pic_url => imgs[i],
+                       :full_text => fulltexts[i]}
+
+      p @raw_parameters  
+      p '___________'
+      
+      save_parameters
+      i += 1
+
+     end
  end 
 
   private
@@ -349,7 +414,7 @@ task :grab_techcrunch_edu => :environment do
 
    def valid_date
      self.modified <= Date.today
-  end
+    end
 
 
 
