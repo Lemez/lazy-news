@@ -39,9 +39,6 @@
 
 	<div class="all_by_a_to_z" id="music">
 		<div class = 'sixteen columns offset-by-one'>
-		
-		
-		<br class="clear" />
 
 		<div class="row">
 			
@@ -61,6 +58,12 @@
 										<% t=story.modified %>
 										<%=  t.strftime("%m.%d.%Y").strip if t %> 
 									</span> 
+									<span class='tag'>
+										<%= story.area.upcase %>
+									</span>
+									<!-- <span class='icon'>
+										<img src="<%# story.area.to_icon %>" width='20'/>
+									</span> -->
 									<%= link_to story.title, story.url %>
 								</th>
 							</tr>

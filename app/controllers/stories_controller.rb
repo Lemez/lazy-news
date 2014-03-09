@@ -22,8 +22,8 @@ class StoriesController < ApplicationController
     @music_sources = @stories.is_music.latest_order
     @education_sources = @stories.is_education.latest_order
 
-    @all_by_date = @stories.ordered.limit(50)
-    @all_by_a_to_z = @stories.a_to_z.limit(50)
+    @all_by_date = @stories.latest_order_hundred
+    @all_by_a_to_z = @all_by_date.a_to_z
 
     @sources = [ @recent_musically,      
                  @recent_techcrunch_music,

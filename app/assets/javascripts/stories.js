@@ -56,7 +56,10 @@ var TypeDict = {
 	$('tbody tr').mouseenter(function () {
 
 		// get date value
-		var myDate = $.trim($(this).find("th").find('span').text());
+		var myDate = $.trim($(this).find("th").find('span.intext').text());
+		if (myDate == '') {
+			myDate = "N/A";
+		} 
 
 		// get image value
 		var myPic = $(this).find("img").attr("src");

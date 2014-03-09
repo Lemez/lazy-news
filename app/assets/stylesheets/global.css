@@ -233,6 +233,10 @@ span .on, .on li {
 	display: none;
 }
 
+.tag {
+	font-size: 10px;
+}
+
 .square {
 	display: inline-block;
 	height: 20px;
