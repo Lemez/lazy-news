@@ -1,0 +1,1229 @@
+
+<style type="text/css">
+/* --- reset some elements --- */
+
+#dw ul,ol { list-style:none }
+
+#dw ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,p,blockquote,fieldset,input { margin:0; padding:0 }
+
+/* --- Basic Stylesheet for DokuWiki content --- */
+
+#dw h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+#dw h1 a {
+  color: black;
+}
+
+/* ---------- table of contents ------------------- */
+
+#dw div.toc {
+  margin-left: 2em;
+  margin-top: 1.2em;
+  margin-bottom: 0;
+  float:right;
+  width: 200px;
+  font-size: 80%;
+  padding-top:5px;
+}
+
+#dw div.tocheader {
+  padding: 3px;
+  border: 1px solid #8cacbb;
+  background-color: #dee7ec;
+  text-align: left;
+  font-weight:bold;
+  margin-bottom: 2px;
+}
+
+#dw div.tocheader img {
+  width:0.8em;
+  height:0.8em;
+  margin-top:0.3em;
+  margin-right:3px;
+  float:right;
+  cursor: pointer;
+}
+
+#dw #toc__inside {
+  border: 1px solid #8cacbb;
+  background-color: #fff;
+  text-align: left;
+  padding-top: 0.5em;
+  padding-bottom: 0.7em;
+}
+
+#dw ul.toc {
+  list-style-type: none;
+  list-style-image: none;
+  line-height: 1.2em;
+  margin: 0;
+  padding: 0;
+  padding-left: 1em;
+}
+
+#dw ul.toc li {
+  background: transparent url(../lib/tpl/fsinfo/images/tocdot2.gif) 0 0.6em no-repeat;
+  padding-left:0.4em;
+}
+
+#dw ul.toc li.clear {
+  background-image: none;
+  padding-left:0.4em;
+}
+
+#dw a.toc {
+  color: #436976;
+  text-decoration:none;
+}
+
+#dw a.toc:hover {
+  color: #000;
+  text-decoration:underline;
+}
+
+/* --------------------- footnotes -------------------------------- */
+
+#dw div.footnotes{
+  clear:both;
+  border-top: 1px solid #8cacbb;
+  padding-left: 1em;
+  margin-top: 1em;
+}
+
+#dw div.fn{
+  font-size:90%;
+}
+
+#dw a.fn_top{
+  vertical-align:super;
+  font-size:80%;
+}
+
+#dw a.fn_bot{
+  vertical-align:super;
+  font-size:80%;
+  font-weight:bold;
+}
+
+/* insitu-footnotes */
+#dw div.insitu-footnote {
+  font-size: 80%;
+  line-height: 1.2em;
+  border: 1px solid #8cacbb;
+  background: #eef3f8;
+  text-align: left;
+  padding: 4px;
+  max-width: 40%;    /* IE's width is handled in javascript */
+}
+
+/* overcome IE issue with one line code or file boxes which require h. scrolling */
+#dw * html .insitu-footnote pre.code, * html .insitu-footnote pre.file {
+  padding-bottom: 18px;
+}
+
+/* --------------------- Tables -------------------------------- */
+
+#dw table.inline td.okay {
+  background-color: #afa;
+  text-align: center;
+}
+
+#dw table.inline td.notokay {
+  background-color: #fcc;
+  text-align: center;
+}
+
+#dw table.inline {
+  background-color: #fff;
+  border-spacing: 0px;
+  border-collapse: collapse;
+}
+
+/* ------------- Page elements ----------------- */
+
+#dw span.user{
+/*  color: #ccc; */
+  color: #666;
+  font-size: 90%;
+}
+
+#dw li.minor {
+  color: #666;
+  font-style: italic;
+}
+
+/* embedded images */
+#dw img.media {
+  margin: 3px;
+}
+
+#dw img.medialeft {
+  border: 0;
+  float: left;
+  margin: 0 1.5em 0 0;
+}
+
+#dw img.mediaright {
+  border: 0;
+  float: right;
+  margin: 0 0 0 1.5em;
+}
+
+#dw img.mediacenter {
+  border: 0;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* smileys */
+#dw img.middle {
+  vertical-align: middle;
+}
+
+#dw acronym {
+  cursor: help;
+  border-bottom: 1px dotted #000;
+}
+
+/* general headline setup */
+#dw h1, #dw h2, #dw h3, #dw h4, #dw h5 {
+    color: Black;
+    background-color: transparent;
+    font-family: "Lucida Grande", Verdana, Lucida, Helvetica, Arial, sans-serif;
+    font-size: 100%;
+    font-weight: normal;
+    margin-left:    0;
+    margin-right:   0;
+    margin-top:     0;
+    margin-bottom:  1em;
+    padding-left:   0;
+    padding-right:  0;
+    padding-top:    0.5em;
+    padding-bottom: 0;
+    border-bottom: 1px solid #8cacbb;
+}
+
+/* special headlines */
+/*
+#dw h1 {font-size: 160%; margin-left: 0px; font-weight: bold;}
+#dw h2 {font-size: 150%; margin-left: 20px; font-weight: bold;}
+#dw h3 {font-size: 130%; margin-left: 40px; border-bottom: none; font-weight: bolder}
+#dw h4 {font-size: 115%; margin-left: 60px; border-bottom: none; font-weight: bolder}
+#dw h5 {font-size: 100%; margin-left: 80px; border-bottom: none; font-weight: bold;}
+*/
+
+#dw h1 {font-size: 160%; font-weight: bold;}
+#dw h2 {font-size: 140%; font-weight: bold; }
+#dw h3 {font-size: 130%; border-bottom: none; font-weight: bolder}
+#dw h4 {font-size: 115%; border-bottom: none; font-weight: bolder}
+#dw h5 {font-size: 100%; border-bottom: none; font-weight: bold;}
+
+/* indent different sections */
+/*
+#dw div.level1 {margin-left: 3px;}
+#dw div.level2 {margin-left: 23px;}
+#dw div.level3 {margin-left: 43px;}
+#dw div.level4 {margin-left: 63px;}
+#dw div.level5 {margin-left: 83px;}
+*/
+
+/* unordered lists */
+#dw ul {
+  line-height: 1.5em;
+  list-style-type: square;
+  margin: 0 0 0.5em 2em;
+  padding: 0;
+  color: #638c9c;
+  list-style-image: none;
+}
+
+/* ordered lists */
+#dw ol {
+  line-height: 1.5em;
+  margin: 0 0 0.5em 2em;
+  padding: 0;
+  color: #638c9c;
+  font-weight: bold;
+  list-style-image: none;
+}
+
+/* the list items overriding the ul/ol definition */
+#dw .li {
+  color: #000;
+  font-weight: normal;
+}
+
+#dw ol {list-style-type: decimal}
+#dw ol ol {list-style-type: upper-roman}
+#dw ol ol ol {list-style-type: lower-alpha}
+#dw ol ol ol ol {list-style-type: lower-greek}
+
+#dw li.open {
+  list-style-image: url(../lib/tpl/fsinfo/images/open.gif);
+    /*list-style-type: circle;*/
+}
+
+#dw li.closed {
+  list-style-image: url(../lib/tpl/fsinfo/images/closed.gif);
+    /*list-style-type: disc;*/
+}
+
+#dw blockquote {
+  border-left: 2px solid #8cacbb;
+  padding-left: 3px;
+  margin-left: 0;
+}
+
+/* code blocks by indention */
+#dw pre.pre {
+  font-size: 100%;
+  padding: 0.5em;
+  border: 1px dashed #8cacbb;
+  color: Black;
+  background-color: #f7f9fa;
+  overflow: auto;
+}
+
+/* code blocks by code tag */
+#dw pre.code {
+  font-size: 100%;
+  padding: 0.5em;
+  border: 1px dashed #8cacbb;
+  color: Black;
+  background-color: #f7f9fa;
+  overflow: auto;
+}
+
+/* inline code words */
+#dw code {
+  font-size: 80%;
+}
+
+/* code blocks by file tag */
+#dw pre.file {
+  font-size: 100%;
+  padding: 0.5em;
+  border: 1px dashed #8cacbb;
+  color: Black;
+  background-color: #dee7ec;
+  overflow: auto;
+}
+
+/* inline tables */
+
+#dw table.inline th {
+  padding: 3px;
+  border: 1px solid #8cacbb;
+  background-color: #dee7ec;
+  text-align: left;
+}
+
+#dw table.inline td {
+  padding: 3px;
+  border: 1px solid #8cacbb;
+}
+</style>
+<link rel='stylesheet' id='eme_stylesheet-css'  href='../wp-content/plugins/events-made-easy/events_manager-ver=3.6.css' type='text/css' media='all' />
+<link rel='stylesheet' id='A2A_SHARE_SAVE-css'  href='../wp-content/plugins/add-to-any/addtoany.min-ver=1.4.css' type='text/css' media='all' />
+<script type='text/javascript' src='../wp-includes/js/jquery/jquery.js?ver=1.10.2'></script>
+<script type='text/javascript' src='../wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<script type='text/javascript' src='../wp-content/plugins/google-analyticator/external-tracking.min.js?ver=6.4.5'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../xmlrpc-rsd.php.html" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 3.6" />
+
+<script type="text/javascript"><!--
+var a2a_config=a2a_config||{},wpa2a={done:false,html_done:false,script_ready:false,script_load:function(){var a=document.createElement('script'),s=document.getElementsByTagName('script')[0];a.type='text/javascript';a.async=true;a.src='http://static.addtoany.com/menu/page.js';s.parentNode.insertBefore(a,s);wpa2a.script_load=function(){};},script_onready:function(){if(a2a.type=='page'){wpa2a.script_ready=true;if(wpa2a.html_done)wpa2a.init();}},init:function(){for(var i=0,el,target,targets=wpa2a.targets,length=targets.length;i<length;i++){el=document.getElementById('wpa2a_'+(i+1));target=targets[i];a2a_config.linkname=target.title;a2a_config.linkurl=target.url;if(el)a2a.init('page',{target:el});wpa2a.done=true;}}};a2a_config.tracking_callback=['ready',wpa2a.script_onready];
+//--></script>
+<meta name="_awb_version" content="2.0.3" /><link rel="stylesheet" href="../wp-content/themes/arras/css/styles/default.css" type="text/css" media="screen,projection" /><link rel="stylesheet" href="../wp-content/themes/arras/css/layouts/2c-r-fixed.css" type="text/css" />
+<!-- Generated by Arras WP Theme -->
+<style type="text/css">
+	.posts-default li  { width: 205px; height: 225px; }
+	.posts-default img, .posts-default .entry-thumbnails-link { width: 195px; height: 110px; }
+	.posts-default .entry-meta { width: 195px; }
+	.posts-default .entry-thumbnails { width: 205px; height: 120px; }
+			.posts-quick .entry-thumbnails img { width: 115px; height: 115px; }
+		.posts-quick .entry-meta { width: 115px; }
+			.featured { height: 260px; }
+	.featured-article { width: 640px; height: 250px; }
+	.featured-article img { width: 640px; height: 250px; }
+	#controls { width: 610px; top: 110px; }
+	#controls .next { left: 610px; }
+	.featured-entry { height: 84px; top: -84px; }
+	.featured-slideshow-inner { height: 250px }
+		.featured-stories-summary  { margin-left: 51px; }
+	.single .post .entry-photo img, .single-post .entry-photo img  { width: 620px; height: 250px; }
+		.footer-sidebar  { width: 920px; }
+	</style>
+	<script type="text/javascript">
+	jQuery(document).ready(function($) {
+
+$('.multi-sidebar').tabs();
+
+$('.sf-menu').superfish({autoArrows: true, speed: 'fast', dropShadows: 'true'});
+
+$('#commentform').validate();
+
+
+});	</script>
+	<!--[if IE]>
+<style type="text/css">
+.addtoany_list a img{filter:alpha(opacity=70)}
+.addtoany_list a:hover img,.addtoany_list a.addtoany_share_save img{filter:alpha(opacity=100)}
+</style>
+<![endif]-->
+<link rel="stylesheet" href="../wp-content/themes/arras/user.css" type="text/css" media="screen,projection" /><!-- Google Analytics Tracking by Google Analyticator 6.4.5: http://www.videousermanuals.com/google-analyticator/ -->
+<script type="text/javascript">
+	var analyticsFileTypes = [''];
+	var analyticsEventTracking = 'enabled';
+</script>
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-169675-4']);
+        _gaq.push(['_addDevId', 'i9k95']); // Google Analyticator App ID with Google 
+        
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>World Music Central.org</title>
+
+
+<link rel="alternate" type="application/rss+xml" href="../feed/index.html" title="World Music Central.org latest posts" />
+
+<link rel="alternate" type="application/rss+xml" href="../comments/feed/index.html" title="World Music Central.org latest comments" />
+
+<link rel="pingback" href="../xmlrpc.php.html" />
+
+<link rel="shortcut icon" href="../favicon.ico" />
+
+
+<style type="text/css">
+/* --- reset some elements --- */
+
+#dw ul,ol { list-style:none }
+
+#dw ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,p,blockquote,fieldset,input { margin:0; padding:0 }
+
+/* --- Basic Stylesheet for DokuWiki content --- */
+
+#dw h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+#dw h1 a {
+  color: black;
+}
+
+/* ---------- table of contents ------------------- */
+
+#dw div.toc {
+  margin-left: 2em;
+  margin-top: 1.2em;
+  margin-bottom: 0;
+  float:right;
+  width: 200px;
+  font-size: 80%;
+  padding-top:5px;
+}
+
+#dw div.tocheader {
+  padding: 3px;
+  border: 1px solid #8cacbb;
+  background-color: #dee7ec;
+  text-align: left;
+  font-weight:bold;
+  margin-bottom: 2px;
+}
+
+#dw div.tocheader img {
+  width:0.8em;
+  height:0.8em;
+  margin-top:0.3em;
+  margin-right:3px;
+  float:right;
+  cursor: pointer;
+}
+
+#dw #toc__inside {
+  border: 1px solid #8cacbb;
+  background-color: #fff;
+  text-align: left;
+  padding-top: 0.5em;
+  padding-bottom: 0.7em;
+}
+
+#dw ul.toc {
+  list-style-type: none;
+  list-style-image: none;
+  line-height: 1.2em;
+  margin: 0;
+  padding: 0;
+  padding-left: 1em;
+}
+
+#dw ul.toc li {
+  background: transparent url(../lib/tpl/fsinfo/images/tocdot2.gif) 0 0.6em no-repeat;
+  padding-left:0.4em;
+}
+
+#dw ul.toc li.clear {
+  background-image: none;
+  padding-left:0.4em;
+}
+
+#dw a.toc {
+  color: #436976;
+  text-decoration:none;
+}
+
+#dw a.toc:hover {
+  color: #000;
+  text-decoration:underline;
+}
+
+/* --------------------- footnotes -------------------------------- */
+
+#dw div.footnotes{
+  clear:both;
+  border-top: 1px solid #8cacbb;
+  padding-left: 1em;
+  margin-top: 1em;
+}
+
+#dw div.fn{
+  font-size:90%;
+}
+
+#dw a.fn_top{
+  vertical-align:super;
+  font-size:80%;
+}
+
+#dw a.fn_bot{
+  vertical-align:super;
+  font-size:80%;
+  font-weight:bold;
+}
+
+/* insitu-footnotes */
+#dw div.insitu-footnote {
+  font-size: 80%;
+  line-height: 1.2em;
+  border: 1px solid #8cacbb;
+  background: #eef3f8;
+  text-align: left;
+  padding: 4px;
+  max-width: 40%;    /* IE's width is handled in javascript */
+}
+
+/* overcome IE issue with one line code or file boxes which require h. scrolling */
+#dw * html .insitu-footnote pre.code, * html .insitu-footnote pre.file {
+  padding-bottom: 18px;
+}
+
+/* --------------------- Tables -------------------------------- */
+
+#dw table.inline td.okay {
+  background-color: #afa;
+  text-align: center;
+}
+
+#dw table.inline td.notokay {
+  background-color: #fcc;
+  text-align: center;
+}
+
+#dw table.inline {
+  background-color: #fff;
+  border-spacing: 0px;
+  border-collapse: collapse;
+}
+
+/* ------------- Page elements ----------------- */
+
+#dw span.user{
+/*  color: #ccc; */
+  color: #666;
+  font-size: 90%;
+}
+
+#dw li.minor {
+  color: #666;
+  font-style: italic;
+}
+
+/* embedded images */
+#dw img.media {
+  margin: 3px;
+}
+
+#dw img.medialeft {
+  border: 0;
+  float: left;
+  margin: 0 1.5em 0 0;
+}
+
+#dw img.mediaright {
+  border: 0;
+  float: right;
+  margin: 0 0 0 1.5em;
+}
+
+#dw img.mediacenter {
+  border: 0;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* smileys */
+#dw img.middle {
+  vertical-align: middle;
+}
+
+#dw acronym {
+  cursor: help;
+  border-bottom: 1px dotted #000;
+}
+
+/* general headline setup */
+#dw h1, #dw h2, #dw h3, #dw h4, #dw h5 {
+    color: Black;
+    background-color: transparent;
+    font-family: "Lucida Grande", Verdana, Lucida, Helvetica, Arial, sans-serif;
+    font-size: 100%;
+    font-weight: normal;
+    margin-left:    0;
+    margin-right:   0;
+    margin-top:     0;
+    margin-bottom:  1em;
+    padding-left:   0;
+    padding-right:  0;
+    padding-top:    0.5em;
+    padding-bottom: 0;
+    border-bottom: 1px solid #8cacbb;
+}
+
+/* special headlines */
+/*
+#dw h1 {font-size: 160%; margin-left: 0px; font-weight: bold;}
+#dw h2 {font-size: 150%; margin-left: 20px; font-weight: bold;}
+#dw h3 {font-size: 130%; margin-left: 40px; border-bottom: none; font-weight: bolder}
+#dw h4 {font-size: 115%; margin-left: 60px; border-bottom: none; font-weight: bolder}
+#dw h5 {font-size: 100%; margin-left: 80px; border-bottom: none; font-weight: bold;}
+*/
+
+#dw h1 {font-size: 160%; font-weight: bold;}
+#dw h2 {font-size: 140%; font-weight: bold; }
+#dw h3 {font-size: 130%; border-bottom: none; font-weight: bolder}
+#dw h4 {font-size: 115%; border-bottom: none; font-weight: bolder}
+#dw h5 {font-size: 100%; border-bottom: none; font-weight: bold;}
+
+/* indent different sections */
+/*
+#dw div.level1 {margin-left: 3px;}
+#dw div.level2 {margin-left: 23px;}
+#dw div.level3 {margin-left: 43px;}
+#dw div.level4 {margin-left: 63px;}
+#dw div.level5 {margin-left: 83px;}
+*/
+
+/* unordered lists */
+#dw ul {
+  line-height: 1.5em;
+  list-style-type: square;
+  margin: 0 0 0.5em 2em;
+  padding: 0;
+  color: #638c9c;
+  list-style-image: none;
+}
+
+/* ordered lists */
+#dw ol {
+  line-height: 1.5em;
+  margin: 0 0 0.5em 2em;
+  padding: 0;
+  color: #638c9c;
+  font-weight: bold;
+  list-style-image: none;
+}
+
+/* the list items overriding the ul/ol definition */
+#dw .li {
+  color: #000;
+  font-weight: normal;
+}
+
+#dw ol {list-style-type: decimal}
+#dw ol ol {list-style-type: upper-roman}
+#dw ol ol ol {list-style-type: lower-alpha}
+#dw ol ol ol ol {list-style-type: lower-greek}
+
+#dw li.open {
+  list-style-image: url(../lib/tpl/fsinfo/images/open.gif);
+    /*list-style-type: circle;*/
+}
+
+#dw li.closed {
+  list-style-image: url(../lib/tpl/fsinfo/images/closed.gif);
+    /*list-style-type: disc;*/
+}
+
+#dw blockquote {
+  border-left: 2px solid #8cacbb;
+  padding-left: 3px;
+  margin-left: 0;
+}
+
+/* code blocks by indention */
+#dw pre.pre {
+  font-size: 100%;
+  padding: 0.5em;
+  border: 1px dashed #8cacbb;
+  color: Black;
+  background-color: #f7f9fa;
+  overflow: auto;
+}
+
+/* code blocks by code tag */
+#dw pre.code {
+  font-size: 100%;
+  padding: 0.5em;
+  border: 1px dashed #8cacbb;
+  color: Black;
+  background-color: #f7f9fa;
+  overflow: auto;
+}
+
+/* inline code words */
+#dw code {
+  font-size: 80%;
+}
+
+/* code blocks by file tag */
+#dw pre.file {
+  font-size: 100%;
+  padding: 0.5em;
+  border: 1px dashed #8cacbb;
+  color: Black;
+  background-color: #dee7ec;
+  overflow: auto;
+}
+
+/* inline tables */
+
+#dw table.inline th {
+  padding: 3px;
+  border: 1px solid #8cacbb;
+  background-color: #dee7ec;
+  text-align: left;
+}
+
+#dw table.inline td {
+  padding: 3px;
+  border: 1px solid #8cacbb;
+}
+</style>
+<script type='text/javascript' src='../wp-content/themes/arras/js/superfish/hoverIntent.js'></script>
+<script type='text/javascript' src='../wp-content/themes/arras/js/superfish/superfish.js'></script>
+<script type='text/javascript' src='../wp-includes/js/comment-reply.min.js?ver=3.6'></script>
+<script type='text/javascript' src='../wp-content/themes/arras/js/jquery.validate.min.js'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../xmlrpc-rsd.php.html" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 3.6" />
+
+<script type="text/javascript"><!--
+var a2a_config=a2a_config||{},wpa2a={done:false,html_done:false,script_ready:false,script_load:function(){var a=document.createElement('script'),s=document.getElementsByTagName('script')[0];a.type='text/javascript';a.async=true;a.src='/page.js';s.parentNode.insertBefore(a,s);wpa2a.script_load=function(){};},script_onready:function(){if(a2a.type=='page'){wpa2a.script_ready=true;if(wpa2a.html_done)wpa2a.init();}},init:function(){for(var i=0,el,target,targets=wpa2a.targets,length=targets.length;i<length;i++){el=document.getElementById('wpa2a_'+(i+1));target=targets[i];a2a_config.linkname=target.title;a2a_config.linkurl=target.url;if(el)a2a.init('page',{target:el});wpa2a.done=true;}}};a2a_config.tracking_callback=['ready',wpa2a.script_onready];
+//--></script>
+<meta name="_awb_version" content="2.0.3" /><link rel="stylesheet" href="../wp-content/themes/arras/css/styles/default.css" type="text/css" media="screen,projection" /><link rel="stylesheet" href="../wp-content/themes/arras/css/layouts/2c-r-fixed.css" type="text/css" />
+<!-- Generated by Arras WP Theme -->
+<style type="text/css">
+	.posts-default li  { width: 205px; height: 225px; }
+	.posts-default img, .posts-default .entry-thumbnails-link { width: 195px; height: 110px; }
+	.posts-default .entry-meta { width: 195px; }
+	.posts-default .entry-thumbnails { width: 205px; height: 120px; }
+			.posts-quick .entry-thumbnails img { width: 115px; height: 115px; }
+		.posts-quick .entry-meta { width: 115px; }
+			.featured { height: 260px; }
+	.featured-article { width: 640px; height: 250px; }
+	.featured-article img { width: 640px; height: 250px; }
+	#controls { width: 610px; top: 110px; }
+	#controls .next { left: 610px; }
+	.featured-entry { height: 84px; top: -84px; }
+	.featured-slideshow-inner { height: 250px }
+		.featured-stories-summary  { margin-left: 51px; }
+	.single .post .entry-photo img, .single-post .entry-photo img  { width: 620px; height: 250px; }
+		.footer-sidebar  { width: 920px; }
+	</style>
+	<script type="text/javascript">
+	jQuery(document).ready(function($) {
+
+$('.multi-sidebar').tabs();
+
+$('.sf-menu').superfish({autoArrows: true, speed: 'fast', dropShadows: 'true'});
+
+$('#commentform').validate();
+
+
+});	</script>
+	<!--[if IE]>
+<style type="text/css">
+.addtoany_list a img{filter:alpha(opacity=70)}
+.addtoany_list a:hover img,.addtoany_list a.addtoany_share_save img{filter:alpha(opacity=100)}
+</style>
+<![endif]-->
+<link rel="stylesheet" href="../wp-content/themes/arras/user.css" type="text/css" media="screen,projection" /><!-- Google Analytics Tracking by Google Analyticator 6.4.5: http://www.videousermanuals.com/google-analyticator/ -->
+<script type="text/javascript">
+	var analyticsFileTypes = [''];
+	var analyticsEventTracking = 'enabled';
+</script>
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-169675-4']);
+        _gaq.push(['_addDevId', 'i9k95']); // Google Analyticator App ID with Google 
+        
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+</head>
+
+<body class="page page-id-0 page-parent page-template-default layout-2c-r-fixed no-js style-default">
+<script type="text/javascript">
+//<![CDATA[
+(function(){
+var c = document.body.className;
+c = c.replace(/no-js/, 'js');
+document.body.className = c;
+})();
+//]]>
+</script>
+
+<div id="top-menu" class="clearfix">
+	</div><!-- #top-menu -->
+
+<div id="header"><div align="center"><script type="text/javascript"><!--
+google_ad_client = "pub-7027070946238159";
+/* 728x90, Top Banner */
+google_ad_slot = "9335358437";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+	<div id="branding" class="clearfix">
+	<div class="logo">
+				<span class="blog-name"><a href="../index.html">World Music Central.org</a></span>
+		<img style="float:left; padding: 0 5px 0 0;" src="../wp-content/themes/wmc-magazeen/images/bull.png"/><span class="blog-description">Your Connection to World Music</span>
+			</div>
+	<div id="searchbar"><form method="get" class="searchform clearfix" action="http://worldmusiccentral.org/">
+ <input type="text" value="Search..." name="s" class="s" onfocus="this.value=''" />
+ <input type="submit" class="searchsubmit" value="Search" title="Search World Music Central.org" />
+</form>
+</div>
+	</div><!-- #branding -->
+</div><!-- #header -->
+
+<div id="nav">
+	<div id="nav-content" class="clearfix">
+	<div class="menu-main-container"><ul id="menu-main" class="sf-menu menu clearfix"><li id="menu-item-6394" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-6394"><a href="../index.html">Home</a></li>
+<li id="menu-item-6401" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6401"><a href="../about/index.html">About</a></li>
+<li id="menu-item-6454" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6454"><a href="#">World Music Resources</a>
+<ul class="sub-menu">
+	<li id="menu-item-6455" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6455"><a href="artist_index.php.html">Artists Database</a></li>
+	<li id="menu-item-6462" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6462"><a href="http://musicwikicentral.com/world_music_festivals">Festivals</a></li>
+	<li id="menu-item-6467" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6467"><a href="http://musicwikicentral.com/travel_guides">Travel Guides</a></li>
+	<li id="menu-item-6469" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6469"><a href="http://musicwikicentral.com/world_music_genres">Musical Genres</a></li>
+	<li id="menu-item-6468" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6468"><a href="http://musicwikicentral.com/musical_instruments">Musical Instruments</a></li>
+	<li id="menu-item-6475" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6475"><a href="http://musicwikicentral.com/showcases">Showcases</a></li>
+	<li id="menu-item-6470" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6470"><a href="http://musicwikicentral.com/world_music_venues">Venues</a></li>
+	<li id="menu-item-6472" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6472"><a href="http://musicwikicentral.com/record_companies">Record Companies</a></li>
+	<li id="menu-item-6466" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6466"><a href="http://musicwikicentral.com/booking_agents">Booking Agents</a></li>
+	<li id="menu-item-6474" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6474"><a href="http://musicwikicentral.com/world_music_press">World Music Press</a></li>
+	<li id="menu-item-6477" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6477"><a href="http://musicwikicentral.com/ethnomusicology">Ethnomusicology</a></li>
+	<li id="menu-item-6473" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6473"><a href="http://musicwikicentral.com/music_organizations">Music Organizations</a></li>
+</ul>
+</li>
+<li id="menu-item-6390" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6390"><a href="#">Topics</a>
+<ul class="sub-menu">
+	<li id="menu-item-6369" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6369"><a href="../category/archive/index.html">archive</a></li>
+	<li id="menu-item-6370" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6370"><a href="../category/articles/index.html">Articles</a></li>
+	<li id="menu-item-6371" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6371"><a href="../category/awards/index.html">Awards</a></li>
+	<li id="menu-item-6372" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6372"><a href="../category/book-reviews/index.html">Book Reviews</a></li>
+	<li id="menu-item-6373" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6373"><a href="../category/cd-reviews/index.html">CD Reviews</a></li>
+	<li id="menu-item-6374" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6374"><a href="../category/concert-reviews/index.html">Concert reviews</a></li>
+	<li id="menu-item-6375" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6375"><a href="../category/conferences/index.html">Conferences</a></li>
+	<li id="menu-item-6376" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6376"><a href="../category/editorials/index.html">Editorials</a></li>
+	<li id="menu-item-6377" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6377"><a href="../category/events/index.html">Events</a></li>
+	<li id="menu-item-6378" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6378"><a href="../category/film-reviews/index.html">Film Reviews</a></li>
+	<li id="menu-item-6379" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6379"><a href="../category/general-news/index.html">General News</a></li>
+	<li id="menu-item-6380" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6380"><a href="../category/interviews/index.html">Interviews</a></li>
+	<li id="menu-item-6381" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6381"><a href="../category/loop-collections/index.html">Loop Collections</a></li>
+	<li id="menu-item-6382" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6382"><a href="../category/new-books/index.html">New Books</a></li>
+	<li id="menu-item-6383" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6383"><a href="../category/new-cds/index.html">New CDs</a></li>
+	<li id="menu-item-6384" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6384"><a href="../category/new-films/index.html">New Films</a></li>
+	<li id="menu-item-6385" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6385"><a href="../category/new-releases/index.html">New Releases</a></li>
+	<li id="menu-item-6386" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6386"><a href="../category/obituaries/index.html">Obituaries</a></li>
+	<li id="menu-item-6387" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6387"><a href="../category/tour-announcements/index.html">Tour Announcements</a></li>
+	<li id="menu-item-6388" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6388"><a href="../category/tradeshows/index.html">Tradeshows</a></li>
+	<li id="menu-item-6389" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6389"><a href="../category/uncategorized/index.html">Uncategorized</a></li>
+</ul>
+</li>
+<li id="menu-item-6392" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6392"><a href="../events/index.html">Calendar</a></li>
+<li id="menu-item-6400" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6400"><a href="../store/index.html">Store</a></li>
+<li id="menu-item-6724" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6724"><a href="../contact-us/index.html">Contact Us</a></li>
+</ul></div>		<ul class="quick-nav clearfix">
+					<li><a id="rss" title="World Music Central.org RSS Feed" href="../feed/index.html">RSS Feed</a></li>
+				
+						
+							<li><a id="facebook" title="World Music Central.org Facebook" href="http://www.facebook.com/pages/World-Music-Central/149036898455901" target="_blank">Facebook</a></li>
+				
+			</ul>
+	</div><!-- #nav-content -->
+</div><!-- #nav -->
+
+<div id="wrapper">
+	
+	  
+	<div id="main" class="clearfix">
+    <div id="container" class="clearfix">
+  <head>
+    <title>Robert Plant - Artist Page</title>
+  </head>
+
+  <body> 
+  
+  <div id="artistpage">
+  
+  <div style="float:right;">
+  
+  <script type="text/javascript"><!--
+google_ad_client = "pub-7027070946238159";
+/* 160x600, created 12/6/08 */
+google_ad_slot = "6830638066";
+google_ad_width = 160;
+google_ad_height = 600;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+
+</div>
+  
+  
+  
+  	<table>
+
+  
+<tr><td align="center" colspan="2" width="100%">
+<font size=+1><b>Robert Plant</b></font> 
+<hr></td></tr>
+
+<tr><td align="center" colspan="2" width="100%">
+<a href="#Discography">Discography</a>&nbsp;&nbsp;&middot;&nbsp;&nbsp;<a href="#Bibliography">Bibliography</a>&nbsp;&nbsp;&middot;&nbsp;&nbsp;<a href="#Genres">Similar Music</a>
+<hr></td></tr>
+    <tr>
+      <td colspan="2" width="100%">
+		<a name="Biography"><b>Biography</b></a>:
+	  </td>
+    </tr>
+    <tr>
+      <td colspan="2" width="100%">&nbsp;</td>
+    </tr>
+
+    <tr>
+      <td width="3%"></td>
+
+      <td width="97%">
+	  
+	<p align=center><img border="0" align="center"  src="../staticpages/images/Robert_Plant_2.jpg"></p><p align="center">Photo Credit: Pamela Springsteen</p>
+<p>Robert Anthony Plant (born 20 August 1948, West Bromwich, West Midlands, 
+England) is a rock singer most famous for being the lead singer of one of the 
+most influential rock bands of all time, Led Zeppelin. He is known for his 
+powerful style with a wide vocal range that embodied folk/blues passion at its 
+finest. The British musician is known for his interest in world music and 
+especially West African music. </p>
+<p>In 1966, 
+Plant left home, left college, left work, and turned 
+professional. By 1967 he had cut 6 sides for CBS,' formed the Band of Joy with John Bonham, and created two crucial working 
+partnerships. The first such partnership was with Terry Reid - the two became friends playing on the progressive music 
+circuit of the mid-60s; the second was with bandleader Alexis Korner, with whom Plant worked as harmonica player and 
+co-vocalist in various Korner
+ventures, many of which featured pianist Steve Miller and were featured as the 
+opening act for the band Free. </p>
+<p>In early
+'68, Plant's psychedelic dream ran out of steam. Bonham left the Band of Joy to 
+tour with Tim Rose, while Plant
+continued to work with Korner.
+Plant's friend Terry Reid recommended Plant to Jimmy Page for a revised 
+Yardbirds line-up, declining the gig himself
+to pursue what looked to be a promising solo career. Plant in turn recommended 
+Bonham, and with Page's fellow
+session doyen John Paul Jones on bass, what began life as 'The New Yardbirds&quot; 
+became the creative force known as
+Led Zeppelin.</p>
+<p>A well-read individual, Plant was influenced by J.R.R. Tolkien, which 
+inspired some lyrics on early Zeppelin albums. The passion for diverse musical 
+experiences drove Plant and Page to explore the African continent, specifically 
+Morocco which they both revisited during their reunion album No Quarter in 1994. 
+From blues, to folk, to African tribal music, Plant enjoyed diverse influences.</p>
+<p>The band's greatest success came with &quot;Stairway to Heaven&quot;, an epic fantasy 
+piece that draws influence from folk, blues, Celtic traditional music and hard 
+rock among other genres. While never released as a single, the song has topped 
+charts as the greatest song of all time on various polls around the world. Even 
+though most of the lyrics of the song were written on the spot and have been 
+spread through bootlegs, various groups have claimed that the song contained 
+satanic messages that can be heard when it is played backwards.</p>
+<p>Plant enjoyed great success with the band throughout the 1970s, and at 
+	one point during the height of his hubris said to a reporter &quot;<i>I'm a golden 
+	haired God</i>&quot;. This hubris was cut short when Plant and wife Maureen were 
+	seriously injured in a car crash in Rhodes, Greece on August 4, 1975. This 
+	halted production of Led Zeppelin's album 
+	<a href="http://www.amazon.com/exec/obidos/ASIN/B000002JSJ/musidelmund-20">
+	Presence</a> 
+	for a few months while he recovered. Things also took a turn for the worse 
+	in 1977, when 
+	his oldest son Karac died of a stomach infection. Karac's death later 
+	inspired him to write the Led Zeppelin song &quot;All My Love&quot; in tribute. These 
+	tragic incidents seemed to foster break-up rumors and rumors that the band 
+	was involved with black magic.</p>
+<p>Bonham's untimely death in 1980 brought the Led Zeppelin era to a close. Following the band's breakup, Plant pursued a successful solo 
+	career distancing himself from past pain by charting a new course with a 
+	variety of new band members. Plant would later form a short-lived all-star 
+	group,
+	The Honeydrippers, who had a Top Ten hit with a remake of &quot;Sea 
+	Of Love&quot;.</p>
+<p>Plant and Jimmy Page 
+renewed their long-time
+partnership in '95 for four years in the No Quarter project - a melange of North 
+African, Egyptian, and folk- roots
+sounds. </p>
+	<p>Many calls from fans and by band members have led to a few brief Zeppelin 
+	reunions, including the historic
+	Live Aid 
+	and
+	Atlantic Records Anniversary concerts. </p>
+<p>Plant's wide-ranging appetite for non-Western musics - including the music of 
+Morocco, the Adas region, and beyond- met with his lifelong fascination with American West Coast psychedelic rock to 
+form a new collision of styles and colors known as Strange Sensation. Their first 
+album, 
+<a href="http://www.amazon.com/gp/product/B000LV6REG/105-5231562-2942865?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B000LV6REG">
+Dreamland</a>, received great critical acclaim and two Grammy
+nominations in January 2003. </p>
+<p>More recently, Plant has recorded with Afro Celt Sound System and, along with 
+Skin and Justin Adams, traveled to
+South Sahara, North of Timbuktu in Mali to participate in the 2nd Festival of 
+the Desert, a gathering of African
+Saharan and assorted soul musicians which included Oumou Sangare,
+<a href="http://www.worldmusiccentral.org/artists/artist_page.php?id=1093">Ali 
+Farka Toure</a>, 
+<a href="http://www.worldmusiccentral.org/artists/artist_page.php?id=2298">
+Tinariwen</a>, and 
+<a href="http://www.worldmusiccentral.org/artists/artist_page.php?id=3685">
+Tartit</a>. This
+project ultimately became a CD compilation, 
+<a href="http://www.amazon.com/gp/product/B0000CBLAM/105-5231562-2942865?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B0000CBLAM">
+Festival in the Desert</a>, on the Harmonia Mundi label.</p>
+<p>2003 saw the release of the definitive Plant retrospective, 
+<a href="http://www.amazon.com/gp/product/B0000DIZQQ/105-5231562-2942865?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B0000DIZQQ">
+Sixty Six to Timbuktu</a>, which included a selection of Plant's
+solo work, from his first recording date to his appearance in Mali.</p>
+<p>In October of 2004, Plant revived his long-dormant Es Paranza label for its 
+first release in many years. May of 2005
+saw the release of
+Plant and the Strange Sensation's album 
+	<a href="http://www.amazon.com/exec/obidos/ASIN/B0007Z4S4C/musidelmund-20">
+	Mighty Rearranger</a>, which featured twelve new original songs. A major 
+year-long tour followed. At the close of 2005, the critically acclaimed 
+	<a href="http://www.amazon.com/exec/obidos/ASIN/B0007Z4S4C/musidelmund-20">
+	Mighty Rearranger</a>
+received two Grammy nominations in vocal categories. </p>
+<p>The following year saw Robert and the band embark on a new adventure with a 
+string of dates across Europe and
+beyond. A stopover in Sweden in late May saw Robert, along with the other 
+members of Led Zeppelin, receive the
+prestigious Polar Music Prize. King Carl XVI Gustaf of Sweden presented die 
+award to Led Zeppelin in the presence of other dignitaries with the following 
+words: '<i>The 2006 Polar Music Prize is awarded to the British group Led 
+Zeppelin, one of the great pioneers of rock. Their playful and experimental 
+music combined with highly eclectic elements has two essential themes: mysticism 
+and primal energy</i>.&quot;</p>
+<p>In October of 2006 Rounder/Zoe Vision released 
+<a href="http://www.amazon.com/gp/product/B000IFRR9Y/105-5231562-2942865?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B000IFRR9Y">
+Plant and the Strange 
+Sensation</a> DVD, a ten-camera High
+Definition shoot for USA Soundstage productions. This was the first commercial 
+DVD in Robert's career. This
+continued the critical recognition of the current work of 
+Plant and the 
+Strange Sensation.</p>
+<p>2006 closed with the worldwide release of 
+<a href="http://www.amazon.com/gp/product/B000GH3QEE/105-5231562-2942865?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B000GH3QEE">
+Nine Lives</a> (Rhino), a beautifully 
+designed boxed set containing all of Plant's
+solo work since '8,1accompanied by outtakes, live cuts, and a DVD with 
+contributions from Tori Amos, Phil Collins,
+Roger Daltrey, Bobby Gillespie, and Lenny Kravitz, among others.</p>
+<p>2007 finds Robert working on album number three with Strange Sensation, leaning 
+again towards the music of the
+muse - exotic, explosive, and detailed. Along the way he performed with 
+<a href="http://www.worldmusiccentral.org/artists/artist_page.php?id=2298">
+Tinariwen</a>, the Malian Tuareg cooperative
+who received huge critical acclaim for the Justin Adams produced CD 
+<a href="http://www.amazon.com/gp/product/B000MCICRE/105-5231562-2942865?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B000MCICRE">
+Aman Iman</a>, 
+singing and playing tenor ukelele at the Bataclan Theatre in Paris in April. A summer tour of the eastern 
+Mediterranean with Strange Sensation
+will run from June through August.</p>
+<p><a href="http://www.amazon.com/gp/product/B000UMQDHC/105-1016194-3145229?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B000UMQDHC">
+Raising Sand</a>, a new project and partnership with 20-time Grammy Award winning 
+artist <a href="artist_page-id=5168.php.html">Alison 
+Krauss</a> was
+released in October 2007 on Rounder Records. Their first recorded collaboration. 
+<a href="http://www.amazon.com/gp/product/B000UMQDHC/105-1016194-3145229?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B000UMQDHC">
+Raising Sand</a> proves a wonder on
+two counts: first that it happened at all, and, more importantly, that it is as 
+successful and illuminating as it is.</p>
+<p>  Under the stewardship of producer T-Bone Burnett, <a href="http://www.amazon.com/gp/product/B000UMQDHC/105-1016194-3145229?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B000UMQDHC">
+  Raising Sand</a> spans the 
+  intersections of early urban blues,
+  spacious West Texas country, and the unrealized potential of the folk-rock 
+  revolution. It is an album that uncovers
+  popular music's elemental roots while sounding effortlessly timeless. It's 
+  nearly impossible to tell which songs are a
+  hundred years old or which are contemporary. Krauss and Plant share a maverick 
+  spirit that makes <a href="http://www.amazon.com/gp/product/B000UMQDHC/105-1016194-3145229?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B000UMQDHC">
+  Raising Sand</a>  sound like one continuous thought, a conversation between two major music 
+  talents that goes on for an entire
+  album.</p>
+	<p>[Biography partially adapted from <a href="http://en.wikipedia.org/">Wikipedia</a>, the free encyclopedia].
+</p>
+	</td>
+<tr><td align="center" colspan="2" width="100%">
+
+<hr></td></tr>
+  	<tr>
+        <td colspan="2" width="100%">
+		<a name="Discography"><b>Discography</b></a>:
+	  </td>
+    </tr>
+    <tr>
+      <td colspan="2" width="100%">&nbsp;</td>
+    </tr>
+
+    <tr>
+      <td width="3%"></td>
+
+      <td width="97%">
+
+ 	<p>Pictures at Eleven (1982)</p><p>The Principle of Moments (1983)</p><p>The Honeydrippers: Volume One (1984), with Jimmy Page</p><p>Shaken 'n' Stirred (1985)</p><p>Now and Zen (1988)</p><p>Manic Nirvana (1990)</p><p>Fate of Nations (1993)</p><p>The Wayne's World 2 Soundtrack (1993), only one song</p><p>No Quarter (1994), with Jimmy Page</p><p>Walking Into Clarksdale (1998), with Jimmy Page</p><p><a href="http://www.amazon.com/gp/product/B000LV6REG/105-5231562-2942865?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B000LV6REG">
+Dreamland</a> (2002)</p><p><a href="http://www.amazon.com/gp/product/B0000DIZQQ/105-5231562-2942865?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B0000DIZQQ">
+Sixty Six to Timbuktu</a> (2003) Best Of</p><p><a href="http://www.amazon.com/exec/obidos/ASIN/B0007Z4S4C/musidelmund-20">
+Mighty Rearranger</a> (2005), with Strange Sensation</p><p><a href="http://www.amazon.com/gp/product/B000GH3QEE/105-5231562-2942865?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B000GH3QEE">
+Nine Lives</a> (Rhino, 2006)</p><p><a href="http://www.amazon.com/gp/product/B000UMQDHC/105-1016194-3145229?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B000UMQDHC">
+Raising Sand</a> (Rounder, 2007)</p></td>
+<tr><td align="center" colspan="2" width="100%">
+
+<hr></td></tr>
+  	<tr>
+  	  <td colspan="2" width="100%">
+		<a name="Bibliography"><b>Bibliography</b></a>:
+	  </td>
+    </tr>
+    <tr>
+      <td colspan="2" width="100%">&nbsp;</td>
+    </tr>
+
+    <tr>
+      <td width="3%"></td>
+
+      <td width="97%">
+
+ 	<p align="left">Articles:</p>
+<ul>
+<li>
+<a href="http://www.worldmusiccentral.org/article.php/robert_plant_alison_krauss_raising_sand">
+Elemental Plant and Krauss</a></li>
+<li>
+<a href="http://www.worldmusiccentral.org/article.php/robert_plant__krauss_raising_sand_new">
+Robert Plant and Alison Krauss Collaborate on Raising Sand</a></li>
+</ul></td>
+<tr><td align="center" colspan="2" width="100%">
+
+<hr></td></tr>
+  	<tr>
+  	  <td colspan="2" width="100%">
+		<a name="Genres"><b>Similar Music</b></a>:
+	  </td>
+    </tr>
+    <tr>
+      <td colspan="2" width="100%">&nbsp;</td>
+    </tr>
+
+    <tr>
+      <td width="3%"></td>
+
+      <td width="97%">
+
+	<a href="genre_list-genre=Rock.php.html">Rock</a>, <a href="genre_list-genre=Bluegrass.php.html">Bluegrass</a>, <a href="genre_list-genre=Blues.php.html">Blues</a>, <a href="instrument_index-instrument=Vocals.php.html">Vocals</a></td>
+<tr><td align="center" colspan="2" width="100%">
+
+<hr></td></tr>
+	</table>
+	</div>
+
+	</div><!-- #main -->
+	
+	    
+    <div id="footer">
+		<div class="footer-sidebar-container clearfix">
+							<ul id="footer-sidebar-1" class="footer-sidebar clearfix xoxo">
+										<li></li>
+									</ul>
+					</div>
+		
+		<div class="footer-message">
+                <p class="floatright">WordPress Installation and Support by <a class="arras" href="http://digiblink.eu/" title="Custom WordPress development, design and backup services."><strong>digiBlink</strong></a></p>
+                <p>Copyright World Music Central.org. All Rights Reserved.</p>                </div><!-- .footer-message -->
+		
+    </div>
+</div><!-- #wrapper -->
+
+<script type="text/javascript"><!--
+wpa2a.targets=[];
+wpa2a.html_done=true;if(wpa2a.script_ready&&!wpa2a.done)wpa2a.init();wpa2a.script_load();
+//--></script>
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+
+	
+});
+</script>
+<script type='text/javascript' src='../wp-includes/js/jquery/ui/jquery.ui.core.min.js?ver=1.10.3'></script>
+<script type='text/javascript' src='../wp-includes/js/jquery/ui/jquery.ui.widget.min.js?ver=1.10.3'></script>
+<script type='text/javascript' src='../wp-includes/js/jquery/ui/jquery.ui.tabs.min.js?ver=1.10.3'></script>
+</body>
+</html>
+   
+
+<!-- Localized -->

@@ -1,0 +1,1240 @@
+
+<style type="text/css">
+/* --- reset some elements --- */
+
+#dw ul,ol { list-style:none }
+
+#dw ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,p,blockquote,fieldset,input { margin:0; padding:0 }
+
+/* --- Basic Stylesheet for DokuWiki content --- */
+
+#dw h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+#dw h1 a {
+  color: black;
+}
+
+/* ---------- table of contents ------------------- */
+
+#dw div.toc {
+  margin-left: 2em;
+  margin-top: 1.2em;
+  margin-bottom: 0;
+  float:right;
+  width: 200px;
+  font-size: 80%;
+  padding-top:5px;
+}
+
+#dw div.tocheader {
+  padding: 3px;
+  border: 1px solid #8cacbb;
+  background-color: #dee7ec;
+  text-align: left;
+  font-weight:bold;
+  margin-bottom: 2px;
+}
+
+#dw div.tocheader img {
+  width:0.8em;
+  height:0.8em;
+  margin-top:0.3em;
+  margin-right:3px;
+  float:right;
+  cursor: pointer;
+}
+
+#dw #toc__inside {
+  border: 1px solid #8cacbb;
+  background-color: #fff;
+  text-align: left;
+  padding-top: 0.5em;
+  padding-bottom: 0.7em;
+}
+
+#dw ul.toc {
+  list-style-type: none;
+  list-style-image: none;
+  line-height: 1.2em;
+  margin: 0;
+  padding: 0;
+  padding-left: 1em;
+}
+
+#dw ul.toc li {
+  background: transparent url(../lib/tpl/fsinfo/images/tocdot2.gif) 0 0.6em no-repeat;
+  padding-left:0.4em;
+}
+
+#dw ul.toc li.clear {
+  background-image: none;
+  padding-left:0.4em;
+}
+
+#dw a.toc {
+  color: #436976;
+  text-decoration:none;
+}
+
+#dw a.toc:hover {
+  color: #000;
+  text-decoration:underline;
+}
+
+/* --------------------- footnotes -------------------------------- */
+
+#dw div.footnotes{
+  clear:both;
+  border-top: 1px solid #8cacbb;
+  padding-left: 1em;
+  margin-top: 1em;
+}
+
+#dw div.fn{
+  font-size:90%;
+}
+
+#dw a.fn_top{
+  vertical-align:super;
+  font-size:80%;
+}
+
+#dw a.fn_bot{
+  vertical-align:super;
+  font-size:80%;
+  font-weight:bold;
+}
+
+/* insitu-footnotes */
+#dw div.insitu-footnote {
+  font-size: 80%;
+  line-height: 1.2em;
+  border: 1px solid #8cacbb;
+  background: #eef3f8;
+  text-align: left;
+  padding: 4px;
+  max-width: 40%;    /* IE's width is handled in javascript */
+}
+
+/* overcome IE issue with one line code or file boxes which require h. scrolling */
+#dw * html .insitu-footnote pre.code, * html .insitu-footnote pre.file {
+  padding-bottom: 18px;
+}
+
+/* --------------------- Tables -------------------------------- */
+
+#dw table.inline td.okay {
+  background-color: #afa;
+  text-align: center;
+}
+
+#dw table.inline td.notokay {
+  background-color: #fcc;
+  text-align: center;
+}
+
+#dw table.inline {
+  background-color: #fff;
+  border-spacing: 0px;
+  border-collapse: collapse;
+}
+
+/* ------------- Page elements ----------------- */
+
+#dw span.user{
+/*  color: #ccc; */
+  color: #666;
+  font-size: 90%;
+}
+
+#dw li.minor {
+  color: #666;
+  font-style: italic;
+}
+
+/* embedded images */
+#dw img.media {
+  margin: 3px;
+}
+
+#dw img.medialeft {
+  border: 0;
+  float: left;
+  margin: 0 1.5em 0 0;
+}
+
+#dw img.mediaright {
+  border: 0;
+  float: right;
+  margin: 0 0 0 1.5em;
+}
+
+#dw img.mediacenter {
+  border: 0;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* smileys */
+#dw img.middle {
+  vertical-align: middle;
+}
+
+#dw acronym {
+  cursor: help;
+  border-bottom: 1px dotted #000;
+}
+
+/* general headline setup */
+#dw h1, #dw h2, #dw h3, #dw h4, #dw h5 {
+    color: Black;
+    background-color: transparent;
+    font-family: "Lucida Grande", Verdana, Lucida, Helvetica, Arial, sans-serif;
+    font-size: 100%;
+    font-weight: normal;
+    margin-left:    0;
+    margin-right:   0;
+    margin-top:     0;
+    margin-bottom:  1em;
+    padding-left:   0;
+    padding-right:  0;
+    padding-top:    0.5em;
+    padding-bottom: 0;
+    border-bottom: 1px solid #8cacbb;
+}
+
+/* special headlines */
+/*
+#dw h1 {font-size: 160%; margin-left: 0px; font-weight: bold;}
+#dw h2 {font-size: 150%; margin-left: 20px; font-weight: bold;}
+#dw h3 {font-size: 130%; margin-left: 40px; border-bottom: none; font-weight: bolder}
+#dw h4 {font-size: 115%; margin-left: 60px; border-bottom: none; font-weight: bolder}
+#dw h5 {font-size: 100%; margin-left: 80px; border-bottom: none; font-weight: bold;}
+*/
+
+#dw h1 {font-size: 160%; font-weight: bold;}
+#dw h2 {font-size: 140%; font-weight: bold; }
+#dw h3 {font-size: 130%; border-bottom: none; font-weight: bolder}
+#dw h4 {font-size: 115%; border-bottom: none; font-weight: bolder}
+#dw h5 {font-size: 100%; border-bottom: none; font-weight: bold;}
+
+/* indent different sections */
+/*
+#dw div.level1 {margin-left: 3px;}
+#dw div.level2 {margin-left: 23px;}
+#dw div.level3 {margin-left: 43px;}
+#dw div.level4 {margin-left: 63px;}
+#dw div.level5 {margin-left: 83px;}
+*/
+
+/* unordered lists */
+#dw ul {
+  line-height: 1.5em;
+  list-style-type: square;
+  margin: 0 0 0.5em 2em;
+  padding: 0;
+  color: #638c9c;
+  list-style-image: none;
+}
+
+/* ordered lists */
+#dw ol {
+  line-height: 1.5em;
+  margin: 0 0 0.5em 2em;
+  padding: 0;
+  color: #638c9c;
+  font-weight: bold;
+  list-style-image: none;
+}
+
+/* the list items overriding the ul/ol definition */
+#dw .li {
+  color: #000;
+  font-weight: normal;
+}
+
+#dw ol {list-style-type: decimal}
+#dw ol ol {list-style-type: upper-roman}
+#dw ol ol ol {list-style-type: lower-alpha}
+#dw ol ol ol ol {list-style-type: lower-greek}
+
+#dw li.open {
+  list-style-image: url(../lib/tpl/fsinfo/images/open.gif);
+    /*list-style-type: circle;*/
+}
+
+#dw li.closed {
+  list-style-image: url(../lib/tpl/fsinfo/images/closed.gif);
+    /*list-style-type: disc;*/
+}
+
+#dw blockquote {
+  border-left: 2px solid #8cacbb;
+  padding-left: 3px;
+  margin-left: 0;
+}
+
+/* code blocks by indention */
+#dw pre.pre {
+  font-size: 100%;
+  padding: 0.5em;
+  border: 1px dashed #8cacbb;
+  color: Black;
+  background-color: #f7f9fa;
+  overflow: auto;
+}
+
+/* code blocks by code tag */
+#dw pre.code {
+  font-size: 100%;
+  padding: 0.5em;
+  border: 1px dashed #8cacbb;
+  color: Black;
+  background-color: #f7f9fa;
+  overflow: auto;
+}
+
+/* inline code words */
+#dw code {
+  font-size: 80%;
+}
+
+/* code blocks by file tag */
+#dw pre.file {
+  font-size: 100%;
+  padding: 0.5em;
+  border: 1px dashed #8cacbb;
+  color: Black;
+  background-color: #dee7ec;
+  overflow: auto;
+}
+
+/* inline tables */
+
+#dw table.inline th {
+  padding: 3px;
+  border: 1px solid #8cacbb;
+  background-color: #dee7ec;
+  text-align: left;
+}
+
+#dw table.inline td {
+  padding: 3px;
+  border: 1px solid #8cacbb;
+}
+</style>
+<link rel='stylesheet' id='eme_stylesheet-css'  href='../wp-content/plugins/events-made-easy/events_manager-ver=3.6.css' type='text/css' media='all' />
+<link rel='stylesheet' id='A2A_SHARE_SAVE-css'  href='../wp-content/plugins/add-to-any/addtoany.min-ver=1.4.css' type='text/css' media='all' />
+<script type='text/javascript' src='../wp-includes/js/jquery/jquery.js?ver=1.10.2'></script>
+<script type='text/javascript' src='../wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<script type='text/javascript' src='../wp-content/plugins/google-analyticator/external-tracking.min.js?ver=6.4.5'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../xmlrpc-rsd.php.html" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 3.6" />
+
+<script type="text/javascript"><!--
+var a2a_config=a2a_config||{},wpa2a={done:false,html_done:false,script_ready:false,script_load:function(){var a=document.createElement('script'),s=document.getElementsByTagName('script')[0];a.type='text/javascript';a.async=true;a.src='http://static.addtoany.com/menu/page.js';s.parentNode.insertBefore(a,s);wpa2a.script_load=function(){};},script_onready:function(){if(a2a.type=='page'){wpa2a.script_ready=true;if(wpa2a.html_done)wpa2a.init();}},init:function(){for(var i=0,el,target,targets=wpa2a.targets,length=targets.length;i<length;i++){el=document.getElementById('wpa2a_'+(i+1));target=targets[i];a2a_config.linkname=target.title;a2a_config.linkurl=target.url;if(el)a2a.init('page',{target:el});wpa2a.done=true;}}};a2a_config.tracking_callback=['ready',wpa2a.script_onready];
+//--></script>
+<meta name="_awb_version" content="2.0.3" /><link rel="stylesheet" href="../wp-content/themes/arras/css/styles/default.css" type="text/css" media="screen,projection" /><link rel="stylesheet" href="../wp-content/themes/arras/css/layouts/2c-r-fixed.css" type="text/css" />
+<!-- Generated by Arras WP Theme -->
+<style type="text/css">
+	.posts-default li  { width: 205px; height: 225px; }
+	.posts-default img, .posts-default .entry-thumbnails-link { width: 195px; height: 110px; }
+	.posts-default .entry-meta { width: 195px; }
+	.posts-default .entry-thumbnails { width: 205px; height: 120px; }
+			.posts-quick .entry-thumbnails img { width: 115px; height: 115px; }
+		.posts-quick .entry-meta { width: 115px; }
+			.featured { height: 260px; }
+	.featured-article { width: 640px; height: 250px; }
+	.featured-article img { width: 640px; height: 250px; }
+	#controls { width: 610px; top: 110px; }
+	#controls .next { left: 610px; }
+	.featured-entry { height: 84px; top: -84px; }
+	.featured-slideshow-inner { height: 250px }
+		.featured-stories-summary  { margin-left: 51px; }
+	.single .post .entry-photo img, .single-post .entry-photo img  { width: 620px; height: 250px; }
+		.footer-sidebar  { width: 920px; }
+	</style>
+	<script type="text/javascript">
+	jQuery(document).ready(function($) {
+
+$('.multi-sidebar').tabs();
+
+$('.sf-menu').superfish({autoArrows: true, speed: 'fast', dropShadows: 'true'});
+
+$('#commentform').validate();
+
+
+});	</script>
+	<!--[if IE]>
+<style type="text/css">
+.addtoany_list a img{filter:alpha(opacity=70)}
+.addtoany_list a:hover img,.addtoany_list a.addtoany_share_save img{filter:alpha(opacity=100)}
+</style>
+<![endif]-->
+<link rel="stylesheet" href="../wp-content/themes/arras/user.css" type="text/css" media="screen,projection" /><!-- Google Analytics Tracking by Google Analyticator 6.4.5: http://www.videousermanuals.com/google-analyticator/ -->
+<script type="text/javascript">
+	var analyticsFileTypes = [''];
+	var analyticsEventTracking = 'enabled';
+</script>
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-169675-4']);
+        _gaq.push(['_addDevId', 'i9k95']); // Google Analyticator App ID with Google 
+        
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>World Music Central.org</title>
+
+
+<link rel="alternate" type="application/rss+xml" href="../feed/index.html" title="World Music Central.org latest posts" />
+
+<link rel="alternate" type="application/rss+xml" href="../comments/feed/index.html" title="World Music Central.org latest comments" />
+
+<link rel="pingback" href="../xmlrpc.php.html" />
+
+<link rel="shortcut icon" href="../favicon.ico" />
+
+
+<style type="text/css">
+/* --- reset some elements --- */
+
+#dw ul,ol { list-style:none }
+
+#dw ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,p,blockquote,fieldset,input { margin:0; padding:0 }
+
+/* --- Basic Stylesheet for DokuWiki content --- */
+
+#dw h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+#dw h1 a {
+  color: black;
+}
+
+/* ---------- table of contents ------------------- */
+
+#dw div.toc {
+  margin-left: 2em;
+  margin-top: 1.2em;
+  margin-bottom: 0;
+  float:right;
+  width: 200px;
+  font-size: 80%;
+  padding-top:5px;
+}
+
+#dw div.tocheader {
+  padding: 3px;
+  border: 1px solid #8cacbb;
+  background-color: #dee7ec;
+  text-align: left;
+  font-weight:bold;
+  margin-bottom: 2px;
+}
+
+#dw div.tocheader img {
+  width:0.8em;
+  height:0.8em;
+  margin-top:0.3em;
+  margin-right:3px;
+  float:right;
+  cursor: pointer;
+}
+
+#dw #toc__inside {
+  border: 1px solid #8cacbb;
+  background-color: #fff;
+  text-align: left;
+  padding-top: 0.5em;
+  padding-bottom: 0.7em;
+}
+
+#dw ul.toc {
+  list-style-type: none;
+  list-style-image: none;
+  line-height: 1.2em;
+  margin: 0;
+  padding: 0;
+  padding-left: 1em;
+}
+
+#dw ul.toc li {
+  background: transparent url(../lib/tpl/fsinfo/images/tocdot2.gif) 0 0.6em no-repeat;
+  padding-left:0.4em;
+}
+
+#dw ul.toc li.clear {
+  background-image: none;
+  padding-left:0.4em;
+}
+
+#dw a.toc {
+  color: #436976;
+  text-decoration:none;
+}
+
+#dw a.toc:hover {
+  color: #000;
+  text-decoration:underline;
+}
+
+/* --------------------- footnotes -------------------------------- */
+
+#dw div.footnotes{
+  clear:both;
+  border-top: 1px solid #8cacbb;
+  padding-left: 1em;
+  margin-top: 1em;
+}
+
+#dw div.fn{
+  font-size:90%;
+}
+
+#dw a.fn_top{
+  vertical-align:super;
+  font-size:80%;
+}
+
+#dw a.fn_bot{
+  vertical-align:super;
+  font-size:80%;
+  font-weight:bold;
+}
+
+/* insitu-footnotes */
+#dw div.insitu-footnote {
+  font-size: 80%;
+  line-height: 1.2em;
+  border: 1px solid #8cacbb;
+  background: #eef3f8;
+  text-align: left;
+  padding: 4px;
+  max-width: 40%;    /* IE's width is handled in javascript */
+}
+
+/* overcome IE issue with one line code or file boxes which require h. scrolling */
+#dw * html .insitu-footnote pre.code, * html .insitu-footnote pre.file {
+  padding-bottom: 18px;
+}
+
+/* --------------------- Tables -------------------------------- */
+
+#dw table.inline td.okay {
+  background-color: #afa;
+  text-align: center;
+}
+
+#dw table.inline td.notokay {
+  background-color: #fcc;
+  text-align: center;
+}
+
+#dw table.inline {
+  background-color: #fff;
+  border-spacing: 0px;
+  border-collapse: collapse;
+}
+
+/* ------------- Page elements ----------------- */
+
+#dw span.user{
+/*  color: #ccc; */
+  color: #666;
+  font-size: 90%;
+}
+
+#dw li.minor {
+  color: #666;
+  font-style: italic;
+}
+
+/* embedded images */
+#dw img.media {
+  margin: 3px;
+}
+
+#dw img.medialeft {
+  border: 0;
+  float: left;
+  margin: 0 1.5em 0 0;
+}
+
+#dw img.mediaright {
+  border: 0;
+  float: right;
+  margin: 0 0 0 1.5em;
+}
+
+#dw img.mediacenter {
+  border: 0;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* smileys */
+#dw img.middle {
+  vertical-align: middle;
+}
+
+#dw acronym {
+  cursor: help;
+  border-bottom: 1px dotted #000;
+}
+
+/* general headline setup */
+#dw h1, #dw h2, #dw h3, #dw h4, #dw h5 {
+    color: Black;
+    background-color: transparent;
+    font-family: "Lucida Grande", Verdana, Lucida, Helvetica, Arial, sans-serif;
+    font-size: 100%;
+    font-weight: normal;
+    margin-left:    0;
+    margin-right:   0;
+    margin-top:     0;
+    margin-bottom:  1em;
+    padding-left:   0;
+    padding-right:  0;
+    padding-top:    0.5em;
+    padding-bottom: 0;
+    border-bottom: 1px solid #8cacbb;
+}
+
+/* special headlines */
+/*
+#dw h1 {font-size: 160%; margin-left: 0px; font-weight: bold;}
+#dw h2 {font-size: 150%; margin-left: 20px; font-weight: bold;}
+#dw h3 {font-size: 130%; margin-left: 40px; border-bottom: none; font-weight: bolder}
+#dw h4 {font-size: 115%; margin-left: 60px; border-bottom: none; font-weight: bolder}
+#dw h5 {font-size: 100%; margin-left: 80px; border-bottom: none; font-weight: bold;}
+*/
+
+#dw h1 {font-size: 160%; font-weight: bold;}
+#dw h2 {font-size: 140%; font-weight: bold; }
+#dw h3 {font-size: 130%; border-bottom: none; font-weight: bolder}
+#dw h4 {font-size: 115%; border-bottom: none; font-weight: bolder}
+#dw h5 {font-size: 100%; border-bottom: none; font-weight: bold;}
+
+/* indent different sections */
+/*
+#dw div.level1 {margin-left: 3px;}
+#dw div.level2 {margin-left: 23px;}
+#dw div.level3 {margin-left: 43px;}
+#dw div.level4 {margin-left: 63px;}
+#dw div.level5 {margin-left: 83px;}
+*/
+
+/* unordered lists */
+#dw ul {
+  line-height: 1.5em;
+  list-style-type: square;
+  margin: 0 0 0.5em 2em;
+  padding: 0;
+  color: #638c9c;
+  list-style-image: none;
+}
+
+/* ordered lists */
+#dw ol {
+  line-height: 1.5em;
+  margin: 0 0 0.5em 2em;
+  padding: 0;
+  color: #638c9c;
+  font-weight: bold;
+  list-style-image: none;
+}
+
+/* the list items overriding the ul/ol definition */
+#dw .li {
+  color: #000;
+  font-weight: normal;
+}
+
+#dw ol {list-style-type: decimal}
+#dw ol ol {list-style-type: upper-roman}
+#dw ol ol ol {list-style-type: lower-alpha}
+#dw ol ol ol ol {list-style-type: lower-greek}
+
+#dw li.open {
+  list-style-image: url(../lib/tpl/fsinfo/images/open.gif);
+    /*list-style-type: circle;*/
+}
+
+#dw li.closed {
+  list-style-image: url(../lib/tpl/fsinfo/images/closed.gif);
+    /*list-style-type: disc;*/
+}
+
+#dw blockquote {
+  border-left: 2px solid #8cacbb;
+  padding-left: 3px;
+  margin-left: 0;
+}
+
+/* code blocks by indention */
+#dw pre.pre {
+  font-size: 100%;
+  padding: 0.5em;
+  border: 1px dashed #8cacbb;
+  color: Black;
+  background-color: #f7f9fa;
+  overflow: auto;
+}
+
+/* code blocks by code tag */
+#dw pre.code {
+  font-size: 100%;
+  padding: 0.5em;
+  border: 1px dashed #8cacbb;
+  color: Black;
+  background-color: #f7f9fa;
+  overflow: auto;
+}
+
+/* inline code words */
+#dw code {
+  font-size: 80%;
+}
+
+/* code blocks by file tag */
+#dw pre.file {
+  font-size: 100%;
+  padding: 0.5em;
+  border: 1px dashed #8cacbb;
+  color: Black;
+  background-color: #dee7ec;
+  overflow: auto;
+}
+
+/* inline tables */
+
+#dw table.inline th {
+  padding: 3px;
+  border: 1px solid #8cacbb;
+  background-color: #dee7ec;
+  text-align: left;
+}
+
+#dw table.inline td {
+  padding: 3px;
+  border: 1px solid #8cacbb;
+}
+</style>
+<script type='text/javascript' src='../wp-content/themes/arras/js/superfish/hoverIntent.js'></script>
+<script type='text/javascript' src='../wp-content/themes/arras/js/superfish/superfish.js'></script>
+<script type='text/javascript' src='../wp-includes/js/comment-reply.min.js?ver=3.6'></script>
+<script type='text/javascript' src='../wp-content/themes/arras/js/jquery.validate.min.js'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../xmlrpc-rsd.php.html" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 3.6" />
+
+<script type="text/javascript"><!--
+var a2a_config=a2a_config||{},wpa2a={done:false,html_done:false,script_ready:false,script_load:function(){var a=document.createElement('script'),s=document.getElementsByTagName('script')[0];a.type='text/javascript';a.async=true;a.src='/page.js';s.parentNode.insertBefore(a,s);wpa2a.script_load=function(){};},script_onready:function(){if(a2a.type=='page'){wpa2a.script_ready=true;if(wpa2a.html_done)wpa2a.init();}},init:function(){for(var i=0,el,target,targets=wpa2a.targets,length=targets.length;i<length;i++){el=document.getElementById('wpa2a_'+(i+1));target=targets[i];a2a_config.linkname=target.title;a2a_config.linkurl=target.url;if(el)a2a.init('page',{target:el});wpa2a.done=true;}}};a2a_config.tracking_callback=['ready',wpa2a.script_onready];
+//--></script>
+<meta name="_awb_version" content="2.0.3" /><link rel="stylesheet" href="../wp-content/themes/arras/css/styles/default.css" type="text/css" media="screen,projection" /><link rel="stylesheet" href="../wp-content/themes/arras/css/layouts/2c-r-fixed.css" type="text/css" />
+<!-- Generated by Arras WP Theme -->
+<style type="text/css">
+	.posts-default li  { width: 205px; height: 225px; }
+	.posts-default img, .posts-default .entry-thumbnails-link { width: 195px; height: 110px; }
+	.posts-default .entry-meta { width: 195px; }
+	.posts-default .entry-thumbnails { width: 205px; height: 120px; }
+			.posts-quick .entry-thumbnails img { width: 115px; height: 115px; }
+		.posts-quick .entry-meta { width: 115px; }
+			.featured { height: 260px; }
+	.featured-article { width: 640px; height: 250px; }
+	.featured-article img { width: 640px; height: 250px; }
+	#controls { width: 610px; top: 110px; }
+	#controls .next { left: 610px; }
+	.featured-entry { height: 84px; top: -84px; }
+	.featured-slideshow-inner { height: 250px }
+		.featured-stories-summary  { margin-left: 51px; }
+	.single .post .entry-photo img, .single-post .entry-photo img  { width: 620px; height: 250px; }
+		.footer-sidebar  { width: 920px; }
+	</style>
+	<script type="text/javascript">
+	jQuery(document).ready(function($) {
+
+$('.multi-sidebar').tabs();
+
+$('.sf-menu').superfish({autoArrows: true, speed: 'fast', dropShadows: 'true'});
+
+$('#commentform').validate();
+
+
+});	</script>
+	<!--[if IE]>
+<style type="text/css">
+.addtoany_list a img{filter:alpha(opacity=70)}
+.addtoany_list a:hover img,.addtoany_list a.addtoany_share_save img{filter:alpha(opacity=100)}
+</style>
+<![endif]-->
+<link rel="stylesheet" href="../wp-content/themes/arras/user.css" type="text/css" media="screen,projection" /><!-- Google Analytics Tracking by Google Analyticator 6.4.5: http://www.videousermanuals.com/google-analyticator/ -->
+<script type="text/javascript">
+	var analyticsFileTypes = [''];
+	var analyticsEventTracking = 'enabled';
+</script>
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-169675-4']);
+        _gaq.push(['_addDevId', 'i9k95']); // Google Analyticator App ID with Google 
+        
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+</head>
+
+<body class="page page-id-0 page-parent page-template-default layout-2c-r-fixed no-js style-default">
+<script type="text/javascript">
+//<![CDATA[
+(function(){
+var c = document.body.className;
+c = c.replace(/no-js/, 'js');
+document.body.className = c;
+})();
+//]]>
+</script>
+
+<div id="top-menu" class="clearfix">
+	</div><!-- #top-menu -->
+
+<div id="header"><div align="center"><script type="text/javascript"><!--
+google_ad_client = "pub-7027070946238159";
+/* 728x90, Top Banner */
+google_ad_slot = "9335358437";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+	<div id="branding" class="clearfix">
+	<div class="logo">
+				<span class="blog-name"><a href="../index.html">World Music Central.org</a></span>
+		<img style="float:left; padding: 0 5px 0 0;" src="../wp-content/themes/wmc-magazeen/images/bull.png"/><span class="blog-description">Your Connection to World Music</span>
+			</div>
+	<div id="searchbar"><form method="get" class="searchform clearfix" action="http://worldmusiccentral.org/">
+ <input type="text" value="Search..." name="s" class="s" onfocus="this.value=''" />
+ <input type="submit" class="searchsubmit" value="Search" title="Search World Music Central.org" />
+</form>
+</div>
+	</div><!-- #branding -->
+</div><!-- #header -->
+
+<div id="nav">
+	<div id="nav-content" class="clearfix">
+	<div class="menu-main-container"><ul id="menu-main" class="sf-menu menu clearfix"><li id="menu-item-6394" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-6394"><a href="../index.html">Home</a></li>
+<li id="menu-item-6401" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6401"><a href="../about/index.html">About</a></li>
+<li id="menu-item-6454" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6454"><a href="#">World Music Resources</a>
+<ul class="sub-menu">
+	<li id="menu-item-6455" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6455"><a href="artist_index.php.html">Artists Database</a></li>
+	<li id="menu-item-6462" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6462"><a href="http://musicwikicentral.com/world_music_festivals">Festivals</a></li>
+	<li id="menu-item-6467" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6467"><a href="http://musicwikicentral.com/travel_guides">Travel Guides</a></li>
+	<li id="menu-item-6469" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6469"><a href="http://musicwikicentral.com/world_music_genres">Musical Genres</a></li>
+	<li id="menu-item-6468" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6468"><a href="http://musicwikicentral.com/musical_instruments">Musical Instruments</a></li>
+	<li id="menu-item-6475" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6475"><a href="http://musicwikicentral.com/showcases">Showcases</a></li>
+	<li id="menu-item-6470" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6470"><a href="http://musicwikicentral.com/world_music_venues">Venues</a></li>
+	<li id="menu-item-6472" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6472"><a href="http://musicwikicentral.com/record_companies">Record Companies</a></li>
+	<li id="menu-item-6466" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6466"><a href="http://musicwikicentral.com/booking_agents">Booking Agents</a></li>
+	<li id="menu-item-6474" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6474"><a href="http://musicwikicentral.com/world_music_press">World Music Press</a></li>
+	<li id="menu-item-6477" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6477"><a href="http://musicwikicentral.com/ethnomusicology">Ethnomusicology</a></li>
+	<li id="menu-item-6473" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6473"><a href="http://musicwikicentral.com/music_organizations">Music Organizations</a></li>
+</ul>
+</li>
+<li id="menu-item-6390" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6390"><a href="#">Topics</a>
+<ul class="sub-menu">
+	<li id="menu-item-6369" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6369"><a href="../category/archive/index.html">archive</a></li>
+	<li id="menu-item-6370" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6370"><a href="../category/articles/index.html">Articles</a></li>
+	<li id="menu-item-6371" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6371"><a href="../category/awards/index.html">Awards</a></li>
+	<li id="menu-item-6372" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6372"><a href="../category/book-reviews/index.html">Book Reviews</a></li>
+	<li id="menu-item-6373" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6373"><a href="../category/cd-reviews/index.html">CD Reviews</a></li>
+	<li id="menu-item-6374" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6374"><a href="../category/concert-reviews/index.html">Concert reviews</a></li>
+	<li id="menu-item-6375" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6375"><a href="../category/conferences/index.html">Conferences</a></li>
+	<li id="menu-item-6376" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6376"><a href="../category/editorials/index.html">Editorials</a></li>
+	<li id="menu-item-6377" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6377"><a href="../category/events/index.html">Events</a></li>
+	<li id="menu-item-6378" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6378"><a href="../category/film-reviews/index.html">Film Reviews</a></li>
+	<li id="menu-item-6379" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6379"><a href="../category/general-news/index.html">General News</a></li>
+	<li id="menu-item-6380" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6380"><a href="../category/interviews/index.html">Interviews</a></li>
+	<li id="menu-item-6381" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6381"><a href="../category/loop-collections/index.html">Loop Collections</a></li>
+	<li id="menu-item-6382" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6382"><a href="../category/new-books/index.html">New Books</a></li>
+	<li id="menu-item-6383" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6383"><a href="../category/new-cds/index.html">New CDs</a></li>
+	<li id="menu-item-6384" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6384"><a href="../category/new-films/index.html">New Films</a></li>
+	<li id="menu-item-6385" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6385"><a href="../category/new-releases/index.html">New Releases</a></li>
+	<li id="menu-item-6386" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6386"><a href="../category/obituaries/index.html">Obituaries</a></li>
+	<li id="menu-item-6387" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6387"><a href="../category/tour-announcements/index.html">Tour Announcements</a></li>
+	<li id="menu-item-6388" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6388"><a href="../category/tradeshows/index.html">Tradeshows</a></li>
+	<li id="menu-item-6389" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6389"><a href="../category/uncategorized/index.html">Uncategorized</a></li>
+</ul>
+</li>
+<li id="menu-item-6392" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6392"><a href="../events/index.html">Calendar</a></li>
+<li id="menu-item-6400" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6400"><a href="../store/index.html">Store</a></li>
+<li id="menu-item-6724" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6724"><a href="../contact-us/index.html">Contact Us</a></li>
+</ul></div>		<ul class="quick-nav clearfix">
+					<li><a id="rss" title="World Music Central.org RSS Feed" href="../feed/index.html">RSS Feed</a></li>
+				
+						
+							<li><a id="facebook" title="World Music Central.org Facebook" href="http://www.facebook.com/pages/World-Music-Central/149036898455901" target="_blank">Facebook</a></li>
+				
+			</ul>
+	</div><!-- #nav-content -->
+</div><!-- #nav -->
+
+<div id="wrapper">
+	
+	  
+	<div id="main" class="clearfix">
+    <div id="container" class="clearfix">
+  <head>
+    <title>Brenda Fassie - Artist Page</title>
+  </head>
+
+  <body> 
+  
+  <div id="artistpage">
+  
+  <div style="float:right;">
+  
+  <script type="text/javascript"><!--
+google_ad_client = "pub-7027070946238159";
+/* 160x600, created 12/6/08 */
+google_ad_slot = "6830638066";
+google_ad_width = 160;
+google_ad_height = 600;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+
+</div>
+  
+  
+  
+  	<table>
+
+  
+<tr><td align="center" colspan="2" width="100%">
+<font size=+1><b>Brenda Fassie</b></font> 
+<hr></td></tr>
+
+<tr><td align="center" colspan="2" width="100%">
+<a href="#Genres">Similar Music</a>
+<hr></td></tr>
+    <tr>
+      <td colspan="2" width="100%">
+		<a name="Biography"><b>Biography</b></a>:
+	  </td>
+    </tr>
+    <tr>
+      <td colspan="2" width="100%">&nbsp;</td>
+    </tr>
+
+    <tr>
+      <td width="3%"></td>
+
+      <td width="97%">
+	  
+	Over a career of 21 remarkable years, Brenda - or Ma 
+Brrr as she was affectionately known by her fans - delivered everything that was 
+ever required of her, and so much more: there were the recordings (from the 
+early releases like <b>Too Late For Mama</b> to her 2003 album, <b>Mali</b>), the hit songs 
+(?Weekend Special? is just one of many), the energetic and always surprising 
+performances, the songs (Brenda was a special songwriting talent), the rock and 
+roll lifestyle, the mother's love (she left a son, Bongani), the heartfelt 
+connection with her fans, the global recognition.</p>
+
+<p>It was the buzz around Brenda's voice that first 
+prompted legendary producer, Koloi Lebona, to make the trip, at Christmas 1979, 
+from Johannesburg to the Cape Town township of Langa to hear her sing. Then just 
+16, Brenda, who had been the star of the Tiny Tots group, was something of a 
+legend among the mother city's musicians. Recalls Koloi: &quot;<i>I had five or six 
+musicians raving to me about her voice and so I decided to hear it for myself. I 
+had no trouble finding her mother Sarah's house in Langa - everyone was talking 
+about Brenda. And when I got there Brenda sang several standards for me while 
+her (now late) mother played the piano. There was something special about her 
+voice. It was different than anything I had heard until then and was very mature 
+for a teenager. I knew it was the voice of the future</i>.&quot;</p>
+
+<p>And that &quot;voice of the future&quot; came with a self-belief 
+well beyond Brenda's years. &quot;<i>When she'd finished singing for me, she quickly sussed how impressed I was</i>,&quot; Koloi says. &quot;<i>She turned to me and said 'so when are 
+we going to Joburg'!</i>&quot; That comment pointed the way to another key to Brenda's 
+career: her incredible drive, her unswerving belief in herself, and her total 
+individuality.</p>
+
+<p>Reluctant to interfere with her schooling, Koloi, with 
+Sarah Fassie's permission, took the young singer to live with his family in the 
+sprawling Johannesburg township of Soweto with the idea that Brenda would 
+complete her studies and then pursue a singing career. But events overtook 
+Kaloi's plans when Joy singer Anneline Malebo left to go on maternity leave and 
+Brenda temporarily joined the highly successful singing trio. As Koloi puts it: 
+&quot;<i>The bug was too strong to resist after that, and Brenda's professional singing 
+career was launched</i>.&quot;</p>
+
+<p>When her Joy contract expired, Brenda took up an offer 
+from Blondie and Papa to appear as a solo artist on their road show. It was 
+through this that the Big Dudes were formed and Brenda's career soared to a new 
+level as part of the group, Brenda and the Big Dudes. Nevertheless, the singer 
+had yet to record - a situation which changed, pretty dramatically, when 
+?Weekend Special?, already a wildly popular live song, was released in 1983 as a 
+12&quot; Maxi through CCP Record Company, the South African record company started by 
+Clive Calder. A funky, disco-grooved track that provided the perfect vehicle for 
+Brenda's crystalline and potent voice, ?Weekend Special? became the fastest 
+selling record of the time. The song, which today remains a highly-influential 
+track in the history of South African music, entered the Billboard Hot Black 
+singles chart in March 1986, enabling Brenda and the Big Dudes to appear in the 
+United States, United Kingdom, Europe, Australia, and Brazil. The single was 
+remixed in New York by Van Gibbs and released by Capitol Records. It remained on 
+the US charts for a full eight weeks and enjoyed significant radio play, 
+including throughout southern Africa. ?Weekend Special?'s success ignited a 
+dwindling homegrown music scene. &quot;<i>It sold around 200,000 copies</i>,&quot; remembers then CCP MD, Ken Haycock. &quot;<i>The rest of the '80s saw an unbelievable run of local 
+hits, and there's no doubt Brenda played a huge part in stimulating that trend</i>.&quot;</p>
+
+<p>With a provocative stage show, and a well publicized 
+rivalry with the likes of fellow township pop superstar, Yvonne Chaka Chaka, the 
+1980s saw Brenda vaulting rapidly into solo superstar status, releasing records, 
+with Malcolm Watson in the producer's seat, like Cool Spot, which included It's 
+Nice To Be With People} and scoring hits with songs like No No No Senor.</p>
+
+<p>Now firmly established as a solo artist (Brenda 
+originally signed her record deal as part of the Big Dudes and initially had an 
+equal royalty split with the rest of the group), the late 1980s saw Brenda team 
+up with producer Sello &quot;Chicco&quot; Twala, a creative coupling that has proved the 
+most spectacular in South Africa's music history. Brenda and Chicco's explosive 
+musical interaction culminated in the monster album <b>Too Late for Mama</b>, which 
+became a multi-platinum seller in 1989 and rose to the top of most South African 
+charts.</p>
+
+<p>For the next several years, Brenda's career continued 
+apace and, in 1996, she revealed her abilities as a producer with the album <b>Now 
+Is the Time</b>. Defining a new level of maturity for Brenda, the album features two 
+duets with Papa Wemba and astonished even her most loyal fans. 1997, too, proved 
+to be an important year for Brenda with the release of <b>Paparazzi</b>, in spite of 
+talk of Brenda's &quot;demise.&quot; The album, produced by talented newcomer, Godfrey Pilane, featured a duet with Bayete's Jabu Khanyile, and was a diverse offering 
+with everything from kwaito to to slow groove tracks.</p>
+
+<p>But little could prepare South Africa for Brenda's 
+spectacular comeback album - the 1998 release, <b>Memeza</b>. The album, which saw the 
+singer again team up with producer Chicco, became South Africa's best selling 
+release of the year, shifting 500,000 copies and earning Brenda several South 
+African Music Awards as well as young and old fans all over again through hit 
+tracks like &quot;Vul'indlela.&quot; The latter - hugely popular throughout Africa, as 
+Brenda's 1999 Kora award for best female artist revealed - has its origins deep 
+in African gospel, with much of its appeal in the rhythm of Zion church music.</p>
+
+<p>&quot;<i>Tell everyone Brenda's back,</i>&quot; she said at the time - 
+and that statement has proved to be true.</p>
+
+<p>This landmark album - which dug deep into this country's 
+musical roots - was produced by Chicco who says he knew early on during the 1998 
+recording sessions that <b>Memeza</b> would rapidly propel Brenda back into the musical 
+stratosphere at supersonic speed.</p>
+
+<p>&quot;<i>I thought people might have forgotten about Brenda 
+because her previous albums were pretty low-key. When it came to the sound of 
+the album, we looked around the world and saw that those people having huge 
+successes were going back to the old music and so we decided to do the same. But 
+a great deal of Memeza's success is due to Brenda's excellent voice, which we 
+kept dominant throughout the album</i>.&quot;</p>
+
+<p>When it came to Brenda's 1999 follow-up, <b>Nomakanjani?</b>, 
+Chicco was once again at the helm as producer, engineer, and chief songwriter. 
+Again Brenda's voice, in fine form, was the musical pivot of the album. Her 2000 
+release, <b>Amadlozi</b>, featuring hits like ?Thola Amadlozi? and ?Nakupende (I Love 
+You)? again proved what a dazzling match the Brenda-Chicco one was. The second 
+half of 2001 saw the release of <b>Mina Nawe</b>, with Chicco in the producer's seat 
+for the fourth time in recent years.</p>
+
+<p>Reclaiming her status as South Africa's queen of pop was 
+not without its difficulties, and the late 1990s and early years of the 21st 
+century saw the at times mercurial and capricious singer earn many tabloid 
+inches about her personal life.</p>
+
+<p>2002 saw the release of <b>Myekeleni</b>, Brenda's most 
+accomplished and impressively diverse album so far. She followed that up with 
+<b>Mali</b>, released late in 2003 and already past platinum status and unleashed 
+several radio hits including ?Pond Pond? and ?Ntsware-Ndibambe?. Like all of 
+Brenda's recordings, alongside the upbeat, danceable tracks are several tender, 
+gentle ballads like ?Siyobonana?, ?My Baby?, and ?Ngizilahlela Kuwe? - trademark 
+Brenda recordings that might never reach the top of the charts but touch the 
+hearts of her loyal fans throughout Africa and, consequently, are part of the 
+reason why she remains so beloved.</p>
+
+<p>It may come as a surprise to many people that hit songs 
+like ?Ntsware-Ndibambe? were written and produced by Brenda herself. Over the 
+last few years of her life, when her personal life became the focus of attention 
+in the press, many forgot that, alongside a voice that remained one of the 
+strongest in South Africa, Brenda had an intuitive feel for songs that are 
+beautifully revealed in the several that she wrote and recorded for <b>Mali</b>. 
+Longtime creative partner and producer, Sello &quot;Chicco&quot; Twala also contributed to 
+the songwriting on the album.</p>
+
+<p>&quot;<i>Writing songs is what I do whenever I feel a melody 
+coming,</i>&quot; Brenda said in 2004. &quot;<i>I have a small studio at home and I am 
+in there often, writing music and lyrics. It's an important part of my creative 
+life</i>.&quot;</p>
+
+<p>That Brenda remained beloved by her fans and able to 
+pursue a dynamic career littered with hit songs, multi-platinum sales, and 
+sparkling performances for so long (she was born in 1964 and was about to turn 
+40 when she died on May 9, 2004), speaks volumes about the magic that dwelt deep 
+within the woman's soul. So it was no surprise when Time magazine chose to 
+showcase Brenda Fassie in a three-page spread in its December 17, 2001 issue. 
+Featuring a stunning picture of Brenda against a purple background and the 
+headline &quot;The Madonna of the Townships,&quot; Time profiled the singer, focusing on a 
+recent trip to America, and made no bones about Brenda's proclivity for 
+attention-grabbing antics. But at the center of the piece was a focus on her 
+extraordinary talent and the tale of a woman who has overcome adversity and 
+triumphed in her chosen career.</p>
+
+<p>Brenda certainly achieved triumph throughout her career. 
+In 2002, at the 8th South African Music Awards, Brenda once more scooped - for 
+an incredible and record-breaking fourth year in a row - the SAMA for Best 
+Selling Release, for the album <b>Mina Nawe</b>. The album's success in outstripping 
+sales of any other domestic release in the year 2001 followed on the heels of 
+her previous three albums -- <b>Memeza</b>, <b>Amadlozi</b>, and <b>Nomakanjani?</b> - all of which 
+earned the title of the country's most popular album in the year of their 
+release.&nbsp; Since then, her 2002 <b>Myekeleni </b>and 2003's <b>Mali</b> have both scorched 
+their way to multi-platinum status in South Africa, and unleashed chart-topping 
+songs in tracks like 'Come Duze,&quot; &quot;Duma Duma,&quot; 'Pond Pond,&quot; and &quot;Ntsware-Ndibambe.&quot; At 
+the 2004 South African Music Awards, Brenda's song &quot;Vul'indlela' (a hit across the 
+continent) was declared Song of the Decade by the South African public in one of 
+the few public-voted categories at the event. More recently, her posthumous 
+album - released in September 2004, <b>Give Me Some Volume</b> - reached platinum in a 
+single day.</p>
+<p>Brenda?s unmistakable voice belied an increasing 
+physical frailty, and after a tragically rapid downturn in her already-fragile 
+health, Brenda Fassie died in May 2004, just before her 40th birthday. It was a 
+true tribute to her prominence in South African culture that visitors to her 
+hospital bedside included Nelson Mandela, Winnie Madikizela-Mandela, and 
+President Thabo Mbeki, among many others.</p>
+<p>
+
+Partial Discography:</p>
+<p>
+<p>Brenda (1989)
+</p>
+<p>Black President (1990) </p>
+<p>
+<a href="http://www.amazon.com/gp/product/B000008FIL?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B00005Y1MX">Brenda Fassie</a> (1994)
+</p>
+<p>
+<a href="http://www.amazon.com/gp/product/B001URRHKI?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B00005Y1MX">Abantu Bayakhuluma</a> (1994)
+</p>
+<p>
+<a href="http://www.amazon.com/gp/product/B000003ZMP?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B00005Y1MX">Mama</a> (1995)
+</p>
+<p>Now Is the Time (1996) </p>
+<p>
+<a href="http://www.amazon.com/gp/product/B00008EV69?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B00005Y1MX">Umuntu Uyashintsha</a> (1996) 
+</p>
+<p>
+<a href="http://www.amazon.com/gp/product/B00004YU5Q?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B00005Y1MX">Memeza</a> (1997)
+</p>
+<p>Paparazzi (1997) </p>
+<p>
+<a href="http://www.amazon.com/gp/product/B004FFJQOC?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B00005Y1MX">Amadlozi</a> (2000)
+</p>
+<p>
+<a href="http://www.amazon.com/gp/product/B00005J8KT?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B00005Y1MX">Nomakanjani</a> (2000)
+</p>
+<p>
+<a href="http://www.amazon.com/gp/product/B00005YH5X?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B00005Y1MX">Mina-Nawe</a> (2002)
+</p>
+<p>
+<a href="http://www.amazon.com/gp/product/B00008NW7I?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B00005Y1MX">Myekeleni</a> (2002) 
+</p>
+<p>
+<a href="http://www.amazon.com/gp/product/B0002JUX6A?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B00005Y1MX">Mali</a> (2003)
+</p>
+<p>
+<a href="http://www.amazon.com/gp/product/B0001B3Y0G?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B00005Y1MX">The Remix Collection</a> (2003)
+</p>
+<p>
+<a href="http://www.amazon.com/gp/product/B00067RGE0?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B00005Y1MX">Brenda: The Greatest Hits</a> (2004)
+</p>
+<p>Gimme Some Volume (2004) </p>
+<p>
+<a href="http://www.amazon.com/gp/product/B001URRHKI?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B00005Y1MX">African Classics: Brenda Fassie</a> (Sheer Legacy, 2009)
+</p>
+</td>
+<tr><td align="center" colspan="2" width="100%">
+
+<hr></td></tr>
+  	<tr>
+  	  <td colspan="2" width="100%">
+		<a name="Genres"><b>Similar Music</b></a>:
+	  </td>
+    </tr>
+    <tr>
+      <td colspan="2" width="100%">&nbsp;</td>
+    </tr>
+
+    <tr>
+      <td width="3%"></td>
+
+      <td width="97%">
+
+	<a href="genre_list-genre=South+African.php.html">South African</a></td>
+<tr><td align="center" colspan="2" width="100%">
+
+<hr></td></tr>
+	</table>
+	</div>
+
+	</div><!-- #main -->
+	
+	    
+    <div id="footer">
+		<div class="footer-sidebar-container clearfix">
+							<ul id="footer-sidebar-1" class="footer-sidebar clearfix xoxo">
+										<li></li>
+									</ul>
+					</div>
+		
+		<div class="footer-message">
+                <p class="floatright">WordPress Installation and Support by <a class="arras" href="http://digiblink.eu/" title="Custom WordPress development, design and backup services."><strong>digiBlink</strong></a></p>
+                <p>Copyright World Music Central.org. All Rights Reserved.</p>                </div><!-- .footer-message -->
+		
+    </div>
+</div><!-- #wrapper -->
+
+<script type="text/javascript"><!--
+wpa2a.targets=[];
+wpa2a.html_done=true;if(wpa2a.script_ready&&!wpa2a.done)wpa2a.init();wpa2a.script_load();
+//--></script>
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+
+	
+});
+</script>
+<script type='text/javascript' src='../wp-includes/js/jquery/ui/jquery.ui.core.min.js?ver=1.10.3'></script>
+<script type='text/javascript' src='../wp-includes/js/jquery/ui/jquery.ui.widget.min.js?ver=1.10.3'></script>
+<script type='text/javascript' src='../wp-includes/js/jquery/ui/jquery.ui.tabs.min.js?ver=1.10.3'></script>
+</body>
+</html>
+   
+
+<!-- Localized -->

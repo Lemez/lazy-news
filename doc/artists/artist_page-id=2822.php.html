@@ -1,0 +1,1161 @@
+
+<style type="text/css">
+/* --- reset some elements --- */
+
+#dw ul,ol { list-style:none }
+
+#dw ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,p,blockquote,fieldset,input { margin:0; padding:0 }
+
+/* --- Basic Stylesheet for DokuWiki content --- */
+
+#dw h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+#dw h1 a {
+  color: black;
+}
+
+/* ---------- table of contents ------------------- */
+
+#dw div.toc {
+  margin-left: 2em;
+  margin-top: 1.2em;
+  margin-bottom: 0;
+  float:right;
+  width: 200px;
+  font-size: 80%;
+  padding-top:5px;
+}
+
+#dw div.tocheader {
+  padding: 3px;
+  border: 1px solid #8cacbb;
+  background-color: #dee7ec;
+  text-align: left;
+  font-weight:bold;
+  margin-bottom: 2px;
+}
+
+#dw div.tocheader img {
+  width:0.8em;
+  height:0.8em;
+  margin-top:0.3em;
+  margin-right:3px;
+  float:right;
+  cursor: pointer;
+}
+
+#dw #toc__inside {
+  border: 1px solid #8cacbb;
+  background-color: #fff;
+  text-align: left;
+  padding-top: 0.5em;
+  padding-bottom: 0.7em;
+}
+
+#dw ul.toc {
+  list-style-type: none;
+  list-style-image: none;
+  line-height: 1.2em;
+  margin: 0;
+  padding: 0;
+  padding-left: 1em;
+}
+
+#dw ul.toc li {
+  background: transparent url(../lib/tpl/fsinfo/images/tocdot2.gif) 0 0.6em no-repeat;
+  padding-left:0.4em;
+}
+
+#dw ul.toc li.clear {
+  background-image: none;
+  padding-left:0.4em;
+}
+
+#dw a.toc {
+  color: #436976;
+  text-decoration:none;
+}
+
+#dw a.toc:hover {
+  color: #000;
+  text-decoration:underline;
+}
+
+/* --------------------- footnotes -------------------------------- */
+
+#dw div.footnotes{
+  clear:both;
+  border-top: 1px solid #8cacbb;
+  padding-left: 1em;
+  margin-top: 1em;
+}
+
+#dw div.fn{
+  font-size:90%;
+}
+
+#dw a.fn_top{
+  vertical-align:super;
+  font-size:80%;
+}
+
+#dw a.fn_bot{
+  vertical-align:super;
+  font-size:80%;
+  font-weight:bold;
+}
+
+/* insitu-footnotes */
+#dw div.insitu-footnote {
+  font-size: 80%;
+  line-height: 1.2em;
+  border: 1px solid #8cacbb;
+  background: #eef3f8;
+  text-align: left;
+  padding: 4px;
+  max-width: 40%;    /* IE's width is handled in javascript */
+}
+
+/* overcome IE issue with one line code or file boxes which require h. scrolling */
+#dw * html .insitu-footnote pre.code, * html .insitu-footnote pre.file {
+  padding-bottom: 18px;
+}
+
+/* --------------------- Tables -------------------------------- */
+
+#dw table.inline td.okay {
+  background-color: #afa;
+  text-align: center;
+}
+
+#dw table.inline td.notokay {
+  background-color: #fcc;
+  text-align: center;
+}
+
+#dw table.inline {
+  background-color: #fff;
+  border-spacing: 0px;
+  border-collapse: collapse;
+}
+
+/* ------------- Page elements ----------------- */
+
+#dw span.user{
+/*  color: #ccc; */
+  color: #666;
+  font-size: 90%;
+}
+
+#dw li.minor {
+  color: #666;
+  font-style: italic;
+}
+
+/* embedded images */
+#dw img.media {
+  margin: 3px;
+}
+
+#dw img.medialeft {
+  border: 0;
+  float: left;
+  margin: 0 1.5em 0 0;
+}
+
+#dw img.mediaright {
+  border: 0;
+  float: right;
+  margin: 0 0 0 1.5em;
+}
+
+#dw img.mediacenter {
+  border: 0;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* smileys */
+#dw img.middle {
+  vertical-align: middle;
+}
+
+#dw acronym {
+  cursor: help;
+  border-bottom: 1px dotted #000;
+}
+
+/* general headline setup */
+#dw h1, #dw h2, #dw h3, #dw h4, #dw h5 {
+    color: Black;
+    background-color: transparent;
+    font-family: "Lucida Grande", Verdana, Lucida, Helvetica, Arial, sans-serif;
+    font-size: 100%;
+    font-weight: normal;
+    margin-left:    0;
+    margin-right:   0;
+    margin-top:     0;
+    margin-bottom:  1em;
+    padding-left:   0;
+    padding-right:  0;
+    padding-top:    0.5em;
+    padding-bottom: 0;
+    border-bottom: 1px solid #8cacbb;
+}
+
+/* special headlines */
+/*
+#dw h1 {font-size: 160%; margin-left: 0px; font-weight: bold;}
+#dw h2 {font-size: 150%; margin-left: 20px; font-weight: bold;}
+#dw h3 {font-size: 130%; margin-left: 40px; border-bottom: none; font-weight: bolder}
+#dw h4 {font-size: 115%; margin-left: 60px; border-bottom: none; font-weight: bolder}
+#dw h5 {font-size: 100%; margin-left: 80px; border-bottom: none; font-weight: bold;}
+*/
+
+#dw h1 {font-size: 160%; font-weight: bold;}
+#dw h2 {font-size: 140%; font-weight: bold; }
+#dw h3 {font-size: 130%; border-bottom: none; font-weight: bolder}
+#dw h4 {font-size: 115%; border-bottom: none; font-weight: bolder}
+#dw h5 {font-size: 100%; border-bottom: none; font-weight: bold;}
+
+/* indent different sections */
+/*
+#dw div.level1 {margin-left: 3px;}
+#dw div.level2 {margin-left: 23px;}
+#dw div.level3 {margin-left: 43px;}
+#dw div.level4 {margin-left: 63px;}
+#dw div.level5 {margin-left: 83px;}
+*/
+
+/* unordered lists */
+#dw ul {
+  line-height: 1.5em;
+  list-style-type: square;
+  margin: 0 0 0.5em 2em;
+  padding: 0;
+  color: #638c9c;
+  list-style-image: none;
+}
+
+/* ordered lists */
+#dw ol {
+  line-height: 1.5em;
+  margin: 0 0 0.5em 2em;
+  padding: 0;
+  color: #638c9c;
+  font-weight: bold;
+  list-style-image: none;
+}
+
+/* the list items overriding the ul/ol definition */
+#dw .li {
+  color: #000;
+  font-weight: normal;
+}
+
+#dw ol {list-style-type: decimal}
+#dw ol ol {list-style-type: upper-roman}
+#dw ol ol ol {list-style-type: lower-alpha}
+#dw ol ol ol ol {list-style-type: lower-greek}
+
+#dw li.open {
+  list-style-image: url(../lib/tpl/fsinfo/images/open.gif);
+    /*list-style-type: circle;*/
+}
+
+#dw li.closed {
+  list-style-image: url(../lib/tpl/fsinfo/images/closed.gif);
+    /*list-style-type: disc;*/
+}
+
+#dw blockquote {
+  border-left: 2px solid #8cacbb;
+  padding-left: 3px;
+  margin-left: 0;
+}
+
+/* code blocks by indention */
+#dw pre.pre {
+  font-size: 100%;
+  padding: 0.5em;
+  border: 1px dashed #8cacbb;
+  color: Black;
+  background-color: #f7f9fa;
+  overflow: auto;
+}
+
+/* code blocks by code tag */
+#dw pre.code {
+  font-size: 100%;
+  padding: 0.5em;
+  border: 1px dashed #8cacbb;
+  color: Black;
+  background-color: #f7f9fa;
+  overflow: auto;
+}
+
+/* inline code words */
+#dw code {
+  font-size: 80%;
+}
+
+/* code blocks by file tag */
+#dw pre.file {
+  font-size: 100%;
+  padding: 0.5em;
+  border: 1px dashed #8cacbb;
+  color: Black;
+  background-color: #dee7ec;
+  overflow: auto;
+}
+
+/* inline tables */
+
+#dw table.inline th {
+  padding: 3px;
+  border: 1px solid #8cacbb;
+  background-color: #dee7ec;
+  text-align: left;
+}
+
+#dw table.inline td {
+  padding: 3px;
+  border: 1px solid #8cacbb;
+}
+</style>
+<link rel='stylesheet' id='eme_stylesheet-css'  href='../wp-content/plugins/events-made-easy/events_manager-ver=3.6.css' type='text/css' media='all' />
+<link rel='stylesheet' id='A2A_SHARE_SAVE-css'  href='../wp-content/plugins/add-to-any/addtoany.min-ver=1.4.css' type='text/css' media='all' />
+<script type='text/javascript' src='../wp-includes/js/jquery/jquery.js?ver=1.10.2'></script>
+<script type='text/javascript' src='../wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<script type='text/javascript' src='../wp-content/plugins/google-analyticator/external-tracking.min.js?ver=6.4.5'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../xmlrpc-rsd.php.html" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 3.6" />
+
+<script type="text/javascript"><!--
+var a2a_config=a2a_config||{},wpa2a={done:false,html_done:false,script_ready:false,script_load:function(){var a=document.createElement('script'),s=document.getElementsByTagName('script')[0];a.type='text/javascript';a.async=true;a.src='http://static.addtoany.com/menu/page.js';s.parentNode.insertBefore(a,s);wpa2a.script_load=function(){};},script_onready:function(){if(a2a.type=='page'){wpa2a.script_ready=true;if(wpa2a.html_done)wpa2a.init();}},init:function(){for(var i=0,el,target,targets=wpa2a.targets,length=targets.length;i<length;i++){el=document.getElementById('wpa2a_'+(i+1));target=targets[i];a2a_config.linkname=target.title;a2a_config.linkurl=target.url;if(el)a2a.init('page',{target:el});wpa2a.done=true;}}};a2a_config.tracking_callback=['ready',wpa2a.script_onready];
+//--></script>
+<meta name="_awb_version" content="2.0.3" /><link rel="stylesheet" href="../wp-content/themes/arras/css/styles/default.css" type="text/css" media="screen,projection" /><link rel="stylesheet" href="../wp-content/themes/arras/css/layouts/2c-r-fixed.css" type="text/css" />
+<!-- Generated by Arras WP Theme -->
+<style type="text/css">
+	.posts-default li  { width: 205px; height: 225px; }
+	.posts-default img, .posts-default .entry-thumbnails-link { width: 195px; height: 110px; }
+	.posts-default .entry-meta { width: 195px; }
+	.posts-default .entry-thumbnails { width: 205px; height: 120px; }
+			.posts-quick .entry-thumbnails img { width: 115px; height: 115px; }
+		.posts-quick .entry-meta { width: 115px; }
+			.featured { height: 260px; }
+	.featured-article { width: 640px; height: 250px; }
+	.featured-article img { width: 640px; height: 250px; }
+	#controls { width: 610px; top: 110px; }
+	#controls .next { left: 610px; }
+	.featured-entry { height: 84px; top: -84px; }
+	.featured-slideshow-inner { height: 250px }
+		.featured-stories-summary  { margin-left: 51px; }
+	.single .post .entry-photo img, .single-post .entry-photo img  { width: 620px; height: 250px; }
+		.footer-sidebar  { width: 920px; }
+	</style>
+	<script type="text/javascript">
+	jQuery(document).ready(function($) {
+
+$('.multi-sidebar').tabs();
+
+$('.sf-menu').superfish({autoArrows: true, speed: 'fast', dropShadows: 'true'});
+
+$('#commentform').validate();
+
+
+});	</script>
+	<!--[if IE]>
+<style type="text/css">
+.addtoany_list a img{filter:alpha(opacity=70)}
+.addtoany_list a:hover img,.addtoany_list a.addtoany_share_save img{filter:alpha(opacity=100)}
+</style>
+<![endif]-->
+<link rel="stylesheet" href="../wp-content/themes/arras/user.css" type="text/css" media="screen,projection" /><!-- Google Analytics Tracking by Google Analyticator 6.4.5: http://www.videousermanuals.com/google-analyticator/ -->
+<script type="text/javascript">
+	var analyticsFileTypes = [''];
+	var analyticsEventTracking = 'enabled';
+</script>
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-169675-4']);
+        _gaq.push(['_addDevId', 'i9k95']); // Google Analyticator App ID with Google 
+        
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>World Music Central.org</title>
+
+
+<link rel="alternate" type="application/rss+xml" href="../feed/index.html" title="World Music Central.org latest posts" />
+
+<link rel="alternate" type="application/rss+xml" href="../comments/feed/index.html" title="World Music Central.org latest comments" />
+
+<link rel="pingback" href="../xmlrpc.php.html" />
+
+<link rel="shortcut icon" href="../favicon.ico" />
+
+
+<style type="text/css">
+/* --- reset some elements --- */
+
+#dw ul,ol { list-style:none }
+
+#dw ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,p,blockquote,fieldset,input { margin:0; padding:0 }
+
+/* --- Basic Stylesheet for DokuWiki content --- */
+
+#dw h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+#dw h1 a {
+  color: black;
+}
+
+/* ---------- table of contents ------------------- */
+
+#dw div.toc {
+  margin-left: 2em;
+  margin-top: 1.2em;
+  margin-bottom: 0;
+  float:right;
+  width: 200px;
+  font-size: 80%;
+  padding-top:5px;
+}
+
+#dw div.tocheader {
+  padding: 3px;
+  border: 1px solid #8cacbb;
+  background-color: #dee7ec;
+  text-align: left;
+  font-weight:bold;
+  margin-bottom: 2px;
+}
+
+#dw div.tocheader img {
+  width:0.8em;
+  height:0.8em;
+  margin-top:0.3em;
+  margin-right:3px;
+  float:right;
+  cursor: pointer;
+}
+
+#dw #toc__inside {
+  border: 1px solid #8cacbb;
+  background-color: #fff;
+  text-align: left;
+  padding-top: 0.5em;
+  padding-bottom: 0.7em;
+}
+
+#dw ul.toc {
+  list-style-type: none;
+  list-style-image: none;
+  line-height: 1.2em;
+  margin: 0;
+  padding: 0;
+  padding-left: 1em;
+}
+
+#dw ul.toc li {
+  background: transparent url(../lib/tpl/fsinfo/images/tocdot2.gif) 0 0.6em no-repeat;
+  padding-left:0.4em;
+}
+
+#dw ul.toc li.clear {
+  background-image: none;
+  padding-left:0.4em;
+}
+
+#dw a.toc {
+  color: #436976;
+  text-decoration:none;
+}
+
+#dw a.toc:hover {
+  color: #000;
+  text-decoration:underline;
+}
+
+/* --------------------- footnotes -------------------------------- */
+
+#dw div.footnotes{
+  clear:both;
+  border-top: 1px solid #8cacbb;
+  padding-left: 1em;
+  margin-top: 1em;
+}
+
+#dw div.fn{
+  font-size:90%;
+}
+
+#dw a.fn_top{
+  vertical-align:super;
+  font-size:80%;
+}
+
+#dw a.fn_bot{
+  vertical-align:super;
+  font-size:80%;
+  font-weight:bold;
+}
+
+/* insitu-footnotes */
+#dw div.insitu-footnote {
+  font-size: 80%;
+  line-height: 1.2em;
+  border: 1px solid #8cacbb;
+  background: #eef3f8;
+  text-align: left;
+  padding: 4px;
+  max-width: 40%;    /* IE's width is handled in javascript */
+}
+
+/* overcome IE issue with one line code or file boxes which require h. scrolling */
+#dw * html .insitu-footnote pre.code, * html .insitu-footnote pre.file {
+  padding-bottom: 18px;
+}
+
+/* --------------------- Tables -------------------------------- */
+
+#dw table.inline td.okay {
+  background-color: #afa;
+  text-align: center;
+}
+
+#dw table.inline td.notokay {
+  background-color: #fcc;
+  text-align: center;
+}
+
+#dw table.inline {
+  background-color: #fff;
+  border-spacing: 0px;
+  border-collapse: collapse;
+}
+
+/* ------------- Page elements ----------------- */
+
+#dw span.user{
+/*  color: #ccc; */
+  color: #666;
+  font-size: 90%;
+}
+
+#dw li.minor {
+  color: #666;
+  font-style: italic;
+}
+
+/* embedded images */
+#dw img.media {
+  margin: 3px;
+}
+
+#dw img.medialeft {
+  border: 0;
+  float: left;
+  margin: 0 1.5em 0 0;
+}
+
+#dw img.mediaright {
+  border: 0;
+  float: right;
+  margin: 0 0 0 1.5em;
+}
+
+#dw img.mediacenter {
+  border: 0;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* smileys */
+#dw img.middle {
+  vertical-align: middle;
+}
+
+#dw acronym {
+  cursor: help;
+  border-bottom: 1px dotted #000;
+}
+
+/* general headline setup */
+#dw h1, #dw h2, #dw h3, #dw h4, #dw h5 {
+    color: Black;
+    background-color: transparent;
+    font-family: "Lucida Grande", Verdana, Lucida, Helvetica, Arial, sans-serif;
+    font-size: 100%;
+    font-weight: normal;
+    margin-left:    0;
+    margin-right:   0;
+    margin-top:     0;
+    margin-bottom:  1em;
+    padding-left:   0;
+    padding-right:  0;
+    padding-top:    0.5em;
+    padding-bottom: 0;
+    border-bottom: 1px solid #8cacbb;
+}
+
+/* special headlines */
+/*
+#dw h1 {font-size: 160%; margin-left: 0px; font-weight: bold;}
+#dw h2 {font-size: 150%; margin-left: 20px; font-weight: bold;}
+#dw h3 {font-size: 130%; margin-left: 40px; border-bottom: none; font-weight: bolder}
+#dw h4 {font-size: 115%; margin-left: 60px; border-bottom: none; font-weight: bolder}
+#dw h5 {font-size: 100%; margin-left: 80px; border-bottom: none; font-weight: bold;}
+*/
+
+#dw h1 {font-size: 160%; font-weight: bold;}
+#dw h2 {font-size: 140%; font-weight: bold; }
+#dw h3 {font-size: 130%; border-bottom: none; font-weight: bolder}
+#dw h4 {font-size: 115%; border-bottom: none; font-weight: bolder}
+#dw h5 {font-size: 100%; border-bottom: none; font-weight: bold;}
+
+/* indent different sections */
+/*
+#dw div.level1 {margin-left: 3px;}
+#dw div.level2 {margin-left: 23px;}
+#dw div.level3 {margin-left: 43px;}
+#dw div.level4 {margin-left: 63px;}
+#dw div.level5 {margin-left: 83px;}
+*/
+
+/* unordered lists */
+#dw ul {
+  line-height: 1.5em;
+  list-style-type: square;
+  margin: 0 0 0.5em 2em;
+  padding: 0;
+  color: #638c9c;
+  list-style-image: none;
+}
+
+/* ordered lists */
+#dw ol {
+  line-height: 1.5em;
+  margin: 0 0 0.5em 2em;
+  padding: 0;
+  color: #638c9c;
+  font-weight: bold;
+  list-style-image: none;
+}
+
+/* the list items overriding the ul/ol definition */
+#dw .li {
+  color: #000;
+  font-weight: normal;
+}
+
+#dw ol {list-style-type: decimal}
+#dw ol ol {list-style-type: upper-roman}
+#dw ol ol ol {list-style-type: lower-alpha}
+#dw ol ol ol ol {list-style-type: lower-greek}
+
+#dw li.open {
+  list-style-image: url(../lib/tpl/fsinfo/images/open.gif);
+    /*list-style-type: circle;*/
+}
+
+#dw li.closed {
+  list-style-image: url(../lib/tpl/fsinfo/images/closed.gif);
+    /*list-style-type: disc;*/
+}
+
+#dw blockquote {
+  border-left: 2px solid #8cacbb;
+  padding-left: 3px;
+  margin-left: 0;
+}
+
+/* code blocks by indention */
+#dw pre.pre {
+  font-size: 100%;
+  padding: 0.5em;
+  border: 1px dashed #8cacbb;
+  color: Black;
+  background-color: #f7f9fa;
+  overflow: auto;
+}
+
+/* code blocks by code tag */
+#dw pre.code {
+  font-size: 100%;
+  padding: 0.5em;
+  border: 1px dashed #8cacbb;
+  color: Black;
+  background-color: #f7f9fa;
+  overflow: auto;
+}
+
+/* inline code words */
+#dw code {
+  font-size: 80%;
+}
+
+/* code blocks by file tag */
+#dw pre.file {
+  font-size: 100%;
+  padding: 0.5em;
+  border: 1px dashed #8cacbb;
+  color: Black;
+  background-color: #dee7ec;
+  overflow: auto;
+}
+
+/* inline tables */
+
+#dw table.inline th {
+  padding: 3px;
+  border: 1px solid #8cacbb;
+  background-color: #dee7ec;
+  text-align: left;
+}
+
+#dw table.inline td {
+  padding: 3px;
+  border: 1px solid #8cacbb;
+}
+</style>
+<script type='text/javascript' src='../wp-content/themes/arras/js/superfish/hoverIntent.js'></script>
+<script type='text/javascript' src='../wp-content/themes/arras/js/superfish/superfish.js'></script>
+<script type='text/javascript' src='../wp-includes/js/comment-reply.min.js?ver=3.6'></script>
+<script type='text/javascript' src='../wp-content/themes/arras/js/jquery.validate.min.js'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../xmlrpc-rsd.php.html" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 3.6" />
+
+<script type="text/javascript"><!--
+var a2a_config=a2a_config||{},wpa2a={done:false,html_done:false,script_ready:false,script_load:function(){var a=document.createElement('script'),s=document.getElementsByTagName('script')[0];a.type='text/javascript';a.async=true;a.src='/page.js';s.parentNode.insertBefore(a,s);wpa2a.script_load=function(){};},script_onready:function(){if(a2a.type=='page'){wpa2a.script_ready=true;if(wpa2a.html_done)wpa2a.init();}},init:function(){for(var i=0,el,target,targets=wpa2a.targets,length=targets.length;i<length;i++){el=document.getElementById('wpa2a_'+(i+1));target=targets[i];a2a_config.linkname=target.title;a2a_config.linkurl=target.url;if(el)a2a.init('page',{target:el});wpa2a.done=true;}}};a2a_config.tracking_callback=['ready',wpa2a.script_onready];
+//--></script>
+<meta name="_awb_version" content="2.0.3" /><link rel="stylesheet" href="../wp-content/themes/arras/css/styles/default.css" type="text/css" media="screen,projection" /><link rel="stylesheet" href="../wp-content/themes/arras/css/layouts/2c-r-fixed.css" type="text/css" />
+<!-- Generated by Arras WP Theme -->
+<style type="text/css">
+	.posts-default li  { width: 205px; height: 225px; }
+	.posts-default img, .posts-default .entry-thumbnails-link { width: 195px; height: 110px; }
+	.posts-default .entry-meta { width: 195px; }
+	.posts-default .entry-thumbnails { width: 205px; height: 120px; }
+			.posts-quick .entry-thumbnails img { width: 115px; height: 115px; }
+		.posts-quick .entry-meta { width: 115px; }
+			.featured { height: 260px; }
+	.featured-article { width: 640px; height: 250px; }
+	.featured-article img { width: 640px; height: 250px; }
+	#controls { width: 610px; top: 110px; }
+	#controls .next { left: 610px; }
+	.featured-entry { height: 84px; top: -84px; }
+	.featured-slideshow-inner { height: 250px }
+		.featured-stories-summary  { margin-left: 51px; }
+	.single .post .entry-photo img, .single-post .entry-photo img  { width: 620px; height: 250px; }
+		.footer-sidebar  { width: 920px; }
+	</style>
+	<script type="text/javascript">
+	jQuery(document).ready(function($) {
+
+$('.multi-sidebar').tabs();
+
+$('.sf-menu').superfish({autoArrows: true, speed: 'fast', dropShadows: 'true'});
+
+$('#commentform').validate();
+
+
+});	</script>
+	<!--[if IE]>
+<style type="text/css">
+.addtoany_list a img{filter:alpha(opacity=70)}
+.addtoany_list a:hover img,.addtoany_list a.addtoany_share_save img{filter:alpha(opacity=100)}
+</style>
+<![endif]-->
+<link rel="stylesheet" href="../wp-content/themes/arras/user.css" type="text/css" media="screen,projection" /><!-- Google Analytics Tracking by Google Analyticator 6.4.5: http://www.videousermanuals.com/google-analyticator/ -->
+<script type="text/javascript">
+	var analyticsFileTypes = [''];
+	var analyticsEventTracking = 'enabled';
+</script>
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-169675-4']);
+        _gaq.push(['_addDevId', 'i9k95']); // Google Analyticator App ID with Google 
+        
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+</head>
+
+<body class="page page-id-0 page-parent page-template-default layout-2c-r-fixed no-js style-default">
+<script type="text/javascript">
+//<![CDATA[
+(function(){
+var c = document.body.className;
+c = c.replace(/no-js/, 'js');
+document.body.className = c;
+})();
+//]]>
+</script>
+
+<div id="top-menu" class="clearfix">
+	</div><!-- #top-menu -->
+
+<div id="header"><div align="center"><script type="text/javascript"><!--
+google_ad_client = "pub-7027070946238159";
+/* 728x90, Top Banner */
+google_ad_slot = "9335358437";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+	<div id="branding" class="clearfix">
+	<div class="logo">
+				<span class="blog-name"><a href="../index.html">World Music Central.org</a></span>
+		<img style="float:left; padding: 0 5px 0 0;" src="../wp-content/themes/wmc-magazeen/images/bull.png"/><span class="blog-description">Your Connection to World Music</span>
+			</div>
+	<div id="searchbar"><form method="get" class="searchform clearfix" action="http://worldmusiccentral.org/">
+ <input type="text" value="Search..." name="s" class="s" onfocus="this.value=''" />
+ <input type="submit" class="searchsubmit" value="Search" title="Search World Music Central.org" />
+</form>
+</div>
+	</div><!-- #branding -->
+</div><!-- #header -->
+
+<div id="nav">
+	<div id="nav-content" class="clearfix">
+	<div class="menu-main-container"><ul id="menu-main" class="sf-menu menu clearfix"><li id="menu-item-6394" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-6394"><a href="../index.html">Home</a></li>
+<li id="menu-item-6401" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6401"><a href="../about/index.html">About</a></li>
+<li id="menu-item-6454" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6454"><a href="#">World Music Resources</a>
+<ul class="sub-menu">
+	<li id="menu-item-6455" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6455"><a href="artist_index.php.html">Artists Database</a></li>
+	<li id="menu-item-6462" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6462"><a href="http://musicwikicentral.com/world_music_festivals">Festivals</a></li>
+	<li id="menu-item-6467" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6467"><a href="http://musicwikicentral.com/travel_guides">Travel Guides</a></li>
+	<li id="menu-item-6469" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6469"><a href="http://musicwikicentral.com/world_music_genres">Musical Genres</a></li>
+	<li id="menu-item-6468" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6468"><a href="http://musicwikicentral.com/musical_instruments">Musical Instruments</a></li>
+	<li id="menu-item-6475" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6475"><a href="http://musicwikicentral.com/showcases">Showcases</a></li>
+	<li id="menu-item-6470" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6470"><a href="http://musicwikicentral.com/world_music_venues">Venues</a></li>
+	<li id="menu-item-6472" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6472"><a href="http://musicwikicentral.com/record_companies">Record Companies</a></li>
+	<li id="menu-item-6466" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6466"><a href="http://musicwikicentral.com/booking_agents">Booking Agents</a></li>
+	<li id="menu-item-6474" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6474"><a href="http://musicwikicentral.com/world_music_press">World Music Press</a></li>
+	<li id="menu-item-6477" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6477"><a href="http://musicwikicentral.com/ethnomusicology">Ethnomusicology</a></li>
+	<li id="menu-item-6473" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6473"><a href="http://musicwikicentral.com/music_organizations">Music Organizations</a></li>
+</ul>
+</li>
+<li id="menu-item-6390" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6390"><a href="#">Topics</a>
+<ul class="sub-menu">
+	<li id="menu-item-6369" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6369"><a href="../category/archive/index.html">archive</a></li>
+	<li id="menu-item-6370" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6370"><a href="../category/articles/index.html">Articles</a></li>
+	<li id="menu-item-6371" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6371"><a href="../category/awards/index.html">Awards</a></li>
+	<li id="menu-item-6372" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6372"><a href="../category/book-reviews/index.html">Book Reviews</a></li>
+	<li id="menu-item-6373" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6373"><a href="../category/cd-reviews/index.html">CD Reviews</a></li>
+	<li id="menu-item-6374" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6374"><a href="../category/concert-reviews/index.html">Concert reviews</a></li>
+	<li id="menu-item-6375" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6375"><a href="../category/conferences/index.html">Conferences</a></li>
+	<li id="menu-item-6376" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6376"><a href="../category/editorials/index.html">Editorials</a></li>
+	<li id="menu-item-6377" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6377"><a href="../category/events/index.html">Events</a></li>
+	<li id="menu-item-6378" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6378"><a href="../category/film-reviews/index.html">Film Reviews</a></li>
+	<li id="menu-item-6379" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6379"><a href="../category/general-news/index.html">General News</a></li>
+	<li id="menu-item-6380" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6380"><a href="../category/interviews/index.html">Interviews</a></li>
+	<li id="menu-item-6381" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6381"><a href="../category/loop-collections/index.html">Loop Collections</a></li>
+	<li id="menu-item-6382" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6382"><a href="../category/new-books/index.html">New Books</a></li>
+	<li id="menu-item-6383" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6383"><a href="../category/new-cds/index.html">New CDs</a></li>
+	<li id="menu-item-6384" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6384"><a href="../category/new-films/index.html">New Films</a></li>
+	<li id="menu-item-6385" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6385"><a href="../category/new-releases/index.html">New Releases</a></li>
+	<li id="menu-item-6386" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6386"><a href="../category/obituaries/index.html">Obituaries</a></li>
+	<li id="menu-item-6387" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6387"><a href="../category/tour-announcements/index.html">Tour Announcements</a></li>
+	<li id="menu-item-6388" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6388"><a href="../category/tradeshows/index.html">Tradeshows</a></li>
+	<li id="menu-item-6389" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6389"><a href="../category/uncategorized/index.html">Uncategorized</a></li>
+</ul>
+</li>
+<li id="menu-item-6392" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6392"><a href="../events/index.html">Calendar</a></li>
+<li id="menu-item-6400" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6400"><a href="../store/index.html">Store</a></li>
+<li id="menu-item-6724" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6724"><a href="../contact-us/index.html">Contact Us</a></li>
+</ul></div>		<ul class="quick-nav clearfix">
+					<li><a id="rss" title="World Music Central.org RSS Feed" href="../feed/index.html">RSS Feed</a></li>
+				
+						
+							<li><a id="facebook" title="World Music Central.org Facebook" href="http://www.facebook.com/pages/World-Music-Central/149036898455901" target="_blank">Facebook</a></li>
+				
+			</ul>
+	</div><!-- #nav-content -->
+</div><!-- #nav -->
+
+<div id="wrapper">
+	
+	  
+	<div id="main" class="clearfix">
+    <div id="container" class="clearfix">
+  <head>
+    <title>Imer Traja Brizani - Artist Page</title>
+  </head>
+
+  <body> 
+  
+  <div id="artistpage">
+  
+  <div style="float:right;">
+  
+  <script type="text/javascript"><!--
+google_ad_client = "pub-7027070946238159";
+/* 160x600, created 12/6/08 */
+google_ad_slot = "6830638066";
+google_ad_width = 160;
+google_ad_height = 600;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+
+</div>
+  
+  
+  
+  	<table>
+
+  
+<tr><td align="center" colspan="2" width="100%">
+<font size=+1><b>Imer Traja Brizani</b></font> 
+<hr></td></tr>
+
+<tr><td align="center" colspan="2" width="100%">
+<a href="#Interview">Interview</a>&nbsp;&nbsp;&middot;&nbsp;&nbsp;<a href="#Booking">Booking Agency</a>&nbsp;&nbsp;&middot;&nbsp;&nbsp;<a href="#Bibliography">Bibliography</a>&nbsp;&nbsp;&middot;&nbsp;&nbsp;<a href="#Genres">Similar Music</a>
+<hr></td></tr>
+    <tr>
+      <td colspan="2" width="100%">
+		<a name="Biography"><b>Biography</b></a>:
+	  </td>
+    </tr>
+    <tr>
+      <td colspan="2" width="100%">&nbsp;</td>
+    </tr>
+
+    <tr>
+      <td width="3%"></td>
+
+      <td width="97%">
+	  
+	<p>Traja Imer Brizani is an electric bass player, teacher, composer who writes music and plays his own music plays in Slovenia and abroad. He's played in Slovenia with many great jazz players.</p>
+<p>Traja plays electric bass, double bass, and 6 string electris bass.</p>
+<p>In addition to playing jazz, he performs Gypsy music.</p>
+
+<p>Discography: <br>
+<br>
+Brizani project - Traveling<br>
+<br>
+Amala - Dudum<br>
+<br>
+Amadeus 1997 - Prisluhni in povej<br>
+<br>
+Amadeus 1999 - Software Baby<br>
+<br>
+Brizani Allstars Band - Live in Cankarjev dom (2cds)<br>
+<br>
+Amala - Live In Cankarjev Dom - with Esma Radzepova<br>
+<br>
+Amala - Gipsy music<br>
+<br>
+Amala - Suita Romani<br>
+<br>
+Brizani project - Electric Band<br>
+<p><b>Official Web Site:</b> <a href="http://www.brizani-music.si">www.brizani-music.si</a> </p></td>
+<tr><td align="center" colspan="2" width="100%">
+
+<hr></td></tr>
+	<tr>
+       <td colspan="2" width="100%">
+		<a name="Interview"><b>Interview</b></a>:
+	  </td>
+    </tr>
+    <tr>
+      <td colspan="2" width="100%">&nbsp;</td>
+    </tr>
+
+    <tr>
+      <td width="3%"></td>
+
+      <td width="97%">
+
+ 	<p>Interview with Miha Hawlina</p>
+<p>Traja Brizani and Miha Hawlina of Amala, in Ljubljana</p>
+<p>by Heather Henderson [reproduced courtesy of Traja Brizani]</p>
+<p><b>Can you tell me a little bit about your background?</b></p>
+<p>Now, I am a member of the group Amala, and I support my boss Traja Brizani in the music we play. But before I met him, I studied saxophone in Zagreb at the classical music academy.</p>
+<p><b>Classical music?</b></p>
+<p>Yes, classical music. I started to study when Yugoslavia still existed. And there wasn't any jazz academy, high school for jazz, or anything in Yugoslavia. Before I went to the academy, I heard a lot of pop, pop/rock, and some jazz groups, so I was looking to meet some people to play that kind of music in Zagreb. I was very lucky - I met one of the best of these Croatian musicians. I played four years with the same rhythm section. They really were funky, you know, they were a really good group.</p>
+<p><b>You had a band?</b></p>
+<p>We had a band, we usually played covers - some rock songs, or Latin - and put them into funky style. We played every Thursday in one club. In this club, young musicians were coming and they were listening to us, and there were about 20 drummers watching us and learning... they came for every instrument, but I think the drummer was the most respected. One of the greatest, for me, one of the best singers from Croatia, Dino Dvornik, came also, and he was looking for a group to support him in concert. So he chose us, and we did some live recordings with him, which is a legend in live performance in Croatia. After my studies, I moved back to Slovenia and I couldn't find what to do. I couldn't find the right people.</p>
+<p>Then Traja called me to do some horns in his pop band, Amadeus. We had a concert. In this group I found some interesting musicians, and also part of the music was good, and had a good groove. But it was made in straight pop and I didn't like that very much. It was original stuff, but it was made for commercial popular music. But Traja and his brother, who was the drummer, and also one guitar player, they were something more. They were better musicians, they could do some other things, not just this pop stuff. They were all gypsy musicians, Roms, who came from other parts of Yugoslavia and stayed here in Slovenia. They needed to exist here, and to bring some food home they had to play commercial music. But I wasn't in the same position, because I was playing here in the RTV Big Band. I wanted them to play music that they could really feel, not that they should do. And it took, I think, maybe a year and a half before they got relaxed about this idea. They were thinking, if they played gypsy music in Slovenia, there could be some problems with this. Do they want to be gypsy musicians, or to be Slovenians? So they were something in between. They knew how to play mainstream jazz, Latin pop - and also they can play polkas and other Slovenian stuff.</p>
+<p>Traja was just playing bass, you know. He was a bass player, not a singer. But for me, he is one of the best singers in Slovenia that you can find. I suggested to him to start with his roots. If he sings in English or in Slovene, then it doesn't sound very good. If he sings in English, it's maybe OK for Slovenia, but it's not OK to present this somewhere outside. But the gypsy language is very melodic. Every word you say in gypsy sounds much better than in Slovene. He can express himself like a singer. So we started like this. I think at the same time he was thinking about his own roots. He started to listen and to find some notes, some traditional songs, and he made some arrangements of traditional songs. Besides that, he made some original compositions too. In Romish? Yes. In these rhythms and also harmonies. But at that time I didn't feel really, you know, prepared to play this kind of music, because it's a bit different. And maybe I was a bit afraid, also - the colleagues can say something - "what do you play?" Because also - I can't say it's nationalism exactly - but Slovenians are more oriented toward Europe, and we had a lot of Balkan people in Slovenia, and there were people who reacted like they felt they were, you know, something higher. But I don't think this way... Also, Traja couldn't find the musicians for this music, his own gypsy musicians.</p>
+<p><b>Really!</b></p>
+<p>Yes, because he was maybe a bit too contemporary. The influences of jazz and funk or soul and R&B we played, we mixed everything together. And also we didn't have enough money to pay these gypsy musicians. They are used to earning a lot at some parties, wedding parties - they not only get paid their fee, but also the people come and pay them to pay a special song or something. They're inspired by this money they can get in-between - they're like a jukebox. They also improvise. If someone wants a song for their daughter, or something, and these musicians maybe know them, then they'll begin to sing about them, about the family. They improvise in words and in music. So a guest orders a song, he feels important at that time - he would give, I don't know, a thousand bucks for the song. The musicians in these wedding parties, which can last three days, they earn about $10,000 or $15,000. And with us, they can only get, I don't know, maybe three or four hundred bucks. And they have to learn new stuff - And they have to change their mind and everything. Maybe the music is interesting for them, but they don't have really a lot of patience to do this, to practice - and to be involved, also. Because if you are involved in something else, it can cause problems. Some of the gypsy musicians don't really like jazz. Maybe some of them do, yes. But mainly they play their traditional music. They know a lot of styles, like Turkish, Bulgarian, Albanian, Hungarian, Indian - but this is another part of the world from jazz, Latin, Cuban, Brazilian. They hear a lot of American music, also. Sometimes they put a song into their own style, which really sounds much different from the original, but sometimes very interesting.</p>
+<p><b>They interpret it through their own style?</b></p>
+<p>They feel the groove, you know. Sometimes they play even better than the original. And also they do some American evergreens, you know, like "Amazing Grace", but they do them totally differently. They know about this music, because they listen to the radio and there is a lot of American music - but they play it better. For them it's boring to play American popular music in the usual way. The rhythm - the Balkan rhythm, or the gypsy rhythm - is much more complicated. Usually the rhythm in American or European music - 3/4 , 4/4, 2/4 - and a phrase is maybe two bars or four bars - they play like 11/8, 7/8, also 21/8, and they also mix this, they play a bit 11 and then go to 17 or something.</p>
+<p><b>Is that from the folk dancing?</b></p>
+<p>Of course. And these people, they can also dance to this, but we can't. We can't do this. (laughter)</p>
+<p>It's not in our blood.</p>
+<p>Sometimes, here in Slovenia, we play in some bars, you know, the audience would like to dance and party, but it's a bit strange for them, they are not used to it - they are missing something.</p>
+<p>It's the problem with white folks dancing. (laughter)</p>
+<p>Yeah! So they stop, usually - they stop dancing! (laughter)</p>
+<p><b>Do you often play in bars, like you did in Maribor?</b></p>
+<p>We have maybe two or three opportunities to play on a stage where the audience listens to the music, but mostly we play in smaller jazz clubs, concerts arranged by students, and bars. In the summer is the stage near the Ljubljanica river - every night some artists play there. We played there two times last summer. But we were playing at big and small festivals in Slovenia and in foreign countries, too! So we're a bit in between, which is not good, but that's the situation. Sometimes they don't understand, the normal audience - there are many musicians in the audience who understand the music, so they come every time to listen to us. But normal people, we are not commercial enough for them, or something. Then, we sometimes have problems on the stage where the audience listens to the music - we are a bit, maybe, too groovy or something. On the stage we should do more artistic music, not just party music. It's kind of frustrating. Traja feels like every time we're in the wrong place. But I believe in this music, I have faith, and sometime we will do something very good. Because for me, Traja is a very natural composer. Maybe he is not educated like some classical composers, or some jazz musicians, but his ear is better, to me, than most of these educated composers. This is what I feel. I saw many who studied a lot but they don't have the spirit, or the innovations, or something to say. They don't have music inside them. They just know how to write the music. Then they say maybe, it's good to write something very modern, OK, so then they do something mathematical - 12-tone music or something.</p>
+<p><b>Too intellectual?</b></p>
+<p>Yes. I think the great composers, they have music inside them. If you feel the music, it's OK. But if it's mathematical, then I don't like it. And I feel that Traja can really write a lot of music, from part of his soul. He can also write music for children, for elementary music school - he writes music for mandolin orchestra - and also, when he writes music, he always hears the brass and the strings. But for this kind of music, you don't have many opportunities to record. We had two opportunities to play in Cankarjev Dom [Ljubljana's main concert hall] last year. The first time, we invited a guest, Esma Red?epova - she is a very well known gypsy singer - and because of her, the concert was full - sold out. I was a bit afraid - there will be 1700 people, what shall we do? Because it's out of our organization to do this. But Traja said, no problem, we will do it. And then he invited about thirty people to play in this group. So every note had to be written down, every chorus had to be defined... but it turned out OK, so we put it in a recording.</p>
+<p>At that time started an idea, and we thought, yeah, we can do it. So this year we had another concert, and for that concert, Traja brought a little bit better music. He was thinking about writing for strings. Before, we just added strings into our existing unit, just wrote an arrangement for the others. But now he started to compose for a big string section. So I think it's very interesting music. He also did a story - the words are his own.</p>
+<p><b>Is this "Suita Romani", that we were listening to before?</b></p>
+<p>Yes. It means "little Romani suite". And it goes from India to Spain to Balkan gypsy music. But it's not published yet. Our plans are to record this with a really big orchestra. Right now we are preparing everything to be what it should be, professional. So I don't know. We will see. We need a lot of practice, it will be hard to get all of these people, and also we're a bit afraid of the recording, what will happen with the technical aspect. But I would like to do this well, because I think that it would be a shame to throw away this kind of music.</p>
+<p><b>What is Traja's musical background?</b></p>
+<p>They were gypsies from Kosovo. His father was what I would call an advanced Rom. I don't really know how he became this, but he was one of the ones who didn't just play traditional music, he also played trumpet and he was very talented for music. So if he listened to, let's say, Ray Charles, or other soul singers, he could really play the music like they did - not translating the music into the Romish style. He organized a lot of small groups in Kosovo and they played some soul and also jazz music. He was also an arranger and a conductor of the Prstina jazz big band. So Traja grew up in this kind of music. He really knows all the best soul and R&B songs - Stevie Wonder, that kind - also mainstream jazz and other stuff. He's very well-informed in the pop and jazz world. In his playing you can hear the influences of Weather Report, Jaco Pastorius, the Yellowjackets... His brother was a drummer who studied percussion at the academy. He finished the academy also. They really played everything, from pop to punk to mainstream jazz. Before he came to Ljubljana, Traja says he really didn't listen much to this really traditional gypsy stuff. He was like we are. So he played with all the great jazz names in Slovenia, the people who are legends today.</p>
+<p>But after a while, he went to play around Europe with some commercial groups. He was also a leader of a commercial group. Under socialism, there was a time when normally-employed workers were paid very badly. He studied to be a dentist, but he left his studies in the third year because at that time, a dentist, highly-educated and everything, would make maybe $150 per month. So he went abroad and he earned money with music. He was paid maybe twenty times more than he could have made as a dentist. But really, he was a musician, not a dentist. He plays every kind of music, he knows every style. Then he met me. My obsession was not money, or some commercial music, anymore - maybe when I was a teenager I wanted to be a pop star or something. (laughter) But soon I saw that I didn't like this kind of life - it's not about music, it's all about promotion, marketing - your smile, your clothes. I didn't like this kind of stuff. My obsession was to find a sound, a funk group. So that's how Amala started.</p>
+<p>Traja had two groups - Amadeus, which was commercial pop, and one that was Latin jazz - The Brizani Project. We always mixed this popular music with jazz and Latin elements. He wanted to express himself as a bass player. There were three gypsies in the band, and I said to them, "why do you play Cuban music?" I feel Cuban music is one of the best in the world, but if you want to compare with them, to be like them, you have to be oriented with them. You have to go to Cuba or Brazil, and learn, and learn. You need to be there. You can't play that music here in Slovenia, just like that. There was a year when a Cuban guy, a percussion player, came to Slovenia - and he could play with us, because he knows everything about percussion, and he was a musician. It was, in the beginning, a bit heavy for him to play with us, because the rhythms are different. It was hard, but he was flexible. These musicians who play Latin here in Slovenia, they learned many patterns. And if it's not like it's written, then they're not satisfied or something. So you began to focus more on the gypsy music. But what is bad was, when we first started to play gypsy music, we lost almost all the gypsy musicians. Traja openly said that he is a gypsy, here in Slovenia - he is a fighting person - "I am a gypsy, I have my rights". Traja was a part of solving these problems with gypsies, the social problems. I think he has more experience with gypsies than some Slovenian politicians. So he can say that this policy is not good, or something. So he's active in that. He's not really a politician, he's a musician. But he's a big fighter. He wants to be like this. He knows the problems with being a gypsy. And as a fighter, he could be sometimes, I don't know -</p>
+<p><b>Aggressive?</b></p>
+<p>Maybe, but also in a bad mood or something - angry and frustrated. So this is a bad part of this person who is musically, for me, very clean. I'm not interested in these politics, I'm interested in the music. I'm really sorry because I would like to have more gypsy musicians in this group. If we have some great event, something bigger, then we maybe can import them from Macedonia or somewhere. We have some connections. Traja and I found very good musicians there. They can really improve our sound. They can bring into this group something very interesting. And also, we can be an influence on their own development, because they need to play some other music too, to be better. So this is an idea for our further work. And we'll see. But it's also political, because every musician from Kosovo and Macedonia - not so much from Croatia, but there are not so many gypsies in Croatia - but in Kosovo and Macedonia, maybe half the population are gypsies. They live there, they are part of everyday life, but in Croatia, it's a bit the same as in Slovenia. They aren't a part of the life. But in Macedonia, they teach at the academy, or in the high school - some of them work as journalists, doctors... but here almost none of them have finished the academy.</p>
+<p><b>What do they do here?</b></p>
+<p>They do kind of low-level jobs. I think the normal Slovenian wants to see gypsies as if they are part of a ghetto, doing these things like asking for money, begging... Traja would like to be an example, to show that gypsies can do something. But it's very heavy for him, I think. He feels very sorry for his brother, who finished the academy for classical music, and who also played in symphonic orchestra of Ljubljana for many years. But never at full employment. He was always a guest musician. He played during the whole season, for five or six years. Then a young Slovenian guy was hired as the permanent guy. Traja's brother wasn't really a fighter.</p>
+<p><b>Not motivated?</b></p>
+<p>He was motivated, but even though he felt something wrong was going on, he couldn't fight. He just became sad and frustrated. And then he played also pop and jazz - he also played with Slovenian Big Band but he never got into it. I don't think he was a bad drummer or something, he really had the groove, but you can't develop if someone is always putting you in a bad position. Then he went to do some other things, and didn't practice... that was the situation with him. So he left music and he went into business as a picture framer. And now, he is good. Before he was always complaining, but now he is good. You know, there is a problem with Slovenia. We are a small country. We are two million, and maybe 500,000 of the two million are from the South - from Croatia, everywhere. So we feel a bit, maybe -</p>
+<p><b>Invaded?</b></p>
+<p>Yes, like in the future too many of them will come in. I don't want to get into politics. But it's a part of our problems in the group. When we started to play gypsy music, the drummer and the guitar player went away. The children in the school were being told, "Look what your father does, what kind of music does he play?" Before, they played pop, and it was OK. But now... they are also married to Slovenian women, and it was a bit like, "Why did you suddenly change your music?" They felt bad. They felt like, why should we do this when we can have a normal life - And be assimilated. Yes. And maybe I also feel uncomfortable somewhere, if we play in some part, like Gorenjska, where they just listen to polka, and then we come, this Slovenian group, and we're playing Balkan music.</p>
+<p>Do you get strange vibes from people when you do that?</p>
+<p>Yes. Even though it's not traditional Balkan, we put some jazz, we do something else - but there are some older people who don't understand this. Sometimes they will complain.</p>
+<p><b>Really!</b></p>
+<p>Yes, of course. And some of my colleagues in the Big Band, they complain - when they get drunk or something, on some tour, they get drunk and they complain to me about the music. "What kind of music do you play? You play bad music! This is not our music." Even though in the Big Band we don't play Slovenian music - maybe sometimes some pop - but we play Latin, all kinds of things - and that is not our music! But they tell me, "You play bad music." But I play what is in my heart, for me. I think in America, if I was there, I would play jazz. But here, I met gypsy musicians, so I play with them. In America, in the beginning when jazz started, no white man played jazz!</p>
+<p><b>Right.</b></p>
+<p>But some of them went to listen to jazz, and they started to play jazz - first, they were not so good, but after a while, they were, and it became white music too, not just black music. Then, after many years, for example with Miles Davis, the black and white musicians were mixed together. This is also an issue for Traja - he wants to get a lot of gypsies in the band. And I have seen many, many really good gypsy players with a lot of innovation, they could improvise for like four days and it's not boring. I know many of these musicians. We just have to pull them a bit from their own mentality, or character. They don't need to be educated - they are perfect musicians. They are educated, but their education is different. It's not from a classical music school. But because of this, they feel a bit that they are something less. They don't know so much about playing from the notes - but they practice 7 or 9 or 12 hours a day. Like the greatest jazz performers do. They know how to play in every tonality, every one of these traditional styles. They are better, even, than professional musicians. I feel less of a musician than they are. They are really good. They should be somewhere. They should be more famous.</p>
+<p><b>Why aren't they?</b></p>
+<p>I think one reason is that normally, record companies and promoters, if they find some traditional gypsies who are good, then it's OK. But if they find some gypsy musicians who do something different, some mixture or something, they're not so interested. It's not so "folkloric", and that's what they're interested in. I think maybe distributors of this kind of music or something, they never really listen to the music, I think they're listening to someone's opinions. They need to hear from other people that we are OK. Then they will sell our CDs. If not, we don't have a chance to come in. Here in Slovenia, we have promoters of world music, and jazz music, but they import stuff. To export, to find something good and high-quality in Slovenian music - they're not interested. Jazz promoters are bigger stars than jazz musicians here. You are really something if you are a jazz promoter. You have connections. Miles Davis wrote an autograph on your jacket, or something, so you feel important.</p>
+<p>It's a connection to the rest of the world, or something...</p>
+<p>But they did a lot for music, I have to say. At the festivals they organize, I can go and listen to the greatest musicians in the world. I'm really pleased with that. But I think they can be more interested in the music that is happening here, in their own country.</p>
+<p>How many of the gypsy-style songs that you do are originals, and how many are adaptations?</p>
+<p>In the beginning, on the first CD, there are only three or four originals, and the others were arrangements of traditional music. We still play some traditional songs. And the Romish people accept the way we play the traditional music, so I'm very happy. We can play everything, from classical to jazz to pop, so it's really a mixture. But we've started to do it in a way that everything comes from the gypsy tradition. You could put everything in it. And the words, there can be also some Slovenian in between, or some English. If the guy from Cuba came, he could also sing in his language. We are really very open. But unfortunately, there are just two of us behind this band - Traja and me. The others play with us, but they're not into the band as much. They play with many groups, more popular stuff. The drummer plays with many commercial singers. But he also studied jazz and he wants to be a better musician. He wants to study these gypsy patterns, these Balkan rhythms. But he needs to study. Traja is the best player in the rhythm section. You need someone who knows, not someone who is just educated. And the gypsies, they hear music better than Slovenians, I can say. Slovenians are like Germans - very organized, but...</p>
+<p>Is it hard to find the right Slovenian musicians for the band?</p>
+<p>Almost the whole time in his life in Slovenia, Traja lives with this problem. Because he could not pay the real professional musicians. He is always looking for younger ones, younger, younger. But hey need to be educated. And when they become educated, they become professionals. When they are performing with us, the musicians in the audience say, "Hey, this is a good guitar player, let's take him." So that's also our frustration. Traja is angry - he says to them, "Why don't you feel this music like we do?" But I tell him, look, we just have to work. But I must say, it is a problem. There are not so many good musicians in Ljubljana. For our work, we need more of them. So sometimes we are thinking to go abroad. But we have families, we have everything here. I don't know - it's a bit strange. We're also used to a good living - going to seaside, going skiing, you know. A nice life. In Slovenia, the best opportunity you have is to have a nice life. But if you want to do something else, you have to go abroad.</p>
+<p><b>To have a big career?</b></p>
+<p>Yes, something like that. If you are a dentist, you can maybe earn money to survive here, nowadays. You can have a private practice, then earn money and spend it. That's not a problem. But if you want to be a success in some art, you need to go abroad. It's easier, sometimes, for a poet, or a painter, or a dancer, because he is alone. But for a musician in a big group.... We played in some festivals abroad, and always when we played, people said, "Oh you are perfect, super, maybe we will arrange some recordings for you," but then we came back and nothing happened. Maybe a phone call. To organize these things is very hard. So it is part of our ambition - first is the music, and the second is to play abroad, maybe to live abroad.</p>
+<p><b>You said the Romish people accept your music - what is their reaction?</b></p>
+<p>We played about a month ago in Skopje, and in Skopje there is an area, a quarter of the city, named ?utka, where gypsies live. This is the center, the roots of Balkan gypsy playing. Everything starts there. It's like Nashville for country music in America. So in our concert there were many people, musicians, coming from this section of the city. And they were really very satisfied with our music. You know, sometimes I feel like I'm stealing the music from them, or something - it's not mine - it's not Slovenian. But the gypsies, the Romish, they are listening to me like I am one of them. And this makes me very happy. It never happened that a gypsy musician told me that something is wrong. I read the book by Miles Davis, one of the biggest musicians in the world. He played with white musicians, and he always had some problems, both with white and with black musicians, because he played with white guys. And he could be very nasty to a white musician if he stole black music -</p>
+<p>And pretended it was his.</p>
+<p>This is their frustration - they create the music, then the white man comes and steals it and becomes famous, becomes a rich star. But if this would happen with me, I would stop playing this music. If we play traditional music, we don't vandalize it. We really respect the music. And Traja also, he doesn't want to do this. Because he is a gypsy he is really sensitive about this. So the balance works. And now in ?utka, we are the number one group. Because there were some musicians, I think Turkish, who did this music with some jazz influences, and they were very popular there. And I think one of these groups is very good. But now the people in ?utka say, AMALA!</p>
+<p><b>That's good!</b></p>
+<p>They came to listen to our arrangements of their traditional music and they wanted to hear it again and again. They came on the stage, fifty of them, and were dancing, and asking for more, more... we also made a song, "?utka", a tribute to this place. I feel comfortable with the native gypsies, from the south part, the roots of Macedonia - I don't know, they like me or something. I am one of them, they appreciate me. Traja also calls me - you know this phrase, the Indians called their white friends their "white brothers". Traja calls me this - "white brother". But for me, I don't know - I would really listen to these gypsy musicians - my opinion is that they are really great, and I am not. I'm maybe OK, but not great. But they play it as it should be. And maybe sometime we will play in Skopje and some of these best musicians which I like in gypsy music will come and play to our music. That would be great. And this is enough for me.</p></td>
+<tr><td align="center" colspan="2" width="100%">
+
+<hr></td></tr>
+  	<tr>
+  	  <td colspan="2" width="100%">
+		<a name="Booking"><b>Booking</b></a>:
+	  </td>
+    </tr>
+    <tr>
+      <td colspan="2" width="100%">&nbsp;</td>
+    </tr>
+
+    <tr>
+      <td width="3%"></td>
+
+      <td width="97%">
+
+ 	<p>Imer Traja Brizani<br>
+Phone / Telefon: + 386 41 711295<br>
+<a href="mailto:traja@brizani-music.si">traja@brizani-music.si</a></p></td>
+<tr><td align="center" colspan="2" width="100%">
+
+<hr></td></tr>
+  	<tr>
+  	  <td colspan="2" width="100%">
+		<a name="Bibliography"><b>Bibliography</b></a>:
+	  </td>
+    </tr>
+    <tr>
+      <td colspan="2" width="100%">&nbsp;</td>
+    </tr>
+
+    <tr>
+      <td width="3%"></td>
+
+      <td width="97%">
+
+ 	<p>Le ostanite, romi gredo!</p>
+<p>(Don't run, gypsiess are coming)</p>
+<p>Otroci, Zapojte Z Nami - Chavalen, gilaven amencar!</p>
+<p>( Kids, sing with us)</p></td>
+<tr><td align="center" colspan="2" width="100%">
+
+<hr></td></tr>
+  	<tr>
+  	  <td colspan="2" width="100%">
+		<a name="Genres"><b>Similar Music</b></a>:
+	  </td>
+    </tr>
+    <tr>
+      <td colspan="2" width="100%">&nbsp;</td>
+    </tr>
+
+    <tr>
+      <td width="3%"></td>
+
+      <td width="97%">
+
+	<a href="genre_list-genre=Slovenian.php.html">Slovenian</a>, <a href="genre_list-genre=Gypsy.php.html">Gypsy</a>, <a href="genre_list-genre=Roma.php.html">Roma</a>, <a href="instrument_index-instrument=Bass.php.html">Bass</a>, <a href="instrument_index-instrument=Piano.php.html">Piano</a>, <a href="instrument_index-instrument=Keyboards.php.html">Keyboards</a></td>
+<tr><td align="center" colspan="2" width="100%">
+
+<hr></td></tr>
+	</table>
+	</div>
+
+	</div><!-- #main -->
+	
+	    
+    <div id="footer">
+		<div class="footer-sidebar-container clearfix">
+							<ul id="footer-sidebar-1" class="footer-sidebar clearfix xoxo">
+										<li></li>
+									</ul>
+					</div>
+		
+		<div class="footer-message">
+                <p class="floatright">WordPress Installation and Support by <a class="arras" href="http://digiblink.eu/" title="Custom WordPress development, design and backup services."><strong>digiBlink</strong></a></p>
+                <p>Copyright World Music Central.org. All Rights Reserved.</p>                </div><!-- .footer-message -->
+		
+    </div>
+</div><!-- #wrapper -->
+
+<script type="text/javascript"><!--
+wpa2a.targets=[];
+wpa2a.html_done=true;if(wpa2a.script_ready&&!wpa2a.done)wpa2a.init();wpa2a.script_load();
+//--></script>
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+
+	
+});
+</script>
+<script type='text/javascript' src='../wp-includes/js/jquery/ui/jquery.ui.core.min.js?ver=1.10.3'></script>
+<script type='text/javascript' src='../wp-includes/js/jquery/ui/jquery.ui.widget.min.js?ver=1.10.3'></script>
+<script type='text/javascript' src='../wp-includes/js/jquery/ui/jquery.ui.tabs.min.js?ver=1.10.3'></script>
+</body>
+</html>
+   
+
+<!-- Localized -->

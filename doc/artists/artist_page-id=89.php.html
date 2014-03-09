@@ -1,0 +1,1257 @@
+
+<style type="text/css">
+/* --- reset some elements --- */
+
+#dw ul,ol { list-style:none }
+
+#dw ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,p,blockquote,fieldset,input { margin:0; padding:0 }
+
+/* --- Basic Stylesheet for DokuWiki content --- */
+
+#dw h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+#dw h1 a {
+  color: black;
+}
+
+/* ---------- table of contents ------------------- */
+
+#dw div.toc {
+  margin-left: 2em;
+  margin-top: 1.2em;
+  margin-bottom: 0;
+  float:right;
+  width: 200px;
+  font-size: 80%;
+  padding-top:5px;
+}
+
+#dw div.tocheader {
+  padding: 3px;
+  border: 1px solid #8cacbb;
+  background-color: #dee7ec;
+  text-align: left;
+  font-weight:bold;
+  margin-bottom: 2px;
+}
+
+#dw div.tocheader img {
+  width:0.8em;
+  height:0.8em;
+  margin-top:0.3em;
+  margin-right:3px;
+  float:right;
+  cursor: pointer;
+}
+
+#dw #toc__inside {
+  border: 1px solid #8cacbb;
+  background-color: #fff;
+  text-align: left;
+  padding-top: 0.5em;
+  padding-bottom: 0.7em;
+}
+
+#dw ul.toc {
+  list-style-type: none;
+  list-style-image: none;
+  line-height: 1.2em;
+  margin: 0;
+  padding: 0;
+  padding-left: 1em;
+}
+
+#dw ul.toc li {
+  background: transparent url(../lib/tpl/fsinfo/images/tocdot2.gif) 0 0.6em no-repeat;
+  padding-left:0.4em;
+}
+
+#dw ul.toc li.clear {
+  background-image: none;
+  padding-left:0.4em;
+}
+
+#dw a.toc {
+  color: #436976;
+  text-decoration:none;
+}
+
+#dw a.toc:hover {
+  color: #000;
+  text-decoration:underline;
+}
+
+/* --------------------- footnotes -------------------------------- */
+
+#dw div.footnotes{
+  clear:both;
+  border-top: 1px solid #8cacbb;
+  padding-left: 1em;
+  margin-top: 1em;
+}
+
+#dw div.fn{
+  font-size:90%;
+}
+
+#dw a.fn_top{
+  vertical-align:super;
+  font-size:80%;
+}
+
+#dw a.fn_bot{
+  vertical-align:super;
+  font-size:80%;
+  font-weight:bold;
+}
+
+/* insitu-footnotes */
+#dw div.insitu-footnote {
+  font-size: 80%;
+  line-height: 1.2em;
+  border: 1px solid #8cacbb;
+  background: #eef3f8;
+  text-align: left;
+  padding: 4px;
+  max-width: 40%;    /* IE's width is handled in javascript */
+}
+
+/* overcome IE issue with one line code or file boxes which require h. scrolling */
+#dw * html .insitu-footnote pre.code, * html .insitu-footnote pre.file {
+  padding-bottom: 18px;
+}
+
+/* --------------------- Tables -------------------------------- */
+
+#dw table.inline td.okay {
+  background-color: #afa;
+  text-align: center;
+}
+
+#dw table.inline td.notokay {
+  background-color: #fcc;
+  text-align: center;
+}
+
+#dw table.inline {
+  background-color: #fff;
+  border-spacing: 0px;
+  border-collapse: collapse;
+}
+
+/* ------------- Page elements ----------------- */
+
+#dw span.user{
+/*  color: #ccc; */
+  color: #666;
+  font-size: 90%;
+}
+
+#dw li.minor {
+  color: #666;
+  font-style: italic;
+}
+
+/* embedded images */
+#dw img.media {
+  margin: 3px;
+}
+
+#dw img.medialeft {
+  border: 0;
+  float: left;
+  margin: 0 1.5em 0 0;
+}
+
+#dw img.mediaright {
+  border: 0;
+  float: right;
+  margin: 0 0 0 1.5em;
+}
+
+#dw img.mediacenter {
+  border: 0;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* smileys */
+#dw img.middle {
+  vertical-align: middle;
+}
+
+#dw acronym {
+  cursor: help;
+  border-bottom: 1px dotted #000;
+}
+
+/* general headline setup */
+#dw h1, #dw h2, #dw h3, #dw h4, #dw h5 {
+    color: Black;
+    background-color: transparent;
+    font-family: "Lucida Grande", Verdana, Lucida, Helvetica, Arial, sans-serif;
+    font-size: 100%;
+    font-weight: normal;
+    margin-left:    0;
+    margin-right:   0;
+    margin-top:     0;
+    margin-bottom:  1em;
+    padding-left:   0;
+    padding-right:  0;
+    padding-top:    0.5em;
+    padding-bottom: 0;
+    border-bottom: 1px solid #8cacbb;
+}
+
+/* special headlines */
+/*
+#dw h1 {font-size: 160%; margin-left: 0px; font-weight: bold;}
+#dw h2 {font-size: 150%; margin-left: 20px; font-weight: bold;}
+#dw h3 {font-size: 130%; margin-left: 40px; border-bottom: none; font-weight: bolder}
+#dw h4 {font-size: 115%; margin-left: 60px; border-bottom: none; font-weight: bolder}
+#dw h5 {font-size: 100%; margin-left: 80px; border-bottom: none; font-weight: bold;}
+*/
+
+#dw h1 {font-size: 160%; font-weight: bold;}
+#dw h2 {font-size: 140%; font-weight: bold; }
+#dw h3 {font-size: 130%; border-bottom: none; font-weight: bolder}
+#dw h4 {font-size: 115%; border-bottom: none; font-weight: bolder}
+#dw h5 {font-size: 100%; border-bottom: none; font-weight: bold;}
+
+/* indent different sections */
+/*
+#dw div.level1 {margin-left: 3px;}
+#dw div.level2 {margin-left: 23px;}
+#dw div.level3 {margin-left: 43px;}
+#dw div.level4 {margin-left: 63px;}
+#dw div.level5 {margin-left: 83px;}
+*/
+
+/* unordered lists */
+#dw ul {
+  line-height: 1.5em;
+  list-style-type: square;
+  margin: 0 0 0.5em 2em;
+  padding: 0;
+  color: #638c9c;
+  list-style-image: none;
+}
+
+/* ordered lists */
+#dw ol {
+  line-height: 1.5em;
+  margin: 0 0 0.5em 2em;
+  padding: 0;
+  color: #638c9c;
+  font-weight: bold;
+  list-style-image: none;
+}
+
+/* the list items overriding the ul/ol definition */
+#dw .li {
+  color: #000;
+  font-weight: normal;
+}
+
+#dw ol {list-style-type: decimal}
+#dw ol ol {list-style-type: upper-roman}
+#dw ol ol ol {list-style-type: lower-alpha}
+#dw ol ol ol ol {list-style-type: lower-greek}
+
+#dw li.open {
+  list-style-image: url(../lib/tpl/fsinfo/images/open.gif);
+    /*list-style-type: circle;*/
+}
+
+#dw li.closed {
+  list-style-image: url(../lib/tpl/fsinfo/images/closed.gif);
+    /*list-style-type: disc;*/
+}
+
+#dw blockquote {
+  border-left: 2px solid #8cacbb;
+  padding-left: 3px;
+  margin-left: 0;
+}
+
+/* code blocks by indention */
+#dw pre.pre {
+  font-size: 100%;
+  padding: 0.5em;
+  border: 1px dashed #8cacbb;
+  color: Black;
+  background-color: #f7f9fa;
+  overflow: auto;
+}
+
+/* code blocks by code tag */
+#dw pre.code {
+  font-size: 100%;
+  padding: 0.5em;
+  border: 1px dashed #8cacbb;
+  color: Black;
+  background-color: #f7f9fa;
+  overflow: auto;
+}
+
+/* inline code words */
+#dw code {
+  font-size: 80%;
+}
+
+/* code blocks by file tag */
+#dw pre.file {
+  font-size: 100%;
+  padding: 0.5em;
+  border: 1px dashed #8cacbb;
+  color: Black;
+  background-color: #dee7ec;
+  overflow: auto;
+}
+
+/* inline tables */
+
+#dw table.inline th {
+  padding: 3px;
+  border: 1px solid #8cacbb;
+  background-color: #dee7ec;
+  text-align: left;
+}
+
+#dw table.inline td {
+  padding: 3px;
+  border: 1px solid #8cacbb;
+}
+</style>
+<link rel='stylesheet' id='eme_stylesheet-css'  href='../wp-content/plugins/events-made-easy/events_manager-ver=3.6.css' type='text/css' media='all' />
+<link rel='stylesheet' id='A2A_SHARE_SAVE-css'  href='../wp-content/plugins/add-to-any/addtoany.min-ver=1.4.css' type='text/css' media='all' />
+<script type='text/javascript' src='../wp-includes/js/jquery/jquery.js?ver=1.10.2'></script>
+<script type='text/javascript' src='../wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<script type='text/javascript' src='../wp-content/plugins/google-analyticator/external-tracking.min.js?ver=6.4.5'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../xmlrpc-rsd.php.html" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 3.6" />
+
+<script type="text/javascript"><!--
+var a2a_config=a2a_config||{},wpa2a={done:false,html_done:false,script_ready:false,script_load:function(){var a=document.createElement('script'),s=document.getElementsByTagName('script')[0];a.type='text/javascript';a.async=true;a.src='http://static.addtoany.com/menu/page.js';s.parentNode.insertBefore(a,s);wpa2a.script_load=function(){};},script_onready:function(){if(a2a.type=='page'){wpa2a.script_ready=true;if(wpa2a.html_done)wpa2a.init();}},init:function(){for(var i=0,el,target,targets=wpa2a.targets,length=targets.length;i<length;i++){el=document.getElementById('wpa2a_'+(i+1));target=targets[i];a2a_config.linkname=target.title;a2a_config.linkurl=target.url;if(el)a2a.init('page',{target:el});wpa2a.done=true;}}};a2a_config.tracking_callback=['ready',wpa2a.script_onready];
+//--></script>
+<meta name="_awb_version" content="2.0.3" /><link rel="stylesheet" href="../wp-content/themes/arras/css/styles/default.css" type="text/css" media="screen,projection" /><link rel="stylesheet" href="../wp-content/themes/arras/css/layouts/2c-r-fixed.css" type="text/css" />
+<!-- Generated by Arras WP Theme -->
+<style type="text/css">
+	.posts-default li  { width: 205px; height: 225px; }
+	.posts-default img, .posts-default .entry-thumbnails-link { width: 195px; height: 110px; }
+	.posts-default .entry-meta { width: 195px; }
+	.posts-default .entry-thumbnails { width: 205px; height: 120px; }
+			.posts-quick .entry-thumbnails img { width: 115px; height: 115px; }
+		.posts-quick .entry-meta { width: 115px; }
+			.featured { height: 260px; }
+	.featured-article { width: 640px; height: 250px; }
+	.featured-article img { width: 640px; height: 250px; }
+	#controls { width: 610px; top: 110px; }
+	#controls .next { left: 610px; }
+	.featured-entry { height: 84px; top: -84px; }
+	.featured-slideshow-inner { height: 250px }
+		.featured-stories-summary  { margin-left: 51px; }
+	.single .post .entry-photo img, .single-post .entry-photo img  { width: 620px; height: 250px; }
+		.footer-sidebar  { width: 920px; }
+	</style>
+	<script type="text/javascript">
+	jQuery(document).ready(function($) {
+
+$('.multi-sidebar').tabs();
+
+$('.sf-menu').superfish({autoArrows: true, speed: 'fast', dropShadows: 'true'});
+
+$('#commentform').validate();
+
+
+});	</script>
+	<!--[if IE]>
+<style type="text/css">
+.addtoany_list a img{filter:alpha(opacity=70)}
+.addtoany_list a:hover img,.addtoany_list a.addtoany_share_save img{filter:alpha(opacity=100)}
+</style>
+<![endif]-->
+<link rel="stylesheet" href="../wp-content/themes/arras/user.css" type="text/css" media="screen,projection" /><!-- Google Analytics Tracking by Google Analyticator 6.4.5: http://www.videousermanuals.com/google-analyticator/ -->
+<script type="text/javascript">
+	var analyticsFileTypes = [''];
+	var analyticsEventTracking = 'enabled';
+</script>
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-169675-4']);
+        _gaq.push(['_addDevId', 'i9k95']); // Google Analyticator App ID with Google 
+        
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>World Music Central.org</title>
+
+
+<link rel="alternate" type="application/rss+xml" href="../feed/index.html" title="World Music Central.org latest posts" />
+
+<link rel="alternate" type="application/rss+xml" href="../comments/feed/index.html" title="World Music Central.org latest comments" />
+
+<link rel="pingback" href="../xmlrpc.php.html" />
+
+<link rel="shortcut icon" href="../favicon.ico" />
+
+
+<style type="text/css">
+/* --- reset some elements --- */
+
+#dw ul,ol { list-style:none }
+
+#dw ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,p,blockquote,fieldset,input { margin:0; padding:0 }
+
+/* --- Basic Stylesheet for DokuWiki content --- */
+
+#dw h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+#dw h1 a {
+  color: black;
+}
+
+/* ---------- table of contents ------------------- */
+
+#dw div.toc {
+  margin-left: 2em;
+  margin-top: 1.2em;
+  margin-bottom: 0;
+  float:right;
+  width: 200px;
+  font-size: 80%;
+  padding-top:5px;
+}
+
+#dw div.tocheader {
+  padding: 3px;
+  border: 1px solid #8cacbb;
+  background-color: #dee7ec;
+  text-align: left;
+  font-weight:bold;
+  margin-bottom: 2px;
+}
+
+#dw div.tocheader img {
+  width:0.8em;
+  height:0.8em;
+  margin-top:0.3em;
+  margin-right:3px;
+  float:right;
+  cursor: pointer;
+}
+
+#dw #toc__inside {
+  border: 1px solid #8cacbb;
+  background-color: #fff;
+  text-align: left;
+  padding-top: 0.5em;
+  padding-bottom: 0.7em;
+}
+
+#dw ul.toc {
+  list-style-type: none;
+  list-style-image: none;
+  line-height: 1.2em;
+  margin: 0;
+  padding: 0;
+  padding-left: 1em;
+}
+
+#dw ul.toc li {
+  background: transparent url(../lib/tpl/fsinfo/images/tocdot2.gif) 0 0.6em no-repeat;
+  padding-left:0.4em;
+}
+
+#dw ul.toc li.clear {
+  background-image: none;
+  padding-left:0.4em;
+}
+
+#dw a.toc {
+  color: #436976;
+  text-decoration:none;
+}
+
+#dw a.toc:hover {
+  color: #000;
+  text-decoration:underline;
+}
+
+/* --------------------- footnotes -------------------------------- */
+
+#dw div.footnotes{
+  clear:both;
+  border-top: 1px solid #8cacbb;
+  padding-left: 1em;
+  margin-top: 1em;
+}
+
+#dw div.fn{
+  font-size:90%;
+}
+
+#dw a.fn_top{
+  vertical-align:super;
+  font-size:80%;
+}
+
+#dw a.fn_bot{
+  vertical-align:super;
+  font-size:80%;
+  font-weight:bold;
+}
+
+/* insitu-footnotes */
+#dw div.insitu-footnote {
+  font-size: 80%;
+  line-height: 1.2em;
+  border: 1px solid #8cacbb;
+  background: #eef3f8;
+  text-align: left;
+  padding: 4px;
+  max-width: 40%;    /* IE's width is handled in javascript */
+}
+
+/* overcome IE issue with one line code or file boxes which require h. scrolling */
+#dw * html .insitu-footnote pre.code, * html .insitu-footnote pre.file {
+  padding-bottom: 18px;
+}
+
+/* --------------------- Tables -------------------------------- */
+
+#dw table.inline td.okay {
+  background-color: #afa;
+  text-align: center;
+}
+
+#dw table.inline td.notokay {
+  background-color: #fcc;
+  text-align: center;
+}
+
+#dw table.inline {
+  background-color: #fff;
+  border-spacing: 0px;
+  border-collapse: collapse;
+}
+
+/* ------------- Page elements ----------------- */
+
+#dw span.user{
+/*  color: #ccc; */
+  color: #666;
+  font-size: 90%;
+}
+
+#dw li.minor {
+  color: #666;
+  font-style: italic;
+}
+
+/* embedded images */
+#dw img.media {
+  margin: 3px;
+}
+
+#dw img.medialeft {
+  border: 0;
+  float: left;
+  margin: 0 1.5em 0 0;
+}
+
+#dw img.mediaright {
+  border: 0;
+  float: right;
+  margin: 0 0 0 1.5em;
+}
+
+#dw img.mediacenter {
+  border: 0;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* smileys */
+#dw img.middle {
+  vertical-align: middle;
+}
+
+#dw acronym {
+  cursor: help;
+  border-bottom: 1px dotted #000;
+}
+
+/* general headline setup */
+#dw h1, #dw h2, #dw h3, #dw h4, #dw h5 {
+    color: Black;
+    background-color: transparent;
+    font-family: "Lucida Grande", Verdana, Lucida, Helvetica, Arial, sans-serif;
+    font-size: 100%;
+    font-weight: normal;
+    margin-left:    0;
+    margin-right:   0;
+    margin-top:     0;
+    margin-bottom:  1em;
+    padding-left:   0;
+    padding-right:  0;
+    padding-top:    0.5em;
+    padding-bottom: 0;
+    border-bottom: 1px solid #8cacbb;
+}
+
+/* special headlines */
+/*
+#dw h1 {font-size: 160%; margin-left: 0px; font-weight: bold;}
+#dw h2 {font-size: 150%; margin-left: 20px; font-weight: bold;}
+#dw h3 {font-size: 130%; margin-left: 40px; border-bottom: none; font-weight: bolder}
+#dw h4 {font-size: 115%; margin-left: 60px; border-bottom: none; font-weight: bolder}
+#dw h5 {font-size: 100%; margin-left: 80px; border-bottom: none; font-weight: bold;}
+*/
+
+#dw h1 {font-size: 160%; font-weight: bold;}
+#dw h2 {font-size: 140%; font-weight: bold; }
+#dw h3 {font-size: 130%; border-bottom: none; font-weight: bolder}
+#dw h4 {font-size: 115%; border-bottom: none; font-weight: bolder}
+#dw h5 {font-size: 100%; border-bottom: none; font-weight: bold;}
+
+/* indent different sections */
+/*
+#dw div.level1 {margin-left: 3px;}
+#dw div.level2 {margin-left: 23px;}
+#dw div.level3 {margin-left: 43px;}
+#dw div.level4 {margin-left: 63px;}
+#dw div.level5 {margin-left: 83px;}
+*/
+
+/* unordered lists */
+#dw ul {
+  line-height: 1.5em;
+  list-style-type: square;
+  margin: 0 0 0.5em 2em;
+  padding: 0;
+  color: #638c9c;
+  list-style-image: none;
+}
+
+/* ordered lists */
+#dw ol {
+  line-height: 1.5em;
+  margin: 0 0 0.5em 2em;
+  padding: 0;
+  color: #638c9c;
+  font-weight: bold;
+  list-style-image: none;
+}
+
+/* the list items overriding the ul/ol definition */
+#dw .li {
+  color: #000;
+  font-weight: normal;
+}
+
+#dw ol {list-style-type: decimal}
+#dw ol ol {list-style-type: upper-roman}
+#dw ol ol ol {list-style-type: lower-alpha}
+#dw ol ol ol ol {list-style-type: lower-greek}
+
+#dw li.open {
+  list-style-image: url(../lib/tpl/fsinfo/images/open.gif);
+    /*list-style-type: circle;*/
+}
+
+#dw li.closed {
+  list-style-image: url(../lib/tpl/fsinfo/images/closed.gif);
+    /*list-style-type: disc;*/
+}
+
+#dw blockquote {
+  border-left: 2px solid #8cacbb;
+  padding-left: 3px;
+  margin-left: 0;
+}
+
+/* code blocks by indention */
+#dw pre.pre {
+  font-size: 100%;
+  padding: 0.5em;
+  border: 1px dashed #8cacbb;
+  color: Black;
+  background-color: #f7f9fa;
+  overflow: auto;
+}
+
+/* code blocks by code tag */
+#dw pre.code {
+  font-size: 100%;
+  padding: 0.5em;
+  border: 1px dashed #8cacbb;
+  color: Black;
+  background-color: #f7f9fa;
+  overflow: auto;
+}
+
+/* inline code words */
+#dw code {
+  font-size: 80%;
+}
+
+/* code blocks by file tag */
+#dw pre.file {
+  font-size: 100%;
+  padding: 0.5em;
+  border: 1px dashed #8cacbb;
+  color: Black;
+  background-color: #dee7ec;
+  overflow: auto;
+}
+
+/* inline tables */
+
+#dw table.inline th {
+  padding: 3px;
+  border: 1px solid #8cacbb;
+  background-color: #dee7ec;
+  text-align: left;
+}
+
+#dw table.inline td {
+  padding: 3px;
+  border: 1px solid #8cacbb;
+}
+</style>
+<script type='text/javascript' src='../wp-content/themes/arras/js/superfish/hoverIntent.js'></script>
+<script type='text/javascript' src='../wp-content/themes/arras/js/superfish/superfish.js'></script>
+<script type='text/javascript' src='../wp-includes/js/comment-reply.min.js?ver=3.6'></script>
+<script type='text/javascript' src='../wp-content/themes/arras/js/jquery.validate.min.js'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../xmlrpc-rsd.php.html" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 3.6" />
+
+<script type="text/javascript"><!--
+var a2a_config=a2a_config||{},wpa2a={done:false,html_done:false,script_ready:false,script_load:function(){var a=document.createElement('script'),s=document.getElementsByTagName('script')[0];a.type='text/javascript';a.async=true;a.src='/page.js';s.parentNode.insertBefore(a,s);wpa2a.script_load=function(){};},script_onready:function(){if(a2a.type=='page'){wpa2a.script_ready=true;if(wpa2a.html_done)wpa2a.init();}},init:function(){for(var i=0,el,target,targets=wpa2a.targets,length=targets.length;i<length;i++){el=document.getElementById('wpa2a_'+(i+1));target=targets[i];a2a_config.linkname=target.title;a2a_config.linkurl=target.url;if(el)a2a.init('page',{target:el});wpa2a.done=true;}}};a2a_config.tracking_callback=['ready',wpa2a.script_onready];
+//--></script>
+<meta name="_awb_version" content="2.0.3" /><link rel="stylesheet" href="../wp-content/themes/arras/css/styles/default.css" type="text/css" media="screen,projection" /><link rel="stylesheet" href="../wp-content/themes/arras/css/layouts/2c-r-fixed.css" type="text/css" />
+<!-- Generated by Arras WP Theme -->
+<style type="text/css">
+	.posts-default li  { width: 205px; height: 225px; }
+	.posts-default img, .posts-default .entry-thumbnails-link { width: 195px; height: 110px; }
+	.posts-default .entry-meta { width: 195px; }
+	.posts-default .entry-thumbnails { width: 205px; height: 120px; }
+			.posts-quick .entry-thumbnails img { width: 115px; height: 115px; }
+		.posts-quick .entry-meta { width: 115px; }
+			.featured { height: 260px; }
+	.featured-article { width: 640px; height: 250px; }
+	.featured-article img { width: 640px; height: 250px; }
+	#controls { width: 610px; top: 110px; }
+	#controls .next { left: 610px; }
+	.featured-entry { height: 84px; top: -84px; }
+	.featured-slideshow-inner { height: 250px }
+		.featured-stories-summary  { margin-left: 51px; }
+	.single .post .entry-photo img, .single-post .entry-photo img  { width: 620px; height: 250px; }
+		.footer-sidebar  { width: 920px; }
+	</style>
+	<script type="text/javascript">
+	jQuery(document).ready(function($) {
+
+$('.multi-sidebar').tabs();
+
+$('.sf-menu').superfish({autoArrows: true, speed: 'fast', dropShadows: 'true'});
+
+$('#commentform').validate();
+
+
+});	</script>
+	<!--[if IE]>
+<style type="text/css">
+.addtoany_list a img{filter:alpha(opacity=70)}
+.addtoany_list a:hover img,.addtoany_list a.addtoany_share_save img{filter:alpha(opacity=100)}
+</style>
+<![endif]-->
+<link rel="stylesheet" href="../wp-content/themes/arras/user.css" type="text/css" media="screen,projection" /><!-- Google Analytics Tracking by Google Analyticator 6.4.5: http://www.videousermanuals.com/google-analyticator/ -->
+<script type="text/javascript">
+	var analyticsFileTypes = [''];
+	var analyticsEventTracking = 'enabled';
+</script>
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-169675-4']);
+        _gaq.push(['_addDevId', 'i9k95']); // Google Analyticator App ID with Google 
+        
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+</head>
+
+<body class="page page-id-0 page-parent page-template-default layout-2c-r-fixed no-js style-default">
+<script type="text/javascript">
+//<![CDATA[
+(function(){
+var c = document.body.className;
+c = c.replace(/no-js/, 'js');
+document.body.className = c;
+})();
+//]]>
+</script>
+
+<div id="top-menu" class="clearfix">
+	</div><!-- #top-menu -->
+
+<div id="header"><div align="center"><script type="text/javascript"><!--
+google_ad_client = "pub-7027070946238159";
+/* 728x90, Top Banner */
+google_ad_slot = "9335358437";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+	<div id="branding" class="clearfix">
+	<div class="logo">
+				<span class="blog-name"><a href="../index.html">World Music Central.org</a></span>
+		<img style="float:left; padding: 0 5px 0 0;" src="../wp-content/themes/wmc-magazeen/images/bull.png"/><span class="blog-description">Your Connection to World Music</span>
+			</div>
+	<div id="searchbar"><form method="get" class="searchform clearfix" action="http://worldmusiccentral.org/">
+ <input type="text" value="Search..." name="s" class="s" onfocus="this.value=''" />
+ <input type="submit" class="searchsubmit" value="Search" title="Search World Music Central.org" />
+</form>
+</div>
+	</div><!-- #branding -->
+</div><!-- #header -->
+
+<div id="nav">
+	<div id="nav-content" class="clearfix">
+	<div class="menu-main-container"><ul id="menu-main" class="sf-menu menu clearfix"><li id="menu-item-6394" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-6394"><a href="../index.html">Home</a></li>
+<li id="menu-item-6401" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6401"><a href="../about/index.html">About</a></li>
+<li id="menu-item-6454" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6454"><a href="#">World Music Resources</a>
+<ul class="sub-menu">
+	<li id="menu-item-6455" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6455"><a href="artist_index.php.html">Artists Database</a></li>
+	<li id="menu-item-6462" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6462"><a href="http://musicwikicentral.com/world_music_festivals">Festivals</a></li>
+	<li id="menu-item-6467" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6467"><a href="http://musicwikicentral.com/travel_guides">Travel Guides</a></li>
+	<li id="menu-item-6469" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6469"><a href="http://musicwikicentral.com/world_music_genres">Musical Genres</a></li>
+	<li id="menu-item-6468" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6468"><a href="http://musicwikicentral.com/musical_instruments">Musical Instruments</a></li>
+	<li id="menu-item-6475" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6475"><a href="http://musicwikicentral.com/showcases">Showcases</a></li>
+	<li id="menu-item-6470" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6470"><a href="http://musicwikicentral.com/world_music_venues">Venues</a></li>
+	<li id="menu-item-6472" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6472"><a href="http://musicwikicentral.com/record_companies">Record Companies</a></li>
+	<li id="menu-item-6466" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6466"><a href="http://musicwikicentral.com/booking_agents">Booking Agents</a></li>
+	<li id="menu-item-6474" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6474"><a href="http://musicwikicentral.com/world_music_press">World Music Press</a></li>
+	<li id="menu-item-6477" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6477"><a href="http://musicwikicentral.com/ethnomusicology">Ethnomusicology</a></li>
+	<li id="menu-item-6473" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6473"><a href="http://musicwikicentral.com/music_organizations">Music Organizations</a></li>
+</ul>
+</li>
+<li id="menu-item-6390" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6390"><a href="#">Topics</a>
+<ul class="sub-menu">
+	<li id="menu-item-6369" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6369"><a href="../category/archive/index.html">archive</a></li>
+	<li id="menu-item-6370" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6370"><a href="../category/articles/index.html">Articles</a></li>
+	<li id="menu-item-6371" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6371"><a href="../category/awards/index.html">Awards</a></li>
+	<li id="menu-item-6372" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6372"><a href="../category/book-reviews/index.html">Book Reviews</a></li>
+	<li id="menu-item-6373" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6373"><a href="../category/cd-reviews/index.html">CD Reviews</a></li>
+	<li id="menu-item-6374" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6374"><a href="../category/concert-reviews/index.html">Concert reviews</a></li>
+	<li id="menu-item-6375" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6375"><a href="../category/conferences/index.html">Conferences</a></li>
+	<li id="menu-item-6376" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6376"><a href="../category/editorials/index.html">Editorials</a></li>
+	<li id="menu-item-6377" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6377"><a href="../category/events/index.html">Events</a></li>
+	<li id="menu-item-6378" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6378"><a href="../category/film-reviews/index.html">Film Reviews</a></li>
+	<li id="menu-item-6379" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6379"><a href="../category/general-news/index.html">General News</a></li>
+	<li id="menu-item-6380" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6380"><a href="../category/interviews/index.html">Interviews</a></li>
+	<li id="menu-item-6381" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6381"><a href="../category/loop-collections/index.html">Loop Collections</a></li>
+	<li id="menu-item-6382" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6382"><a href="../category/new-books/index.html">New Books</a></li>
+	<li id="menu-item-6383" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6383"><a href="../category/new-cds/index.html">New CDs</a></li>
+	<li id="menu-item-6384" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6384"><a href="../category/new-films/index.html">New Films</a></li>
+	<li id="menu-item-6385" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6385"><a href="../category/new-releases/index.html">New Releases</a></li>
+	<li id="menu-item-6386" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6386"><a href="../category/obituaries/index.html">Obituaries</a></li>
+	<li id="menu-item-6387" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6387"><a href="../category/tour-announcements/index.html">Tour Announcements</a></li>
+	<li id="menu-item-6388" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6388"><a href="../category/tradeshows/index.html">Tradeshows</a></li>
+	<li id="menu-item-6389" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6389"><a href="../category/uncategorized/index.html">Uncategorized</a></li>
+</ul>
+</li>
+<li id="menu-item-6392" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6392"><a href="../events/index.html">Calendar</a></li>
+<li id="menu-item-6400" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6400"><a href="../store/index.html">Store</a></li>
+<li id="menu-item-6724" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6724"><a href="../contact-us/index.html">Contact Us</a></li>
+</ul></div>		<ul class="quick-nav clearfix">
+					<li><a id="rss" title="World Music Central.org RSS Feed" href="../feed/index.html">RSS Feed</a></li>
+				
+						
+							<li><a id="facebook" title="World Music Central.org Facebook" href="http://www.facebook.com/pages/World-Music-Central/149036898455901" target="_blank">Facebook</a></li>
+				
+			</ul>
+	</div><!-- #nav-content -->
+</div><!-- #nav -->
+
+<div id="wrapper">
+	
+	  
+	<div id="main" class="clearfix">
+    <div id="container" class="clearfix">
+  <head>
+    <title>V&auml;rttin&auml; - Artist Page</title>
+  </head>
+
+  <body> 
+  
+  <div id="artistpage">
+  
+  <div style="float:right;">
+  
+  <script type="text/javascript"><!--
+google_ad_client = "pub-7027070946238159";
+/* 160x600, created 12/6/08 */
+google_ad_slot = "6830638066";
+google_ad_width = 160;
+google_ad_height = 600;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+
+</div>
+  
+  
+  
+  	<table>
+
+  
+<tr><td align="center" colspan="2" width="100%">
+<font size=+1><b>V&auml;rttin&auml;</b></font> 
+<hr></td></tr>
+
+<tr><td align="center" colspan="2" width="100%">
+<a href="#Discography">Discography</a>&nbsp;&nbsp;&middot;&nbsp;&nbsp;<a href="#Booking">Booking Agency</a>
+<hr></td></tr>
+    <tr>
+      <td colspan="2" width="100%">
+		<a name="Biography"><b>Biography</b></a>:
+	  </td>
+    </tr>
+    <tr>
+      <td colspan="2" width="100%">&nbsp;</td>
+    </tr>
+
+    <tr>
+      <td width="3%"></td>
+
+      <td width="97%">
+	  
+	<p align=center><img border="0" align="center"  src="../staticpages/images/Varttina-singers_2002-300.jpg"></p><p align="center">Photo by Tuomo Manninen</p>
+V&auml;rttin&auml; (meaning spindle) is touted as an early progenitor of "New Finnish Folk." V&auml;rttin&auml;&#8217;s origins go back to 1983 in the village of R&auml;&auml;kkyl&auml;, in Karelia, the southeastern region of Finland, as the project of singers and kantele players Sari and Mari Kaasinen. The concept was to form a youth group to recite Karelian poetry, sing and play kantele. Interest and appreciation in the group grew to such a degree that many more youngsters wanted to join, and they did! The result was a group of 21 members, playing and singing traditional Karelian folk song. Later, a common goal emerged: to explore and revive Karelian / Finno-Ugric musical tradition and to discover new, more exciting ways of arranging and performing.</p>
+<p>The original V&auml;rttin&auml; line-up, featuring the distinctive sound of fifteen young girls singing and playing kantele (the Finnish national instrument), plus six young men accompanying them with acoustic guitar, acoustic bass, fiddle, accordion, saxophone, tin whistle and flute made two recordings V&auml;rttin&auml; (1987) and Musta Lindu (1989), each one breaking new territory in the Finnish folk music field.</p>
+<p>In 1990, events took a dramatic turn: several original members left to pursue other interests and the core members, Sari &amp; Mari Kaasinen, Janne Lappalainen and Kirsi K&auml;hk&ouml;nen formed a new band, recruiting some of Finland&#8217;s top players in the roots and rock scene.</p>
+<p>Enter V&auml;rttin&auml; phase two and a startling new direction: five effervescent young ladies bursting with vocal energy, fueled by a powerhouse acoustic band. The group's repertoire diversified even further into Finno-Ugric territory, borrowing tunes, poems, songs and ideas from women's singing traditions of Setuland, Mariland, Ingria and other areas.</p>
+<p>Equally as important, if not more so, was the emergence of original compositions and lyrics from group members, providing new dimensions to the band's character and clearly showing that V&auml;rttin&auml; had risen to a new level of sophistication. In performance, the focus shifted to a more "rock/pop" approach, presenting Finno-Ugric musical tradition in ways never before conceived. The girls' voices, having matured greatly since the early days, were the forefront of the group's sound and the band delivered rousing acoustic accompaniment.</p>
+<p>In 1991 the new V&auml;rttin&auml; released the groundbreaking 
+ <a href="http://www.amazon.com/gp/product/B000001L4U/103-8165085-3809451?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B000001L4U">
+Oi Dai</a> album, which became an instant smash hit, propelling V&auml;rttin&auml; to the status of household name. <a href="http://www.amazon.com/gp/product/B000001L4U/103-8165085-3809451?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B000001L4U">
+Oi Dai</a>, a fun, frenetic fusion of folk and rock, was the biggest folk music phenomenon in twenty years and has today been certified Platinum seller. Foreign interest in the band came quickly and V&auml;rttin&auml; found themselves touring and performing extensively throughout Europe, suddenly becoming the talk of the European "world music" community.</p>
+<p>Successor to <a href="http://www.amazon.com/gp/product/B000001L4U/103-8165085-3809451?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B000001L4U">
+Oi Dai</a> was 1992&#8217;s excellent 
+<a href="http://www.amazon.com/gp/product/B00000DGY1/103-8165085-3809451?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B00000DGY1">
+Seleniko</a>, produced by Hijaz Mustapha, which immediately entered the European World Music radio charts at the Number One position and remained there for three straight months. The Finnish single "Kyla Vuotti Uutta Kuuta", ("The Village Awaits the New Moon") became a hit among fans and has remained a stage favourite worldwide.</p>
+<p>The chart success of 
+<a href="http://www.amazon.com/gp/product/B00000DGY1/103-8165085-3809451?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B00000DGY1">
+Seleniko</a> attracted global attention and the album was released in North America (Green Linnet/Xenophile) and Benelux territories (Music &amp;Words). The band continued with foreign performances including a showcase headliner at the SXSW Music &amp;Media Convention in Austin, Texas, a tour of Benelux and appearances at Rudolstadt Festival in Germany and Glastonbury Festival in England. V&auml;rttin&auml; also released their first video, the Seleniko track "Pihi Neito". At the end of 1993, V&auml;rttin&auml; embarked on their first US tour, selling out eight concerts and gathering piles of rave reviews. Simultaneously, <a href="http://www.amazon.com/gp/product/B000001L4U/103-8165085-3809451?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B000001L4U">
+Oi Dai</a> was released in USA on Xenophile.</p>
+<p>In '94, V&auml;rttin&auml; recorded their fifth album, 
+ <a href="http://www.amazon.com/gp/product/B000001L56/103-8165085-3809451?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B000001L56">
+Aitara</a>, featuring mostly original compositions and drummer. Instantly upon release, <a href="http://www.amazon.com/gp/product/B000001L56/103-8165085-3809451?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B000001L56">
+Aitara</a> entered the World Music Charts Europe at Number Five and was picked "Album of the Week" at Multi Kulti radio, Berlin. 1994 highlights included a live spot on European television with Baaba Maal and Angelique Kidjo in MTV's anti-racism video competition PRIZE OF EUROPE.</p>
+<p>In 1995, <a href="http://www.amazon.com/gp/product/B000001L56/103-8165085-3809451?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B000001L56">
+Aitara</a> was released by King Records in Japan, Music and Words in Benelux and Xenophile in North America, where the album spent five weeks in the Number One position on the CMJ College radio World Music charts. <a href="http://www.amazon.com/gp/product/B000001L56/103-8165085-3809451?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B000001L56">
+Aitara</a> was also voted "Best Contemporary World Music Album" at the NAIRD (National Association of Independent Record Distributors) convention in USA V&auml;rttin&auml; returned to USA for their second tour selling out concerts in New York, Washington DC, Los Angeles and Minneapolis. Then it was off to Sweden for a two week tour, followed by Vienna Festival's "Out of the Cool" Nordic music event, tours of Benelux and Spain, Finnish Festival performances in R&auml;&auml;kkyl&auml; and Kaustinen and a packed house at the WOMAD, Helsinki event in August. V&auml;rttin&auml; then made their second video, "Y&ouml;tulet" (Night Fires).</p>
+<p>The distinctive V&auml;rttin&auml; voices began to attract demand from musicians abroad and the singers engaged in extra-curricular activities including Hector Zazou's Songs from the Cold Seas (Sony) and Maggie Reilly&#8217;s Elena album (EMI).</p>
+<p>Highlights for 1996 included a showcase slot at MIDEM, in Cannes, with Dadawa (China) and I Muvrini (Corsica), a 1000 seat sell out at Festival Interceltico in Oporto, Portugal, their third tour of Benelux, two sold out shows with Leningrad Cowboys at the Queen Elizabeth Hall in London (including live interviews on the BBC radio program Kaleidoscope), an opening slot with Bj&ouml;rk at Pori Jazz Festival in Finland and the summer mini-tour of North America, including an opening performance for Joan Armatrading at the Edmonton Folk Festival, with an audience of 10000. Then it was off to Germany where V&auml;rttin&auml; participated in the WDR Folk Festival in Bonn, including a live television broadcast on WDR, then continuing to the Lowlands Festival in Holland. In October, V&auml;rttin&auml;&#8217;s sixth album 
+ <a href="http://www.amazon.com/gp/product/B000005J4C/103-8165085-3809451?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B000005J4C">
+Kokko</a> was released in North American and Finland on the Nonesuch label.</p>
+<p>1997: Nonesuch released <a href="http://www.amazon.com/gp/product/B000005J4C/103-8165085-3809451?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B000005J4C">
+Kokko</a> throughout the rest of the world. Critical acclaim included: European World Music Radio Charts at Number Two. "CD of the Month" in Lift Music Magazine, Germany. "Album of the Month" in Stereo Review magazine, USA, Number Two position on CMJ World Music radio charts in USA. Concert highlights included Fasching Club, Stockholm, their fourth tour of Benelux, first tour of Germany, US east coast dates including St. Anne&#8217;s Cathedral in Brooklyn, first tour of Australia followed by a packed house at Tokyo&#8217;s famed Club Quattro, Azene Unnepe Festival in Budapest, Voix Festival in Germany, Pirineos Sur and La Mar de Musicas Festivals in Spain, Galician tour, Dranouter Festival in Belgium, Water Festival in Stockholm, WOMAD Canarias Festival and the Barbican Center in London.</p>
+<p>Sari Kaasinen left the group to work on other projects, in particular the group Sirmakka and her first solo album. Singer, accordionist Susan Aho (ex-Mets&auml;nv&auml;ki) joins V&auml;rttin&auml;.</p>
+<p>1998 began with two concerts at Celtic Connections festival in Glasgow: one with Maria Kalaniemi &amp;Aldargaz, the other a packed house at the Fruitmarket with Carlos Nu&ntilde;ez. Summer highlights include a headline performance at Europa Sziget festival in Budapest and the V&auml;rttin&auml; 15 Year Anniversary concert at Kihaus Festival in R&auml;&auml;kkyl&auml;, Finland (July 11). On August 13, V&auml;rttin&auml; 
+went to Asturias, Spain, then it&#8217;s back to Japan on August 19 for a one week tour, including Osaka (Aug. 21), Toyama (Aug. 23) and a return engagement at Tokyo&#8217;s Club Quattro (Aug 25). The band flew to San Remo, Italy for the nationally televised Tenco Festival which resulted in a planned tour for 1999. In November it&#8217;s back to Germany and Benelux for another tour.</p>
+<p>Big news for 1998 was the August release of V&auml;rttin&auml;&#8217;s seventh album, 
+
+<a href="http://www.amazon.com/gp/product/B000009NUW/103-8165085-3809451?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B000009NUW">
+Vihma</a>, on Wicklow Records, the short-lived label from the 
+<a href="artist_page-id=133.php.html">Chieftains</a>&#8217;
+<a href="artist_page-id=153.php.html">Paddy Moloney</a> and BMG. Vihma features the co-production talents of New York musician Richard Horowitz, known for his work with singer Susan Deyhim and on various 
+film scores including The Sheltering Sky. Special guests included Finnish fiddling stars 
+<a href="artist_page-id=86.php.html">JPP</a> and throat singers from the electric Tuvan group 
+<a href="artist_page-id=602.php.html">Yat-Kha</a><i>.</i> Also worth noting 
+was the new album from British singer Tanita Tikaram which included a looped sample of the piece "Seelinnikoi" from V&auml;rttin&auml;&#8217;s Seleniko album.</p>
+<p>V&auml;rttin&auml;&#8217;s song "Matalii ja Mustii" from the Seleniko album, was featured in an Arthur 
+(animated children’s TV series.) episode, broadcast in USA in November 1998 and appears on the Arthur CD. The program is also broadcast worldwide and is available on video. The CD is available worldwide, as well. Accordionist Markku Lepist&ouml; (from Progmatics) joined V&auml;rttin&auml;. Susan Aho moved to the front line of singers.</p>
+<p>1998: The  
+
+<a href="http://www.amazon.com/gp/product/B000009NUW/103-8165085-3809451?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B000009NUW">
+Vihma</a> album entered the European World Music Radio Charts at Number One in November. In USA, the album reached Number One in the CMJ New World radio charts. Vihma is voted "Best Album of 1998" in the Rock/Pop category of Adlib magazine in Japan and "Best World Music Album of 1998" from Music Magazine of Japan.<br>
+<br>
+Singer/lyricist Sirpa Reiman left V&auml;rttin&auml; to be a full-time mother. Replacement vocalist 
+was Riikka V&auml;yrynen who also sings with the Adiemus project.</p>
+<p>1999: Tours of Italy, Spain and North America, including Winnipeg Festival, Festival d&#8217;ete International de Quebec, Central Park Summer Stage. Also a slot at the ET Jam festival in Prague. Televised Sopot festival performance in Poland on August 20, including a collaboration with the Bulgarian Choir Angelite.&nbsp;</p>
+<p>Vihma and producers Richard Horowitz and Janne Haavisto, with Finnvox studios and engineer Risto Hemmi, receive Master Award from BASF.</p>
+<p>In December, V&auml;rttin&auml; returned to Finnvox studios, Helsinki, to record their eighth album, for release in spring 2000. Producer 
+was Frenchman Hughes de Courson, known for his work with Malicorne, Kolinda, Spondo, Lambarena, Palestrina, Mozart in Egypt, El Lebrijano and Songs of Innocence.</p>
+<p>January 2000: release of Wicklow&#8217;s "Deep Roots and Future Grooves Remix" CD including V&auml;rttin&auml;&#8217;s "Vihma" remixed by Japan&#8217;s Fantastic Plastic Machine.</p>
+<p>May 2000: European and Japanese release of V&auml;rttin&auml;&#8217;s eighth album 
+
+<a href="http://www.amazon.com/gp/product/B0000584U6/103-8165085-3809451?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B0000584U6">
+Ilmatar</a> (&quot;Goddess of Air&quot;). This was V&auml;rttin&auml;&#8217;s most adventurous album to date, a dramatic leap forward. Lots of 
+surprises in store including more imaginative use of acoustics and percussion, plus the amazing vocal section which has never been so powerful and dynamic.&nbsp;</p>
+<p>Varttina released their first live album, entitled 6.12, recorded December 6, 
+2000 at Savoy Theatre, Helsinki. The album, produced by Varttina bassist Pekka 
+Lehti, was issued by BMG Finland and licensed to various other partners 
+worldwide and featured a music video as a bonus track.<br>
+<br>
+Coinciding with 6.12 was the Finnish publication of Kimmo Nevalainen's book Varttina - Korkeelta ja Kovvoo (High and Loud) comprising 175 pages of 
+history, music, photos and notes.<br>
+<br>
+More personnel transitions as singer Johanna Virtanen replaced Riikka Timonen (Vayrynen) 
+and later drummer Jaakko Lukkarinen replacing Marko Timonen, both exiting 
+members moving to new projects.<br>
+<br>
+Rebirth:<br>
+<br>
+Varttina toured in 2002 with European concerts plus their first appearances in 
+Latvia and Slovenia. Trees Music and Arts company of Taiwan released the double 
+compilation album, Double Life, which includes the entire 6.12 album plus 
+selections from the albums Seleniko, Aitara and Ilmatar.<br>
+<br>
+Spring of that year saw the departure of three Varttina members: fiddler Kari Reiman, bassist Pekka Lehti and singer Kirsi K?hk?nen left for family 
+responsibilities and other career goals. The replacement on fiddle was original 
+Varttina fiddler Lassi Logr?n, who had been in very early incarnations of the 
+band and had substituted for Kari Reiman on several tours. Bassist Hannu 
+Rantanen, one of Finland's best players had also previously toured with Varttina 
+numerous times as a substitute. The vocal section remained as a trio: Kaasinen, 
+Aho, Virtanen. The result of this change was a second major rebirth for Varttina 
+as a new creative energy surged within the band.<br>
+<br>
+Evidence of this creative energy was the release of their tenth album - 
+<a href="http://www.amazon.com/gp/product/B00008IAJQ/103-8165085-3809451?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B00008IAJQ">
+Iki</a> - released in 2003, Varttina's 20th anniversary. Produced by 
+Janne Haavisto, 
+<a href="http://www.amazon.com/gp/product/B00008IAJQ/103-8165085-3809451?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B00008IAJQ">
+Iki</a> was a new pinnacle for the group in terms of strength of 
+compositions, versatility and new dynamic levels. The writing skills of all the 
+band members emerged profoundly, with a new tighter group chemistry, producing a 
+previously unrealized wide variety in songs and arrangements. Many fans and 
+critics proclaim iki as Varttina's best album to date. 
+<a href="http://www.amazon.com/gp/product/B00008IAJQ/103-8165085-3809451?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B00008IAJQ">
+Iki</a> was released in Europe, North America and Japan.<br>
+<br>
+The Helsinki release of iki coincided with their sold out 20th Anniversary 
+concert on February 28, 2003 at Helsinki's Aleksanterin Teatteri, the former 
+opera house. Comprising songs from their entire career, the concert also 
+featured a collaboration with the thirty piece women?s choir Philomela. Fans 
+came from USA, Canada, UK, Switzerland, France, Hungary and beyond to see the 
+show which was recorded on video by DeCo Media and broadcast New Years Day 2004 
+on YLE Teema, Finnish digital TV.<br>
+<br>
+The album iki was picked Top of the World chart position 9 and one of the Top 
+50 World Music Albums You Should Own by Songlines Magazine, UK. Varttina was 
+named one of The 40 Most Exciting, Soulful Artists of 2003, 40 Artists Who Will 
+Shake the World by Utne Magazine USA, alongside singer Tom Waits and director 
+Julie Taymor. Varttina's returned to USA and toured Europe in 2003 including 
+dates in Sardinia and Turkey plus a triumphant return to Budapest for the third 
+appearance, (their second appearance as headliners), at Sziget festival, playing 
+for twelve thousand people.<br>
+Lord of The Rings:<br>
+<br>
+In late 2003 Varttina began collaborating with Indian composer A.R. Rahman on 
+writing the score for the stage adaptation of J.R.R. Tolkien's The Lord of the 
+Rings. The project was directed by Matthew Warchus and produced by Kevin Wallace 
+and Saul Zaentz. Designer is Rob Howell, music supervisor Chris Nightingale. 
+Work began in October in Helsinki and London and continued throughout year's end 
+between Varttina's live engagements.<br>
+<br>
+2004 began with more Lord of the Rings work in Helsinki and London continuing 
+through the spring.
+In March, Varttina undertook a lengthy European tour with seventeen shows over 
+eighteen days. One major highlight of the tour included a special collaboration 
+with Dutch conceptualist, composer, performer Merlijn Twaalfhoven in Amsterdam, 
+including Varttina vocal and instrumental improvisations, collaborations with 
+children's choir and an evening of magic and improvisation from many diverse 
+players and performers. Sold out concerts in Ljubljana, Bratislava and Utrecht 
+with packed houses in Prague and Zurich.<br>
+<br>
+In April, Varttina returned to Budapest for their sixth concert there, 
+performing in Heroe's Square for the country's EU entry celebration. Thousands 
+of people saw the event which also featured Shane MacGowan and the Popes and 
+Khaled. Varttina later returned to Czech Republic and Slovakia during the summer 
+for major festivals, Music for People and Pohoda respectively, then to Estonia 
+for the Leigo Festival.<br>
+<br>
+Lord of the Rings work continued through the end of 2004 and into 2005 with the 
+musical?s World Premiere confirmed for Toronto in early 2006 and the London West 
+End premiere set for spring 2007.<br>
+<br>
+A Czech compilation album entitled Snow Angel was released by Indies Records in 
+April 2005 to coincide with Varttina?s Czech and Slovak concerts in May. 
+Material was taken from the albums Seleniko, Aitara, Ilmatar, iki and 6.12.<br>
+<br>
+2005 saw Varttina on the road again performing at the first annual Wychwood 
+Festival in Cheltenham, England featuring a special collaboration with British 
+singer/fiddler Eliza Carthy. Also on that trip was a sold out concert at 
+Salisbury Festival and an appearance at the Sage Gateshead. Spring and summer 
+concerts included St Petersburg, Prague, Brno, Bratislava, Linz, Larrach, 
+Utrecht, Den Bosch, Tenerife, Finnish dates, Budapest Palace of Arts, St Olav 
+Festival in Norway and finally Tatihou Festival in France. They also joined 
+Leningrad Cowboys, Nightwish, Apocalyptica and Vicente Amigo as the featured 
+performers at the IAAF sports event in Helsinki's Olympic Stadium.<br>
+<br>
+Varttina entered Finnvox studios on August 8th to record their tenth studio 
+album with producer Aija Puurtinen.<br>
+<br>
+Lord of the Rings rehearsals in Toronto began in October and continued through 
+January 2006.<br>
+<br>
+In December 2005, Varttina won the Suomi-Palkinto Finland Prize for 
+exceptional artistic and career achievements. The awards, give by the Ministry 
+of Education have been given since 1993 and are presented to artists in fields 
+of music, film, theatre, dance, sculpture, writing and others.<br>
+2006:<br>
+<br>
+Varttina's tenth studio album 
+<a href="http://www.amazon.com/gp/product/B000BR6DFS/103-8165085-3809451?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B000BR6DFS">
+Miero</a> was released by Peter Gabriel's Real World company worldwide 
+January 30, 2006 to coincide with their appearance on January 22 at MIDEM music 
+convention in Cannes, performing on the main stage for the Finnish Opening 
+Night.<br>
+<br>
+The first preview of Lord of the Rings, featuring music composed by Varttina and A.R. Rahman with Christopher Nightingale took place on February 2 in 
+Toronto's 
+Princess of Wales Theatre. Previews continued for seven weeks followed by the 
+World Premiere Gala on March 23.
+
+<p>Discography:<br>
+<br>
+<a href="http://www.amazon.com/gp/product/B00002694Z?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B00002694Z">Värttinä</a> (1987)<br>
+<br>
+Musta Lindu (1989)<br>
+<br>
+<a href="http://www.amazon.com/gp/product/B000001L4U?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B000001L4U">Oi Dai</a> (1991)<br>
+<br>
+<a href="http://www.amazon.com/gp/product/B000001L4L?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B000001L4L">Seleniko</a> (1992)<br>
+<br>
+<a href="http://www.amazon.com/gp/product/B000001L56?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B000001L56">Aitara</a> (1994)<br>
+<br>
+<a href="http://www.amazon.com/gp/product/B000005J4C?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B000005J4C">Kokko</a> (Nonesuch, 1996)<br>
+<br>
+<a href="http://www.amazon.com/gp/product/B000009NUW?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B000009NUW">Vihma</a> (Wicklow Records, 1998)<br>
+<br>
+<a href="http://www.amazon.com/gp/product/B0000584U6?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B0000584U6">Ilmatar</a> (Northside Records, 2000)</p>
+
+
+
+<p>6.12. (2001) live album released as
+<a href="http://www.amazon.com/gp/product/B00006311Z?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B00006311Z">
+Live in Helsinki</a> in the United States</p>
+<p>Double Life (2002) - 2-CD compilation</p>
+<p>
+<a href="http://www.amazon.com/gp/product/B00008IAJQ?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B00008IAJQ">
+iki</a> (2003)</p>
+<p>Snow Angel (2005) - compilation including songs from studio and live albums</p>
+<p>
+<a href="http://www.amazon.com/gp/product/B000BR6DFS?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B000BR6DFS">
+Miero</a> (2006)</p>
+<p>
+<a href="http://www.amazon.com/gp/product/B001PN1WA8?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B001PN1WA8">
+25</a> (2007) - compilation<br></td>
+<tr><td align="center" colspan="2" width="100%">
+
+<hr></td></tr>
+  	<tr>
+        <td colspan="2" width="100%">
+		<a name="Discography"><b>Discography</b></a>:
+	  </td>
+    </tr>
+    <tr>
+      <td colspan="2" width="100%">&nbsp;</td>
+    </tr>
+
+    <tr>
+      <td width="3%"></td>
+
+      <td width="97%">
+
+ 	<p>V&auml;rttin&auml; (1987)</p><p>Musta Lindu (1989)</p><p>Oi Dai (1991)</p><p>Seleniko (1992)</p><p>Aitara (1994)</p><p>Kokko (Nonesuch, 1996)</p><p>Vihma (Wicklow Records, 1998)</p><p>Ilmatar (Northside Records, 2000)</p></td>
+<tr><td align="center" colspan="2" width="100%">
+
+<hr></td></tr>
+  	<tr>
+  	  <td colspan="2" width="100%">
+		<a name="Booking"><b>Booking</b></a>:
+	  </td>
+    </tr>
+    <tr>
+      <td colspan="2" width="100%">&nbsp;</td>
+    </tr>
+
+    <tr>
+      <td width="3%"></td>
+
+      <td width="97%">
+
+ 	Hoedown, Laivurinrinne 2, 00120 Helsinki, Finland. Phone: + 358 9 6224804, Fax: +358 9 628950. E-mail: <a href="mailto:pap@hoedown.com"">pap@hoedown.com</a></td>
+<tr><td align="center" colspan="2" width="100%">
+
+<hr></td></tr>
+	</table>
+	</div>
+
+	</div><!-- #main -->
+	
+	    
+    <div id="footer">
+		<div class="footer-sidebar-container clearfix">
+							<ul id="footer-sidebar-1" class="footer-sidebar clearfix xoxo">
+										<li></li>
+									</ul>
+					</div>
+		
+		<div class="footer-message">
+                <p class="floatright">WordPress Installation and Support by <a class="arras" href="http://digiblink.eu/" title="Custom WordPress development, design and backup services."><strong>digiBlink</strong></a></p>
+                <p>Copyright World Music Central.org. All Rights Reserved.</p>                </div><!-- .footer-message -->
+		
+    </div>
+</div><!-- #wrapper -->
+
+<script type="text/javascript"><!--
+wpa2a.targets=[];
+wpa2a.html_done=true;if(wpa2a.script_ready&&!wpa2a.done)wpa2a.init();wpa2a.script_load();
+//--></script>
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+
+	
+});
+</script>
+<script type='text/javascript' src='../wp-includes/js/jquery/ui/jquery.ui.core.min.js?ver=1.10.3'></script>
+<script type='text/javascript' src='../wp-includes/js/jquery/ui/jquery.ui.widget.min.js?ver=1.10.3'></script>
+<script type='text/javascript' src='../wp-includes/js/jquery/ui/jquery.ui.tabs.min.js?ver=1.10.3'></script>
+</body>
+</html>
+   
+
+<!-- Localized -->

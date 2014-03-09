@@ -1,0 +1,1359 @@
+
+<style type="text/css">
+/* --- reset some elements --- */
+
+#dw ul,ol { list-style:none }
+
+#dw ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,p,blockquote,fieldset,input { margin:0; padding:0 }
+
+/* --- Basic Stylesheet for DokuWiki content --- */
+
+#dw h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+#dw h1 a {
+  color: black;
+}
+
+/* ---------- table of contents ------------------- */
+
+#dw div.toc {
+  margin-left: 2em;
+  margin-top: 1.2em;
+  margin-bottom: 0;
+  float:right;
+  width: 200px;
+  font-size: 80%;
+  padding-top:5px;
+}
+
+#dw div.tocheader {
+  padding: 3px;
+  border: 1px solid #8cacbb;
+  background-color: #dee7ec;
+  text-align: left;
+  font-weight:bold;
+  margin-bottom: 2px;
+}
+
+#dw div.tocheader img {
+  width:0.8em;
+  height:0.8em;
+  margin-top:0.3em;
+  margin-right:3px;
+  float:right;
+  cursor: pointer;
+}
+
+#dw #toc__inside {
+  border: 1px solid #8cacbb;
+  background-color: #fff;
+  text-align: left;
+  padding-top: 0.5em;
+  padding-bottom: 0.7em;
+}
+
+#dw ul.toc {
+  list-style-type: none;
+  list-style-image: none;
+  line-height: 1.2em;
+  margin: 0;
+  padding: 0;
+  padding-left: 1em;
+}
+
+#dw ul.toc li {
+  background: transparent url(../lib/tpl/fsinfo/images/tocdot2.gif) 0 0.6em no-repeat;
+  padding-left:0.4em;
+}
+
+#dw ul.toc li.clear {
+  background-image: none;
+  padding-left:0.4em;
+}
+
+#dw a.toc {
+  color: #436976;
+  text-decoration:none;
+}
+
+#dw a.toc:hover {
+  color: #000;
+  text-decoration:underline;
+}
+
+/* --------------------- footnotes -------------------------------- */
+
+#dw div.footnotes{
+  clear:both;
+  border-top: 1px solid #8cacbb;
+  padding-left: 1em;
+  margin-top: 1em;
+}
+
+#dw div.fn{
+  font-size:90%;
+}
+
+#dw a.fn_top{
+  vertical-align:super;
+  font-size:80%;
+}
+
+#dw a.fn_bot{
+  vertical-align:super;
+  font-size:80%;
+  font-weight:bold;
+}
+
+/* insitu-footnotes */
+#dw div.insitu-footnote {
+  font-size: 80%;
+  line-height: 1.2em;
+  border: 1px solid #8cacbb;
+  background: #eef3f8;
+  text-align: left;
+  padding: 4px;
+  max-width: 40%;    /* IE's width is handled in javascript */
+}
+
+/* overcome IE issue with one line code or file boxes which require h. scrolling */
+#dw * html .insitu-footnote pre.code, * html .insitu-footnote pre.file {
+  padding-bottom: 18px;
+}
+
+/* --------------------- Tables -------------------------------- */
+
+#dw table.inline td.okay {
+  background-color: #afa;
+  text-align: center;
+}
+
+#dw table.inline td.notokay {
+  background-color: #fcc;
+  text-align: center;
+}
+
+#dw table.inline {
+  background-color: #fff;
+  border-spacing: 0px;
+  border-collapse: collapse;
+}
+
+/* ------------- Page elements ----------------- */
+
+#dw span.user{
+/*  color: #ccc; */
+  color: #666;
+  font-size: 90%;
+}
+
+#dw li.minor {
+  color: #666;
+  font-style: italic;
+}
+
+/* embedded images */
+#dw img.media {
+  margin: 3px;
+}
+
+#dw img.medialeft {
+  border: 0;
+  float: left;
+  margin: 0 1.5em 0 0;
+}
+
+#dw img.mediaright {
+  border: 0;
+  float: right;
+  margin: 0 0 0 1.5em;
+}
+
+#dw img.mediacenter {
+  border: 0;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* smileys */
+#dw img.middle {
+  vertical-align: middle;
+}
+
+#dw acronym {
+  cursor: help;
+  border-bottom: 1px dotted #000;
+}
+
+/* general headline setup */
+#dw h1, #dw h2, #dw h3, #dw h4, #dw h5 {
+    color: Black;
+    background-color: transparent;
+    font-family: "Lucida Grande", Verdana, Lucida, Helvetica, Arial, sans-serif;
+    font-size: 100%;
+    font-weight: normal;
+    margin-left:    0;
+    margin-right:   0;
+    margin-top:     0;
+    margin-bottom:  1em;
+    padding-left:   0;
+    padding-right:  0;
+    padding-top:    0.5em;
+    padding-bottom: 0;
+    border-bottom: 1px solid #8cacbb;
+}
+
+/* special headlines */
+/*
+#dw h1 {font-size: 160%; margin-left: 0px; font-weight: bold;}
+#dw h2 {font-size: 150%; margin-left: 20px; font-weight: bold;}
+#dw h3 {font-size: 130%; margin-left: 40px; border-bottom: none; font-weight: bolder}
+#dw h4 {font-size: 115%; margin-left: 60px; border-bottom: none; font-weight: bolder}
+#dw h5 {font-size: 100%; margin-left: 80px; border-bottom: none; font-weight: bold;}
+*/
+
+#dw h1 {font-size: 160%; font-weight: bold;}
+#dw h2 {font-size: 140%; font-weight: bold; }
+#dw h3 {font-size: 130%; border-bottom: none; font-weight: bolder}
+#dw h4 {font-size: 115%; border-bottom: none; font-weight: bolder}
+#dw h5 {font-size: 100%; border-bottom: none; font-weight: bold;}
+
+/* indent different sections */
+/*
+#dw div.level1 {margin-left: 3px;}
+#dw div.level2 {margin-left: 23px;}
+#dw div.level3 {margin-left: 43px;}
+#dw div.level4 {margin-left: 63px;}
+#dw div.level5 {margin-left: 83px;}
+*/
+
+/* unordered lists */
+#dw ul {
+  line-height: 1.5em;
+  list-style-type: square;
+  margin: 0 0 0.5em 2em;
+  padding: 0;
+  color: #638c9c;
+  list-style-image: none;
+}
+
+/* ordered lists */
+#dw ol {
+  line-height: 1.5em;
+  margin: 0 0 0.5em 2em;
+  padding: 0;
+  color: #638c9c;
+  font-weight: bold;
+  list-style-image: none;
+}
+
+/* the list items overriding the ul/ol definition */
+#dw .li {
+  color: #000;
+  font-weight: normal;
+}
+
+#dw ol {list-style-type: decimal}
+#dw ol ol {list-style-type: upper-roman}
+#dw ol ol ol {list-style-type: lower-alpha}
+#dw ol ol ol ol {list-style-type: lower-greek}
+
+#dw li.open {
+  list-style-image: url(../lib/tpl/fsinfo/images/open.gif);
+    /*list-style-type: circle;*/
+}
+
+#dw li.closed {
+  list-style-image: url(../lib/tpl/fsinfo/images/closed.gif);
+    /*list-style-type: disc;*/
+}
+
+#dw blockquote {
+  border-left: 2px solid #8cacbb;
+  padding-left: 3px;
+  margin-left: 0;
+}
+
+/* code blocks by indention */
+#dw pre.pre {
+  font-size: 100%;
+  padding: 0.5em;
+  border: 1px dashed #8cacbb;
+  color: Black;
+  background-color: #f7f9fa;
+  overflow: auto;
+}
+
+/* code blocks by code tag */
+#dw pre.code {
+  font-size: 100%;
+  padding: 0.5em;
+  border: 1px dashed #8cacbb;
+  color: Black;
+  background-color: #f7f9fa;
+  overflow: auto;
+}
+
+/* inline code words */
+#dw code {
+  font-size: 80%;
+}
+
+/* code blocks by file tag */
+#dw pre.file {
+  font-size: 100%;
+  padding: 0.5em;
+  border: 1px dashed #8cacbb;
+  color: Black;
+  background-color: #dee7ec;
+  overflow: auto;
+}
+
+/* inline tables */
+
+#dw table.inline th {
+  padding: 3px;
+  border: 1px solid #8cacbb;
+  background-color: #dee7ec;
+  text-align: left;
+}
+
+#dw table.inline td {
+  padding: 3px;
+  border: 1px solid #8cacbb;
+}
+</style>
+<link rel='stylesheet' id='eme_stylesheet-css'  href='../wp-content/plugins/events-made-easy/events_manager-ver=3.6.css' type='text/css' media='all' />
+<link rel='stylesheet' id='A2A_SHARE_SAVE-css'  href='../wp-content/plugins/add-to-any/addtoany.min-ver=1.4.css' type='text/css' media='all' />
+<script type='text/javascript' src='../wp-includes/js/jquery/jquery.js?ver=1.10.2'></script>
+<script type='text/javascript' src='../wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<script type='text/javascript' src='../wp-content/plugins/google-analyticator/external-tracking.min.js?ver=6.4.5'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../xmlrpc-rsd.php.html" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 3.6" />
+
+<script type="text/javascript"><!--
+var a2a_config=a2a_config||{},wpa2a={done:false,html_done:false,script_ready:false,script_load:function(){var a=document.createElement('script'),s=document.getElementsByTagName('script')[0];a.type='text/javascript';a.async=true;a.src='http://static.addtoany.com/menu/page.js';s.parentNode.insertBefore(a,s);wpa2a.script_load=function(){};},script_onready:function(){if(a2a.type=='page'){wpa2a.script_ready=true;if(wpa2a.html_done)wpa2a.init();}},init:function(){for(var i=0,el,target,targets=wpa2a.targets,length=targets.length;i<length;i++){el=document.getElementById('wpa2a_'+(i+1));target=targets[i];a2a_config.linkname=target.title;a2a_config.linkurl=target.url;if(el)a2a.init('page',{target:el});wpa2a.done=true;}}};a2a_config.tracking_callback=['ready',wpa2a.script_onready];
+//--></script>
+<meta name="_awb_version" content="2.0.3" /><link rel="stylesheet" href="../wp-content/themes/arras/css/styles/default.css" type="text/css" media="screen,projection" /><link rel="stylesheet" href="../wp-content/themes/arras/css/layouts/2c-r-fixed.css" type="text/css" />
+<!-- Generated by Arras WP Theme -->
+<style type="text/css">
+	.posts-default li  { width: 205px; height: 225px; }
+	.posts-default img, .posts-default .entry-thumbnails-link { width: 195px; height: 110px; }
+	.posts-default .entry-meta { width: 195px; }
+	.posts-default .entry-thumbnails { width: 205px; height: 120px; }
+			.posts-quick .entry-thumbnails img { width: 115px; height: 115px; }
+		.posts-quick .entry-meta { width: 115px; }
+			.featured { height: 260px; }
+	.featured-article { width: 640px; height: 250px; }
+	.featured-article img { width: 640px; height: 250px; }
+	#controls { width: 610px; top: 110px; }
+	#controls .next { left: 610px; }
+	.featured-entry { height: 84px; top: -84px; }
+	.featured-slideshow-inner { height: 250px }
+		.featured-stories-summary  { margin-left: 51px; }
+	.single .post .entry-photo img, .single-post .entry-photo img  { width: 620px; height: 250px; }
+		.footer-sidebar  { width: 920px; }
+	</style>
+	<script type="text/javascript">
+	jQuery(document).ready(function($) {
+
+$('.multi-sidebar').tabs();
+
+$('.sf-menu').superfish({autoArrows: true, speed: 'fast', dropShadows: 'true'});
+
+$('#commentform').validate();
+
+
+});	</script>
+	<!--[if IE]>
+<style type="text/css">
+.addtoany_list a img{filter:alpha(opacity=70)}
+.addtoany_list a:hover img,.addtoany_list a.addtoany_share_save img{filter:alpha(opacity=100)}
+</style>
+<![endif]-->
+<link rel="stylesheet" href="../wp-content/themes/arras/user.css" type="text/css" media="screen,projection" /><!-- Google Analytics Tracking by Google Analyticator 6.4.5: http://www.videousermanuals.com/google-analyticator/ -->
+<script type="text/javascript">
+	var analyticsFileTypes = [''];
+	var analyticsEventTracking = 'enabled';
+</script>
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-169675-4']);
+        _gaq.push(['_addDevId', 'i9k95']); // Google Analyticator App ID with Google 
+        
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>World Music Central.org</title>
+
+
+<link rel="alternate" type="application/rss+xml" href="../feed/index.html" title="World Music Central.org latest posts" />
+
+<link rel="alternate" type="application/rss+xml" href="../comments/feed/index.html" title="World Music Central.org latest comments" />
+
+<link rel="pingback" href="../xmlrpc.php.html" />
+
+<link rel="shortcut icon" href="../favicon.ico" />
+
+
+<style type="text/css">
+/* --- reset some elements --- */
+
+#dw ul,ol { list-style:none }
+
+#dw ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,p,blockquote,fieldset,input { margin:0; padding:0 }
+
+/* --- Basic Stylesheet for DokuWiki content --- */
+
+#dw h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+#dw h1 a {
+  color: black;
+}
+
+/* ---------- table of contents ------------------- */
+
+#dw div.toc {
+  margin-left: 2em;
+  margin-top: 1.2em;
+  margin-bottom: 0;
+  float:right;
+  width: 200px;
+  font-size: 80%;
+  padding-top:5px;
+}
+
+#dw div.tocheader {
+  padding: 3px;
+  border: 1px solid #8cacbb;
+  background-color: #dee7ec;
+  text-align: left;
+  font-weight:bold;
+  margin-bottom: 2px;
+}
+
+#dw div.tocheader img {
+  width:0.8em;
+  height:0.8em;
+  margin-top:0.3em;
+  margin-right:3px;
+  float:right;
+  cursor: pointer;
+}
+
+#dw #toc__inside {
+  border: 1px solid #8cacbb;
+  background-color: #fff;
+  text-align: left;
+  padding-top: 0.5em;
+  padding-bottom: 0.7em;
+}
+
+#dw ul.toc {
+  list-style-type: none;
+  list-style-image: none;
+  line-height: 1.2em;
+  margin: 0;
+  padding: 0;
+  padding-left: 1em;
+}
+
+#dw ul.toc li {
+  background: transparent url(../lib/tpl/fsinfo/images/tocdot2.gif) 0 0.6em no-repeat;
+  padding-left:0.4em;
+}
+
+#dw ul.toc li.clear {
+  background-image: none;
+  padding-left:0.4em;
+}
+
+#dw a.toc {
+  color: #436976;
+  text-decoration:none;
+}
+
+#dw a.toc:hover {
+  color: #000;
+  text-decoration:underline;
+}
+
+/* --------------------- footnotes -------------------------------- */
+
+#dw div.footnotes{
+  clear:both;
+  border-top: 1px solid #8cacbb;
+  padding-left: 1em;
+  margin-top: 1em;
+}
+
+#dw div.fn{
+  font-size:90%;
+}
+
+#dw a.fn_top{
+  vertical-align:super;
+  font-size:80%;
+}
+
+#dw a.fn_bot{
+  vertical-align:super;
+  font-size:80%;
+  font-weight:bold;
+}
+
+/* insitu-footnotes */
+#dw div.insitu-footnote {
+  font-size: 80%;
+  line-height: 1.2em;
+  border: 1px solid #8cacbb;
+  background: #eef3f8;
+  text-align: left;
+  padding: 4px;
+  max-width: 40%;    /* IE's width is handled in javascript */
+}
+
+/* overcome IE issue with one line code or file boxes which require h. scrolling */
+#dw * html .insitu-footnote pre.code, * html .insitu-footnote pre.file {
+  padding-bottom: 18px;
+}
+
+/* --------------------- Tables -------------------------------- */
+
+#dw table.inline td.okay {
+  background-color: #afa;
+  text-align: center;
+}
+
+#dw table.inline td.notokay {
+  background-color: #fcc;
+  text-align: center;
+}
+
+#dw table.inline {
+  background-color: #fff;
+  border-spacing: 0px;
+  border-collapse: collapse;
+}
+
+/* ------------- Page elements ----------------- */
+
+#dw span.user{
+/*  color: #ccc; */
+  color: #666;
+  font-size: 90%;
+}
+
+#dw li.minor {
+  color: #666;
+  font-style: italic;
+}
+
+/* embedded images */
+#dw img.media {
+  margin: 3px;
+}
+
+#dw img.medialeft {
+  border: 0;
+  float: left;
+  margin: 0 1.5em 0 0;
+}
+
+#dw img.mediaright {
+  border: 0;
+  float: right;
+  margin: 0 0 0 1.5em;
+}
+
+#dw img.mediacenter {
+  border: 0;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* smileys */
+#dw img.middle {
+  vertical-align: middle;
+}
+
+#dw acronym {
+  cursor: help;
+  border-bottom: 1px dotted #000;
+}
+
+/* general headline setup */
+#dw h1, #dw h2, #dw h3, #dw h4, #dw h5 {
+    color: Black;
+    background-color: transparent;
+    font-family: "Lucida Grande", Verdana, Lucida, Helvetica, Arial, sans-serif;
+    font-size: 100%;
+    font-weight: normal;
+    margin-left:    0;
+    margin-right:   0;
+    margin-top:     0;
+    margin-bottom:  1em;
+    padding-left:   0;
+    padding-right:  0;
+    padding-top:    0.5em;
+    padding-bottom: 0;
+    border-bottom: 1px solid #8cacbb;
+}
+
+/* special headlines */
+/*
+#dw h1 {font-size: 160%; margin-left: 0px; font-weight: bold;}
+#dw h2 {font-size: 150%; margin-left: 20px; font-weight: bold;}
+#dw h3 {font-size: 130%; margin-left: 40px; border-bottom: none; font-weight: bolder}
+#dw h4 {font-size: 115%; margin-left: 60px; border-bottom: none; font-weight: bolder}
+#dw h5 {font-size: 100%; margin-left: 80px; border-bottom: none; font-weight: bold;}
+*/
+
+#dw h1 {font-size: 160%; font-weight: bold;}
+#dw h2 {font-size: 140%; font-weight: bold; }
+#dw h3 {font-size: 130%; border-bottom: none; font-weight: bolder}
+#dw h4 {font-size: 115%; border-bottom: none; font-weight: bolder}
+#dw h5 {font-size: 100%; border-bottom: none; font-weight: bold;}
+
+/* indent different sections */
+/*
+#dw div.level1 {margin-left: 3px;}
+#dw div.level2 {margin-left: 23px;}
+#dw div.level3 {margin-left: 43px;}
+#dw div.level4 {margin-left: 63px;}
+#dw div.level5 {margin-left: 83px;}
+*/
+
+/* unordered lists */
+#dw ul {
+  line-height: 1.5em;
+  list-style-type: square;
+  margin: 0 0 0.5em 2em;
+  padding: 0;
+  color: #638c9c;
+  list-style-image: none;
+}
+
+/* ordered lists */
+#dw ol {
+  line-height: 1.5em;
+  margin: 0 0 0.5em 2em;
+  padding: 0;
+  color: #638c9c;
+  font-weight: bold;
+  list-style-image: none;
+}
+
+/* the list items overriding the ul/ol definition */
+#dw .li {
+  color: #000;
+  font-weight: normal;
+}
+
+#dw ol {list-style-type: decimal}
+#dw ol ol {list-style-type: upper-roman}
+#dw ol ol ol {list-style-type: lower-alpha}
+#dw ol ol ol ol {list-style-type: lower-greek}
+
+#dw li.open {
+  list-style-image: url(../lib/tpl/fsinfo/images/open.gif);
+    /*list-style-type: circle;*/
+}
+
+#dw li.closed {
+  list-style-image: url(../lib/tpl/fsinfo/images/closed.gif);
+    /*list-style-type: disc;*/
+}
+
+#dw blockquote {
+  border-left: 2px solid #8cacbb;
+  padding-left: 3px;
+  margin-left: 0;
+}
+
+/* code blocks by indention */
+#dw pre.pre {
+  font-size: 100%;
+  padding: 0.5em;
+  border: 1px dashed #8cacbb;
+  color: Black;
+  background-color: #f7f9fa;
+  overflow: auto;
+}
+
+/* code blocks by code tag */
+#dw pre.code {
+  font-size: 100%;
+  padding: 0.5em;
+  border: 1px dashed #8cacbb;
+  color: Black;
+  background-color: #f7f9fa;
+  overflow: auto;
+}
+
+/* inline code words */
+#dw code {
+  font-size: 80%;
+}
+
+/* code blocks by file tag */
+#dw pre.file {
+  font-size: 100%;
+  padding: 0.5em;
+  border: 1px dashed #8cacbb;
+  color: Black;
+  background-color: #dee7ec;
+  overflow: auto;
+}
+
+/* inline tables */
+
+#dw table.inline th {
+  padding: 3px;
+  border: 1px solid #8cacbb;
+  background-color: #dee7ec;
+  text-align: left;
+}
+
+#dw table.inline td {
+  padding: 3px;
+  border: 1px solid #8cacbb;
+}
+</style>
+<script type='text/javascript' src='../wp-content/themes/arras/js/superfish/hoverIntent.js'></script>
+<script type='text/javascript' src='../wp-content/themes/arras/js/superfish/superfish.js'></script>
+<script type='text/javascript' src='../wp-includes/js/comment-reply.min.js?ver=3.6'></script>
+<script type='text/javascript' src='../wp-content/themes/arras/js/jquery.validate.min.js'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../xmlrpc-rsd.php.html" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 3.6" />
+
+<script type="text/javascript"><!--
+var a2a_config=a2a_config||{},wpa2a={done:false,html_done:false,script_ready:false,script_load:function(){var a=document.createElement('script'),s=document.getElementsByTagName('script')[0];a.type='text/javascript';a.async=true;a.src='/page.js';s.parentNode.insertBefore(a,s);wpa2a.script_load=function(){};},script_onready:function(){if(a2a.type=='page'){wpa2a.script_ready=true;if(wpa2a.html_done)wpa2a.init();}},init:function(){for(var i=0,el,target,targets=wpa2a.targets,length=targets.length;i<length;i++){el=document.getElementById('wpa2a_'+(i+1));target=targets[i];a2a_config.linkname=target.title;a2a_config.linkurl=target.url;if(el)a2a.init('page',{target:el});wpa2a.done=true;}}};a2a_config.tracking_callback=['ready',wpa2a.script_onready];
+//--></script>
+<meta name="_awb_version" content="2.0.3" /><link rel="stylesheet" href="../wp-content/themes/arras/css/styles/default.css" type="text/css" media="screen,projection" /><link rel="stylesheet" href="../wp-content/themes/arras/css/layouts/2c-r-fixed.css" type="text/css" />
+<!-- Generated by Arras WP Theme -->
+<style type="text/css">
+	.posts-default li  { width: 205px; height: 225px; }
+	.posts-default img, .posts-default .entry-thumbnails-link { width: 195px; height: 110px; }
+	.posts-default .entry-meta { width: 195px; }
+	.posts-default .entry-thumbnails { width: 205px; height: 120px; }
+			.posts-quick .entry-thumbnails img { width: 115px; height: 115px; }
+		.posts-quick .entry-meta { width: 115px; }
+			.featured { height: 260px; }
+	.featured-article { width: 640px; height: 250px; }
+	.featured-article img { width: 640px; height: 250px; }
+	#controls { width: 610px; top: 110px; }
+	#controls .next { left: 610px; }
+	.featured-entry { height: 84px; top: -84px; }
+	.featured-slideshow-inner { height: 250px }
+		.featured-stories-summary  { margin-left: 51px; }
+	.single .post .entry-photo img, .single-post .entry-photo img  { width: 620px; height: 250px; }
+		.footer-sidebar  { width: 920px; }
+	</style>
+	<script type="text/javascript">
+	jQuery(document).ready(function($) {
+
+$('.multi-sidebar').tabs();
+
+$('.sf-menu').superfish({autoArrows: true, speed: 'fast', dropShadows: 'true'});
+
+$('#commentform').validate();
+
+
+});	</script>
+	<!--[if IE]>
+<style type="text/css">
+.addtoany_list a img{filter:alpha(opacity=70)}
+.addtoany_list a:hover img,.addtoany_list a.addtoany_share_save img{filter:alpha(opacity=100)}
+</style>
+<![endif]-->
+<link rel="stylesheet" href="../wp-content/themes/arras/user.css" type="text/css" media="screen,projection" /><!-- Google Analytics Tracking by Google Analyticator 6.4.5: http://www.videousermanuals.com/google-analyticator/ -->
+<script type="text/javascript">
+	var analyticsFileTypes = [''];
+	var analyticsEventTracking = 'enabled';
+</script>
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-169675-4']);
+        _gaq.push(['_addDevId', 'i9k95']); // Google Analyticator App ID with Google 
+        
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+</head>
+
+<body class="page page-id-0 page-parent page-template-default layout-2c-r-fixed no-js style-default">
+<script type="text/javascript">
+//<![CDATA[
+(function(){
+var c = document.body.className;
+c = c.replace(/no-js/, 'js');
+document.body.className = c;
+})();
+//]]>
+</script>
+
+<div id="top-menu" class="clearfix">
+	</div><!-- #top-menu -->
+
+<div id="header"><div align="center"><script type="text/javascript"><!--
+google_ad_client = "pub-7027070946238159";
+/* 728x90, Top Banner */
+google_ad_slot = "9335358437";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+	<div id="branding" class="clearfix">
+	<div class="logo">
+				<span class="blog-name"><a href="../index.html">World Music Central.org</a></span>
+		<img style="float:left; padding: 0 5px 0 0;" src="../wp-content/themes/wmc-magazeen/images/bull.png"/><span class="blog-description">Your Connection to World Music</span>
+			</div>
+	<div id="searchbar"><form method="get" class="searchform clearfix" action="http://worldmusiccentral.org/">
+ <input type="text" value="Search..." name="s" class="s" onfocus="this.value=''" />
+ <input type="submit" class="searchsubmit" value="Search" title="Search World Music Central.org" />
+</form>
+</div>
+	</div><!-- #branding -->
+</div><!-- #header -->
+
+<div id="nav">
+	<div id="nav-content" class="clearfix">
+	<div class="menu-main-container"><ul id="menu-main" class="sf-menu menu clearfix"><li id="menu-item-6394" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-6394"><a href="../index.html">Home</a></li>
+<li id="menu-item-6401" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6401"><a href="../about/index.html">About</a></li>
+<li id="menu-item-6454" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6454"><a href="#">World Music Resources</a>
+<ul class="sub-menu">
+	<li id="menu-item-6455" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6455"><a href="artist_index.php.html">Artists Database</a></li>
+	<li id="menu-item-6462" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6462"><a href="http://musicwikicentral.com/world_music_festivals">Festivals</a></li>
+	<li id="menu-item-6467" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6467"><a href="http://musicwikicentral.com/travel_guides">Travel Guides</a></li>
+	<li id="menu-item-6469" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6469"><a href="http://musicwikicentral.com/world_music_genres">Musical Genres</a></li>
+	<li id="menu-item-6468" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6468"><a href="http://musicwikicentral.com/musical_instruments">Musical Instruments</a></li>
+	<li id="menu-item-6475" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6475"><a href="http://musicwikicentral.com/showcases">Showcases</a></li>
+	<li id="menu-item-6470" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6470"><a href="http://musicwikicentral.com/world_music_venues">Venues</a></li>
+	<li id="menu-item-6472" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6472"><a href="http://musicwikicentral.com/record_companies">Record Companies</a></li>
+	<li id="menu-item-6466" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6466"><a href="http://musicwikicentral.com/booking_agents">Booking Agents</a></li>
+	<li id="menu-item-6474" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6474"><a href="http://musicwikicentral.com/world_music_press">World Music Press</a></li>
+	<li id="menu-item-6477" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6477"><a href="http://musicwikicentral.com/ethnomusicology">Ethnomusicology</a></li>
+	<li id="menu-item-6473" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6473"><a href="http://musicwikicentral.com/music_organizations">Music Organizations</a></li>
+</ul>
+</li>
+<li id="menu-item-6390" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6390"><a href="#">Topics</a>
+<ul class="sub-menu">
+	<li id="menu-item-6369" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6369"><a href="../category/archive/index.html">archive</a></li>
+	<li id="menu-item-6370" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6370"><a href="../category/articles/index.html">Articles</a></li>
+	<li id="menu-item-6371" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6371"><a href="../category/awards/index.html">Awards</a></li>
+	<li id="menu-item-6372" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6372"><a href="../category/book-reviews/index.html">Book Reviews</a></li>
+	<li id="menu-item-6373" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6373"><a href="../category/cd-reviews/index.html">CD Reviews</a></li>
+	<li id="menu-item-6374" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6374"><a href="../category/concert-reviews/index.html">Concert reviews</a></li>
+	<li id="menu-item-6375" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6375"><a href="../category/conferences/index.html">Conferences</a></li>
+	<li id="menu-item-6376" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6376"><a href="../category/editorials/index.html">Editorials</a></li>
+	<li id="menu-item-6377" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6377"><a href="../category/events/index.html">Events</a></li>
+	<li id="menu-item-6378" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6378"><a href="../category/film-reviews/index.html">Film Reviews</a></li>
+	<li id="menu-item-6379" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6379"><a href="../category/general-news/index.html">General News</a></li>
+	<li id="menu-item-6380" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6380"><a href="../category/interviews/index.html">Interviews</a></li>
+	<li id="menu-item-6381" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6381"><a href="../category/loop-collections/index.html">Loop Collections</a></li>
+	<li id="menu-item-6382" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6382"><a href="../category/new-books/index.html">New Books</a></li>
+	<li id="menu-item-6383" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6383"><a href="../category/new-cds/index.html">New CDs</a></li>
+	<li id="menu-item-6384" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6384"><a href="../category/new-films/index.html">New Films</a></li>
+	<li id="menu-item-6385" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6385"><a href="../category/new-releases/index.html">New Releases</a></li>
+	<li id="menu-item-6386" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6386"><a href="../category/obituaries/index.html">Obituaries</a></li>
+	<li id="menu-item-6387" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6387"><a href="../category/tour-announcements/index.html">Tour Announcements</a></li>
+	<li id="menu-item-6388" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6388"><a href="../category/tradeshows/index.html">Tradeshows</a></li>
+	<li id="menu-item-6389" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6389"><a href="../category/uncategorized/index.html">Uncategorized</a></li>
+</ul>
+</li>
+<li id="menu-item-6392" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6392"><a href="../events/index.html">Calendar</a></li>
+<li id="menu-item-6400" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6400"><a href="../store/index.html">Store</a></li>
+<li id="menu-item-6724" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6724"><a href="../contact-us/index.html">Contact Us</a></li>
+</ul></div>		<ul class="quick-nav clearfix">
+					<li><a id="rss" title="World Music Central.org RSS Feed" href="../feed/index.html">RSS Feed</a></li>
+				
+						
+							<li><a id="facebook" title="World Music Central.org Facebook" href="http://www.facebook.com/pages/World-Music-Central/149036898455901" target="_blank">Facebook</a></li>
+				
+			</ul>
+	</div><!-- #nav-content -->
+</div><!-- #nav -->
+
+<div id="wrapper">
+	
+	  
+	<div id="main" class="clearfix">
+    <div id="container" class="clearfix">
+  <head>
+    <title>Jorma Kaukonen - Artist Page</title>
+  </head>
+
+  <body> 
+  
+  <div id="artistpage">
+  
+  <div style="float:right;">
+  
+  <script type="text/javascript"><!--
+google_ad_client = "pub-7027070946238159";
+/* 160x600, created 12/6/08 */
+google_ad_slot = "6830638066";
+google_ad_width = 160;
+google_ad_height = 600;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+
+</div>
+  
+  
+  
+  	<table>
+
+  
+<tr><td align="center" colspan="2" width="100%">
+<font size=+1><b>Jorma Kaukonen</b></font> 
+<hr></td></tr>
+
+<tr><td align="center" colspan="2" width="100%">
+<a href="#Booking">Booking Agency</a>&nbsp;&nbsp;&middot;&nbsp;&nbsp;<a href="#Genres">Similar Music</a>
+<hr></td></tr>
+    <tr>
+      <td colspan="2" width="100%">
+		<a name="Biography"><b>Biography</b></a>:
+	  </td>
+    </tr>
+    <tr>
+      <td colspan="2" width="100%">&nbsp;</td>
+    </tr>
+
+    <tr>
+      <td width="3%"></td>
+
+      <td width="97%">
+	  
+	<p align=center><img border="0" align="center"  src="../staticpages/images/jorma-kaukonen.jpg"></p>Born in Washington, D.C., Jorma grew up overseas (his father was a member of the U.S. foreign service). He returned stateside at age 16 and immersed himself in the old-time country of the Carter Family and Roy Acuff. The blues soon grabbed young Jorma's ear; the Chess label LPs of Chicago icons Muddy Waters, Howlin' Wolf and Sonny Boy Williamson mesmerized him. "I always tell people the music really chose me," he says. "The first time I heard that, I just knew that that's what I wanted to do." He first teamed up with Jack Casady while still in high school around 1957 to start a rock band together. <p>
+
+In 1961, Jorma transferred to the University of Santa Clara in California, where he played folk clubs and passed along his guitar knowledge. "<i>I started teaching when I didn't have much to teach," he says. "I always really enjoyed it. And I still really enjoy it. It's really nice for me to be able to give a little bit back of all the wonderful things that were so freely given me</i>."<p>
+
+"<i>When I took off for the blues, it was Rev. Gary Davis</i>," says Jorma, who first encountered Davis' amazing finger-picking guitar technique in 1959 while attending Antioch College on a work-study program out of New York. "<i>A guy who was in the house with me, his name was Ian Buchanan, a player in New York, had been studying with the Reverend," says Jorma. "And he was a very accomplished player at the time. He probably was so irritated by my thrashing next door to his room that he took it upon himself to teach me the guitar, which he really did. His muse was the Rev., so that's what he turned me on to, and I just fell in love with his stuff. And I'm in love with it to this day</i>." During the early '70s with Hot Tuna, Jorma reintroduced several of Davis' seminal songs to a new generation of appreciative fans. <p>
+
+Jorma joined a certain fledgling rock band in 1965. "Paul Kantner had been living in San Jose, where I was living," he says. "We were friends, and he got together with Marty Balin, and they started Jefferson Airplane. I had just graduated from college, and they wanted a lead guitar player. I guess they didn't have one. They asked me, and I was kind of reluctant, because I was really into the blues: '<i>I don't know if I want to do this or not.' But I did get seduced by the music, and wound up having a lot of fun for a couple of years</i>." <p>
+
+It was Jorma who named the band. "<i>I had this friend up in Berkeley, Steve Talbot, and he came up with funny names for people</i>," explains Jorma. "<i>His name for me was Blind Thomas Jefferson Airplane (for blues pioneer Blind Lemon Jefferson). When the guys were looking for band names and nobody could come up with something, I remember saying, 'You want a silly band name? I got a silly band name for you!</i>'"<p>
+
+Installing Grace Slick as their lead singer, Jefferson Airplane rocketed to superstardom in 1967 on the initial strength of their hits "Somebody To Love" and "White Rabbit," making them a cornerstone of San Francisco's burgeoning rock scene. Jorma's ground-breaking acoustic piece "Embryonic Journey" was a highlight of Surrealistic Pillow, the Airplane's 1967 breakthrough album. The band was inducted into the Rock and Roll Hall of Fame in 1995. 
+<p>
+
+In 1970, Kaukonen and Casady found time between Airplane gigs to put together another uniquely named aggregation, the blues-influenced Hot Tuna. "<i>The first Hot Tuna record was all stuff that I had been playing myself for years</i>," says Jorma. "<i>We were very fortunate--we were able to open some shows for ourselves as Hot Tuna with Jefferson Airplane. Paul let us play some insert songs. As the Airplane became less fun for whatever reason, Hot Tuna became more fun. Finally we just couldn't do both, and we had to make a decision. I took Hot Tuna</i>."  
+<p>
+What began as a musical "bluesman's holiday" from Jorma and Jack's day job with the Jefferson Airplane, has now endured for 30 years, and a prodigious recording longevity of over 27 albums. There have been many transformations throughout. From the addition of electric violin player Papa John Creech to the lineup for First Pull up, Then Pull Down and Burgers, to the deafening volume featured on albums such as America's Choice and Hopkorv, jokingly referred to these days by Jack and Jorma as "Hot Tuna: The Metal Years." <p>
+
+Recently, Kaukonen and Casady have returned to their acoustic past and are currently touring as a duo. Featuring Jorma's brilliant finger-picked fretwork and songwriting and Jack's expert melodic bass work, these shows are an opportunity to witness two lifelong friends coming together once again to make extraordinary music.<p>
+
+Most recently, Jorma and Jack have performed music scored by Mark Isham for the upcoming Disney distributed film Moonlight Mile. Written, directed and produced by Brad Silberling, the film stars Susan Sarandon, Dustin Hoffman, Holly Hunter, Jake Gyllenhaal and newcomer Ellen Pompeo. Set in the 70s, the film tells the story of two parents who take in the fiancee of their recently murdered daughter. Jorma and Jack have brought their unique artistry to the project and have created what Kaukonen calls "a sonic landscape that enhances the mood of the film." Comprising about 20 minutes of the score, Jack and Jorma performed 6 cues/vignettes as well as the film's closing piece to be played as the credits scroll. 
+<p>
+His album <b>Blue Country Heart</b>, his debut recording for Columbia Records, eExplores a unique chapter in American music history.  Jorma interprets an intriguing collection of rural blues and country-flavored songs from the 1920s and 1930s. Featuring songs by tunesmiths such as Jimmie Rodgers, the Delmore Brothers, Slim Smith, Washington Phillips, Cliff Carlisle and Jimmy "The Singing Governor" Davis, this album reveals a new turn in Kaukonen's ever evolving career. Joining Jorma in the studio are Sam Bush on mandolin, Jerry Douglas on dobro and Byron House on upright bass. Special guest B?la Fleck plays banjo on two tracks.  
+
+Jorma and wife/manager Vanessa Lillian operate a successful Fur Peace Ranch Guitar Camp. Situated on 119 acres in the Appalachian foothills, the site includes a 32 track recording studio, concert hall, a music library and a gourmet kitchen and dining hall. With weekend workshops scheduled from February to November, the camp presents a chance for students of all ages and abilities to learn directly from the musicians who first influenced and inspired them as listeners and players. Gathering such outstanding artists and teachers in such a pristine and relaxed country setting, a place which remains concurrently rustic and comfortable, has allowed Jorma to create what he calls "<i>a positive place to better explore the potential of your favorite instrument</i>."
+
+In addition to Jorma's own workshops, a typical weekend session might include Peter Rowan, Guy Clark, G.E. Smith or Chris Smither instructing different styles of blues guitar, teaching guitar repair, or Jorma's longtime musical partner (and fellow Jefferson Airplane/Hot Tuna founder) Jack Casady explaining the intricacies of bass guitar. "We're very fortunate," says Jorma. "<i>We really have great guest instructors, and everybody's been having a really great time</i>."<p>
+[Biography courtesy of Jorma Kaukonen].<p>
+
+Concert Review by Rob Turner<p>Jorma Kaukonen &amp; Jon Shain at The Arts Center in Carrboro, North Carolina, February 19, 2000.<br>
+		<br>
+		Jorma Kaukonen's return to the &quot;triangle&quot; area (Raleigh, Durham, Chapel 
+		Hill) was part of a big weekend on Franklin Street just outside of 
+		Chapel Hill. Literally two storefronts away the Smashing Pumpkins were 
+		slated to perform a rare club date at Cat's Cradle. Unfortunately, two 
+		of the original members of the band were unable to perform that night, 
+		so the cogitative Billy Corgan performed most of the show solo. Word has 
+		it he pulled it off just fine, by the way, some of his most hardcore 
+		fans were actually delighted; while a handful took advantage of the 
+		band's offer to redeem admission to any displeased patrons.<br>
+		<br>
+		There was no refund seeking at The Arts Center on this night. These two 
+		artists were planning on performing solo all along. Jorma Kaukonen, 
+		veteran of Jefferson Airplane, Hot Tuna, and so much more, was the 
+		headline. His appearance was met with much excitement, as it was his 
+		first area gig in an intimate setting since an appearance at Under The 
+		Street in Durham seven years prior (almost to the date, 2/13/93). Jon 
+		Shain, who opened for Hot Tuna as well as Kaukarano (Jorma's duo gig 
+		with Michael Falzarano) a number of times as a member of Flyin' Mice, 
+		was in a familiar pre-Kaukonen slot. (Jorma even sat in with the 
+		now-defunct Mice a couple of times.) The combination of the return of a 
+		legend, and one of the triangle's finest<br>
+		singer/songwriters, made the show an easy sellout.</font>
+		</p>
+		<p><font face="Century Gothic" size="2"><a href="#Jon Shain's set">Jon 
+		Shain's set</a></font> </p>
+		<p><font face="Century Gothic" size="2"><a href="#Jorma Kaukonen's set">
+		Jorma Kaukonen's set</a><br>
+		<br>
+		<a name="Jon Shain's set">Jon Shain's set</a>:<br>
+		The Letter<br>
+		Loan Me A Year<br>
+		Child Of Tomorrow's Summers<br>
+		Sapphire Sky<br>
+		New Year's Eve<br>
+		Porcupine Rag<br>
+		Armchair Warrior<br>
+		One Way Gal<br>
+		Acoustic Solo<br>
+		Perambulatory Blues<br>
+		Step It Up And Go<br>
+		------------------------------------<br>
+		<br>
+		Jon Shain was in the middle of a hell of a week. He and his wife had 
+		just closed on a new house. How many people can say that they were 
+		opening for Jorma Kaukonen<br>
+		Saturday night, and then picking up a truck rental Sunday morning to 
+		spend the entire day moving?<br>
+		<br>
+		Shain opened the set with a version of his updated take on Sonny Terry 
+		and Brownie McGee's The Letter. While his performance on acoustic guitar 
+		was a little shaky behind the initial vocal portion, the first section 
+		of lead guitar was so impressive it elicited applause from the crowd. 
+		The next six songs were from Shain's 1999 solo release &quot;Brand New 
+		Lifetime&quot;. His finger picking on Loan Me A Year was a bit more subdued 
+		than usual, perhaps in deference to Mr. Kaukonen. He chose spice up this 
+		version with a lead guitar not usually heard on Loan Me A Year, and an 
+		enlivened lead vocal. Jon was in strong vocal form the entire set. This<br>
+		paid off particularly well as he offered note-perfect versions of three 
+		of his stronger recent originals, which also were well received by his 
+		hometown crowd. Child Of Tomorrow's Summers featured the presumably 
+		unintentional nod to Corgan's worries at Cat's Cradle, with the lyric 
+		&quot;frightening nightmare's in the cradle.&quot; This was a particularly 
+		impassioned rendition, as Shain engaged himself in the lyrics of the 
+		song, especially as he sang, &quot;at harvest time we'll have to scour the 
+		field, for the seeds we've never sown.&quot; He also played a note-perfect, 
+		gorgeous solo<br>
+		in this number.<br>
+		<br>
+		One of Shain's favorite one-two punches lately has been the old-timey 
+		Porcupine Rag, and the Stephen Stills-flavored muscular acoustics of 
+		Armchair Warrior. These two shined particularly bright tonight, and 
+		grunts of appreciation for Shain's luscious guitar picking emitted from 
+		finger watchers sitting up near the stage.<br>
+		<br>
+		Shain then pointed out that another one of his heroes was in The Arts 
+		Center that night, the esteemed North Carolina bluesman Lightnin' Wells. 
+		Shain then performed One Way Gal, which he introduced as written by a 
+		Piedmont<br>
+		blues musician from the twenties, William Moore; although Shain stole it 
+		off of one of Wells' albums. Shain also chose this moment to acknowledge 
+		the many guitar students of his that were in attendance, to which the 
+		students<br>
+		shouted out their approval. There were many of Shain's most fervent fans 
+		in the house also, and he treated them to a rare solo reading of a 
+		former Flyin' Mice showstopper, the poorly titled instrumental epic, 
+		Acoustic Solo. (I always thought the title didn't do the adventurous 
+		song<br>
+		justice) Later, one taper who follows Shain's career closely suggested 
+		that it may have been the first live version since Flyin' Mice 
+		disbanded.&nbsp;</font> </p>
+		<p><font face="Century Gothic" size="2">Perambulatory Blues, a long time 
+		staple of many Shain projects, found him offering a fiery lead at 
+		breakneck pace, definitely his strongest guitar work of the set. Jon 
+		then engaged the crowd in a call and response on the<br>
+		set-closing Step It Up And Go. As he departed the stage, most of the 
+		audience exalted him with a standing ovation.<br>
+		<br>
+		I was taken by the respect Jon showed Jorma by shaping his set to 
+		complement Jorma's performance rather than compete with it. The 
+		Americana feel of some of his songs, the guttural singing synchronized 
+		with an entire<br>
+		lead he took on Armchair Warrior, and of course the call and response 
+		with the crowd on Step It Up And Go, all served to appropriately whet 
+		the audience's musical palette for the Jorma set that followed. Shain<br>
+		displayed an awareness of the fact that there is no need to finger pick 
+		too many tunes when one of the greatest of all time is on deck.<br>
+		<br>
+		<a name="Jorma Kaukonen's set">Jorma Kaukonen's set</a>:<br>
+		Harvey Colman's Clapton Story Intro<br>
+		Trouble In Mind<br>
+		Hesitation Blues<br>
+		Walkin' Blues<br>
+		How Long Blues<br>
+		Death Don't Have No Mercy<br>
+		Do Not Go Gentle<br>
+		I See The Light&gt;<br>
+		Sunny Day Strut<br>
+		True Religion<br>
+		Nobody Knows You When You're Down and Out<br>
+		Living In The Moment<br>
+		Good Shepherd<br>
+		99Year Blues<br>
+		I Am The Light Of This World<br>
+		Ice Age<br>
+		Genesis<br>
+		Follow The Drinking Gourd<br>
+		Uncle Sam Blues<br>
+		Happy Turtle Song<br>
+		Mann's Fate<br>
+		San Francisco Bay Blues<br>
+		Water Song<br>
+		------------------------------------<br>
+		Police Dog Blues<br>
+		------------------------------------<br>
+		Keep On Truckin'<br>
+		------------------------------------<br>
+		<br>
+		One thing that highlights how Jorma has improved, as a performer in the 
+		years that I have been fortunate enough to enjoy him is his vocal 
+		delivery. As far back as I can remember, Jorma's guitar prowess has 
+		always been<br>
+		evident. However, when I first started seeing Jorma in the eighties, his 
+		vocal approach, while always resonant with soul, was sometimes was 
+		lacking in comprehensibility. While he was still a delight to see back 
+		then, one really had to come to the show armed with prior knowledge of 
+		the lyrics of his repertoire to garner a full appreciation. While he 
+		still has his own distinctive warm growl delivered with robust soul, he 
+		now also sings with consistent clarity. And his guitar work?well?. 
+		ridiculous?..off the hook?.at times inconceivable?.Jorma is one of those 
+		artists that render<br>
+		words worthless and weak, but that's all we got so here we go.<br>
+		<br>
+		Jorma's tour manager and close friend, the enigmatic Harvey Colman, 
+		regaled the crowd with a story while introducing the man some call, &quot;The 
+		Captain.&quot; &quot;Eric Clapton was doing an interview one time and somebody 
+		asked<br>
+		him, 'How does it feel to be the greatest guitarist in the world?' And 
+		Eric said, &quot;I don't know, ask Jorma Kaukonen!&quot; After showing Harvey some 
+		appreciation for going the extra mile with the introduction, Jorma slid 
+		into a tune believed by many to be written by B lind Connie Williams, 
+		Trouble In Mind. Jorma eased into the set with pretty straight readings 
+		of this and Hesitation Blues. That is<br>
+		to say, straight by lofty Kaukonen standards. He did lend some extra 
+		muscle to one portion of Hesitation. Robert Johnson's Walkin' Blues 
+		seemed to energize Jorma, as one slightly botched section gave way to 
+		muscular low note improvisations immediately. Jorma threw down some<br>
+		stunning instrumental work, holding notes and series' of notes to build 
+		tension, and slamming out of them only to return to more liberal 
+		improvisation and eventually launch into other note holding sessions. 
+		Some of the riffs that he tossed out during Walkin' were nothing short 
+		of jaw dropping, and the show was in gear.<br>
+		<br>
+		Responding to a request for In The Kingdom, Jorma shared a prayer that 
+		he had heard on NPR recently, &quot;I pray for the day I can be the man my 
+		dog thinks I am.&quot; He then laid a spectacular version of How Long Blues 
+		on us, which featured some stunning sinewy guitar lines. His vocal was 
+		outstanding as well, especially his delivery of, &quot;I thought I<br>
+		heard a whistle, mama I think I see a train. Deep in my heart there is a 
+		achin' pain.&quot;<br>
+		<br>
+		I thought Death Don't Have No Mercy was going to be the rarely performed 
+		Another Man Done Gone at first, until he injected an acrobatic low note 
+		guitar roll into the introduction signaling that it was indeed Death. 
+		Again, he exhibited many stunning low note guitar flurries. One of the 
+		many head-scratching things about Jorma is the amount<br>
+		of notes he can get out with very little plucking from his right hand. 
+		That left hand of his is often solely responsible for many, many strong 
+		notes, while his right hand patiently waits above the strings. His 
+		guitar playing in the verse section of Death seemed to be entirely 
+		improvised, and<br>
+		even the fastest riffs didn't throw off his timing one bit. Jorma's 
+		instrumental passages were pure ear candy, with high notes here, some 
+		lusciously repeated chordal work there; it was truly an amazing reading.<br>
+		<br>
+		I enjoy Do Not Go Gentle, because it is a song that particularly allows 
+		Jorma to take it wherever he pleases. Tonight, it wandered into some 
+		sweetly ethereal spaces. The opening chords of True Religion, sparked 
+		some hoots out of the attentive audience. The reading was slightly<br>
+		slower than I am used to, which seemed to put more emphasis on the 
+		prescient lyric of this Tuna classic. Just the way he inserts a gentle 
+		smidge of his growl into the verse ending &quot;Hal-ay-lu's&quot; (phonetic) was 
+		chill-inducing.<br>
+		Nobody Knows You lends itself to Jorma's style of vocal and phrasing 
+		beautifully. An example of one of my favorite things about Jorma was 
+		when he crooned the &quot;Nobody Knows You When&quot; and then with &quot;Your&quot; he 
+		trailed to a<br>
+		growl and let his guitar play the &quot;Down and Out,&quot; part which flowed 
+		seamlessly into an instrumental section. As Harvey would ask, &quot;does it 
+		get any better than this?.really?.does it?&quot;<br>
+		<br>
+		Living In The Moment, is a new song that will soon have words, &quot;if I'm 
+		lucky,&quot; Jorma says. It is a contemplative piece, which tonight I believe 
+		had a new portion that wasn't included in the version I had seen in 
+		Atlanta just two days back. It's always nice to hear Jorma working on 
+		new<br>
+		material. This is especially true with a piece like this one, where 
+		there is ample space for improvisation. I'm sure Jorma will take 
+		advantage of this as he becomes more familiar it. One fan yelled out, 
+		&quot;don't need no words Jorma!&quot; To which the eternally quick-witted 
+		Kaukonen responded,<br>
+		&quot;That's not what my wife says!&quot; Jorma dipped back to his psychedelic 
+		days with a heart-felt rendering of Good Shepherd, which was first made 
+		popular by the Jefferson Airplane. His vocals were spiced with quiet<br>
+		embellishments. He effortlessly alternated delicate guitar parts with 
+		resonant chords where his left hand grabbed the guitar with such might I 
+		though he was gonna throw the thing. Jorma also displayed some energetic 
+		rhythm guitar before and during the familiar descending patterns that 
+		return the song to its final lyric.<br>
+		<br>
+		99 Year Blues has become something of a &quot;hit&quot; for Kaukonen<br>
+		lately, as the crowd responded to the opening notes, and the end of the 
+		first verse for that matter, with fervent applause (as they did in 
+		Atlanta). Jorma appeared more than happy to play 99 Year Blues as he 
+		fired off some dizzying guitar lines, and was jubilantly toying with the 
+		phrasing. Rev. Gary Davis' I Am The Light Of This World, provided 
+		further evidence of Jorma's ability to easily work his left hand across 
+		the fret board like a contortionist. The crowd seemed hypnotized by a 
+		spectacular reading of his own spooky composition, Ice Age. Jorma took 
+		full advantage of this piece on the final instrumental portion, which 
+		found him to twisting the song into new directions before he 
+		power-strummed it to its conclusion.<br>
+		<br>
+		A woman squealed with delight when Jorma announced that he was going to 
+		perform Genesis. Jorma thanked the exuberant fan by saying, &quot;bless you.&quot; 
+		Widespread Panic covers this song occasionally, and in case some of 
+		their younger fans don't know, it i a Kaukonen-penned Hot Tuna song. His 
+		heart-wrenching lead vocal was mesmerizing as Jorma delivered a 
+		memorable version of this wonderful song. After its completion, Jorma 
+		got ta' talkin' about surreal moments, and among the ones he shared was 
+		a recent day that he had heard his instrumental Water Song in an Ohio 
+		airport. After a couple more stories, he offered an extended version of 
+		his instrumental, Follow The Drinking Gourd in lieu of a requested White 
+		Rabbit.<br>
+		<br>
+		While all of Jorma's material takes on a different feel in a solo 
+		setting, this version of Uncle Sam Blues departed radically from any 
+		I've ever heard. His choices of where to accent, lyrically and 
+		instrumentally, were strikingly adventurous. This made for an 
+		interesting listen, as did the Jorma chestnut that followed. A friend of 
+		Jorma's had asked him to perform Happy Turtle Song, and Jorma obliged, 
+		introducing it as &quot;A little thing in C.&quot; It was a quick lil' nug, but 
+		I'll take it. Hot on its heels was a version of Mann's Fate that was 
+		nothing short of stunning. There was one point where he was repeating 
+		two separate guitar lines in unison; Jorma at his stunt acoustic guitar 
+		best!<br>
+		<br>
+		I've always preferred Jorma's approach to Jesse Fuller's San Francisco 
+		Bay Blues to anyone else's, and tonight's version did not disappoint. He 
+		twisted the song beautifully, stretching out some words, and galloping 
+		through others. His fingers skipped across the guitar as he offered an 
+		unthinkable array of rhythms, repeated notes, and sick licks. The room 
+		seemed in collective awe as it was beyond silent until a rousing ovation 
+		greeted its conclusion.<br>
+		<br>
+		Jorma's tantalizing reading of Water Song ended the set. The crowd 
+		exploded with a loud standing ovation that did not let up until he 
+		returned to tune up for a solid version of &quot;Police Dog Blues.&quot; After he 
+		attempted to leave again, the crowd continued to roar their approval. 
+		The venue turned on the house music, but that only caused the crowd to 
+		increase its cheering. As the thunderous applause drowned out the house 
+		music, Jorma re-emerged to leave us with a animated version of Keep On 
+		Truckin<br>
+		<br>
+		Click <a href="http://www.hottuna.com/tour.htm">
+		http://www.hottuna.com/tour.htm</a> for Kaukonen and other Hot Tuna 
+		related tour dates.
+<p><b>Official Web Site:</b> <a href="http://www.jormakaukonen.com">http://www.jormakaukonen.com</a> </p></td>
+<tr><td align="center" colspan="2" width="100%">
+
+<hr></td></tr>
+  	<tr>
+  	  <td colspan="2" width="100%">
+		<a name="Booking"><b>Booking</b></a>:
+	  </td>
+    </tr>
+    <tr>
+      <td colspan="2" width="100%">&nbsp;</td>
+    </tr>
+
+    <tr>
+      <td width="3%"></td>
+
+      <td width="97%">
+
+ 	The Agency Group<br>
+1775 Broadway <br>
+Suite 430<br>
+NYC., NY 10019<br>
+212-581-3100 <br>
+Fax: 212-581-0015<br>
+Agent: Steve Martin<br>
+Assistant: Phil Jacobs</td>
+<tr><td align="center" colspan="2" width="100%">
+
+<hr></td></tr>
+  	<tr>
+  	  <td colspan="2" width="100%">
+		<a name="Genres"><b>Similar Music</b></a>:
+	  </td>
+    </tr>
+    <tr>
+      <td colspan="2" width="100%">&nbsp;</td>
+    </tr>
+
+    <tr>
+      <td width="3%"></td>
+
+      <td width="97%">
+
+	<a href="instrument_index-instrument=Guitar.php.html">Guitar</a></td>
+<tr><td align="center" colspan="2" width="100%">
+
+<hr></td></tr>
+	</table>
+	</div>
+
+	</div><!-- #main -->
+	
+	    
+    <div id="footer">
+		<div class="footer-sidebar-container clearfix">
+							<ul id="footer-sidebar-1" class="footer-sidebar clearfix xoxo">
+										<li></li>
+									</ul>
+					</div>
+		
+		<div class="footer-message">
+                <p class="floatright">WordPress Installation and Support by <a class="arras" href="http://digiblink.eu/" title="Custom WordPress development, design and backup services."><strong>digiBlink</strong></a></p>
+                <p>Copyright World Music Central.org. All Rights Reserved.</p>                </div><!-- .footer-message -->
+		
+    </div>
+</div><!-- #wrapper -->
+
+<script type="text/javascript"><!--
+wpa2a.targets=[];
+wpa2a.html_done=true;if(wpa2a.script_ready&&!wpa2a.done)wpa2a.init();wpa2a.script_load();
+//--></script>
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+
+	
+});
+</script>
+<script type='text/javascript' src='../wp-includes/js/jquery/ui/jquery.ui.core.min.js?ver=1.10.3'></script>
+<script type='text/javascript' src='../wp-includes/js/jquery/ui/jquery.ui.widget.min.js?ver=1.10.3'></script>
+<script type='text/javascript' src='../wp-includes/js/jquery/ui/jquery.ui.tabs.min.js?ver=1.10.3'></script>
+</body>
+</html>
+   
+
+<!-- Localized -->

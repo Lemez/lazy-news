@@ -1,0 +1,1417 @@
+
+<style type="text/css">
+/* --- reset some elements --- */
+
+#dw ul,ol { list-style:none }
+
+#dw ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,p,blockquote,fieldset,input { margin:0; padding:0 }
+
+/* --- Basic Stylesheet for DokuWiki content --- */
+
+#dw h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+#dw h1 a {
+  color: black;
+}
+
+/* ---------- table of contents ------------------- */
+
+#dw div.toc {
+  margin-left: 2em;
+  margin-top: 1.2em;
+  margin-bottom: 0;
+  float:right;
+  width: 200px;
+  font-size: 80%;
+  padding-top:5px;
+}
+
+#dw div.tocheader {
+  padding: 3px;
+  border: 1px solid #8cacbb;
+  background-color: #dee7ec;
+  text-align: left;
+  font-weight:bold;
+  margin-bottom: 2px;
+}
+
+#dw div.tocheader img {
+  width:0.8em;
+  height:0.8em;
+  margin-top:0.3em;
+  margin-right:3px;
+  float:right;
+  cursor: pointer;
+}
+
+#dw #toc__inside {
+  border: 1px solid #8cacbb;
+  background-color: #fff;
+  text-align: left;
+  padding-top: 0.5em;
+  padding-bottom: 0.7em;
+}
+
+#dw ul.toc {
+  list-style-type: none;
+  list-style-image: none;
+  line-height: 1.2em;
+  margin: 0;
+  padding: 0;
+  padding-left: 1em;
+}
+
+#dw ul.toc li {
+  background: transparent url(../lib/tpl/fsinfo/images/tocdot2.gif) 0 0.6em no-repeat;
+  padding-left:0.4em;
+}
+
+#dw ul.toc li.clear {
+  background-image: none;
+  padding-left:0.4em;
+}
+
+#dw a.toc {
+  color: #436976;
+  text-decoration:none;
+}
+
+#dw a.toc:hover {
+  color: #000;
+  text-decoration:underline;
+}
+
+/* --------------------- footnotes -------------------------------- */
+
+#dw div.footnotes{
+  clear:both;
+  border-top: 1px solid #8cacbb;
+  padding-left: 1em;
+  margin-top: 1em;
+}
+
+#dw div.fn{
+  font-size:90%;
+}
+
+#dw a.fn_top{
+  vertical-align:super;
+  font-size:80%;
+}
+
+#dw a.fn_bot{
+  vertical-align:super;
+  font-size:80%;
+  font-weight:bold;
+}
+
+/* insitu-footnotes */
+#dw div.insitu-footnote {
+  font-size: 80%;
+  line-height: 1.2em;
+  border: 1px solid #8cacbb;
+  background: #eef3f8;
+  text-align: left;
+  padding: 4px;
+  max-width: 40%;    /* IE's width is handled in javascript */
+}
+
+/* overcome IE issue with one line code or file boxes which require h. scrolling */
+#dw * html .insitu-footnote pre.code, * html .insitu-footnote pre.file {
+  padding-bottom: 18px;
+}
+
+/* --------------------- Tables -------------------------------- */
+
+#dw table.inline td.okay {
+  background-color: #afa;
+  text-align: center;
+}
+
+#dw table.inline td.notokay {
+  background-color: #fcc;
+  text-align: center;
+}
+
+#dw table.inline {
+  background-color: #fff;
+  border-spacing: 0px;
+  border-collapse: collapse;
+}
+
+/* ------------- Page elements ----------------- */
+
+#dw span.user{
+/*  color: #ccc; */
+  color: #666;
+  font-size: 90%;
+}
+
+#dw li.minor {
+  color: #666;
+  font-style: italic;
+}
+
+/* embedded images */
+#dw img.media {
+  margin: 3px;
+}
+
+#dw img.medialeft {
+  border: 0;
+  float: left;
+  margin: 0 1.5em 0 0;
+}
+
+#dw img.mediaright {
+  border: 0;
+  float: right;
+  margin: 0 0 0 1.5em;
+}
+
+#dw img.mediacenter {
+  border: 0;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* smileys */
+#dw img.middle {
+  vertical-align: middle;
+}
+
+#dw acronym {
+  cursor: help;
+  border-bottom: 1px dotted #000;
+}
+
+/* general headline setup */
+#dw h1, #dw h2, #dw h3, #dw h4, #dw h5 {
+    color: Black;
+    background-color: transparent;
+    font-family: "Lucida Grande", Verdana, Lucida, Helvetica, Arial, sans-serif;
+    font-size: 100%;
+    font-weight: normal;
+    margin-left:    0;
+    margin-right:   0;
+    margin-top:     0;
+    margin-bottom:  1em;
+    padding-left:   0;
+    padding-right:  0;
+    padding-top:    0.5em;
+    padding-bottom: 0;
+    border-bottom: 1px solid #8cacbb;
+}
+
+/* special headlines */
+/*
+#dw h1 {font-size: 160%; margin-left: 0px; font-weight: bold;}
+#dw h2 {font-size: 150%; margin-left: 20px; font-weight: bold;}
+#dw h3 {font-size: 130%; margin-left: 40px; border-bottom: none; font-weight: bolder}
+#dw h4 {font-size: 115%; margin-left: 60px; border-bottom: none; font-weight: bolder}
+#dw h5 {font-size: 100%; margin-left: 80px; border-bottom: none; font-weight: bold;}
+*/
+
+#dw h1 {font-size: 160%; font-weight: bold;}
+#dw h2 {font-size: 140%; font-weight: bold; }
+#dw h3 {font-size: 130%; border-bottom: none; font-weight: bolder}
+#dw h4 {font-size: 115%; border-bottom: none; font-weight: bolder}
+#dw h5 {font-size: 100%; border-bottom: none; font-weight: bold;}
+
+/* indent different sections */
+/*
+#dw div.level1 {margin-left: 3px;}
+#dw div.level2 {margin-left: 23px;}
+#dw div.level3 {margin-left: 43px;}
+#dw div.level4 {margin-left: 63px;}
+#dw div.level5 {margin-left: 83px;}
+*/
+
+/* unordered lists */
+#dw ul {
+  line-height: 1.5em;
+  list-style-type: square;
+  margin: 0 0 0.5em 2em;
+  padding: 0;
+  color: #638c9c;
+  list-style-image: none;
+}
+
+/* ordered lists */
+#dw ol {
+  line-height: 1.5em;
+  margin: 0 0 0.5em 2em;
+  padding: 0;
+  color: #638c9c;
+  font-weight: bold;
+  list-style-image: none;
+}
+
+/* the list items overriding the ul/ol definition */
+#dw .li {
+  color: #000;
+  font-weight: normal;
+}
+
+#dw ol {list-style-type: decimal}
+#dw ol ol {list-style-type: upper-roman}
+#dw ol ol ol {list-style-type: lower-alpha}
+#dw ol ol ol ol {list-style-type: lower-greek}
+
+#dw li.open {
+  list-style-image: url(../lib/tpl/fsinfo/images/open.gif);
+    /*list-style-type: circle;*/
+}
+
+#dw li.closed {
+  list-style-image: url(../lib/tpl/fsinfo/images/closed.gif);
+    /*list-style-type: disc;*/
+}
+
+#dw blockquote {
+  border-left: 2px solid #8cacbb;
+  padding-left: 3px;
+  margin-left: 0;
+}
+
+/* code blocks by indention */
+#dw pre.pre {
+  font-size: 100%;
+  padding: 0.5em;
+  border: 1px dashed #8cacbb;
+  color: Black;
+  background-color: #f7f9fa;
+  overflow: auto;
+}
+
+/* code blocks by code tag */
+#dw pre.code {
+  font-size: 100%;
+  padding: 0.5em;
+  border: 1px dashed #8cacbb;
+  color: Black;
+  background-color: #f7f9fa;
+  overflow: auto;
+}
+
+/* inline code words */
+#dw code {
+  font-size: 80%;
+}
+
+/* code blocks by file tag */
+#dw pre.file {
+  font-size: 100%;
+  padding: 0.5em;
+  border: 1px dashed #8cacbb;
+  color: Black;
+  background-color: #dee7ec;
+  overflow: auto;
+}
+
+/* inline tables */
+
+#dw table.inline th {
+  padding: 3px;
+  border: 1px solid #8cacbb;
+  background-color: #dee7ec;
+  text-align: left;
+}
+
+#dw table.inline td {
+  padding: 3px;
+  border: 1px solid #8cacbb;
+}
+</style>
+<link rel='stylesheet' id='eme_stylesheet-css'  href='../wp-content/plugins/events-made-easy/events_manager-ver=3.6.css' type='text/css' media='all' />
+<link rel='stylesheet' id='A2A_SHARE_SAVE-css'  href='../wp-content/plugins/add-to-any/addtoany.min-ver=1.4.css' type='text/css' media='all' />
+<script type='text/javascript' src='../wp-includes/js/jquery/jquery.js?ver=1.10.2'></script>
+<script type='text/javascript' src='../wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<script type='text/javascript' src='../wp-content/plugins/google-analyticator/external-tracking.min.js?ver=6.4.5'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../xmlrpc-rsd.php.html" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 3.6" />
+
+<script type="text/javascript"><!--
+var a2a_config=a2a_config||{},wpa2a={done:false,html_done:false,script_ready:false,script_load:function(){var a=document.createElement('script'),s=document.getElementsByTagName('script')[0];a.type='text/javascript';a.async=true;a.src='http://static.addtoany.com/menu/page.js';s.parentNode.insertBefore(a,s);wpa2a.script_load=function(){};},script_onready:function(){if(a2a.type=='page'){wpa2a.script_ready=true;if(wpa2a.html_done)wpa2a.init();}},init:function(){for(var i=0,el,target,targets=wpa2a.targets,length=targets.length;i<length;i++){el=document.getElementById('wpa2a_'+(i+1));target=targets[i];a2a_config.linkname=target.title;a2a_config.linkurl=target.url;if(el)a2a.init('page',{target:el});wpa2a.done=true;}}};a2a_config.tracking_callback=['ready',wpa2a.script_onready];
+//--></script>
+<meta name="_awb_version" content="2.0.3" /><link rel="stylesheet" href="../wp-content/themes/arras/css/styles/default.css" type="text/css" media="screen,projection" /><link rel="stylesheet" href="../wp-content/themes/arras/css/layouts/2c-r-fixed.css" type="text/css" />
+<!-- Generated by Arras WP Theme -->
+<style type="text/css">
+	.posts-default li  { width: 205px; height: 225px; }
+	.posts-default img, .posts-default .entry-thumbnails-link { width: 195px; height: 110px; }
+	.posts-default .entry-meta { width: 195px; }
+	.posts-default .entry-thumbnails { width: 205px; height: 120px; }
+			.posts-quick .entry-thumbnails img { width: 115px; height: 115px; }
+		.posts-quick .entry-meta { width: 115px; }
+			.featured { height: 260px; }
+	.featured-article { width: 640px; height: 250px; }
+	.featured-article img { width: 640px; height: 250px; }
+	#controls { width: 610px; top: 110px; }
+	#controls .next { left: 610px; }
+	.featured-entry { height: 84px; top: -84px; }
+	.featured-slideshow-inner { height: 250px }
+		.featured-stories-summary  { margin-left: 51px; }
+	.single .post .entry-photo img, .single-post .entry-photo img  { width: 620px; height: 250px; }
+		.footer-sidebar  { width: 920px; }
+	</style>
+	<script type="text/javascript">
+	jQuery(document).ready(function($) {
+
+$('.multi-sidebar').tabs();
+
+$('.sf-menu').superfish({autoArrows: true, speed: 'fast', dropShadows: 'true'});
+
+$('#commentform').validate();
+
+
+});	</script>
+	<!--[if IE]>
+<style type="text/css">
+.addtoany_list a img{filter:alpha(opacity=70)}
+.addtoany_list a:hover img,.addtoany_list a.addtoany_share_save img{filter:alpha(opacity=100)}
+</style>
+<![endif]-->
+<link rel="stylesheet" href="../wp-content/themes/arras/user.css" type="text/css" media="screen,projection" /><!-- Google Analytics Tracking by Google Analyticator 6.4.5: http://www.videousermanuals.com/google-analyticator/ -->
+<script type="text/javascript">
+	var analyticsFileTypes = [''];
+	var analyticsEventTracking = 'enabled';
+</script>
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-169675-4']);
+        _gaq.push(['_addDevId', 'i9k95']); // Google Analyticator App ID with Google 
+        
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>World Music Central.org</title>
+
+
+<link rel="alternate" type="application/rss+xml" href="../feed/index.html" title="World Music Central.org latest posts" />
+
+<link rel="alternate" type="application/rss+xml" href="../comments/feed/index.html" title="World Music Central.org latest comments" />
+
+<link rel="pingback" href="../xmlrpc.php.html" />
+
+<link rel="shortcut icon" href="../favicon.ico" />
+
+
+<style type="text/css">
+/* --- reset some elements --- */
+
+#dw ul,ol { list-style:none }
+
+#dw ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,p,blockquote,fieldset,input { margin:0; padding:0 }
+
+/* --- Basic Stylesheet for DokuWiki content --- */
+
+#dw h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+#dw h1 a {
+  color: black;
+}
+
+/* ---------- table of contents ------------------- */
+
+#dw div.toc {
+  margin-left: 2em;
+  margin-top: 1.2em;
+  margin-bottom: 0;
+  float:right;
+  width: 200px;
+  font-size: 80%;
+  padding-top:5px;
+}
+
+#dw div.tocheader {
+  padding: 3px;
+  border: 1px solid #8cacbb;
+  background-color: #dee7ec;
+  text-align: left;
+  font-weight:bold;
+  margin-bottom: 2px;
+}
+
+#dw div.tocheader img {
+  width:0.8em;
+  height:0.8em;
+  margin-top:0.3em;
+  margin-right:3px;
+  float:right;
+  cursor: pointer;
+}
+
+#dw #toc__inside {
+  border: 1px solid #8cacbb;
+  background-color: #fff;
+  text-align: left;
+  padding-top: 0.5em;
+  padding-bottom: 0.7em;
+}
+
+#dw ul.toc {
+  list-style-type: none;
+  list-style-image: none;
+  line-height: 1.2em;
+  margin: 0;
+  padding: 0;
+  padding-left: 1em;
+}
+
+#dw ul.toc li {
+  background: transparent url(../lib/tpl/fsinfo/images/tocdot2.gif) 0 0.6em no-repeat;
+  padding-left:0.4em;
+}
+
+#dw ul.toc li.clear {
+  background-image: none;
+  padding-left:0.4em;
+}
+
+#dw a.toc {
+  color: #436976;
+  text-decoration:none;
+}
+
+#dw a.toc:hover {
+  color: #000;
+  text-decoration:underline;
+}
+
+/* --------------------- footnotes -------------------------------- */
+
+#dw div.footnotes{
+  clear:both;
+  border-top: 1px solid #8cacbb;
+  padding-left: 1em;
+  margin-top: 1em;
+}
+
+#dw div.fn{
+  font-size:90%;
+}
+
+#dw a.fn_top{
+  vertical-align:super;
+  font-size:80%;
+}
+
+#dw a.fn_bot{
+  vertical-align:super;
+  font-size:80%;
+  font-weight:bold;
+}
+
+/* insitu-footnotes */
+#dw div.insitu-footnote {
+  font-size: 80%;
+  line-height: 1.2em;
+  border: 1px solid #8cacbb;
+  background: #eef3f8;
+  text-align: left;
+  padding: 4px;
+  max-width: 40%;    /* IE's width is handled in javascript */
+}
+
+/* overcome IE issue with one line code or file boxes which require h. scrolling */
+#dw * html .insitu-footnote pre.code, * html .insitu-footnote pre.file {
+  padding-bottom: 18px;
+}
+
+/* --------------------- Tables -------------------------------- */
+
+#dw table.inline td.okay {
+  background-color: #afa;
+  text-align: center;
+}
+
+#dw table.inline td.notokay {
+  background-color: #fcc;
+  text-align: center;
+}
+
+#dw table.inline {
+  background-color: #fff;
+  border-spacing: 0px;
+  border-collapse: collapse;
+}
+
+/* ------------- Page elements ----------------- */
+
+#dw span.user{
+/*  color: #ccc; */
+  color: #666;
+  font-size: 90%;
+}
+
+#dw li.minor {
+  color: #666;
+  font-style: italic;
+}
+
+/* embedded images */
+#dw img.media {
+  margin: 3px;
+}
+
+#dw img.medialeft {
+  border: 0;
+  float: left;
+  margin: 0 1.5em 0 0;
+}
+
+#dw img.mediaright {
+  border: 0;
+  float: right;
+  margin: 0 0 0 1.5em;
+}
+
+#dw img.mediacenter {
+  border: 0;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* smileys */
+#dw img.middle {
+  vertical-align: middle;
+}
+
+#dw acronym {
+  cursor: help;
+  border-bottom: 1px dotted #000;
+}
+
+/* general headline setup */
+#dw h1, #dw h2, #dw h3, #dw h4, #dw h5 {
+    color: Black;
+    background-color: transparent;
+    font-family: "Lucida Grande", Verdana, Lucida, Helvetica, Arial, sans-serif;
+    font-size: 100%;
+    font-weight: normal;
+    margin-left:    0;
+    margin-right:   0;
+    margin-top:     0;
+    margin-bottom:  1em;
+    padding-left:   0;
+    padding-right:  0;
+    padding-top:    0.5em;
+    padding-bottom: 0;
+    border-bottom: 1px solid #8cacbb;
+}
+
+/* special headlines */
+/*
+#dw h1 {font-size: 160%; margin-left: 0px; font-weight: bold;}
+#dw h2 {font-size: 150%; margin-left: 20px; font-weight: bold;}
+#dw h3 {font-size: 130%; margin-left: 40px; border-bottom: none; font-weight: bolder}
+#dw h4 {font-size: 115%; margin-left: 60px; border-bottom: none; font-weight: bolder}
+#dw h5 {font-size: 100%; margin-left: 80px; border-bottom: none; font-weight: bold;}
+*/
+
+#dw h1 {font-size: 160%; font-weight: bold;}
+#dw h2 {font-size: 140%; font-weight: bold; }
+#dw h3 {font-size: 130%; border-bottom: none; font-weight: bolder}
+#dw h4 {font-size: 115%; border-bottom: none; font-weight: bolder}
+#dw h5 {font-size: 100%; border-bottom: none; font-weight: bold;}
+
+/* indent different sections */
+/*
+#dw div.level1 {margin-left: 3px;}
+#dw div.level2 {margin-left: 23px;}
+#dw div.level3 {margin-left: 43px;}
+#dw div.level4 {margin-left: 63px;}
+#dw div.level5 {margin-left: 83px;}
+*/
+
+/* unordered lists */
+#dw ul {
+  line-height: 1.5em;
+  list-style-type: square;
+  margin: 0 0 0.5em 2em;
+  padding: 0;
+  color: #638c9c;
+  list-style-image: none;
+}
+
+/* ordered lists */
+#dw ol {
+  line-height: 1.5em;
+  margin: 0 0 0.5em 2em;
+  padding: 0;
+  color: #638c9c;
+  font-weight: bold;
+  list-style-image: none;
+}
+
+/* the list items overriding the ul/ol definition */
+#dw .li {
+  color: #000;
+  font-weight: normal;
+}
+
+#dw ol {list-style-type: decimal}
+#dw ol ol {list-style-type: upper-roman}
+#dw ol ol ol {list-style-type: lower-alpha}
+#dw ol ol ol ol {list-style-type: lower-greek}
+
+#dw li.open {
+  list-style-image: url(../lib/tpl/fsinfo/images/open.gif);
+    /*list-style-type: circle;*/
+}
+
+#dw li.closed {
+  list-style-image: url(../lib/tpl/fsinfo/images/closed.gif);
+    /*list-style-type: disc;*/
+}
+
+#dw blockquote {
+  border-left: 2px solid #8cacbb;
+  padding-left: 3px;
+  margin-left: 0;
+}
+
+/* code blocks by indention */
+#dw pre.pre {
+  font-size: 100%;
+  padding: 0.5em;
+  border: 1px dashed #8cacbb;
+  color: Black;
+  background-color: #f7f9fa;
+  overflow: auto;
+}
+
+/* code blocks by code tag */
+#dw pre.code {
+  font-size: 100%;
+  padding: 0.5em;
+  border: 1px dashed #8cacbb;
+  color: Black;
+  background-color: #f7f9fa;
+  overflow: auto;
+}
+
+/* inline code words */
+#dw code {
+  font-size: 80%;
+}
+
+/* code blocks by file tag */
+#dw pre.file {
+  font-size: 100%;
+  padding: 0.5em;
+  border: 1px dashed #8cacbb;
+  color: Black;
+  background-color: #dee7ec;
+  overflow: auto;
+}
+
+/* inline tables */
+
+#dw table.inline th {
+  padding: 3px;
+  border: 1px solid #8cacbb;
+  background-color: #dee7ec;
+  text-align: left;
+}
+
+#dw table.inline td {
+  padding: 3px;
+  border: 1px solid #8cacbb;
+}
+</style>
+<script type='text/javascript' src='../wp-content/themes/arras/js/superfish/hoverIntent.js'></script>
+<script type='text/javascript' src='../wp-content/themes/arras/js/superfish/superfish.js'></script>
+<script type='text/javascript' src='../wp-includes/js/comment-reply.min.js?ver=3.6'></script>
+<script type='text/javascript' src='../wp-content/themes/arras/js/jquery.validate.min.js'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../xmlrpc-rsd.php.html" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 3.6" />
+
+<script type="text/javascript"><!--
+var a2a_config=a2a_config||{},wpa2a={done:false,html_done:false,script_ready:false,script_load:function(){var a=document.createElement('script'),s=document.getElementsByTagName('script')[0];a.type='text/javascript';a.async=true;a.src='/page.js';s.parentNode.insertBefore(a,s);wpa2a.script_load=function(){};},script_onready:function(){if(a2a.type=='page'){wpa2a.script_ready=true;if(wpa2a.html_done)wpa2a.init();}},init:function(){for(var i=0,el,target,targets=wpa2a.targets,length=targets.length;i<length;i++){el=document.getElementById('wpa2a_'+(i+1));target=targets[i];a2a_config.linkname=target.title;a2a_config.linkurl=target.url;if(el)a2a.init('page',{target:el});wpa2a.done=true;}}};a2a_config.tracking_callback=['ready',wpa2a.script_onready];
+//--></script>
+<meta name="_awb_version" content="2.0.3" /><link rel="stylesheet" href="../wp-content/themes/arras/css/styles/default.css" type="text/css" media="screen,projection" /><link rel="stylesheet" href="../wp-content/themes/arras/css/layouts/2c-r-fixed.css" type="text/css" />
+<!-- Generated by Arras WP Theme -->
+<style type="text/css">
+	.posts-default li  { width: 205px; height: 225px; }
+	.posts-default img, .posts-default .entry-thumbnails-link { width: 195px; height: 110px; }
+	.posts-default .entry-meta { width: 195px; }
+	.posts-default .entry-thumbnails { width: 205px; height: 120px; }
+			.posts-quick .entry-thumbnails img { width: 115px; height: 115px; }
+		.posts-quick .entry-meta { width: 115px; }
+			.featured { height: 260px; }
+	.featured-article { width: 640px; height: 250px; }
+	.featured-article img { width: 640px; height: 250px; }
+	#controls { width: 610px; top: 110px; }
+	#controls .next { left: 610px; }
+	.featured-entry { height: 84px; top: -84px; }
+	.featured-slideshow-inner { height: 250px }
+		.featured-stories-summary  { margin-left: 51px; }
+	.single .post .entry-photo img, .single-post .entry-photo img  { width: 620px; height: 250px; }
+		.footer-sidebar  { width: 920px; }
+	</style>
+	<script type="text/javascript">
+	jQuery(document).ready(function($) {
+
+$('.multi-sidebar').tabs();
+
+$('.sf-menu').superfish({autoArrows: true, speed: 'fast', dropShadows: 'true'});
+
+$('#commentform').validate();
+
+
+});	</script>
+	<!--[if IE]>
+<style type="text/css">
+.addtoany_list a img{filter:alpha(opacity=70)}
+.addtoany_list a:hover img,.addtoany_list a.addtoany_share_save img{filter:alpha(opacity=100)}
+</style>
+<![endif]-->
+<link rel="stylesheet" href="../wp-content/themes/arras/user.css" type="text/css" media="screen,projection" /><!-- Google Analytics Tracking by Google Analyticator 6.4.5: http://www.videousermanuals.com/google-analyticator/ -->
+<script type="text/javascript">
+	var analyticsFileTypes = [''];
+	var analyticsEventTracking = 'enabled';
+</script>
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-169675-4']);
+        _gaq.push(['_addDevId', 'i9k95']); // Google Analyticator App ID with Google 
+        
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+</head>
+
+<body class="page page-id-0 page-parent page-template-default layout-2c-r-fixed no-js style-default">
+<script type="text/javascript">
+//<![CDATA[
+(function(){
+var c = document.body.className;
+c = c.replace(/no-js/, 'js');
+document.body.className = c;
+})();
+//]]>
+</script>
+
+<div id="top-menu" class="clearfix">
+	</div><!-- #top-menu -->
+
+<div id="header"><div align="center"><script type="text/javascript"><!--
+google_ad_client = "pub-7027070946238159";
+/* 728x90, Top Banner */
+google_ad_slot = "9335358437";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+	<div id="branding" class="clearfix">
+	<div class="logo">
+				<span class="blog-name"><a href="../index.html">World Music Central.org</a></span>
+		<img style="float:left; padding: 0 5px 0 0;" src="../wp-content/themes/wmc-magazeen/images/bull.png"/><span class="blog-description">Your Connection to World Music</span>
+			</div>
+	<div id="searchbar"><form method="get" class="searchform clearfix" action="http://worldmusiccentral.org/">
+ <input type="text" value="Search..." name="s" class="s" onfocus="this.value=''" />
+ <input type="submit" class="searchsubmit" value="Search" title="Search World Music Central.org" />
+</form>
+</div>
+	</div><!-- #branding -->
+</div><!-- #header -->
+
+<div id="nav">
+	<div id="nav-content" class="clearfix">
+	<div class="menu-main-container"><ul id="menu-main" class="sf-menu menu clearfix"><li id="menu-item-6394" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-6394"><a href="../index.html">Home</a></li>
+<li id="menu-item-6401" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6401"><a href="../about/index.html">About</a></li>
+<li id="menu-item-6454" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6454"><a href="#">World Music Resources</a>
+<ul class="sub-menu">
+	<li id="menu-item-6455" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6455"><a href="artist_index.php.html">Artists Database</a></li>
+	<li id="menu-item-6462" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6462"><a href="http://musicwikicentral.com/world_music_festivals">Festivals</a></li>
+	<li id="menu-item-6467" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6467"><a href="http://musicwikicentral.com/travel_guides">Travel Guides</a></li>
+	<li id="menu-item-6469" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6469"><a href="http://musicwikicentral.com/world_music_genres">Musical Genres</a></li>
+	<li id="menu-item-6468" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6468"><a href="http://musicwikicentral.com/musical_instruments">Musical Instruments</a></li>
+	<li id="menu-item-6475" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6475"><a href="http://musicwikicentral.com/showcases">Showcases</a></li>
+	<li id="menu-item-6470" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6470"><a href="http://musicwikicentral.com/world_music_venues">Venues</a></li>
+	<li id="menu-item-6472" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6472"><a href="http://musicwikicentral.com/record_companies">Record Companies</a></li>
+	<li id="menu-item-6466" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6466"><a href="http://musicwikicentral.com/booking_agents">Booking Agents</a></li>
+	<li id="menu-item-6474" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6474"><a href="http://musicwikicentral.com/world_music_press">World Music Press</a></li>
+	<li id="menu-item-6477" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6477"><a href="http://musicwikicentral.com/ethnomusicology">Ethnomusicology</a></li>
+	<li id="menu-item-6473" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6473"><a href="http://musicwikicentral.com/music_organizations">Music Organizations</a></li>
+</ul>
+</li>
+<li id="menu-item-6390" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6390"><a href="#">Topics</a>
+<ul class="sub-menu">
+	<li id="menu-item-6369" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6369"><a href="../category/archive/index.html">archive</a></li>
+	<li id="menu-item-6370" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6370"><a href="../category/articles/index.html">Articles</a></li>
+	<li id="menu-item-6371" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6371"><a href="../category/awards/index.html">Awards</a></li>
+	<li id="menu-item-6372" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6372"><a href="../category/book-reviews/index.html">Book Reviews</a></li>
+	<li id="menu-item-6373" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6373"><a href="../category/cd-reviews/index.html">CD Reviews</a></li>
+	<li id="menu-item-6374" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6374"><a href="../category/concert-reviews/index.html">Concert reviews</a></li>
+	<li id="menu-item-6375" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6375"><a href="../category/conferences/index.html">Conferences</a></li>
+	<li id="menu-item-6376" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6376"><a href="../category/editorials/index.html">Editorials</a></li>
+	<li id="menu-item-6377" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6377"><a href="../category/events/index.html">Events</a></li>
+	<li id="menu-item-6378" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6378"><a href="../category/film-reviews/index.html">Film Reviews</a></li>
+	<li id="menu-item-6379" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6379"><a href="../category/general-news/index.html">General News</a></li>
+	<li id="menu-item-6380" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6380"><a href="../category/interviews/index.html">Interviews</a></li>
+	<li id="menu-item-6381" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6381"><a href="../category/loop-collections/index.html">Loop Collections</a></li>
+	<li id="menu-item-6382" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6382"><a href="../category/new-books/index.html">New Books</a></li>
+	<li id="menu-item-6383" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6383"><a href="../category/new-cds/index.html">New CDs</a></li>
+	<li id="menu-item-6384" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6384"><a href="../category/new-films/index.html">New Films</a></li>
+	<li id="menu-item-6385" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6385"><a href="../category/new-releases/index.html">New Releases</a></li>
+	<li id="menu-item-6386" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6386"><a href="../category/obituaries/index.html">Obituaries</a></li>
+	<li id="menu-item-6387" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6387"><a href="../category/tour-announcements/index.html">Tour Announcements</a></li>
+	<li id="menu-item-6388" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6388"><a href="../category/tradeshows/index.html">Tradeshows</a></li>
+	<li id="menu-item-6389" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6389"><a href="../category/uncategorized/index.html">Uncategorized</a></li>
+</ul>
+</li>
+<li id="menu-item-6392" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6392"><a href="../events/index.html">Calendar</a></li>
+<li id="menu-item-6400" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6400"><a href="../store/index.html">Store</a></li>
+<li id="menu-item-6724" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6724"><a href="../contact-us/index.html">Contact Us</a></li>
+</ul></div>		<ul class="quick-nav clearfix">
+					<li><a id="rss" title="World Music Central.org RSS Feed" href="../feed/index.html">RSS Feed</a></li>
+				
+						
+							<li><a id="facebook" title="World Music Central.org Facebook" href="http://www.facebook.com/pages/World-Music-Central/149036898455901" target="_blank">Facebook</a></li>
+				
+			</ul>
+	</div><!-- #nav-content -->
+</div><!-- #nav -->
+
+<div id="wrapper">
+	
+	  
+	<div id="main" class="clearfix">
+    <div id="container" class="clearfix">
+  <head>
+    <title>Bob Marley - Artist Page</title>
+  </head>
+
+  <body> 
+  
+  <div id="artistpage">
+  
+  <div style="float:right;">
+  
+  <script type="text/javascript"><!--
+google_ad_client = "pub-7027070946238159";
+/* 160x600, created 12/6/08 */
+google_ad_slot = "6830638066";
+google_ad_width = 160;
+google_ad_height = 600;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+
+</div>
+  
+  
+  
+  	<table>
+
+  
+<tr><td align="center" colspan="2" width="100%">
+<font size=+1><b>Bob Marley</b></font> 
+<hr></td></tr>
+
+<tr><td align="center" colspan="2" width="100%">
+<a href="#Discography">Discography</a>&nbsp;&nbsp;&middot;&nbsp;&nbsp;<a href="#Bibliography">Bibliography</a>&nbsp;&nbsp;&middot;&nbsp;&nbsp;<a href="#Genres">Similar Music</a>
+<hr></td></tr>
+    <tr>
+      <td colspan="2" width="100%">
+		<a name="Biography"><b>Biography</b></a>:
+	  </td>
+    </tr>
+    <tr>
+      <td colspan="2" width="100%">&nbsp;</td>
+    </tr>
+
+    <tr>
+      <td width="3%"></td>
+
+      <td width="97%">
+	  
+	<p align=center><img border="0" align="center"  src="../staticpages/images/Bob-Marley.jpg"></p>Bob Marley was the greatest reggae musician to have come out of Jamaica. He was 
+an innovator, who combined Jamaican rhythms with rock and Afro-American rhythm 
+and blues. In the 1970s, Bob Marley became an international pop star. His reggae 
+rhythms inspired thousands of musicians throughout the world. But Bob Marley was 
+not only concerned with music. His lyrics spoke about social injustice and 
+became hymns to many fans. It's 
+difficult, of course, to properly understand Bob Marley's music without 
+considering the ideology of the Rastafari.&nbsp; </p>
+<p>
+Rastafari is a religious/political movement created by blacks in Jamaica, the 
+descendants of African slaves. They believe that Africa is the birthplace of 
+Mankind and Emperor Haile Selassie I (Ethiopia) was a 20th Century 
+manifestation of God, who led the path towards righteousness, and is 
+therefore worthy of reverence. Jamaican Rastafarianism accepts the use 
+of marijuana as a sacrament and aid to meditation. Rastafarianism has gained widespread exposure in the Western world 
+with followers in North America, Europe and Africa. 
+<p>Bob Marley's heritage was biracial. In the 1940s, a young 
+black country woman named Cedella Malcolm had a relationship with a white 
+foreman in his fifties, Norval Marley. They were married but never lived 
+together. They had a child, Nesta Robert Marley, on February 6, 1945, the future 
+Bob Marley.</p>
+<p>Norval Marley was disinherited and spent little time with 
+the boy.&nbsp; At the age of 7, Nesta went to live with is mother. It was a return to 
+country living: going to school and church, taking care of the goats, and 
+contributing to the harvests. </p>
+<p>In 1955, Norval Marley died, and his mother, Cedella, sought 
+work in Kingston, the capital of Jamaica. She left the dependent children of her family in Nine Miles 
+(parish of St-James). Two years later Nesta moved to Kingston. In 1959, the 
+mother and son moved to Trench Town, a ghetto in the capital. It was there 
+that Nesta met the first rastas. The destruction of their community at Pinnacle, 
+in the hills of Spanish Town, had driven them back towards the ghettos of Kingston.
+</p>
+<p>Nesta encountered the first generation of the Jamaican 
+singers. In particular Joe Higgs, who lived two blocks away and became his music 
+teacher. Joe Higgs had other young students who would later become famous: Pipe 
+Matthews (Wailing Souls), Peter Tosh, Bunny Wailer, Junior 
+Braithwaite and Beverley Kelso. </p>
+<p>While working as a mechanic's apprentice, Nesta had his 
+first recording experience. In 1962, a buddy from work, a singer named Desmond Dekker, 
+introduced him to Jimmy Cliff (who was 14 at the time). Cliff convinced his 
+producer, Leslie Kong, to record three 45 r.p.m.s with Bob's songs, &quot;Judge not&quot;, 
+&quot;Terror&quot; and &quot;Another Cup of Coffee&quot;. Those first 
+tunes, cut as a solo artist, did not have any commercial success and it wasn't 
+until 1964 - as a founding member of a group called the Wailing Wailers - that 
+Bob first hit the Jamaican charts. The 
+record was 
+<a href="http://www.amazon.com/gp/product/B00000044S/103-5755791-3014251?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B00000044S">
+Simmer Down</a>, recorded at 
+Jamaica's most prominent record label, Studio One. At Studio One, the Wailers, 
+Bob Marley, Peter Tosh and Neville Livingston, joined by legendary producer 
+Clement Dodd, recorded some of their most enduring music. The Wailers and Dodd 
+conceived the popular song 'One Love,' which has become the soundtrack for Jamaica's tourist industry.</p>
+<p>Over the next few years the Wailing Wailers - 
+the nucleus of which was Bob, Peter McIntosh and Bunny Livingston - put out some 
+30 sides that properly established them as one the hottest groups in Jamaica.&nbsp; 
+McIntosh, of course, later shortened his surname to Tosh, while Livingston is now 
+called Bunny Wailer.</p>
+<p>
+Despite their popularity the economics of keeping the group together proved too 
+much and the two other members - Junior Braithwaite and Beverly Kelso&nbsp; quit.&nbsp; 
+At the same time Bob joined his mother in the United States.&nbsp; Marley's stay in 
+America was short-lived, however, and he returned to Jamaica to join up again 
+with Peter and Bunny.&nbsp; By the end of the Sixties, with the legendary reggae 
+producer Lee 'Scratch' Perry at the mixing desk, The Wailers were again back at 
+the top in Jamaica.&nbsp; The combination of Wailers and Perry resulted in some of 
+the finest music the band ever made.&nbsp; Such tracks as <i>Soul Rebel</i>, <i>Duppy 
+Conqueror</i>, <i>400 Years</i> and <i>Small Axe</i> were not only classics, but 
+they defined the future direction of reggae.</p>
+
+<p>In 
+1970 Aston 'Familyman' Barrett and his brother Carlton (bass and drums, 
+respectively) joined the Wailers.&nbsp; They came to the band unchallenged as Jamaica's hardest rhythm section; a reputation that was to remain undiminished 
+during the following decade.&nbsp; Meanwhile, the band's own reputation was, at the 
+start of the Seventies, an extraordinary one throughout the Caribbean.&nbsp; But 
+internationally the band was still unknown.</p>
+
+<p>That 
+was to change however in 1972 when the Wailers signed to Island Records.&nbsp; It was 
+a revolutionary move for an international record company and a reggae band.&nbsp; For 
+the first time a reggae band had access to the best recording facilities and 
+were treated in much the same way as, say, a rock group.&nbsp; Before the Wailers 
+signed to Island it was considered that reggae sold only on singles and cheap 
+compilation albums.&nbsp; The Wailers' first album 
+
+<a href="http://www.amazon.com/gp/product/B00005KB9T/103-5755791-3014251?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B00005KB9T">
+Catch a Fire</a> broke all the 
+rules: it was beautifully packaged and heavily promoted.&nbsp; And it was the start 
+of a long climb to international fame and recognition.</p>
+
+<p>The
+
+<a href="http://www.amazon.com/gp/product/B00005KB9T/103-5755791-3014251?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B00005KB9T">
+Catch a Fire</a> album was followed, a year later, by 
+
+<a href="http://www.amazon.com/gp/product/B00005KB9R/103-5755791-3014251?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B00005KB9R">
+Burnin'</a>, an LP 
+that included some of the band's older songs, such as <i>Duppy Conqueror</i>, <i>
+Small Axe</i> and <i>Put It On</i>, together with tracks like <i>Get Up Stand Up</i> 
+and <i>I Shot The Sheriff</i>.&nbsp; The latter, of course, was also recorded by Eric 
+Clapton, whose version hit number one in the U.S. singles chart.</p>
+
+<p>In 
+1974 Bob Marley &amp; The Wailers released the extraordinary 
+
+<a href="http://www.amazon.com/gp/product/B00005KB9X/103-5755791-3014251?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B00005KB9X">
+Natty Dread</a>  
+album and, in the summer of that year, toured Europe.&nbsp; Among the concerts were 
+two shows at the Lyceum Ballroom in London which, even now, are remembered as 
+highlights of the decade.&nbsp; The shows were recorded and the subsequent 
+<a href="http://www.amazon.com/gp/product/B00005KB9W/103-5755791-3014251?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B00005KB9W">
+Live!</a>  
+album, together with the single <i>No Woman No Cry</i>, both made the charts.&nbsp; 
+By that time Bunny and Peter had officially left the band to pursue their own 
+solo careers.</p>
+
+<p>
+
+<a href="http://www.amazon.com/gp/product/B00005KBA0/103-5755791-3014251?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B00005KBA0">
+Rastaman Vibration</a>, 
+the follow-up album in 1976, cracked the American charts.&nbsp; It was, for many, the 
+clearest exposition yet of Marley's music and beliefs, including such tracks as
+<i>Crazy Baldhead, Johnny Was</i>, <i>Who The Cap Fit</i> and, perhaps most 
+significantly of all, <i>War</i>, the lyrics of which were taken from a speech 
+by Emperor Haile Selassie.</p>
+
+<p>The 
+following year brought fresh achievements by the band.&nbsp; They released the 
+
+<a href="http://www.amazon.com/gp/product/B00005LANG/103-5755791-3014251?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B00005LANG">
+Exodus</a><i> </i>album which properly established Marley's international 
+superstar status.&nbsp; It remained in the British charts for 56 straight weeks, and 
+the three singles from the album - <i>Exodus</i>, <i>Waiting In Vain</i> and <i>
+Jamming</i> - were all massive sellers (<i>Jamming</i> was the band's first-ever 
+Top 10 hit in Britain).&nbsp; They played a week of concerts at London's Rainbow 
+Theatre - in fact, they were to be the Wailers' last London shows of the 
+Seventies.</p>
+
+<p>In 
+1978 the band capitalized on their charts success with the release of 
+
+<a href="http://www.amazon.com/gp/product/B00005MKA1/103-5755791-3014251?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B00005MKA1">
+Kaya</a>, 
+an album which hit number four in the UK chart the week of release.&nbsp; That album 
+saw Marley in a different mood; an album of love songs and, of course, tributes 
+to the power of ganja.&nbsp; The album also provided two charts singles<i>, Satisfy 
+My Soul</i> and the beautiful <i>Is This Love</i>.</p>
+
+<p>
+There were two more events in 1978, both of which were of extraordinary 
+significance to Marley.&nbsp; In April that year he returned to Jamaica (he had left 
+in 1976, following the shooting that had almost cost his life) to play the <b>One 
+Love Peace Concert</b> in front of the Prime Minister Michael Manley and the then 
+Leader of the Opposition Edward Seaga.&nbsp; And at the end of the year he visited 
+Africa for the first time, going initially to Kenya and then on to Ethiopia, 
+spiritual home of Rastafari.&nbsp; He was to return to Africa in 1980, this time at 
+the official invitation of the Government of Zimbabwe to play at the country's 
+Independence Ceremony.&nbsp; It was the greatest honor afforded the band, and one 
+which underlined the Wailers' importance in the Third World.</p>
+
+<p>Bob 
+Marley &amp; The Wailers released the strident 
+
+<a href="http://www.amazon.com/gp/product/B00005MKA3/103-5755791-3014251?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B00005MKA3">
+Survival</a> album in 1979.&nbsp; A 
+European tour came the following year: the band broke festival records 
+throughout the continent, including a 100,000 capacity show in Milan.&nbsp; Bob 
+Marley &amp; The Wailers, quite simply, were the most important band on the road 
+that year and the new 
+
+<a href="http://www.amazon.com/gp/product/B00005A7X0/103-5755791-3014251?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B00005A7X0">
+Uprising</a> album hit every chart in Europe.&nbsp; It was a 
+period of maximum optimism and plans were already being made for an American 
+tour, in company with Stevie Wonder, that winter.</p>
+
+<p>At 
+the end of the European tour Bob Marley &amp; The Wailers went to America.&nbsp; Bob 
+played two shows at Madison Square Garden but, immediately afterwards, he was 
+taken seriously ill.&nbsp;Cancer was diagnosed.</p>
+
+<p>Bob 
+Marley fought the disease for eight months.&nbsp; The battle, however, proved too 
+much.&nbsp; He died in a Miami Hospital on May 11, 1981.</p>
+
+<p>A 
+month before the end Bob was awarded Jamaica's Order Of Merit, the nation's 
+third highest honor, in recognition of his outstanding contribution to the 
+country's culture.</p>
+
+<p>On 
+Thursday May 21, 1981, the Hon. Robert Nesta Marley O.M. was given an official 
+funeral by the people of Jamaica.&nbsp; Following the funeral - attended by both 
+the Prime Minister and the Leader of the Opposition - Bob's body was taken to his 
+birthplace where it now rests in a mausoleum.&nbsp; Bob Marley was 36 years old.&nbsp; </p>
+<p class="MsoBodyTextIndent3">Several posthumous albums 
+showed various sides Marley:</p>
+<p class="MsoBodyTextIndent3">
+
+<a href="http://www.amazon.com/gp/product/B0000669JM/103-5755791-3014251?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B0000669JM">
+Rebel Music</a><b> </b>(1986) celebrates a man who 
+rose from the humblest of origins to become a champion for the oppressed.&nbsp; 
+Powerful anthems of defiance such as 'Get Up, Stand Up' and 'Slave Driver' 
+propelled both Marley and reggae in general into the international limelight.&nbsp; 
+Joining the original 
+
+<a href="http://www.amazon.com/gp/product/B0000669JM/103-5755791-3014251?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B0000669JM">
+Rebel Music</a> line-up of 'Rebel Music (3 O'Clock Roadblock),' 'So Much Trouble In The World,' 
+'Them Belly Full (But We 
+Hungry),' 'Rat Race,' 'War/No More Trouble,' 'Roots,' 'Ride Natty Ride' and 
+'Crazy Baldhead' is the bonus track 'Wake Up &amp; Live (Parts 1 &amp; 2).'</p>
+<p class="MsoBodyTextIndent3">
+<a href="http://www.amazon.com/gp/product/B0000669JN/103-5755791-3014251?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B0000669JN">
+Talkin' Blues</a> (1991) captures the moment 
+when Marley &amp; The Wailers first catapulted reggae into the mainstream of popular 
+music.&nbsp; Most of the tracks are from a 1973 KSAN-FM (San Francisco) broadcast, 
+the only recordings from the Wailers' first American tour, yet first released on 
+this 1991 album.&nbsp; Included are 'Burnin' &amp; Lootin',' 'Kinky Reggae,' 'Get Up, 
+Stand Up,' 'Slave Driver,' 'Rastaman Chant,' 'Walk The Proud Land' and 'You Can't Blame The Youth.'&nbsp; 
+The album also features alternate studio versions of 'Talkin' Blues' and 'Bend Down Low,' songs on 1974's
+
+<a href="http://www.amazon.com/gp/product/B00005KB9X/103-5755791-3014251?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B00005KB9X">
+Natty Dread</a>; 
+'Am-A-Do' from the 
+
+<a href="http://www.amazon.com/gp/product/B00005KB9X/103-5755791-3014251?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B00005KB9X">
+Natty Dread</a> sessions, and 'I Shot The Sheriff' 
+recorded at The Lyceum Ballroom in London in summer 1975.&nbsp; Interspersed are 
+excerpts from a rare Marley Jamaican radio interview broadcast in 1975.&nbsp; The 
+bonus tracks are the previously unreleased 'Lively Up Yourself,' 'Stop That 
+Train' and another 'Bend Down Low,' the remaining songs heard on that legendary KSAN broadcast.</p>
+
+<a href="http://www.amazon.com/gp/product/B0000669JO/103-5755791-3014251?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B0000669JO">
+Natural Mystic</a><b>: The Legend Lives On</b>
+(1995)
+was the natural sequel to 1984's best-selling 
+
+<a href="http://www.amazon.com/gp/product/B0000669JL/103-5755791-3014251?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B0000669JL">
+Legend</a>.&nbsp; With an emphasis 
+on album tracks rather than singles, 
+
+<a href="http://www.amazon.com/gp/product/B0000669JO/103-5755791-3014251?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B0000669JO">
+Natural Mystic</a> was a 
+reiteration of Marley's fame when the 1995 album went gold in the U.S. &nbsp;Added to 
+the original is the bonus 'Positive Vibration.'&nbsp; Along with the late '70s tracks 
+'Natural Mystic,' 'Easy Skanking,' 'Iron Lion Zion,' 'Crazy Baldhead,' 'So Much 
+Trouble In The World,' 'War,' 'Africa Unite,' the live 'Trenchtown Rock,' 'Keep 
+On Moving,' 'Sun Is Shining,' 'Who The Cap Fit,' 'One Drop,' 'Roots, Rock, 
+Reggae' and 'Time Will Tell' is 1980's 'Pimper's Paradise.'<p>The most 
+comprehensive and ambitious reissue program ever for the recordings of Bob 
+Marley, extending for more than a year and spanning more than 18 albums, was 
+kicked off March 27, 2001, with the release of a special expanded 2 CD edition 
+of his groundbreaking 
+
+<a href="http://www.amazon.com/gp/product/B00005KB9T/103-5755791-3014251?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B00005KB9T">
+Catch a Fire</a> (Island/UME).&nbsp; One of the two CDs 
+comprising the <b>Catch A Fire: Deluxe Edition</b> was the original, 
+previously unreleased, version of the album recorded in Jamaica in September 
+1972, including two songs, 'High Seas or Low Seas' and 'All Day All Night,' not 
+included on the other CD, a new digital remaster of the U.K. remixed and 
+overdubbed 1973 album which became Marley's crossover breakthrough. </p></p>
+<p>In 2003, Heartbeat Records released a collection of recordings by Bob Marley 
+and The Wailers, recorded at Studio One. 
+<a href="http://www.amazon.com/gp/product/B00008J2LB/103-5755791-3014251?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B00008J2LB">
+Greatest Hits at Studio One</a>, culled 
+from the over 100 tracks the Wailers recorded at Studio One, features many of 
+their early top-selling songs like &quot;One Love,&quot; &quot;Simmer Down,&quot; &quot;Jailhouse,&quot; and &quot;It 
+Hurts to Be Alone.&quot; Also included are many of the group's top requested songs 
+from the Studio One catalog along with alternate versions of some of their 
+popular hits</p>
+<p>In May of 2003 family members of Bob Marley discovered a number of 
+eight-track recordings by the late singer. The previously unheard songs, 
+recorded in the 1970s, were remastered by Marley's son, 
+<a href="http://www.worldmusiccentral.org/artists/artist_page.php?id=3886">Ziggy</a>.
+
+<p>'<i>I 
+love the development of our music.&nbsp; </i> </p>
+<p class="MsoBodyText">
+<i>How we've tried to develop, y'know'&nbsp; It grows.&nbsp; </i> </p>
+<p>
+<i>That's why every day people come forward with new songs.&nbsp; </i> </p>
+<p><i>Music goes on forever</i>' - Bob Marley</p>
+<p>&nbsp;<p>[Biography based in part from liner notes provided by Universal Music. Photo courtesy of Universal Music].</p>
+</p>
+</td>
+<tr><td align="center" colspan="2" width="100%">
+
+<hr></td></tr>
+  	<tr>
+        <td colspan="2" width="100%">
+		<a name="Discography"><b>Discography</b></a>:
+	  </td>
+    </tr>
+    <tr>
+      <td colspan="2" width="100%">&nbsp;</td>
+    </tr>
+
+    <tr>
+      <td width="3%"></td>
+
+      <td width="97%">
+
+ 	<p><a href="http://www.amazon.com/gp/product/B00000044S/103-5755791-3014251?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B00000044S">
+Simmer Down</a> (1964)</p><p><a href="http://www.amazon.com/gp/product/B0002858O8/103-5755791-3014251?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B0002858O8">
+The Best of the Wailers</a> (Beverley's, 1970)</p><p><a href="http://www.amazon.com/gp/product/B000077SXF/103-5755791-3014251?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B000077SXF">
+Soul Rebels</a> (Upsetter/Trojan, 1970)</p><p><a href="http://www.amazon.com/gp/product/B0000011J0/103-5755791-3014251?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B0000011J0">
+Soul Revolution</a> (Upsetter/Trojan, 1971)</p><p><a href="http://www.amazon.com/gp/product/B0002858NO/103-5755791-3014251?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B0002858NO">
+Soul Revolution, Pt. 2</a> (Upsetter/Trojan, 1971)</p><p><a href="http://www.amazon.com/gp/product/B00069FK1O/103-5755791-3014251?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B00069FK1O">
+African Herbsman</a> (Upsetter/Trojan, 1973)</p><p><a href="http://www.amazon.com/gp/product/B00005KB9T/103-5755791-3014251?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B00005KB9T">
+Catch a Fire</a> (Island/Tuff Gong, 1973)</p><p><a href="http://www.amazon.com/gp/product/B00005KB9R/103-5755791-3014251?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B00005KB9R">
+Burnin'</a> (Island/Tuff Gong, 1973)</p><p><a href="http://www.amazon.com/gp/product/B00005NQIN/103-5755791-3014251?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B00005NQIN">
+Rasta Revolution</a> (Upsetter/Trojan, 1974)</p><p><a href="http://www.amazon.com/gp/product/B00005KB9X/103-5755791-3014251?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B00005KB9X">
+Natty Dread</a> (Island/Tuff Gong, 1974)</p><p><a href="http://www.amazon.com/gp/product/B00005KB9W/103-5755791-3014251?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B00005KB9W">
+Live!</a> (Island/Tuff Gong, 1975)</p><p><a href="http://www.amazon.com/gp/product/B00005KBA0/103-5755791-3014251?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B00005KBA0">
+Rastaman Vibration</a> (Island/Tuff Gong, 1976)</p><p><a href="http://www.amazon.com/gp/product/B00005LANG/103-5755791-3014251?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B00005LANG">
+Exodus</a> (Island/Tuff Gong, 1977)</p><p><a href="http://www.amazon.com/gp/product/B00005MKA1/103-5755791-3014251?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B00005MKA1">
+Kaya</a> (Island/Tuff Gong, 1978)</p><p><a href="http://www.amazon.com/gp/product/B00005MK9Y/103-5755791-3014251?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B00005MK9Y">
+Babylon by Bus</a> (Island/Tuff Gong, 1978)</p><p><a href="http://www.amazon.com/gp/product/B00005MKA3/103-5755791-3014251?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B00005MKA3">
+Survival</a> (Island/Tuff Gong, 1979)</p><p><a href="http://www.amazon.com/gp/product/B00005A7X0/103-5755791-3014251?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B00005A7X0">
+Uprising</a> (Island/Tuff Gong, 1980)</p><p><a href="http://www.amazon.com/gp/product/B00005MK9Z/103-5755791-3014251?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B00005MK9Z">
+Confrontation</a> [posthumous] (Island/Tuff Gong, 1983)</p><p><a href="http://www.amazon.com/gp/product/B0000669JL/103-5755791-3014251?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B0000669JL">
+Legend</a>, compilation, (Island/Tuff Gong, 1984)</p><p><a href="http://www.amazon.com/gp/product/B0000669JM/103-5755791-3014251?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B0000669JM">
+Rebel Music</a>, compilation, (Island/Tuff Gong, 1986)</p><p><a href="http://www.amazon.com/gp/product/B0000669JN/103-5755791-3014251?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B0000669JN">
+Talkin' Blues</a> [recorded in 1973] (Island/Tuff Gong, 1991)</p><p><a href="http://www.amazon.com/gp/product/B00002R0MC/103-5755791-3014251?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B00002R0MC">
+Songs of Freedom</a>, boxed set compilation, (Island/Tuff Gong, 1992)</p><p><a href="http://www.amazon.com/gp/product/B0000669JO/103-5755791-3014251?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B0000669JO">
+Natural Mystic</a>: The Legend Lives, compilation, (Island/Tuff Gong, 1995)</p><p><a href="http://www.amazon.com/gp/product/B00005J9U1/103-5755791-3014251?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B00005J9U1">
+One Love</a>: The Very Best of Bob Marley &amp; The Wailers, compilation, (Island/Tuff
+Gong, 2001)</p><p><a href="http://www.amazon.com/gp/product/B0000ARLC3/103-5755791-3014251?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B0000ARLC3">
+Trenchtown Rock - Anthology 1968-78</a> (Trojan Records, 2002)</p><p><a href="http://www.amazon.com/gp/product/B00008J2LB/103-5755791-3014251?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B00008J2LB">
+Greatest Hits at Studio One</a> (Heartbeat 116 617 761-2, 2003)</p><p><a href="http://www.amazon.com/gp/product/B00009V7T0/103-5755791-3014251?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B00009V7T0">
+Live at the Roxy, Hollywood, California, May 26, 1976</a> (Island/Tuff Gong, 2003)</p><p><a href="http://www.amazon.com/exec/obidos/ASIN/B0006Z2LBU/musidelmund-20?">
+Gold</a> (Island/Tuff Gong, 2005)</p><p><a href="http://www.amazon.com/gp/product/B000BLI4RY/103-5755791-3014251?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B000BLI4RY">
+Africa Unite</a>: The Singles Collection, compilation, (Island/Tuff Gong, 2005)</p><p><a href="http://www.amazon.com/gp/product/B0001XAR72/104-1902660-4738332?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B0001XAR72">
+20th Century Masters: The Millennium Collection: The Best of Bob Marley &amp; The
+Wailers</a> (Universal</p></td>
+<tr><td align="center" colspan="2" width="100%">
+
+<hr></td></tr>
+  	<tr>
+  	  <td colspan="2" width="100%">
+		<a name="Bibliography"><b>Bibliography</b></a>:
+	  </td>
+    </tr>
+    <tr>
+      <td colspan="2" width="100%">&nbsp;</td>
+    </tr>
+
+    <tr>
+      <td width="3%"></td>
+
+      <td width="97%">
+
+ 	Books:</p>
+<ul>
+<li>
+<a href="http://www.amazon.com/gp/product/085965222X/103-5755791-3014251?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=085965222X">Bob Marley</a> by Stephen Davis, Plexus Publishing Ltd, 1994</li>
+<li>
+<a href="http://www.amazon.com/gp/product/0393036863/103-5755791-3014251?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=0393036863">Bob Marley</a> by Bruce W. Talamon &amp; Roger Steffens; W. W. Norton &amp; Company,
+1994<br></li>
+<li>
+<a href="http://www.amazon.com/gp/product/0793536693/103-5755791-3014251?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=0793536693">Bob Marley - Songs of Freedom</a>, Hal Leonard
+Corporation (December 1, 1995)</li>
+<li>
+<a href="http://www.amazon.com/gp/product/1560252049/103-5755791-3014251?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=1560252049">Bob Marley</a>: Soul Rebel: The Stories Behind Every Song
+1962-1981 by Maureen Sheridan Thunder's Mouth Press, 1999</li>
+<li>
+<a href="http://www.amazon.com/gp/product/0711986703/103-5755791-3014251?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=0711986703">Complete Lyrics of Bob Marley</a> by Bob Marley and Noel Hawks, Music
+Sales Ltd, 2001</li>
+<li>
+<a href="http://www.amazon.com/gp/product/1565220749/103-5755791-3014251?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=1565220749">Rasta Heart: A Journey Into One Love</a> by Robert Roskind, One Love Press, 2001</li>
+<li>
+<a href="http://www.amazon.com/gp/product/0711997667/103-5755791-3014251?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=0711997667">Bob Marley</a>: Talking (Bob Marley in His Own Words)
+by Ian McCann, Bob Marley, Omnibus Press, 2003</li>
+<li>
+<a href="http://www.amazon.com/gp/product/0306813408/103-5755791-3014251?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=0306813408">Every Little Thing Gonna Be Alright</a>, by Roger Steffens and Hank Bordowitz, Da
+Capo Press, 2004)</li>
+<li>
+<a href="http://www.amazon.com/gp/product/0971975817/103-5755791-3014251?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=0971975817">60 Visions</a>: A Book of Prophecy by Bob Marley,
+Tuff Gong Books, 2005</li>
+<li>
+<a href="http://www.amazon.com/gp/product/0786887559/103-5755791-3014251?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=0786887559">No Woman No Cry</a> by Rita Marley, Hyperion, 2005</li>
+<li>
+<a href="http://www.amazon.com/gp/product/1579401201/103-5755791-3014251?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=1579401201">Bob Marley and the Wailers</a>: The Definitive
+Discography by Roger Steffens, Leroy Jodie Pierson,
+Rounder Books, 2005</li>
+<li>
+<a href="http://www.amazon.com/gp/product/0811850366/103-5755791-3014251?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=0811850366">Marley Legend</a>&nbsp; by James Henke, Chronicle Books; Har/Com
+edition, 2006</li>
+<li>
+<a href="http://www.amazon.com/gp/product/0805080864/103-5755791-3014251?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=0805080864">Catch a Fire</a>:
+The Life of Bob Marley by Timothy White Owl Books, 2006</li>
+<li>56 Thoughts from 56 Hope Road: The Sayings and Psalms of Bob
+Marley by Cedella Marley and Gerald Hausman, Hampton Roads Publishing
+Company, 2002</li>
+<li>
+<a href="http://www.amazon.com/gp/product/0060539917/103-5755791-3014251?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=0060539917">Before the Legend</a> by Christopher John Farley, Amistad,
+2006</li>
+<li>
+<a href="http://www.amazon.com/gp/product/1400052866/103-5755791-3014251?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=1400052866">The Book of Exodus</a>, Three Rivers Press,
+2006</li>
+</ul>
+<p></td>
+<tr><td align="center" colspan="2" width="100%">
+
+<hr></td></tr>
+  	<tr>
+  	  <td colspan="2" width="100%">
+		<a name="Genres"><b>Similar Music</b></a>:
+	  </td>
+    </tr>
+    <tr>
+      <td colspan="2" width="100%">&nbsp;</td>
+    </tr>
+
+    <tr>
+      <td width="3%"></td>
+
+      <td width="97%">
+
+	<a href="genre_list-genre=Reggae.php.html">Reggae</a>, <a href="instrument_index-instrument=Vocals.php.html">Vocals</a>, <a href="instrument_index-instrument=Guitar.php.html">Guitar</a></td>
+<tr><td align="center" colspan="2" width="100%">
+
+<hr></td></tr>
+	</table>
+	</div>
+
+	</div><!-- #main -->
+	
+	    
+    <div id="footer">
+		<div class="footer-sidebar-container clearfix">
+							<ul id="footer-sidebar-1" class="footer-sidebar clearfix xoxo">
+										<li></li>
+									</ul>
+					</div>
+		
+		<div class="footer-message">
+                <p class="floatright">WordPress Installation and Support by <a class="arras" href="http://digiblink.eu/" title="Custom WordPress development, design and backup services."><strong>digiBlink</strong></a></p>
+                <p>Copyright World Music Central.org. All Rights Reserved.</p>                </div><!-- .footer-message -->
+		
+    </div>
+</div><!-- #wrapper -->
+
+<script type="text/javascript"><!--
+wpa2a.targets=[];
+wpa2a.html_done=true;if(wpa2a.script_ready&&!wpa2a.done)wpa2a.init();wpa2a.script_load();
+//--></script>
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+
+	
+});
+</script>
+<script type='text/javascript' src='../wp-includes/js/jquery/ui/jquery.ui.core.min.js?ver=1.10.3'></script>
+<script type='text/javascript' src='../wp-includes/js/jquery/ui/jquery.ui.widget.min.js?ver=1.10.3'></script>
+<script type='text/javascript' src='../wp-includes/js/jquery/ui/jquery.ui.tabs.min.js?ver=1.10.3'></script>
+</body>
+</html>
+   
+
+<!-- Localized -->

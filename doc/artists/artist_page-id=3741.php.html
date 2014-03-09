@@ -1,0 +1,1302 @@
+
+<style type="text/css">
+/* --- reset some elements --- */
+
+#dw ul,ol { list-style:none }
+
+#dw ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,p,blockquote,fieldset,input { margin:0; padding:0 }
+
+/* --- Basic Stylesheet for DokuWiki content --- */
+
+#dw h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+#dw h1 a {
+  color: black;
+}
+
+/* ---------- table of contents ------------------- */
+
+#dw div.toc {
+  margin-left: 2em;
+  margin-top: 1.2em;
+  margin-bottom: 0;
+  float:right;
+  width: 200px;
+  font-size: 80%;
+  padding-top:5px;
+}
+
+#dw div.tocheader {
+  padding: 3px;
+  border: 1px solid #8cacbb;
+  background-color: #dee7ec;
+  text-align: left;
+  font-weight:bold;
+  margin-bottom: 2px;
+}
+
+#dw div.tocheader img {
+  width:0.8em;
+  height:0.8em;
+  margin-top:0.3em;
+  margin-right:3px;
+  float:right;
+  cursor: pointer;
+}
+
+#dw #toc__inside {
+  border: 1px solid #8cacbb;
+  background-color: #fff;
+  text-align: left;
+  padding-top: 0.5em;
+  padding-bottom: 0.7em;
+}
+
+#dw ul.toc {
+  list-style-type: none;
+  list-style-image: none;
+  line-height: 1.2em;
+  margin: 0;
+  padding: 0;
+  padding-left: 1em;
+}
+
+#dw ul.toc li {
+  background: transparent url(../lib/tpl/fsinfo/images/tocdot2.gif) 0 0.6em no-repeat;
+  padding-left:0.4em;
+}
+
+#dw ul.toc li.clear {
+  background-image: none;
+  padding-left:0.4em;
+}
+
+#dw a.toc {
+  color: #436976;
+  text-decoration:none;
+}
+
+#dw a.toc:hover {
+  color: #000;
+  text-decoration:underline;
+}
+
+/* --------------------- footnotes -------------------------------- */
+
+#dw div.footnotes{
+  clear:both;
+  border-top: 1px solid #8cacbb;
+  padding-left: 1em;
+  margin-top: 1em;
+}
+
+#dw div.fn{
+  font-size:90%;
+}
+
+#dw a.fn_top{
+  vertical-align:super;
+  font-size:80%;
+}
+
+#dw a.fn_bot{
+  vertical-align:super;
+  font-size:80%;
+  font-weight:bold;
+}
+
+/* insitu-footnotes */
+#dw div.insitu-footnote {
+  font-size: 80%;
+  line-height: 1.2em;
+  border: 1px solid #8cacbb;
+  background: #eef3f8;
+  text-align: left;
+  padding: 4px;
+  max-width: 40%;    /* IE's width is handled in javascript */
+}
+
+/* overcome IE issue with one line code or file boxes which require h. scrolling */
+#dw * html .insitu-footnote pre.code, * html .insitu-footnote pre.file {
+  padding-bottom: 18px;
+}
+
+/* --------------------- Tables -------------------------------- */
+
+#dw table.inline td.okay {
+  background-color: #afa;
+  text-align: center;
+}
+
+#dw table.inline td.notokay {
+  background-color: #fcc;
+  text-align: center;
+}
+
+#dw table.inline {
+  background-color: #fff;
+  border-spacing: 0px;
+  border-collapse: collapse;
+}
+
+/* ------------- Page elements ----------------- */
+
+#dw span.user{
+/*  color: #ccc; */
+  color: #666;
+  font-size: 90%;
+}
+
+#dw li.minor {
+  color: #666;
+  font-style: italic;
+}
+
+/* embedded images */
+#dw img.media {
+  margin: 3px;
+}
+
+#dw img.medialeft {
+  border: 0;
+  float: left;
+  margin: 0 1.5em 0 0;
+}
+
+#dw img.mediaright {
+  border: 0;
+  float: right;
+  margin: 0 0 0 1.5em;
+}
+
+#dw img.mediacenter {
+  border: 0;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* smileys */
+#dw img.middle {
+  vertical-align: middle;
+}
+
+#dw acronym {
+  cursor: help;
+  border-bottom: 1px dotted #000;
+}
+
+/* general headline setup */
+#dw h1, #dw h2, #dw h3, #dw h4, #dw h5 {
+    color: Black;
+    background-color: transparent;
+    font-family: "Lucida Grande", Verdana, Lucida, Helvetica, Arial, sans-serif;
+    font-size: 100%;
+    font-weight: normal;
+    margin-left:    0;
+    margin-right:   0;
+    margin-top:     0;
+    margin-bottom:  1em;
+    padding-left:   0;
+    padding-right:  0;
+    padding-top:    0.5em;
+    padding-bottom: 0;
+    border-bottom: 1px solid #8cacbb;
+}
+
+/* special headlines */
+/*
+#dw h1 {font-size: 160%; margin-left: 0px; font-weight: bold;}
+#dw h2 {font-size: 150%; margin-left: 20px; font-weight: bold;}
+#dw h3 {font-size: 130%; margin-left: 40px; border-bottom: none; font-weight: bolder}
+#dw h4 {font-size: 115%; margin-left: 60px; border-bottom: none; font-weight: bolder}
+#dw h5 {font-size: 100%; margin-left: 80px; border-bottom: none; font-weight: bold;}
+*/
+
+#dw h1 {font-size: 160%; font-weight: bold;}
+#dw h2 {font-size: 140%; font-weight: bold; }
+#dw h3 {font-size: 130%; border-bottom: none; font-weight: bolder}
+#dw h4 {font-size: 115%; border-bottom: none; font-weight: bolder}
+#dw h5 {font-size: 100%; border-bottom: none; font-weight: bold;}
+
+/* indent different sections */
+/*
+#dw div.level1 {margin-left: 3px;}
+#dw div.level2 {margin-left: 23px;}
+#dw div.level3 {margin-left: 43px;}
+#dw div.level4 {margin-left: 63px;}
+#dw div.level5 {margin-left: 83px;}
+*/
+
+/* unordered lists */
+#dw ul {
+  line-height: 1.5em;
+  list-style-type: square;
+  margin: 0 0 0.5em 2em;
+  padding: 0;
+  color: #638c9c;
+  list-style-image: none;
+}
+
+/* ordered lists */
+#dw ol {
+  line-height: 1.5em;
+  margin: 0 0 0.5em 2em;
+  padding: 0;
+  color: #638c9c;
+  font-weight: bold;
+  list-style-image: none;
+}
+
+/* the list items overriding the ul/ol definition */
+#dw .li {
+  color: #000;
+  font-weight: normal;
+}
+
+#dw ol {list-style-type: decimal}
+#dw ol ol {list-style-type: upper-roman}
+#dw ol ol ol {list-style-type: lower-alpha}
+#dw ol ol ol ol {list-style-type: lower-greek}
+
+#dw li.open {
+  list-style-image: url(../lib/tpl/fsinfo/images/open.gif);
+    /*list-style-type: circle;*/
+}
+
+#dw li.closed {
+  list-style-image: url(../lib/tpl/fsinfo/images/closed.gif);
+    /*list-style-type: disc;*/
+}
+
+#dw blockquote {
+  border-left: 2px solid #8cacbb;
+  padding-left: 3px;
+  margin-left: 0;
+}
+
+/* code blocks by indention */
+#dw pre.pre {
+  font-size: 100%;
+  padding: 0.5em;
+  border: 1px dashed #8cacbb;
+  color: Black;
+  background-color: #f7f9fa;
+  overflow: auto;
+}
+
+/* code blocks by code tag */
+#dw pre.code {
+  font-size: 100%;
+  padding: 0.5em;
+  border: 1px dashed #8cacbb;
+  color: Black;
+  background-color: #f7f9fa;
+  overflow: auto;
+}
+
+/* inline code words */
+#dw code {
+  font-size: 80%;
+}
+
+/* code blocks by file tag */
+#dw pre.file {
+  font-size: 100%;
+  padding: 0.5em;
+  border: 1px dashed #8cacbb;
+  color: Black;
+  background-color: #dee7ec;
+  overflow: auto;
+}
+
+/* inline tables */
+
+#dw table.inline th {
+  padding: 3px;
+  border: 1px solid #8cacbb;
+  background-color: #dee7ec;
+  text-align: left;
+}
+
+#dw table.inline td {
+  padding: 3px;
+  border: 1px solid #8cacbb;
+}
+</style>
+<link rel='stylesheet' id='eme_stylesheet-css'  href='../wp-content/plugins/events-made-easy/events_manager-ver=3.6.css' type='text/css' media='all' />
+<link rel='stylesheet' id='A2A_SHARE_SAVE-css'  href='../wp-content/plugins/add-to-any/addtoany.min-ver=1.4.css' type='text/css' media='all' />
+<script type='text/javascript' src='../wp-includes/js/jquery/jquery.js?ver=1.10.2'></script>
+<script type='text/javascript' src='../wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<script type='text/javascript' src='../wp-content/plugins/google-analyticator/external-tracking.min.js?ver=6.4.5'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../xmlrpc-rsd.php.html" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 3.6" />
+
+<script type="text/javascript"><!--
+var a2a_config=a2a_config||{},wpa2a={done:false,html_done:false,script_ready:false,script_load:function(){var a=document.createElement('script'),s=document.getElementsByTagName('script')[0];a.type='text/javascript';a.async=true;a.src='http://static.addtoany.com/menu/page.js';s.parentNode.insertBefore(a,s);wpa2a.script_load=function(){};},script_onready:function(){if(a2a.type=='page'){wpa2a.script_ready=true;if(wpa2a.html_done)wpa2a.init();}},init:function(){for(var i=0,el,target,targets=wpa2a.targets,length=targets.length;i<length;i++){el=document.getElementById('wpa2a_'+(i+1));target=targets[i];a2a_config.linkname=target.title;a2a_config.linkurl=target.url;if(el)a2a.init('page',{target:el});wpa2a.done=true;}}};a2a_config.tracking_callback=['ready',wpa2a.script_onready];
+//--></script>
+<meta name="_awb_version" content="2.0.3" /><link rel="stylesheet" href="../wp-content/themes/arras/css/styles/default.css" type="text/css" media="screen,projection" /><link rel="stylesheet" href="../wp-content/themes/arras/css/layouts/2c-r-fixed.css" type="text/css" />
+<!-- Generated by Arras WP Theme -->
+<style type="text/css">
+	.posts-default li  { width: 205px; height: 225px; }
+	.posts-default img, .posts-default .entry-thumbnails-link { width: 195px; height: 110px; }
+	.posts-default .entry-meta { width: 195px; }
+	.posts-default .entry-thumbnails { width: 205px; height: 120px; }
+			.posts-quick .entry-thumbnails img { width: 115px; height: 115px; }
+		.posts-quick .entry-meta { width: 115px; }
+			.featured { height: 260px; }
+	.featured-article { width: 640px; height: 250px; }
+	.featured-article img { width: 640px; height: 250px; }
+	#controls { width: 610px; top: 110px; }
+	#controls .next { left: 610px; }
+	.featured-entry { height: 84px; top: -84px; }
+	.featured-slideshow-inner { height: 250px }
+		.featured-stories-summary  { margin-left: 51px; }
+	.single .post .entry-photo img, .single-post .entry-photo img  { width: 620px; height: 250px; }
+		.footer-sidebar  { width: 920px; }
+	</style>
+	<script type="text/javascript">
+	jQuery(document).ready(function($) {
+
+$('.multi-sidebar').tabs();
+
+$('.sf-menu').superfish({autoArrows: true, speed: 'fast', dropShadows: 'true'});
+
+$('#commentform').validate();
+
+
+});	</script>
+	<!--[if IE]>
+<style type="text/css">
+.addtoany_list a img{filter:alpha(opacity=70)}
+.addtoany_list a:hover img,.addtoany_list a.addtoany_share_save img{filter:alpha(opacity=100)}
+</style>
+<![endif]-->
+<link rel="stylesheet" href="../wp-content/themes/arras/user.css" type="text/css" media="screen,projection" /><!-- Google Analytics Tracking by Google Analyticator 6.4.5: http://www.videousermanuals.com/google-analyticator/ -->
+<script type="text/javascript">
+	var analyticsFileTypes = [''];
+	var analyticsEventTracking = 'enabled';
+</script>
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-169675-4']);
+        _gaq.push(['_addDevId', 'i9k95']); // Google Analyticator App ID with Google 
+        
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>World Music Central.org</title>
+
+
+<link rel="alternate" type="application/rss+xml" href="../feed/index.html" title="World Music Central.org latest posts" />
+
+<link rel="alternate" type="application/rss+xml" href="../comments/feed/index.html" title="World Music Central.org latest comments" />
+
+<link rel="pingback" href="../xmlrpc.php.html" />
+
+<link rel="shortcut icon" href="../favicon.ico" />
+
+
+<style type="text/css">
+/* --- reset some elements --- */
+
+#dw ul,ol { list-style:none }
+
+#dw ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,p,blockquote,fieldset,input { margin:0; padding:0 }
+
+/* --- Basic Stylesheet for DokuWiki content --- */
+
+#dw h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+#dw h1 a {
+  color: black;
+}
+
+/* ---------- table of contents ------------------- */
+
+#dw div.toc {
+  margin-left: 2em;
+  margin-top: 1.2em;
+  margin-bottom: 0;
+  float:right;
+  width: 200px;
+  font-size: 80%;
+  padding-top:5px;
+}
+
+#dw div.tocheader {
+  padding: 3px;
+  border: 1px solid #8cacbb;
+  background-color: #dee7ec;
+  text-align: left;
+  font-weight:bold;
+  margin-bottom: 2px;
+}
+
+#dw div.tocheader img {
+  width:0.8em;
+  height:0.8em;
+  margin-top:0.3em;
+  margin-right:3px;
+  float:right;
+  cursor: pointer;
+}
+
+#dw #toc__inside {
+  border: 1px solid #8cacbb;
+  background-color: #fff;
+  text-align: left;
+  padding-top: 0.5em;
+  padding-bottom: 0.7em;
+}
+
+#dw ul.toc {
+  list-style-type: none;
+  list-style-image: none;
+  line-height: 1.2em;
+  margin: 0;
+  padding: 0;
+  padding-left: 1em;
+}
+
+#dw ul.toc li {
+  background: transparent url(../lib/tpl/fsinfo/images/tocdot2.gif) 0 0.6em no-repeat;
+  padding-left:0.4em;
+}
+
+#dw ul.toc li.clear {
+  background-image: none;
+  padding-left:0.4em;
+}
+
+#dw a.toc {
+  color: #436976;
+  text-decoration:none;
+}
+
+#dw a.toc:hover {
+  color: #000;
+  text-decoration:underline;
+}
+
+/* --------------------- footnotes -------------------------------- */
+
+#dw div.footnotes{
+  clear:both;
+  border-top: 1px solid #8cacbb;
+  padding-left: 1em;
+  margin-top: 1em;
+}
+
+#dw div.fn{
+  font-size:90%;
+}
+
+#dw a.fn_top{
+  vertical-align:super;
+  font-size:80%;
+}
+
+#dw a.fn_bot{
+  vertical-align:super;
+  font-size:80%;
+  font-weight:bold;
+}
+
+/* insitu-footnotes */
+#dw div.insitu-footnote {
+  font-size: 80%;
+  line-height: 1.2em;
+  border: 1px solid #8cacbb;
+  background: #eef3f8;
+  text-align: left;
+  padding: 4px;
+  max-width: 40%;    /* IE's width is handled in javascript */
+}
+
+/* overcome IE issue with one line code or file boxes which require h. scrolling */
+#dw * html .insitu-footnote pre.code, * html .insitu-footnote pre.file {
+  padding-bottom: 18px;
+}
+
+/* --------------------- Tables -------------------------------- */
+
+#dw table.inline td.okay {
+  background-color: #afa;
+  text-align: center;
+}
+
+#dw table.inline td.notokay {
+  background-color: #fcc;
+  text-align: center;
+}
+
+#dw table.inline {
+  background-color: #fff;
+  border-spacing: 0px;
+  border-collapse: collapse;
+}
+
+/* ------------- Page elements ----------------- */
+
+#dw span.user{
+/*  color: #ccc; */
+  color: #666;
+  font-size: 90%;
+}
+
+#dw li.minor {
+  color: #666;
+  font-style: italic;
+}
+
+/* embedded images */
+#dw img.media {
+  margin: 3px;
+}
+
+#dw img.medialeft {
+  border: 0;
+  float: left;
+  margin: 0 1.5em 0 0;
+}
+
+#dw img.mediaright {
+  border: 0;
+  float: right;
+  margin: 0 0 0 1.5em;
+}
+
+#dw img.mediacenter {
+  border: 0;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* smileys */
+#dw img.middle {
+  vertical-align: middle;
+}
+
+#dw acronym {
+  cursor: help;
+  border-bottom: 1px dotted #000;
+}
+
+/* general headline setup */
+#dw h1, #dw h2, #dw h3, #dw h4, #dw h5 {
+    color: Black;
+    background-color: transparent;
+    font-family: "Lucida Grande", Verdana, Lucida, Helvetica, Arial, sans-serif;
+    font-size: 100%;
+    font-weight: normal;
+    margin-left:    0;
+    margin-right:   0;
+    margin-top:     0;
+    margin-bottom:  1em;
+    padding-left:   0;
+    padding-right:  0;
+    padding-top:    0.5em;
+    padding-bottom: 0;
+    border-bottom: 1px solid #8cacbb;
+}
+
+/* special headlines */
+/*
+#dw h1 {font-size: 160%; margin-left: 0px; font-weight: bold;}
+#dw h2 {font-size: 150%; margin-left: 20px; font-weight: bold;}
+#dw h3 {font-size: 130%; margin-left: 40px; border-bottom: none; font-weight: bolder}
+#dw h4 {font-size: 115%; margin-left: 60px; border-bottom: none; font-weight: bolder}
+#dw h5 {font-size: 100%; margin-left: 80px; border-bottom: none; font-weight: bold;}
+*/
+
+#dw h1 {font-size: 160%; font-weight: bold;}
+#dw h2 {font-size: 140%; font-weight: bold; }
+#dw h3 {font-size: 130%; border-bottom: none; font-weight: bolder}
+#dw h4 {font-size: 115%; border-bottom: none; font-weight: bolder}
+#dw h5 {font-size: 100%; border-bottom: none; font-weight: bold;}
+
+/* indent different sections */
+/*
+#dw div.level1 {margin-left: 3px;}
+#dw div.level2 {margin-left: 23px;}
+#dw div.level3 {margin-left: 43px;}
+#dw div.level4 {margin-left: 63px;}
+#dw div.level5 {margin-left: 83px;}
+*/
+
+/* unordered lists */
+#dw ul {
+  line-height: 1.5em;
+  list-style-type: square;
+  margin: 0 0 0.5em 2em;
+  padding: 0;
+  color: #638c9c;
+  list-style-image: none;
+}
+
+/* ordered lists */
+#dw ol {
+  line-height: 1.5em;
+  margin: 0 0 0.5em 2em;
+  padding: 0;
+  color: #638c9c;
+  font-weight: bold;
+  list-style-image: none;
+}
+
+/* the list items overriding the ul/ol definition */
+#dw .li {
+  color: #000;
+  font-weight: normal;
+}
+
+#dw ol {list-style-type: decimal}
+#dw ol ol {list-style-type: upper-roman}
+#dw ol ol ol {list-style-type: lower-alpha}
+#dw ol ol ol ol {list-style-type: lower-greek}
+
+#dw li.open {
+  list-style-image: url(../lib/tpl/fsinfo/images/open.gif);
+    /*list-style-type: circle;*/
+}
+
+#dw li.closed {
+  list-style-image: url(../lib/tpl/fsinfo/images/closed.gif);
+    /*list-style-type: disc;*/
+}
+
+#dw blockquote {
+  border-left: 2px solid #8cacbb;
+  padding-left: 3px;
+  margin-left: 0;
+}
+
+/* code blocks by indention */
+#dw pre.pre {
+  font-size: 100%;
+  padding: 0.5em;
+  border: 1px dashed #8cacbb;
+  color: Black;
+  background-color: #f7f9fa;
+  overflow: auto;
+}
+
+/* code blocks by code tag */
+#dw pre.code {
+  font-size: 100%;
+  padding: 0.5em;
+  border: 1px dashed #8cacbb;
+  color: Black;
+  background-color: #f7f9fa;
+  overflow: auto;
+}
+
+/* inline code words */
+#dw code {
+  font-size: 80%;
+}
+
+/* code blocks by file tag */
+#dw pre.file {
+  font-size: 100%;
+  padding: 0.5em;
+  border: 1px dashed #8cacbb;
+  color: Black;
+  background-color: #dee7ec;
+  overflow: auto;
+}
+
+/* inline tables */
+
+#dw table.inline th {
+  padding: 3px;
+  border: 1px solid #8cacbb;
+  background-color: #dee7ec;
+  text-align: left;
+}
+
+#dw table.inline td {
+  padding: 3px;
+  border: 1px solid #8cacbb;
+}
+</style>
+<script type='text/javascript' src='../wp-content/themes/arras/js/superfish/hoverIntent.js'></script>
+<script type='text/javascript' src='../wp-content/themes/arras/js/superfish/superfish.js'></script>
+<script type='text/javascript' src='../wp-includes/js/comment-reply.min.js?ver=3.6'></script>
+<script type='text/javascript' src='../wp-content/themes/arras/js/jquery.validate.min.js'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../xmlrpc-rsd.php.html" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 3.6" />
+
+<script type="text/javascript"><!--
+var a2a_config=a2a_config||{},wpa2a={done:false,html_done:false,script_ready:false,script_load:function(){var a=document.createElement('script'),s=document.getElementsByTagName('script')[0];a.type='text/javascript';a.async=true;a.src='/page.js';s.parentNode.insertBefore(a,s);wpa2a.script_load=function(){};},script_onready:function(){if(a2a.type=='page'){wpa2a.script_ready=true;if(wpa2a.html_done)wpa2a.init();}},init:function(){for(var i=0,el,target,targets=wpa2a.targets,length=targets.length;i<length;i++){el=document.getElementById('wpa2a_'+(i+1));target=targets[i];a2a_config.linkname=target.title;a2a_config.linkurl=target.url;if(el)a2a.init('page',{target:el});wpa2a.done=true;}}};a2a_config.tracking_callback=['ready',wpa2a.script_onready];
+//--></script>
+<meta name="_awb_version" content="2.0.3" /><link rel="stylesheet" href="../wp-content/themes/arras/css/styles/default.css" type="text/css" media="screen,projection" /><link rel="stylesheet" href="../wp-content/themes/arras/css/layouts/2c-r-fixed.css" type="text/css" />
+<!-- Generated by Arras WP Theme -->
+<style type="text/css">
+	.posts-default li  { width: 205px; height: 225px; }
+	.posts-default img, .posts-default .entry-thumbnails-link { width: 195px; height: 110px; }
+	.posts-default .entry-meta { width: 195px; }
+	.posts-default .entry-thumbnails { width: 205px; height: 120px; }
+			.posts-quick .entry-thumbnails img { width: 115px; height: 115px; }
+		.posts-quick .entry-meta { width: 115px; }
+			.featured { height: 260px; }
+	.featured-article { width: 640px; height: 250px; }
+	.featured-article img { width: 640px; height: 250px; }
+	#controls { width: 610px; top: 110px; }
+	#controls .next { left: 610px; }
+	.featured-entry { height: 84px; top: -84px; }
+	.featured-slideshow-inner { height: 250px }
+		.featured-stories-summary  { margin-left: 51px; }
+	.single .post .entry-photo img, .single-post .entry-photo img  { width: 620px; height: 250px; }
+		.footer-sidebar  { width: 920px; }
+	</style>
+	<script type="text/javascript">
+	jQuery(document).ready(function($) {
+
+$('.multi-sidebar').tabs();
+
+$('.sf-menu').superfish({autoArrows: true, speed: 'fast', dropShadows: 'true'});
+
+$('#commentform').validate();
+
+
+});	</script>
+	<!--[if IE]>
+<style type="text/css">
+.addtoany_list a img{filter:alpha(opacity=70)}
+.addtoany_list a:hover img,.addtoany_list a.addtoany_share_save img{filter:alpha(opacity=100)}
+</style>
+<![endif]-->
+<link rel="stylesheet" href="../wp-content/themes/arras/user.css" type="text/css" media="screen,projection" /><!-- Google Analytics Tracking by Google Analyticator 6.4.5: http://www.videousermanuals.com/google-analyticator/ -->
+<script type="text/javascript">
+	var analyticsFileTypes = [''];
+	var analyticsEventTracking = 'enabled';
+</script>
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-169675-4']);
+        _gaq.push(['_addDevId', 'i9k95']); // Google Analyticator App ID with Google 
+        
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+</head>
+
+<body class="page page-id-0 page-parent page-template-default layout-2c-r-fixed no-js style-default">
+<script type="text/javascript">
+//<![CDATA[
+(function(){
+var c = document.body.className;
+c = c.replace(/no-js/, 'js');
+document.body.className = c;
+})();
+//]]>
+</script>
+
+<div id="top-menu" class="clearfix">
+	</div><!-- #top-menu -->
+
+<div id="header"><div align="center"><script type="text/javascript"><!--
+google_ad_client = "pub-7027070946238159";
+/* 728x90, Top Banner */
+google_ad_slot = "9335358437";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+	<div id="branding" class="clearfix">
+	<div class="logo">
+				<span class="blog-name"><a href="../index.html">World Music Central.org</a></span>
+		<img style="float:left; padding: 0 5px 0 0;" src="../wp-content/themes/wmc-magazeen/images/bull.png"/><span class="blog-description">Your Connection to World Music</span>
+			</div>
+	<div id="searchbar"><form method="get" class="searchform clearfix" action="http://worldmusiccentral.org/">
+ <input type="text" value="Search..." name="s" class="s" onfocus="this.value=''" />
+ <input type="submit" class="searchsubmit" value="Search" title="Search World Music Central.org" />
+</form>
+</div>
+	</div><!-- #branding -->
+</div><!-- #header -->
+
+<div id="nav">
+	<div id="nav-content" class="clearfix">
+	<div class="menu-main-container"><ul id="menu-main" class="sf-menu menu clearfix"><li id="menu-item-6394" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-6394"><a href="../index.html">Home</a></li>
+<li id="menu-item-6401" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6401"><a href="../about/index.html">About</a></li>
+<li id="menu-item-6454" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6454"><a href="#">World Music Resources</a>
+<ul class="sub-menu">
+	<li id="menu-item-6455" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6455"><a href="artist_index.php.html">Artists Database</a></li>
+	<li id="menu-item-6462" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6462"><a href="http://musicwikicentral.com/world_music_festivals">Festivals</a></li>
+	<li id="menu-item-6467" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6467"><a href="http://musicwikicentral.com/travel_guides">Travel Guides</a></li>
+	<li id="menu-item-6469" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6469"><a href="http://musicwikicentral.com/world_music_genres">Musical Genres</a></li>
+	<li id="menu-item-6468" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6468"><a href="http://musicwikicentral.com/musical_instruments">Musical Instruments</a></li>
+	<li id="menu-item-6475" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6475"><a href="http://musicwikicentral.com/showcases">Showcases</a></li>
+	<li id="menu-item-6470" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6470"><a href="http://musicwikicentral.com/world_music_venues">Venues</a></li>
+	<li id="menu-item-6472" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6472"><a href="http://musicwikicentral.com/record_companies">Record Companies</a></li>
+	<li id="menu-item-6466" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6466"><a href="http://musicwikicentral.com/booking_agents">Booking Agents</a></li>
+	<li id="menu-item-6474" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6474"><a href="http://musicwikicentral.com/world_music_press">World Music Press</a></li>
+	<li id="menu-item-6477" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6477"><a href="http://musicwikicentral.com/ethnomusicology">Ethnomusicology</a></li>
+	<li id="menu-item-6473" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6473"><a href="http://musicwikicentral.com/music_organizations">Music Organizations</a></li>
+</ul>
+</li>
+<li id="menu-item-6390" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6390"><a href="#">Topics</a>
+<ul class="sub-menu">
+	<li id="menu-item-6369" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6369"><a href="../category/archive/index.html">archive</a></li>
+	<li id="menu-item-6370" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6370"><a href="../category/articles/index.html">Articles</a></li>
+	<li id="menu-item-6371" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6371"><a href="../category/awards/index.html">Awards</a></li>
+	<li id="menu-item-6372" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6372"><a href="../category/book-reviews/index.html">Book Reviews</a></li>
+	<li id="menu-item-6373" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6373"><a href="../category/cd-reviews/index.html">CD Reviews</a></li>
+	<li id="menu-item-6374" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6374"><a href="../category/concert-reviews/index.html">Concert reviews</a></li>
+	<li id="menu-item-6375" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6375"><a href="../category/conferences/index.html">Conferences</a></li>
+	<li id="menu-item-6376" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6376"><a href="../category/editorials/index.html">Editorials</a></li>
+	<li id="menu-item-6377" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6377"><a href="../category/events/index.html">Events</a></li>
+	<li id="menu-item-6378" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6378"><a href="../category/film-reviews/index.html">Film Reviews</a></li>
+	<li id="menu-item-6379" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6379"><a href="../category/general-news/index.html">General News</a></li>
+	<li id="menu-item-6380" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6380"><a href="../category/interviews/index.html">Interviews</a></li>
+	<li id="menu-item-6381" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6381"><a href="../category/loop-collections/index.html">Loop Collections</a></li>
+	<li id="menu-item-6382" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6382"><a href="../category/new-books/index.html">New Books</a></li>
+	<li id="menu-item-6383" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6383"><a href="../category/new-cds/index.html">New CDs</a></li>
+	<li id="menu-item-6384" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6384"><a href="../category/new-films/index.html">New Films</a></li>
+	<li id="menu-item-6385" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6385"><a href="../category/new-releases/index.html">New Releases</a></li>
+	<li id="menu-item-6386" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6386"><a href="../category/obituaries/index.html">Obituaries</a></li>
+	<li id="menu-item-6387" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6387"><a href="../category/tour-announcements/index.html">Tour Announcements</a></li>
+	<li id="menu-item-6388" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6388"><a href="../category/tradeshows/index.html">Tradeshows</a></li>
+	<li id="menu-item-6389" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6389"><a href="../category/uncategorized/index.html">Uncategorized</a></li>
+</ul>
+</li>
+<li id="menu-item-6392" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6392"><a href="../events/index.html">Calendar</a></li>
+<li id="menu-item-6400" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6400"><a href="../store/index.html">Store</a></li>
+<li id="menu-item-6724" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6724"><a href="../contact-us/index.html">Contact Us</a></li>
+</ul></div>		<ul class="quick-nav clearfix">
+					<li><a id="rss" title="World Music Central.org RSS Feed" href="../feed/index.html">RSS Feed</a></li>
+				
+						
+							<li><a id="facebook" title="World Music Central.org Facebook" href="http://www.facebook.com/pages/World-Music-Central/149036898455901" target="_blank">Facebook</a></li>
+				
+			</ul>
+	</div><!-- #nav-content -->
+</div><!-- #nav -->
+
+<div id="wrapper">
+	
+	  
+	<div id="main" class="clearfix">
+    <div id="container" class="clearfix">
+  <head>
+    <title>Bill Laswell - Artist Page</title>
+  </head>
+
+  <body> 
+  
+  <div id="artistpage">
+  
+  <div style="float:right;">
+  
+  <script type="text/javascript"><!--
+google_ad_client = "pub-7027070946238159";
+/* 160x600, created 12/6/08 */
+google_ad_slot = "6830638066";
+google_ad_width = 160;
+google_ad_height = 600;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+
+</div>
+  
+  
+  
+  	<table>
+
+  
+<tr><td align="center" colspan="2" width="100%">
+<font size=+1><b>Bill Laswell</b></font> 
+<hr></td></tr>
+
+<tr><td align="center" colspan="2" width="100%">
+<a href="#Genres">Similar Music</a>
+<hr></td></tr>
+    <tr>
+      <td colspan="2" width="100%">
+		<a name="Biography"><b>Biography</b></a>:
+	  </td>
+    </tr>
+    <tr>
+      <td colspan="2" width="100%">&nbsp;</td>
+    </tr>
+
+    <tr>
+      <td width="3%"></td>
+
+      <td width="97%">
+	  
+	<p align=center><img border="0" align="center"  src="../staticpages/images/bill-lasswell.jpg"></p>With over 20 years' experience as a touring musician and composer and nearly 
+300 albums to his credit, producer and bassist Bill Laswell has collaborated 
+with some of the most illustrious names in music across all genres and 
+boundaries, including Herbie Hancock, Mick Jagger, Laurie Anderson, Pharoah 
+Sanders, Yoko Ono, Iggy Pop, The Last Poets, Buddy Miles, George Clinton, Bootsy 
+Collins, Afrika Bambaataa, Tony Williams, Public Image Ltd., 
+<a href="http://www.worldmusiccentral.org/artists/artist_page.php?id=1932">Peter 
+Gabriel</a> and 
+countless others. </p>
+<p>He has also organized and produced recordings with master musicians from 
+around the world, having logged extensive travel in Morocco and West Africa, 
+India, Japan, Cuba, Australia, Brazil, and numerous other locations throughout 
+Asia, Africa and South America. </p>
+<p>In the United States and abroad, his name has become synonymous with a 
+commitment to creativity, integrity and daring -- whether in the recording 
+studio or on stage -- that has earned him the respect (and often lifelong 
+friendship) of all the artists with whom he has worked.<br>
+<br>
+Bill Laswell was born in Salem, Illinois, in 1955 and fell into music originally 
+for social rather than aesthetic reasons; he has often been quoted as saying &quot;<i>a 
+band was like a gang</i>.&quot; He started on guitar but soon switched to electric 
+bass, and in his earliest groups played soul and funk music inspired by the 
+likes of James Brown and Johnny &quot;Guitar&quot; Watson. </p>
+<p>In the early '70s he toured the &quot;chitlin circuit&quot; with cover bands that 
+played Al Green, O'Jays and Meters material, while back home he was constantly 
+making pilgrimages to Detroit for live performances of groups as diverse as The 
+Stooges, The MC5 and Funkadelic -- sometimes all on the same stage. Laswell was 
+deep into Black music but was also absorbing the tenets of protopunk and rock; 
+the rhythmic assurance and aggressiveness that are the cornerstone of virtually 
+all his work have their genesis in this early training. Early exposure to the 
+music of Ornette Coleman, Albert Ayler, John Coltrane and Miles Davis also 
+sparked in him a devoted interest in improvisation and the possibilities of real 
+interaction with other musicians.<br>
+<br>
+Laswell eventually landed in New York in 1979 and almost immediately set out to 
+change the climate of live and recorded music. He became an integral fixture in 
+the growing downtown avant garde scene (dubbed &quot;no wave&quot; music by the press) 
+with John Zorn, James Blood Ulmer, Fred Frith, Olu Dara, Billy Bang and many 
+others, and launched a recording career that began with Brian Eno's <strong>
+<a href="http://www.amazon.com/exec/obidos/ASIN/B0002PZVHK/musidelmund-20/002-0922219-4836863?_encoding=UTF8&camp=1789&link_code=xm2">
+Ambient 4: On Land</a></strong> and 
+continued with the Material collective he co-founded with keyboardist Michael Beinhorn and drummer Fred Maher, as well as other groups such as Massacre (with 
+Fred Frith) and Daevid Allen's &quot;avant-fusion&quot; band Gong. </p>
+<p>By 1984, after only five years in New York, Laswell had reached the first of 
+many pinnacles in his career by producing the first two of three revolutionary 
+electronic albums for Herbie Hancock -- the hip-hop fusion classic <strong>
+<a href="http://www.amazon.com/exec/obidos/ASIN/B00004HYL8/musidelmund-20/002-0922219-4836863?_encoding=UTF8&camp=1789&link_code=xm2">
+Future Shock</a></strong>, 
+which yielded the worldwide dancefloor and MTV hit &quot;Rockit,&quot; and the 
+Grammy-winning follow-up <strong>
+<a href="http://www.amazon.com/exec/obidos/ASIN/B00004HYLC/musidelmund-20/002-0922219-4836863?_encoding=UTF8&camp=1789&link_code=xm2">
+Sound-System</a></strong>. (<strong><a href="http://www.amazon.com/exec/obidos/ASIN/B00004HYLD/musidelmund-20/002-0922219-4836863?_encoding=UTF8&camp=1789&link_code=xm2">Perfect 
+Machine</a></strong>, the third of the 
+triumvirate, would follow in 1988.)<br>
+<br>
+<strong>
+<a href="http://www.amazon.com/exec/obidos/ASIN/B00004HYL8/musidelmund-20/002-0922219-4836863?_encoding=UTF8&camp=1789&link_code=xm2">
+Future Shock</a></strong> was a monumental foray into hip-hop, which in 1983 was for the most 
+part a self-contained and even consciously guarded movement. The album featured 
+turntable improvisations by Grandmixer D.ST, who was in on the ground floor of 
+the founding of Afrika Bambaataa's Universal Zulu Nation in the Bronx, and who 
+later that year would perform live with Laswell's group Material at the Montreux 
+Jazz Festival. Shortly thereafter, Bambaataa was recruited to cover The MC5's 
+&quot;Kick Out The Jams,&quot; and a fruitful collaborative period between Bam and Laswell 
+was set in motion. The partnership sparked numerous Soulsonic Force-related 
+projects, including the club hit &quot;World Destruction&quot; (with, of all people, John 
+Lydon on vocals) and albums like Shango Funk Theology and The Light, the latter 
+featuring guest appearances from George Clinton, Bootsy Collins and Bernie 
+Worrell of Parliament-Funkadelic fame. Few fans of the music today are aware of 
+the fact that Laswell was one of the main catalysts of a real funk and hip-hop 
+fusion, and that he was executing it on stage before anyone had even conceived 
+of adding a DJ to a live unit.<br>
+<br>
+Laswell quickly became the most sought-after producer of the moment, but after a 
+string of high-profile albums that included Mick Jagger's She's The Boss, Public 
+Image Ltd's Album and production or mixing work for Yoko Ono, Laurie Anderson, 
+Peter Gabriel, Iggy Pop, Motorhead and many others, he began to move away from 
+&quot;the business&quot; and the corporate constrictions that come with success in order 
+to explore entirely new musical directions. </p>
+<p>His work with African musicians for the Celluloid label was one path in 
+evidence here, as was his immersion in reggae rhythms on Sly &amp; Robbie's 
+post-Black Uhuru releases (which include <strong>
+<a href="http://www.amazon.com/exec/obidos/ASIN/B00009ATJJ/musidelmund-20/002-0922219-4836863?_encoding=UTF8&camp=1789&link_code=xm2">
+Language Barrier</a></strong> in 1985 and the 
+punk-funk classic <strong>
+<a href="http://www.amazon.com/exec/obidos/ASIN/B000001FV6/musidelmund-20/002-0922219-4836863?_encoding=UTF8&camp=1789&link_code=xm2">
+Rhythm Killers</a></strong> in 1987) and Yellowman's breakthrough <strong>
+<a href="http://www.amazon.com/exec/obidos/ASIN/B0000025ZL/musidelmund-20/002-0922219-4836863?_encoding=UTF8&camp=1789&link_code=xm2">
+King Yellowman</a></strong>. For projects like these, Laswell was vilified by critics as a 
+&quot;cultural bandit&quot; and a &quot;destroyer&quot; of African musical traditions; it was never 
+even acknowledged that artists like 
+<a href="http://www.worldmusiccentral.org/artists/artist_page.php?id=1067">Fela 
+Kuti</a>&nbsp; and
+<a href="http://www.worldmusiccentral.org/artists/artist_page.php?id=1007">anu 
+Dibango</a> wanted to make 
+the leap into Western technologies, and that Laswell was the only producer 
+equipped to provide this access. Years later, computers and drum machines 
+inevitably made their way into numerous African, Jamaican, Middle Eastern and 
+Asian styles like dancehall, soukous, rai and bhangra -- thus answering the 
+&quot;purist&quot; argument.<br>
+<br>
+While all this was happening, Laswell still found time to advance his pursuit of 
+what had drawn him to New York in the first place -- the energy of group 
+improvisation and the potential of creative &quot;collisions&quot; in live musicianship. 
+Alongside the r&amp;b, funk and world music-influenced Material projects <strong>
+<a href="http://www.amazon.com/exec/obidos/ASIN/B000003BIY/musidelmund-20/002-0922219-4836863?_encoding=UTF8&camp=1789&link_code=xm2">
+Memory Serves</a> </strong>and <strong>
+<a href="http://www.amazon.com/exec/obidos/ASIN/B00000DBHI/musidelmund-20/002-0922219-4836863?_encoding=UTF8&camp=1789&link_code=xm2">
+One Down</a></strong>, he displayed a more aggressive edge on bass in groups like 
+Painkiller (with John Zorn) and the explosive freelance outfit Last Exit (with 
+saxophonist Peter Brotzmann, drummer Ronald Shannon Jackson, and guitar great 
+Sonny Sharrock). The aftermath of a Last Exit show in Europe was something akin 
+to scorched earth, with jazz critics and avant garde fans alike shaking their 
+heads in disbelief. The group released a series of acclaimed albums before 
+calling it quits for reasons, according to Sharrock, that had to do with 
+&quot;<i>keeping a fresh approach to the music; we felt that after being together for so 
+long we were in danger of repeating ourselves, which is never what the group was 
+about</i>.&quot;<br>
+<br>
+In 1990, in a partnership with Island Records founder Chris Blackwell, Laswell 
+created the Axiom label and opened his Greenpoint Studio in Brooklyn (now 
+relocated to Orange Music Sound Studios in New Jersey). Both the imprint and the 
+studio itself have been a magnet for some of the most innovative artists on the 
+planet, including composer/arranger Henry Threadgill, jazz giants and Coltrane 
+acolytes Pharoah Sanders and Elvin Jones, beat godfather William S. Burroughs, 
+Miles Davis alumni Tony Williams, Wayne Shorter and Herbie Hancock, ex-Cream 
+drummer Ginger Baker, and some of the more illustrious emissaries of funk and 
+hip-hop such as George Clinton, Bootsy Collins, Buddy Miles, Bernie Worrell, the 
+Jungle Brothers, the Bomb Squad (Hank and Keith Shocklee, the production team 
+behind Public Enemy), and Umar Bin Hassan and Abiodun Oyewole of the original 
+Last Poets.<br>
+<br>
+Numerous Axiom projects have been realized with musicians from around the world, 
+including the Master Musicians of Jajouka (Morocco), the Mandinka and Fulani 
+drummers of Gambia, the Gnawa musicians of Essaouira and Marrakesh (Morocco), 
+the Olodum drumming ensemble (Brazil), and solo artists such as tabla master 
+Zakir Hussain (India), vocalist and composer Liu Sola (China), violinists L. 
+Shankar (India) and Simon Shaheen (Palestine), kora player Foday Musa Suso 
+(Gambia), percussionist Aiyb Dieng (Senegal), and many more. While Laswell has 
+always maintained a keen interest in working with musicians in their own 
+environment -- particularly in Morocco and West Africa -- these are more than 
+mere &quot;field recordings&quot;. Using state-of-the-art multi-tracking techniques, 
+Laswell is able to capture the live energy of a location and translate it into 
+an even larger sonic experience from behind the mixing board.<br>
+<br>
+Starting in late 1994, Axiom began a series of label-defining releases that 
+represented a new approach to certain &quot;genres&quot; in music. The first was the Axiom 
+Ambient project <strong>
+<a href="http://www.amazon.com/exec/obidos/ASIN/B000000GB4/musidelmund-20/002-0922219-4836863?_encoding=UTF8&camp=1789&link_code=xm2">
+Lost in Translation</a></strong>, featuring Laswell's studio 
+reconstructions of the Axiom catalog and contributions from UK ambient scholars 
+The Orb, as well as Tokyo-born Tetsu Inoue and New York DJ Terre Thaemlitz. 
+Axiom Funk's <strong>
+<a href="http://www.amazon.com/exec/obidos/ASIN/B000000GB6/musidelmund-20/002-0922219-4836863?_encoding=UTF8&camp=1789&link_code=xm2">
+Funkcronomicon</a></strong> (from 1995) is a raucous exploration of postmodern 
+funk, with George Clinton, Sly Stone, Bootsy Collins and various Parliament-Funkadelic 
+alumni, including the late Eddie Hazel's last recorded works. Releases for 1996 
+included Altered Beats, a turntable-based hip-hop fugue featuring DXT, DJ Krush, 
+New Kingdom, Prince Paul, Material, DJs Rob Swift, Q-Bert and more; and the 
+Axiom Dub collection Mysteries of Creation, with revolutionary new tracks from 
+Sly &amp; Robbie, The Orb, Adrian Sherwood and Dub Syndicate, Mad Professor and many 
+others.<br>
+<br>
+In 1997 Laswell furthered his reputation for innovation (and alleged 
+controversy) by exploring the tape vaults of two icons of modern music -- Miles 
+Davis and 
+<a href="http://www.worldmusiccentral.org/artists/artist_page.php?id=744">Bob 
+Marley</a>. Emerging with original source material -- some of it 
+previously unreleased -- he essentially uses the recording studio as an 
+instrument of improvisation to construct radically different remixes of 
+selections from Miles Davis' electric work (originally recorded from 1969 to 
+1974), and Bob Marley's studio work with the Wailers (from 1973 to 1979). The 
+resulting albums, <strong>
+<a href="http://www.amazon.com/exec/obidos/ASIN/B0000062GA/musidelmund-20/002-0922219-4836863?_encoding=UTF8&camp=1789&link_code=xm2">
+Panthalassa</a></strong> (Sony/Columbia) and <strong>
+<a href="http://www.amazon.com/exec/obidos/ASIN/B000005HQ1/musidelmund-20/002-0922219-4836863?_encoding=UTF8&camp=1789&link_code=xm2">
+Dreams of Freedom</a></strong> 
+(Axiom/Island), bring not only a fresh and futuristic perspective to the music 
+of two very important artists, but also represent a new way of experiencing 
+recorded sound in an ambient and almost sanctified environment. Similar remix 
+projects are already planned for the music of Carlos 
+<a href="http://www.worldmusiccentral.org/artists/artist_page.php?id=855">
+Santana</a> and Tony Williams 
+Lifetime.<br>
+<br>
+An equally huge undertaking -- and the last record to be released under Axiom's 
+agreement with Island -- took place under the group name of Arcana. <strong>
+<a href="http://www.amazon.com/exec/obidos/ASIN/B000003RDG/musidelmund-20/002-0922219-4836863?_encoding=UTF8&camp=1789&link_code=xm2">
+Arc of the Testimony</a></strong>, also released in 1997, is a futuristic ambient-jazz-rock fission with 
+ex-Miles Davis drummer Tony Williams, Laswell on bass, and a stable of legendary 
+musicians including Pharoah Sanders, Byard Lancaster and cornet prodigy Graham 
+Haynes, with Nicky Skopelitis and mutant virtuoso Buckethead on guitars. It 
+would turn out to be one of the last sessions Tony Williams completed before his 
+passing in early 1997.<br>
+<br>
+After a brief hiatus due to a much-publicized record company merger that left 
+the label's future temporarily uncertain, Axiom is now part of the Palm Pictures 
+family and has released two new projects in 1999 and 2000. Material's 
+<strong>
+<a href="http://www.amazon.com/exec/obidos/ASIN/B00001SIAD/musidelmund-20/002-0922219-4836863?_encoding=UTF8&camp=1789&link_code=xm2">
+Intonarumori</a></strong> -- a &quot;mutant hip-hop manifesto&quot; covering a wide spectrum of 
+influences from the breakbeat underground -- continues the thread that started 
+with the founding of Axiom a decade ago. Featuring performances from Kool Keith, 
+Public Enemy's Flavor Flav, Wu Tang Clan's Killah Priest, Company Flow's Mr. Len 
+and old school rap icon Rammellzee (again, to name only a few), the record has 
+conceptual ties to several Laswell-directed projects of recent years, including 
+<strong>
+<a href="http://www.amazon.com/exec/obidos/ASIN/B000000GB8/musidelmund-20/002-0922219-4836863?_encoding=UTF8&camp=1789&link_code=xm2">
+Altered Beats</a> </strong>(on Axiom), the Valis 1 and <strong>
+<a href="http://www.amazon.com/exec/obidos/ASIN/B000003NPW/musidelmund-20/002-0922219-4836863?_encoding=UTF8&camp=1789&link_code=xm2">
+Vol. 2</a> </strong>compilations (on the Subharmonic and 
+ION labels), and the now-legendary Crazy Wisdom Masters with the Jungle Brothers 
+-- an endlessly compelling (and bootlegged) collision of urban beat poetics and 
+live orchestration that was ultimately rejected by the JBs' former record label 
+in favor of the &quot;safer,&quot; more sanitized J Beez Wit the Remedy. (&quot;That record 
+will come back,&quot; Laswell says today. &quot;They called it Crazy Wisdom Masters for a 
+reason.&quot;) In 2000, Laswell collaborated with tabla legend 
+<a href="http://www.worldmusiccentral.org/artists/artist_page.php?id=552">Zakir 
+Hussain</a> and 
+UK-based producer and Anokha founder 
+<a href="http://www.worldmusiccentral.org/artists/artist_page.php?id=1492">
+Talvin Singh</a> to create Tabla Beat Science - 
+a fusion of Indian classical rhythms and harmonies with electronic beats that 
+focuses on newly recorded tracks by
+<a href="http://www.worldmusiccentral.org/artists/artist_page.php?id=552">Zakir 
+Hussain</a>, with 
+<a href="http://www.worldmusiccentral.org/artists/artist_page.php?id=539">Sultan 
+Khan</a> on sarangi 
+and vocals and up-and-comer 
+<a href="http://www.worldmusiccentral.org/artists/artist_page.php?id=44">Karsh 
+Kale</a> on tabla and drum kit.<br>
+<br>
+The range of Bill Laswell's music has demanded a new openness from musician and 
+listener alike, and through his work points of congruence between genres have 
+become clearer and we now have new hybrid forms to reckon with. Once described 
+as a &quot;radical&quot; influence in music by the UK journal International Musician and 
+Recording World, the often circumspect producer felt obliged to define the term 
+for them: &quot;<i>Radical means hitting people on a real level and trying to lift their 
+awareness up a notch or two, to get them to think beyond the conventionally held 
+beliefs that certain musics only work in certain ways. That's the driving force 
+behind most of what I do, and if it means sacrificing notoriety and acceptance 
+for freedom, creativity and integrity, I'll do it every time</i>.&quot;<br>
+<br>
+From that philosophy, Bill Laswell founded a second label imprint in 2001 as a 
+critical proving ground for radically new, and in fact revolutionary, sound. 
+Innerhythmic is a label conceived as an alternative outlet for musicians from a 
+variety of different backgrounds who are dedicated to exploring the recombinant 
+possibilities of music. </p>
+<p>With a scope of influence that welcomes the traditional 
+and &quot;trance&quot; rhythms of far-flung cultures as openly as the hip-hop, dub, 
+jungle, jazz, funk and electronic cyber-styles emanating from the DJ underground 
+and beyond, the label stands out as an active realization of the &quot;collage 
+system&quot; - a system where entirely new forms can emerge almost at will from 
+fusions of the familiar, an ecstatic journey into known and unknown worlds of 
+sound.. Put simply, this is a past that arrives from the future to scramble the 
+present; drum-and-bass, dub, mutant hip-hop, harmolodic fusion, new jazz, world 
+and otherworld musics all connect to expand the potential of the experience.<br>
+<br>
+Bill Laswell continues to be a powerful and prolific force in the world of 
+underground music. His recent work includes such important releases as the 
+latest Herbie Hancock album <strong>
+<a href="http://www.amazon.com/exec/obidos/ASIN/B00009YOV7/musidelmund-20/002-0922219-4836863?_encoding=UTF8&camp=1789&link_code=xm2">
+Future 2 Future</a></strong>, featuring guests Wayne Shorter, 
+Grandmaster DXT, Chaka Khan, and many others; the self-titled release, <strong>
+<a href="http://www.amazon.com/exec/obidos/ASIN/B00005NNOP/musidelmund-20/002-0922219-4836863?_encoding=UTF8&camp=1789&link_code=xm2">
+Gigi</a>,</strong> by 
+Ethiopian vocalist
+<a href="http://www.worldmusiccentral.org/artists/artist_page.php?id=1031">Gigi</a>, and 
+<a href="http://www.worldmusiccentral.org/artists/artist_page.php?id=986">
+Angelique Kidjo</a>'s <strong>
+<a href="http://www.amazon.com/exec/obidos/ASIN/B00006348E/musidelmund-20/002-0922219-4836863?_encoding=UTF8&camp=1789&link_code=xm2">
+Black Ivory Soul</a></strong> 
+(RCA Records).</p>
+<p>In 2010, Laswell created another record label called M.O.D. Technologies, an 
+eclectic label that has released various recordings, including
+<a href="http://www.amazon.com/gp/product/B00B5DWG6M?ie=UTF8&camp=1789&creativeASIN=B00B5DWG6M&linkCode=xm2&tag=musidelmund-20">
+Nahariama - Fourth Column</a> by Lasswell's jazz meets electronica and world 
+music collective Method of Defiance, Lee &quot;Scratch&quot; Perry's
+<a href="http://www.amazon.com/gp/product/B004THWY2W?ie=UTF8&camp=1789&creativeASIN=B004THWY2W&linkCode=xm2&tag=musidelmund-20">
+Rise Again</a> dub album, Bill Laswell's
+<a href="http://www.amazon.com/gp/product/B009Y4DGW2?ie=UTF8&camp=1789&creativeASIN=B009Y4DGW2&linkCode=xm2&tag=musidelmund-20">
+Tuwaqachi (The Fourth World)</a>, an alternative score to Godfrey Reggio's 1982 
+groundbreaking movie &quot;Koyaanisqatsi: Life out of Balance, and
+<a href="http://www.amazon.com/gp/product/B0082112QA?ie=UTF8&camp=1789&creativeASIN=B0082112QA&linkCode=xm2&tag=musidelmund-20">
+Ertale</a>, the debut by Ethiopian rock band Jano. </p></td>
+<tr><td align="center" colspan="2" width="100%">
+
+<hr></td></tr>
+  	<tr>
+  	  <td colspan="2" width="100%">
+		<a name="Genres"><b>Similar Music</b></a>:
+	  </td>
+    </tr>
+    <tr>
+      <td colspan="2" width="100%">&nbsp;</td>
+    </tr>
+
+    <tr>
+      <td width="3%"></td>
+
+      <td width="97%">
+
+	<a href="genre_list-genre=World+Music.php.html">World Music</a>, <a href="genre_list-genre=Jazz.php.html">Jazz</a>, <a href="genre_list-genre=Electronic.php.html">Electronic</a>, <a href="instrument_index-instrument=Bass.php.html">Bass</a></td>
+<tr><td align="center" colspan="2" width="100%">
+
+<hr></td></tr>
+	</table>
+	</div>
+
+	</div><!-- #main -->
+	
+	    
+    <div id="footer">
+		<div class="footer-sidebar-container clearfix">
+							<ul id="footer-sidebar-1" class="footer-sidebar clearfix xoxo">
+										<li></li>
+									</ul>
+					</div>
+		
+		<div class="footer-message">
+                <p class="floatright">WordPress Installation and Support by <a class="arras" href="http://digiblink.eu/" title="Custom WordPress development, design and backup services."><strong>digiBlink</strong></a></p>
+                <p>Copyright World Music Central.org. All Rights Reserved.</p>                </div><!-- .footer-message -->
+		
+    </div>
+</div><!-- #wrapper -->
+
+<script type="text/javascript"><!--
+wpa2a.targets=[];
+wpa2a.html_done=true;if(wpa2a.script_ready&&!wpa2a.done)wpa2a.init();wpa2a.script_load();
+//--></script>
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+
+	
+});
+</script>
+<script type='text/javascript' src='../wp-includes/js/jquery/ui/jquery.ui.core.min.js?ver=1.10.3'></script>
+<script type='text/javascript' src='../wp-includes/js/jquery/ui/jquery.ui.widget.min.js?ver=1.10.3'></script>
+<script type='text/javascript' src='../wp-includes/js/jquery/ui/jquery.ui.tabs.min.js?ver=1.10.3'></script>
+</body>
+</html>
+   
+
+<!-- Localized -->

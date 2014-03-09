@@ -1,0 +1,1147 @@
+
+<style type="text/css">
+/* --- reset some elements --- */
+
+#dw ul,ol { list-style:none }
+
+#dw ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,p,blockquote,fieldset,input { margin:0; padding:0 }
+
+/* --- Basic Stylesheet for DokuWiki content --- */
+
+#dw h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+#dw h1 a {
+  color: black;
+}
+
+/* ---------- table of contents ------------------- */
+
+#dw div.toc {
+  margin-left: 2em;
+  margin-top: 1.2em;
+  margin-bottom: 0;
+  float:right;
+  width: 200px;
+  font-size: 80%;
+  padding-top:5px;
+}
+
+#dw div.tocheader {
+  padding: 3px;
+  border: 1px solid #8cacbb;
+  background-color: #dee7ec;
+  text-align: left;
+  font-weight:bold;
+  margin-bottom: 2px;
+}
+
+#dw div.tocheader img {
+  width:0.8em;
+  height:0.8em;
+  margin-top:0.3em;
+  margin-right:3px;
+  float:right;
+  cursor: pointer;
+}
+
+#dw #toc__inside {
+  border: 1px solid #8cacbb;
+  background-color: #fff;
+  text-align: left;
+  padding-top: 0.5em;
+  padding-bottom: 0.7em;
+}
+
+#dw ul.toc {
+  list-style-type: none;
+  list-style-image: none;
+  line-height: 1.2em;
+  margin: 0;
+  padding: 0;
+  padding-left: 1em;
+}
+
+#dw ul.toc li {
+  background: transparent url(../lib/tpl/fsinfo/images/tocdot2.gif) 0 0.6em no-repeat;
+  padding-left:0.4em;
+}
+
+#dw ul.toc li.clear {
+  background-image: none;
+  padding-left:0.4em;
+}
+
+#dw a.toc {
+  color: #436976;
+  text-decoration:none;
+}
+
+#dw a.toc:hover {
+  color: #000;
+  text-decoration:underline;
+}
+
+/* --------------------- footnotes -------------------------------- */
+
+#dw div.footnotes{
+  clear:both;
+  border-top: 1px solid #8cacbb;
+  padding-left: 1em;
+  margin-top: 1em;
+}
+
+#dw div.fn{
+  font-size:90%;
+}
+
+#dw a.fn_top{
+  vertical-align:super;
+  font-size:80%;
+}
+
+#dw a.fn_bot{
+  vertical-align:super;
+  font-size:80%;
+  font-weight:bold;
+}
+
+/* insitu-footnotes */
+#dw div.insitu-footnote {
+  font-size: 80%;
+  line-height: 1.2em;
+  border: 1px solid #8cacbb;
+  background: #eef3f8;
+  text-align: left;
+  padding: 4px;
+  max-width: 40%;    /* IE's width is handled in javascript */
+}
+
+/* overcome IE issue with one line code or file boxes which require h. scrolling */
+#dw * html .insitu-footnote pre.code, * html .insitu-footnote pre.file {
+  padding-bottom: 18px;
+}
+
+/* --------------------- Tables -------------------------------- */
+
+#dw table.inline td.okay {
+  background-color: #afa;
+  text-align: center;
+}
+
+#dw table.inline td.notokay {
+  background-color: #fcc;
+  text-align: center;
+}
+
+#dw table.inline {
+  background-color: #fff;
+  border-spacing: 0px;
+  border-collapse: collapse;
+}
+
+/* ------------- Page elements ----------------- */
+
+#dw span.user{
+/*  color: #ccc; */
+  color: #666;
+  font-size: 90%;
+}
+
+#dw li.minor {
+  color: #666;
+  font-style: italic;
+}
+
+/* embedded images */
+#dw img.media {
+  margin: 3px;
+}
+
+#dw img.medialeft {
+  border: 0;
+  float: left;
+  margin: 0 1.5em 0 0;
+}
+
+#dw img.mediaright {
+  border: 0;
+  float: right;
+  margin: 0 0 0 1.5em;
+}
+
+#dw img.mediacenter {
+  border: 0;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* smileys */
+#dw img.middle {
+  vertical-align: middle;
+}
+
+#dw acronym {
+  cursor: help;
+  border-bottom: 1px dotted #000;
+}
+
+/* general headline setup */
+#dw h1, #dw h2, #dw h3, #dw h4, #dw h5 {
+    color: Black;
+    background-color: transparent;
+    font-family: "Lucida Grande", Verdana, Lucida, Helvetica, Arial, sans-serif;
+    font-size: 100%;
+    font-weight: normal;
+    margin-left:    0;
+    margin-right:   0;
+    margin-top:     0;
+    margin-bottom:  1em;
+    padding-left:   0;
+    padding-right:  0;
+    padding-top:    0.5em;
+    padding-bottom: 0;
+    border-bottom: 1px solid #8cacbb;
+}
+
+/* special headlines */
+/*
+#dw h1 {font-size: 160%; margin-left: 0px; font-weight: bold;}
+#dw h2 {font-size: 150%; margin-left: 20px; font-weight: bold;}
+#dw h3 {font-size: 130%; margin-left: 40px; border-bottom: none; font-weight: bolder}
+#dw h4 {font-size: 115%; margin-left: 60px; border-bottom: none; font-weight: bolder}
+#dw h5 {font-size: 100%; margin-left: 80px; border-bottom: none; font-weight: bold;}
+*/
+
+#dw h1 {font-size: 160%; font-weight: bold;}
+#dw h2 {font-size: 140%; font-weight: bold; }
+#dw h3 {font-size: 130%; border-bottom: none; font-weight: bolder}
+#dw h4 {font-size: 115%; border-bottom: none; font-weight: bolder}
+#dw h5 {font-size: 100%; border-bottom: none; font-weight: bold;}
+
+/* indent different sections */
+/*
+#dw div.level1 {margin-left: 3px;}
+#dw div.level2 {margin-left: 23px;}
+#dw div.level3 {margin-left: 43px;}
+#dw div.level4 {margin-left: 63px;}
+#dw div.level5 {margin-left: 83px;}
+*/
+
+/* unordered lists */
+#dw ul {
+  line-height: 1.5em;
+  list-style-type: square;
+  margin: 0 0 0.5em 2em;
+  padding: 0;
+  color: #638c9c;
+  list-style-image: none;
+}
+
+/* ordered lists */
+#dw ol {
+  line-height: 1.5em;
+  margin: 0 0 0.5em 2em;
+  padding: 0;
+  color: #638c9c;
+  font-weight: bold;
+  list-style-image: none;
+}
+
+/* the list items overriding the ul/ol definition */
+#dw .li {
+  color: #000;
+  font-weight: normal;
+}
+
+#dw ol {list-style-type: decimal}
+#dw ol ol {list-style-type: upper-roman}
+#dw ol ol ol {list-style-type: lower-alpha}
+#dw ol ol ol ol {list-style-type: lower-greek}
+
+#dw li.open {
+  list-style-image: url(../lib/tpl/fsinfo/images/open.gif);
+    /*list-style-type: circle;*/
+}
+
+#dw li.closed {
+  list-style-image: url(../lib/tpl/fsinfo/images/closed.gif);
+    /*list-style-type: disc;*/
+}
+
+#dw blockquote {
+  border-left: 2px solid #8cacbb;
+  padding-left: 3px;
+  margin-left: 0;
+}
+
+/* code blocks by indention */
+#dw pre.pre {
+  font-size: 100%;
+  padding: 0.5em;
+  border: 1px dashed #8cacbb;
+  color: Black;
+  background-color: #f7f9fa;
+  overflow: auto;
+}
+
+/* code blocks by code tag */
+#dw pre.code {
+  font-size: 100%;
+  padding: 0.5em;
+  border: 1px dashed #8cacbb;
+  color: Black;
+  background-color: #f7f9fa;
+  overflow: auto;
+}
+
+/* inline code words */
+#dw code {
+  font-size: 80%;
+}
+
+/* code blocks by file tag */
+#dw pre.file {
+  font-size: 100%;
+  padding: 0.5em;
+  border: 1px dashed #8cacbb;
+  color: Black;
+  background-color: #dee7ec;
+  overflow: auto;
+}
+
+/* inline tables */
+
+#dw table.inline th {
+  padding: 3px;
+  border: 1px solid #8cacbb;
+  background-color: #dee7ec;
+  text-align: left;
+}
+
+#dw table.inline td {
+  padding: 3px;
+  border: 1px solid #8cacbb;
+}
+</style>
+<link rel='stylesheet' id='eme_stylesheet-css'  href='../wp-content/plugins/events-made-easy/events_manager-ver=3.6.css' type='text/css' media='all' />
+<link rel='stylesheet' id='A2A_SHARE_SAVE-css'  href='../wp-content/plugins/add-to-any/addtoany.min-ver=1.4.css' type='text/css' media='all' />
+<script type='text/javascript' src='../wp-includes/js/jquery/jquery.js?ver=1.10.2'></script>
+<script type='text/javascript' src='../wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<script type='text/javascript' src='../wp-content/plugins/google-analyticator/external-tracking.min.js?ver=6.4.5'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../xmlrpc-rsd.php.html" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 3.6" />
+
+<script type="text/javascript"><!--
+var a2a_config=a2a_config||{},wpa2a={done:false,html_done:false,script_ready:false,script_load:function(){var a=document.createElement('script'),s=document.getElementsByTagName('script')[0];a.type='text/javascript';a.async=true;a.src='http://static.addtoany.com/menu/page.js';s.parentNode.insertBefore(a,s);wpa2a.script_load=function(){};},script_onready:function(){if(a2a.type=='page'){wpa2a.script_ready=true;if(wpa2a.html_done)wpa2a.init();}},init:function(){for(var i=0,el,target,targets=wpa2a.targets,length=targets.length;i<length;i++){el=document.getElementById('wpa2a_'+(i+1));target=targets[i];a2a_config.linkname=target.title;a2a_config.linkurl=target.url;if(el)a2a.init('page',{target:el});wpa2a.done=true;}}};a2a_config.tracking_callback=['ready',wpa2a.script_onready];
+//--></script>
+<meta name="_awb_version" content="2.0.3" /><link rel="stylesheet" href="../wp-content/themes/arras/css/styles/default.css" type="text/css" media="screen,projection" /><link rel="stylesheet" href="../wp-content/themes/arras/css/layouts/2c-r-fixed.css" type="text/css" />
+<!-- Generated by Arras WP Theme -->
+<style type="text/css">
+	.posts-default li  { width: 205px; height: 225px; }
+	.posts-default img, .posts-default .entry-thumbnails-link { width: 195px; height: 110px; }
+	.posts-default .entry-meta { width: 195px; }
+	.posts-default .entry-thumbnails { width: 205px; height: 120px; }
+			.posts-quick .entry-thumbnails img { width: 115px; height: 115px; }
+		.posts-quick .entry-meta { width: 115px; }
+			.featured { height: 260px; }
+	.featured-article { width: 640px; height: 250px; }
+	.featured-article img { width: 640px; height: 250px; }
+	#controls { width: 610px; top: 110px; }
+	#controls .next { left: 610px; }
+	.featured-entry { height: 84px; top: -84px; }
+	.featured-slideshow-inner { height: 250px }
+		.featured-stories-summary  { margin-left: 51px; }
+	.single .post .entry-photo img, .single-post .entry-photo img  { width: 620px; height: 250px; }
+		.footer-sidebar  { width: 920px; }
+	</style>
+	<script type="text/javascript">
+	jQuery(document).ready(function($) {
+
+$('.multi-sidebar').tabs();
+
+$('.sf-menu').superfish({autoArrows: true, speed: 'fast', dropShadows: 'true'});
+
+$('#commentform').validate();
+
+
+});	</script>
+	<!--[if IE]>
+<style type="text/css">
+.addtoany_list a img{filter:alpha(opacity=70)}
+.addtoany_list a:hover img,.addtoany_list a.addtoany_share_save img{filter:alpha(opacity=100)}
+</style>
+<![endif]-->
+<link rel="stylesheet" href="../wp-content/themes/arras/user.css" type="text/css" media="screen,projection" /><!-- Google Analytics Tracking by Google Analyticator 6.4.5: http://www.videousermanuals.com/google-analyticator/ -->
+<script type="text/javascript">
+	var analyticsFileTypes = [''];
+	var analyticsEventTracking = 'enabled';
+</script>
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-169675-4']);
+        _gaq.push(['_addDevId', 'i9k95']); // Google Analyticator App ID with Google 
+        
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>World Music Central.org</title>
+
+
+<link rel="alternate" type="application/rss+xml" href="../feed/index.html" title="World Music Central.org latest posts" />
+
+<link rel="alternate" type="application/rss+xml" href="../comments/feed/index.html" title="World Music Central.org latest comments" />
+
+<link rel="pingback" href="../xmlrpc.php.html" />
+
+<link rel="shortcut icon" href="../favicon.ico" />
+
+
+<style type="text/css">
+/* --- reset some elements --- */
+
+#dw ul,ol { list-style:none }
+
+#dw ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,p,blockquote,fieldset,input { margin:0; padding:0 }
+
+/* --- Basic Stylesheet for DokuWiki content --- */
+
+#dw h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+#dw h1 a {
+  color: black;
+}
+
+/* ---------- table of contents ------------------- */
+
+#dw div.toc {
+  margin-left: 2em;
+  margin-top: 1.2em;
+  margin-bottom: 0;
+  float:right;
+  width: 200px;
+  font-size: 80%;
+  padding-top:5px;
+}
+
+#dw div.tocheader {
+  padding: 3px;
+  border: 1px solid #8cacbb;
+  background-color: #dee7ec;
+  text-align: left;
+  font-weight:bold;
+  margin-bottom: 2px;
+}
+
+#dw div.tocheader img {
+  width:0.8em;
+  height:0.8em;
+  margin-top:0.3em;
+  margin-right:3px;
+  float:right;
+  cursor: pointer;
+}
+
+#dw #toc__inside {
+  border: 1px solid #8cacbb;
+  background-color: #fff;
+  text-align: left;
+  padding-top: 0.5em;
+  padding-bottom: 0.7em;
+}
+
+#dw ul.toc {
+  list-style-type: none;
+  list-style-image: none;
+  line-height: 1.2em;
+  margin: 0;
+  padding: 0;
+  padding-left: 1em;
+}
+
+#dw ul.toc li {
+  background: transparent url(../lib/tpl/fsinfo/images/tocdot2.gif) 0 0.6em no-repeat;
+  padding-left:0.4em;
+}
+
+#dw ul.toc li.clear {
+  background-image: none;
+  padding-left:0.4em;
+}
+
+#dw a.toc {
+  color: #436976;
+  text-decoration:none;
+}
+
+#dw a.toc:hover {
+  color: #000;
+  text-decoration:underline;
+}
+
+/* --------------------- footnotes -------------------------------- */
+
+#dw div.footnotes{
+  clear:both;
+  border-top: 1px solid #8cacbb;
+  padding-left: 1em;
+  margin-top: 1em;
+}
+
+#dw div.fn{
+  font-size:90%;
+}
+
+#dw a.fn_top{
+  vertical-align:super;
+  font-size:80%;
+}
+
+#dw a.fn_bot{
+  vertical-align:super;
+  font-size:80%;
+  font-weight:bold;
+}
+
+/* insitu-footnotes */
+#dw div.insitu-footnote {
+  font-size: 80%;
+  line-height: 1.2em;
+  border: 1px solid #8cacbb;
+  background: #eef3f8;
+  text-align: left;
+  padding: 4px;
+  max-width: 40%;    /* IE's width is handled in javascript */
+}
+
+/* overcome IE issue with one line code or file boxes which require h. scrolling */
+#dw * html .insitu-footnote pre.code, * html .insitu-footnote pre.file {
+  padding-bottom: 18px;
+}
+
+/* --------------------- Tables -------------------------------- */
+
+#dw table.inline td.okay {
+  background-color: #afa;
+  text-align: center;
+}
+
+#dw table.inline td.notokay {
+  background-color: #fcc;
+  text-align: center;
+}
+
+#dw table.inline {
+  background-color: #fff;
+  border-spacing: 0px;
+  border-collapse: collapse;
+}
+
+/* ------------- Page elements ----------------- */
+
+#dw span.user{
+/*  color: #ccc; */
+  color: #666;
+  font-size: 90%;
+}
+
+#dw li.minor {
+  color: #666;
+  font-style: italic;
+}
+
+/* embedded images */
+#dw img.media {
+  margin: 3px;
+}
+
+#dw img.medialeft {
+  border: 0;
+  float: left;
+  margin: 0 1.5em 0 0;
+}
+
+#dw img.mediaright {
+  border: 0;
+  float: right;
+  margin: 0 0 0 1.5em;
+}
+
+#dw img.mediacenter {
+  border: 0;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* smileys */
+#dw img.middle {
+  vertical-align: middle;
+}
+
+#dw acronym {
+  cursor: help;
+  border-bottom: 1px dotted #000;
+}
+
+/* general headline setup */
+#dw h1, #dw h2, #dw h3, #dw h4, #dw h5 {
+    color: Black;
+    background-color: transparent;
+    font-family: "Lucida Grande", Verdana, Lucida, Helvetica, Arial, sans-serif;
+    font-size: 100%;
+    font-weight: normal;
+    margin-left:    0;
+    margin-right:   0;
+    margin-top:     0;
+    margin-bottom:  1em;
+    padding-left:   0;
+    padding-right:  0;
+    padding-top:    0.5em;
+    padding-bottom: 0;
+    border-bottom: 1px solid #8cacbb;
+}
+
+/* special headlines */
+/*
+#dw h1 {font-size: 160%; margin-left: 0px; font-weight: bold;}
+#dw h2 {font-size: 150%; margin-left: 20px; font-weight: bold;}
+#dw h3 {font-size: 130%; margin-left: 40px; border-bottom: none; font-weight: bolder}
+#dw h4 {font-size: 115%; margin-left: 60px; border-bottom: none; font-weight: bolder}
+#dw h5 {font-size: 100%; margin-left: 80px; border-bottom: none; font-weight: bold;}
+*/
+
+#dw h1 {font-size: 160%; font-weight: bold;}
+#dw h2 {font-size: 140%; font-weight: bold; }
+#dw h3 {font-size: 130%; border-bottom: none; font-weight: bolder}
+#dw h4 {font-size: 115%; border-bottom: none; font-weight: bolder}
+#dw h5 {font-size: 100%; border-bottom: none; font-weight: bold;}
+
+/* indent different sections */
+/*
+#dw div.level1 {margin-left: 3px;}
+#dw div.level2 {margin-left: 23px;}
+#dw div.level3 {margin-left: 43px;}
+#dw div.level4 {margin-left: 63px;}
+#dw div.level5 {margin-left: 83px;}
+*/
+
+/* unordered lists */
+#dw ul {
+  line-height: 1.5em;
+  list-style-type: square;
+  margin: 0 0 0.5em 2em;
+  padding: 0;
+  color: #638c9c;
+  list-style-image: none;
+}
+
+/* ordered lists */
+#dw ol {
+  line-height: 1.5em;
+  margin: 0 0 0.5em 2em;
+  padding: 0;
+  color: #638c9c;
+  font-weight: bold;
+  list-style-image: none;
+}
+
+/* the list items overriding the ul/ol definition */
+#dw .li {
+  color: #000;
+  font-weight: normal;
+}
+
+#dw ol {list-style-type: decimal}
+#dw ol ol {list-style-type: upper-roman}
+#dw ol ol ol {list-style-type: lower-alpha}
+#dw ol ol ol ol {list-style-type: lower-greek}
+
+#dw li.open {
+  list-style-image: url(../lib/tpl/fsinfo/images/open.gif);
+    /*list-style-type: circle;*/
+}
+
+#dw li.closed {
+  list-style-image: url(../lib/tpl/fsinfo/images/closed.gif);
+    /*list-style-type: disc;*/
+}
+
+#dw blockquote {
+  border-left: 2px solid #8cacbb;
+  padding-left: 3px;
+  margin-left: 0;
+}
+
+/* code blocks by indention */
+#dw pre.pre {
+  font-size: 100%;
+  padding: 0.5em;
+  border: 1px dashed #8cacbb;
+  color: Black;
+  background-color: #f7f9fa;
+  overflow: auto;
+}
+
+/* code blocks by code tag */
+#dw pre.code {
+  font-size: 100%;
+  padding: 0.5em;
+  border: 1px dashed #8cacbb;
+  color: Black;
+  background-color: #f7f9fa;
+  overflow: auto;
+}
+
+/* inline code words */
+#dw code {
+  font-size: 80%;
+}
+
+/* code blocks by file tag */
+#dw pre.file {
+  font-size: 100%;
+  padding: 0.5em;
+  border: 1px dashed #8cacbb;
+  color: Black;
+  background-color: #dee7ec;
+  overflow: auto;
+}
+
+/* inline tables */
+
+#dw table.inline th {
+  padding: 3px;
+  border: 1px solid #8cacbb;
+  background-color: #dee7ec;
+  text-align: left;
+}
+
+#dw table.inline td {
+  padding: 3px;
+  border: 1px solid #8cacbb;
+}
+</style>
+<script type='text/javascript' src='../wp-content/themes/arras/js/superfish/hoverIntent.js'></script>
+<script type='text/javascript' src='../wp-content/themes/arras/js/superfish/superfish.js'></script>
+<script type='text/javascript' src='../wp-includes/js/comment-reply.min.js?ver=3.6'></script>
+<script type='text/javascript' src='../wp-content/themes/arras/js/jquery.validate.min.js'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../xmlrpc-rsd.php.html" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 3.6" />
+
+<script type="text/javascript"><!--
+var a2a_config=a2a_config||{},wpa2a={done:false,html_done:false,script_ready:false,script_load:function(){var a=document.createElement('script'),s=document.getElementsByTagName('script')[0];a.type='text/javascript';a.async=true;a.src='/page.js';s.parentNode.insertBefore(a,s);wpa2a.script_load=function(){};},script_onready:function(){if(a2a.type=='page'){wpa2a.script_ready=true;if(wpa2a.html_done)wpa2a.init();}},init:function(){for(var i=0,el,target,targets=wpa2a.targets,length=targets.length;i<length;i++){el=document.getElementById('wpa2a_'+(i+1));target=targets[i];a2a_config.linkname=target.title;a2a_config.linkurl=target.url;if(el)a2a.init('page',{target:el});wpa2a.done=true;}}};a2a_config.tracking_callback=['ready',wpa2a.script_onready];
+//--></script>
+<meta name="_awb_version" content="2.0.3" /><link rel="stylesheet" href="../wp-content/themes/arras/css/styles/default.css" type="text/css" media="screen,projection" /><link rel="stylesheet" href="../wp-content/themes/arras/css/layouts/2c-r-fixed.css" type="text/css" />
+<!-- Generated by Arras WP Theme -->
+<style type="text/css">
+	.posts-default li  { width: 205px; height: 225px; }
+	.posts-default img, .posts-default .entry-thumbnails-link { width: 195px; height: 110px; }
+	.posts-default .entry-meta { width: 195px; }
+	.posts-default .entry-thumbnails { width: 205px; height: 120px; }
+			.posts-quick .entry-thumbnails img { width: 115px; height: 115px; }
+		.posts-quick .entry-meta { width: 115px; }
+			.featured { height: 260px; }
+	.featured-article { width: 640px; height: 250px; }
+	.featured-article img { width: 640px; height: 250px; }
+	#controls { width: 610px; top: 110px; }
+	#controls .next { left: 610px; }
+	.featured-entry { height: 84px; top: -84px; }
+	.featured-slideshow-inner { height: 250px }
+		.featured-stories-summary  { margin-left: 51px; }
+	.single .post .entry-photo img, .single-post .entry-photo img  { width: 620px; height: 250px; }
+		.footer-sidebar  { width: 920px; }
+	</style>
+	<script type="text/javascript">
+	jQuery(document).ready(function($) {
+
+$('.multi-sidebar').tabs();
+
+$('.sf-menu').superfish({autoArrows: true, speed: 'fast', dropShadows: 'true'});
+
+$('#commentform').validate();
+
+
+});	</script>
+	<!--[if IE]>
+<style type="text/css">
+.addtoany_list a img{filter:alpha(opacity=70)}
+.addtoany_list a:hover img,.addtoany_list a.addtoany_share_save img{filter:alpha(opacity=100)}
+</style>
+<![endif]-->
+<link rel="stylesheet" href="../wp-content/themes/arras/user.css" type="text/css" media="screen,projection" /><!-- Google Analytics Tracking by Google Analyticator 6.4.5: http://www.videousermanuals.com/google-analyticator/ -->
+<script type="text/javascript">
+	var analyticsFileTypes = [''];
+	var analyticsEventTracking = 'enabled';
+</script>
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-169675-4']);
+        _gaq.push(['_addDevId', 'i9k95']); // Google Analyticator App ID with Google 
+        
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+</head>
+
+<body class="page page-id-0 page-parent page-template-default layout-2c-r-fixed no-js style-default">
+<script type="text/javascript">
+//<![CDATA[
+(function(){
+var c = document.body.className;
+c = c.replace(/no-js/, 'js');
+document.body.className = c;
+})();
+//]]>
+</script>
+
+<div id="top-menu" class="clearfix">
+	</div><!-- #top-menu -->
+
+<div id="header"><div align="center"><script type="text/javascript"><!--
+google_ad_client = "pub-7027070946238159";
+/* 728x90, Top Banner */
+google_ad_slot = "9335358437";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+	<div id="branding" class="clearfix">
+	<div class="logo">
+				<span class="blog-name"><a href="../index.html">World Music Central.org</a></span>
+		<img style="float:left; padding: 0 5px 0 0;" src="../wp-content/themes/wmc-magazeen/images/bull.png"/><span class="blog-description">Your Connection to World Music</span>
+			</div>
+	<div id="searchbar"><form method="get" class="searchform clearfix" action="http://worldmusiccentral.org/">
+ <input type="text" value="Search..." name="s" class="s" onfocus="this.value=''" />
+ <input type="submit" class="searchsubmit" value="Search" title="Search World Music Central.org" />
+</form>
+</div>
+	</div><!-- #branding -->
+</div><!-- #header -->
+
+<div id="nav">
+	<div id="nav-content" class="clearfix">
+	<div class="menu-main-container"><ul id="menu-main" class="sf-menu menu clearfix"><li id="menu-item-6394" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-6394"><a href="../index.html">Home</a></li>
+<li id="menu-item-6401" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6401"><a href="../about/index.html">About</a></li>
+<li id="menu-item-6454" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6454"><a href="#">World Music Resources</a>
+<ul class="sub-menu">
+	<li id="menu-item-6455" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6455"><a href="artist_index.php.html">Artists Database</a></li>
+	<li id="menu-item-6462" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6462"><a href="http://musicwikicentral.com/world_music_festivals">Festivals</a></li>
+	<li id="menu-item-6467" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6467"><a href="http://musicwikicentral.com/travel_guides">Travel Guides</a></li>
+	<li id="menu-item-6469" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6469"><a href="http://musicwikicentral.com/world_music_genres">Musical Genres</a></li>
+	<li id="menu-item-6468" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6468"><a href="http://musicwikicentral.com/musical_instruments">Musical Instruments</a></li>
+	<li id="menu-item-6475" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6475"><a href="http://musicwikicentral.com/showcases">Showcases</a></li>
+	<li id="menu-item-6470" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6470"><a href="http://musicwikicentral.com/world_music_venues">Venues</a></li>
+	<li id="menu-item-6472" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6472"><a href="http://musicwikicentral.com/record_companies">Record Companies</a></li>
+	<li id="menu-item-6466" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6466"><a href="http://musicwikicentral.com/booking_agents">Booking Agents</a></li>
+	<li id="menu-item-6474" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6474"><a href="http://musicwikicentral.com/world_music_press">World Music Press</a></li>
+	<li id="menu-item-6477" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6477"><a href="http://musicwikicentral.com/ethnomusicology">Ethnomusicology</a></li>
+	<li id="menu-item-6473" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6473"><a href="http://musicwikicentral.com/music_organizations">Music Organizations</a></li>
+</ul>
+</li>
+<li id="menu-item-6390" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6390"><a href="#">Topics</a>
+<ul class="sub-menu">
+	<li id="menu-item-6369" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6369"><a href="../category/archive/index.html">archive</a></li>
+	<li id="menu-item-6370" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6370"><a href="../category/articles/index.html">Articles</a></li>
+	<li id="menu-item-6371" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6371"><a href="../category/awards/index.html">Awards</a></li>
+	<li id="menu-item-6372" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6372"><a href="../category/book-reviews/index.html">Book Reviews</a></li>
+	<li id="menu-item-6373" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6373"><a href="../category/cd-reviews/index.html">CD Reviews</a></li>
+	<li id="menu-item-6374" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6374"><a href="../category/concert-reviews/index.html">Concert reviews</a></li>
+	<li id="menu-item-6375" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6375"><a href="../category/conferences/index.html">Conferences</a></li>
+	<li id="menu-item-6376" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6376"><a href="../category/editorials/index.html">Editorials</a></li>
+	<li id="menu-item-6377" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6377"><a href="../category/events/index.html">Events</a></li>
+	<li id="menu-item-6378" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6378"><a href="../category/film-reviews/index.html">Film Reviews</a></li>
+	<li id="menu-item-6379" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6379"><a href="../category/general-news/index.html">General News</a></li>
+	<li id="menu-item-6380" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6380"><a href="../category/interviews/index.html">Interviews</a></li>
+	<li id="menu-item-6381" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6381"><a href="../category/loop-collections/index.html">Loop Collections</a></li>
+	<li id="menu-item-6382" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6382"><a href="../category/new-books/index.html">New Books</a></li>
+	<li id="menu-item-6383" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6383"><a href="../category/new-cds/index.html">New CDs</a></li>
+	<li id="menu-item-6384" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6384"><a href="../category/new-films/index.html">New Films</a></li>
+	<li id="menu-item-6385" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6385"><a href="../category/new-releases/index.html">New Releases</a></li>
+	<li id="menu-item-6386" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6386"><a href="../category/obituaries/index.html">Obituaries</a></li>
+	<li id="menu-item-6387" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6387"><a href="../category/tour-announcements/index.html">Tour Announcements</a></li>
+	<li id="menu-item-6388" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6388"><a href="../category/tradeshows/index.html">Tradeshows</a></li>
+	<li id="menu-item-6389" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6389"><a href="../category/uncategorized/index.html">Uncategorized</a></li>
+</ul>
+</li>
+<li id="menu-item-6392" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6392"><a href="../events/index.html">Calendar</a></li>
+<li id="menu-item-6400" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6400"><a href="../store/index.html">Store</a></li>
+<li id="menu-item-6724" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6724"><a href="../contact-us/index.html">Contact Us</a></li>
+</ul></div>		<ul class="quick-nav clearfix">
+					<li><a id="rss" title="World Music Central.org RSS Feed" href="../feed/index.html">RSS Feed</a></li>
+				
+						
+							<li><a id="facebook" title="World Music Central.org Facebook" href="http://www.facebook.com/pages/World-Music-Central/149036898455901" target="_blank">Facebook</a></li>
+				
+			</ul>
+	</div><!-- #nav-content -->
+</div><!-- #nav -->
+
+<div id="wrapper">
+	
+	  
+	<div id="main" class="clearfix">
+    <div id="container" class="clearfix">
+  <head>
+    <title>Rub&eacute;n Blades - Artist Page</title>
+  </head>
+
+  <body> 
+  
+  <div id="artistpage">
+  
+  <div style="float:right;">
+  
+  <script type="text/javascript"><!--
+google_ad_client = "pub-7027070946238159";
+/* 160x600, created 12/6/08 */
+google_ad_slot = "6830638066";
+google_ad_width = 160;
+google_ad_height = 600;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+
+</div>
+  
+  
+  
+  	<table>
+
+  
+<tr><td align="center" colspan="2" width="100%">
+<font size=+1><b>Rub&eacute;n Blades</b></font> 
+<hr></td></tr>
+
+<tr><td align="center" colspan="2" width="100%">
+<a href="#Discography">Discography</a>&nbsp;&nbsp;&middot;&nbsp;&nbsp;<a href="#Genres">Similar Music</a>
+<hr></td></tr>
+    <tr>
+      <td colspan="2" width="100%">
+		<a name="Biography"><b>Biography</b></a>:
+	  </td>
+    </tr>
+    <tr>
+      <td colspan="2" width="100%">&nbsp;</td>
+    </tr>
+
+    <tr>
+      <td width="3%"></td>
+
+      <td width="97%">
+	  
+	<p align=center><img border="0" align="center"  src="../staticpages/images/ruben_blades_4-250.jpg"></p><p align="left">Panama City, the early 1950s. Rub&eacute;n Blades, a boy only 4 years old, born in a working family residing in the old city neighborhood, already knew how to read and write courtesy of his grandmother, a personage worthy of one of his future songs and who, even in those days, practiced yoga and meditation. She was an early feminist who sent only her daughters to school, since she thought that is was them, more than her sons, who would need it the most to make their way in life. As a result of this decision, Rub&eacute;n's mother learned to play the piano, thus establishing a musical precedent in the life of Rub&eacute;n Blades. His father was a man of many changes. Coming from an English ancestry family, he went from jockey to basketball player to detective, but invariably remaining faithful to his great love: music; more specifically, percussion. For Rub&eacute;n "<i>such changes shouldn't surprise anyone, safe maybe those who do not know the Caribbean realities, where people reinvent themselves</i>''.<br>
+<br>
+At age six, Rub&eacute;n Blades won a tale contest for elementary school children. He never stopped writing since. Such was the ambient of his childhood. "<i>I never realized my family was poor until I left my neighborhood</i>", he says. During his adolescence, the family's economic problems got worse while the country's political situation with respect to the United States was getting more and more difficult. This had an important effect on the life of young Rub&eacute;n, forcing him into thinking about problems he never thought about before. "<i>Up to 1964 I had been totally pro Yankee. In tastes, in music, in everything. But the events of January of '64, when the United States refused to raise the Panamanian flag at the Canal Zone - a situation that resulted in 25 people dead - opened my eyes and, like me, many of those who had been absolutely pro American started to ask themselves questions of a political and social nature</i>".
+<p align="left">After this "political awakening", Rub&eacute;n Blades continued his studies and eventually entered the School of Law and Political Science of the University of Panama. Meanwhile, his musical inclinations prompted him to join some musical groups such as El Conjunto Latino de Papi Arozamena (Papi Arozamena's Latin Group) and Los Salvajes del Ritmo (The Rhythmic Savages).<br>
+<br>
+He performed sporadically with them at the city's local places, but pressures brought by his university professors at the Law School, who objected to the notion of a lawyer singing salsa, forced him to leave the stages. He never left the music though. In 1968, taking advantage of having a brother who worked on an airline company, he traveled to New York on $20. On this first visit to the city he contacted Pancho Cristal, Cheo Feliciano's producer, who had heard him sing in Panama and who proposed him to join the Pete Rodr&iacute;guez band to make a record. Rub&eacute;n was happy to accept and that's how his recording career began.<br>
+<br>
+Back in Panama he found the political situation more tense than ever; still, he decided he was going to finish his studies no matter what. In 1973, when he was about to graduate, his father, who was then with the Detectives State Corps, faced a difficult situation when general Noriega, then responsible for the Secret Police, accused a group of Panamanians of trying to assassinate General Omar Torrijos. His father was not directly accused, but his relationship with some of those accused forced the family to flee the country in order to avoid reprisals against them. It also prevented them from having to be involved in the dark schemes Noriega had with the CIA.<br>
+<br>
+Despite all the problems, Rub&eacute;n Blades remained in the country until he managed to get his law degree, a kind of personal and moral obligation he felt. Once he had his title as a lawyer in his own country and given the repercussions his father's political problems could have had on his career, on the one hand, and the perspective of being a lawyer under a dictatorship on the other, his options were to join the group which kept the dictatorial policies of the country - something unthinkable for him - or to leave for Miami with his family, which was what eventually happened.<p align="left">Once in Miami his musical inclinations found no obstacles to start gradually developing until they became his main aspiration. Shortly after, he moved to New York looking for an opportunity to introduce himself in the city's musical scene. His first job there was that of organizing and carrying the mail for Fania Records, a recording company and a kind of sanctuary for all salsa musicians. Despite the fact that his labor obligations were far removed from music itself, the contact with some important individuals of the New York musical scene was 
+frequent. His break came when Ray Barreto, who was looking for someone to replace the vocalist in his band, found out through someone who had heard Rub&eacute;n Blades singing in Panama that he could be the man he was looking for, and he set up an audition for him. The result was completely satisfying and Rub&eacute;n gave up his job at Fania to immediately join Barreto's group. That was the beginning of his career as a professional musician.<br>
+<br>
+In 1976, after solving the inevitable immigration problems, Rub&eacute;n Blades became the vocalist replacement of H&eacute;ctor Lavoe, who had left the Willie Colon band and, together, both the bandleader and Rub&eacute;n started what eventually would represent the most important change Caribbean music has experienced in all its history. On his first LP with Col&oacute;n, "Metiendo Mano" (Getting Involved), two of Rub&eacute;n Blades songs ("Plantaci&oacute;n"[Plantation] and "Pablo Pueblo") stood out and had a tremendous 
+effect amongst salsa fans as well as with the musicians who performed them. The following record, "Siembra" (Sow), expanded on the musical and social vision of the former. The repercussions of the song "Pedro Navaja" (Peter Jack Knife) topped all records a song of its style ever achieved, turning into one of the most representative themes of Latin American music of all time. The LP sold more than a million copies and hit 1st place on the Spanish speaking countries charts and also those of the United States, reaching gold and platinum in most of the former." Pedro Navaja" opened up the doors of salsa to a world which, up to that point, remained behind its own reality, wiping out the notion that this was only evasion music unaccountable even within the society where it developed. People who didn't like salsa because they thought of it as low projection, vulgar music, started to realize de enormous influence it could have on all social levels.
+<p align="left">The public's reaction was instantaneous.
+It started to understand the total sense of the music. "<i>This was a spontaneous manifestation. We had no support on the part of the industry. We were not a creation. The whole thing was made possible thanks to the reaction of people who bought the record and made it possible for us to continue to make records"</i>.<br>
+<br>
+In 1980, Rub&eacute;n Blades discovered movies. A Fania top executive offered him a role in a low budget movie entitled "The Last Pipe", directed by Fred Williamson. Although the film had no 
+repercussion, it elicited Rub&eacute;n's interest on the film medium and prompted him to learn how to work in that scenario. After six years with the Willie Colon group, in 1982 Rub&eacute;n Blades decided it was time to go independent and form his own group which would enable him to develop his own musical ideas in further depth and explore salsa in a more direct fashion through its texts. He started 6 del Solar, a group based on experimentation trying to move away from typical salsa formats, eliminating the brass section and utilizing certain keys closer to rock. He recorded "Agua de Luna" (Moon Water) with the group, a theme inspired on a series of short stories by Gabriel Garc&iacute;a M&aacute;rquez. With 6 del Solar he was awarded a Grammy that came to show the recognition and acceptance of his innovative theories with Caribbean popular music. Problems, which developed with Fania Records, prompted Rub&eacute;n Blades to sign for Elektra Records.<br>
+<br>
+Meanwhile, the group kept evolving, eventually turning into Son del Solar. With them, Blades continued to explore the trajectory of Latin America's social reality through music, adding a brass section to give the songs more speed and movement. Another Grammy further recognized de value of his efforts. The LP "Buscando America" (Looking for America) and the song "Desapariciones" (Disappearances) managed to attract the 
+Hispanic public.
+<p align="left">The effort to universalize his music and wipe out stereotypes awakened in Rub&eacute;n Blades a growing interest in rock as a means of experimentation and the incorporation of new facets into his music. In contrast, rock stars such as Lou Reed and Elvis Costello, got interested in his work. The result is a record in English where he carries out his theories about conjunction and the development of different rhythms from various cultural sources. "<i>I do not believe in the notion that one is condemned to do something because he looks in a certain way or speaks a certain language. To me, music is a universal thing, and I have always been interested in the directions offered me by music in English, directions I could not find, concretely in terms of construction, with the Afro-Cuban rhythms I'd always worked with. I also wanted to leave testimony of the meeting of urban tropical music with rock 'n roll</i>".<br>
+<br>
+His second experience with movies allowed him to develop, in a more consistent manner than before, his qualities and intuition as an actor. In ""Crossover Dreams" he is the main character, as he plays a Latin musician trying to introduce himself into the American market, a feat which though advised by many people, had little to do with whom he was. Rub&eacute;n's interpretative job is so convincing, that it may lead to confusions. This movie was produced in New York with 
+Hispanic money, production, direction, script and actors. As a result of his performance he was offered a number of short roles in important productions, so he moved on to California where he gradually acquired a measure of prestige as an actor as he appeared in movies with Richard Pryor, Whoopi Goldberg and Jack Nicholson. His first important role was offered to him by Robert Redford in "The Milagro Beanfield War", in which he played the town's sheriff.<br>
+<br>
+His career as an actor started to gradually grow in importance eventually giving him a protagonist role in "Dead Man Out", where his portrait of a killer on death row gave him the Best Actor Award in movies produced for cable television. Through the same medium one should highlight his acting in the mini-series "The Josephine Baker Story". Among his 
+other interventions on the movie screen we find The Two Jakes (1990) Mo' Better Blues (1990), The Super (1991), Crazy From The Heart (1991), One Man's War (1991), Latino Session (1992), Miracle on I-880 (1993), A Million to Juan (1994), Color of Night (1994), Scorpion Spring (1996), Chinese Box (1997), Roots of Rhythm (1997), and The Devils Own (1997).<br>
+<br>
+In 1990, Son del Solar recorded a farewell album directly from Lonestar Roadhouse, in New York, ending a stage which, while representing creation and achievement for the group, it was also a phenomenon which permitted the circles of Latin music to go beyond that which until then they had been reduced to, influencing not only the Latin musical panorama of the seventies and eighties, but also future generations of musicians and the public which, as will be observed, made it possible for Afro-Caribbean music to reach a place unforeseen in those days not only as an escapist and festive manifestation, but also as a social and cultural expression. And, of course, also as enjoyment and fun.<br>
+<br>
+In 1994, Rub&eacute;n Blades decided to run for president of his country in an effort to create and bring into relevance a social and democratic movement already existing in his country but until then ignored. His political militancy is based on the fight against social injustice and the defense of ethnic, cultural and social minorities. Rub&eacute;n explains that, "<i>at no moment did I think I was going to become president or anything of the sort, but if I would have been, it would not have been through a desire for power. What we attempted was to bring to the fore the existence of an important sector of the Panamanian population that disagrees and cannot identify with the policies applied to them. My political campaign fully achieved that purpose</i>''.<p align="left">Rub&eacute;n Blades inaugurated the decade of the nineties signing a contract with Sony Music International, A&amp;R Development New York, a feat which opened a new stage in his career. His last album, "Caminado" (Walked), "Amor y Control" (Love and Control) and "La Rosa de los Vientos" (The Rose of Winds), conform a trilogy where his opus definitely moves towards the universalization of the rhythms and styles typical of Latin music.
+<p align="left">In his album, "Tiempos" (Times), Rub&eacute;n Blades gave another step in his effort to "culturize" and enhance Latin 
+American rhythms to this effect he did not hesitate to incorporate elements of 
+contemporary classical music as a base to his whole display of genius, 
+originality and compromise, musical as well as social.
+<p>In 2004, the president elect of Panama, Martin Torrijos, named Blades Tourism Minister, overseeing the Instituto Panameño de Turismo (IPAT). Blades 
+stayed away from his artistic career during his appointed period.</p>
+<p>Discography: <br>
+<br>
+De Panamá a New York Con la Orquesta de Pete Rodríguez (1970)<br>
+<br>
+Barreto Ray Barretto y su Orquesta (1975)<br>
+<br>
+Metiendo Mano Willie Colon presents Rubén Blades (1977)<br>
+<br>
+<a href="http://www.amazon.com/gp/product/B003E66YRA?ie=UTF8&camp=1789&creativeASIN=B003E66YRA&linkCode=xm2&tag=musidelmund-20">Siembra</a>, with Willie Colon (Fania JMCD537, 1978)<br>
+<br>
+<a href="http://www.amazon.com/gp/product/B003O9GT9U?ie=UTF8&camp=1789&creativeASIN=B003O9GT9U&linkCode=xm2&tag=musidelmund-20">Bohemio y Poeta</a>, compilation (Fania JM00541, 1979)<br>
+<br>
+Maestra Vida - Parte I (Fania JM576, 1980)<br>
+<br>
+Maestra Vida - Parte II (1980)<br>
+<br>
+<a href="http://www.amazon.com/gp/product/B003O9GTC2?ie=UTF8&camp=1789&creativeASIN=B003O9GTC2&linkCode=xm2&tag=musidelmund-20">Canciones del Solar de los Aburridos</a>, with Willie Colon (Fania JM597, 1981)<br>
+<br>
+The Last Fight, with Willie Colon (1982)<br>
+<br>
+El que la hace la paga (1983)<br>
+<br>
+Mucho Mejor (Fania JM630, 1984)<br>
+<br>
+<a href="http://www.amazon.com/gp/product/B000002H25?ie=UTF8&camp=1789&creativeASIN=B000002H25&linkCode=xm2&tag=musidelmund-20">Buscando América</a>, with Seis del Solar (1984)<br>
+<br>
+Escenas, with Seis del Solar (Elektra 60432, 1985)<br>
+<br>
+<a href="http://www.amazon.com/gp/product/B000002H4D?ie=UTF8&camp=1789&creativeASIN=B000002H4D&linkCode=xm2&tag=musidelmund-20">Agua de Luna</a>, with Seis del Solar (Elektra 60721, 1987)<br>
+<br>
+Doble Filo (Fania Fania JM645, 1987)<br>
+<br>
+With Strings (Fania JM648, 1988)<br>
+<br>
+<a href="http://www.amazon.com/gp/product/B000V1MMJ0?ie=UTF8&camp=1789&creativeASIN=B000V1MMJ0&linkCode=xm2&tag=musidelmund-20">Nothing But The Truth</a> (1988)<br>
+<br>
+<a href="http://www.amazon.com/gp/product/B000002H64?ie=UTF8&camp=1789&creativeASIN=B000002H64&linkCode=xm2&tag=musidelmund-20">Antecedente</a>, with Son del Solar (Elektra 60795, 1988)<br>
+<br>
+<a href="http://www.amazon.com/gp/product/B000002H7A?ie=UTF8&camp=1789&creativeASIN=B000002H7A&linkCode=xm2&tag=musidelmund-20">Live!</a>, with Son del Solar (Elektra 60868, 1990)<br>
+<br>
+<a href="http://www.amazon.com/gp/product/B000002DJP?ie=UTF8&camp=1789&creativeASIN=B000002DJP&linkCode=xm2&tag=musidelmund-20">Caminando</a>, with Son del Solar (Sony Discos 80593, 1991)<br>
+<br>
+<a href="http://www.amazon.com/gp/product/B00004TW8N?ie=UTF8&camp=1789&creativeASIN=B00004TW8N&linkCode=xm2&tag=musidelmund-20">The Best</a>, compilation (Sony Discos 80718, 1992)<br>
+<br>
+<a href="http://www.amazon.com/gp/product/B000002DLO?ie=UTF8&camp=1789&creativeASIN=B000002DLO&linkCode=xm2&tag=musidelmund-20">Amor y Control</a>, with Son del Solar (Sony Discos 80839, 1992)<br>
+<br>
+La Leyenda, compilation (1994)<br>
+<br>
+<a href="http://www.amazon.com/gp/product/B000002DXK?ie=UTF8&camp=1789&creativeASIN=B000002DXK&linkCode=xm2&tag=musidelmund-20">Tras la Tormenta</a>, with Willie Colon (Sony Tropical 81498, 1995)<br>
+<br>
+Greatest Hits (Fania SP51, 1996)<br>
+<br>
+<a href="http://www.amazon.com/gp/product/B000002EAG?ie=UTF8&camp=1789&creativeASIN=B000002EAG&linkCode=xm2&tag=musidelmund-20">La Rosa de los Vientos</a> (Sony Tropical 81992, 1996)<br>
+<br>
+Fania All Stars (1997)<br>
+<br>
+<a href="http://www.amazon.com/gp/product/B00000JKP6?ie=UTF8&camp=1789&creativeASIN=B00000JKP6&linkCode=xm2&tag=musidelmund-20">Tiempos</a> (Sony Discos Inc. 83184, 1999)<br>
+<br>
+Siembra y Otros Favoritos de la Salsa, compilation (2001)<br>
+<br>
+<a href="http://www.amazon.com/gp/product/B00006JIC1?ie=UTF8&camp=1789&creativeASIN=B00006JIC1&linkCode=xm2&tag=musidelmund-20">Mundo</a> (Sony Discos, 2002)</p>
+<p>
+<a href="http://www.amazon.com/gp/product/B0009GWHUQ?ie=UTF8&camp=1789&creativeASIN=B0009GWHUQ&linkCode=xm2&tag=musidelmund-20">
+Ganas</a> (2005)</p>
+<p>
+<a href="http://www.amazon.com/gp/product/B002LW9ISU?ie=UTF8&camp=1789&creativeASIN=B002LW9ISU&linkCode=xm2&tag=musidelmund-20">
+Cantares del Subdesarrollo</a> (2009) </p>
+<p>
+<a href="http://www.amazon.com/gp/product/B004K7M6TM?ie=UTF8&camp=1789&creativeASIN=B004K7M6TM&linkCode=xm2&tag=musidelmund-20">
+Todos Vuelven Live, Volume I &amp; II</a> (2010) </p>
+<p>
+<a href="http://www.amazon.com/gp/product/B007YLEM48?ie=UTF8&camp=1789&creativeASIN=B007YLEM48&linkCode=xm2&tag=musidelmund-20">
+Eba Say Ajá</a>, with Cheo Feliciano (2011)&nbsp; </p></td>
+<tr><td align="center" colspan="2" width="100%">
+
+<hr></td></tr>
+  	<tr>
+        <td colspan="2" width="100%">
+		<a name="Discography"><b>Discography</b></a>:
+	  </td>
+    </tr>
+    <tr>
+      <td colspan="2" width="100%">&nbsp;</td>
+    </tr>
+
+    <tr>
+      <td width="3%"></td>
+
+      <td width="97%">
+
+ 	<p>De Panam&aacute; a New York Con la Orquesta de Pete Rodr&iacute;guez (1970)</p><p>Barreto Ray Barretto y su Orquesta (1975)</p><p>Metiendo Mano Willie Colon presents Rub&eacute;n Blades (1977)</p><p>Siembra, with Willie Colon (Fania JMCD537, 1978)</p><p>Bohemio y Poeta, compilation (Fania JM00541, 1979)</p><p>Maestra Vida - Parte I (Fania JM576, 1980)</p><p>Maestra Vida - Parte II (1980)</p><p>Canciones del Solar de los Aburridos, with Willie Colon (Fania JM597, 1981)</p><p>The Last Fight, with Willie Colon (1982)</p><p>El que la hace la paga (1983)</p><p>Mucho Mejor (Fania JM630, 1984)</p><p>Buscando Am&eacute;rica, with Seis del Solar (1984)</p><p>Escenas, with Seis del Solar (Elektra 60432, 1985)</p><p>Agua de Luna, with Seis del Solar (Elektra 60721, 1987)</p><p>Doble Filo (Fania Fania JM645, 1987)</p><p>With Strings (Fania JM648, 1988)</p><p>Nothing But The Truth (1988)</p><p>Antecedente, with Son del Solar (Elektra 60795, 1988)</p><p>Live!, with Son del Solar (Elektra 60868, 1990)</p><p>Caminando, with Son del Solar (Sony Discos 80593, 1991)</p><p>The Best, compilation (Sony Discos 80718, 1992)</p><p>Amor y Control, with Son del Solar (Sony Discos 80839, 1992)</p><p>La Leyenda, compilation (1994)</p><p>Tras la Tormenta, with Willie Colon (Sony Tropical 81498, 1995)</p><p>Greatest Hits (Fania SP51, 1996)</p><p>La Rosa de los Vientos (Sony Tropical 81992, 1996)</p><p>Fania All Stars (1997)</p><p>Tiempos (Sony Discos Inc. 83184, 1999)</p><p>Siembra y Otros Favoritos de la Salsa, compilation (2001)</p><p>Mundo (Sony Discos, 2002)</p></td>
+<tr><td align="center" colspan="2" width="100%">
+
+<hr></td></tr>
+  	<tr>
+  	  <td colspan="2" width="100%">
+		<a name="Genres"><b>Similar Music</b></a>:
+	  </td>
+    </tr>
+    <tr>
+      <td colspan="2" width="100%">&nbsp;</td>
+    </tr>
+
+    <tr>
+      <td width="3%"></td>
+
+      <td width="97%">
+
+	<a href="genre_list-genre=Salsa.php.html">Salsa</a>, <a href="instrument_index-instrument=Vocals.php.html">Vocals</a></td>
+<tr><td align="center" colspan="2" width="100%">
+
+<hr></td></tr>
+	</table>
+	</div>
+
+	</div><!-- #main -->
+	
+	    
+    <div id="footer">
+		<div class="footer-sidebar-container clearfix">
+							<ul id="footer-sidebar-1" class="footer-sidebar clearfix xoxo">
+										<li></li>
+									</ul>
+					</div>
+		
+		<div class="footer-message">
+                <p class="floatright">WordPress Installation and Support by <a class="arras" href="http://digiblink.eu/" title="Custom WordPress development, design and backup services."><strong>digiBlink</strong></a></p>
+                <p>Copyright World Music Central.org. All Rights Reserved.</p>                </div><!-- .footer-message -->
+		
+    </div>
+</div><!-- #wrapper -->
+
+<script type="text/javascript"><!--
+wpa2a.targets=[];
+wpa2a.html_done=true;if(wpa2a.script_ready&&!wpa2a.done)wpa2a.init();wpa2a.script_load();
+//--></script>
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+
+	
+});
+</script>
+<script type='text/javascript' src='../wp-includes/js/jquery/ui/jquery.ui.core.min.js?ver=1.10.3'></script>
+<script type='text/javascript' src='../wp-includes/js/jquery/ui/jquery.ui.widget.min.js?ver=1.10.3'></script>
+<script type='text/javascript' src='../wp-includes/js/jquery/ui/jquery.ui.tabs.min.js?ver=1.10.3'></script>
+</body>
+</html>
+   
+
+<!-- Localized -->

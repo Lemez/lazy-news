@@ -1,0 +1,1032 @@
+
+<style type="text/css">
+/* --- reset some elements --- */
+
+#dw ul,ol { list-style:none }
+
+#dw ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,p,blockquote,fieldset,input { margin:0; padding:0 }
+
+/* --- Basic Stylesheet for DokuWiki content --- */
+
+#dw h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+#dw h1 a {
+  color: black;
+}
+
+/* ---------- table of contents ------------------- */
+
+#dw div.toc {
+  margin-left: 2em;
+  margin-top: 1.2em;
+  margin-bottom: 0;
+  float:right;
+  width: 200px;
+  font-size: 80%;
+  padding-top:5px;
+}
+
+#dw div.tocheader {
+  padding: 3px;
+  border: 1px solid #8cacbb;
+  background-color: #dee7ec;
+  text-align: left;
+  font-weight:bold;
+  margin-bottom: 2px;
+}
+
+#dw div.tocheader img {
+  width:0.8em;
+  height:0.8em;
+  margin-top:0.3em;
+  margin-right:3px;
+  float:right;
+  cursor: pointer;
+}
+
+#dw #toc__inside {
+  border: 1px solid #8cacbb;
+  background-color: #fff;
+  text-align: left;
+  padding-top: 0.5em;
+  padding-bottom: 0.7em;
+}
+
+#dw ul.toc {
+  list-style-type: none;
+  list-style-image: none;
+  line-height: 1.2em;
+  margin: 0;
+  padding: 0;
+  padding-left: 1em;
+}
+
+#dw ul.toc li {
+  background: transparent url(../lib/tpl/fsinfo/images/tocdot2.gif) 0 0.6em no-repeat;
+  padding-left:0.4em;
+}
+
+#dw ul.toc li.clear {
+  background-image: none;
+  padding-left:0.4em;
+}
+
+#dw a.toc {
+  color: #436976;
+  text-decoration:none;
+}
+
+#dw a.toc:hover {
+  color: #000;
+  text-decoration:underline;
+}
+
+/* --------------------- footnotes -------------------------------- */
+
+#dw div.footnotes{
+  clear:both;
+  border-top: 1px solid #8cacbb;
+  padding-left: 1em;
+  margin-top: 1em;
+}
+
+#dw div.fn{
+  font-size:90%;
+}
+
+#dw a.fn_top{
+  vertical-align:super;
+  font-size:80%;
+}
+
+#dw a.fn_bot{
+  vertical-align:super;
+  font-size:80%;
+  font-weight:bold;
+}
+
+/* insitu-footnotes */
+#dw div.insitu-footnote {
+  font-size: 80%;
+  line-height: 1.2em;
+  border: 1px solid #8cacbb;
+  background: #eef3f8;
+  text-align: left;
+  padding: 4px;
+  max-width: 40%;    /* IE's width is handled in javascript */
+}
+
+/* overcome IE issue with one line code or file boxes which require h. scrolling */
+#dw * html .insitu-footnote pre.code, * html .insitu-footnote pre.file {
+  padding-bottom: 18px;
+}
+
+/* --------------------- Tables -------------------------------- */
+
+#dw table.inline td.okay {
+  background-color: #afa;
+  text-align: center;
+}
+
+#dw table.inline td.notokay {
+  background-color: #fcc;
+  text-align: center;
+}
+
+#dw table.inline {
+  background-color: #fff;
+  border-spacing: 0px;
+  border-collapse: collapse;
+}
+
+/* ------------- Page elements ----------------- */
+
+#dw span.user{
+/*  color: #ccc; */
+  color: #666;
+  font-size: 90%;
+}
+
+#dw li.minor {
+  color: #666;
+  font-style: italic;
+}
+
+/* embedded images */
+#dw img.media {
+  margin: 3px;
+}
+
+#dw img.medialeft {
+  border: 0;
+  float: left;
+  margin: 0 1.5em 0 0;
+}
+
+#dw img.mediaright {
+  border: 0;
+  float: right;
+  margin: 0 0 0 1.5em;
+}
+
+#dw img.mediacenter {
+  border: 0;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* smileys */
+#dw img.middle {
+  vertical-align: middle;
+}
+
+#dw acronym {
+  cursor: help;
+  border-bottom: 1px dotted #000;
+}
+
+/* general headline setup */
+#dw h1, #dw h2, #dw h3, #dw h4, #dw h5 {
+    color: Black;
+    background-color: transparent;
+    font-family: "Lucida Grande", Verdana, Lucida, Helvetica, Arial, sans-serif;
+    font-size: 100%;
+    font-weight: normal;
+    margin-left:    0;
+    margin-right:   0;
+    margin-top:     0;
+    margin-bottom:  1em;
+    padding-left:   0;
+    padding-right:  0;
+    padding-top:    0.5em;
+    padding-bottom: 0;
+    border-bottom: 1px solid #8cacbb;
+}
+
+/* special headlines */
+/*
+#dw h1 {font-size: 160%; margin-left: 0px; font-weight: bold;}
+#dw h2 {font-size: 150%; margin-left: 20px; font-weight: bold;}
+#dw h3 {font-size: 130%; margin-left: 40px; border-bottom: none; font-weight: bolder}
+#dw h4 {font-size: 115%; margin-left: 60px; border-bottom: none; font-weight: bolder}
+#dw h5 {font-size: 100%; margin-left: 80px; border-bottom: none; font-weight: bold;}
+*/
+
+#dw h1 {font-size: 160%; font-weight: bold;}
+#dw h2 {font-size: 140%; font-weight: bold; }
+#dw h3 {font-size: 130%; border-bottom: none; font-weight: bolder}
+#dw h4 {font-size: 115%; border-bottom: none; font-weight: bolder}
+#dw h5 {font-size: 100%; border-bottom: none; font-weight: bold;}
+
+/* indent different sections */
+/*
+#dw div.level1 {margin-left: 3px;}
+#dw div.level2 {margin-left: 23px;}
+#dw div.level3 {margin-left: 43px;}
+#dw div.level4 {margin-left: 63px;}
+#dw div.level5 {margin-left: 83px;}
+*/
+
+/* unordered lists */
+#dw ul {
+  line-height: 1.5em;
+  list-style-type: square;
+  margin: 0 0 0.5em 2em;
+  padding: 0;
+  color: #638c9c;
+  list-style-image: none;
+}
+
+/* ordered lists */
+#dw ol {
+  line-height: 1.5em;
+  margin: 0 0 0.5em 2em;
+  padding: 0;
+  color: #638c9c;
+  font-weight: bold;
+  list-style-image: none;
+}
+
+/* the list items overriding the ul/ol definition */
+#dw .li {
+  color: #000;
+  font-weight: normal;
+}
+
+#dw ol {list-style-type: decimal}
+#dw ol ol {list-style-type: upper-roman}
+#dw ol ol ol {list-style-type: lower-alpha}
+#dw ol ol ol ol {list-style-type: lower-greek}
+
+#dw li.open {
+  list-style-image: url(../lib/tpl/fsinfo/images/open.gif);
+    /*list-style-type: circle;*/
+}
+
+#dw li.closed {
+  list-style-image: url(../lib/tpl/fsinfo/images/closed.gif);
+    /*list-style-type: disc;*/
+}
+
+#dw blockquote {
+  border-left: 2px solid #8cacbb;
+  padding-left: 3px;
+  margin-left: 0;
+}
+
+/* code blocks by indention */
+#dw pre.pre {
+  font-size: 100%;
+  padding: 0.5em;
+  border: 1px dashed #8cacbb;
+  color: Black;
+  background-color: #f7f9fa;
+  overflow: auto;
+}
+
+/* code blocks by code tag */
+#dw pre.code {
+  font-size: 100%;
+  padding: 0.5em;
+  border: 1px dashed #8cacbb;
+  color: Black;
+  background-color: #f7f9fa;
+  overflow: auto;
+}
+
+/* inline code words */
+#dw code {
+  font-size: 80%;
+}
+
+/* code blocks by file tag */
+#dw pre.file {
+  font-size: 100%;
+  padding: 0.5em;
+  border: 1px dashed #8cacbb;
+  color: Black;
+  background-color: #dee7ec;
+  overflow: auto;
+}
+
+/* inline tables */
+
+#dw table.inline th {
+  padding: 3px;
+  border: 1px solid #8cacbb;
+  background-color: #dee7ec;
+  text-align: left;
+}
+
+#dw table.inline td {
+  padding: 3px;
+  border: 1px solid #8cacbb;
+}
+</style>
+<link rel='stylesheet' id='eme_stylesheet-css'  href='../wp-content/plugins/events-made-easy/events_manager-ver=3.6.css' type='text/css' media='all' />
+<link rel='stylesheet' id='A2A_SHARE_SAVE-css'  href='../wp-content/plugins/add-to-any/addtoany.min-ver=1.4.css' type='text/css' media='all' />
+<script type='text/javascript' src='../wp-includes/js/jquery/jquery.js?ver=1.10.2'></script>
+<script type='text/javascript' src='../wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<script type='text/javascript' src='../wp-content/plugins/google-analyticator/external-tracking.min.js?ver=6.4.5'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../xmlrpc-rsd.php.html" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 3.6" />
+
+<script type="text/javascript"><!--
+var a2a_config=a2a_config||{},wpa2a={done:false,html_done:false,script_ready:false,script_load:function(){var a=document.createElement('script'),s=document.getElementsByTagName('script')[0];a.type='text/javascript';a.async=true;a.src='http://static.addtoany.com/menu/page.js';s.parentNode.insertBefore(a,s);wpa2a.script_load=function(){};},script_onready:function(){if(a2a.type=='page'){wpa2a.script_ready=true;if(wpa2a.html_done)wpa2a.init();}},init:function(){for(var i=0,el,target,targets=wpa2a.targets,length=targets.length;i<length;i++){el=document.getElementById('wpa2a_'+(i+1));target=targets[i];a2a_config.linkname=target.title;a2a_config.linkurl=target.url;if(el)a2a.init('page',{target:el});wpa2a.done=true;}}};a2a_config.tracking_callback=['ready',wpa2a.script_onready];
+//--></script>
+<meta name="_awb_version" content="2.0.3" /><link rel="stylesheet" href="../wp-content/themes/arras/css/styles/default.css" type="text/css" media="screen,projection" /><link rel="stylesheet" href="../wp-content/themes/arras/css/layouts/2c-r-fixed.css" type="text/css" />
+<!-- Generated by Arras WP Theme -->
+<style type="text/css">
+	.posts-default li  { width: 205px; height: 225px; }
+	.posts-default img, .posts-default .entry-thumbnails-link { width: 195px; height: 110px; }
+	.posts-default .entry-meta { width: 195px; }
+	.posts-default .entry-thumbnails { width: 205px; height: 120px; }
+			.posts-quick .entry-thumbnails img { width: 115px; height: 115px; }
+		.posts-quick .entry-meta { width: 115px; }
+			.featured { height: 260px; }
+	.featured-article { width: 640px; height: 250px; }
+	.featured-article img { width: 640px; height: 250px; }
+	#controls { width: 610px; top: 110px; }
+	#controls .next { left: 610px; }
+	.featured-entry { height: 84px; top: -84px; }
+	.featured-slideshow-inner { height: 250px }
+		.featured-stories-summary  { margin-left: 51px; }
+	.single .post .entry-photo img, .single-post .entry-photo img  { width: 620px; height: 250px; }
+		.footer-sidebar  { width: 920px; }
+	</style>
+	<script type="text/javascript">
+	jQuery(document).ready(function($) {
+
+$('.multi-sidebar').tabs();
+
+$('.sf-menu').superfish({autoArrows: true, speed: 'fast', dropShadows: 'true'});
+
+$('#commentform').validate();
+
+
+});	</script>
+	<!--[if IE]>
+<style type="text/css">
+.addtoany_list a img{filter:alpha(opacity=70)}
+.addtoany_list a:hover img,.addtoany_list a.addtoany_share_save img{filter:alpha(opacity=100)}
+</style>
+<![endif]-->
+<link rel="stylesheet" href="../wp-content/themes/arras/user.css" type="text/css" media="screen,projection" /><!-- Google Analytics Tracking by Google Analyticator 6.4.5: http://www.videousermanuals.com/google-analyticator/ -->
+<script type="text/javascript">
+	var analyticsFileTypes = [''];
+	var analyticsEventTracking = 'enabled';
+</script>
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-169675-4']);
+        _gaq.push(['_addDevId', 'i9k95']); // Google Analyticator App ID with Google 
+        
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>World Music Central.org</title>
+
+
+<link rel="alternate" type="application/rss+xml" href="../feed/index.html" title="World Music Central.org latest posts" />
+
+<link rel="alternate" type="application/rss+xml" href="../comments/feed/index.html" title="World Music Central.org latest comments" />
+
+<link rel="pingback" href="../xmlrpc.php.html" />
+
+<link rel="shortcut icon" href="../favicon.ico" />
+
+
+<style type="text/css">
+/* --- reset some elements --- */
+
+#dw ul,ol { list-style:none }
+
+#dw ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,p,blockquote,fieldset,input { margin:0; padding:0 }
+
+/* --- Basic Stylesheet for DokuWiki content --- */
+
+#dw h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+#dw h1 a {
+  color: black;
+}
+
+/* ---------- table of contents ------------------- */
+
+#dw div.toc {
+  margin-left: 2em;
+  margin-top: 1.2em;
+  margin-bottom: 0;
+  float:right;
+  width: 200px;
+  font-size: 80%;
+  padding-top:5px;
+}
+
+#dw div.tocheader {
+  padding: 3px;
+  border: 1px solid #8cacbb;
+  background-color: #dee7ec;
+  text-align: left;
+  font-weight:bold;
+  margin-bottom: 2px;
+}
+
+#dw div.tocheader img {
+  width:0.8em;
+  height:0.8em;
+  margin-top:0.3em;
+  margin-right:3px;
+  float:right;
+  cursor: pointer;
+}
+
+#dw #toc__inside {
+  border: 1px solid #8cacbb;
+  background-color: #fff;
+  text-align: left;
+  padding-top: 0.5em;
+  padding-bottom: 0.7em;
+}
+
+#dw ul.toc {
+  list-style-type: none;
+  list-style-image: none;
+  line-height: 1.2em;
+  margin: 0;
+  padding: 0;
+  padding-left: 1em;
+}
+
+#dw ul.toc li {
+  background: transparent url(../lib/tpl/fsinfo/images/tocdot2.gif) 0 0.6em no-repeat;
+  padding-left:0.4em;
+}
+
+#dw ul.toc li.clear {
+  background-image: none;
+  padding-left:0.4em;
+}
+
+#dw a.toc {
+  color: #436976;
+  text-decoration:none;
+}
+
+#dw a.toc:hover {
+  color: #000;
+  text-decoration:underline;
+}
+
+/* --------------------- footnotes -------------------------------- */
+
+#dw div.footnotes{
+  clear:both;
+  border-top: 1px solid #8cacbb;
+  padding-left: 1em;
+  margin-top: 1em;
+}
+
+#dw div.fn{
+  font-size:90%;
+}
+
+#dw a.fn_top{
+  vertical-align:super;
+  font-size:80%;
+}
+
+#dw a.fn_bot{
+  vertical-align:super;
+  font-size:80%;
+  font-weight:bold;
+}
+
+/* insitu-footnotes */
+#dw div.insitu-footnote {
+  font-size: 80%;
+  line-height: 1.2em;
+  border: 1px solid #8cacbb;
+  background: #eef3f8;
+  text-align: left;
+  padding: 4px;
+  max-width: 40%;    /* IE's width is handled in javascript */
+}
+
+/* overcome IE issue with one line code or file boxes which require h. scrolling */
+#dw * html .insitu-footnote pre.code, * html .insitu-footnote pre.file {
+  padding-bottom: 18px;
+}
+
+/* --------------------- Tables -------------------------------- */
+
+#dw table.inline td.okay {
+  background-color: #afa;
+  text-align: center;
+}
+
+#dw table.inline td.notokay {
+  background-color: #fcc;
+  text-align: center;
+}
+
+#dw table.inline {
+  background-color: #fff;
+  border-spacing: 0px;
+  border-collapse: collapse;
+}
+
+/* ------------- Page elements ----------------- */
+
+#dw span.user{
+/*  color: #ccc; */
+  color: #666;
+  font-size: 90%;
+}
+
+#dw li.minor {
+  color: #666;
+  font-style: italic;
+}
+
+/* embedded images */
+#dw img.media {
+  margin: 3px;
+}
+
+#dw img.medialeft {
+  border: 0;
+  float: left;
+  margin: 0 1.5em 0 0;
+}
+
+#dw img.mediaright {
+  border: 0;
+  float: right;
+  margin: 0 0 0 1.5em;
+}
+
+#dw img.mediacenter {
+  border: 0;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* smileys */
+#dw img.middle {
+  vertical-align: middle;
+}
+
+#dw acronym {
+  cursor: help;
+  border-bottom: 1px dotted #000;
+}
+
+/* general headline setup */
+#dw h1, #dw h2, #dw h3, #dw h4, #dw h5 {
+    color: Black;
+    background-color: transparent;
+    font-family: "Lucida Grande", Verdana, Lucida, Helvetica, Arial, sans-serif;
+    font-size: 100%;
+    font-weight: normal;
+    margin-left:    0;
+    margin-right:   0;
+    margin-top:     0;
+    margin-bottom:  1em;
+    padding-left:   0;
+    padding-right:  0;
+    padding-top:    0.5em;
+    padding-bottom: 0;
+    border-bottom: 1px solid #8cacbb;
+}
+
+/* special headlines */
+/*
+#dw h1 {font-size: 160%; margin-left: 0px; font-weight: bold;}
+#dw h2 {font-size: 150%; margin-left: 20px; font-weight: bold;}
+#dw h3 {font-size: 130%; margin-left: 40px; border-bottom: none; font-weight: bolder}
+#dw h4 {font-size: 115%; margin-left: 60px; border-bottom: none; font-weight: bolder}
+#dw h5 {font-size: 100%; margin-left: 80px; border-bottom: none; font-weight: bold;}
+*/
+
+#dw h1 {font-size: 160%; font-weight: bold;}
+#dw h2 {font-size: 140%; font-weight: bold; }
+#dw h3 {font-size: 130%; border-bottom: none; font-weight: bolder}
+#dw h4 {font-size: 115%; border-bottom: none; font-weight: bolder}
+#dw h5 {font-size: 100%; border-bottom: none; font-weight: bold;}
+
+/* indent different sections */
+/*
+#dw div.level1 {margin-left: 3px;}
+#dw div.level2 {margin-left: 23px;}
+#dw div.level3 {margin-left: 43px;}
+#dw div.level4 {margin-left: 63px;}
+#dw div.level5 {margin-left: 83px;}
+*/
+
+/* unordered lists */
+#dw ul {
+  line-height: 1.5em;
+  list-style-type: square;
+  margin: 0 0 0.5em 2em;
+  padding: 0;
+  color: #638c9c;
+  list-style-image: none;
+}
+
+/* ordered lists */
+#dw ol {
+  line-height: 1.5em;
+  margin: 0 0 0.5em 2em;
+  padding: 0;
+  color: #638c9c;
+  font-weight: bold;
+  list-style-image: none;
+}
+
+/* the list items overriding the ul/ol definition */
+#dw .li {
+  color: #000;
+  font-weight: normal;
+}
+
+#dw ol {list-style-type: decimal}
+#dw ol ol {list-style-type: upper-roman}
+#dw ol ol ol {list-style-type: lower-alpha}
+#dw ol ol ol ol {list-style-type: lower-greek}
+
+#dw li.open {
+  list-style-image: url(../lib/tpl/fsinfo/images/open.gif);
+    /*list-style-type: circle;*/
+}
+
+#dw li.closed {
+  list-style-image: url(../lib/tpl/fsinfo/images/closed.gif);
+    /*list-style-type: disc;*/
+}
+
+#dw blockquote {
+  border-left: 2px solid #8cacbb;
+  padding-left: 3px;
+  margin-left: 0;
+}
+
+/* code blocks by indention */
+#dw pre.pre {
+  font-size: 100%;
+  padding: 0.5em;
+  border: 1px dashed #8cacbb;
+  color: Black;
+  background-color: #f7f9fa;
+  overflow: auto;
+}
+
+/* code blocks by code tag */
+#dw pre.code {
+  font-size: 100%;
+  padding: 0.5em;
+  border: 1px dashed #8cacbb;
+  color: Black;
+  background-color: #f7f9fa;
+  overflow: auto;
+}
+
+/* inline code words */
+#dw code {
+  font-size: 80%;
+}
+
+/* code blocks by file tag */
+#dw pre.file {
+  font-size: 100%;
+  padding: 0.5em;
+  border: 1px dashed #8cacbb;
+  color: Black;
+  background-color: #dee7ec;
+  overflow: auto;
+}
+
+/* inline tables */
+
+#dw table.inline th {
+  padding: 3px;
+  border: 1px solid #8cacbb;
+  background-color: #dee7ec;
+  text-align: left;
+}
+
+#dw table.inline td {
+  padding: 3px;
+  border: 1px solid #8cacbb;
+}
+</style>
+<script type='text/javascript' src='../wp-content/themes/arras/js/superfish/hoverIntent.js'></script>
+<script type='text/javascript' src='../wp-content/themes/arras/js/superfish/superfish.js'></script>
+<script type='text/javascript' src='../wp-includes/js/comment-reply.min.js?ver=3.6'></script>
+<script type='text/javascript' src='../wp-content/themes/arras/js/jquery.validate.min.js'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../xmlrpc-rsd.php.html" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 3.6" />
+
+<script type="text/javascript"><!--
+var a2a_config=a2a_config||{},wpa2a={done:false,html_done:false,script_ready:false,script_load:function(){var a=document.createElement('script'),s=document.getElementsByTagName('script')[0];a.type='text/javascript';a.async=true;a.src='/page.js';s.parentNode.insertBefore(a,s);wpa2a.script_load=function(){};},script_onready:function(){if(a2a.type=='page'){wpa2a.script_ready=true;if(wpa2a.html_done)wpa2a.init();}},init:function(){for(var i=0,el,target,targets=wpa2a.targets,length=targets.length;i<length;i++){el=document.getElementById('wpa2a_'+(i+1));target=targets[i];a2a_config.linkname=target.title;a2a_config.linkurl=target.url;if(el)a2a.init('page',{target:el});wpa2a.done=true;}}};a2a_config.tracking_callback=['ready',wpa2a.script_onready];
+//--></script>
+<meta name="_awb_version" content="2.0.3" /><link rel="stylesheet" href="../wp-content/themes/arras/css/styles/default.css" type="text/css" media="screen,projection" /><link rel="stylesheet" href="../wp-content/themes/arras/css/layouts/2c-r-fixed.css" type="text/css" />
+<!-- Generated by Arras WP Theme -->
+<style type="text/css">
+	.posts-default li  { width: 205px; height: 225px; }
+	.posts-default img, .posts-default .entry-thumbnails-link { width: 195px; height: 110px; }
+	.posts-default .entry-meta { width: 195px; }
+	.posts-default .entry-thumbnails { width: 205px; height: 120px; }
+			.posts-quick .entry-thumbnails img { width: 115px; height: 115px; }
+		.posts-quick .entry-meta { width: 115px; }
+			.featured { height: 260px; }
+	.featured-article { width: 640px; height: 250px; }
+	.featured-article img { width: 640px; height: 250px; }
+	#controls { width: 610px; top: 110px; }
+	#controls .next { left: 610px; }
+	.featured-entry { height: 84px; top: -84px; }
+	.featured-slideshow-inner { height: 250px }
+		.featured-stories-summary  { margin-left: 51px; }
+	.single .post .entry-photo img, .single-post .entry-photo img  { width: 620px; height: 250px; }
+		.footer-sidebar  { width: 920px; }
+	</style>
+	<script type="text/javascript">
+	jQuery(document).ready(function($) {
+
+$('.multi-sidebar').tabs();
+
+$('.sf-menu').superfish({autoArrows: true, speed: 'fast', dropShadows: 'true'});
+
+$('#commentform').validate();
+
+
+});	</script>
+	<!--[if IE]>
+<style type="text/css">
+.addtoany_list a img{filter:alpha(opacity=70)}
+.addtoany_list a:hover img,.addtoany_list a.addtoany_share_save img{filter:alpha(opacity=100)}
+</style>
+<![endif]-->
+<link rel="stylesheet" href="../wp-content/themes/arras/user.css" type="text/css" media="screen,projection" /><!-- Google Analytics Tracking by Google Analyticator 6.4.5: http://www.videousermanuals.com/google-analyticator/ -->
+<script type="text/javascript">
+	var analyticsFileTypes = [''];
+	var analyticsEventTracking = 'enabled';
+</script>
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-169675-4']);
+        _gaq.push(['_addDevId', 'i9k95']); // Google Analyticator App ID with Google 
+        
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+</head>
+
+<body class="page page-id-0 page-parent page-template-default layout-2c-r-fixed no-js style-default">
+<script type="text/javascript">
+//<![CDATA[
+(function(){
+var c = document.body.className;
+c = c.replace(/no-js/, 'js');
+document.body.className = c;
+})();
+//]]>
+</script>
+
+<div id="top-menu" class="clearfix">
+	</div><!-- #top-menu -->
+
+<div id="header"><div align="center"><script type="text/javascript"><!--
+google_ad_client = "pub-7027070946238159";
+/* 728x90, Top Banner */
+google_ad_slot = "9335358437";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+	<div id="branding" class="clearfix">
+	<div class="logo">
+				<span class="blog-name"><a href="../index.html">World Music Central.org</a></span>
+		<img style="float:left; padding: 0 5px 0 0;" src="../wp-content/themes/wmc-magazeen/images/bull.png"/><span class="blog-description">Your Connection to World Music</span>
+			</div>
+	<div id="searchbar"><form method="get" class="searchform clearfix" action="http://worldmusiccentral.org/">
+ <input type="text" value="Search..." name="s" class="s" onfocus="this.value=''" />
+ <input type="submit" class="searchsubmit" value="Search" title="Search World Music Central.org" />
+</form>
+</div>
+	</div><!-- #branding -->
+</div><!-- #header -->
+
+<div id="nav">
+	<div id="nav-content" class="clearfix">
+	<div class="menu-main-container"><ul id="menu-main" class="sf-menu menu clearfix"><li id="menu-item-6394" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-6394"><a href="../index.html">Home</a></li>
+<li id="menu-item-6401" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6401"><a href="../about/index.html">About</a></li>
+<li id="menu-item-6454" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6454"><a href="#">World Music Resources</a>
+<ul class="sub-menu">
+	<li id="menu-item-6455" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6455"><a href="artist_index.php.html">Artists Database</a></li>
+	<li id="menu-item-6462" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6462"><a href="http://musicwikicentral.com/world_music_festivals">Festivals</a></li>
+	<li id="menu-item-6467" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6467"><a href="http://musicwikicentral.com/travel_guides">Travel Guides</a></li>
+	<li id="menu-item-6469" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6469"><a href="http://musicwikicentral.com/world_music_genres">Musical Genres</a></li>
+	<li id="menu-item-6468" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6468"><a href="http://musicwikicentral.com/musical_instruments">Musical Instruments</a></li>
+	<li id="menu-item-6475" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6475"><a href="http://musicwikicentral.com/showcases">Showcases</a></li>
+	<li id="menu-item-6470" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6470"><a href="http://musicwikicentral.com/world_music_venues">Venues</a></li>
+	<li id="menu-item-6472" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6472"><a href="http://musicwikicentral.com/record_companies">Record Companies</a></li>
+	<li id="menu-item-6466" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6466"><a href="http://musicwikicentral.com/booking_agents">Booking Agents</a></li>
+	<li id="menu-item-6474" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6474"><a href="http://musicwikicentral.com/world_music_press">World Music Press</a></li>
+	<li id="menu-item-6477" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6477"><a href="http://musicwikicentral.com/ethnomusicology">Ethnomusicology</a></li>
+	<li id="menu-item-6473" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6473"><a href="http://musicwikicentral.com/music_organizations">Music Organizations</a></li>
+</ul>
+</li>
+<li id="menu-item-6390" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6390"><a href="#">Topics</a>
+<ul class="sub-menu">
+	<li id="menu-item-6369" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6369"><a href="../category/archive/index.html">archive</a></li>
+	<li id="menu-item-6370" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6370"><a href="../category/articles/index.html">Articles</a></li>
+	<li id="menu-item-6371" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6371"><a href="../category/awards/index.html">Awards</a></li>
+	<li id="menu-item-6372" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6372"><a href="../category/book-reviews/index.html">Book Reviews</a></li>
+	<li id="menu-item-6373" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6373"><a href="../category/cd-reviews/index.html">CD Reviews</a></li>
+	<li id="menu-item-6374" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6374"><a href="../category/concert-reviews/index.html">Concert reviews</a></li>
+	<li id="menu-item-6375" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6375"><a href="../category/conferences/index.html">Conferences</a></li>
+	<li id="menu-item-6376" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6376"><a href="../category/editorials/index.html">Editorials</a></li>
+	<li id="menu-item-6377" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6377"><a href="../category/events/index.html">Events</a></li>
+	<li id="menu-item-6378" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6378"><a href="../category/film-reviews/index.html">Film Reviews</a></li>
+	<li id="menu-item-6379" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6379"><a href="../category/general-news/index.html">General News</a></li>
+	<li id="menu-item-6380" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6380"><a href="../category/interviews/index.html">Interviews</a></li>
+	<li id="menu-item-6381" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6381"><a href="../category/loop-collections/index.html">Loop Collections</a></li>
+	<li id="menu-item-6382" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6382"><a href="../category/new-books/index.html">New Books</a></li>
+	<li id="menu-item-6383" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6383"><a href="../category/new-cds/index.html">New CDs</a></li>
+	<li id="menu-item-6384" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6384"><a href="../category/new-films/index.html">New Films</a></li>
+	<li id="menu-item-6385" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6385"><a href="../category/new-releases/index.html">New Releases</a></li>
+	<li id="menu-item-6386" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6386"><a href="../category/obituaries/index.html">Obituaries</a></li>
+	<li id="menu-item-6387" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6387"><a href="../category/tour-announcements/index.html">Tour Announcements</a></li>
+	<li id="menu-item-6388" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6388"><a href="../category/tradeshows/index.html">Tradeshows</a></li>
+	<li id="menu-item-6389" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6389"><a href="../category/uncategorized/index.html">Uncategorized</a></li>
+</ul>
+</li>
+<li id="menu-item-6392" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6392"><a href="../events/index.html">Calendar</a></li>
+<li id="menu-item-6400" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6400"><a href="../store/index.html">Store</a></li>
+<li id="menu-item-6724" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6724"><a href="../contact-us/index.html">Contact Us</a></li>
+</ul></div>		<ul class="quick-nav clearfix">
+					<li><a id="rss" title="World Music Central.org RSS Feed" href="../feed/index.html">RSS Feed</a></li>
+				
+						
+							<li><a id="facebook" title="World Music Central.org Facebook" href="http://www.facebook.com/pages/World-Music-Central/149036898455901" target="_blank">Facebook</a></li>
+				
+			</ul>
+	</div><!-- #nav-content -->
+</div><!-- #nav -->
+
+<div id="wrapper">
+	
+	  
+	<div id="main" class="clearfix">
+    <div id="container" class="clearfix">
+  <head>
+    <title>B.B. King - Artist Page</title>
+  </head>
+
+  <body> 
+  
+  <div id="artistpage">
+  
+  <div style="float:right;">
+  
+  <script type="text/javascript"><!--
+google_ad_client = "pub-7027070946238159";
+/* 160x600, created 12/6/08 */
+google_ad_slot = "6830638066";
+google_ad_width = 160;
+google_ad_height = 600;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+
+</div>
+  
+  
+  
+  	<table>
+
+  
+<tr><td align="center" colspan="2" width="100%">
+<font size=+1><b>B.B. King</b></font> 
+<hr></td></tr>
+
+<tr><td align="center" colspan="2" width="100%">
+<a href="#Genres">Similar Music</a>
+<hr></td></tr>
+    <tr>
+      <td colspan="2" width="100%">
+		<a name="Biography"><b>Biography</b></a>:
+	  </td>
+    </tr>
+    <tr>
+      <td colspan="2" width="100%">&nbsp;</td>
+    </tr>
+
+    <tr>
+      <td width="3%"></td>
+
+      <td width="97%">
+	  
+	<p align=center><img border="0" align="center"  src="../staticpages/images/b_b_king-300.jpg"></p>B.B. King is one of the greatest blues guitarists of all time with a career that 
+has spanned over half a century.
+
+Throughout the 1990s as well as the 1980s, 1970s, 1960s and 1950s, there has been only one King of the Blues - Riley B. King, affectionately known as B.B. King. Since B.B. started recording in the late 1940s, he has released over 50 albums many of them considered blues classics, like 1965's definitive live blues album <a href="http://www.amazon.com/exec/obidos/ASIN/B000002P72/musidelmund-20/102-0219826-0428945?_encoding=UTF8&camp=1789&link_code=xm2"> Live at the Regal</a>, and 1976's collaboration with Bobby &quot;Blue&quot; Bland, <a href="http://www.amazon.com/exec/obidos/ASIN/B000002O1C/musidelmund-20/102-0219826-0428945?_encoding=UTF8&camp=1789&link_code=xm2"> Together for the First Time...Live</a>.<br> <br> Over the years, B.B. has had two number one R &amp; B hits, 1951's &quot;Three O'Clock Blues&quot;, and 1952's &quot;You Don't Know Me&quot;, and four number two R &amp; B hits, 1953's &quot;Please Love Me&quot;, and 1954's &quot;You Upset Me Baby&quot;, 1960's &quot;Sweet Sixteen, Part I&quot;, and 1966's &quot;Don't Answer The Door, Part I&quot;. B.B.'s most popular crossover hit, 1970's &quot;The Thrill Is Gone&quot; went to #15 pop.<br> <br> But B.B. King, as well as the entire blues genre, is not radio oriented. His classic songs such as &quot;Payin' The Cost To Be The Boss&quot;, &quot;Caldonia&quot;, &quot; How Blue Can You Get&quot;, &quot;Everyday I Have The Blues&quot;, and &quot;Why I Sing The Blues&quot;, are concert (and fan) staples.<br> <br> Riley B. King was born on September 16, 1925, on a cotton plantation in Itta Bene, Mississippi, just outside the Mississippi delta town of Indianola. He used to play on the corner of Church and Second Street for dimes and would sometimes play in as many as four towns on a Saturday night. With his guitar and $2.50, he hitchhiked north to Memphis, Tennessee, in 1947 to pursue his musical career. Memphis was the city where every important musician of the South gravitated and which supported a large, competitive musical community where virtually every black musical style was heard. B.B. stayed with his cousin Bukka White, one of the most renowned rural blues performers of his time, who schooled B.B. further in the art of the blues.<br> <br> B.B.'s first big break came in 1948 when he performed on Sonny Boy Williamson's radio program on KWEM out of West Memphis. This led to steady performance engagements at the Sixteenth Avenue Grill in West Memphis and later to a ten minute spot on black staffed and managed radio station WDIA. &quot;King's Spot&quot;, sponsored by Pepticon, a health tonic, became so popular that it was increased in length and became the &quot;Sepia Swing Club&quot;. Soon, B.B. needed a catchy radio name. What started out as Beale Street Blues Boy was shortened to Blues Boy King, and eventually B.B. King. Incidentally, King's middle initial &quot;B&quot; is just that, it is not an abbreviation.<br> <br> In the mid-1950's while B.B. was performing at a dance in Twist, Arkansas, a few fans became unruly. Two men got into a fight and knocked over a kerosene stove, setting fire to the hall. B.B. raced outdoors to safety with everyone else, but then realized that he left his $30 guitar inside, so he rushed back inside to retrieve it, narrowly escaping death. When he later found out that the fight had been over a woman named Lucille, he decided to give the name to his guitar. Each one of B.B.'s guitars since that time have been called Lucille.<br> <br> Soon after his number one hit, &quot;Three O'Clock Blues&quot;, B.B. began touring nationally, and he has never stopped, performing an average of 275 concerts a year. in 1956 B.B. and his band played an astonishing 342 one night stands. From the chitlin circuit with its small town cafes, ghetto theaters, country dance halls, and roadside joints to jazz clubs, rock palaces, symphony concert halls, college concerts, resort hotels and prestigious concert halls nationally and internationally, B.B. has become the most renowned blues musician of the past 40 years.<br> <br> B.B.'s technique is nonetheless complex, featuring delicate filigrees of single string runs punctuated by loud chords, subtle vibratos, and &quot;bent&quot; notes. The technique of rock guitar playing is to a large degree derived from B.B.'s playing.<br> <br> In the army, B.B. was introduced to the music of such guitarists as Charlie Christian and T-Bone Walker. &quot;<i>I heard an electric guitar that wasn't playing spiritual</i>&quot;, recalls B.B. &quot;<i>It was T-Bone Walker doing &quot;Stormy Monday&quot;, and that was the prettiest sound I think I ever heard in my life. That's what really started me to play the blues</i>&quot;.<br> <br> Over the years, B.B. has developed one of the world's most readily identified guitar styles. He borrowed from Lonnie Johnson, Blind Lemon Jefferson, T-Bone Walker and others, integrating his precise vocal like string bends and his left hand vibrato, both of which have become indispensable components of rock guitarist's vocabulary. His economy, his every note counts phrasing, has been a model for thousands of players including Eric Clapton, George Harrison and Jeff Beck.<br> <br> B.B. has mixed traditional blues, jazz, swing, mainstream pop and jump into a unique sound. His singing is richly melodic, both vocally and in the &quot;singing&quot; that comes from his guitar. In B.B's words, &quot;<i>When I sing, I play in my mind; the minute I stop singing orally, I start to sing by playing Lucille</i>&quot;.<br> <br> &quot;<i>I'm trying to get people to see that we are our brother's keeper, I still work on it. Red, white, black, brown, yellow, rich, poor, we all have the blues</i>&quot;.<br> <br> &quot;<i>From my own experience, I would say to all people but maybe to young people especially black, white or whatever color, follow your own feelings and trust them; find out what you want to do and do it and then practice it every day of your life and keep becoming what you are despite any hardships and obstacles you meet</i>&quot;.<br> <br> &quot;<i>I'm me</i>,&quot; B.B. told Time Magazine in 1969, &quot;<i>blues is what I do best. If Frank Sinatra can be the best in his field, Nat King Cole in his, Bach and Beethoven in theirs, why can't I be great, and known for it, in blues?</i>&quot;<br> <br> Sidney A. Seidenberg, B.B.'s former manager, likens B.B. to Louis Armstrong and Frank Sinatra. &quot;<i>B.B.'s goals have always been to be like an American Ambassador of blues music to the world, like Louis Armstrong and Frank Sinatra are to the jazz world. B.B. is still the King of the Blues</i>&quot;.<br> <br> In 1967, B.B. performed at the prestigious Montreux Jazz Festival, a portion of which was later aired over PBS TV. in 1968, B.B. played at the Newport Folk Festival and at Bill Graham's Fillmore West on bills with the hottest contemporary rock artists of the day who idolized King and helped cross him over to a young white audience.<br> <br> B.B. has influenced Eric Clapton, Mike Bloomfield, Albert Collins, Buddy Guy, Freddie King, Jimi Hendrix, Otis Rush, Johnny Winter, Albert King and many others while being influenced by Charles Brown, Lowell Fulsom, Elmore James, Blind Lemon Jefferson, Jimmy Rushing, T-Bone Walker, Bukka White and others.<br> <br> In 1969, B.B. was chosen by the Rolling Stones to open 18 American concerts for them; Ike and Tina Turner also played on 18 shows. B.B. also made the first of his numerous appearances on Johnny Carson's &quot;The Tonight Show&quot;. In 1970, B.B. premiered in Las Vegas at Caesar's Palace and at the Royal Box in the American Hotel in New York City as well as on the &quot;Ed Sullivan Show&quot;.<br> <br> In the early 1970's, B.B. toured Ghana, Lagos, Chad and Liberia under the auspices of the United States State Department. Besides playing the major jazz festivals around the world.<br> <br> In 1989, King toured Australia, New Zealand, Japan, France, West Germany, Holland and Ireland for three months as a special guest of U2. King is featured in &quot;When Love Comes To Town&quot; on U2's album <a href="http://www.amazon.com/exec/obidos/ASIN/B000001FS6/musidelmund-20/102-0219826-0428945?_encoding=UTF8&camp=1789&link_code=xm2"> Rattle and Hum</a>. Starting in 1992, King has headlined the Blues Music Festival of American amphitheaters with three support acts.<br> <br> On February 23, 1990 PBS started televising &quot;A<b>ll Day &amp; All Night: Memories From Beale Street Musicians</b>&quot;, which featured B.B. King and captured the lifestyles of musicians who performed on Beale Street (Memphis, TN) from the 1920's to the 1950's when being on Beale Street was like &quot;living in paradise&quot;. King recalled on the half-hour special that Beale Street was &quot;<i>a place to learn, to make friends. It was a little world all of your own. There were always musicians who were willing to help you if you wanted to learn&quot;. And King and Rufus Thomas recalled Amateur Night at the Palace Theatre where &quot;anyone who could carry a tune got a dollar for going on stage</i>&quot;.<br> <br> In 1990, King and Ray Charles co-headlined the Philip Morris Superband five continent world tour. The final concert was recorded and &quot;Live At The Apollo&quot; became King's first big band album. In 1991, King headlined the Philip Morris Superband International Tour again with Diane Reeves featured. And in 1991 King participated in the all-star Guitar Legends concert in Seville, Spain, where practically every guitar hero performed.<br> <br> In 1990 King Received the Songwriter's Hall of Fame Lifetime Achievement Award, and in 1991 the Orville H. Gibson Lifetime Achievement Award from Gibson Guitar Company. In 1989, King's imprint was added to the Amsterdam, Holland Walk of Fame and in 1991 to the Hollywood Walk of Fame (between Milton Berle and Vivian Leigh). In 1973, King received the B'nai Brith Humanitarian Award from the Music and Performance Lodge of New York.<br> <br> In 1990, King received the prestigious Presidential Medal of the Arts in Washington, D.C. with President George Bush presiding. In 1991, King received the National Heritage Fellowship from the National Endowment of the Arts. In 1995, King received the Kennedy Center Honors.<br> <br> <img border="0" align="right" src="../staticpages/images/bbking-indianola.jpg">Over the years, B.B. has been bestowed eight Grammy Awards by his peers: Best Rhythm &amp; Blues Vocal Performance, Male in 1970 for <a href="http://www.amazon.com/exec/obidos/ASIN/B00001SVQF/musidelmund-20/102-0219826-0428945?_encoding=UTF8&camp=1789&link_code=xm2"> The Thrill Is Gone</a>, Best Ethnic or Traditional recording in 1981 for <a href="http://www.amazon.com/exec/obidos/ASIN/B000006OG8/musidelmund-20/102-0219826-0428945?_encoding=UTF8&camp=1789&link_code=xm2"> There Must Be A Better World Somewhere</a>, and Best Traditional Blues Recording in 1983 for <a href="http://www.amazon.com/exec/obidos/ASIN/B000002PAE/musidelmund-20/102-0219826-0428945?_encoding=UTF8&camp=1789&link_code=xm2"> Blues 'n' Jazz</a> and in 1985 for &quot;My Guitar Sings The Blues&quot; from <a href="http://www.amazon.com/exec/obidos/ASIN/B0000250SN/musidelmund-20/102-0219826-0428945?_encoding=UTF8&camp=1789&link_code=xm2"> Six Silver Strings</a>. In 1970, King's <a href="http://www.amazon.com/exec/obidos/ASIN/B000002PEA/musidelmund-20/102-0219826-0428945?_encoding=UTF8&camp=1789&link_code=xm2"> Indianola Mississippi Seeds</a> won for Best Album Cover, an art director's award. In 1989 King received two more nominations: Best Contemporary Blues Recording <a href="http://www.amazon.com/exec/obidos/ASIN/B000002PHT/musidelmund-20/102-0219826-0428945?_encoding=UTF8&camp=1789&link_code=xm2"> King of Blues 1989</a>, and Best Rock Performance by a duo or group with vocal for &quot;When Love Comes To Town&quot; with U2 from U2's <a href="http://www.amazon.com/exec/obidos/ASIN/B000001FS6/musidelmund-20/102-0219826-0428945?_encoding=UTF8&camp=1789&link_code=xm2"> Rattle and Hum</a>. In 1990 King received another Grammy for the album <a href="http://www.amazon.com/exec/obidos/ASIN/B00005A8M9/musidelmund-20/102-0219826-0428945?_encoding=UTF8&camp=1789&link_code=xm2"> Live at San Quentin</a> as Best Traditional Blues Recording.<p>&nbsp;In 1991, King was bestowed Best Traditional Blues Recording for <a href="http://www.amazon.com/exec/obidos/ASIN/B0000001RF/musidelmund-20/102-0219826-0428945?_encoding=UTF8&camp=1789&link_code=xm2"> Live at the Apollo</a> and in 1993 the same award for <a href="http://www.amazon.com/exec/obidos/ASIN/B000002OMU/musidelmund-20/102-0219826-0428945?_encoding=UTF8&camp=1789&link_code=xm2"> Blues Summit</a>. And in 1996, along with Eric Clapton, Jimmie Vaughn, Robert Cray, Bonnie Raitt, Buddy Guy, Dr. John and Art Neville, King received the Best Rock Instrumental Performance for &quot;SRV Shuffle&quot; from <a href="http://www.amazon.com/exec/obidos/ASIN/B000002BJF/musidelmund-20/102-0219826-0428945?_encoding=UTF8&camp=1789&link_code=xm2"> A Tribute to Stevie Ray Vaughan</a>.<br> <br> B.B. King was inducted into the Blues Foundation Hall of Fame in 1984 and into the Rock and Roll Hall of Fame in 1987, where Sting of the Police made the induction speech. B.B. was the recipient of the 1986 National Association For Campus Activities Hall of Fame Award. B.B. was Blues Act of the Year in 1985, 1987, and 1988 Performance Award Polls. He is a founding member of the John F. Kennedy Performing Arts Center. B.B. King received the Grammy &quot;Lifetime Achievement Award&quot; in December of 1987 at the first televised awards in May 1990. He won the Lifetime Achievement Award from the Blues Foundation in 1997. B.B. Has received four honorary doctorates: Tougaloo (Mississippi) College (L.H.D.) in 1973; Yale University (D. Music) in 1977; Berklee College of Music (D. Music) in 1982; and Rhodes College of Memphis (D. Fine Arts) in 1990. In 1992 he received the National Award of Distinction from the University of Mississippi.<br> <br> On May 3, 1991, &quot;B.B. King's Blues Club&quot; opened in Memphis, and also at the Universal City Walk in Los Angeles in 1994, and although King resides in Las Vegas, he plans to play at his clubs at least four times a year. A B.B. King Blues Club opened in New York's Times Square's E-Walk in early 2000.<br> <br> In 1996, the CD ROM <a href="http://www.amazon.com/exec/obidos/ASIN/1562040898/musidelmund-20/102-0219826-0428945?_encoding=UTF8&camp=1789&link_code=xm2"> On The Road With B.B. King: An Interactive Autobiography</a> was released to rave reviews including an &quot;A-&quot; in Entertainment Weekly. Also in 1996, B.B. King's autobiography <a href="http://www.amazon.com/exec/obidos/ASIN/0380807602/musidelmund-20/102-0219826-0428945?_encoding=UTF8&camp=1789&link_code=xm2"> Blues All Around Me</a> &nbsp;(written with David Ritz) (Avon) was published and won second prize in the prestigious Eighth Annual Ralph J. Gleason Music Book Awards. The biography <a href="http://www.amazon.com/exec/obidos/ASIN/0306801698/musidelmund-20/102-0219826-0428945?_encoding=UTF8&camp=1789&link_code=xm2"> The Arrival of B. B. King</a> by Charles Sawyer was published in 1980 by Doubleday.<br> <br> In November 1997, MCA released B.B. King's album <a href="http://www.amazon.com/exec/obidos/ASIN/B000002P86/musidelmund-20/102-0219826-0428945?_encoding=UTF8&camp=1789&link_code=xm2"> Deuces Wild</a> with B.B. in tandem with 13 legendary artists. The lineup included Eric Clapton, the Rolling Stones, Bonnie Raitt, Willie Nelson, Joe Cocker, Tracy Chapman, Mick Hucknall (Simply Red), Dr. John, Marty Stewart, D'Angelo, David Gilmore &amp; Paul Carrick and Heavy D. <a href="http://www.amazon.com/exec/obidos/ASIN/B000002P86/musidelmund-20/102-0219826-0428945?_encoding=UTF8&camp=1789&link_code=xm2"> Deuces Wild</a> became B.B. King's second gold album.<br> <br> In 1999, B.B. King released <a href="http://www.amazon.com/exec/obidos/ASIN/B00001WROG/musidelmund-20/102-0219826-0428945?_encoding=UTF8&camp=1789&link_code=xm2"> Let the Good Times Roll</a>, his tribute to Louis Jordan. &quot;<i>Louis Jordan was a great musician,&quot; says King, &quot;and in my opinion, was way ahead of his time. As people get to know him, they will realize what a great contribution he left to the music of today</i>.&quot;
+
+</p>
+<p>King released his 24th studio album,
+<a href="http://www.amazon.com/gp/product/B001CT05XA?ie=UTF8&camp=1789&creativeASIN=B001CT05XA&linkCode=xm2&tag=musidelmund-20">
+One Kind of Favor</a>, in August, 2008. It went on to win a Grammy award for 
+Best Traditional Blues Album at the 51st Grammy Awards. He also contributed to 
+Cyndi Lauper’s album
+<a href="http://www.amazon.com/gp/product/B003HTPHSQ?ie=UTF8&camp=1789&creativeASIN=B003HTPHSQ&linkCode=xm2&tag=musidelmund-20">
+Memphis Blues</a> in 2010. </p>
+<p>A film titled BB King : The Life of Riley Movie came out in October 2012. The 
+documentary is narrated by Morgan Freeman, directed by Jon Brewer.<br></td>
+<tr><td align="center" colspan="2" width="100%">
+
+<hr></td></tr>
+  	<tr>
+  	  <td colspan="2" width="100%">
+		<a name="Genres"><b>Similar Music</b></a>:
+	  </td>
+    </tr>
+    <tr>
+      <td colspan="2" width="100%">&nbsp;</td>
+    </tr>
+
+    <tr>
+      <td width="3%"></td>
+
+      <td width="97%">
+
+	<a href="genre_list-genre=Blues.php.html">Blues</a>, <a href="instrument_index-instrument=Guitar+-+Electric.php.html">Guitar - Electric</a></td>
+<tr><td align="center" colspan="2" width="100%">
+
+<hr></td></tr>
+	</table>
+	</div>
+
+	</div><!-- #main -->
+	
+	    
+    <div id="footer">
+		<div class="footer-sidebar-container clearfix">
+							<ul id="footer-sidebar-1" class="footer-sidebar clearfix xoxo">
+										<li></li>
+									</ul>
+					</div>
+		
+		<div class="footer-message">
+                <p class="floatright">WordPress Installation and Support by <a class="arras" href="http://digiblink.eu/" title="Custom WordPress development, design and backup services."><strong>digiBlink</strong></a></p>
+                <p>Copyright World Music Central.org. All Rights Reserved.</p>                </div><!-- .footer-message -->
+		
+    </div>
+</div><!-- #wrapper -->
+
+<script type="text/javascript"><!--
+wpa2a.targets=[];
+wpa2a.html_done=true;if(wpa2a.script_ready&&!wpa2a.done)wpa2a.init();wpa2a.script_load();
+//--></script>
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+
+	
+});
+</script>
+<script type='text/javascript' src='../wp-includes/js/jquery/ui/jquery.ui.core.min.js?ver=1.10.3'></script>
+<script type='text/javascript' src='../wp-includes/js/jquery/ui/jquery.ui.widget.min.js?ver=1.10.3'></script>
+<script type='text/javascript' src='../wp-includes/js/jquery/ui/jquery.ui.tabs.min.js?ver=1.10.3'></script>
+</body>
+</html>
+   
+
+<!-- Localized -->

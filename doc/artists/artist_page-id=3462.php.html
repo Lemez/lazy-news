@@ -1,0 +1,1160 @@
+
+<style type="text/css">
+/* --- reset some elements --- */
+
+#dw ul,ol { list-style:none }
+
+#dw ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,p,blockquote,fieldset,input { margin:0; padding:0 }
+
+/* --- Basic Stylesheet for DokuWiki content --- */
+
+#dw h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+#dw h1 a {
+  color: black;
+}
+
+/* ---------- table of contents ------------------- */
+
+#dw div.toc {
+  margin-left: 2em;
+  margin-top: 1.2em;
+  margin-bottom: 0;
+  float:right;
+  width: 200px;
+  font-size: 80%;
+  padding-top:5px;
+}
+
+#dw div.tocheader {
+  padding: 3px;
+  border: 1px solid #8cacbb;
+  background-color: #dee7ec;
+  text-align: left;
+  font-weight:bold;
+  margin-bottom: 2px;
+}
+
+#dw div.tocheader img {
+  width:0.8em;
+  height:0.8em;
+  margin-top:0.3em;
+  margin-right:3px;
+  float:right;
+  cursor: pointer;
+}
+
+#dw #toc__inside {
+  border: 1px solid #8cacbb;
+  background-color: #fff;
+  text-align: left;
+  padding-top: 0.5em;
+  padding-bottom: 0.7em;
+}
+
+#dw ul.toc {
+  list-style-type: none;
+  list-style-image: none;
+  line-height: 1.2em;
+  margin: 0;
+  padding: 0;
+  padding-left: 1em;
+}
+
+#dw ul.toc li {
+  background: transparent url(../lib/tpl/fsinfo/images/tocdot2.gif) 0 0.6em no-repeat;
+  padding-left:0.4em;
+}
+
+#dw ul.toc li.clear {
+  background-image: none;
+  padding-left:0.4em;
+}
+
+#dw a.toc {
+  color: #436976;
+  text-decoration:none;
+}
+
+#dw a.toc:hover {
+  color: #000;
+  text-decoration:underline;
+}
+
+/* --------------------- footnotes -------------------------------- */
+
+#dw div.footnotes{
+  clear:both;
+  border-top: 1px solid #8cacbb;
+  padding-left: 1em;
+  margin-top: 1em;
+}
+
+#dw div.fn{
+  font-size:90%;
+}
+
+#dw a.fn_top{
+  vertical-align:super;
+  font-size:80%;
+}
+
+#dw a.fn_bot{
+  vertical-align:super;
+  font-size:80%;
+  font-weight:bold;
+}
+
+/* insitu-footnotes */
+#dw div.insitu-footnote {
+  font-size: 80%;
+  line-height: 1.2em;
+  border: 1px solid #8cacbb;
+  background: #eef3f8;
+  text-align: left;
+  padding: 4px;
+  max-width: 40%;    /* IE's width is handled in javascript */
+}
+
+/* overcome IE issue with one line code or file boxes which require h. scrolling */
+#dw * html .insitu-footnote pre.code, * html .insitu-footnote pre.file {
+  padding-bottom: 18px;
+}
+
+/* --------------------- Tables -------------------------------- */
+
+#dw table.inline td.okay {
+  background-color: #afa;
+  text-align: center;
+}
+
+#dw table.inline td.notokay {
+  background-color: #fcc;
+  text-align: center;
+}
+
+#dw table.inline {
+  background-color: #fff;
+  border-spacing: 0px;
+  border-collapse: collapse;
+}
+
+/* ------------- Page elements ----------------- */
+
+#dw span.user{
+/*  color: #ccc; */
+  color: #666;
+  font-size: 90%;
+}
+
+#dw li.minor {
+  color: #666;
+  font-style: italic;
+}
+
+/* embedded images */
+#dw img.media {
+  margin: 3px;
+}
+
+#dw img.medialeft {
+  border: 0;
+  float: left;
+  margin: 0 1.5em 0 0;
+}
+
+#dw img.mediaright {
+  border: 0;
+  float: right;
+  margin: 0 0 0 1.5em;
+}
+
+#dw img.mediacenter {
+  border: 0;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* smileys */
+#dw img.middle {
+  vertical-align: middle;
+}
+
+#dw acronym {
+  cursor: help;
+  border-bottom: 1px dotted #000;
+}
+
+/* general headline setup */
+#dw h1, #dw h2, #dw h3, #dw h4, #dw h5 {
+    color: Black;
+    background-color: transparent;
+    font-family: "Lucida Grande", Verdana, Lucida, Helvetica, Arial, sans-serif;
+    font-size: 100%;
+    font-weight: normal;
+    margin-left:    0;
+    margin-right:   0;
+    margin-top:     0;
+    margin-bottom:  1em;
+    padding-left:   0;
+    padding-right:  0;
+    padding-top:    0.5em;
+    padding-bottom: 0;
+    border-bottom: 1px solid #8cacbb;
+}
+
+/* special headlines */
+/*
+#dw h1 {font-size: 160%; margin-left: 0px; font-weight: bold;}
+#dw h2 {font-size: 150%; margin-left: 20px; font-weight: bold;}
+#dw h3 {font-size: 130%; margin-left: 40px; border-bottom: none; font-weight: bolder}
+#dw h4 {font-size: 115%; margin-left: 60px; border-bottom: none; font-weight: bolder}
+#dw h5 {font-size: 100%; margin-left: 80px; border-bottom: none; font-weight: bold;}
+*/
+
+#dw h1 {font-size: 160%; font-weight: bold;}
+#dw h2 {font-size: 140%; font-weight: bold; }
+#dw h3 {font-size: 130%; border-bottom: none; font-weight: bolder}
+#dw h4 {font-size: 115%; border-bottom: none; font-weight: bolder}
+#dw h5 {font-size: 100%; border-bottom: none; font-weight: bold;}
+
+/* indent different sections */
+/*
+#dw div.level1 {margin-left: 3px;}
+#dw div.level2 {margin-left: 23px;}
+#dw div.level3 {margin-left: 43px;}
+#dw div.level4 {margin-left: 63px;}
+#dw div.level5 {margin-left: 83px;}
+*/
+
+/* unordered lists */
+#dw ul {
+  line-height: 1.5em;
+  list-style-type: square;
+  margin: 0 0 0.5em 2em;
+  padding: 0;
+  color: #638c9c;
+  list-style-image: none;
+}
+
+/* ordered lists */
+#dw ol {
+  line-height: 1.5em;
+  margin: 0 0 0.5em 2em;
+  padding: 0;
+  color: #638c9c;
+  font-weight: bold;
+  list-style-image: none;
+}
+
+/* the list items overriding the ul/ol definition */
+#dw .li {
+  color: #000;
+  font-weight: normal;
+}
+
+#dw ol {list-style-type: decimal}
+#dw ol ol {list-style-type: upper-roman}
+#dw ol ol ol {list-style-type: lower-alpha}
+#dw ol ol ol ol {list-style-type: lower-greek}
+
+#dw li.open {
+  list-style-image: url(../lib/tpl/fsinfo/images/open.gif);
+    /*list-style-type: circle;*/
+}
+
+#dw li.closed {
+  list-style-image: url(../lib/tpl/fsinfo/images/closed.gif);
+    /*list-style-type: disc;*/
+}
+
+#dw blockquote {
+  border-left: 2px solid #8cacbb;
+  padding-left: 3px;
+  margin-left: 0;
+}
+
+/* code blocks by indention */
+#dw pre.pre {
+  font-size: 100%;
+  padding: 0.5em;
+  border: 1px dashed #8cacbb;
+  color: Black;
+  background-color: #f7f9fa;
+  overflow: auto;
+}
+
+/* code blocks by code tag */
+#dw pre.code {
+  font-size: 100%;
+  padding: 0.5em;
+  border: 1px dashed #8cacbb;
+  color: Black;
+  background-color: #f7f9fa;
+  overflow: auto;
+}
+
+/* inline code words */
+#dw code {
+  font-size: 80%;
+}
+
+/* code blocks by file tag */
+#dw pre.file {
+  font-size: 100%;
+  padding: 0.5em;
+  border: 1px dashed #8cacbb;
+  color: Black;
+  background-color: #dee7ec;
+  overflow: auto;
+}
+
+/* inline tables */
+
+#dw table.inline th {
+  padding: 3px;
+  border: 1px solid #8cacbb;
+  background-color: #dee7ec;
+  text-align: left;
+}
+
+#dw table.inline td {
+  padding: 3px;
+  border: 1px solid #8cacbb;
+}
+</style>
+<link rel='stylesheet' id='eme_stylesheet-css'  href='../wp-content/plugins/events-made-easy/events_manager-ver=3.6.css' type='text/css' media='all' />
+<link rel='stylesheet' id='A2A_SHARE_SAVE-css'  href='../wp-content/plugins/add-to-any/addtoany.min-ver=1.4.css' type='text/css' media='all' />
+<script type='text/javascript' src='../wp-includes/js/jquery/jquery.js?ver=1.10.2'></script>
+<script type='text/javascript' src='../wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<script type='text/javascript' src='../wp-content/plugins/google-analyticator/external-tracking.min.js?ver=6.4.5'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../xmlrpc-rsd.php.html" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 3.6" />
+
+<script type="text/javascript"><!--
+var a2a_config=a2a_config||{},wpa2a={done:false,html_done:false,script_ready:false,script_load:function(){var a=document.createElement('script'),s=document.getElementsByTagName('script')[0];a.type='text/javascript';a.async=true;a.src='http://static.addtoany.com/menu/page.js';s.parentNode.insertBefore(a,s);wpa2a.script_load=function(){};},script_onready:function(){if(a2a.type=='page'){wpa2a.script_ready=true;if(wpa2a.html_done)wpa2a.init();}},init:function(){for(var i=0,el,target,targets=wpa2a.targets,length=targets.length;i<length;i++){el=document.getElementById('wpa2a_'+(i+1));target=targets[i];a2a_config.linkname=target.title;a2a_config.linkurl=target.url;if(el)a2a.init('page',{target:el});wpa2a.done=true;}}};a2a_config.tracking_callback=['ready',wpa2a.script_onready];
+//--></script>
+<meta name="_awb_version" content="2.0.3" /><link rel="stylesheet" href="../wp-content/themes/arras/css/styles/default.css" type="text/css" media="screen,projection" /><link rel="stylesheet" href="../wp-content/themes/arras/css/layouts/2c-r-fixed.css" type="text/css" />
+<!-- Generated by Arras WP Theme -->
+<style type="text/css">
+	.posts-default li  { width: 205px; height: 225px; }
+	.posts-default img, .posts-default .entry-thumbnails-link { width: 195px; height: 110px; }
+	.posts-default .entry-meta { width: 195px; }
+	.posts-default .entry-thumbnails { width: 205px; height: 120px; }
+			.posts-quick .entry-thumbnails img { width: 115px; height: 115px; }
+		.posts-quick .entry-meta { width: 115px; }
+			.featured { height: 260px; }
+	.featured-article { width: 640px; height: 250px; }
+	.featured-article img { width: 640px; height: 250px; }
+	#controls { width: 610px; top: 110px; }
+	#controls .next { left: 610px; }
+	.featured-entry { height: 84px; top: -84px; }
+	.featured-slideshow-inner { height: 250px }
+		.featured-stories-summary  { margin-left: 51px; }
+	.single .post .entry-photo img, .single-post .entry-photo img  { width: 620px; height: 250px; }
+		.footer-sidebar  { width: 920px; }
+	</style>
+	<script type="text/javascript">
+	jQuery(document).ready(function($) {
+
+$('.multi-sidebar').tabs();
+
+$('.sf-menu').superfish({autoArrows: true, speed: 'fast', dropShadows: 'true'});
+
+$('#commentform').validate();
+
+
+});	</script>
+	<!--[if IE]>
+<style type="text/css">
+.addtoany_list a img{filter:alpha(opacity=70)}
+.addtoany_list a:hover img,.addtoany_list a.addtoany_share_save img{filter:alpha(opacity=100)}
+</style>
+<![endif]-->
+<link rel="stylesheet" href="../wp-content/themes/arras/user.css" type="text/css" media="screen,projection" /><!-- Google Analytics Tracking by Google Analyticator 6.4.5: http://www.videousermanuals.com/google-analyticator/ -->
+<script type="text/javascript">
+	var analyticsFileTypes = [''];
+	var analyticsEventTracking = 'enabled';
+</script>
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-169675-4']);
+        _gaq.push(['_addDevId', 'i9k95']); // Google Analyticator App ID with Google 
+        
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>World Music Central.org</title>
+
+
+<link rel="alternate" type="application/rss+xml" href="../feed/index.html" title="World Music Central.org latest posts" />
+
+<link rel="alternate" type="application/rss+xml" href="../comments/feed/index.html" title="World Music Central.org latest comments" />
+
+<link rel="pingback" href="../xmlrpc.php.html" />
+
+<link rel="shortcut icon" href="../favicon.ico" />
+
+
+<style type="text/css">
+/* --- reset some elements --- */
+
+#dw ul,ol { list-style:none }
+
+#dw ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,p,blockquote,fieldset,input { margin:0; padding:0 }
+
+/* --- Basic Stylesheet for DokuWiki content --- */
+
+#dw h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+#dw h1 a {
+  color: black;
+}
+
+/* ---------- table of contents ------------------- */
+
+#dw div.toc {
+  margin-left: 2em;
+  margin-top: 1.2em;
+  margin-bottom: 0;
+  float:right;
+  width: 200px;
+  font-size: 80%;
+  padding-top:5px;
+}
+
+#dw div.tocheader {
+  padding: 3px;
+  border: 1px solid #8cacbb;
+  background-color: #dee7ec;
+  text-align: left;
+  font-weight:bold;
+  margin-bottom: 2px;
+}
+
+#dw div.tocheader img {
+  width:0.8em;
+  height:0.8em;
+  margin-top:0.3em;
+  margin-right:3px;
+  float:right;
+  cursor: pointer;
+}
+
+#dw #toc__inside {
+  border: 1px solid #8cacbb;
+  background-color: #fff;
+  text-align: left;
+  padding-top: 0.5em;
+  padding-bottom: 0.7em;
+}
+
+#dw ul.toc {
+  list-style-type: none;
+  list-style-image: none;
+  line-height: 1.2em;
+  margin: 0;
+  padding: 0;
+  padding-left: 1em;
+}
+
+#dw ul.toc li {
+  background: transparent url(../lib/tpl/fsinfo/images/tocdot2.gif) 0 0.6em no-repeat;
+  padding-left:0.4em;
+}
+
+#dw ul.toc li.clear {
+  background-image: none;
+  padding-left:0.4em;
+}
+
+#dw a.toc {
+  color: #436976;
+  text-decoration:none;
+}
+
+#dw a.toc:hover {
+  color: #000;
+  text-decoration:underline;
+}
+
+/* --------------------- footnotes -------------------------------- */
+
+#dw div.footnotes{
+  clear:both;
+  border-top: 1px solid #8cacbb;
+  padding-left: 1em;
+  margin-top: 1em;
+}
+
+#dw div.fn{
+  font-size:90%;
+}
+
+#dw a.fn_top{
+  vertical-align:super;
+  font-size:80%;
+}
+
+#dw a.fn_bot{
+  vertical-align:super;
+  font-size:80%;
+  font-weight:bold;
+}
+
+/* insitu-footnotes */
+#dw div.insitu-footnote {
+  font-size: 80%;
+  line-height: 1.2em;
+  border: 1px solid #8cacbb;
+  background: #eef3f8;
+  text-align: left;
+  padding: 4px;
+  max-width: 40%;    /* IE's width is handled in javascript */
+}
+
+/* overcome IE issue with one line code or file boxes which require h. scrolling */
+#dw * html .insitu-footnote pre.code, * html .insitu-footnote pre.file {
+  padding-bottom: 18px;
+}
+
+/* --------------------- Tables -------------------------------- */
+
+#dw table.inline td.okay {
+  background-color: #afa;
+  text-align: center;
+}
+
+#dw table.inline td.notokay {
+  background-color: #fcc;
+  text-align: center;
+}
+
+#dw table.inline {
+  background-color: #fff;
+  border-spacing: 0px;
+  border-collapse: collapse;
+}
+
+/* ------------- Page elements ----------------- */
+
+#dw span.user{
+/*  color: #ccc; */
+  color: #666;
+  font-size: 90%;
+}
+
+#dw li.minor {
+  color: #666;
+  font-style: italic;
+}
+
+/* embedded images */
+#dw img.media {
+  margin: 3px;
+}
+
+#dw img.medialeft {
+  border: 0;
+  float: left;
+  margin: 0 1.5em 0 0;
+}
+
+#dw img.mediaright {
+  border: 0;
+  float: right;
+  margin: 0 0 0 1.5em;
+}
+
+#dw img.mediacenter {
+  border: 0;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* smileys */
+#dw img.middle {
+  vertical-align: middle;
+}
+
+#dw acronym {
+  cursor: help;
+  border-bottom: 1px dotted #000;
+}
+
+/* general headline setup */
+#dw h1, #dw h2, #dw h3, #dw h4, #dw h5 {
+    color: Black;
+    background-color: transparent;
+    font-family: "Lucida Grande", Verdana, Lucida, Helvetica, Arial, sans-serif;
+    font-size: 100%;
+    font-weight: normal;
+    margin-left:    0;
+    margin-right:   0;
+    margin-top:     0;
+    margin-bottom:  1em;
+    padding-left:   0;
+    padding-right:  0;
+    padding-top:    0.5em;
+    padding-bottom: 0;
+    border-bottom: 1px solid #8cacbb;
+}
+
+/* special headlines */
+/*
+#dw h1 {font-size: 160%; margin-left: 0px; font-weight: bold;}
+#dw h2 {font-size: 150%; margin-left: 20px; font-weight: bold;}
+#dw h3 {font-size: 130%; margin-left: 40px; border-bottom: none; font-weight: bolder}
+#dw h4 {font-size: 115%; margin-left: 60px; border-bottom: none; font-weight: bolder}
+#dw h5 {font-size: 100%; margin-left: 80px; border-bottom: none; font-weight: bold;}
+*/
+
+#dw h1 {font-size: 160%; font-weight: bold;}
+#dw h2 {font-size: 140%; font-weight: bold; }
+#dw h3 {font-size: 130%; border-bottom: none; font-weight: bolder}
+#dw h4 {font-size: 115%; border-bottom: none; font-weight: bolder}
+#dw h5 {font-size: 100%; border-bottom: none; font-weight: bold;}
+
+/* indent different sections */
+/*
+#dw div.level1 {margin-left: 3px;}
+#dw div.level2 {margin-left: 23px;}
+#dw div.level3 {margin-left: 43px;}
+#dw div.level4 {margin-left: 63px;}
+#dw div.level5 {margin-left: 83px;}
+*/
+
+/* unordered lists */
+#dw ul {
+  line-height: 1.5em;
+  list-style-type: square;
+  margin: 0 0 0.5em 2em;
+  padding: 0;
+  color: #638c9c;
+  list-style-image: none;
+}
+
+/* ordered lists */
+#dw ol {
+  line-height: 1.5em;
+  margin: 0 0 0.5em 2em;
+  padding: 0;
+  color: #638c9c;
+  font-weight: bold;
+  list-style-image: none;
+}
+
+/* the list items overriding the ul/ol definition */
+#dw .li {
+  color: #000;
+  font-weight: normal;
+}
+
+#dw ol {list-style-type: decimal}
+#dw ol ol {list-style-type: upper-roman}
+#dw ol ol ol {list-style-type: lower-alpha}
+#dw ol ol ol ol {list-style-type: lower-greek}
+
+#dw li.open {
+  list-style-image: url(../lib/tpl/fsinfo/images/open.gif);
+    /*list-style-type: circle;*/
+}
+
+#dw li.closed {
+  list-style-image: url(../lib/tpl/fsinfo/images/closed.gif);
+    /*list-style-type: disc;*/
+}
+
+#dw blockquote {
+  border-left: 2px solid #8cacbb;
+  padding-left: 3px;
+  margin-left: 0;
+}
+
+/* code blocks by indention */
+#dw pre.pre {
+  font-size: 100%;
+  padding: 0.5em;
+  border: 1px dashed #8cacbb;
+  color: Black;
+  background-color: #f7f9fa;
+  overflow: auto;
+}
+
+/* code blocks by code tag */
+#dw pre.code {
+  font-size: 100%;
+  padding: 0.5em;
+  border: 1px dashed #8cacbb;
+  color: Black;
+  background-color: #f7f9fa;
+  overflow: auto;
+}
+
+/* inline code words */
+#dw code {
+  font-size: 80%;
+}
+
+/* code blocks by file tag */
+#dw pre.file {
+  font-size: 100%;
+  padding: 0.5em;
+  border: 1px dashed #8cacbb;
+  color: Black;
+  background-color: #dee7ec;
+  overflow: auto;
+}
+
+/* inline tables */
+
+#dw table.inline th {
+  padding: 3px;
+  border: 1px solid #8cacbb;
+  background-color: #dee7ec;
+  text-align: left;
+}
+
+#dw table.inline td {
+  padding: 3px;
+  border: 1px solid #8cacbb;
+}
+</style>
+<script type='text/javascript' src='../wp-content/themes/arras/js/superfish/hoverIntent.js'></script>
+<script type='text/javascript' src='../wp-content/themes/arras/js/superfish/superfish.js'></script>
+<script type='text/javascript' src='../wp-includes/js/comment-reply.min.js?ver=3.6'></script>
+<script type='text/javascript' src='../wp-content/themes/arras/js/jquery.validate.min.js'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../xmlrpc-rsd.php.html" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 3.6" />
+
+<script type="text/javascript"><!--
+var a2a_config=a2a_config||{},wpa2a={done:false,html_done:false,script_ready:false,script_load:function(){var a=document.createElement('script'),s=document.getElementsByTagName('script')[0];a.type='text/javascript';a.async=true;a.src='/page.js';s.parentNode.insertBefore(a,s);wpa2a.script_load=function(){};},script_onready:function(){if(a2a.type=='page'){wpa2a.script_ready=true;if(wpa2a.html_done)wpa2a.init();}},init:function(){for(var i=0,el,target,targets=wpa2a.targets,length=targets.length;i<length;i++){el=document.getElementById('wpa2a_'+(i+1));target=targets[i];a2a_config.linkname=target.title;a2a_config.linkurl=target.url;if(el)a2a.init('page',{target:el});wpa2a.done=true;}}};a2a_config.tracking_callback=['ready',wpa2a.script_onready];
+//--></script>
+<meta name="_awb_version" content="2.0.3" /><link rel="stylesheet" href="../wp-content/themes/arras/css/styles/default.css" type="text/css" media="screen,projection" /><link rel="stylesheet" href="../wp-content/themes/arras/css/layouts/2c-r-fixed.css" type="text/css" />
+<!-- Generated by Arras WP Theme -->
+<style type="text/css">
+	.posts-default li  { width: 205px; height: 225px; }
+	.posts-default img, .posts-default .entry-thumbnails-link { width: 195px; height: 110px; }
+	.posts-default .entry-meta { width: 195px; }
+	.posts-default .entry-thumbnails { width: 205px; height: 120px; }
+			.posts-quick .entry-thumbnails img { width: 115px; height: 115px; }
+		.posts-quick .entry-meta { width: 115px; }
+			.featured { height: 260px; }
+	.featured-article { width: 640px; height: 250px; }
+	.featured-article img { width: 640px; height: 250px; }
+	#controls { width: 610px; top: 110px; }
+	#controls .next { left: 610px; }
+	.featured-entry { height: 84px; top: -84px; }
+	.featured-slideshow-inner { height: 250px }
+		.featured-stories-summary  { margin-left: 51px; }
+	.single .post .entry-photo img, .single-post .entry-photo img  { width: 620px; height: 250px; }
+		.footer-sidebar  { width: 920px; }
+	</style>
+	<script type="text/javascript">
+	jQuery(document).ready(function($) {
+
+$('.multi-sidebar').tabs();
+
+$('.sf-menu').superfish({autoArrows: true, speed: 'fast', dropShadows: 'true'});
+
+$('#commentform').validate();
+
+
+});	</script>
+	<!--[if IE]>
+<style type="text/css">
+.addtoany_list a img{filter:alpha(opacity=70)}
+.addtoany_list a:hover img,.addtoany_list a.addtoany_share_save img{filter:alpha(opacity=100)}
+</style>
+<![endif]-->
+<link rel="stylesheet" href="../wp-content/themes/arras/user.css" type="text/css" media="screen,projection" /><!-- Google Analytics Tracking by Google Analyticator 6.4.5: http://www.videousermanuals.com/google-analyticator/ -->
+<script type="text/javascript">
+	var analyticsFileTypes = [''];
+	var analyticsEventTracking = 'enabled';
+</script>
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-169675-4']);
+        _gaq.push(['_addDevId', 'i9k95']); // Google Analyticator App ID with Google 
+        
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+</head>
+
+<body class="page page-id-0 page-parent page-template-default layout-2c-r-fixed no-js style-default">
+<script type="text/javascript">
+//<![CDATA[
+(function(){
+var c = document.body.className;
+c = c.replace(/no-js/, 'js');
+document.body.className = c;
+})();
+//]]>
+</script>
+
+<div id="top-menu" class="clearfix">
+	</div><!-- #top-menu -->
+
+<div id="header"><div align="center"><script type="text/javascript"><!--
+google_ad_client = "pub-7027070946238159";
+/* 728x90, Top Banner */
+google_ad_slot = "9335358437";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+	<div id="branding" class="clearfix">
+	<div class="logo">
+				<span class="blog-name"><a href="../index.html">World Music Central.org</a></span>
+		<img style="float:left; padding: 0 5px 0 0;" src="../wp-content/themes/wmc-magazeen/images/bull.png"/><span class="blog-description">Your Connection to World Music</span>
+			</div>
+	<div id="searchbar"><form method="get" class="searchform clearfix" action="http://worldmusiccentral.org/">
+ <input type="text" value="Search..." name="s" class="s" onfocus="this.value=''" />
+ <input type="submit" class="searchsubmit" value="Search" title="Search World Music Central.org" />
+</form>
+</div>
+	</div><!-- #branding -->
+</div><!-- #header -->
+
+<div id="nav">
+	<div id="nav-content" class="clearfix">
+	<div class="menu-main-container"><ul id="menu-main" class="sf-menu menu clearfix"><li id="menu-item-6394" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-6394"><a href="../index.html">Home</a></li>
+<li id="menu-item-6401" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6401"><a href="../about/index.html">About</a></li>
+<li id="menu-item-6454" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6454"><a href="#">World Music Resources</a>
+<ul class="sub-menu">
+	<li id="menu-item-6455" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6455"><a href="artist_index.php.html">Artists Database</a></li>
+	<li id="menu-item-6462" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6462"><a href="http://musicwikicentral.com/world_music_festivals">Festivals</a></li>
+	<li id="menu-item-6467" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6467"><a href="http://musicwikicentral.com/travel_guides">Travel Guides</a></li>
+	<li id="menu-item-6469" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6469"><a href="http://musicwikicentral.com/world_music_genres">Musical Genres</a></li>
+	<li id="menu-item-6468" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6468"><a href="http://musicwikicentral.com/musical_instruments">Musical Instruments</a></li>
+	<li id="menu-item-6475" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6475"><a href="http://musicwikicentral.com/showcases">Showcases</a></li>
+	<li id="menu-item-6470" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6470"><a href="http://musicwikicentral.com/world_music_venues">Venues</a></li>
+	<li id="menu-item-6472" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6472"><a href="http://musicwikicentral.com/record_companies">Record Companies</a></li>
+	<li id="menu-item-6466" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6466"><a href="http://musicwikicentral.com/booking_agents">Booking Agents</a></li>
+	<li id="menu-item-6474" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6474"><a href="http://musicwikicentral.com/world_music_press">World Music Press</a></li>
+	<li id="menu-item-6477" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6477"><a href="http://musicwikicentral.com/ethnomusicology">Ethnomusicology</a></li>
+	<li id="menu-item-6473" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6473"><a href="http://musicwikicentral.com/music_organizations">Music Organizations</a></li>
+</ul>
+</li>
+<li id="menu-item-6390" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6390"><a href="#">Topics</a>
+<ul class="sub-menu">
+	<li id="menu-item-6369" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6369"><a href="../category/archive/index.html">archive</a></li>
+	<li id="menu-item-6370" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6370"><a href="../category/articles/index.html">Articles</a></li>
+	<li id="menu-item-6371" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6371"><a href="../category/awards/index.html">Awards</a></li>
+	<li id="menu-item-6372" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6372"><a href="../category/book-reviews/index.html">Book Reviews</a></li>
+	<li id="menu-item-6373" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6373"><a href="../category/cd-reviews/index.html">CD Reviews</a></li>
+	<li id="menu-item-6374" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6374"><a href="../category/concert-reviews/index.html">Concert reviews</a></li>
+	<li id="menu-item-6375" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6375"><a href="../category/conferences/index.html">Conferences</a></li>
+	<li id="menu-item-6376" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6376"><a href="../category/editorials/index.html">Editorials</a></li>
+	<li id="menu-item-6377" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6377"><a href="../category/events/index.html">Events</a></li>
+	<li id="menu-item-6378" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6378"><a href="../category/film-reviews/index.html">Film Reviews</a></li>
+	<li id="menu-item-6379" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6379"><a href="../category/general-news/index.html">General News</a></li>
+	<li id="menu-item-6380" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6380"><a href="../category/interviews/index.html">Interviews</a></li>
+	<li id="menu-item-6381" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6381"><a href="../category/loop-collections/index.html">Loop Collections</a></li>
+	<li id="menu-item-6382" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6382"><a href="../category/new-books/index.html">New Books</a></li>
+	<li id="menu-item-6383" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6383"><a href="../category/new-cds/index.html">New CDs</a></li>
+	<li id="menu-item-6384" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6384"><a href="../category/new-films/index.html">New Films</a></li>
+	<li id="menu-item-6385" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6385"><a href="../category/new-releases/index.html">New Releases</a></li>
+	<li id="menu-item-6386" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6386"><a href="../category/obituaries/index.html">Obituaries</a></li>
+	<li id="menu-item-6387" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6387"><a href="../category/tour-announcements/index.html">Tour Announcements</a></li>
+	<li id="menu-item-6388" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6388"><a href="../category/tradeshows/index.html">Tradeshows</a></li>
+	<li id="menu-item-6389" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6389"><a href="../category/uncategorized/index.html">Uncategorized</a></li>
+</ul>
+</li>
+<li id="menu-item-6392" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6392"><a href="../events/index.html">Calendar</a></li>
+<li id="menu-item-6400" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6400"><a href="../store/index.html">Store</a></li>
+<li id="menu-item-6724" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6724"><a href="../contact-us/index.html">Contact Us</a></li>
+</ul></div>		<ul class="quick-nav clearfix">
+					<li><a id="rss" title="World Music Central.org RSS Feed" href="../feed/index.html">RSS Feed</a></li>
+				
+						
+							<li><a id="facebook" title="World Music Central.org Facebook" href="http://www.facebook.com/pages/World-Music-Central/149036898455901" target="_blank">Facebook</a></li>
+				
+			</ul>
+	</div><!-- #nav-content -->
+</div><!-- #nav -->
+
+<div id="wrapper">
+	
+	  
+	<div id="main" class="clearfix">
+    <div id="container" class="clearfix">
+  <head>
+    <title>Sergio Mendes - Artist Page</title>
+  </head>
+
+  <body> 
+  
+  <div id="artistpage">
+  
+  <div style="float:right;">
+  
+  <script type="text/javascript"><!--
+google_ad_client = "pub-7027070946238159";
+/* 160x600, created 12/6/08 */
+google_ad_slot = "6830638066";
+google_ad_width = 160;
+google_ad_height = 600;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+
+</div>
+  
+  
+  
+  	<table>
+
+  
+<tr><td align="center" colspan="2" width="100%">
+<font size=+1><b>Sergio Mendes</b></font> 
+<hr></td></tr>
+
+<tr><td align="center" colspan="2" width="100%">
+<a href="#Discography">Discography</a>&nbsp;&nbsp;&middot;&nbsp;&nbsp;<a href="#Booking">Booking Agency</a>
+<hr></td></tr>
+    <tr>
+      <td colspan="2" width="100%">
+		<a name="Biography"><b>Biography</b></a>:
+	  </td>
+    </tr>
+    <tr>
+      <td colspan="2" width="100%">&nbsp;</td>
+    </tr>
+
+    <tr>
+      <td width="3%"></td>
+
+      <td width="97%">
+	  
+	<p align=center><img border="0" align="center"  src="../staticpages/images/Sergio_Mendes_300.jpg"></p><p align="center">Sergio Mendes Photo by Randee St Nicholas</p>
+Sergio Santos Mendes was born in Niteroi, February 11th, 1941. His father was 
+a physician. Mendes attended the local conservatory with hopes of becoming a 
+classical pianist. As his interest in jazz grew, he started playing in 
+nightclubs in the late-1950s just as bossa nova, a jazz-inflected derivative of 
+samba, was taking off. Mendes played with Antonio Carlos Jobim (regarded as a 
+mentor), and many U.S. jazz musicians who toured Brazil.</p>
+<p>Mendes formed the Sexteto Bossa Rio and recorded Dance Moderno in 1961. 
+Touring Europe and the United States, Mendes recorded albums with Cannonball 
+Adderly and Herbie Mann and played Carnegie Hall. Mendes moved to the U.S. in 
+1964 and recorded two albums under the Brasil '65 group name with Capitol 
+Records and Atlantic Records [buy <strong>
+<a href="http://www.amazon.com/exec/obidos/ASIN/B0000565BP/musidelmund-20/104-1485686-8302305?_encoding=UTF8&camp=1789&link_code=xm2">
+Brasil '65</a></strong> and <strong>
+<a href="http://www.amazon.com/exec/obidos/ASIN/B000000D72/musidelmund-20/104-1485686-8302305?_encoding=UTF8&camp=1789&link_code=xm2">
+The Best of Sergio Mendes &amp; Brasil '65</a></strong>]. </p>
+<p>When sales were tepid, he replaced his Brazilian born vocalist Wanda da Sah 
+with the distinctive voice of Chicago native Lani Hall (who learned Mendes' 
+Portuguese material phonetically). </p>
+<p>Arriving on A&amp;M Records' doorstep in 1966, Sergio Mendes and his group were 
+signed to a record deal by Herb Alpert, whose enthusiastic response enabled 
+their immediate success. Blending Brazilian, jazz and American popular styles, 
+Brasil '66 became known for their unique, innovative sound. While Mendes was the 
+lively pianist, arranger, producer and musical director, it was Chicago-bred 
+vocalist Lani Hall (who would later marry Herb Alpert) who gave the group the 
+finesse that ensured their success on the pop music charts. Lani is equally at 
+home singing in English, Spanish and Portuguese, although you'd never know it 
+from the way she tackles all of her songs with the ease of a native.</p>
+<p>After Herb Alpert's A&amp;M label released the first Sergio Mendes and Brasil '66 
+album, it ultimately went platinum based largely upon the success of the single 
+&quot;Mais Que Nada&quot; and the personal support of Alpert, with whom Mendes toured 
+regularly. <br>
+<br>
+The original Brasil '66 lineup, as recorded on the first three A&amp;M albums, 
+consisted of Mendes on piano and keyboards, Lani Hall and Janis Hansen on 
+vocals, Jose Soares on Latin percussion, Bob Matthews on bass and Joao Palma on 
+drums, Tijuana Brass guitarist John Pisano plays guitar starting with <strong>
+<a href="http://www.amazon.com/exec/obidos/ASIN/B0000631D2/musidelmund-20/104-1485686-8302305?_encoding=UTF8&camp=1789&link_code=xm2">
+Equinox</a></strong>. </p>
+<p>Starting with <strong>
+<a href="http://www.amazon.com/exec/obidos/ASIN/B0002LGWSQ/musidelmund-20/104-1485686-8302305?_encoding=UTF8&camp=1789&link_code=xm2">
+Fool on the Hill</a></strong>, the Brasil '66 lineup would include Mendes, Lani 
+Hall and vocalist Karen Phillips, with a completely new rhythm section 
+consisting of Sebastiao Neto, Dom Um Romao, Rubens Bassini and Oscar Castro 
+Neves. <strong>
+<a href="http://www.amazon.com/exec/obidos/ASIN/B00006BGYC/musidelmund-20/104-1485686-8302305?_encoding=UTF8&camp=1789&link_code=xm2">
+Stillness</a></strong> would be Lani's final album with Brasil '66, leaving to 
+record her first solo project in 1972, <b>Sun Down Lady</b>.</p>
+<p>Though his early singles with Brasil '66 (most notably Mas Que Nada) met with 
+some success, Mendes really burst into mainstream prominence when he performed 
+the Oscar nominated Burt Bacharach/Hal David song &quot;The Look of Love&quot; on the 
+Academy Awards telecast in March 1968. Brasil '66's version of the song quickly 
+shot into the top 10, eclipsing Dusty Springfield's version from the soundtrack 
+of the movie, and Mendes spent the rest of 1968 enjoying consecutive top 10 and 
+top 20 hits with his follow-up singles, &quot;The Fool on the Hill&quot; and &quot;Scarborough 
+Fair.&quot; </p>
+<p>Though he continued to enjoy adult contemporary chart successes with Brasil 
+'66 through 1971, he would not experience the mainstream chart hits he enjoyed 
+in 1968 until his comeback album in 1983 generated the biggest single of his 
+career, &quot;Never Gonna Let You Go.&quot; However, from 1968 on, Mendes was arguably the 
+biggest Brazilian star in the world, enjoying immense popularity worldwide and 
+performing in venues as varied as stadium arenas and the White House, where he 
+gave concerts for both President Johnson and President Nixon.</p>
+<p>Mendes' career in the U.S. stalled in the mid-70s, but he remained very 
+popular in South America and Japan. His two albums with Bell Records in 1973 and 
+1974, followed by several for Elektra from 1975 on, found Mendes continuing to 
+mine the best in American pop music and post-Bossa writers of his native Brazil, 
+while forging new directions in soul with collaborators like Stevie Wonder, who 
+wrote Mendes' R&amp;B-inflected minor hit, &quot;The Real Thing.&quot; </p>
+<p>In 1983, he rejoined Alpert's A&amp;M records and enjoyed huge success with a 
+self-titled album and several follow-up albums, all of which received 
+considerable adult contemporary airplay with charting singles. By the time 
+Mendes released his Grammy-winning Elektra album <strong>
+<a href="http://www.amazon.com/exec/obidos/ASIN/B000002HAP/musidelmund-20/104-1485686-8302305?_encoding=UTF8&camp=1789&link_code=xm2">
+Brasileiro</a></strong> in 1992, he was the undisputed master of pop-inflected 
+Brazilian jazz. </p>
+<p>The late-1990s lounge music revival brought retrospection and respect to 
+Mendes' body of work, particularly the classic Brasil '66 albums. </p>
+<p>In 2006, Concord Records and Starbucks Hear Music co-released <strong>
+<a href="http://www.amazon.com/exec/obidos/ASIN/B000AA4ML8/musidelmund-20/104-1485686-8302305?_encoding=UTF8&camp=1789&link_code=xm2">
+Timeless</a>.&nbsp; </strong>Produced by and featuring will.i.am of the Black Eyed Peas, 
+<strong>
+<a href="http://www.amazon.com/exec/obidos/ASIN/B000AA4ML8/musidelmund-20/104-1485686-8302305?_encoding=UTF8&camp=1789&link_code=xm2">
+Timeless</a></strong> is a wholly original blend of music. Will and Sergio brought in the Black 
+Eyed Peas, one of hip-hop's premier artists, and also recruited some of pop 
+music?s biggest artists, each a Sergio fan, to contribute to various tracks, 
+including Justin Timberlake, Stevie Wonder, Erykah Badu, india.arie, Black 
+Thought of The Roots, John Legend, Chali 2na of Jurassic 5, Jill Scott, and 
+Q-Tip, among others. </p>
+<p>Sergio describes <strong>
+<a href="http://www.amazon.com/exec/obidos/ASIN/B000AA4ML8/musidelmund-20/104-1485686-8302305?_encoding=UTF8&camp=1789&link_code=xm2">
+Timeless</a></strong>, recorded in Brazil and Los Angeles, as a '. . 
+.<i>wonderful marriage of rhythms, because it's all African rhythms and haunting 
+melodies; the same common denominator that brought the samba to Brazil and 
+brought jazz to America</i>.' </p>
+<p>Will says, '<i>Hip-hop is urban to America, but samba and bossa nova are urban to 
+Brazil. It's two urban cultures clashing and fusing together beautifully, 
+because they share a lot of the same qualities</i>.' </p>
+<p>Of working with Sergio, Justin Timberlake said, &quot;<i>Sergio's creation of chord 
+progressions has heavily influenced modern R &amp; B, specifically now. He is a 
+legend and a beautiful person. It was a pleasure to work with him</i>. Black 
+Thought of The Roots adds, <i>'I've had the opportunity to work with just about 
+everyone I've desired to work with and now the legendary Sergio Mendes! It was 
+an honor to be able to collaborate with such a cool, unorthodox, timeless and 
+well-rounded musician. He's quite an inspiration</i>.'</p>
+<p>Sergio has previously recorded with will.i.am and the Black Eyed Peas on their 
+last two albums as well as their performance together in the 2005 feature film 
+<strong>
+<a href="http://www.amazon.com/exec/obidos/ASIN/B0008FXT1Y/musidelmund-20/104-1485686-8302305?_encoding=UTF8&camp=1789&link_code=xm2">
+Be Cool</a></strong>. When they first met, Sergio says, ?<i>\'Will came to my house with a lot of 
+old vinyl that I recorded many years ago. And I was so surprised. It was like, 
+'Wow!? He knew every song. He knows every Brazilian riff. I could just feel his 
+passion for the music. We talked and I said, ?You know what? You love Brazilian 
+music. Why don't we bring the Brazilian music and melodies to the hip-hop urban 
+world and put them together? I think we can make something really different</i>.??<p>
+[Part of the biography contains material from Wikipedia].</td>
+<tr><td align="center" colspan="2" width="100%">
+
+<hr></td></tr>
+  	<tr>
+        <td colspan="2" width="100%">
+		<a name="Discography"><b>Discography</b></a>:
+	  </td>
+    </tr>
+    <tr>
+      <td colspan="2" width="100%">&nbsp;</td>
+    </tr>
+
+    <tr>
+      <td width="3%"></td>
+
+      <td width="97%">
+
+ 	<p>Dance moderno (1961)</p><p>Quiet nights (1963)</p><p><a href="http://www.amazon.com/exec/obidos/ASIN/B00006HI86/musidelmund-20/104-1485686-8302305?_encoding=UTF8&camp=1789&link_code=xm2">Voce Ainda Nao Ouviu Nada!</a> Sergio Mendes &amp; Bossa Rio (Philips, 1963)</p><p><a href="http://www.amazon.com/exec/obidos/ASIN/B00000IJPP/musidelmund-20/104-1485686-8302305?_encoding=UTF8&camp=1789&link_code=xm2">The Swinger from Rio</a> (Atlantic SD-1434, 1964)</p><p><a href="http://www.amazon.com/exec/obidos/ASIN/B00011CYAW/musidelmund-20/104-1485686-8302305?_encoding=UTF8&camp=1789&link_code=xm2">Bossa Nova York</a> Sergio Mendes Trio (1964)</p><p><a href="http://www.amazon.com/exec/obidos/ASIN/B000046Q2G/musidelmund-20/104-1485686-8302305?_encoding=UTF8&camp=1789&link_code=xm2">Cannonball's Bossa Nova</a> with Bossa Rio (1964)</p><p><a href="http://www.amazon.com/exec/obidos/ASIN/B00005MKC8/musidelmund-20/104-1485686-8302305?_encoding=UTF8&camp=1789&link_code=xm2">In Person at El Matador</a> -Sergio Mendes &amp; Brasil '65, (Atlantic
+SD-8112, 1964)</p><p><a href="http://www.amazon.com/exec/obidos/ASIN/B0000565BP/musidelmund-20/104-1485686-8302305?_encoding=UTF8&camp=1789&link_code=xm2">Brasil
+'65</a>. Wanda de Sah featuring The Sergio Mendes Trio, 1965)</p><p><a href="http://www.amazon.com/exec/obidos/ASIN/B00004WFPY/musidelmund-20/104-1485686-8302305?_encoding=UTF8&camp=1789&link_code=xm2">
+The Great Arrival</a> &nbsp;(Atlantic SD-1466, 1966)</p><p><a href="http://www.amazon.com/exec/obidos/ASIN/B00006BGY6/musidelmund-20/104-1485686-8302305?_encoding=UTF8&camp=1789&link_code=xm2">
+Herb Alpert Presents Sergio Mendes &amp; Brasil '66</a> (A&amp;M SP-4116, 1966)</p><p><a href="http://www.amazon.com/exec/obidos/ASIN/B0000631D2/musidelmund-20/104-1485686-8302305?_encoding=UTF8&camp=1789&link_code=xm2">
+Equinox</a> &nbsp;- Sergio Mendes &amp; Brasil '66 (A&amp;M SP-4122, 1967)</p><p><a href="http://www.amazon.com/exec/obidos/ASIN/B00000IJPP/musidelmund-20/104-1485686-8302305?_encoding=UTF8&camp=1789&link_code=xm2">
+The Beat of Brazil</a> &nbsp;(Atlantic SD-1480, 1967)</p><p><a href="http://www.amazon.com/exec/obidos/ASIN/B000024CCB/worldmusicpor-20/104-1485686-8302305?_encoding=UTF8&camp=1789&link_code=xm2">
+Sergio Mendes' Favorite Things</a> (Atlantic SD-8177, 1968)</p><p><a href="http://www.amazon.com/exec/obidos/ASIN/B00004S95S/worldmusicpor-20/104-1485686-8302305?_encoding=UTF8&camp=1789&link_code=xm2">Look Around</a> - Sergio Mendes &amp; Brasil '66 (A&amp;M SP-4137, 1968)</p><p><a href="http://www.amazon.com/exec/obidos/ASIN/B0002LGWSQ/musidelmund-20/104-1485686-8302305?_encoding=UTF8&camp=1789&link_code=xm2">Fool on the Hill</a> -Sergio Mendes &amp; Brasil '66 (A&amp;M SP-4160, 1968)</p><p><a href="http://www.amazon.com/exec/obidos/ASIN/B00006BGYA/musidelmund-20/104-1485686-8302305?_encoding=UTF8&camp=1789&link_code=xm2">Crystal Illusions</a> - Sergio Mendes &amp; Brasil '66 (A&amp;M SP-4197, 1969)</p><p><a href="http://www.amazon.com/exec/obidos/ASIN/B00006BGYB/musidelmund-20/104-1485686-8302305?_encoding=UTF8&camp=1789&link_code=xm2">Ye-Me-Le</a>. Sergio Mendes &amp; Brasil '66 (A&amp;M SP-4236, 1970)</p><p><a href="http://www.amazon.com/exec/obidos/ASIN/B00006BGYF/musidelmund-20/104-1485686-8302305?_encoding=UTF8&camp=1789&link_code=xm2">Live at the Expo '70</a>. Sergio Mendes &amp; Brasil '66 (1970)</p><p><a href="http://www.amazon.com/exec/obidos/ASIN/B00006BGYC/musidelmund-20/104-1485686-8302305?_encoding=UTF8&camp=1789&link_code=xm2">Stillness</a> - Sergio Mendes &amp; Brasil '66 (A&amp;M SP-4284, 1971)</p><p><a href="http://www.amazon.com/exec/obidos/ASIN/B00006BGYD/musidelmund-20/104-1485686-8302305?_encoding=UTF8&camp=1789&link_code=xm2">Pais Tropical</a> &nbsp;- Sergio Mendes &amp; Brasil '77 (A&amp;M SP-4315, 1971)</p><p><a href="http://www.amazon.com/exec/obidos/ASIN/B00006BGYE/musidelmund-20/104-1485686-8302305?_encoding=UTF8&camp=1789&link_code=xm2">Primal Roots</a> (a.k.a. Raizes) - Sergio Mendes &amp; Brasil '77 (A&amp;M
+SP-4353, 1972)</p><p><a href="http://www.amazon.com/exec/obidos/ASIN/B00008Z6YV/musidelmund-20/104-1485686-8302305?_encoding=UTF8&camp=1789&link_code=xm2">Love Music</a> - Sergio Mendes &amp; Brasil '77 (Bell, 1973)</p><p>In concert - Sergio Mendes &amp; Brasil' 77 (1973)</p><p><a href="http://www.amazon.com/exec/obidos/ASIN/B00008Z6YW/musidelmund-20/104-1485686-8302305?_encoding=UTF8&camp=1789&link_code=xm2">Vintage 74</a> - Sergio Mendes &amp; Brasil' 77 (Bell, 1974)</p><p>Sergio Mendes (Warner Bros./Elektra 7E-1027, 1975)</p><p><a href="http://www.amazon.com/exec/obidos/ASIN/B00008O741/musidelmund-20/104-1485686-8302305?_encoding=UTF8&camp=1789&link_code=xm2">Homecooking</a> &nbsp;- Sergio Mendes &amp; Brasil '77 (1976)</p><p><a href="http://www.amazon.com/exec/obidos/ASIN/B00006LWFL/musidelmund-20/104-1485686-8302305?_encoding=UTF8&camp=1789&link_code=xm2">Sergio Mendes &amp; the New Brasil 77</a> (1977)</p><p><a href="http://www.amazon.com/exec/obidos/ASIN/B00006LWH0/musidelmund-20/104-1485686-8302305?_encoding=UTF8&camp=1789&link_code=xm2">Brasil 88</a> (Elektra, 1978)</p><p><a href="http://www.amazon.com/exec/obidos/ASIN/B00000JAOO/musidelmund-20/104-1485686-8302305?_encoding=UTF8&camp=1789&link_code=xm2">Pel?</a> - Original Soundtrack (Atlantic SD-18231, 1978)</p><p><a href="http://www.amazon.com/exec/obidos/ASIN/B0007QJ25Q/musidelmund-20/104-1485686-8302305?_encoding=UTF8&camp=1789&link_code=xm2">Magic Lady</a> (1979)</p><p>Horizonte aberto (1979)</p><p><a href="http://www.amazon.com/exec/obidos/ASIN/B0000565BR/musidelmund-20/104-1485686-8302305?_encoding=UTF8&camp=1789&link_code=xm2">Sergio Mendes</a> (1983)</p><p><a href="http://www.amazon.com/exec/obidos/ASIN/B000274GGU/musidelmund-20/104-1485686-8302305?_encoding=UTF8&camp=1789&link_code=xm2">Confetti</a> (A&amp;M SP-4984, 1984)</p><p><a href="http://www.amazon.com/exec/obidos/ASIN/B00000DNAQ/musidelmund-20/104-1485686-8302305?_encoding=UTF8&camp=1789&link_code=xm2">Brasil 86</a> (1986)</p><p><a href="http://www.amazon.com/exec/obidos/ASIN/B000008IDI/musidelmund-20/104-1485686-8302305?_encoding=UTF8&camp=1789&link_code=xm2">Arara</a> (A&amp;M, 1989)</p><p><a href="http://www.amazon.com/exec/obidos/ASIN/B000002HAP/musidelmund-20/104-1485686-8302305?_encoding=UTF8&camp=1789&link_code=xm2">Brasileiro</a> (Elektra/WEA, 1992)</p><p><a href="http://www.amazon.com/exec/obidos/ASIN/B00000474C/musidelmund-20/104-1485686-8302305?_encoding=UTF8&camp=1789&link_code=xm2">Oceano</a> (Polygram, 1996)</p><p><a href="http://www.amazon.com/exec/obidos/ASIN/B000AA4ML8/musidelmund-20/104-1485686-8302305?_encoding=UTF8&camp=1789&link_code=xm2">Timeless</a>
+Concord Records and Starbucks Hear Music, 2006)</p><p><a href="http://www.amazon.com/gp/product/B0012RLWSY/103-9964032-8478218?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B0012RLWSY">Encanto</a> (Concord Records and Starbucks Hear Music, 2008)</p><p><a href="http://www.amazon.com/gp/product/B0038YIDH2?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B0038YIDH2">Bom Tempo</a> (Concord Records, 2010)</p><p><a href="http://www.amazon.com/gp/product/B003CR9C98?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B003CR9C98">Bom Tempo Brasil - Remixed</a> (Concord Records, 2010)</p></td>
+<tr><td align="center" colspan="2" width="100%">
+
+<hr></td></tr>
+  	<tr>
+  	  <td colspan="2" width="100%">
+		<a name="Booking"><b>Booking</b></a>:
+	  </td>
+    </tr>
+    <tr>
+      <td colspan="2" width="100%">&nbsp;</td>
+    </tr>
+
+    <tr>
+      <td width="3%"></td>
+
+      <td width="97%">
+
+ 	<a href="http://www.wma.com">William Morris Agency </a></td>
+<tr><td align="center" colspan="2" width="100%">
+
+<hr></td></tr>
+	</table>
+	</div>
+
+	</div><!-- #main -->
+	
+	    
+    <div id="footer">
+		<div class="footer-sidebar-container clearfix">
+							<ul id="footer-sidebar-1" class="footer-sidebar clearfix xoxo">
+										<li></li>
+									</ul>
+					</div>
+		
+		<div class="footer-message">
+                <p class="floatright">WordPress Installation and Support by <a class="arras" href="http://digiblink.eu/" title="Custom WordPress development, design and backup services."><strong>digiBlink</strong></a></p>
+                <p>Copyright World Music Central.org. All Rights Reserved.</p>                </div><!-- .footer-message -->
+		
+    </div>
+</div><!-- #wrapper -->
+
+<script type="text/javascript"><!--
+wpa2a.targets=[];
+wpa2a.html_done=true;if(wpa2a.script_ready&&!wpa2a.done)wpa2a.init();wpa2a.script_load();
+//--></script>
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+
+	
+});
+</script>
+<script type='text/javascript' src='../wp-includes/js/jquery/ui/jquery.ui.core.min.js?ver=1.10.3'></script>
+<script type='text/javascript' src='../wp-includes/js/jquery/ui/jquery.ui.widget.min.js?ver=1.10.3'></script>
+<script type='text/javascript' src='../wp-includes/js/jquery/ui/jquery.ui.tabs.min.js?ver=1.10.3'></script>
+</body>
+</html>
+   
+
+<!-- Localized -->

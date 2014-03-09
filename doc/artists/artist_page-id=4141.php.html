@@ -1,0 +1,1264 @@
+
+<style type="text/css">
+/* --- reset some elements --- */
+
+#dw ul,ol { list-style:none }
+
+#dw ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,p,blockquote,fieldset,input { margin:0; padding:0 }
+
+/* --- Basic Stylesheet for DokuWiki content --- */
+
+#dw h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+#dw h1 a {
+  color: black;
+}
+
+/* ---------- table of contents ------------------- */
+
+#dw div.toc {
+  margin-left: 2em;
+  margin-top: 1.2em;
+  margin-bottom: 0;
+  float:right;
+  width: 200px;
+  font-size: 80%;
+  padding-top:5px;
+}
+
+#dw div.tocheader {
+  padding: 3px;
+  border: 1px solid #8cacbb;
+  background-color: #dee7ec;
+  text-align: left;
+  font-weight:bold;
+  margin-bottom: 2px;
+}
+
+#dw div.tocheader img {
+  width:0.8em;
+  height:0.8em;
+  margin-top:0.3em;
+  margin-right:3px;
+  float:right;
+  cursor: pointer;
+}
+
+#dw #toc__inside {
+  border: 1px solid #8cacbb;
+  background-color: #fff;
+  text-align: left;
+  padding-top: 0.5em;
+  padding-bottom: 0.7em;
+}
+
+#dw ul.toc {
+  list-style-type: none;
+  list-style-image: none;
+  line-height: 1.2em;
+  margin: 0;
+  padding: 0;
+  padding-left: 1em;
+}
+
+#dw ul.toc li {
+  background: transparent url(../lib/tpl/fsinfo/images/tocdot2.gif) 0 0.6em no-repeat;
+  padding-left:0.4em;
+}
+
+#dw ul.toc li.clear {
+  background-image: none;
+  padding-left:0.4em;
+}
+
+#dw a.toc {
+  color: #436976;
+  text-decoration:none;
+}
+
+#dw a.toc:hover {
+  color: #000;
+  text-decoration:underline;
+}
+
+/* --------------------- footnotes -------------------------------- */
+
+#dw div.footnotes{
+  clear:both;
+  border-top: 1px solid #8cacbb;
+  padding-left: 1em;
+  margin-top: 1em;
+}
+
+#dw div.fn{
+  font-size:90%;
+}
+
+#dw a.fn_top{
+  vertical-align:super;
+  font-size:80%;
+}
+
+#dw a.fn_bot{
+  vertical-align:super;
+  font-size:80%;
+  font-weight:bold;
+}
+
+/* insitu-footnotes */
+#dw div.insitu-footnote {
+  font-size: 80%;
+  line-height: 1.2em;
+  border: 1px solid #8cacbb;
+  background: #eef3f8;
+  text-align: left;
+  padding: 4px;
+  max-width: 40%;    /* IE's width is handled in javascript */
+}
+
+/* overcome IE issue with one line code or file boxes which require h. scrolling */
+#dw * html .insitu-footnote pre.code, * html .insitu-footnote pre.file {
+  padding-bottom: 18px;
+}
+
+/* --------------------- Tables -------------------------------- */
+
+#dw table.inline td.okay {
+  background-color: #afa;
+  text-align: center;
+}
+
+#dw table.inline td.notokay {
+  background-color: #fcc;
+  text-align: center;
+}
+
+#dw table.inline {
+  background-color: #fff;
+  border-spacing: 0px;
+  border-collapse: collapse;
+}
+
+/* ------------- Page elements ----------------- */
+
+#dw span.user{
+/*  color: #ccc; */
+  color: #666;
+  font-size: 90%;
+}
+
+#dw li.minor {
+  color: #666;
+  font-style: italic;
+}
+
+/* embedded images */
+#dw img.media {
+  margin: 3px;
+}
+
+#dw img.medialeft {
+  border: 0;
+  float: left;
+  margin: 0 1.5em 0 0;
+}
+
+#dw img.mediaright {
+  border: 0;
+  float: right;
+  margin: 0 0 0 1.5em;
+}
+
+#dw img.mediacenter {
+  border: 0;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* smileys */
+#dw img.middle {
+  vertical-align: middle;
+}
+
+#dw acronym {
+  cursor: help;
+  border-bottom: 1px dotted #000;
+}
+
+/* general headline setup */
+#dw h1, #dw h2, #dw h3, #dw h4, #dw h5 {
+    color: Black;
+    background-color: transparent;
+    font-family: "Lucida Grande", Verdana, Lucida, Helvetica, Arial, sans-serif;
+    font-size: 100%;
+    font-weight: normal;
+    margin-left:    0;
+    margin-right:   0;
+    margin-top:     0;
+    margin-bottom:  1em;
+    padding-left:   0;
+    padding-right:  0;
+    padding-top:    0.5em;
+    padding-bottom: 0;
+    border-bottom: 1px solid #8cacbb;
+}
+
+/* special headlines */
+/*
+#dw h1 {font-size: 160%; margin-left: 0px; font-weight: bold;}
+#dw h2 {font-size: 150%; margin-left: 20px; font-weight: bold;}
+#dw h3 {font-size: 130%; margin-left: 40px; border-bottom: none; font-weight: bolder}
+#dw h4 {font-size: 115%; margin-left: 60px; border-bottom: none; font-weight: bolder}
+#dw h5 {font-size: 100%; margin-left: 80px; border-bottom: none; font-weight: bold;}
+*/
+
+#dw h1 {font-size: 160%; font-weight: bold;}
+#dw h2 {font-size: 140%; font-weight: bold; }
+#dw h3 {font-size: 130%; border-bottom: none; font-weight: bolder}
+#dw h4 {font-size: 115%; border-bottom: none; font-weight: bolder}
+#dw h5 {font-size: 100%; border-bottom: none; font-weight: bold;}
+
+/* indent different sections */
+/*
+#dw div.level1 {margin-left: 3px;}
+#dw div.level2 {margin-left: 23px;}
+#dw div.level3 {margin-left: 43px;}
+#dw div.level4 {margin-left: 63px;}
+#dw div.level5 {margin-left: 83px;}
+*/
+
+/* unordered lists */
+#dw ul {
+  line-height: 1.5em;
+  list-style-type: square;
+  margin: 0 0 0.5em 2em;
+  padding: 0;
+  color: #638c9c;
+  list-style-image: none;
+}
+
+/* ordered lists */
+#dw ol {
+  line-height: 1.5em;
+  margin: 0 0 0.5em 2em;
+  padding: 0;
+  color: #638c9c;
+  font-weight: bold;
+  list-style-image: none;
+}
+
+/* the list items overriding the ul/ol definition */
+#dw .li {
+  color: #000;
+  font-weight: normal;
+}
+
+#dw ol {list-style-type: decimal}
+#dw ol ol {list-style-type: upper-roman}
+#dw ol ol ol {list-style-type: lower-alpha}
+#dw ol ol ol ol {list-style-type: lower-greek}
+
+#dw li.open {
+  list-style-image: url(../lib/tpl/fsinfo/images/open.gif);
+    /*list-style-type: circle;*/
+}
+
+#dw li.closed {
+  list-style-image: url(../lib/tpl/fsinfo/images/closed.gif);
+    /*list-style-type: disc;*/
+}
+
+#dw blockquote {
+  border-left: 2px solid #8cacbb;
+  padding-left: 3px;
+  margin-left: 0;
+}
+
+/* code blocks by indention */
+#dw pre.pre {
+  font-size: 100%;
+  padding: 0.5em;
+  border: 1px dashed #8cacbb;
+  color: Black;
+  background-color: #f7f9fa;
+  overflow: auto;
+}
+
+/* code blocks by code tag */
+#dw pre.code {
+  font-size: 100%;
+  padding: 0.5em;
+  border: 1px dashed #8cacbb;
+  color: Black;
+  background-color: #f7f9fa;
+  overflow: auto;
+}
+
+/* inline code words */
+#dw code {
+  font-size: 80%;
+}
+
+/* code blocks by file tag */
+#dw pre.file {
+  font-size: 100%;
+  padding: 0.5em;
+  border: 1px dashed #8cacbb;
+  color: Black;
+  background-color: #dee7ec;
+  overflow: auto;
+}
+
+/* inline tables */
+
+#dw table.inline th {
+  padding: 3px;
+  border: 1px solid #8cacbb;
+  background-color: #dee7ec;
+  text-align: left;
+}
+
+#dw table.inline td {
+  padding: 3px;
+  border: 1px solid #8cacbb;
+}
+</style>
+<link rel='stylesheet' id='eme_stylesheet-css'  href='../wp-content/plugins/events-made-easy/events_manager-ver=3.6.css' type='text/css' media='all' />
+<link rel='stylesheet' id='A2A_SHARE_SAVE-css'  href='../wp-content/plugins/add-to-any/addtoany.min-ver=1.4.css' type='text/css' media='all' />
+<script type='text/javascript' src='../wp-includes/js/jquery/jquery.js?ver=1.10.2'></script>
+<script type='text/javascript' src='../wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<script type='text/javascript' src='../wp-content/plugins/google-analyticator/external-tracking.min.js?ver=6.4.5'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../xmlrpc-rsd.php.html" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 3.6" />
+
+<script type="text/javascript"><!--
+var a2a_config=a2a_config||{},wpa2a={done:false,html_done:false,script_ready:false,script_load:function(){var a=document.createElement('script'),s=document.getElementsByTagName('script')[0];a.type='text/javascript';a.async=true;a.src='http://static.addtoany.com/menu/page.js';s.parentNode.insertBefore(a,s);wpa2a.script_load=function(){};},script_onready:function(){if(a2a.type=='page'){wpa2a.script_ready=true;if(wpa2a.html_done)wpa2a.init();}},init:function(){for(var i=0,el,target,targets=wpa2a.targets,length=targets.length;i<length;i++){el=document.getElementById('wpa2a_'+(i+1));target=targets[i];a2a_config.linkname=target.title;a2a_config.linkurl=target.url;if(el)a2a.init('page',{target:el});wpa2a.done=true;}}};a2a_config.tracking_callback=['ready',wpa2a.script_onready];
+//--></script>
+<meta name="_awb_version" content="2.0.3" /><link rel="stylesheet" href="../wp-content/themes/arras/css/styles/default.css" type="text/css" media="screen,projection" /><link rel="stylesheet" href="../wp-content/themes/arras/css/layouts/2c-r-fixed.css" type="text/css" />
+<!-- Generated by Arras WP Theme -->
+<style type="text/css">
+	.posts-default li  { width: 205px; height: 225px; }
+	.posts-default img, .posts-default .entry-thumbnails-link { width: 195px; height: 110px; }
+	.posts-default .entry-meta { width: 195px; }
+	.posts-default .entry-thumbnails { width: 205px; height: 120px; }
+			.posts-quick .entry-thumbnails img { width: 115px; height: 115px; }
+		.posts-quick .entry-meta { width: 115px; }
+			.featured { height: 260px; }
+	.featured-article { width: 640px; height: 250px; }
+	.featured-article img { width: 640px; height: 250px; }
+	#controls { width: 610px; top: 110px; }
+	#controls .next { left: 610px; }
+	.featured-entry { height: 84px; top: -84px; }
+	.featured-slideshow-inner { height: 250px }
+		.featured-stories-summary  { margin-left: 51px; }
+	.single .post .entry-photo img, .single-post .entry-photo img  { width: 620px; height: 250px; }
+		.footer-sidebar  { width: 920px; }
+	</style>
+	<script type="text/javascript">
+	jQuery(document).ready(function($) {
+
+$('.multi-sidebar').tabs();
+
+$('.sf-menu').superfish({autoArrows: true, speed: 'fast', dropShadows: 'true'});
+
+$('#commentform').validate();
+
+
+});	</script>
+	<!--[if IE]>
+<style type="text/css">
+.addtoany_list a img{filter:alpha(opacity=70)}
+.addtoany_list a:hover img,.addtoany_list a.addtoany_share_save img{filter:alpha(opacity=100)}
+</style>
+<![endif]-->
+<link rel="stylesheet" href="../wp-content/themes/arras/user.css" type="text/css" media="screen,projection" /><!-- Google Analytics Tracking by Google Analyticator 6.4.5: http://www.videousermanuals.com/google-analyticator/ -->
+<script type="text/javascript">
+	var analyticsFileTypes = [''];
+	var analyticsEventTracking = 'enabled';
+</script>
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-169675-4']);
+        _gaq.push(['_addDevId', 'i9k95']); // Google Analyticator App ID with Google 
+        
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>World Music Central.org</title>
+
+
+<link rel="alternate" type="application/rss+xml" href="../feed/index.html" title="World Music Central.org latest posts" />
+
+<link rel="alternate" type="application/rss+xml" href="../comments/feed/index.html" title="World Music Central.org latest comments" />
+
+<link rel="pingback" href="../xmlrpc.php.html" />
+
+<link rel="shortcut icon" href="../favicon.ico" />
+
+
+<style type="text/css">
+/* --- reset some elements --- */
+
+#dw ul,ol { list-style:none }
+
+#dw ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,p,blockquote,fieldset,input { margin:0; padding:0 }
+
+/* --- Basic Stylesheet for DokuWiki content --- */
+
+#dw h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+#dw h1 a {
+  color: black;
+}
+
+/* ---------- table of contents ------------------- */
+
+#dw div.toc {
+  margin-left: 2em;
+  margin-top: 1.2em;
+  margin-bottom: 0;
+  float:right;
+  width: 200px;
+  font-size: 80%;
+  padding-top:5px;
+}
+
+#dw div.tocheader {
+  padding: 3px;
+  border: 1px solid #8cacbb;
+  background-color: #dee7ec;
+  text-align: left;
+  font-weight:bold;
+  margin-bottom: 2px;
+}
+
+#dw div.tocheader img {
+  width:0.8em;
+  height:0.8em;
+  margin-top:0.3em;
+  margin-right:3px;
+  float:right;
+  cursor: pointer;
+}
+
+#dw #toc__inside {
+  border: 1px solid #8cacbb;
+  background-color: #fff;
+  text-align: left;
+  padding-top: 0.5em;
+  padding-bottom: 0.7em;
+}
+
+#dw ul.toc {
+  list-style-type: none;
+  list-style-image: none;
+  line-height: 1.2em;
+  margin: 0;
+  padding: 0;
+  padding-left: 1em;
+}
+
+#dw ul.toc li {
+  background: transparent url(../lib/tpl/fsinfo/images/tocdot2.gif) 0 0.6em no-repeat;
+  padding-left:0.4em;
+}
+
+#dw ul.toc li.clear {
+  background-image: none;
+  padding-left:0.4em;
+}
+
+#dw a.toc {
+  color: #436976;
+  text-decoration:none;
+}
+
+#dw a.toc:hover {
+  color: #000;
+  text-decoration:underline;
+}
+
+/* --------------------- footnotes -------------------------------- */
+
+#dw div.footnotes{
+  clear:both;
+  border-top: 1px solid #8cacbb;
+  padding-left: 1em;
+  margin-top: 1em;
+}
+
+#dw div.fn{
+  font-size:90%;
+}
+
+#dw a.fn_top{
+  vertical-align:super;
+  font-size:80%;
+}
+
+#dw a.fn_bot{
+  vertical-align:super;
+  font-size:80%;
+  font-weight:bold;
+}
+
+/* insitu-footnotes */
+#dw div.insitu-footnote {
+  font-size: 80%;
+  line-height: 1.2em;
+  border: 1px solid #8cacbb;
+  background: #eef3f8;
+  text-align: left;
+  padding: 4px;
+  max-width: 40%;    /* IE's width is handled in javascript */
+}
+
+/* overcome IE issue with one line code or file boxes which require h. scrolling */
+#dw * html .insitu-footnote pre.code, * html .insitu-footnote pre.file {
+  padding-bottom: 18px;
+}
+
+/* --------------------- Tables -------------------------------- */
+
+#dw table.inline td.okay {
+  background-color: #afa;
+  text-align: center;
+}
+
+#dw table.inline td.notokay {
+  background-color: #fcc;
+  text-align: center;
+}
+
+#dw table.inline {
+  background-color: #fff;
+  border-spacing: 0px;
+  border-collapse: collapse;
+}
+
+/* ------------- Page elements ----------------- */
+
+#dw span.user{
+/*  color: #ccc; */
+  color: #666;
+  font-size: 90%;
+}
+
+#dw li.minor {
+  color: #666;
+  font-style: italic;
+}
+
+/* embedded images */
+#dw img.media {
+  margin: 3px;
+}
+
+#dw img.medialeft {
+  border: 0;
+  float: left;
+  margin: 0 1.5em 0 0;
+}
+
+#dw img.mediaright {
+  border: 0;
+  float: right;
+  margin: 0 0 0 1.5em;
+}
+
+#dw img.mediacenter {
+  border: 0;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* smileys */
+#dw img.middle {
+  vertical-align: middle;
+}
+
+#dw acronym {
+  cursor: help;
+  border-bottom: 1px dotted #000;
+}
+
+/* general headline setup */
+#dw h1, #dw h2, #dw h3, #dw h4, #dw h5 {
+    color: Black;
+    background-color: transparent;
+    font-family: "Lucida Grande", Verdana, Lucida, Helvetica, Arial, sans-serif;
+    font-size: 100%;
+    font-weight: normal;
+    margin-left:    0;
+    margin-right:   0;
+    margin-top:     0;
+    margin-bottom:  1em;
+    padding-left:   0;
+    padding-right:  0;
+    padding-top:    0.5em;
+    padding-bottom: 0;
+    border-bottom: 1px solid #8cacbb;
+}
+
+/* special headlines */
+/*
+#dw h1 {font-size: 160%; margin-left: 0px; font-weight: bold;}
+#dw h2 {font-size: 150%; margin-left: 20px; font-weight: bold;}
+#dw h3 {font-size: 130%; margin-left: 40px; border-bottom: none; font-weight: bolder}
+#dw h4 {font-size: 115%; margin-left: 60px; border-bottom: none; font-weight: bolder}
+#dw h5 {font-size: 100%; margin-left: 80px; border-bottom: none; font-weight: bold;}
+*/
+
+#dw h1 {font-size: 160%; font-weight: bold;}
+#dw h2 {font-size: 140%; font-weight: bold; }
+#dw h3 {font-size: 130%; border-bottom: none; font-weight: bolder}
+#dw h4 {font-size: 115%; border-bottom: none; font-weight: bolder}
+#dw h5 {font-size: 100%; border-bottom: none; font-weight: bold;}
+
+/* indent different sections */
+/*
+#dw div.level1 {margin-left: 3px;}
+#dw div.level2 {margin-left: 23px;}
+#dw div.level3 {margin-left: 43px;}
+#dw div.level4 {margin-left: 63px;}
+#dw div.level5 {margin-left: 83px;}
+*/
+
+/* unordered lists */
+#dw ul {
+  line-height: 1.5em;
+  list-style-type: square;
+  margin: 0 0 0.5em 2em;
+  padding: 0;
+  color: #638c9c;
+  list-style-image: none;
+}
+
+/* ordered lists */
+#dw ol {
+  line-height: 1.5em;
+  margin: 0 0 0.5em 2em;
+  padding: 0;
+  color: #638c9c;
+  font-weight: bold;
+  list-style-image: none;
+}
+
+/* the list items overriding the ul/ol definition */
+#dw .li {
+  color: #000;
+  font-weight: normal;
+}
+
+#dw ol {list-style-type: decimal}
+#dw ol ol {list-style-type: upper-roman}
+#dw ol ol ol {list-style-type: lower-alpha}
+#dw ol ol ol ol {list-style-type: lower-greek}
+
+#dw li.open {
+  list-style-image: url(../lib/tpl/fsinfo/images/open.gif);
+    /*list-style-type: circle;*/
+}
+
+#dw li.closed {
+  list-style-image: url(../lib/tpl/fsinfo/images/closed.gif);
+    /*list-style-type: disc;*/
+}
+
+#dw blockquote {
+  border-left: 2px solid #8cacbb;
+  padding-left: 3px;
+  margin-left: 0;
+}
+
+/* code blocks by indention */
+#dw pre.pre {
+  font-size: 100%;
+  padding: 0.5em;
+  border: 1px dashed #8cacbb;
+  color: Black;
+  background-color: #f7f9fa;
+  overflow: auto;
+}
+
+/* code blocks by code tag */
+#dw pre.code {
+  font-size: 100%;
+  padding: 0.5em;
+  border: 1px dashed #8cacbb;
+  color: Black;
+  background-color: #f7f9fa;
+  overflow: auto;
+}
+
+/* inline code words */
+#dw code {
+  font-size: 80%;
+}
+
+/* code blocks by file tag */
+#dw pre.file {
+  font-size: 100%;
+  padding: 0.5em;
+  border: 1px dashed #8cacbb;
+  color: Black;
+  background-color: #dee7ec;
+  overflow: auto;
+}
+
+/* inline tables */
+
+#dw table.inline th {
+  padding: 3px;
+  border: 1px solid #8cacbb;
+  background-color: #dee7ec;
+  text-align: left;
+}
+
+#dw table.inline td {
+  padding: 3px;
+  border: 1px solid #8cacbb;
+}
+</style>
+<script type='text/javascript' src='../wp-content/themes/arras/js/superfish/hoverIntent.js'></script>
+<script type='text/javascript' src='../wp-content/themes/arras/js/superfish/superfish.js'></script>
+<script type='text/javascript' src='../wp-includes/js/comment-reply.min.js?ver=3.6'></script>
+<script type='text/javascript' src='../wp-content/themes/arras/js/jquery.validate.min.js'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../xmlrpc-rsd.php.html" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 3.6" />
+
+<script type="text/javascript"><!--
+var a2a_config=a2a_config||{},wpa2a={done:false,html_done:false,script_ready:false,script_load:function(){var a=document.createElement('script'),s=document.getElementsByTagName('script')[0];a.type='text/javascript';a.async=true;a.src='/page.js';s.parentNode.insertBefore(a,s);wpa2a.script_load=function(){};},script_onready:function(){if(a2a.type=='page'){wpa2a.script_ready=true;if(wpa2a.html_done)wpa2a.init();}},init:function(){for(var i=0,el,target,targets=wpa2a.targets,length=targets.length;i<length;i++){el=document.getElementById('wpa2a_'+(i+1));target=targets[i];a2a_config.linkname=target.title;a2a_config.linkurl=target.url;if(el)a2a.init('page',{target:el});wpa2a.done=true;}}};a2a_config.tracking_callback=['ready',wpa2a.script_onready];
+//--></script>
+<meta name="_awb_version" content="2.0.3" /><link rel="stylesheet" href="../wp-content/themes/arras/css/styles/default.css" type="text/css" media="screen,projection" /><link rel="stylesheet" href="../wp-content/themes/arras/css/layouts/2c-r-fixed.css" type="text/css" />
+<!-- Generated by Arras WP Theme -->
+<style type="text/css">
+	.posts-default li  { width: 205px; height: 225px; }
+	.posts-default img, .posts-default .entry-thumbnails-link { width: 195px; height: 110px; }
+	.posts-default .entry-meta { width: 195px; }
+	.posts-default .entry-thumbnails { width: 205px; height: 120px; }
+			.posts-quick .entry-thumbnails img { width: 115px; height: 115px; }
+		.posts-quick .entry-meta { width: 115px; }
+			.featured { height: 260px; }
+	.featured-article { width: 640px; height: 250px; }
+	.featured-article img { width: 640px; height: 250px; }
+	#controls { width: 610px; top: 110px; }
+	#controls .next { left: 610px; }
+	.featured-entry { height: 84px; top: -84px; }
+	.featured-slideshow-inner { height: 250px }
+		.featured-stories-summary  { margin-left: 51px; }
+	.single .post .entry-photo img, .single-post .entry-photo img  { width: 620px; height: 250px; }
+		.footer-sidebar  { width: 920px; }
+	</style>
+	<script type="text/javascript">
+	jQuery(document).ready(function($) {
+
+$('.multi-sidebar').tabs();
+
+$('.sf-menu').superfish({autoArrows: true, speed: 'fast', dropShadows: 'true'});
+
+$('#commentform').validate();
+
+
+});	</script>
+	<!--[if IE]>
+<style type="text/css">
+.addtoany_list a img{filter:alpha(opacity=70)}
+.addtoany_list a:hover img,.addtoany_list a.addtoany_share_save img{filter:alpha(opacity=100)}
+</style>
+<![endif]-->
+<link rel="stylesheet" href="../wp-content/themes/arras/user.css" type="text/css" media="screen,projection" /><!-- Google Analytics Tracking by Google Analyticator 6.4.5: http://www.videousermanuals.com/google-analyticator/ -->
+<script type="text/javascript">
+	var analyticsFileTypes = [''];
+	var analyticsEventTracking = 'enabled';
+</script>
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-169675-4']);
+        _gaq.push(['_addDevId', 'i9k95']); // Google Analyticator App ID with Google 
+        
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+</head>
+
+<body class="page page-id-0 page-parent page-template-default layout-2c-r-fixed no-js style-default">
+<script type="text/javascript">
+//<![CDATA[
+(function(){
+var c = document.body.className;
+c = c.replace(/no-js/, 'js');
+document.body.className = c;
+})();
+//]]>
+</script>
+
+<div id="top-menu" class="clearfix">
+	</div><!-- #top-menu -->
+
+<div id="header"><div align="center"><script type="text/javascript"><!--
+google_ad_client = "pub-7027070946238159";
+/* 728x90, Top Banner */
+google_ad_slot = "9335358437";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+	<div id="branding" class="clearfix">
+	<div class="logo">
+				<span class="blog-name"><a href="../index.html">World Music Central.org</a></span>
+		<img style="float:left; padding: 0 5px 0 0;" src="../wp-content/themes/wmc-magazeen/images/bull.png"/><span class="blog-description">Your Connection to World Music</span>
+			</div>
+	<div id="searchbar"><form method="get" class="searchform clearfix" action="http://worldmusiccentral.org/">
+ <input type="text" value="Search..." name="s" class="s" onfocus="this.value=''" />
+ <input type="submit" class="searchsubmit" value="Search" title="Search World Music Central.org" />
+</form>
+</div>
+	</div><!-- #branding -->
+</div><!-- #header -->
+
+<div id="nav">
+	<div id="nav-content" class="clearfix">
+	<div class="menu-main-container"><ul id="menu-main" class="sf-menu menu clearfix"><li id="menu-item-6394" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-6394"><a href="../index.html">Home</a></li>
+<li id="menu-item-6401" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6401"><a href="../about/index.html">About</a></li>
+<li id="menu-item-6454" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6454"><a href="#">World Music Resources</a>
+<ul class="sub-menu">
+	<li id="menu-item-6455" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6455"><a href="artist_index.php.html">Artists Database</a></li>
+	<li id="menu-item-6462" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6462"><a href="http://musicwikicentral.com/world_music_festivals">Festivals</a></li>
+	<li id="menu-item-6467" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6467"><a href="http://musicwikicentral.com/travel_guides">Travel Guides</a></li>
+	<li id="menu-item-6469" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6469"><a href="http://musicwikicentral.com/world_music_genres">Musical Genres</a></li>
+	<li id="menu-item-6468" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6468"><a href="http://musicwikicentral.com/musical_instruments">Musical Instruments</a></li>
+	<li id="menu-item-6475" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6475"><a href="http://musicwikicentral.com/showcases">Showcases</a></li>
+	<li id="menu-item-6470" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6470"><a href="http://musicwikicentral.com/world_music_venues">Venues</a></li>
+	<li id="menu-item-6472" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6472"><a href="http://musicwikicentral.com/record_companies">Record Companies</a></li>
+	<li id="menu-item-6466" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6466"><a href="http://musicwikicentral.com/booking_agents">Booking Agents</a></li>
+	<li id="menu-item-6474" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6474"><a href="http://musicwikicentral.com/world_music_press">World Music Press</a></li>
+	<li id="menu-item-6477" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6477"><a href="http://musicwikicentral.com/ethnomusicology">Ethnomusicology</a></li>
+	<li id="menu-item-6473" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6473"><a href="http://musicwikicentral.com/music_organizations">Music Organizations</a></li>
+</ul>
+</li>
+<li id="menu-item-6390" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6390"><a href="#">Topics</a>
+<ul class="sub-menu">
+	<li id="menu-item-6369" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6369"><a href="../category/archive/index.html">archive</a></li>
+	<li id="menu-item-6370" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6370"><a href="../category/articles/index.html">Articles</a></li>
+	<li id="menu-item-6371" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6371"><a href="../category/awards/index.html">Awards</a></li>
+	<li id="menu-item-6372" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6372"><a href="../category/book-reviews/index.html">Book Reviews</a></li>
+	<li id="menu-item-6373" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6373"><a href="../category/cd-reviews/index.html">CD Reviews</a></li>
+	<li id="menu-item-6374" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6374"><a href="../category/concert-reviews/index.html">Concert reviews</a></li>
+	<li id="menu-item-6375" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6375"><a href="../category/conferences/index.html">Conferences</a></li>
+	<li id="menu-item-6376" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6376"><a href="../category/editorials/index.html">Editorials</a></li>
+	<li id="menu-item-6377" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6377"><a href="../category/events/index.html">Events</a></li>
+	<li id="menu-item-6378" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6378"><a href="../category/film-reviews/index.html">Film Reviews</a></li>
+	<li id="menu-item-6379" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6379"><a href="../category/general-news/index.html">General News</a></li>
+	<li id="menu-item-6380" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6380"><a href="../category/interviews/index.html">Interviews</a></li>
+	<li id="menu-item-6381" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6381"><a href="../category/loop-collections/index.html">Loop Collections</a></li>
+	<li id="menu-item-6382" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6382"><a href="../category/new-books/index.html">New Books</a></li>
+	<li id="menu-item-6383" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6383"><a href="../category/new-cds/index.html">New CDs</a></li>
+	<li id="menu-item-6384" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6384"><a href="../category/new-films/index.html">New Films</a></li>
+	<li id="menu-item-6385" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6385"><a href="../category/new-releases/index.html">New Releases</a></li>
+	<li id="menu-item-6386" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6386"><a href="../category/obituaries/index.html">Obituaries</a></li>
+	<li id="menu-item-6387" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6387"><a href="../category/tour-announcements/index.html">Tour Announcements</a></li>
+	<li id="menu-item-6388" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6388"><a href="../category/tradeshows/index.html">Tradeshows</a></li>
+	<li id="menu-item-6389" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6389"><a href="../category/uncategorized/index.html">Uncategorized</a></li>
+</ul>
+</li>
+<li id="menu-item-6392" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6392"><a href="../events/index.html">Calendar</a></li>
+<li id="menu-item-6400" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6400"><a href="../store/index.html">Store</a></li>
+<li id="menu-item-6724" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6724"><a href="../contact-us/index.html">Contact Us</a></li>
+</ul></div>		<ul class="quick-nav clearfix">
+					<li><a id="rss" title="World Music Central.org RSS Feed" href="../feed/index.html">RSS Feed</a></li>
+				
+						
+							<li><a id="facebook" title="World Music Central.org Facebook" href="http://www.facebook.com/pages/World-Music-Central/149036898455901" target="_blank">Facebook</a></li>
+				
+			</ul>
+	</div><!-- #nav-content -->
+</div><!-- #nav -->
+
+<div id="wrapper">
+	
+	  
+	<div id="main" class="clearfix">
+    <div id="container" class="clearfix">
+  <head>
+    <title>Gonzalo Rubalcaba - Artist Page</title>
+  </head>
+
+  <body> 
+  
+  <div id="artistpage">
+  
+  <div style="float:right;">
+  
+  <script type="text/javascript"><!--
+google_ad_client = "pub-7027070946238159";
+/* 160x600, created 12/6/08 */
+google_ad_slot = "6830638066";
+google_ad_width = 160;
+google_ad_height = 600;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+
+</div>
+  
+  
+  
+  	<table>
+
+  
+<tr><td align="center" colspan="2" width="100%">
+<font size=+1><b>Gonzalo Rubalcaba</b></font> 
+<hr></td></tr>
+
+<tr><td align="center" colspan="2" width="100%">
+<a href="#Genres">Similar Music</a>
+<hr></td></tr>
+    <tr>
+      <td colspan="2" width="100%">
+		<a name="Biography"><b>Biography</b></a>:
+	  </td>
+    </tr>
+    <tr>
+      <td colspan="2" width="100%">&nbsp;</td>
+    </tr>
+
+    <tr>
+      <td width="3%"></td>
+
+      <td width="97%">
+	  
+	<p align=center><img border="0" align="center"  src="../staticpages/images/Gonzalo_Rubalcaba.jpg"></p>Gonzalo Julio Gonzalez Fonseca, known artistically as Gonzalo Rubalcaba, was born in Havana, Cuba, May 27, 1963, to a 
+musical family that included his father, pianist Guillermo (who leads
+<a href="http://www.worldmusiccentral.org/artists/artist_page.php?id=1379">
+Charanga Rubalcaba</a>) and his grandfather, danzon composer Jacobo.</p>
+<p>Gonzalo 
+started piano lessons at the age of eight and earned a degree in music 
+composition at the Institute of Fine Arts in Havana. </p>
+<p>With
+<a href="http://www.worldmusiccentral.org/artists/artist_page.php?id=799">
+Orquesta Aragon</a> he toured France and Africa in 1980. He introduced his own 
+Grupo Proyecto to the North Sea and Berlin Festivals in l985. In July 1990 he 
+appeared as a surprise guest with Charlie Haden and Paul Motian at Montreux 
+Festival, Switzerland, in a historic performance (available as the CD 
+<a href="http://www.amazon.com/gp/product/B000000W2W/104-9467392-7627949?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B000000W2W">
+Discovery</a>).</p>
+<p>Egrem Studios of Havana was the first to record his music during the early 
+and mid '80's, and these discs are still being released (recently 
+<a href="http://www.amazon.com/gp/product/B0000549XA/104-9467392-7627949?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B0000549XA">
+Inicio</a>, an album of piano solos, and 
+<a href="http://www.amazon.com/gp/product/B0000549S2/104-9467392-7627949?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B0000549S2">
+Concierto Negro</a>). </p>
+<p>Beginning in 1986 Gonzalo began recording for Messidor of Frankfurt, Germany, 
+and put out three albums for that label with his Cuban Quartet, 
+<a href="http://www.amazon.com/gp/product/B00020H9V6/104-9467392-7627949?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B00020H9V6">
+Mi Gran Pasion</a>, 
+<a href="http://www.amazon.com/gp/product/B0007PAMCO/104-9467392-7627949?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B0007PAMCO">
+Live in Havana</a>, and 
+<a href="http://www.amazon.com/gp/product/B000AA4GZ0/104-9467392-7627949?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B000AA4GZ0">
+Giraldilla</a>.</p>
+<p>Charlie Haden met Rubalcaba in Cuba while both were performing as part of the 
+Havana Jazz Festival in 1986. Haden later invited Rubalcaba to participate in 
+what is now know as the 
+<a href="http://www.amazon.com/gp/product/B0000047F1/104-9467392-7627949?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B0000047F1">
+Montreal Tapes</a> with Haden on bass and Paul Motian on drums. </p>
+<p>Blue Note CEO Bruce Lundvall signed him in 1990 and subsequently released
+
+<a href="http://www.amazon.com/gp/product/B000000W2X/104-9467392-7627949?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B000000W2X">
+The Blessing</a>, 
+<a href="http://www.amazon.com/gp/product/B000000W2W/104-9467392-7627949?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B000000W2W">
+Discovery: Live at Montreux</a>, 
+<a href="http://www.amazon.com/gp/product/B000000W2Y/104-9467392-7627949?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B000000W2Y">
+Images: Live from Mt. Fuji</a>, 
+
+<a href="http://www.amazon.com/gp/product/B000005HAT/104-9467392-7627949?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B000005HAT">
+Suite 4 y 20</a>, 
+<a href="http://www.amazon.com/gp/product/B000005GWT/104-9467392-7627949?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B000005GWT">
+Rapsodia</a>, 
+<a href="http://www.amazon.com/gp/product/B000005GYN/104-9467392-7627949?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B000005GYN">
+Diz...The Gonzalo Rubalcaba Trio</a>, and 
+<a href="http://www.amazon.com/gp/product/B000005GYO/104-9467392-7627949?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B000005GYO">
+Imagine: Live in the USA</a>, which featured his Cuban compatriots, drummer Julio Barreto, bassist Felipe 
+Cabrera and trumpeter Reynaldo Melian.</p>
+<p>For Gonzalo Rubalcaba, the ability to easily interweave musical idioms is a 
+by-product of the long presence of American jazz on Cuban soil. &quot;<i>The 
+connection between Cuban music and jazz has been the regular material for a 
+while</i>,&quot; he says. &quot;<i>It's something they've handled for a while including 
+those Cuban musicians who perhaps don't specialize in jazz. I think that Cuban 
+musicians have a natural ability to be versatile and subscribe themselves to 
+different styles and reach high levels of technicality and mastery</i>.&quot;</p>
+<p>A resident of South Florida with his wife and three kids since 1996, 
+Rubalcaba has had unfettered access to the cream of the crop of U.S. talent and 
+the overall jazz scene since his triumphant 1993 Lincoln Center performance. </p>
+<p>In 1998 he released two CDs on Blue Note: 
+<a href="http://www.amazon.com/gp/product/B000005H90/104-9467392-7627949?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B000005H90">
+Flying Colors</a>, a free-wheeling duet 
+with saxophonist Joe Lovano, and 
+<a href="http://www.amazon.com/gp/product/B00000DMP6/104-9467392-7627949?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B00000DMP6">
+Antiguo</a>, a folkloric and futuristic fusion of 
+Cuban and improvisational music. </p>
+<p>
+<a href="http://www.amazon.com/gp/product/B00000JYR8/104-9467392-7627949?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B00000JYR8">
+Inner Voyage</a>, the 9th release on the Blue Note label from Gonzalo Rubalcaba 
+features drummer Ignacio Berroa, bassist Jeff Chambers, and special guest, the 
+ubiquitous tenor saxophonist Michael Brecker; and completes an incredible 
+artistic hat trick. </p>
+<p>
+<a href="http://www.amazon.com/gp/product/B00000JYR8/104-9467392-7627949?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B00000JYR8">
+Inner Voyage</a> represents the next step in his ongoing quest to become a more 
+&quot;integrated musician&quot; with his all-encompassing synthesis of Latin, Afro-Cuban 
+and African-American musical styles.<br>
+<br>
+In the tradition of Duke Ellington and Thelonious Monk, Gonzalo Rubalcaba 
+composed most of the music on 
+<a href="http://www.amazon.com/gp/product/B00000JYR8/104-9467392-7627949?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B00000JYR8">
+Inner Voyage</a> to evoke the personalities of several 
+important people in his life. &quot;<i>I've tried to give the impression that it's a 
+very intimate type of work</i>,&quot; Rubalcaba says of the CD, &quot;<i>precisely because 
+it's closely related to human beings that have had, and still do, special 
+significance to me</i>.&quot;</p>
+<p>The roots of this group go back to the 1995 Heineken Jazz Festival in Puerto 
+Rico, where Rubalcaba first hooked up with the great Cuban drummer Ignacio 
+Berroa - who played with everyone from Dizzy Gillespie and Freddie Hubbard to 
+McCoy Tyner. Berroa replaced Rubalcaba's original drummer who couldn't make the 
+gig due to visa problems. &quot;<i>Ignacio is a very strong musician</i>,&quot; Rubalcaba 
+says, &quot;<i>because as everybody knows in the business, he's the only drummer 
+capable of switching back from swing to Afro-Cuban, from samba to bossa nova, or 
+any other rhythm flawlessly</i>.&quot;</p>
+<p>In 2002 Gonzalo won both a Latin Grammy for Jazz Album of the Year, 
+
+<a href="http://www.amazon.com/gp/product/B00005LKBX/104-9467392-7627949?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B00005LKBX">
+Supernova</a>, as well as a Grammy for co-production with Charlie Haden of 
+
+<a href="http://www.amazon.com/gp/product/B00005A0RI/104-9467392-7627949?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B00005A0RI">
+Nocturne</a>, 
+a Verve release of Cuban and Mexican boleros and ballads.</p>
+<p>Three years after 
+<a href="http://www.amazon.com/gp/product/B00005LKBX/104-9467392-7627949?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B00005LKBX">
+Supernova</a>, dazzled the jazz world with its blend of 
+technical virtuosity and contemplative interpretations of traditional Cuban 
+themes and imaginative originals, Rubalcaba released 
+<a href="http://www.amazon.com/gp/product/B0002UX9V0/104-9467392-7627949?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B0002UX9V0">
+Paseo</a>. '<i>Yes, it's been 
+a very long time since 
+<a href="http://www.amazon.com/gp/product/B00005LKBX/104-9467392-7627949?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B00005LKBX">
+Supernova</a></i>,' he explained in deliberately spoken but nearly perfect 
+English. '<i>I used to do an album or two a year, but that pace 
+doesn't give you the opportunity to think ' you have to produce. However, I want 
+the opportunity to think as well. After I create an album, I need to play the 
+repertoire with other musicians</i>.' </p>
+<p>The benefit of taking his time, Rubalcaba, states, is that the music is more 
+focused, more relaxed, and more musical. '<i>Sometimes</i>,' he continues, '<i>I 
+hear recordings that sound rushed, like the musicians were under a lot of 
+pressure. It sounds like that moment was never finished. Maybe two and a half 
+years is too long, but two albums a year is too much</i>.'<br>
+<br>
+
+<a href="http://www.amazon.com/gp/product/B0002UX9V0/104-9467392-7627949?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B0002UX9V0">
+Paseo</a> reprises the quartet format the pianist has used to great advantage on 
+such recordings as 
+<a href="http://www.amazon.com/gp/product/B000005GWT/104-9467392-7627949?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B000005GWT">
+Rapsodia</a> and 
+<a href="http://www.amazon.com/gp/product/B00000DMP6/104-9467392-7627949?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B00000DMP6">
+Antiguo</a>, but one he hasn't used 
+much in recent years. 
+<a href="http://www.amazon.com/gp/product/B0002UX9V0/104-9467392-7627949?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B0002UX9V0">
+Paseo</a> presents what he calls his 'New Cuban Quartet' and 
+reinterprets some self-penned works that originally debuted on earlier 
+recordings.<br>
+<br>
+'<i>I had that need to begin a new period with the Cuban quartet</i>,' the Cuban 
+musician states. '<i>I felt nostalgic for what I did with my quartet in past 
+years, but it's not only about emotion, it's also about professionalism. I had a 
+feeling that some of the pieces I did in the past still sound very contemporary 
+in connection with what we're doing right now. I think it's a good idea to visit 
+again the concepts that I did with my earlier Cuban quartets. About half of the 
+record is what I did earlier in my career, but the result, I believe, is totally 
+new</i>.'<br>
+<br>
+The fresh approach to such previously recorded works as 'Santo Canto,' from 
+
+<a href="http://www.amazon.com/gp/product/B000005GWT/104-9467392-7627949?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B000005GWT">
+Rapsodia</a> (1992), and 'Intermitencia,' a track featured on 
+<a href="http://www.amazon.com/gp/product/B00000DMP6/104-9467392-7627949?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B00000DMP6">
+Antiguo</a> (1998), reborn 
+as 'Meanwhile,' can be traced to the sum total of Rubalcaba's experience, 
+maturity and the involvement of new talent. '<i>I'm older</i>,' he says 
+matter-of-factly, '<i>and I have a different point of view ' I'm approaching the 
+music with more experience. And I put the music in the hands of new musicians. 
+We didn't intend to do a copy of what I'd done in the past with the other Cuban 
+quartet. We were totally free to do a new version of the music, with everyone 
+adding what each believed would make the music richer</i>.'<br>
+<br>
+The album's first and last tracks, 'El Guerrillero' and 'Los Bueyes,' are 
+traditional Cuban songs that link the session's free-leaning original repertoire 
+to the elemental Cuban styles that have played such an important role in 
+Rubalcaba's maturation as a musician and as a man. '<i>In one way or the other, 
+during my life, I've tried to do music that's connected to the soul, 
+particularly to Afro-Cuban music,' he explains. 'Not only as a musician but as a 
+religious man, I have a deep connection with the meaning of that music</i>.'</p>
+<p>As with his previous Blue Note recordings such as 
+<a href="http://www.amazon.com/gp/product/B00000DMP6/104-9467392-7627949?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B00000DMP6">
+Antiguo</a>, 
+<a href="http://www.amazon.com/gp/product/B00005LKBX/104-9467392-7627949?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B00005LKBX">
+Supernova</a>, and 
+<a href="http://www.amazon.com/gp/product/B0002UX9V0/104-9467392-7627949?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B0002UX9V0">
+Paseo</a>, 
+<a href="http://www.amazon.com/gp/product/B000EBDAB6/104-9467392-7627949?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B000EBDAB6">
+Solo</a> explores this inner dialogue through compositions consisting almost 
+exclusively of themes from the Afro-Cuban culture. They include lullabies and 
+African-rooted chants which hold a very distinguished place in the history of 
+Cuban music. His interpretations of 'Canciones de Cuna' by Amadeo Roldan, 'Sueño 
+de Muñecas' by Rolando Bueno, and 'Canciones para Dormir ' by Sergio F. Barroso 
+' influential composers who helped define the school and sound of contemporary 
+Cuban music ' are exquisite examples of his desire to explore the human 
+condition as informed by his country of origin.</p>
+<p> 
+<a href="http://www.amazon.com/gp/product/B000EBDAB6/104-9467392-7627949?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B000EBDAB6">Solo</a> won the 2006 Latin Grammy for  Best Latin Jazz Album. </p>
+<p> 
+
+In 2013, Gonzalo Rubalcaba formed Volcan, an all-star group featuring the talents of bassist Jose Armando Gola, drummer Horacio 'El Negro' Hernandez, and percussionist Giovanni Hidalgo. It was the result of years of friendship, respect and a diverse and rich musical heritage. Volcan is Spanish for volcano. The volcano incorporates the four elements of nature, Earth, Air, Wind and Fire. The volcano reminds us of the goals we aspire to, the ensuing journey and the value of the climb to the summit. </p>
+
+<p>In addition to four Grammys Awards Mr. Rubalcaba has been awarded with the 
+Palmar D'Or of the Music Academy in Paris (1991), Best Instrumentalist and Keys 
+of the City holder in Lugano, Switzerland (1991), Best Performer Award (1991 and 
+1993), for his albums &quot;Suite 4y20&quot; and &quot;Rapsodia&quot; from the Art Critics 
+Association in Japan-given to the same artist twice in a row for the first time.
+<br>
+<br>
+Discography:<br>
+<br>
+<a href="http://www.amazon.com/gp/product/B000000W2X?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B000000W2X">
+The Blessing</a> (Blue Note Records, 1991)<br>
+<a href="http://www.amazon.com/gp/product/B000000W2W?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B000000W2W">
+Discovery: Live at Montreux</a> (Blue Note Records, 1991)<br>
+<a href="http://www.amazon.com/gp/product/B000000W2Y?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B000000W2Y">
+Images: Live From Mt. Fuji</a>&nbsp; (Blue Note Records, 1992)<br>
+<a href="http://www.amazon.com/gp/product/B000005HAT?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B000005HAT">
+Suite 4 y 20</a> (Blue Note, 1993)<br>
+<a href="http://www.amazon.com/gp/product/B000005GYO?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B000005GYO">
+Imagine: Live in America</a> (Blue Note, 1994)<br>
+<a href="http://www.amazon.com/gp/product/B000005GWT?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B000005GWT">
+Rapsodia</a> (Blue Note, 1994)<br>
+<a href="http://www.amazon.com/gp/product/B0000549S2?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B0000549S2">
+Concierto Negro</a> (Egrem, 1995)<br>
+<a href="http://www.amazon.com/gp/product/B0000549WY?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B0000549WY">
+Concatenacion</a> (Melopea Records, 1995)<br>
+<a href="http://www.amazon.com/gp/product/B000005GYN?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B000005GYN">
+Diz</a> (1995)<br>
+<a href="http://www.amazon.com/gp/product/B00000DMP6?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B00000DMP6">
+Antiguo</a> (Blue Note, 1998)<br>
+<a href="http://www.amazon.com/gp/product/B0000566BX?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B0000566BX">
+Romantic</a> (EMI Music Distribution, 1998)<br>
+<a href="http://www.amazon.com/gp/product/B00000DD96?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B00000DD96">
+Gonzalo Rubalcaba</a> (Max, 1998)<br>
+<a href="http://www.amazon.com/gp/product/B00000JYR8?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B00000JYR8">
+Inner Voyage</a> (EMI, 1999)<br>
+<a href="http://www.amazon.com/gp/product/B0000549XA?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B0000549XA">
+Inicio</a> (Egrem, 2001)<br>
+<a href="http://www.amazon.com/gp/product/B00005LKBX?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B00005LKBX">
+Supernova</a> (Blue Note, 2001)<br>
+<a href="http://www.amazon.com/gp/product/B0000799MN?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B0000799MN">
+Straight Ahead</a> (Yemaya, 2003)<br>
+<a href="http://www.amazon.com/gp/product/B0002UX9V0?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B0002UX9V0">
+Paseo</a> (Blue Note, 2004)<br>
+<a href="http://www.amazon.com/gp/product/B000EBDAB6?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B000EBDAB6">
+Solo</a> (Blue Note, 2005)<br>
+<a href="http://www.amazon.com/gp/product/B0000252HZ?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B0000252HZ">
+The Trio</a> (Angel Records, 2005)<br>
+<a href="http://www.amazon.com/gp/product/B000003OUH?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B000003OUH">
+Live in Havana</a> (Messidor, 2007)<br>
+<a href="http://www.amazon.com/gp/product/B0011WMI1A?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B0011WMI1A">
+Avatar</a> (Blue Note, 2008)<br>
+<a href="http://www.amazon.com/gp/product/B004CMLIHQ?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B004CMLIHQ">
+Fé</a> (5passion, 2010)<br>
+<a href="http://www.amazon.com/gp/product/B00699WJM8?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B00699WJM8">
+X X I Century</a> (5passion, 2011)
+<p><b>Official Web Site:</b> <a href="http://www.g-rubalcaba.com">http://www.g-rubalcaba.com</a> </p></td>
+<tr><td align="center" colspan="2" width="100%">
+
+<hr></td></tr>
+  	<tr>
+  	  <td colspan="2" width="100%">
+		<a name="Genres"><b>Similar Music</b></a>:
+	  </td>
+    </tr>
+    <tr>
+      <td colspan="2" width="100%">&nbsp;</td>
+    </tr>
+
+    <tr>
+      <td width="3%"></td>
+
+      <td width="97%">
+
+	<a href="genre_list-genre=Cuban.php.html">Cuban</a>, <a href="genre_list-genre=Jazz.php.html">Jazz</a>, <a href="genre_list-genre=Afro-Cuban.php.html">Afro-Cuban</a>, <a href="instrument_index-instrument=Piano.php.html">Piano</a></td>
+<tr><td align="center" colspan="2" width="100%">
+
+<hr></td></tr>
+	</table>
+	</div>
+
+	</div><!-- #main -->
+	
+	    
+    <div id="footer">
+		<div class="footer-sidebar-container clearfix">
+							<ul id="footer-sidebar-1" class="footer-sidebar clearfix xoxo">
+										<li></li>
+									</ul>
+					</div>
+		
+		<div class="footer-message">
+                <p class="floatright">WordPress Installation and Support by <a class="arras" href="http://digiblink.eu/" title="Custom WordPress development, design and backup services."><strong>digiBlink</strong></a></p>
+                <p>Copyright World Music Central.org. All Rights Reserved.</p>                </div><!-- .footer-message -->
+		
+    </div>
+</div><!-- #wrapper -->
+
+<script type="text/javascript"><!--
+wpa2a.targets=[];
+wpa2a.html_done=true;if(wpa2a.script_ready&&!wpa2a.done)wpa2a.init();wpa2a.script_load();
+//--></script>
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+
+	
+});
+</script>
+<script type='text/javascript' src='../wp-includes/js/jquery/ui/jquery.ui.core.min.js?ver=1.10.3'></script>
+<script type='text/javascript' src='../wp-includes/js/jquery/ui/jquery.ui.widget.min.js?ver=1.10.3'></script>
+<script type='text/javascript' src='../wp-includes/js/jquery/ui/jquery.ui.tabs.min.js?ver=1.10.3'></script>
+</body>
+</html>
+   
+
+<!-- Localized -->

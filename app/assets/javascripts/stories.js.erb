@@ -1,0 +1,314 @@
+    $(document).ready(function () {
+
+	// $("#music").dotdotdot({
+	// 		The HTML to add as ellipsis. 
+	// 	ellipsis	: '... ' )};
+
+
+
+
+
+// taggd not working
+
+// var data = [];
+// var settings = [];
+
+// $(window).load(function () {
+//     getSetup();
+//     $('#wordcloud span').each(function (i, e) {
+//         var $e = $(e);
+//         console.log($e);
+
+//         $e.taggd(settings[i]);
+//         $e.taggd('items', data[i])
+//     });
+// });
+
+// function getSetup() {
+
+//     data.push([{
+//         x: 0.512,
+//         y: 0.33,
+//         text: 'Huey'
+//     }, {
+//         x: 0.548,
+//         y: 0.33,
+//         text: 'Dewey'
+//     }, {
+//         x: 0.567,
+//         y: 0.36,
+//         text: 'Louie'
+//     }]);
+
+//     settings.push({
+//         align: {
+//             'y': 'bottom'
+//         },
+//         offset: {
+//             'top': -400
+//         },
+
+//             'handlers': {
+//             'mouseenter': 'show',
+//                 'mouseleave': 'hide'
+//         }
+//     });
+
+// }
+// set up the dictionary of class to color values
+var myDict = {
+					  "afrobeat" : "fuchsia",
+					  "afropop" : "plum",
+					  "guardian" : 'yellow',
+					  "guardianmusic" : 'yellow',
+					  'mondomix' : 'cyan',
+					  "npr" : 'lightgreen',
+					  "nprmusic" : 'lightgreen',
+					  "qantara" : "orange",
+					  "rootsworld" : "lime",
+					  "songlines" : "pink",
+					  "wmce" : "lightblue",
+					  "womex" : "lightgray"
+					};
+
+var LogoDict = {
+					  "afropop" : "/assets/afropop.ico",
+					  "guardian" : '/assets/guardian.jpg',
+					  'mailandguardian' : '/assets/mandg.jpg',
+					  'mondomix' : '/assets/mondomix.png',
+					  "npr" : '/assets/npr.jpg',
+					  "womex" : "/assets/womex.jpg"
+					};
+
+// var TypeDict = {
+// 	"press" : ["guardian", "mailandguardian"],
+// 	"radio"	: ["npr"],
+// 	"blogs"	: ["afropop", "afrobeat", "mondomix", "womex"]
+// };
+
+	if ($('.all_by_date').css("display", "block")) {
+
+		for(var index = 0; index < $('tbody th').length; index++){
+
+			// trim whitespace from "source" text value
+    		var myClass = $.trim($('td').eq(index).text());
+			var myColor = myDict[myClass];
+
+			// add source as a class 
+			$('th').eq(index)
+					.addClass(myClass)
+ 					.css("border-bottom", "2px dotted " + myColor);
+
+   		 	$('td').eq(index)
+ 						.addClass(myClass);
+
+ 			$('.all_by_date').siblings('div').hide();
+
+			} 
+	} else {
+				console.log($("header nav span#date").html());
+			}
+
+
+
+	$('div#music a img').mouseenter(function () {
+		var hello = $(this).attr("id");
+		var alright = $(this).attr("class");
+		console.log(alright);
+
+		$('table').find("tr th span#"+hello)
+						.show();
+
+		$('table').find("tr th span#"+hello)
+						.closest('tr')
+						.siblings()
+						.hide();
+
+		$(this).closest("div."+alright).find("table tbody tr th span.square#"+alright)
+									.css('display', "inline-block");
+
+		var myDate = $('table').find("tr th span#"+hello)
+						.closest('tr').find('span.intext').text();
+
+		 $(document)
+		 .find("div#mydate")
+		 .html("<h2>" + myDate + "</h2>")
+		 .css("visibility", "visible"); // display date
+
+	});
+
+	$('div#music a img').mouseleave (function () {
+		var hello = $(this).attr("id");
+		var alright = $(this).attr("class");
+
+		$('table').find("tbody tr th span#"+hello)
+						.hide();
+
+						$('table').find("tr th span#"+hello)
+						.closest('tr')
+						.siblings()
+						.show();
+
+		$(this).closest("div."+alright).find("table tbody tr th span#"+alright)
+									.hide();
+
+		$(document)
+		 .find("div#mydate").html("<h2></h2>")
+		 .css("visibility", "hidden"); // hide date
+	});
+
+	$('tbody tr').mouseenter(function () {
+
+		// get date value
+		var myDate = $.trim($(this).find("th").find('span.intext').text());
+
+		// get image value
+		var myPic = $(this).find("img").attr("src");
+		var myPicId = $(this).find("span#id").text();
+		var myPicUrl = $(this).find("a").attr("href");
+		var mySource = $.trim($(this).find("td").text());
+		var myClass = $.trim($(this).children('th').attr("class"));
+		var myColor = myDict[myClass];
+		var myLogo = LogoDict[myClass];
+
+		 // $(document)
+		 // .find("div#mysource")
+		 // .html("<h2>" + mySource + "</h2>")
+		 // .css("visibility", "visible"); // display source
+
+		 $(document)
+		 .find("div#mydate")
+		 .html("<h2>" + myDate + "</h2>")
+		 .css("visibility", "visible"); // display date
+
+		 // $(document)
+		 // .find("img#myPicId")
+		 // .css("border", "2px solid white")
+		 // .css("visibility", "visible"); // effect pic id
+
+		 // $(document)
+		 // .find("div#mainlogo")
+		 // .css("background", 'url(' + myLogo + ")")
+		 // .css("background-repeat", "no-repeat")
+		 // .css("background-position", "center")
+		 // .css('float', 'left')
+		 // .css("line-height", "2")
+		 // .css('padding', 'none')
+		 // .css('width', '100px')
+		 // .css('height', '100px')
+		 // .css("visibility", "visible"); // display logo
+
+		 // $(document)
+		 // .find("div#mydate h2")
+		 // .css('float', 'left')
+		 // .css('padding-left', '110%');
+
+		// .css("background-color", myColor) 
+
+		// $(this).closest('div.content').siblings().children().children().css("visibility", "visible")
+
+		// $('div.picture')
+		// .append("<a href='" + myPicUrl + "'><img src='" + myPic + "' /></a>") // display pic
+		// .addClass("on");
+
+		// $(this).find("td")
+				// .css("background-image", "url(images/" + imageDict[myClass])
+					// .css("visibility", "visible");
+	});
+
+
+	 $('tbody tr').mouseleave(function () {
+
+		$('header')
+				.find("#date")
+				.html(" ") 
+				.removeClass("on");
+
+		$(this).find("td").css("visibility", "hidden");
+
+		$(document)
+		 .find("div#mydate").html("<h2></h2>")
+		 .css("visibility", "hidden"); // hide date
+
+		$(document)
+		 .find("div#mydate")
+		 .css("visibility", "hidden"); // hide logo
+
+		// $(this).closest('div.content').siblings().children().children().css("visibility", "hidden");
+		});
+
+
+	 $('button#all_by_date').click(function() {
+	 	$('div#musical').fadeIn(500);
+	 	$('div#musical').siblings('div').fadeOut(500);
+	 	$(this).removeClass('desaturate');
+	 	$(this).siblings().addClass('desaturate');
+	 	$('button.sources').removeClass('desaturate');
+	 	return false;
+
+	 	// $('.all_by_date').parent('div').next().children('div').show();
+	 });
+
+	  $('button#press').click(function() {
+	 	// $('button_options').toggle();
+	 	$('div#press_stuff').fadeIn(500);
+	 	$('div#press_stuff').siblings().fadeOut(500);
+    	$(this).removeClass('desaturate');
+    	$(this).siblings().addClass('desaturate');
+    	$('button.sources').removeClass('desaturate');
+    	return false;
+    	 });
+
+    	$('button#cloud').click(function() {
+
+    	$('div#wordcloud').fadeIn(500);
+	 	$('div#wordcloud').siblings('div').fadeOut(500);
+    	$(this).removeClass('desaturate');
+    	$(this).siblings().addClass('desaturate');
+    	$('button.sources').addClass('desaturate');
+    	return false;
+
+
+		// var type = $(this).attr("id");
+		// var name = TypeDict[type];
+
+		// for (var i=0;i<name.length;i++) {
+		// 	var item = name[i];
+		// 	$(document).find('th.' + item).fadeToggle(500);
+		// 	}
+
+	 });
+
+
+	$('button.sources').click(function() {
+    	$('button_options').toggle();
+    	$(this).toggleClass('desaturate');
+    
+		var name = $(this).attr("id");
+		var n = name.split(" ")[0];
+		
+		$(document).find('th.' + name).fadeToggle(500);
+		$(document).find('div.' + name).fadeToggle(500);
+
+		// $('#' + music).css({
+		// 	clear: "both",
+		// 	overflow: "auto"
+		// });
+
+		return false;
+
+		// var music = $('.container').isotope();
+
+	// when we click on a link inside the nav
+	//  filter the isotope by that button
+
+	// $('nav button').on('click', function () {
+	// 	music.isotope({
+	// 		filter: "div." + $(this).attr("class")
+	// 	});	
+
+	// });
+		
+	});
+
+});

@@ -1,0 +1,140 @@
+<article>
+<section class="container">
+	<div class="all_by_date" id="music">
+		<div class = 'sixteen columns offset-by-one'>
+		
+		<br class="clear" />
+
+		<div class="row">
+			
+			
+			<div class = 'content'>
+					<table>
+						<tbody>
+						<% @all_by_date.each do |story| %>
+						
+							<tr>
+								<!-- source -->
+								<td>
+									<%= story.source %>
+								</td>
+								<!-- story -->
+								<th>
+									<span class="intext">
+										<% t=story.modified %>
+										<%=  t.strftime("%m.%d.%Y").strip %> 
+									</span>
+
+									<!-- <div id="all_by_date"> -->
+									<%= link_to story.title, story.url %>
+								</th>
+							</tr>
+							<% end %>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="all_by_a_to_z" id="music">
+		<div class = 'sixteen columns offset-by-one'>
+		
+		
+		<br class="clear" />
+
+		<div class="row">
+			
+			
+			<div class = 'content'>
+					<table>
+						<tbody>
+						<% @all_by_a_to_z.each do |story| %>
+						
+							<tr>
+								<td>
+									<%= story.source %>
+								</td>
+							
+								<th>
+									<span class="intext">
+										<% t=story.modified %>
+										<%=  t.strftime("%m.%d.%Y").strip %> 
+									</span>
+
+									<!-- <div id="all_by_date"> -->
+									<%= link_to story.title, story.url %>
+								</th>
+							</tr>
+							<% end %>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+
+	
+	<div class="sixteen columns offset-by-one">
+			<!-- <div class="top">
+				<div id = 'mydate' class="alpha"></div>
+				<div id = 'mysource' class="omega"></div>
+			</div> -->
+		<% @sources.each do |s| %>
+
+			<div class=" <%= s[0].source %> " id = "music">
+				<table>
+					<thead>
+						<tr>
+							<th>
+								<%= s[0].area.upcase %>
+								<span class='square'></span>
+								<%= s[0].source.upcase %>
+
+								<span id='date'></span>
+							</th>
+							<td>
+								<!-- SOURCE -->
+							</td>
+						</tr>
+					</thead>
+					<tbody>
+						<% s.each do |story| %>
+							<% @shorttitle = story.title %>
+							<tr>
+								<th>
+									<span class="intext">
+										<% t=story.modified %>
+										<%=  t.strftime("%m.%d.%Y").strip %> 
+									</span>
+									
+									<%= link_to @shorttitle, story.url %>
+									<span id='id'></span>
+									<!-- <%= story.id %>  -->
+								</th>
+
+							
+							</tr>
+						<% end %>
+					</tbody>
+				</table>
+			</div>
+		<% end %>
+	</div>
+
+
+</section>
+
+
+<!-- 	<div class="sixteen columns offset-by-two" id="wordcloud" style="float: right; width: 1000px; height: 600px; left: 20%; top: 0; display: inline;">
+	</div> -->
+</section>
+
+
+
+
+
+

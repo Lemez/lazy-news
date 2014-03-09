@@ -1,0 +1,1235 @@
+
+<style type="text/css">
+/* --- reset some elements --- */
+
+#dw ul,ol { list-style:none }
+
+#dw ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,p,blockquote,fieldset,input { margin:0; padding:0 }
+
+/* --- Basic Stylesheet for DokuWiki content --- */
+
+#dw h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+#dw h1 a {
+  color: black;
+}
+
+/* ---------- table of contents ------------------- */
+
+#dw div.toc {
+  margin-left: 2em;
+  margin-top: 1.2em;
+  margin-bottom: 0;
+  float:right;
+  width: 200px;
+  font-size: 80%;
+  padding-top:5px;
+}
+
+#dw div.tocheader {
+  padding: 3px;
+  border: 1px solid #8cacbb;
+  background-color: #dee7ec;
+  text-align: left;
+  font-weight:bold;
+  margin-bottom: 2px;
+}
+
+#dw div.tocheader img {
+  width:0.8em;
+  height:0.8em;
+  margin-top:0.3em;
+  margin-right:3px;
+  float:right;
+  cursor: pointer;
+}
+
+#dw #toc__inside {
+  border: 1px solid #8cacbb;
+  background-color: #fff;
+  text-align: left;
+  padding-top: 0.5em;
+  padding-bottom: 0.7em;
+}
+
+#dw ul.toc {
+  list-style-type: none;
+  list-style-image: none;
+  line-height: 1.2em;
+  margin: 0;
+  padding: 0;
+  padding-left: 1em;
+}
+
+#dw ul.toc li {
+  background: transparent url(../lib/tpl/fsinfo/images/tocdot2.gif) 0 0.6em no-repeat;
+  padding-left:0.4em;
+}
+
+#dw ul.toc li.clear {
+  background-image: none;
+  padding-left:0.4em;
+}
+
+#dw a.toc {
+  color: #436976;
+  text-decoration:none;
+}
+
+#dw a.toc:hover {
+  color: #000;
+  text-decoration:underline;
+}
+
+/* --------------------- footnotes -------------------------------- */
+
+#dw div.footnotes{
+  clear:both;
+  border-top: 1px solid #8cacbb;
+  padding-left: 1em;
+  margin-top: 1em;
+}
+
+#dw div.fn{
+  font-size:90%;
+}
+
+#dw a.fn_top{
+  vertical-align:super;
+  font-size:80%;
+}
+
+#dw a.fn_bot{
+  vertical-align:super;
+  font-size:80%;
+  font-weight:bold;
+}
+
+/* insitu-footnotes */
+#dw div.insitu-footnote {
+  font-size: 80%;
+  line-height: 1.2em;
+  border: 1px solid #8cacbb;
+  background: #eef3f8;
+  text-align: left;
+  padding: 4px;
+  max-width: 40%;    /* IE's width is handled in javascript */
+}
+
+/* overcome IE issue with one line code or file boxes which require h. scrolling */
+#dw * html .insitu-footnote pre.code, * html .insitu-footnote pre.file {
+  padding-bottom: 18px;
+}
+
+/* --------------------- Tables -------------------------------- */
+
+#dw table.inline td.okay {
+  background-color: #afa;
+  text-align: center;
+}
+
+#dw table.inline td.notokay {
+  background-color: #fcc;
+  text-align: center;
+}
+
+#dw table.inline {
+  background-color: #fff;
+  border-spacing: 0px;
+  border-collapse: collapse;
+}
+
+/* ------------- Page elements ----------------- */
+
+#dw span.user{
+/*  color: #ccc; */
+  color: #666;
+  font-size: 90%;
+}
+
+#dw li.minor {
+  color: #666;
+  font-style: italic;
+}
+
+/* embedded images */
+#dw img.media {
+  margin: 3px;
+}
+
+#dw img.medialeft {
+  border: 0;
+  float: left;
+  margin: 0 1.5em 0 0;
+}
+
+#dw img.mediaright {
+  border: 0;
+  float: right;
+  margin: 0 0 0 1.5em;
+}
+
+#dw img.mediacenter {
+  border: 0;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* smileys */
+#dw img.middle {
+  vertical-align: middle;
+}
+
+#dw acronym {
+  cursor: help;
+  border-bottom: 1px dotted #000;
+}
+
+/* general headline setup */
+#dw h1, #dw h2, #dw h3, #dw h4, #dw h5 {
+    color: Black;
+    background-color: transparent;
+    font-family: "Lucida Grande", Verdana, Lucida, Helvetica, Arial, sans-serif;
+    font-size: 100%;
+    font-weight: normal;
+    margin-left:    0;
+    margin-right:   0;
+    margin-top:     0;
+    margin-bottom:  1em;
+    padding-left:   0;
+    padding-right:  0;
+    padding-top:    0.5em;
+    padding-bottom: 0;
+    border-bottom: 1px solid #8cacbb;
+}
+
+/* special headlines */
+/*
+#dw h1 {font-size: 160%; margin-left: 0px; font-weight: bold;}
+#dw h2 {font-size: 150%; margin-left: 20px; font-weight: bold;}
+#dw h3 {font-size: 130%; margin-left: 40px; border-bottom: none; font-weight: bolder}
+#dw h4 {font-size: 115%; margin-left: 60px; border-bottom: none; font-weight: bolder}
+#dw h5 {font-size: 100%; margin-left: 80px; border-bottom: none; font-weight: bold;}
+*/
+
+#dw h1 {font-size: 160%; font-weight: bold;}
+#dw h2 {font-size: 140%; font-weight: bold; }
+#dw h3 {font-size: 130%; border-bottom: none; font-weight: bolder}
+#dw h4 {font-size: 115%; border-bottom: none; font-weight: bolder}
+#dw h5 {font-size: 100%; border-bottom: none; font-weight: bold;}
+
+/* indent different sections */
+/*
+#dw div.level1 {margin-left: 3px;}
+#dw div.level2 {margin-left: 23px;}
+#dw div.level3 {margin-left: 43px;}
+#dw div.level4 {margin-left: 63px;}
+#dw div.level5 {margin-left: 83px;}
+*/
+
+/* unordered lists */
+#dw ul {
+  line-height: 1.5em;
+  list-style-type: square;
+  margin: 0 0 0.5em 2em;
+  padding: 0;
+  color: #638c9c;
+  list-style-image: none;
+}
+
+/* ordered lists */
+#dw ol {
+  line-height: 1.5em;
+  margin: 0 0 0.5em 2em;
+  padding: 0;
+  color: #638c9c;
+  font-weight: bold;
+  list-style-image: none;
+}
+
+/* the list items overriding the ul/ol definition */
+#dw .li {
+  color: #000;
+  font-weight: normal;
+}
+
+#dw ol {list-style-type: decimal}
+#dw ol ol {list-style-type: upper-roman}
+#dw ol ol ol {list-style-type: lower-alpha}
+#dw ol ol ol ol {list-style-type: lower-greek}
+
+#dw li.open {
+  list-style-image: url(../lib/tpl/fsinfo/images/open.gif);
+    /*list-style-type: circle;*/
+}
+
+#dw li.closed {
+  list-style-image: url(../lib/tpl/fsinfo/images/closed.gif);
+    /*list-style-type: disc;*/
+}
+
+#dw blockquote {
+  border-left: 2px solid #8cacbb;
+  padding-left: 3px;
+  margin-left: 0;
+}
+
+/* code blocks by indention */
+#dw pre.pre {
+  font-size: 100%;
+  padding: 0.5em;
+  border: 1px dashed #8cacbb;
+  color: Black;
+  background-color: #f7f9fa;
+  overflow: auto;
+}
+
+/* code blocks by code tag */
+#dw pre.code {
+  font-size: 100%;
+  padding: 0.5em;
+  border: 1px dashed #8cacbb;
+  color: Black;
+  background-color: #f7f9fa;
+  overflow: auto;
+}
+
+/* inline code words */
+#dw code {
+  font-size: 80%;
+}
+
+/* code blocks by file tag */
+#dw pre.file {
+  font-size: 100%;
+  padding: 0.5em;
+  border: 1px dashed #8cacbb;
+  color: Black;
+  background-color: #dee7ec;
+  overflow: auto;
+}
+
+/* inline tables */
+
+#dw table.inline th {
+  padding: 3px;
+  border: 1px solid #8cacbb;
+  background-color: #dee7ec;
+  text-align: left;
+}
+
+#dw table.inline td {
+  padding: 3px;
+  border: 1px solid #8cacbb;
+}
+</style>
+<link rel='stylesheet' id='eme_stylesheet-css'  href='../wp-content/plugins/events-made-easy/events_manager-ver=3.6.css' type='text/css' media='all' />
+<link rel='stylesheet' id='A2A_SHARE_SAVE-css'  href='../wp-content/plugins/add-to-any/addtoany.min-ver=1.4.css' type='text/css' media='all' />
+<script type='text/javascript' src='../wp-includes/js/jquery/jquery.js?ver=1.10.2'></script>
+<script type='text/javascript' src='../wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<script type='text/javascript' src='../wp-content/plugins/google-analyticator/external-tracking.min.js?ver=6.4.5'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../xmlrpc-rsd.php.html" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 3.6" />
+
+<script type="text/javascript"><!--
+var a2a_config=a2a_config||{},wpa2a={done:false,html_done:false,script_ready:false,script_load:function(){var a=document.createElement('script'),s=document.getElementsByTagName('script')[0];a.type='text/javascript';a.async=true;a.src='http://static.addtoany.com/menu/page.js';s.parentNode.insertBefore(a,s);wpa2a.script_load=function(){};},script_onready:function(){if(a2a.type=='page'){wpa2a.script_ready=true;if(wpa2a.html_done)wpa2a.init();}},init:function(){for(var i=0,el,target,targets=wpa2a.targets,length=targets.length;i<length;i++){el=document.getElementById('wpa2a_'+(i+1));target=targets[i];a2a_config.linkname=target.title;a2a_config.linkurl=target.url;if(el)a2a.init('page',{target:el});wpa2a.done=true;}}};a2a_config.tracking_callback=['ready',wpa2a.script_onready];
+//--></script>
+<meta name="_awb_version" content="2.0.3" /><link rel="stylesheet" href="../wp-content/themes/arras/css/styles/default.css" type="text/css" media="screen,projection" /><link rel="stylesheet" href="../wp-content/themes/arras/css/layouts/2c-r-fixed.css" type="text/css" />
+<!-- Generated by Arras WP Theme -->
+<style type="text/css">
+	.posts-default li  { width: 205px; height: 225px; }
+	.posts-default img, .posts-default .entry-thumbnails-link { width: 195px; height: 110px; }
+	.posts-default .entry-meta { width: 195px; }
+	.posts-default .entry-thumbnails { width: 205px; height: 120px; }
+			.posts-quick .entry-thumbnails img { width: 115px; height: 115px; }
+		.posts-quick .entry-meta { width: 115px; }
+			.featured { height: 260px; }
+	.featured-article { width: 640px; height: 250px; }
+	.featured-article img { width: 640px; height: 250px; }
+	#controls { width: 610px; top: 110px; }
+	#controls .next { left: 610px; }
+	.featured-entry { height: 84px; top: -84px; }
+	.featured-slideshow-inner { height: 250px }
+		.featured-stories-summary  { margin-left: 51px; }
+	.single .post .entry-photo img, .single-post .entry-photo img  { width: 620px; height: 250px; }
+		.footer-sidebar  { width: 920px; }
+	</style>
+	<script type="text/javascript">
+	jQuery(document).ready(function($) {
+
+$('.multi-sidebar').tabs();
+
+$('.sf-menu').superfish({autoArrows: true, speed: 'fast', dropShadows: 'true'});
+
+$('#commentform').validate();
+
+
+});	</script>
+	<!--[if IE]>
+<style type="text/css">
+.addtoany_list a img{filter:alpha(opacity=70)}
+.addtoany_list a:hover img,.addtoany_list a.addtoany_share_save img{filter:alpha(opacity=100)}
+</style>
+<![endif]-->
+<link rel="stylesheet" href="../wp-content/themes/arras/user.css" type="text/css" media="screen,projection" /><!-- Google Analytics Tracking by Google Analyticator 6.4.5: http://www.videousermanuals.com/google-analyticator/ -->
+<script type="text/javascript">
+	var analyticsFileTypes = [''];
+	var analyticsEventTracking = 'enabled';
+</script>
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-169675-4']);
+        _gaq.push(['_addDevId', 'i9k95']); // Google Analyticator App ID with Google 
+        
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>World Music Central.org</title>
+
+
+<link rel="alternate" type="application/rss+xml" href="../feed/index.html" title="World Music Central.org latest posts" />
+
+<link rel="alternate" type="application/rss+xml" href="../comments/feed/index.html" title="World Music Central.org latest comments" />
+
+<link rel="pingback" href="../xmlrpc.php.html" />
+
+<link rel="shortcut icon" href="../favicon.ico" />
+
+
+<style type="text/css">
+/* --- reset some elements --- */
+
+#dw ul,ol { list-style:none }
+
+#dw ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,p,blockquote,fieldset,input { margin:0; padding:0 }
+
+/* --- Basic Stylesheet for DokuWiki content --- */
+
+#dw h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+#dw h1 a {
+  color: black;
+}
+
+/* ---------- table of contents ------------------- */
+
+#dw div.toc {
+  margin-left: 2em;
+  margin-top: 1.2em;
+  margin-bottom: 0;
+  float:right;
+  width: 200px;
+  font-size: 80%;
+  padding-top:5px;
+}
+
+#dw div.tocheader {
+  padding: 3px;
+  border: 1px solid #8cacbb;
+  background-color: #dee7ec;
+  text-align: left;
+  font-weight:bold;
+  margin-bottom: 2px;
+}
+
+#dw div.tocheader img {
+  width:0.8em;
+  height:0.8em;
+  margin-top:0.3em;
+  margin-right:3px;
+  float:right;
+  cursor: pointer;
+}
+
+#dw #toc__inside {
+  border: 1px solid #8cacbb;
+  background-color: #fff;
+  text-align: left;
+  padding-top: 0.5em;
+  padding-bottom: 0.7em;
+}
+
+#dw ul.toc {
+  list-style-type: none;
+  list-style-image: none;
+  line-height: 1.2em;
+  margin: 0;
+  padding: 0;
+  padding-left: 1em;
+}
+
+#dw ul.toc li {
+  background: transparent url(../lib/tpl/fsinfo/images/tocdot2.gif) 0 0.6em no-repeat;
+  padding-left:0.4em;
+}
+
+#dw ul.toc li.clear {
+  background-image: none;
+  padding-left:0.4em;
+}
+
+#dw a.toc {
+  color: #436976;
+  text-decoration:none;
+}
+
+#dw a.toc:hover {
+  color: #000;
+  text-decoration:underline;
+}
+
+/* --------------------- footnotes -------------------------------- */
+
+#dw div.footnotes{
+  clear:both;
+  border-top: 1px solid #8cacbb;
+  padding-left: 1em;
+  margin-top: 1em;
+}
+
+#dw div.fn{
+  font-size:90%;
+}
+
+#dw a.fn_top{
+  vertical-align:super;
+  font-size:80%;
+}
+
+#dw a.fn_bot{
+  vertical-align:super;
+  font-size:80%;
+  font-weight:bold;
+}
+
+/* insitu-footnotes */
+#dw div.insitu-footnote {
+  font-size: 80%;
+  line-height: 1.2em;
+  border: 1px solid #8cacbb;
+  background: #eef3f8;
+  text-align: left;
+  padding: 4px;
+  max-width: 40%;    /* IE's width is handled in javascript */
+}
+
+/* overcome IE issue with one line code or file boxes which require h. scrolling */
+#dw * html .insitu-footnote pre.code, * html .insitu-footnote pre.file {
+  padding-bottom: 18px;
+}
+
+/* --------------------- Tables -------------------------------- */
+
+#dw table.inline td.okay {
+  background-color: #afa;
+  text-align: center;
+}
+
+#dw table.inline td.notokay {
+  background-color: #fcc;
+  text-align: center;
+}
+
+#dw table.inline {
+  background-color: #fff;
+  border-spacing: 0px;
+  border-collapse: collapse;
+}
+
+/* ------------- Page elements ----------------- */
+
+#dw span.user{
+/*  color: #ccc; */
+  color: #666;
+  font-size: 90%;
+}
+
+#dw li.minor {
+  color: #666;
+  font-style: italic;
+}
+
+/* embedded images */
+#dw img.media {
+  margin: 3px;
+}
+
+#dw img.medialeft {
+  border: 0;
+  float: left;
+  margin: 0 1.5em 0 0;
+}
+
+#dw img.mediaright {
+  border: 0;
+  float: right;
+  margin: 0 0 0 1.5em;
+}
+
+#dw img.mediacenter {
+  border: 0;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* smileys */
+#dw img.middle {
+  vertical-align: middle;
+}
+
+#dw acronym {
+  cursor: help;
+  border-bottom: 1px dotted #000;
+}
+
+/* general headline setup */
+#dw h1, #dw h2, #dw h3, #dw h4, #dw h5 {
+    color: Black;
+    background-color: transparent;
+    font-family: "Lucida Grande", Verdana, Lucida, Helvetica, Arial, sans-serif;
+    font-size: 100%;
+    font-weight: normal;
+    margin-left:    0;
+    margin-right:   0;
+    margin-top:     0;
+    margin-bottom:  1em;
+    padding-left:   0;
+    padding-right:  0;
+    padding-top:    0.5em;
+    padding-bottom: 0;
+    border-bottom: 1px solid #8cacbb;
+}
+
+/* special headlines */
+/*
+#dw h1 {font-size: 160%; margin-left: 0px; font-weight: bold;}
+#dw h2 {font-size: 150%; margin-left: 20px; font-weight: bold;}
+#dw h3 {font-size: 130%; margin-left: 40px; border-bottom: none; font-weight: bolder}
+#dw h4 {font-size: 115%; margin-left: 60px; border-bottom: none; font-weight: bolder}
+#dw h5 {font-size: 100%; margin-left: 80px; border-bottom: none; font-weight: bold;}
+*/
+
+#dw h1 {font-size: 160%; font-weight: bold;}
+#dw h2 {font-size: 140%; font-weight: bold; }
+#dw h3 {font-size: 130%; border-bottom: none; font-weight: bolder}
+#dw h4 {font-size: 115%; border-bottom: none; font-weight: bolder}
+#dw h5 {font-size: 100%; border-bottom: none; font-weight: bold;}
+
+/* indent different sections */
+/*
+#dw div.level1 {margin-left: 3px;}
+#dw div.level2 {margin-left: 23px;}
+#dw div.level3 {margin-left: 43px;}
+#dw div.level4 {margin-left: 63px;}
+#dw div.level5 {margin-left: 83px;}
+*/
+
+/* unordered lists */
+#dw ul {
+  line-height: 1.5em;
+  list-style-type: square;
+  margin: 0 0 0.5em 2em;
+  padding: 0;
+  color: #638c9c;
+  list-style-image: none;
+}
+
+/* ordered lists */
+#dw ol {
+  line-height: 1.5em;
+  margin: 0 0 0.5em 2em;
+  padding: 0;
+  color: #638c9c;
+  font-weight: bold;
+  list-style-image: none;
+}
+
+/* the list items overriding the ul/ol definition */
+#dw .li {
+  color: #000;
+  font-weight: normal;
+}
+
+#dw ol {list-style-type: decimal}
+#dw ol ol {list-style-type: upper-roman}
+#dw ol ol ol {list-style-type: lower-alpha}
+#dw ol ol ol ol {list-style-type: lower-greek}
+
+#dw li.open {
+  list-style-image: url(../lib/tpl/fsinfo/images/open.gif);
+    /*list-style-type: circle;*/
+}
+
+#dw li.closed {
+  list-style-image: url(../lib/tpl/fsinfo/images/closed.gif);
+    /*list-style-type: disc;*/
+}
+
+#dw blockquote {
+  border-left: 2px solid #8cacbb;
+  padding-left: 3px;
+  margin-left: 0;
+}
+
+/* code blocks by indention */
+#dw pre.pre {
+  font-size: 100%;
+  padding: 0.5em;
+  border: 1px dashed #8cacbb;
+  color: Black;
+  background-color: #f7f9fa;
+  overflow: auto;
+}
+
+/* code blocks by code tag */
+#dw pre.code {
+  font-size: 100%;
+  padding: 0.5em;
+  border: 1px dashed #8cacbb;
+  color: Black;
+  background-color: #f7f9fa;
+  overflow: auto;
+}
+
+/* inline code words */
+#dw code {
+  font-size: 80%;
+}
+
+/* code blocks by file tag */
+#dw pre.file {
+  font-size: 100%;
+  padding: 0.5em;
+  border: 1px dashed #8cacbb;
+  color: Black;
+  background-color: #dee7ec;
+  overflow: auto;
+}
+
+/* inline tables */
+
+#dw table.inline th {
+  padding: 3px;
+  border: 1px solid #8cacbb;
+  background-color: #dee7ec;
+  text-align: left;
+}
+
+#dw table.inline td {
+  padding: 3px;
+  border: 1px solid #8cacbb;
+}
+</style>
+<script type='text/javascript' src='../wp-content/themes/arras/js/superfish/hoverIntent.js'></script>
+<script type='text/javascript' src='../wp-content/themes/arras/js/superfish/superfish.js'></script>
+<script type='text/javascript' src='../wp-includes/js/comment-reply.min.js?ver=3.6'></script>
+<script type='text/javascript' src='../wp-content/themes/arras/js/jquery.validate.min.js'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../xmlrpc-rsd.php.html" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 3.6" />
+
+<script type="text/javascript"><!--
+var a2a_config=a2a_config||{},wpa2a={done:false,html_done:false,script_ready:false,script_load:function(){var a=document.createElement('script'),s=document.getElementsByTagName('script')[0];a.type='text/javascript';a.async=true;a.src='/page.js';s.parentNode.insertBefore(a,s);wpa2a.script_load=function(){};},script_onready:function(){if(a2a.type=='page'){wpa2a.script_ready=true;if(wpa2a.html_done)wpa2a.init();}},init:function(){for(var i=0,el,target,targets=wpa2a.targets,length=targets.length;i<length;i++){el=document.getElementById('wpa2a_'+(i+1));target=targets[i];a2a_config.linkname=target.title;a2a_config.linkurl=target.url;if(el)a2a.init('page',{target:el});wpa2a.done=true;}}};a2a_config.tracking_callback=['ready',wpa2a.script_onready];
+//--></script>
+<meta name="_awb_version" content="2.0.3" /><link rel="stylesheet" href="../wp-content/themes/arras/css/styles/default.css" type="text/css" media="screen,projection" /><link rel="stylesheet" href="../wp-content/themes/arras/css/layouts/2c-r-fixed.css" type="text/css" />
+<!-- Generated by Arras WP Theme -->
+<style type="text/css">
+	.posts-default li  { width: 205px; height: 225px; }
+	.posts-default img, .posts-default .entry-thumbnails-link { width: 195px; height: 110px; }
+	.posts-default .entry-meta { width: 195px; }
+	.posts-default .entry-thumbnails { width: 205px; height: 120px; }
+			.posts-quick .entry-thumbnails img { width: 115px; height: 115px; }
+		.posts-quick .entry-meta { width: 115px; }
+			.featured { height: 260px; }
+	.featured-article { width: 640px; height: 250px; }
+	.featured-article img { width: 640px; height: 250px; }
+	#controls { width: 610px; top: 110px; }
+	#controls .next { left: 610px; }
+	.featured-entry { height: 84px; top: -84px; }
+	.featured-slideshow-inner { height: 250px }
+		.featured-stories-summary  { margin-left: 51px; }
+	.single .post .entry-photo img, .single-post .entry-photo img  { width: 620px; height: 250px; }
+		.footer-sidebar  { width: 920px; }
+	</style>
+	<script type="text/javascript">
+	jQuery(document).ready(function($) {
+
+$('.multi-sidebar').tabs();
+
+$('.sf-menu').superfish({autoArrows: true, speed: 'fast', dropShadows: 'true'});
+
+$('#commentform').validate();
+
+
+});	</script>
+	<!--[if IE]>
+<style type="text/css">
+.addtoany_list a img{filter:alpha(opacity=70)}
+.addtoany_list a:hover img,.addtoany_list a.addtoany_share_save img{filter:alpha(opacity=100)}
+</style>
+<![endif]-->
+<link rel="stylesheet" href="../wp-content/themes/arras/user.css" type="text/css" media="screen,projection" /><!-- Google Analytics Tracking by Google Analyticator 6.4.5: http://www.videousermanuals.com/google-analyticator/ -->
+<script type="text/javascript">
+	var analyticsFileTypes = [''];
+	var analyticsEventTracking = 'enabled';
+</script>
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-169675-4']);
+        _gaq.push(['_addDevId', 'i9k95']); // Google Analyticator App ID with Google 
+        
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+</head>
+
+<body class="page page-id-0 page-parent page-template-default layout-2c-r-fixed no-js style-default">
+<script type="text/javascript">
+//<![CDATA[
+(function(){
+var c = document.body.className;
+c = c.replace(/no-js/, 'js');
+document.body.className = c;
+})();
+//]]>
+</script>
+
+<div id="top-menu" class="clearfix">
+	</div><!-- #top-menu -->
+
+<div id="header"><div align="center"><script type="text/javascript"><!--
+google_ad_client = "pub-7027070946238159";
+/* 728x90, Top Banner */
+google_ad_slot = "9335358437";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+	<div id="branding" class="clearfix">
+	<div class="logo">
+				<span class="blog-name"><a href="../index.html">World Music Central.org</a></span>
+		<img style="float:left; padding: 0 5px 0 0;" src="../wp-content/themes/wmc-magazeen/images/bull.png"/><span class="blog-description">Your Connection to World Music</span>
+			</div>
+	<div id="searchbar"><form method="get" class="searchform clearfix" action="http://worldmusiccentral.org/">
+ <input type="text" value="Search..." name="s" class="s" onfocus="this.value=''" />
+ <input type="submit" class="searchsubmit" value="Search" title="Search World Music Central.org" />
+</form>
+</div>
+	</div><!-- #branding -->
+</div><!-- #header -->
+
+<div id="nav">
+	<div id="nav-content" class="clearfix">
+	<div class="menu-main-container"><ul id="menu-main" class="sf-menu menu clearfix"><li id="menu-item-6394" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-6394"><a href="../index.html">Home</a></li>
+<li id="menu-item-6401" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6401"><a href="../about/index.html">About</a></li>
+<li id="menu-item-6454" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6454"><a href="#">World Music Resources</a>
+<ul class="sub-menu">
+	<li id="menu-item-6455" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6455"><a href="artist_index.php.html">Artists Database</a></li>
+	<li id="menu-item-6462" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6462"><a href="http://musicwikicentral.com/world_music_festivals">Festivals</a></li>
+	<li id="menu-item-6467" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6467"><a href="http://musicwikicentral.com/travel_guides">Travel Guides</a></li>
+	<li id="menu-item-6469" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6469"><a href="http://musicwikicentral.com/world_music_genres">Musical Genres</a></li>
+	<li id="menu-item-6468" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6468"><a href="http://musicwikicentral.com/musical_instruments">Musical Instruments</a></li>
+	<li id="menu-item-6475" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6475"><a href="http://musicwikicentral.com/showcases">Showcases</a></li>
+	<li id="menu-item-6470" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6470"><a href="http://musicwikicentral.com/world_music_venues">Venues</a></li>
+	<li id="menu-item-6472" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6472"><a href="http://musicwikicentral.com/record_companies">Record Companies</a></li>
+	<li id="menu-item-6466" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6466"><a href="http://musicwikicentral.com/booking_agents">Booking Agents</a></li>
+	<li id="menu-item-6474" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6474"><a href="http://musicwikicentral.com/world_music_press">World Music Press</a></li>
+	<li id="menu-item-6477" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6477"><a href="http://musicwikicentral.com/ethnomusicology">Ethnomusicology</a></li>
+	<li id="menu-item-6473" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6473"><a href="http://musicwikicentral.com/music_organizations">Music Organizations</a></li>
+</ul>
+</li>
+<li id="menu-item-6390" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6390"><a href="#">Topics</a>
+<ul class="sub-menu">
+	<li id="menu-item-6369" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6369"><a href="../category/archive/index.html">archive</a></li>
+	<li id="menu-item-6370" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6370"><a href="../category/articles/index.html">Articles</a></li>
+	<li id="menu-item-6371" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6371"><a href="../category/awards/index.html">Awards</a></li>
+	<li id="menu-item-6372" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6372"><a href="../category/book-reviews/index.html">Book Reviews</a></li>
+	<li id="menu-item-6373" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6373"><a href="../category/cd-reviews/index.html">CD Reviews</a></li>
+	<li id="menu-item-6374" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6374"><a href="../category/concert-reviews/index.html">Concert reviews</a></li>
+	<li id="menu-item-6375" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6375"><a href="../category/conferences/index.html">Conferences</a></li>
+	<li id="menu-item-6376" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6376"><a href="../category/editorials/index.html">Editorials</a></li>
+	<li id="menu-item-6377" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6377"><a href="../category/events/index.html">Events</a></li>
+	<li id="menu-item-6378" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6378"><a href="../category/film-reviews/index.html">Film Reviews</a></li>
+	<li id="menu-item-6379" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6379"><a href="../category/general-news/index.html">General News</a></li>
+	<li id="menu-item-6380" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6380"><a href="../category/interviews/index.html">Interviews</a></li>
+	<li id="menu-item-6381" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6381"><a href="../category/loop-collections/index.html">Loop Collections</a></li>
+	<li id="menu-item-6382" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6382"><a href="../category/new-books/index.html">New Books</a></li>
+	<li id="menu-item-6383" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6383"><a href="../category/new-cds/index.html">New CDs</a></li>
+	<li id="menu-item-6384" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6384"><a href="../category/new-films/index.html">New Films</a></li>
+	<li id="menu-item-6385" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6385"><a href="../category/new-releases/index.html">New Releases</a></li>
+	<li id="menu-item-6386" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6386"><a href="../category/obituaries/index.html">Obituaries</a></li>
+	<li id="menu-item-6387" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6387"><a href="../category/tour-announcements/index.html">Tour Announcements</a></li>
+	<li id="menu-item-6388" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6388"><a href="../category/tradeshows/index.html">Tradeshows</a></li>
+	<li id="menu-item-6389" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6389"><a href="../category/uncategorized/index.html">Uncategorized</a></li>
+</ul>
+</li>
+<li id="menu-item-6392" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6392"><a href="../events/index.html">Calendar</a></li>
+<li id="menu-item-6400" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6400"><a href="../store/index.html">Store</a></li>
+<li id="menu-item-6724" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6724"><a href="../contact-us/index.html">Contact Us</a></li>
+</ul></div>		<ul class="quick-nav clearfix">
+					<li><a id="rss" title="World Music Central.org RSS Feed" href="../feed/index.html">RSS Feed</a></li>
+				
+						
+							<li><a id="facebook" title="World Music Central.org Facebook" href="http://www.facebook.com/pages/World-Music-Central/149036898455901" target="_blank">Facebook</a></li>
+				
+			</ul>
+	</div><!-- #nav-content -->
+</div><!-- #nav -->
+
+<div id="wrapper">
+	
+	  
+	<div id="main" class="clearfix">
+    <div id="container" class="clearfix">
+  <head>
+    <title>Fela Kuti - Artist Page</title>
+  </head>
+
+  <body> 
+  
+  <div id="artistpage">
+  
+  <div style="float:right;">
+  
+  <script type="text/javascript"><!--
+google_ad_client = "pub-7027070946238159";
+/* 160x600, created 12/6/08 */
+google_ad_slot = "6830638066";
+google_ad_width = 160;
+google_ad_height = 600;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+
+</div>
+  
+  
+  
+  	<table>
+
+  
+<tr><td align="center" colspan="2" width="100%">
+<font size=+1><b>Fela Kuti</b></font> 
+<hr></td></tr>
+
+<tr><td align="center" colspan="2" width="100%">
+<a href="#Bibliography">Bibliography</a>&nbsp;&nbsp;&middot;&nbsp;&nbsp;<a href="#Genres">Similar Music</a>
+<hr></td></tr>
+    <tr>
+      <td colspan="2" width="100%">
+		<a name="Biography"><b>Biography</b></a>:
+	  </td>
+    </tr>
+    <tr>
+      <td colspan="2" width="100%">&nbsp;</td>
+    </tr>
+
+    <tr>
+      <td width="3%"></td>
+
+      <td width="97%">
+	  
+	<p align=center><img border="0" align="center"  src="../staticpages/images/Fela_Kuti-2BernardMatussier.jpg"></p><p align="center" class="align=">(1938-1997)</p>
+
+        <p align="center">Fela Kuti</p>
+
+        <p align="center">The Father of Afro-Beat</p>
+<p align="center">Photo by Bernard Matussiere</p>
+
+        <p>Fela Anikulapo-Kuti, better known artistically as Fela Kuti, was born in Abeokuta, Nigeria, in 1938.&nbsp;His family belonged to the Egba branch of the Yoruba tribe.&nbsp;His father, like his grandfather, was a minister of the Protestant church, and director of the local grammar school.&nbsp;His mother was a teacher, but later became a politician of considerable influence.&nbsp;</p>
+
+        <p>As a teenager, Fela would run for miles to attend traditional celebrations in the area, already feeling that the authentic African culture of his ancestors ought to be preserved. &nbsp;His parents sent him to London in 1958, but rather than study medicine like his two brothers and his sister, Fela chose to register in the Trinity School of Music, where he was to spend the next five years.&nbsp;While still a student, he married a Nigerian girl called Remi and had three children.&nbsp;In his spare time, Fela played in a highlife band called Koola Lobitos with other Nigerian musicians living in London.&nbsp;Among these was J.K. Bremah, who had previously influenced Fela by introducing him to African music circles in Lagos at a time when Western music predominated there.&nbsp;</p>
+
+        <p>Fela returned to the Nigerian capital in 1963, three years after independence.&nbsp;Soon after, he was playing highlife and jazz, fronting the band with those of the musicians who had come back from England.&nbsp;Over the next few years, they performed regularly in Lagos and then in 1969, in the midst of the Biafra war, Fela decided to take Koola Lobitos to the United States.&nbsp;</p>
+
+        <p>In Los Angeles, he changed the name of the group to Fela Ransome-Kuti and Nigeria 70.&nbsp;At the club where they were playing, he met an African-American girl, Sandra Isodore, who was a close friend to the Black Panthers.&nbsp;She introduced Fela to the philosophy and writings of Malcolm X, Eldridge Cleaver and other Black activists and thinkers, through which he was to become aware of the link existing between Black peoples all over the world.&nbsp;Through this insight, Fela also gained a clearer understanding of his mother&rsquo;s fight for the rights of Africans under colonial rule in Nigeria, together with her support of the Pan Africanist doctrine expounded by Kwame Nkrumah, the Ghanaian Head of State, who had negotiated independence for his country with the British.&nbsp;</p>
+
+        <p>While in Los Angeles, Fela also found the inspiration he was seeking to create his own unique style of music, which he named Afro-Beat.&nbsp;Before leaving America, the band recorded some of these new songs.&nbsp;</p>
+
+        <p>Back home, Fela once again changed the name of the group, this time to Fela Ransome-Kuti &amp;Africa 70.&nbsp;The L.A. recordings were released as a series of singles.&nbsp;This new African music was a great success in Lagos, and Fela was to open a club in the Empire Hotel, called the Afro-Shrine.&nbsp;At that time, he was still playing the trumpet, having not yet changed to the saxophone and piano.&nbsp;He started singing mostly in Pidgin English rather than Yoruban, so as to be understood all over Nigeria and in neighboring countries.&nbsp;In his songs, he depicted everyday social situations with which a large part of the African population was able to identify.&nbsp;</p>
+
+        <p>Young people from all over Nigeria flocked to hear his songs, which developed themes relating to Blackism and Africanism, encouraging a return to traditional African religions.&nbsp;Later he was to become satirical and sarcastic toward those in power, condemning both military and civilian regimes for their crimes of mismanagement, incompetence, theft, corruption and marginalization of the underprivileged.&nbsp;</p>
+
+        <p>In 1974, pursuing his dream of an alternative society, he built a fence around his house and declared it to be an independent state: The Kalakuta Republic.&nbsp;To the chagrin of the bourgeois section of Nigerian society, this act of defiance was soon to spread throughout the entire neighborhood as more and more people were inspired by Fela&rsquo;s stance.&nbsp;The authorities remained vigilant, fearing their potential power of his &lsquo;state within a state.&rsquo;&nbsp;</p>
+
+        <p>On countless occasions, Fela was to suffer the consequences of his scathing denunciations with arrests, imprisonment and beatings at the hands of authorities.&nbsp;With each incarceration and violent confrontation with the powers that be, Fela became more outspoken, changing his family name from &lsquo;Ransome&rsquo; to &lsquo;Anikulapo&rsquo; (&lsquo;he who carries death in his pouch&rsquo;).&nbsp;His notoriety spread and his records began to sell in the millions.&nbsp;The population of the Kalakuta Republic grew amidst mounting criticism, particularly of the young people, many of whom were still in their teens, who left their families to live there.&nbsp;</p>
+
+        <p>During the &lsquo;Festival for Black Arts and Culture&rsquo; (FESTAC) held in Lagos in 1977, Fela sang Zombie, a satire against the military, which was to become enormously popular throughout Africa, bringing down the fury of the Nigerian army upon him and his followers.&nbsp;As Fela relates in Unknown Soldier, a thousand soldiers attacked the &ldquo;Kalakuta Republic,&rdquo; burning down his house and beating all of its occupants.&nbsp;The song tells that, during the course of this attack, his mother was thrown from a first floor window and later died from her injuries. Homeless and without his Shrine, which had also been destroyed along with the entire neighborhood, Fela and his group moved to the Crossroads Hotel.&nbsp;</p>
+
+        <p>A year later, Fela went to Accra to arrange a tour.&nbsp;Upon his return, to mark the first anniversary of the destruction of the Kalakuta Republic, Fela married twenty seven women in a collective ceremony, many of whom were his dancers and singers, giving them all the name Anikulapo-Kuti.&nbsp;After the wedding, the whole group set off for Accra (Ghana) where concerts had been planned.&nbsp;In a packed Accra stadium, as Fela played Zombie, riots broke out.&nbsp;The entire group was arrested and held for two days before being put on a plane bound for Lagos, banned from returning to Ghana.&nbsp;</p>
+
+        <p>Upon his return to Lagos, still with nowhere to live, Fela and his entire entourage squatted at the offices of Decca, where they remained for almost two months.&nbsp;Soon after, Fela was invited with the seventy member-strong Africa 70 to play at the Berlin Festival.&nbsp;After the show, almost all of the musicians ran away.&nbsp;Despite this catalogue of set-backs, Fela returned to Lagos determined to continue.&nbsp;</p>
+
+        <p>The King of Afro-beat and his Queens went to live in Ikeja, in J. K. Bremah&rsquo;s housea new Kalakuta.&nbsp;There, Fela, more political than ever, went on to form his own part, &ldquo;Movement of the People&rdquo; (M.O.P.). He presented himself as a Presidential candidate in the 1979 elections that would return the country to civilian rule.&nbsp;His candidature was refused.&nbsp;Four years later, at the next elections, Fela once more stood for President, but was prevented from campaigning by the police, who again rampaged through his house, imprisoning and beating Fela and many of his followers.&nbsp;</p>
+
+        <p>Any further Presidential aspirations were crushed, however, when a coup brought Nigeria back to military rule.&nbsp;In 1984, with General Buhari in power, Fela served twenty months of a five year prison sentence on trumped-up currency charges.&nbsp;He was only released when, under General Babangida, the judge confessed to having sentenced him with such severity because of pressure from the previous regime.&nbsp;The judge was dismissed from office and Fela was given his liberty.&nbsp;</p>
+
+        <p>Over the next decade, with an entourage of up to eighty people, now called Egypt 80, Fela made several visits to Europe and the United States.&nbsp;These tours were to receive tremendous public and critical acclaim, and made an important contribution to the worldwide popular acceptance of African rhythms and culture.&nbsp;Considering himself to be the spiritual son of Kwame Nkrumah, the renowned Pan Africanist, Fela Anikulapo-Kuti was a virulent critic of colonialism and neo-colonialism.&nbsp;</p>
+
+        <p>Over the past twenty years, he became famous as a spokesman for the great mass of people, in Nigeria and elsewhere in Africa and the African diaspora, disenchanted with the period of post-independence.&nbsp;</p>
+
+        <p>Fela&rsquo;s sad death in August 1997 was mourned by the nation.&nbsp;Even those who did not agree with him were among the million people or more who attended his funeral.&nbsp;Even the many governmental letters of condolence sent to his family were eloquent testimonials to a great man.&nbsp;His death was attributed to an AIDS-related heart failure, though a more popular diagnosis was that, as a result of the countless beatings at the hands of the authorities, his system was sufficiently weakened to allow disease to enter.&nbsp;</p>
+
+        <p>Throughout his life, Fela was sustained by the unconditional love and respect offered to him by the millions of people whose lives he touched.&nbsp;In death, he retains the legendary status to which he was elevated by the throngs of people who came to pay their last respects at his laying in state in Tafa Balewa Square: &lsquo;Adami Eda&rsquo; &ndash; (Chief Priest).&nbsp;&ldquo;He will live forever!&rdquo; By Jacqueline Grandchamp-Thiam (Paris) &amp;-Rikki Stein (London) 1999. Courtesy of MCA Records.</p>
+<p>
+In 2009, American record label Knitting Factory Records acquired the rights to reissue the 45 albums that Universal Music controls. </p>
+<p>The Broadway play Fela! had its world premiere at Off-Broadway&rsquo;s 37 Arts in  September 2008, where it enjoyed a sold-out limited run. 
+It won the 2009 Lucille Lortel Award for Best Musical. Fela! was conceived by Bill T. Jones, Jim Lewis and  Stephen Hendel. Fela! 
+opened in Broadway November 2009. This musical was directed and choreographed by  Tony Award-winner Bill T. Jones (Spring Awakening), with a book by Jim Lewis  and Bill T. Jones. Sahr Ngaujah and Kevin Mambo played 
+the title character on alternate performances, while afrobeat band
+<a href="artist_page-id=1425.php.html">Antibalas</a> and other members of  the New York City Afrobeat community, under the direction of Aaron Johnson, performed Kuti&rsquo;s 
+music live onstage. 
+<p>Fela! explored Kuti's controversial life as artist,  political activist and revolutionary musician. Featuring many of Fela Kuti's  most captivating songs and Bill T. Jones&rsquo;s imaginative staging, Fela! 
+was a  provocative hybrid of concert, dance and musical theater.<p> Coinciding with the Broadway debut, Knitting Factory  Records released <a href="http://www.amazon.com/gp/product/B002OPZ2XY?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B002OPZ2XY" target="_blank"> The Best Of The Black President</a>, a collection of  Fela Kuti's  recordings.</p>
+<p>This was followed by <a href="http://www.amazon.com/gp/product/B00AJLHU12?ie=UTF8&camp=1789&creativeASIN=B00AJLHU12&linkCode=xm2&tag=musidelmund-20">The Best Of The Black President 2</a> (Knitting Factory Records KFR1029/2,  2013), 
+a two-CD collection that included iconic songs, including Everything Scatter, Expensive Shit, Underground System (Part 2), Trouble Sleep Yanga Wake Am, Monkey 
+Banana, Sorrow Tears and Blood (Original Extended Version), Black Man's Cry, Mr. Follow Follow (Mister Follow Follow), He Miss Road, Yellow Fever, Na Poi, and 
+Colonial Mentality.</p>
+
+<p>Fela's old home, Kalakuta, was transformed into the Kalakuta Museum, aided by a $250,000 grant from Lagos State Government who finally recognized his international cultural significance.
+</p>
+        <p class="align=">Fela Anikulapo-Kuti Obituary</p>
+
+        <p>"Fela was sweetperhaps not an adjective that would normally be used to describe this tornado of a man, but Fela was sweet to me.&nbsp;This sweetness that I perceived in him emanated from his love for humanity, particularly for those who had drawn life&rsquo;s short straw.&nbsp;</p>
+
+        <p>Hundreds of people depended upon Fela for a living.&nbsp;Many more than he needed to run his Lagos club, The Shrine, or to play in his band.&nbsp;&nbsp;I saw him as a social engineer, concerned with issues of injustice, corruption, the abuses of power.&nbsp;He was ready to lay his life on the line in defense of such causes, which he did on countless occasions.&nbsp;</p>
+
+        <p>For his trouble he was beaten with rifle butts, endlessly harassed, imprisoned, vilified by the authorities, despised by bourgeois society (whose sons and daughters were captivated by him).&nbsp;His house was once burned to the ground by a thousand soldiers after they had raped and beaten his followers, thrown his mother and brother from a window, both of whom suffered fractures (his mother was ultimately to die from her injuries).&nbsp;</p>
+
+        <p>Each time they were to beat him, though, he always bounced back with a vengeance, stronger than ever.&nbsp;It is my view that the only thing that kept him alive, and the ultimate source of his strength, was the love the people had for him.&nbsp;</p>
+
+        <p>And his music &ndash; the rumble of thunder and the crack of lightning &ndash; layer upon layer of sublimely interwoven rhythm and melody, tangled in a delicious knot of divine inspiration.&nbsp;Deliberate conspiracies of hot brass woven around the intricately hypnotic consistency of bass and guitar lines, all driven by the dual forces of lavish percussion and Fela&rsquo;s own passion for the precision of his musical vision.&nbsp;Heaven help any musician who might stray from his given task.&nbsp;Fury would descend upon him until, in mortal terror, he would struggle his way back into the groove.&nbsp;The icing on the cake of a Fela performance was his singers and dancers, fabulous glittering unreal creatures from another world who would exude waves of sensuality and downright sexiness that you could cut with a knife.&nbsp;</p>
+
+        <p>All in all, thirty-something people on stage, each playing their part in what Fela called &ldquo;the underground spiritual game.&rdquo;&nbsp;In the center of the audio-visual feast for the senses, Fela reigned supreme.&nbsp;He was everywhere at once, playing keyboards, soprano or alto sax, the occasional drum solo, a sinuous dance from one side of the stage to the other and then it was time to sing, the ever-present spliff held in his elegant fingers.&nbsp;No moon and toon and joon for this articulate firebrand.&nbsp;Only eloquent, biting poetic social observation, expressed with a breathtaking clarity and natural authority which placed him firmly in an unsurpassed realm in which he had no equal.&nbsp;</p>
+
+        <p>Perhaps Pavarotti can break a wine glass at sixty paces, maybe Bono can make girls wet their pants with a flick of his sweat laden hair, but for sheer master, panache, style and guts nobody could or can beat this guy.&nbsp;To get a bead on who he was, once he had recorded a song, he would never perform it again on stage, no matter how record company execs may plead.&nbsp;</p>
+
+        <p>Recently, however, he had ceased his endless harangue of politicians, big business, organized religion, the military, police, etc.&nbsp;(Once, when running for President of Nigeria, he proclaimed that his first act upon being elected would be to enroll the entire population in the police force.&nbsp;Then, he said, &ldquo;Before a policeman could slap you, he would have to think twice because you&rsquo;re a policeman, too.&rdquo;&nbsp;The authorities ultimately refused to allow him to enter the race.&nbsp;Too bad.)&nbsp;He now saw politics as &ldquo;a distraction,&rdquo; saying that our only task was to enter into contact with our own spirit,&nbsp;without which &ldquo;we would not survive.&rdquo;&nbsp;</p>
+
+        <p>His last years were spent in spiritual contemplation.&nbsp;He never left the house, except twice a week to go to the Shrine to play.&nbsp;He wouldn&rsquo;t arrive until two in the morning.&nbsp;There would be fifteen hundred people waiting for him and he would finish at dawn.&nbsp;And now he has gone.&nbsp;AIDS they said.&nbsp;As far as I&rsquo;m concerned it was one beating too many which had weakened his body sufficiently to allow disease to enter.&nbsp;He was a giant of a man, but a man nevertheless.&nbsp;The system can only take so much.&nbsp;I went to his funeral.&nbsp;</p>
+
+        <p>A hundred and fifty thousand people or so gathered in Tafawa Balewa Square to pay their last respects.&nbsp;Bands played, people queued endlessly to file past his glass coffin.&nbsp;We then ran with the coffin to a hearse (there were still thirty thousand people queuing up) to make the 20 mile journey to the Shrine, where Fela&rsquo;s children were to carry out a private ceremony for family and friends.&nbsp;In a cavalcade of vehicles we rode through Lagos City behind a band in the back of a pick-up truck playing Fela tunes.&nbsp;The road was thronged with tens of thousands of people, until we came to the brow of a hill.&nbsp;I looked down across the valley to the distant horizon.&nbsp;The road was filled with people from one side to the other and as far as the eye could see.&nbsp;A million people or more, and even more came as we passed through each neighborhood.&nbsp;Seven hours to cover 20 miles and the band never dropped a note.&nbsp;As we came nearer to Ikeja, we began to worry.&nbsp;What would happen when we reached Pepple Street, a small side street in which The Shrine was situated.&nbsp;How, in fact would we reach The Shrine with a million people in front of us?&nbsp;Night fell as we drew near.&nbsp;We turned in to Pepple Street.&nbsp;There was hardly anyone there.&nbsp;One million or more people had decided that it was not appropriate for them to be there.&nbsp;</p>
+
+        <p>Fela was my friend for the past fifteen years.&nbsp;Our fourteen year working relationship had grown from that friendship.&nbsp;I regret his passing but celebrate his life.&nbsp;He will live forever through the incredible legacy of more than 50 albums of music which he has left up and through the love and respect of the millions of people who knew him, from near or far.&nbsp;He was finally laid to rest in front of his house, Kalakuta, in Ikeja on the morning of Tuesday, August 12, 1997.&nbsp;His son, Femi, played a plaintive sax solo.&nbsp;A gentle rain felllike perfume.&nbsp;</p>
+
+        <p>By Rikki Stein. Courtesy of MCA Records.</p>
+
+Discography:
+<p>
+<a href="http://www.amazon.com/gp/product/B0030BOCHI?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B0030BOCHI">
+The '69 Los Angeles Sessions</a> (Wrasse Records 1969)<br>
+<a href="http://www.amazon.com/gp/product/B0031SO9QO?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B0031SO9QO">
+Live!</a>, with Ginger Baker (Barclay Records, 1970)<br>
+<a href="http://www.amazon.com/gp/product/B003E1QCWM?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B003E1QCWM">
+Why Black Man Dey Suffer</a> (1971)<br>
+Stratavarious, with Ginger Baker (Polydor Records 1972)<br>
+<a href="http://www.amazon.com/gp/product/B003E1QCJU?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B003E1QCJU">
+Na Poi</a> (Barclay Records 1972)<br>
+<a href="http://www.amazon.com/gp/product/B003102J3W?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B003102J3W">
+Open &amp; Close</a> (Barclay Records 1972)<br>
+<a href="http://www.amazon.com/gp/product/B0031SZAIA?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B0031SZAIA">
+Shakara</a> (Barclay Records 1972)<br>
+<a href="http://www.amazon.com/gp/product/B003102K2M?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B003102K2M">
+Roforofo Fight</a> (Barclay Records 1972)<br>
+<a href="http://www.amazon.com/gp/product/B003102J3W?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B003102J3W">
+Afrodisiac</a> (Barclay Records 1973)<br>
+<a href="http://www.amazon.com/gp/product/B0031SZAHG?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B0031SZAHG">
+Gentleman</a> (Barclay Records 1973)<br>
+<a href="http://www.amazon.com/gp/product/B003E1QCWM?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B003E1QCWM">
+Alagbon Close</a> (Barclay Records 1974)<br>
+<a href="http://www.amazon.com/gp/product/B003E1QC90?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B003E1QC90">
+Noise for Vendor Mouth</a> (Barclay Records 1975)<br>
+<a href="http://www.amazon.com/gp/product/B0031SZAHG?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B0031SZAHG">
+Confusion</a> (Barclay Records 1975)<br>
+<a href="http://www.amazon.com/gp/product/B003E1QC90?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B003E1QC90">
+Everything Scatter</a> (Barclay Records 1975)<br>
+<a href="http://www.amazon.com/gp/product/B003E1QCWC?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B003E1QCWC">
+He Miss Road</a> (Barclay Records 1975)<br>
+<a href="http://www.amazon.com/gp/product/B003E1QCWC?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B003E1QCWC">
+Expensive Shit</a> (Barclay Records 1975)<br>
+No Bread (EMI Nigeria 1976)<br>
+<a href="http://www.amazon.com/gp/product/B003E1QCJK?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B003E1QCJK">
+Kalakuta Show</a> (Barclay Records 1976)<br>
+<a href="http://www.amazon.com/gp/product/B003X43FW0?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B003X43FW0">
+Upside Down</a> (Barclay Records 1976)<br>
+<a href="http://www.amazon.com/gp/product/B003E1QCJK?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B003E1QCJK">
+Ikoyi Blindness</a> (Barclay Records 1976)<br>
+<a href="http://www.amazon.com/gp/product/B003E1QBYG?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B003E1QBYG">
+Before I Jump Like Monkey Give Me Banana</a> (Barclay Records 1976)<br>
+<a href="http://www.amazon.com/gp/product/B003E1QBYG?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B003E1QBYG">
+Excuse O</a> (Barclay Records 1976)<br>
+<a href="http://www.amazon.com/gp/product/B003X43FVQ?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B003X43FVQ">
+Zombie</a> (Barclay Records 1976)<br>
+<a href="http://www.amazon.com/gp/product/B003E1QCJU?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B003E1QCJU">
+Yellow Fever</a> (Barclay Records 1976)<br>
+<a href="http://www.amazon.com/gp/product/B003X43FWA?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B003X43FWA">
+Opposite People</a> (Barclay Records 1977)<br>
+<a href="http://www.amazon.com/gp/product/B003X43FXE?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B003X43FXE">
+Fear Not For Man</a> (Barclay Records 1977)<br>
+<a href="http://www.amazon.com/gp/product/B003X43FXE?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B003X43FXE">
+Stalemate</a> (Barclay Records 1977)<br>
+Observation No Crime EMI Nigeria 1977)<br>
+<a href="http://www.amazon.com/gp/product/B003E1QBYQ?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B003E1QBYQ">
+Johnny Just Drop</a> (J.J.D Live!! at Kalakuta Republic) (Barclay Records 1977)<br>
+I Go Shout Plenty (EMI Nigeria 1977)<br>
+<a href="http://www.amazon.com/gp/product/B003X43FWU?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B003X43FWU">
+No Agreement</a> (Barclay Records 1977)<br>
+<a href="http://www.amazon.com/gp/product/B003X43FWA?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B003X43FWA">
+Sorrow, Tears, and Blood</a> (Barclay Records 1977)<br>
+<a href="http://www.amazon.com/gp/product/B003X43FWU?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B003X43FWU">
+Shuffering and Shmiling</a> (Barclay Records 1978)<br>
+<a href="http://www.amazon.com/gp/product/B004CT4U9M?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B004CT4U9M">
+Unknown Soldier</a> (Barclay Records 1979<br>
+<a href="http://www.amazon.com/gp/product/B004CT4U9M?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B004CT4U9M">
+Coffin for Head of State</a> (Barclay Records 1980)<br>
+<a href="http://www.amazon.com/gp/product/B004CT4UBU?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B004CT4UBU">
+I.T.T.</a> (International Thief Thief) (Barclay Records 1980)<br>
+<a href="http://www.amazon.com/gp/product/B003X43FW0?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B003X43FW0">
+Music of Many Colours</a> (with Roy Ayers) (Barclay Records 1980)<br>
+<a href="http://www.amazon.com/gp/product/B003X43FX4?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B003X43FX4">
+Authority Stealing </a>(Barclay Records 1980)<br>
+Black President (EMI Nigeria 1981)<br>
+<a href="http://www.amazon.com/gp/product/B004CT4UBU?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B004CT4UBU">
+Original Suffer-Head</a> (Barclay Records 1981)<br>
+<a href="http://www.amazon.com/gp/product/B00000DMY5?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B00000DMY5">
+Perambulator</a> (Barclay Records 1983)<br>
+<a href="http://www.amazon.com/gp/product/B004CT4UAG?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B004CT4UAG">
+Live in Amsterdam</a> (Barclay Records 1983)<br>
+<a href="http://www.amazon.com/gp/product/B004CT4UBA?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B004CT4UBA">
+Army Arrangement </a>(Barclay Records 1985)<br>
+<a href="http://www.amazon.com/gp/product/B00004XT2P?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B00004XT2P">
+Teacher Don't Teach Me Nonsense</a> (Barclay Records 1986)<br>
+<a href="http://www.amazon.com/gp/product/B004CT4UBK?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B004CT4UBK">
+Beasts of No Nation</a> (Barclay Records 1989<br>
+<a href="http://www.amazon.com/gp/product/B004CT4UBK?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B004CT4UBK">
+O.D.O.O.</a> (Overtake Don Overtake Overtake) (Barclay Records 1989<br>
+<a href="http://www.amazon.com/gp/product/B004CT4UC4?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B004CT4UC4">
+Underground System</a> (Barclay Records 1992)<br>
+<a href="http://www.amazon.com/gp/product/B002OPZ30G?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B002OPZ30G">
+The Best of Fela Kuti The Black President</a> (2002)<br>
+<a href="http://www.amazon.com/gp/product/B00337W582?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B00337W582">
+The Underground Spiritual Game</a> (Quannum Projects, 2004)<br>
+<a ref="http://www.amazon.com/gp/product/B0042FXINK?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=B0042FXINK">
+Complete Recordings</a> boxed set (2010)
+</td>
+<tr><td align="center" colspan="2" width="100%">
+
+<hr></td></tr>
+  	<tr>
+  	  <td colspan="2" width="100%">
+		<a name="Bibliography"><b>Bibliography</b></a>:
+	  </td>
+    </tr>
+    <tr>
+      <td colspan="2" width="100%">&nbsp;</td>
+    </tr>
+
+    <tr>
+      <td width="3%"></td>
+
+      <td width="97%">
+
+ 	<p>
+<a href="http://www.amazon.com/gp/product/1566397650?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=1566397650">
+Fela, the Life and Times of an African Musical Icon</a> by Michael E. Veal
+(Temple University Press, 2000). ISBN: 1-56639-765-0.<br>
+<br>
+<a href="http://www.amazon.com/gp/product/1403962103?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=1403962103">
+Fela: From West Africa to West Broadway</a> by Trevor Schoonmaker (Palgrave
+Macmillan, 2003)<br>
+<br>
+<a href="http://www.amazon.com/gp/product/0253217180?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=0253217180">
+Arrest the Music!: Fela and His Rebel Art and Politics</a> (African Expressive
+Cultures) by Tejumola Olaniyan (Indiana University Press, 2004)<br>
+<br>
+<a href="http://www.amazon.com/gp/product/9068327488?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=9068327488">
+Fela: Kalakuta Notes</a> by John Collins (KIT Publishers, 2009)<br>
+<br>
+<a href="http://www.amazon.com/gp/product/1556528353?ie=UTF8&tag=musidelmund-20&linkCode=xm2&camp=1789&creativeASIN=1556528353">
+Fela: This Bitch of a Life</a> by Carlos Moore (Lawrence Hill Books, 2009)</p></td>
+<tr><td align="center" colspan="2" width="100%">
+
+<hr></td></tr>
+  	<tr>
+  	  <td colspan="2" width="100%">
+		<a name="Genres"><b>Similar Music</b></a>:
+	  </td>
+    </tr>
+    <tr>
+      <td colspan="2" width="100%">&nbsp;</td>
+    </tr>
+
+    <tr>
+      <td width="3%"></td>
+
+      <td width="97%">
+
+	<a href="genre_list-genre=Afrobeat.php.html">Afrobeat</a>, <a href="genre_list-genre=Nigerian.php.html">Nigerian</a>, <a href="instrument_index-instrument=Vocals.php.html">Vocals</a>, <a href="instrument_index-instrument=Saxophone.php.html">Saxophone</a></td>
+<tr><td align="center" colspan="2" width="100%">
+
+<hr></td></tr>
+	</table>
+	</div>
+
+	</div><!-- #main -->
+	
+	    
+    <div id="footer">
+		<div class="footer-sidebar-container clearfix">
+							<ul id="footer-sidebar-1" class="footer-sidebar clearfix xoxo">
+										<li></li>
+									</ul>
+					</div>
+		
+		<div class="footer-message">
+                <p class="floatright">WordPress Installation and Support by <a class="arras" href="http://digiblink.eu/" title="Custom WordPress development, design and backup services."><strong>digiBlink</strong></a></p>
+                <p>Copyright World Music Central.org. All Rights Reserved.</p>                </div><!-- .footer-message -->
+		
+    </div>
+</div><!-- #wrapper -->
+
+<script type="text/javascript"><!--
+wpa2a.targets=[];
+wpa2a.html_done=true;if(wpa2a.script_ready&&!wpa2a.done)wpa2a.init();wpa2a.script_load();
+//--></script>
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+
+	
+});
+</script>
+<script type='text/javascript' src='../wp-includes/js/jquery/ui/jquery.ui.core.min.js?ver=1.10.3'></script>
+<script type='text/javascript' src='../wp-includes/js/jquery/ui/jquery.ui.widget.min.js?ver=1.10.3'></script>
+<script type='text/javascript' src='../wp-includes/js/jquery/ui/jquery.ui.tabs.min.js?ver=1.10.3'></script>
+</body>
+</html>
+   
+
+<!-- Localized -->

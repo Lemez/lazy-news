@@ -1,0 +1,1223 @@
+
+<style type="text/css">
+/* --- reset some elements --- */
+
+#dw ul,ol { list-style:none }
+
+#dw ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,p,blockquote,fieldset,input { margin:0; padding:0 }
+
+/* --- Basic Stylesheet for DokuWiki content --- */
+
+#dw h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+#dw h1 a {
+  color: black;
+}
+
+/* ---------- table of contents ------------------- */
+
+#dw div.toc {
+  margin-left: 2em;
+  margin-top: 1.2em;
+  margin-bottom: 0;
+  float:right;
+  width: 200px;
+  font-size: 80%;
+  padding-top:5px;
+}
+
+#dw div.tocheader {
+  padding: 3px;
+  border: 1px solid #8cacbb;
+  background-color: #dee7ec;
+  text-align: left;
+  font-weight:bold;
+  margin-bottom: 2px;
+}
+
+#dw div.tocheader img {
+  width:0.8em;
+  height:0.8em;
+  margin-top:0.3em;
+  margin-right:3px;
+  float:right;
+  cursor: pointer;
+}
+
+#dw #toc__inside {
+  border: 1px solid #8cacbb;
+  background-color: #fff;
+  text-align: left;
+  padding-top: 0.5em;
+  padding-bottom: 0.7em;
+}
+
+#dw ul.toc {
+  list-style-type: none;
+  list-style-image: none;
+  line-height: 1.2em;
+  margin: 0;
+  padding: 0;
+  padding-left: 1em;
+}
+
+#dw ul.toc li {
+  background: transparent url(../lib/tpl/fsinfo/images/tocdot2.gif) 0 0.6em no-repeat;
+  padding-left:0.4em;
+}
+
+#dw ul.toc li.clear {
+  background-image: none;
+  padding-left:0.4em;
+}
+
+#dw a.toc {
+  color: #436976;
+  text-decoration:none;
+}
+
+#dw a.toc:hover {
+  color: #000;
+  text-decoration:underline;
+}
+
+/* --------------------- footnotes -------------------------------- */
+
+#dw div.footnotes{
+  clear:both;
+  border-top: 1px solid #8cacbb;
+  padding-left: 1em;
+  margin-top: 1em;
+}
+
+#dw div.fn{
+  font-size:90%;
+}
+
+#dw a.fn_top{
+  vertical-align:super;
+  font-size:80%;
+}
+
+#dw a.fn_bot{
+  vertical-align:super;
+  font-size:80%;
+  font-weight:bold;
+}
+
+/* insitu-footnotes */
+#dw div.insitu-footnote {
+  font-size: 80%;
+  line-height: 1.2em;
+  border: 1px solid #8cacbb;
+  background: #eef3f8;
+  text-align: left;
+  padding: 4px;
+  max-width: 40%;    /* IE's width is handled in javascript */
+}
+
+/* overcome IE issue with one line code or file boxes which require h. scrolling */
+#dw * html .insitu-footnote pre.code, * html .insitu-footnote pre.file {
+  padding-bottom: 18px;
+}
+
+/* --------------------- Tables -------------------------------- */
+
+#dw table.inline td.okay {
+  background-color: #afa;
+  text-align: center;
+}
+
+#dw table.inline td.notokay {
+  background-color: #fcc;
+  text-align: center;
+}
+
+#dw table.inline {
+  background-color: #fff;
+  border-spacing: 0px;
+  border-collapse: collapse;
+}
+
+/* ------------- Page elements ----------------- */
+
+#dw span.user{
+/*  color: #ccc; */
+  color: #666;
+  font-size: 90%;
+}
+
+#dw li.minor {
+  color: #666;
+  font-style: italic;
+}
+
+/* embedded images */
+#dw img.media {
+  margin: 3px;
+}
+
+#dw img.medialeft {
+  border: 0;
+  float: left;
+  margin: 0 1.5em 0 0;
+}
+
+#dw img.mediaright {
+  border: 0;
+  float: right;
+  margin: 0 0 0 1.5em;
+}
+
+#dw img.mediacenter {
+  border: 0;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* smileys */
+#dw img.middle {
+  vertical-align: middle;
+}
+
+#dw acronym {
+  cursor: help;
+  border-bottom: 1px dotted #000;
+}
+
+/* general headline setup */
+#dw h1, #dw h2, #dw h3, #dw h4, #dw h5 {
+    color: Black;
+    background-color: transparent;
+    font-family: "Lucida Grande", Verdana, Lucida, Helvetica, Arial, sans-serif;
+    font-size: 100%;
+    font-weight: normal;
+    margin-left:    0;
+    margin-right:   0;
+    margin-top:     0;
+    margin-bottom:  1em;
+    padding-left:   0;
+    padding-right:  0;
+    padding-top:    0.5em;
+    padding-bottom: 0;
+    border-bottom: 1px solid #8cacbb;
+}
+
+/* special headlines */
+/*
+#dw h1 {font-size: 160%; margin-left: 0px; font-weight: bold;}
+#dw h2 {font-size: 150%; margin-left: 20px; font-weight: bold;}
+#dw h3 {font-size: 130%; margin-left: 40px; border-bottom: none; font-weight: bolder}
+#dw h4 {font-size: 115%; margin-left: 60px; border-bottom: none; font-weight: bolder}
+#dw h5 {font-size: 100%; margin-left: 80px; border-bottom: none; font-weight: bold;}
+*/
+
+#dw h1 {font-size: 160%; font-weight: bold;}
+#dw h2 {font-size: 140%; font-weight: bold; }
+#dw h3 {font-size: 130%; border-bottom: none; font-weight: bolder}
+#dw h4 {font-size: 115%; border-bottom: none; font-weight: bolder}
+#dw h5 {font-size: 100%; border-bottom: none; font-weight: bold;}
+
+/* indent different sections */
+/*
+#dw div.level1 {margin-left: 3px;}
+#dw div.level2 {margin-left: 23px;}
+#dw div.level3 {margin-left: 43px;}
+#dw div.level4 {margin-left: 63px;}
+#dw div.level5 {margin-left: 83px;}
+*/
+
+/* unordered lists */
+#dw ul {
+  line-height: 1.5em;
+  list-style-type: square;
+  margin: 0 0 0.5em 2em;
+  padding: 0;
+  color: #638c9c;
+  list-style-image: none;
+}
+
+/* ordered lists */
+#dw ol {
+  line-height: 1.5em;
+  margin: 0 0 0.5em 2em;
+  padding: 0;
+  color: #638c9c;
+  font-weight: bold;
+  list-style-image: none;
+}
+
+/* the list items overriding the ul/ol definition */
+#dw .li {
+  color: #000;
+  font-weight: normal;
+}
+
+#dw ol {list-style-type: decimal}
+#dw ol ol {list-style-type: upper-roman}
+#dw ol ol ol {list-style-type: lower-alpha}
+#dw ol ol ol ol {list-style-type: lower-greek}
+
+#dw li.open {
+  list-style-image: url(../lib/tpl/fsinfo/images/open.gif);
+    /*list-style-type: circle;*/
+}
+
+#dw li.closed {
+  list-style-image: url(../lib/tpl/fsinfo/images/closed.gif);
+    /*list-style-type: disc;*/
+}
+
+#dw blockquote {
+  border-left: 2px solid #8cacbb;
+  padding-left: 3px;
+  margin-left: 0;
+}
+
+/* code blocks by indention */
+#dw pre.pre {
+  font-size: 100%;
+  padding: 0.5em;
+  border: 1px dashed #8cacbb;
+  color: Black;
+  background-color: #f7f9fa;
+  overflow: auto;
+}
+
+/* code blocks by code tag */
+#dw pre.code {
+  font-size: 100%;
+  padding: 0.5em;
+  border: 1px dashed #8cacbb;
+  color: Black;
+  background-color: #f7f9fa;
+  overflow: auto;
+}
+
+/* inline code words */
+#dw code {
+  font-size: 80%;
+}
+
+/* code blocks by file tag */
+#dw pre.file {
+  font-size: 100%;
+  padding: 0.5em;
+  border: 1px dashed #8cacbb;
+  color: Black;
+  background-color: #dee7ec;
+  overflow: auto;
+}
+
+/* inline tables */
+
+#dw table.inline th {
+  padding: 3px;
+  border: 1px solid #8cacbb;
+  background-color: #dee7ec;
+  text-align: left;
+}
+
+#dw table.inline td {
+  padding: 3px;
+  border: 1px solid #8cacbb;
+}
+</style>
+<link rel='stylesheet' id='eme_stylesheet-css'  href='../wp-content/plugins/events-made-easy/events_manager-ver=3.6.css' type='text/css' media='all' />
+<link rel='stylesheet' id='A2A_SHARE_SAVE-css'  href='../wp-content/plugins/add-to-any/addtoany.min-ver=1.4.css' type='text/css' media='all' />
+<script type='text/javascript' src='../wp-includes/js/jquery/jquery.js?ver=1.10.2'></script>
+<script type='text/javascript' src='../wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<script type='text/javascript' src='../wp-content/plugins/google-analyticator/external-tracking.min.js?ver=6.4.5'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../xmlrpc-rsd.php.html" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 3.6" />
+
+<script type="text/javascript"><!--
+var a2a_config=a2a_config||{},wpa2a={done:false,html_done:false,script_ready:false,script_load:function(){var a=document.createElement('script'),s=document.getElementsByTagName('script')[0];a.type='text/javascript';a.async=true;a.src='http://static.addtoany.com/menu/page.js';s.parentNode.insertBefore(a,s);wpa2a.script_load=function(){};},script_onready:function(){if(a2a.type=='page'){wpa2a.script_ready=true;if(wpa2a.html_done)wpa2a.init();}},init:function(){for(var i=0,el,target,targets=wpa2a.targets,length=targets.length;i<length;i++){el=document.getElementById('wpa2a_'+(i+1));target=targets[i];a2a_config.linkname=target.title;a2a_config.linkurl=target.url;if(el)a2a.init('page',{target:el});wpa2a.done=true;}}};a2a_config.tracking_callback=['ready',wpa2a.script_onready];
+//--></script>
+<meta name="_awb_version" content="2.0.3" /><link rel="stylesheet" href="../wp-content/themes/arras/css/styles/default.css" type="text/css" media="screen,projection" /><link rel="stylesheet" href="../wp-content/themes/arras/css/layouts/2c-r-fixed.css" type="text/css" />
+<!-- Generated by Arras WP Theme -->
+<style type="text/css">
+	.posts-default li  { width: 205px; height: 225px; }
+	.posts-default img, .posts-default .entry-thumbnails-link { width: 195px; height: 110px; }
+	.posts-default .entry-meta { width: 195px; }
+	.posts-default .entry-thumbnails { width: 205px; height: 120px; }
+			.posts-quick .entry-thumbnails img { width: 115px; height: 115px; }
+		.posts-quick .entry-meta { width: 115px; }
+			.featured { height: 260px; }
+	.featured-article { width: 640px; height: 250px; }
+	.featured-article img { width: 640px; height: 250px; }
+	#controls { width: 610px; top: 110px; }
+	#controls .next { left: 610px; }
+	.featured-entry { height: 84px; top: -84px; }
+	.featured-slideshow-inner { height: 250px }
+		.featured-stories-summary  { margin-left: 51px; }
+	.single .post .entry-photo img, .single-post .entry-photo img  { width: 620px; height: 250px; }
+		.footer-sidebar  { width: 920px; }
+	</style>
+	<script type="text/javascript">
+	jQuery(document).ready(function($) {
+
+$('.multi-sidebar').tabs();
+
+$('.sf-menu').superfish({autoArrows: true, speed: 'fast', dropShadows: 'true'});
+
+$('#commentform').validate();
+
+
+});	</script>
+	<!--[if IE]>
+<style type="text/css">
+.addtoany_list a img{filter:alpha(opacity=70)}
+.addtoany_list a:hover img,.addtoany_list a.addtoany_share_save img{filter:alpha(opacity=100)}
+</style>
+<![endif]-->
+<link rel="stylesheet" href="../wp-content/themes/arras/user.css" type="text/css" media="screen,projection" /><!-- Google Analytics Tracking by Google Analyticator 6.4.5: http://www.videousermanuals.com/google-analyticator/ -->
+<script type="text/javascript">
+	var analyticsFileTypes = [''];
+	var analyticsEventTracking = 'enabled';
+</script>
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-169675-4']);
+        _gaq.push(['_addDevId', 'i9k95']); // Google Analyticator App ID with Google 
+        
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>World Music Central.org</title>
+
+
+<link rel="alternate" type="application/rss+xml" href="../feed/index.html" title="World Music Central.org latest posts" />
+
+<link rel="alternate" type="application/rss+xml" href="../comments/feed/index.html" title="World Music Central.org latest comments" />
+
+<link rel="pingback" href="../xmlrpc.php.html" />
+
+<link rel="shortcut icon" href="../favicon.ico" />
+
+
+<style type="text/css">
+/* --- reset some elements --- */
+
+#dw ul,ol { list-style:none }
+
+#dw ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,p,blockquote,fieldset,input { margin:0; padding:0 }
+
+/* --- Basic Stylesheet for DokuWiki content --- */
+
+#dw h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+#dw h1 a {
+  color: black;
+}
+
+/* ---------- table of contents ------------------- */
+
+#dw div.toc {
+  margin-left: 2em;
+  margin-top: 1.2em;
+  margin-bottom: 0;
+  float:right;
+  width: 200px;
+  font-size: 80%;
+  padding-top:5px;
+}
+
+#dw div.tocheader {
+  padding: 3px;
+  border: 1px solid #8cacbb;
+  background-color: #dee7ec;
+  text-align: left;
+  font-weight:bold;
+  margin-bottom: 2px;
+}
+
+#dw div.tocheader img {
+  width:0.8em;
+  height:0.8em;
+  margin-top:0.3em;
+  margin-right:3px;
+  float:right;
+  cursor: pointer;
+}
+
+#dw #toc__inside {
+  border: 1px solid #8cacbb;
+  background-color: #fff;
+  text-align: left;
+  padding-top: 0.5em;
+  padding-bottom: 0.7em;
+}
+
+#dw ul.toc {
+  list-style-type: none;
+  list-style-image: none;
+  line-height: 1.2em;
+  margin: 0;
+  padding: 0;
+  padding-left: 1em;
+}
+
+#dw ul.toc li {
+  background: transparent url(../lib/tpl/fsinfo/images/tocdot2.gif) 0 0.6em no-repeat;
+  padding-left:0.4em;
+}
+
+#dw ul.toc li.clear {
+  background-image: none;
+  padding-left:0.4em;
+}
+
+#dw a.toc {
+  color: #436976;
+  text-decoration:none;
+}
+
+#dw a.toc:hover {
+  color: #000;
+  text-decoration:underline;
+}
+
+/* --------------------- footnotes -------------------------------- */
+
+#dw div.footnotes{
+  clear:both;
+  border-top: 1px solid #8cacbb;
+  padding-left: 1em;
+  margin-top: 1em;
+}
+
+#dw div.fn{
+  font-size:90%;
+}
+
+#dw a.fn_top{
+  vertical-align:super;
+  font-size:80%;
+}
+
+#dw a.fn_bot{
+  vertical-align:super;
+  font-size:80%;
+  font-weight:bold;
+}
+
+/* insitu-footnotes */
+#dw div.insitu-footnote {
+  font-size: 80%;
+  line-height: 1.2em;
+  border: 1px solid #8cacbb;
+  background: #eef3f8;
+  text-align: left;
+  padding: 4px;
+  max-width: 40%;    /* IE's width is handled in javascript */
+}
+
+/* overcome IE issue with one line code or file boxes which require h. scrolling */
+#dw * html .insitu-footnote pre.code, * html .insitu-footnote pre.file {
+  padding-bottom: 18px;
+}
+
+/* --------------------- Tables -------------------------------- */
+
+#dw table.inline td.okay {
+  background-color: #afa;
+  text-align: center;
+}
+
+#dw table.inline td.notokay {
+  background-color: #fcc;
+  text-align: center;
+}
+
+#dw table.inline {
+  background-color: #fff;
+  border-spacing: 0px;
+  border-collapse: collapse;
+}
+
+/* ------------- Page elements ----------------- */
+
+#dw span.user{
+/*  color: #ccc; */
+  color: #666;
+  font-size: 90%;
+}
+
+#dw li.minor {
+  color: #666;
+  font-style: italic;
+}
+
+/* embedded images */
+#dw img.media {
+  margin: 3px;
+}
+
+#dw img.medialeft {
+  border: 0;
+  float: left;
+  margin: 0 1.5em 0 0;
+}
+
+#dw img.mediaright {
+  border: 0;
+  float: right;
+  margin: 0 0 0 1.5em;
+}
+
+#dw img.mediacenter {
+  border: 0;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* smileys */
+#dw img.middle {
+  vertical-align: middle;
+}
+
+#dw acronym {
+  cursor: help;
+  border-bottom: 1px dotted #000;
+}
+
+/* general headline setup */
+#dw h1, #dw h2, #dw h3, #dw h4, #dw h5 {
+    color: Black;
+    background-color: transparent;
+    font-family: "Lucida Grande", Verdana, Lucida, Helvetica, Arial, sans-serif;
+    font-size: 100%;
+    font-weight: normal;
+    margin-left:    0;
+    margin-right:   0;
+    margin-top:     0;
+    margin-bottom:  1em;
+    padding-left:   0;
+    padding-right:  0;
+    padding-top:    0.5em;
+    padding-bottom: 0;
+    border-bottom: 1px solid #8cacbb;
+}
+
+/* special headlines */
+/*
+#dw h1 {font-size: 160%; margin-left: 0px; font-weight: bold;}
+#dw h2 {font-size: 150%; margin-left: 20px; font-weight: bold;}
+#dw h3 {font-size: 130%; margin-left: 40px; border-bottom: none; font-weight: bolder}
+#dw h4 {font-size: 115%; margin-left: 60px; border-bottom: none; font-weight: bolder}
+#dw h5 {font-size: 100%; margin-left: 80px; border-bottom: none; font-weight: bold;}
+*/
+
+#dw h1 {font-size: 160%; font-weight: bold;}
+#dw h2 {font-size: 140%; font-weight: bold; }
+#dw h3 {font-size: 130%; border-bottom: none; font-weight: bolder}
+#dw h4 {font-size: 115%; border-bottom: none; font-weight: bolder}
+#dw h5 {font-size: 100%; border-bottom: none; font-weight: bold;}
+
+/* indent different sections */
+/*
+#dw div.level1 {margin-left: 3px;}
+#dw div.level2 {margin-left: 23px;}
+#dw div.level3 {margin-left: 43px;}
+#dw div.level4 {margin-left: 63px;}
+#dw div.level5 {margin-left: 83px;}
+*/
+
+/* unordered lists */
+#dw ul {
+  line-height: 1.5em;
+  list-style-type: square;
+  margin: 0 0 0.5em 2em;
+  padding: 0;
+  color: #638c9c;
+  list-style-image: none;
+}
+
+/* ordered lists */
+#dw ol {
+  line-height: 1.5em;
+  margin: 0 0 0.5em 2em;
+  padding: 0;
+  color: #638c9c;
+  font-weight: bold;
+  list-style-image: none;
+}
+
+/* the list items overriding the ul/ol definition */
+#dw .li {
+  color: #000;
+  font-weight: normal;
+}
+
+#dw ol {list-style-type: decimal}
+#dw ol ol {list-style-type: upper-roman}
+#dw ol ol ol {list-style-type: lower-alpha}
+#dw ol ol ol ol {list-style-type: lower-greek}
+
+#dw li.open {
+  list-style-image: url(../lib/tpl/fsinfo/images/open.gif);
+    /*list-style-type: circle;*/
+}
+
+#dw li.closed {
+  list-style-image: url(../lib/tpl/fsinfo/images/closed.gif);
+    /*list-style-type: disc;*/
+}
+
+#dw blockquote {
+  border-left: 2px solid #8cacbb;
+  padding-left: 3px;
+  margin-left: 0;
+}
+
+/* code blocks by indention */
+#dw pre.pre {
+  font-size: 100%;
+  padding: 0.5em;
+  border: 1px dashed #8cacbb;
+  color: Black;
+  background-color: #f7f9fa;
+  overflow: auto;
+}
+
+/* code blocks by code tag */
+#dw pre.code {
+  font-size: 100%;
+  padding: 0.5em;
+  border: 1px dashed #8cacbb;
+  color: Black;
+  background-color: #f7f9fa;
+  overflow: auto;
+}
+
+/* inline code words */
+#dw code {
+  font-size: 80%;
+}
+
+/* code blocks by file tag */
+#dw pre.file {
+  font-size: 100%;
+  padding: 0.5em;
+  border: 1px dashed #8cacbb;
+  color: Black;
+  background-color: #dee7ec;
+  overflow: auto;
+}
+
+/* inline tables */
+
+#dw table.inline th {
+  padding: 3px;
+  border: 1px solid #8cacbb;
+  background-color: #dee7ec;
+  text-align: left;
+}
+
+#dw table.inline td {
+  padding: 3px;
+  border: 1px solid #8cacbb;
+}
+</style>
+<script type='text/javascript' src='../wp-content/themes/arras/js/superfish/hoverIntent.js'></script>
+<script type='text/javascript' src='../wp-content/themes/arras/js/superfish/superfish.js'></script>
+<script type='text/javascript' src='../wp-includes/js/comment-reply.min.js?ver=3.6'></script>
+<script type='text/javascript' src='../wp-content/themes/arras/js/jquery.validate.min.js'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../xmlrpc-rsd.php.html" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 3.6" />
+
+<script type="text/javascript"><!--
+var a2a_config=a2a_config||{},wpa2a={done:false,html_done:false,script_ready:false,script_load:function(){var a=document.createElement('script'),s=document.getElementsByTagName('script')[0];a.type='text/javascript';a.async=true;a.src='/page.js';s.parentNode.insertBefore(a,s);wpa2a.script_load=function(){};},script_onready:function(){if(a2a.type=='page'){wpa2a.script_ready=true;if(wpa2a.html_done)wpa2a.init();}},init:function(){for(var i=0,el,target,targets=wpa2a.targets,length=targets.length;i<length;i++){el=document.getElementById('wpa2a_'+(i+1));target=targets[i];a2a_config.linkname=target.title;a2a_config.linkurl=target.url;if(el)a2a.init('page',{target:el});wpa2a.done=true;}}};a2a_config.tracking_callback=['ready',wpa2a.script_onready];
+//--></script>
+<meta name="_awb_version" content="2.0.3" /><link rel="stylesheet" href="../wp-content/themes/arras/css/styles/default.css" type="text/css" media="screen,projection" /><link rel="stylesheet" href="../wp-content/themes/arras/css/layouts/2c-r-fixed.css" type="text/css" />
+<!-- Generated by Arras WP Theme -->
+<style type="text/css">
+	.posts-default li  { width: 205px; height: 225px; }
+	.posts-default img, .posts-default .entry-thumbnails-link { width: 195px; height: 110px; }
+	.posts-default .entry-meta { width: 195px; }
+	.posts-default .entry-thumbnails { width: 205px; height: 120px; }
+			.posts-quick .entry-thumbnails img { width: 115px; height: 115px; }
+		.posts-quick .entry-meta { width: 115px; }
+			.featured { height: 260px; }
+	.featured-article { width: 640px; height: 250px; }
+	.featured-article img { width: 640px; height: 250px; }
+	#controls { width: 610px; top: 110px; }
+	#controls .next { left: 610px; }
+	.featured-entry { height: 84px; top: -84px; }
+	.featured-slideshow-inner { height: 250px }
+		.featured-stories-summary  { margin-left: 51px; }
+	.single .post .entry-photo img, .single-post .entry-photo img  { width: 620px; height: 250px; }
+		.footer-sidebar  { width: 920px; }
+	</style>
+	<script type="text/javascript">
+	jQuery(document).ready(function($) {
+
+$('.multi-sidebar').tabs();
+
+$('.sf-menu').superfish({autoArrows: true, speed: 'fast', dropShadows: 'true'});
+
+$('#commentform').validate();
+
+
+});	</script>
+	<!--[if IE]>
+<style type="text/css">
+.addtoany_list a img{filter:alpha(opacity=70)}
+.addtoany_list a:hover img,.addtoany_list a.addtoany_share_save img{filter:alpha(opacity=100)}
+</style>
+<![endif]-->
+<link rel="stylesheet" href="../wp-content/themes/arras/user.css" type="text/css" media="screen,projection" /><!-- Google Analytics Tracking by Google Analyticator 6.4.5: http://www.videousermanuals.com/google-analyticator/ -->
+<script type="text/javascript">
+	var analyticsFileTypes = [''];
+	var analyticsEventTracking = 'enabled';
+</script>
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-169675-4']);
+        _gaq.push(['_addDevId', 'i9k95']); // Google Analyticator App ID with Google 
+        
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+</head>
+
+<body class="page page-id-0 page-parent page-template-default layout-2c-r-fixed no-js style-default">
+<script type="text/javascript">
+//<![CDATA[
+(function(){
+var c = document.body.className;
+c = c.replace(/no-js/, 'js');
+document.body.className = c;
+})();
+//]]>
+</script>
+
+<div id="top-menu" class="clearfix">
+	</div><!-- #top-menu -->
+
+<div id="header"><div align="center"><script type="text/javascript"><!--
+google_ad_client = "pub-7027070946238159";
+/* 728x90, Top Banner */
+google_ad_slot = "9335358437";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+	<div id="branding" class="clearfix">
+	<div class="logo">
+				<span class="blog-name"><a href="../index.html">World Music Central.org</a></span>
+		<img style="float:left; padding: 0 5px 0 0;" src="../wp-content/themes/wmc-magazeen/images/bull.png"/><span class="blog-description">Your Connection to World Music</span>
+			</div>
+	<div id="searchbar"><form method="get" class="searchform clearfix" action="http://worldmusiccentral.org/">
+ <input type="text" value="Search..." name="s" class="s" onfocus="this.value=''" />
+ <input type="submit" class="searchsubmit" value="Search" title="Search World Music Central.org" />
+</form>
+</div>
+	</div><!-- #branding -->
+</div><!-- #header -->
+
+<div id="nav">
+	<div id="nav-content" class="clearfix">
+	<div class="menu-main-container"><ul id="menu-main" class="sf-menu menu clearfix"><li id="menu-item-6394" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-6394"><a href="../index.html">Home</a></li>
+<li id="menu-item-6401" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6401"><a href="../about/index.html">About</a></li>
+<li id="menu-item-6454" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6454"><a href="#">World Music Resources</a>
+<ul class="sub-menu">
+	<li id="menu-item-6455" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6455"><a href="artist_index.php.html">Artists Database</a></li>
+	<li id="menu-item-6462" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6462"><a href="http://musicwikicentral.com/world_music_festivals">Festivals</a></li>
+	<li id="menu-item-6467" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6467"><a href="http://musicwikicentral.com/travel_guides">Travel Guides</a></li>
+	<li id="menu-item-6469" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6469"><a href="http://musicwikicentral.com/world_music_genres">Musical Genres</a></li>
+	<li id="menu-item-6468" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6468"><a href="http://musicwikicentral.com/musical_instruments">Musical Instruments</a></li>
+	<li id="menu-item-6475" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6475"><a href="http://musicwikicentral.com/showcases">Showcases</a></li>
+	<li id="menu-item-6470" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6470"><a href="http://musicwikicentral.com/world_music_venues">Venues</a></li>
+	<li id="menu-item-6472" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6472"><a href="http://musicwikicentral.com/record_companies">Record Companies</a></li>
+	<li id="menu-item-6466" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6466"><a href="http://musicwikicentral.com/booking_agents">Booking Agents</a></li>
+	<li id="menu-item-6474" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6474"><a href="http://musicwikicentral.com/world_music_press">World Music Press</a></li>
+	<li id="menu-item-6477" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6477"><a href="http://musicwikicentral.com/ethnomusicology">Ethnomusicology</a></li>
+	<li id="menu-item-6473" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6473"><a href="http://musicwikicentral.com/music_organizations">Music Organizations</a></li>
+</ul>
+</li>
+<li id="menu-item-6390" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6390"><a href="#">Topics</a>
+<ul class="sub-menu">
+	<li id="menu-item-6369" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6369"><a href="../category/archive/index.html">archive</a></li>
+	<li id="menu-item-6370" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6370"><a href="../category/articles/index.html">Articles</a></li>
+	<li id="menu-item-6371" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6371"><a href="../category/awards/index.html">Awards</a></li>
+	<li id="menu-item-6372" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6372"><a href="../category/book-reviews/index.html">Book Reviews</a></li>
+	<li id="menu-item-6373" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6373"><a href="../category/cd-reviews/index.html">CD Reviews</a></li>
+	<li id="menu-item-6374" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6374"><a href="../category/concert-reviews/index.html">Concert reviews</a></li>
+	<li id="menu-item-6375" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6375"><a href="../category/conferences/index.html">Conferences</a></li>
+	<li id="menu-item-6376" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6376"><a href="../category/editorials/index.html">Editorials</a></li>
+	<li id="menu-item-6377" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6377"><a href="../category/events/index.html">Events</a></li>
+	<li id="menu-item-6378" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6378"><a href="../category/film-reviews/index.html">Film Reviews</a></li>
+	<li id="menu-item-6379" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6379"><a href="../category/general-news/index.html">General News</a></li>
+	<li id="menu-item-6380" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6380"><a href="../category/interviews/index.html">Interviews</a></li>
+	<li id="menu-item-6381" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6381"><a href="../category/loop-collections/index.html">Loop Collections</a></li>
+	<li id="menu-item-6382" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6382"><a href="../category/new-books/index.html">New Books</a></li>
+	<li id="menu-item-6383" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6383"><a href="../category/new-cds/index.html">New CDs</a></li>
+	<li id="menu-item-6384" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6384"><a href="../category/new-films/index.html">New Films</a></li>
+	<li id="menu-item-6385" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6385"><a href="../category/new-releases/index.html">New Releases</a></li>
+	<li id="menu-item-6386" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6386"><a href="../category/obituaries/index.html">Obituaries</a></li>
+	<li id="menu-item-6387" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6387"><a href="../category/tour-announcements/index.html">Tour Announcements</a></li>
+	<li id="menu-item-6388" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6388"><a href="../category/tradeshows/index.html">Tradeshows</a></li>
+	<li id="menu-item-6389" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6389"><a href="../category/uncategorized/index.html">Uncategorized</a></li>
+</ul>
+</li>
+<li id="menu-item-6392" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6392"><a href="../events/index.html">Calendar</a></li>
+<li id="menu-item-6400" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6400"><a href="../store/index.html">Store</a></li>
+<li id="menu-item-6724" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6724"><a href="../contact-us/index.html">Contact Us</a></li>
+</ul></div>		<ul class="quick-nav clearfix">
+					<li><a id="rss" title="World Music Central.org RSS Feed" href="../feed/index.html">RSS Feed</a></li>
+				
+						
+							<li><a id="facebook" title="World Music Central.org Facebook" href="http://www.facebook.com/pages/World-Music-Central/149036898455901" target="_blank">Facebook</a></li>
+				
+			</ul>
+	</div><!-- #nav-content -->
+</div><!-- #nav -->
+
+<div id="wrapper">
+	
+	  
+	<div id="main" class="clearfix">
+    <div id="container" class="clearfix">
+  <head>
+    <title>Haris Alexiou - Artist Page</title>
+  </head>
+
+  <body> 
+  
+  <div id="artistpage">
+  
+  <div style="float:right;">
+  
+  <script type="text/javascript"><!--
+google_ad_client = "pub-7027070946238159";
+/* 160x600, created 12/6/08 */
+google_ad_slot = "6830638066";
+google_ad_width = 160;
+google_ad_height = 600;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+
+</div>
+  
+  
+  
+  	<table>
+
+  
+<tr><td align="center" colspan="2" width="100%">
+<font size=+1><b>Haris Alexiou</b></font> 
+<hr></td></tr>
+
+<tr><td align="center" colspan="2" width="100%">
+<a href="#Discography">Discography</a>
+<hr></td></tr>
+    <tr>
+      <td colspan="2" width="100%">
+		<a name="Biography"><b>Biography</b></a>:
+	  </td>
+    </tr>
+    <tr>
+      <td colspan="2" width="100%">&nbsp;</td>
+    </tr>
+
+    <tr>
+      <td width="3%"></td>
+
+      <td width="97%">
+	  
+	<p align=center><img border="0" align="center"  src="../staticpages/images/haris_alexiou_2.jpg"></p>Haris Alexiou appeared in the Greek musical scene in the early 1970s. Her 
+charismatic voice, combined with a unique way of performing and a strong stage 
+presence, very soon led her to the top. Today she is still at the top, always 
+working hard, seeking new ways of expression and giving prestige 
+and value to the contemporary light and popular Greek music. She has worked with 
+the most important Greek songwriters, has performed at the greatest musical 
+theatres in all five continents and has received several important awards.</p>
+<p>Haris Alexiou&nbsp; has had over thirty her own albums recorded, has participated in albums 
+of other artist, whether renowned or young and promising, and is always open to 
+new musical forms.</p>
+<p>In September 2003, the&nbsp; &quot;Too the End of your 
+Heaven&quot; album was released. It includes thirteen songs written by various composers 
+and lyricists. Four of these songs are written by Haris Alexiou. The rest are 
+written by well known Greek songwriters as Antonis Vardis, George Theofanous, 
+Manolis Famelos, &quot;Ekinos + Ekinos&quot; (Tassos Voyadjis and Solon Apostolakis), 
+Makis Seviloglou, Panayotis Yatrakos and Sophia Argyropoulou. Two of the songs 
+are performed by Haris Alexiou, one with Yannis Kotsiras and one with Filipos 
+Pliatsikas of the PYX-LAX group. It is a musical work that compiles a variety of styles 
+including the &quot;laiko&quot; (traditional popular music), ballads and modern songs, but 
+all with a common concept regarding the sound. The whole album was characterized by 
+a direct approach to the public as it includes thirteen short subjects in which 
+every listener can discover something of themselves.</p>
+<p>The first important step in her career was her participation with George 
+Dalaras in the album &quot;Mikra Asia&quot; (Asia Minor&quot;) written by Apostolos Caldaras 
+and Pythagoras in 1972. A historic album, the biggest hit of the '70s and 
+rightfully included in &quot;Minos-EMI's 100 Greatest Hits of the Century&quot;.</p>
+<p>In 1973 Haris participated in the albums &quot;Kalimera ilie&quot; (&quot;Good Morning, 
+Sun&quot;) by Manos Loizos and Lefteris Papadopoulos,&quot;Byzantinos Esperinos&quot; ( 
+&quot;Byzantine Vesper&quot;) by Apostolos Kaldaras and Lefteris Papadopoulos and Odos 
+Aristotelous&quot;(&quot;Aristotelous Street&quot;) by Yannis Spanos and Lefteris Papadopoulos. 
+Meeting Manos Loizos was the beginning of a lifelong friendship and a prolific 
+cooperation.</p>
+<p>In 1975, her first solo album &quot;12 'Laika' Songs&quot; was released. One of them, &quot;Dimitroula&quot; 
+became an all time standard.
+The same year, she appeared in nightclubs in Plaka, imposing a new way of 
+presenting songs, completely different from the conventional large nightclubs. It 
+was the first year after the fall of the military junta, a time for the 
+political songs and the revival of &quot;rebetika&quot; songs, and Haris Alexiou sang 
+traditional songs, ballads, modern songs, folk songs and rebetika.</p>
+<p>For long periods of time, she appeared with George Dalaras, Dimitra Galani, 
+Basilis Papakonstantinou and Yannis Parios. Her concerts in stadiums and 
+theatres, with songs written by Loizos, Papadopoulos, Nikolopoulos, Spanos, 
+Theodorakis, Kuyumdjis and others, were extremely successful. Her popularity 
+reached its peak. Since then, she was &quot;Haroula of Greece&quot;.</p>
+<p>In 1979, the album &quot;Ta tragoudia tis Haroulas&quot;( &quot;Haroula's Songs&quot;) was 
+released. Manos Loizos had written the music and the lyrics were written by 
+Manolis Rassoulis and Pythagoras. From this album, &quot;o Fantaros&quot; ( &quot;The Soldier&quot;) 
+immediately became a big hit, while &quot; Ola se thymizoun&quot; (&quot;All Things Remind Me 
+of You&quot;)was considered one the most beautiful Greek ballads of all time.</p>
+<p>The 1980s started with two enormous hits: &quot;Fevgo&quot; ( &quot;I'm Leaving&quot;) and &quot;Ximeroni&quot; 
+( &quot;The Day Breaks&quot;).</p>
+<p>&quot;Songs of Yesterday&quot;, her album together with Dimitra Galani included ballads 
+which fascinated the public. At the same time she recorded traditional and folk 
+songs, rebetika and laika, and gave concerts both in Greece and abroad.</p>
+<p>1983 wasthe year of the album &quot;Tsilika&quot;, a collector's item, with old rebetika 
+songs written between 1900 and 1935.</p>
+<p>1986 was the year of her first cooperation with composer Thanos Mikroutsikos. 
+The album was titled &quot;I Agapi ine zali&quot; (&quot;Dizzy with Love&quot;) with lyrics by Alkis 
+Alkeos, Nikos Kavadias, Andreas Mikroutsikos and Babis Tsikliropoulos. The title 
+song became an enormous hit. &quot;Eleni&quot; and &quot;Erotikon&quot; from the same album, 
+were 
+also extremely successful. The same year Haroula conquered the French public 
+appearing at the &quot;Theatre de la Ville&quot;, getting rave reviews from the French 
+press. After that she gave concerts in Cyprus, Tunisia, Germany and many towns 
+throughout Greece.</p>
+<p>In 1987, world famous Greek composer Manos Hadjidakis invited her to appear 
+in his club &quot;Sirius&quot; with the &quot;Unpredictable Songs&quot;. He directed her and later he 
+went into the recording studio with her. The summer of that year, she sang in Hadjidakis' concerts in many Greek towns.</p>
+<p>In 1988 she worked with &quot;Fatme&quot; a group of young and talented artists. She 
+also worked with Paolo Conte, a well known Italian singer songwriter. They 
+appeared together at the Palace Theatre of Athens. She recorded two of his songs with Greek lyrics by Lina Nikolakopoulou.</p>
+<p>In 1989, &quot;The Show in on&quot;. It was the musical show which she presented for two 
+years, together with Dimitra Galani and Yannis Parios, in Athens and 
+Thessalonika. An album with the same title resulted from this work.</p>
+<p>1990 began with her second cooperation with Thanos Mikroutsikos. The 
+albumwasentitled &quot;This Cologne Lingers on for Years&quot; with lyrics by Lina 
+Nikolakopoulou. In October of the same year, she participated in the most 
+important concert of the decade in Peace and Friendship Stadium of Athens. In 
+this festive concert, called &quot;Our Own Night&quot;, all the big names of the Greek 
+show business werre present. Yannis Parios, Thanos Mikroutsikos, Dimitra Galani, 
+Chris Nikolopoulos. Alkistis Protopsalti, George Sarris, George Zambetas, Lakis 
+Lazopoulos and the legendary Melina Merkouri.</p>
+<p>In 1991 she appeared at Attikon Theatre of Athens with a special show Called 
+&quot;In Three Acts&quot;. In the first act she sang songs by Hadjidakis, Loizos, 
+Mikroutsikos and Brecht-Weill. In the second act she hosted certain groups of 
+modern Greek music and presented songs written by herself. The third act was a 
+medley with her hits, old and new. She then presents this show in the State 
+Theatre of Northern Greece, which for the first time accepted a Greek singer in 
+its stage.</p>
+<p>With her concerts,&nbsp; Alexiou set new standards for musical shows, using state of the 
+art sound &amp; light equipment and impressive decors.
+In autumn 1991, together with Costas Hadjis, she presented a show directed by Maouro 
+Bolognini at Rex Theatre in Athens and Radio City in Thessaloniki. &quot;Alexiou 
+Sings Hadjis&quot;was the album that followed.</p>
+<p>In 1992 she started her cooperation with Polygram, successfully presenting a 
+new style in her songs. The album &quot;Di' efchon&quot;( &quot;L'orale&quot; ) with music by Nikos Antypas and lyrics by Lina Nikolakopoulou comes as something quite fresh in the 
+Greek discography, giving a new thrust to Haroula's already long career.</p>
+<p>In 1993 the above album was released in Japan, Belgium, France and Israel by 
+Polygram International. The same year she travels around the 
+world with concerts in Cyprus, USA, Canada, Israel, several European countries, 
+finishing in Paris at the Mogador Theatre.</p>
+<p>In 1994 her album &quot;Hey!&quot; was released with music by Nikos Antypas and lyrics by 
+Lefteris Papadopoulos and Aris Davarakis.
+The summer of the same year, she appeared in Herod Atticus Odeon with a show 
+directed by Mauro Bolognini. In October, it was her first and extremely successful 
+appearance in Japan.</p>
+<p>In 1995, the album &quot;88 Nefelis Street&quot; was released. The songs of this album 
+were all written by herself. For this album, in April 1995, at the Palais de 
+Congress in Paris, she received the &quot;Prix Adami&quot;, an award given every Year by 
+Charles Cross Academy to distinguished artists. The same year, she opened Studio Nefeli where she presented her new songs, creating a new &quot;Cafe Theatre&quot; 
+atmosphere. Dimitri Papajoannou was the director of the show.</p>
+<p>In 1996, she wrote the lyrics for &quot;Nefeli's Tango&quot; for <a href="http://www.worldmusiccentral.org/artists/artist_page.php?id=1424">
+Loreena McKennitt</a>. 
+This song along with other live recordings from her concerts around the world, was included in the album &quot;Around the World '92-'96&quot;. &quot;Nefeli's Tango&quot;, for 
+several months was one of the ten top World Music songs&nbsp; in Europe.</p>
+<p>In summer 1997, responding to the invitation of the Olympic Games Committee 
+&quot;Athens 2004&quot;, she gave a concert at Pnyka Hill very close to Acropolis. 
+Such was the success of this concert, that she had to repeat it twice at the same 
+location.</p>
+<p>1998 was the year of &quot;The Game of Love&quot;, her second album with songs written only 
+by herself. The recording took place at the Studio Guillaume Tell in Paris with 
+Greek and foreign musicians.</p>
+<p>The same year, she toured North and South America with Nikos Papazoglou. 
+In December she appeared in Athens at Diogenis Studio which was reconstructed in 
+order to meet the demands of the show she presented with Chris Nikolopoulos. The 
+show was directed by Dimitri Papajoannoy again.</p>
+<p>In October 1999, she sang along with famous Turkish female singer Sezen Aksu, 
+both in Athens and Istanbul, for the victims of the earthquakes which afflicted 
+the two countries that year, under the auspice of the Ministry of Culture. This 
+cooperation was repeated in summer 2000 in Istanbul and Izmir.</p>
+<p>In September 2000, the album Whispers was released. It included her favorite 
+songs performed by her and a piano only. In October, she presented these songs in 
+Music Palace of Athens and in the ancient Epidaurus Odeon accompanied by a small 
+musical ensemble.</p>
+<p>The same year, she founded her own record company, &quot;Estia&quot;, in order to 
+produce all her future recording ventures. In December, the first album was 
+released titled &quot;Strange Light&quot;. In this album she met again songwriters with 
+whom she had successfully worked in the past. &quot;Strange Light&quot; became &quot;Lumiere 
+Etrange&quot; and was released all over Europe by Universal-France. At the same time, 
+Haroula toured Europe giving concerts at the most prestigious theatres, 
+conquering both audiences and critics. Her tour ends with a triumphal appearance 
+at Theatre Olympia in Paris.</p>
+<p>2002 was another creative year for Haroula. She appeared on the Keramikos Music 
+Hall, this time singing more &quot;laika&quot; songs. In this show, Lavrentis Macheritsas 
+and other younger artists participate. The result was the album &quot;Keramikos Live&quot;.</p>
+<p>In 2003 the album To the end of your heaven went four times platinum and 
+World Music Awards presented Haris Alexiou with the award for The 
+Best Selling Greek Artist for the season 2003-2004.</p>
+<p>In
+2004, the Olympic Games were held in Athens.
+Haris Alexiou performed at the closing ceremony, along with D. Galani, Marinella, 
+Y. Parios, G. Dalaras.<br>
+In October 2004, the retrospective compilation album titled <a href="http://www.amazon.com/gp/product/B000HT3KGK/103-5499018-7660604?ie=UTF8&tag=worldmusicpor-20&linkCode=xm2&camp=1789&creativeASIN=B000HT3KGK">
+Anthology</a> was 
+released. This double CD is comprised of 38 songs from her previous albums and 
+of two new ones. Alexiou herself selected the included songs, not only choosing 
+the most popular ones, but also bearing in mind the significance of each song 
+for herself.</p>
+<p>A year later, in April 2005,&nbsp; her 16 albums were released by Minos EMI, remastered 
+and repackaged. The albums were reprinted, digitally remastered, and the new editions were meticulously designed (including the 
+lyrics, many informative texts and original photos from the time of the first 
+release).</p>
+<p>In 2006 Haris Alexiou returned with Sour Cherry and Bitter Orange, an album 
+depicting the traditional aspects of contemporary music. Thodoris Papadopoulos, 
+Smaro Papadopoulou and Makis Seviloglou wrote the music and the lyrics, 
+suggesting a return to our roots. An album that, despite its unusual content, 
+managed to go platinum, just a few months after it was released, receiving 
+people's recognition and love. During the summer she made a series of special appearances.<br>
+Along with Dimitra Galani, she gave two concerts dedicated to Sofia Vembo at 
+Herodion, an event organized by Athens Festival.</p>
+<p>She gave four sold-out concerts along with Sokratis Malamas and Alkinoos 
+Ioannidis, celebrating &quot;Melodia&quot; radio station's 25 years of broadcasting, at 
+Lycabettus theatre in Athens and at Sports Arena in Thessalonica. These 
+concerts were recorded and a double CD and DVD edition was released in  
+2007.</p>
+<p>At the end of 2006 Haris Alexiou undertook a major tour around Europe, giving a 
+series of concerts and promoting the international release of her album, 
+&quot;Anthology&quot;. <br>
+<br>
+Haris Alexiou gave three concerts under the title &quot;Everything reminds me of 
+you&quot;, dedicated to Manos Loizos, at the Odeon of Herodes Atticus on the 13th, 
+14th and 15th of June 2007, participating in the celebrations for the 70th 
+anniversary from his birth. Nikos Portokaloglou and the group &quot;Triphonon&quot; 
+appeared along with her on stage, in those unique concerts directed by Panos 
+Papadopoulos. The songs were arranged by Kostas Papadoukas and the lighting was 
+designed by Andreas Sinanos. Two more concerts were given at Thessalonica, 
+followed by a summer tour around Greece and Cyprus along with the &quot;Triphonon&quot;, 
+dedicated to the great composer. </p>
+<p>On October 22, the album &quot;Haris Alexiou - A tribute to Manos Loizos&quot; was 
+released, containing the live recording and video-taping of the concerts given 
+at the Odeon of Herodes Atticus the previous June during the Athens Festival. 
+Nikos Portokaloglou and the group &quot;Triphonon&quot; also appear on the album. The 
+album was released in both a double CD and a double CD/DVD packaging by Estia 
+recordings.</p>
+<p>From Greece to Australia, from Russia to Africa, from America to Japan, Haris 
+Alexiou travels around and shows the world the feeling of the Greek song. She 
+firmly believes that the Greek song, through its poets and composers, made her 
+to love and better understand the history and the culture of her country.<p><b>Official Web Site:</b> <a href="http://www.alexiou.gr">www.alexiou.gr</a> </p></td>
+<tr><td align="center" colspan="2" width="100%">
+
+<hr></td></tr>
+  	<tr>
+        <td colspan="2" width="100%">
+		<a name="Discography"><b>Discography</b></a>:
+	  </td>
+    </tr>
+    <tr>
+      <td colspan="2" width="100%">&nbsp;</td>
+    </tr>
+
+    <tr>
+      <td width="3%"></td>
+
+      <td width="97%">
+
+ 	<p>12 Laika Tragoudia (12 Popular Songs) (1975 )</p><p>Laikes Kyriakes (1976)</p><p>H Agapi Einai Zali (1986)</p><p>H Nuxta Thelei Erwta (1988)</p><p>H Dikh Mas Nyxta (Live) (1991)</p><p><a href="http://www.amazon.com/gp/product/B000001YPL/103-5499018-7660604?ie=UTF8&tag=worldmusicpor-20&linkCode=xm2&camp=1789&creativeASIN=B000001YPL">Di
+Efchon</a> (With Blessings) (1992)</p><p>To Tragoudi Gymno (The Naked Song) - Various Artists (1992)</p><p>Ei (Hey) (1994)</p><p>Emfilios Erotas (1995)</p><p><a href="http://www.amazon.com/gp/product/B000RGH5X2/103-5499018-7660604?ie=UTF8&tag=worldmusicpor-20&linkCode=xm2&camp=1789&creativeASIN=B000RGH5X2">
+Gyrizontas Ton Kosmo Kai Ena Fili Tou Kosmou Oloklirom...</a> (Live '92 - '96) (1996)</p><p><a href="http://www.amazon.com/gp/product/B000024UT8/103-5499018-7660604?ie=UTF8&tag=worldmusicpor-20&linkCode=xm2&camp=1789&creativeASIN=B000024UT8">
+Odos Nefelis '88</a> (1997)</p><p><a href="http://www.amazon.com/gp/product/B000025F7L/103-5499018-7660604?ie=UTF8&tag=worldmusicpor-20&linkCode=xm2&camp=1789&creativeASIN=B000025F7L">
+Ena Fili Tou Kosmou</a> (A Kiss for the World) (1997)</p><p><a href="http://www.amazon.com/gp/product/B00002496A/103-5499018-7660604?ie=UTF8&tag=worldmusicpor-20&linkCode=xm2&camp=1789&creativeASIN=B00002496A">
+To Paihnidi Tis Agapis</a> (The Game of Love) (Mercury/Polygram, 1998)</p><p>Parakseno Fos (Strange Light) (Estia, 2000)</p><p><a href="http://www.amazon.com/gp/product/B000054325/103-5499018-7660604?ie=UTF8&tag=worldmusicpor-20&linkCode=xm2&camp=1789&creativeASIN=B000054325">
+Psithyroi</a> (Whispers) (Universal, 2000)</p><p><a href="http://www.amazon.com/gp/product/B000062W68/103-5499018-7660604?ie=UTF8&tag=worldmusicpor-20&linkCode=xm2&camp=1789&creativeASIN=B000062W68">
+Ta Doueta Tis Haroulas</a>s (Haroulas Duets) (2001)</p><p>Cine Keramikos (Live) (Estia, 2002)</p><p>Os Tin Akri Tou Ouranou Sou (To The End Of Your Heaven) (Estia, 2003)</p><p><a href="http://www.amazon.com/gp/product/B000HT3KGK/103-5499018-7660604?ie=UTF8&tag=worldmusicpor-20&linkCode=xm2&camp=1789&creativeASIN=B000HT3KGK">
+Anthology</a> [Anthologio] (Minos EMI, 2004)</p><p>Vyssino Kai Nerantzi (Sour Cherry & Bitter Orange) (Estia, 2006)</p><p>Alexiou-Malamas-Ioannidis (Estia, 2007)</p><p>Haris Alexiou - A tribute to Manos Loizos  (Estia, 2007)</p></td>
+<tr><td align="center" colspan="2" width="100%">
+
+<hr></td></tr>
+	</table>
+	</div>
+
+	</div><!-- #main -->
+	
+	    
+    <div id="footer">
+		<div class="footer-sidebar-container clearfix">
+							<ul id="footer-sidebar-1" class="footer-sidebar clearfix xoxo">
+										<li></li>
+									</ul>
+					</div>
+		
+		<div class="footer-message">
+                <p class="floatright">WordPress Installation and Support by <a class="arras" href="http://digiblink.eu/" title="Custom WordPress development, design and backup services."><strong>digiBlink</strong></a></p>
+                <p>Copyright World Music Central.org. All Rights Reserved.</p>                </div><!-- .footer-message -->
+		
+    </div>
+</div><!-- #wrapper -->
+
+<script type="text/javascript"><!--
+wpa2a.targets=[];
+wpa2a.html_done=true;if(wpa2a.script_ready&&!wpa2a.done)wpa2a.init();wpa2a.script_load();
+//--></script>
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+
+	
+});
+</script>
+<script type='text/javascript' src='../wp-includes/js/jquery/ui/jquery.ui.core.min.js?ver=1.10.3'></script>
+<script type='text/javascript' src='../wp-includes/js/jquery/ui/jquery.ui.widget.min.js?ver=1.10.3'></script>
+<script type='text/javascript' src='../wp-includes/js/jquery/ui/jquery.ui.tabs.min.js?ver=1.10.3'></script>
+</body>
+</html>
+   
+
+<!-- Localized -->

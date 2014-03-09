@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>News</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <link href='http://fonts.googleapis.com/css?family=Oxygen:400,700' rel='stylesheet' type='text/css'>
+
+  <%= csrf_meta_tags %>
+ 
+ 
+
+</head>
+<body>
+
+	<header>
+		<div class="one-third">
+		<h1>Lazy News</h1>
+		
+</p>
+
+ 	</div>
+	</header>
+
+	<div class="three columns">
+		
+		<nav>
+
+				<div id="buttons">
+				<!-- <h3> FILTER: DATE </h3> -->
+				<button id="all_by_date" onclick="location.href='#';">	LATEST </button>
+				<button id="all_by_a_to_z" onclick="location.href='#';">	A-Z </button>
+
+
+				<!-- <h3> FILTER: AREA </h3> -->
+				<% @source_keys.each do |area| %>
+					<button class='sources' 
+							id='<%=area.chomp!%>'
+					 		onclick="location.href='#';">
+
+					 		 <%=area.upcase! %>
+					</button>
+
+				<% end %>
+				
+	
+			</div>
+			
+			<div id='row'>
+				<img id='logo' src='#' width='100' />
+				<h2>
+					<div id='mydate' class="three columns"></div></br>
+					<div id= 'mysource' class="three columns"></div>
+				<h2>
+				
+
+
+			</div>
+			<br class="clear" />
+			
+		
+
+		</nav>
+
+<!-- 
+		<img id="images" class="uparrow" src="assets/up-arrow.png" width="80" />
+		<img id ="images" class="downarrow" src="assets/up-arrow.png" width="80" /> -->
+
+	</div>
+
+<%= yield %>
+
+</body>
+</html>
