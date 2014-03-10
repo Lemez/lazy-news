@@ -42,7 +42,6 @@
 
 		<div class="row">
 			
-			
 			<div class = 'content'>
 					<table>
 						<tbody>
@@ -58,8 +57,11 @@
 										<% t=story.modified %>
 										<%=  t.strftime("%m.%d.%Y").strip if t %> 
 									</span> 
+									<img class='tag' src='' width = '20' />
 									<span class='tag'>
-										<%= story.area.upcase %>
+										<%= story.area.upcase.strip %>
+										
+										
 									</span>
 									<!-- <span class='icon'>
 										<img src="<%# story.area.to_icon %>" width='20'/>

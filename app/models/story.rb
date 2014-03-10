@@ -30,11 +30,10 @@ def self.latest_order_hundred
 	self.ordered.limit(100)
 end
 
-def self.to_icon
-return "assets/icon_3688" if self == "education"
-return "assets/icon_1231" if self == "music"
-
-end
+# def self.to_icon
+# return "assets/icon_3688" if self == "education"
+# return "assets/icon_1231" if self == "music"
+# end
 
 
 

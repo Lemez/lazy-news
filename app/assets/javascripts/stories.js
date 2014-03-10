@@ -6,9 +6,11 @@ $(document).ready(function () {
 
 // set up the dictionary of class to color values
 var myDict = {
-					  "musically" : "peachpuff",
-					  "techcrunch_music" : "magenta",
-					  "techcrunch_edu" : "cyan"
+					  "musically" : "slategray",
+					  "techcrunch" : "darkgreen",
+					  "thenextweb" : "orangered",
+					  "venturebeat" : "red",
+					  "learnegg" : "black"
 					  
 					};
 
@@ -27,6 +29,11 @@ var TypeDict = {
 	"blogs"	: ["afropop", "afrobeat", "mondomix", "womex"]
 }
 
+var IconDict = {
+					  "EDUCATION" : "assets/book.png",
+					  "MUSIC" : "assets/cd.png"
+					};
+
 	if ($('.all_by_date').css("display", "inline")) {
 
 		// $('button#all_by_date').siblings('button').removeClass('active');
@@ -36,6 +43,7 @@ var TypeDict = {
 			// trim whitespace from "source" text value
     		var myClass = $.trim($('td').eq(index).text());
 			var myColor = myDict[myClass];
+			
 
 			// add source as a class 
 			$('th').eq(index)
@@ -44,6 +52,7 @@ var TypeDict = {
 
    		 	$('td').eq(index)
  						.addClass(myClass);
+		 
 
  			$('.all_by_date').siblings('div').hide();
 
@@ -61,6 +70,8 @@ var TypeDict = {
 			myDate = "N/A";
 		} 
 
+		
+ 		
 		// get image value
 		var myPic = $(this).find("img").attr("src");
 		var myPicId = $(this).find("span#id").text();
@@ -87,7 +98,7 @@ var TypeDict = {
 		 .attr("width", "100")
 		 .css("visibility", "visible"); // display logo
 
-
+		
 
 	});
 
@@ -121,10 +132,27 @@ var TypeDict = {
 	    $('button#all_by_a_to_z').click(function() {
 	 	$('.all_by_a_to_z').fadeToggle(500);
 	 	$(this).toggleClass('active');
-	 	$('.all_by_a_to_z').siblings('div').toggle();
-	 	$(this).siblings('button').toggleClass('active');
+	 	$('.all_by_a_to_z').siblings('div').hide();
+	 	$(this).siblings('button').removeClass('active');
 	 	// $('.all_by_date').parent('div').next().children('div').show();
-	 });
+
+
+			for(var index = 0; index < $('tbody th').length; index++){
+
+				var myArea = $.trim($("th").eq(index).find("span.tag").text());
+				console.log(myArea);
+
+				var myIcon = IconDict[myArea];
+				console.log(myIcon);
+
+				$('th').eq(index)
+	 				.find("img.tag")
+					.attr("src", myIcon)
+					.css("display", "inline")
+					.css("visibility", "visible"); // display logo
+				
+			}
+		 });
 
 
 

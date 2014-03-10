@@ -233,8 +233,12 @@ span .on, .on li {
 	display: none;
 }
 
+.all_by_a_to_z {
+	display: inline;
+}
 .tag {
 	font-size: 10px;
+	display: none;
 }
 
 .square {
@@ -264,33 +268,33 @@ img.downarrow {
 
 
 .musically tr {
-    border-bottom: 2px solid lightgray;
+    border-bottom: 2px solid slategray;
 }
 
 .musically ul li span {
-    color: lightgray;
+    color: slategray;
 }
 
 .musically .square,
     /*button#mondomix, */
 .musically a:hover {
-    background-color: lightgray;
-    color: black;
+    background-color: slategray;
+    color: white;
 }
 
 .techcrunch tr {
-    border-bottom: 2px solid lightgreen;
+    border-bottom: 2px solid darkgreen;
 }
 
 .techcrunch ul li span {
-    color: lightgreen;
+    color: darkgreen;
 }
 
 .techcrunch .square,
     /*button#mondomix, */
 .techcrunch a:hover {
-    background-color: lightgreen;
-    color: black;
+    background-color: darkgreen;
+    color: white;
 }
 
 .thenextweb tr {
@@ -305,8 +309,24 @@ img.downarrow {
     /*button#mondomix, */
 .thenextweb a:hover {
     background-color: orangered;
-    color: black;
+    color: white;
 }
+
+.venturebeat tr {
+    border-bottom: 2px solid red;
+}
+
+.venturebeat ul li span {
+    color: red;
+}
+
+.venturebeat .square,
+    /*button#mondomix, */
+.venturebeat a:hover {
+    background-color: red;
+    color: white;
+}
+
 
 
 .all_by_date {
