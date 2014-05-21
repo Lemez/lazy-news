@@ -1,5 +1,13 @@
 $(document).ready(function () {
 
+	// SLICK - image carousel
+
+	$('.mainpic').slick({
+  slidesToShow: 10,
+  slidesToScroll: 5
+});
+
+
 	// $("#music").dotdotdot({
 	// 		The HTML to add as ellipsis. 
 	// 	ellipsis	: '... ' )};
@@ -13,6 +21,14 @@ var myDict = {
 					  "learnegg" : "black"
 					  
 					};
+
+var allSources = {
+					  "musically" : "MUSIC ALLY",
+					  "techcrunch" : "TECHCRUNCH",
+					  "thenextweb" : "THE NEXT WEB",
+					  "venturebeat" : "VENTUREBEAT",
+					  "learnegg" : "LEARNEGG"
+}
 
 var LogoDict = {
 					  "musically" : "assets/music_ally.png",
@@ -36,7 +52,8 @@ var IconDict = {
 
 	if ($('.all_by_date').css("display", "inline")) {
 
-		// $('button#all_by_date').siblings('button').removeClass('active');
+		$('button#all_by_date').siblings('button').removeClass('active');
+		$('button#all_by_date').addClass('active');
 
 		for(var index = 0; index < $('tbody th').length; index++){
 
@@ -55,6 +72,7 @@ var IconDict = {
 		 
 
  			$('.all_by_date').siblings('div').hide();
+
 
 			} 
 	} else {
@@ -76,7 +94,7 @@ var IconDict = {
 		var myPic = $(this).find("img").attr("src");
 		var myPicId = $(this).find("span#id").text();
 		var myPicUrl = $(this).find("a").attr("href");
-		var mySource = $.trim($(this).find("td").text());
+		var mySource = allSources[$.trim($(this).find("td").text())];
 		var myClass = $.trim($(this).children('th').attr("class"));
 		var myColor = myDict[myClass];
 		var myLogo = LogoDict[myClass];
@@ -98,7 +116,12 @@ var IconDict = {
 		 .attr("width", "100")
 		 .css("visibility", "visible"); // display logo
 
-		
+		 // $(document)
+		 // .find("img#mainpic")
+		 // .attr("src", myPic)
+		 // .css("visibility", "visible"); // display pic
+
+
 
 	});
 
@@ -120,18 +143,47 @@ var IconDict = {
 		});
 
 
+	 	$('.mainpic img').mouseenter(function () {
+
+			var myStory = $(this).attr("id");
+			
+			var myStoryId = "span#" + parseInt(myStory);
+			
+			var theStorylink = $('tbody tr').find(myStoryId).find('a');
+
+			theStorylink.toggleClass("hovered"); // highlight the story in the table
+
+			var theStoryUrl = theStorylink.attr("href"); // get the story URL
+			$(this).parent().attr("href", theStoryUrl); // link the pic to the story
+			$(this).parent().attr("target", "_blank"); // force open in a new tab
+		
+		});
+
+			$('.mainpic img').mouseleave(function () {
+
+			var myStory = $(this).attr("id");
+			
+			var myStoryId = "span#" + parseInt(myStory);
+			
+			 $('tbody tr')
+				 .find(myStoryId)
+				 .find('a')
+				 .toggleClass("hovered"); // unhighlight the story	
+		
+		});
+
 
 	 $('button#all_by_date').click(function() {
-	 	$('.all_by_date').fadeToggle(500);
-	 	$(this).toggleClass('active');
-	 	$('.all_by_date').siblings('div').toggle();
-	 	$(this).siblings('button').toggleClass('active');
+	 	$('.all_by_date').show(500);
+	 	$(this).addClass('active');
+	 	$('.all_by_date').siblings('div').hide();
+	 	$(this).siblings('button').removeClass('active');
 	 	// $('.all_by_date').parent('div').next().children('div').show();
 	 });
 
 	    $('button#all_by_a_to_z').click(function() {
-	 	$('.all_by_a_to_z').fadeToggle(500);
-	 	$(this).toggleClass('active');
+	 	$('.all_by_a_to_z').show(500);
+	 	$(this).addClass('active');
 	 	$('.all_by_a_to_z').siblings('div').hide();
 	 	$(this).siblings('button').removeClass('active');
 	 	// $('.all_by_date').parent('div').next().children('div').show();
@@ -140,10 +192,8 @@ var IconDict = {
 			for(var index = 0; index < $('tbody th').length; index++){
 
 				var myArea = $.trim($("th").eq(index).find("span.tag").text());
-				console.log(myArea);
 
 				var myIcon = IconDict[myArea];
-				console.log(myIcon);
 
 				$('th').eq(index)
 	 				.find("img.tag")
@@ -154,6 +204,34 @@ var IconDict = {
 			}
 		 });
 
+	    $('button#music').click(function() {
+	 		$('.by_source').show(500);
+	 		$('.by_source').siblings('div').hide();
+	 		$('.by_source').find('div#source_education').hide();
+	 		$('.by_source').find('div#source_music').show();
+
+
+
+	 		$(this).addClass('active');
+	 		$(this).siblings('button').removeClass('active');
+	 		// $('.all_by_date').parent('div').next().children('div').show();
+	 });
+
+	    $('button#education').click(function() {
+	 		$('.by_source').show(500);
+		 	$('.by_source').siblings('div').hide();
+		 	$('.by_source').find('div#source_music').hide();
+		 	$('.by_source').find('div#source_education').show();
+
+		 	$(this).addClass('active');
+		 	$(this).siblings('button').removeClass('active');
+		 	// $('.all_by_date').parent('div').next().children('div').show();
+	 });
+
+//wip
+// $('button#keywords').click(function() {
+// 	 	$('.keywords').toggle(500);
+// 	 	 });
 
 
 

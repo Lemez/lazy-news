@@ -52,7 +52,8 @@ namespace :grab_tasks do
        full_text += para.content
      end
 
-     full_text = full_text[0...full_text.rindex("Tags ")]
+     p full_text
+     full_text = full_text[0...full_text.rindex("Tags ")] rescue full_text[0...full_text.rindex("Posted in")]
 
      pic_url = article_page.css('div.postContent a img').first["src"] rescue pic_url = "assets/music_ally.png"
 
@@ -281,6 +282,69 @@ task :grab_techcrunch_edu => :environment do
     end
  end 
 
+#work in progress 
+task :grab_businessweek_music => :environment do
+   response = HTTParty.get(' http://www.businessweek.com/search?q=music+business')
+   doc = Nokogiri::HTML(response)
+   xdoc = doc.css('.column_container .tracked')
+   ydoc = doc.css('article.post')
+
+# ap xdoc.search('img').map{ |a| [a['src'], a.text] }[0, 9]
+    imgs = []
+    xdoc.xpath('//*[contains(concat( " ", @class, " " )), concat( " ", "lazy", " " ))]').each {|node| imgs << node["src"] if node["src"]  }
+    p imgs
+
+  #   @url = ''
+  #   urls = []
+  #   doc.css('article.post div a').each do |item|
+  #   if item['rel'] == 'bookmark'
+  #     if @url != item['href']
+  #       @url = item['href']
+  #       urls << @url
+  #     end
+  #   end
+  # end
+
+  #  titles = []
+  #   doc.xpath('//h1/a').each {|node| titles << node.text }
+
+  #   modifieds = []
+  #   doc.xpath("//*[contains(@class, 'the-time')]").each {|node| modifieds << node.text.to_date }
+
+  #   fulltexts=[]
+  #   urls.each do |article|
+  #     text = []
+  #     doc = Nokogiri::HTML(HTTParty.get(article))
+  #     doc.xpath("//*[contains(@class, 'post-content')]/p").each {|node| text << node.text }
+  #     fulltexts << text.join(" ")
+  #   end
+
+  #     # p titles.length
+  #     # p urls.length
+  #     # p modifieds.length
+  #     # p imgs.length # images getting far too many inputs
+  #     # p fulltexts.length
+
+
+  #   i = 0
+  #    while i < titles.length
+
+  #     @raw_parameters = { :source => "venturebeat",
+  #                       :area => "music",
+  #                      :title => titles[i],
+  #                      :url => urls[i],
+  #                      :modified => modifieds[i],
+  #                      :pic_url => imgs[i],
+  #                      :full_text => fulltexts[i]}
+
+  #     # p @raw_parameters  
+  #     # p '___________'
+      
+  #     save_parameters
+  #     i += 1
+
+  #   end
+end
 
   task :grab_venturebeat_music => :environment do
    response = HTTParty.get('http://venturebeat.com/tag/music/')
@@ -415,7 +479,12 @@ task :grab_learnegg => :environment do
 
 # ap xdoc.search('img').map{ |a| [a['src'], a.text] }[0, 9]
     imgs = []
-    xdoc.xpath("//img")[2..-1].each {|node| imgs << node["src"] if node["src"]  }
+
+    if xdoc.xpath("//img")[2..-1] != nil
+      xdoc.xpath("//img")[2..-1].each {|node| imgs << node["src"] if node["src"]  }
+    else
+      imgs << "assets/learnegg.png"
+    end
 
     urls = []
     titles = []
@@ -455,6 +524,12 @@ task :grab_learnegg => :environment do
       i += 1
 
      end
+
+    
+     end
+      desc "check working"
+     task :check => :environment do
+       p 'working'
  end 
 
  
@@ -468,5 +543,7 @@ task :grab_learnegg => :environment do
     end
 
  end
+
+ # inside the app, bundle exec rake grab_tasks:grab_venturebeat_music
 
 

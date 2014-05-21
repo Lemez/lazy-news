@@ -8,8 +8,6 @@
 
   <%= csrf_meta_tags %>
  
- 
-
 </head>
 <body>
 
@@ -33,9 +31,9 @@
 
 
 				<!-- <h3> FILTER: AREA </h3> -->
-				<% @source_keys.each do |area| %>
+				<% @source_keys.reverse.each do |area| %>
 					<button class='sources' 
-							id='<%=area.chomp!%>'
+							id='<%=area.strip%>'
 					 		onclick="location.href='#';">
 
 					 		 <%=area.upcase! %>
@@ -48,10 +46,12 @@
 			
 			<div id='row'>
 				<img id='logo' src='#' width='100' />
-				<h4> <div id= 'mysource' class="three columns"></div></h4>
-				<h2>
+				<h4> 
+					<div id='mysource' class="three columns"></div>
+				</h4>
+				<h4>
 					<div id='mydate' class="three columns"></div>
-				<h2>
+				</h4>
 				
 
 
@@ -69,6 +69,10 @@
 	</div>
 
 <%= yield %>
+
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
 
 </body>
 </html>

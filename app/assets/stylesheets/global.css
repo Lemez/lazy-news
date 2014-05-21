@@ -26,6 +26,11 @@ header h1 {
 	text-align: center;
 }
 
+a:visited {
+  color:inherit;
+  text-decoration: none;
+ }
+
 
 div#mydate, div#mysource {
 	color: black;
@@ -129,7 +134,7 @@ nav button {
 
 nav button.active {
 	background-color: red;
-	color: black;
+	color: white;
 
 }
 
@@ -154,23 +159,17 @@ nav button:hover {
 	line-height: 5;
 }
 
-#mydate {
-	float: left;
-	padding-left: 5%;
-}
-
-#mysource h4 {
-	float: left;
-	font-size: 18px;
-	padding-left: 5%;
-}
-
-#mydate h2 {
-	font-family: 'Oxygen', sans-serif;
-	font-weight: 700;
-	line-height: 3;
-	font-size: 24px;
+#mydate h4, #mysource h4{
+	color: #2c3e50;
+	line-height: 1.5;
 	text-align: center;
+	font-family: 'Oxygen', sans-serif;
+	font-size: 12px;
+	padding-left: 5%;
+}
+
+#mainpic {
+	float:left;
 }
 
 
@@ -190,12 +189,12 @@ thead th {
 }
 
 
-tbody a {
+tbody a, a:visited {
 	font-family: 'Oxygen', sans-serif;
 	padding-top: 2px;
 	line-height: 1.2;
 	text-decoration: none;
-	color: black;
+	color: darkgray;
 }
 
 tbody td {
@@ -229,7 +228,7 @@ span .on, .on li {
 	display: inline-block;
 }
 
-.intext, .source, .all_source {
+.intext, .source, .all_source, .pic_url {
 	display: none;
 }
 
@@ -248,8 +247,7 @@ span .on, .on li {
     top: 1%;
 }
 
-#music {
-	font-size: 24px;
+div#music {
 	padding: 20px 0 20px 40px;
 }
 
@@ -265,7 +263,20 @@ img.downarrow {
    -webkit-transform: rotate(180deg);
 }*/
 
+.learnegg tr {
+    border-bottom: 2px solid white;
+}
 
+.learnegg ul li span {
+    color: white;
+}
+
+.learnegg .square,
+    /*button#mondomix, */
+.learnegg a:hover, .learnegg a.hovered {
+    background-color: white;
+    color: gray;
+}
 
 .musically tr {
     border-bottom: 2px solid slategray;
@@ -277,7 +288,7 @@ img.downarrow {
 
 .musically .square,
     /*button#mondomix, */
-.musically a:hover {
+.musically a:hover, .musically a.hovered {
     background-color: slategray;
     color: white;
 }
@@ -292,7 +303,7 @@ img.downarrow {
 
 .techcrunch .square,
     /*button#mondomix, */
-.techcrunch a:hover {
+.techcrunch a:hover, .techcrunch a.hovered {
     background-color: darkgreen;
     color: white;
 }
@@ -307,7 +318,7 @@ img.downarrow {
 
 .thenextweb .square,
     /*button#mondomix, */
-.thenextweb a:hover {
+.thenextweb a:hover, .thenextweb a.hovered {
     background-color: orangered;
     color: white;
 }
@@ -322,7 +333,7 @@ img.downarrow {
 
 .venturebeat .square,
     /*button#mondomix, */
-.venturebeat a:hover {
+.venturebeat a:hover, .venturebeat a.hovered {
     background-color: red;
     color: white;
 }

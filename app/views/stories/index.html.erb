@@ -5,29 +5,43 @@
 		
 		<br class="clear" />
 
-		<div class="row">
-			
-			
-			<div class = 'content'>
+		
+
+			<div class="row">
+				<div class='mainpic'>
+					<% @all_by_date.each do |story| %>
+						<div><%= link_to image_tag(story.pic_url, :id => story.id, :width =>100, :height=> 100) %></div>
+					<% end %>
+				</div>
+				
+				<div class = 'content'>
 					<table>
 						<tbody>
-						<% @all_by_date.each do |story| %>
+							<% @all_by_date.each do |story| %>
 						
-							<tr>
-								<!-- source -->
-								<td>
-									<%= story.source %>
-								</td>
-								<!-- story -->
-								<th>
-									<span class="intext">
-										<% t=story.modified %>
-										<%=  t.strftime("%m.%d.%Y").strip if t %> 
-									</span>
+								<tr>
 
-									<%= link_to story.title, story.url %>
-								</th>
-							</tr>
+									<td>
+										<%= story.source %>
+									</td>
+									<!-- story -->
+									<th>
+										<span class="intext">
+											<% t=story.modified %>
+											<%=  t.strftime("%d.%m.%Y").strip if t %> 
+										</span>
+
+										<!-- <span class="pic_url">
+											<%# image_tag(story.pic_url) %>
+										</span> -->
+
+										<span id="<%= story.id %>">
+
+											<%= link_to story.title, story.url, :target => "_blank" %>
+										</span>
+
+									</th>
+								</tr>
 							<% end %>
 						</tbody>
 					</table>
@@ -53,20 +67,22 @@
 								</td>
 							
 								<th>
-									<span class="intext">
-										<% t=story.modified %>
-										<%=  t.strftime("%m.%d.%Y").strip if t %> 
-									</span> 
-									<img class='tag' src='' width = '20' />
-									<span class='tag'>
-										<%= story.area.upcase.strip %>
+									<span id="<%= story.area.strip %>">
+
+										<span class="intext">
+											<% t=story.modified %>
+											<%=  t.strftime("%d.%m.%Y").strip if t %> 
+										</span> 
+
+										<img class='tag' src='' width = '20' />
 										
+										<span class='tag'>
+											<%= story.area.upcase.strip %>	
+										</span>
 										
+										<%= link_to story.title, story.url, :target => "_blank" %>
 									</span>
-									<!-- <span class='icon'>
-										<img src="<%# story.area.to_icon %>" width='20'/>
-									</span> -->
-									<%= link_to story.title, story.url %>
+									
 								</th>
 							</tr>
 							<% end %>
@@ -79,52 +95,59 @@
 	</div>
 
 
-	
-	<div class="sixteen columns offset-by-one">
-			<!-- <div class="top">
-				<div id = 'mydate' class="alpha"></div>
-				<div id = 'mysource' class="omega"></div>
-			</div> -->
-		<% @sources.each do |s| %>
+	<div class="by_source">
+		<div class="sixteen columns offset-by-one">
+				<!-- <div class="top">
+					<div id = 'mydate' class="alpha"></div>
+					<div id = 'mysource' class="omega"></div>
+				</div> -->
+			<% @sources.each do |s| %>
 
-			<div class=" <%= s[0].source %> " id = "music">
-				<table>
-					<thead>
-						<tr>
-							<th>
-								<%= s[0].area.upcase %>
-								<span class='square'></span>
-								<%= s[0].source.upcase %>
-
-								<span id='date'></span>
-							</th>
-							<td>
-								<!-- SOURCE -->
-							</td>
-						</tr>
-					</thead>
-					<tbody>
-						<% s.each do |story| %>
-							<% @shorttitle = story.title %>
+				<div class="<%= s[0].source %>" id = "source_<%= s[0].area %>">
+					<table>
+						<thead>
 							<tr>
 								<th>
-									<span class="intext">
-										<% t=story.modified %>
-										<%=  t.strftime("%m.%d.%Y").strip if t %> 
-									</span>
-									
-									<%= link_to @shorttitle, story.url %>
-									<span id='id'></span>
-									<!-- <%= story.id %>  -->
-								</th>
+									<%= s[0].area.upcase %>
+									<span class='square'></span>
+									<%= s[0].source.upcase %>
 
-							
+									<span id='date'></span>
+								</th>
+								<td>
+									<!-- SOURCE -->
+									
+								</td>
 							</tr>
-						<% end %>
-					</tbody>
-				</table>
-			</div>
-		<% end %>
+						</thead>
+						<tbody>
+							<% s.each do |story| %>
+								<% @shorttitle = story.title %>
+								<tr>
+									<th>
+										<span class="intext">
+											<% t=story.modified %>
+											<%=  t.strftime("%d.%m.%Y").strip if t %> 
+										</span>
+										
+										<%= link_to @shorttitle, story.url, :target => "_blank" %>
+										<span id='id'></span>
+										<!-- <%= story.id %>  -->
+									</th>
+									<td>
+									<!-- SOURCE -->
+									<%= story.source %>
+								</td>
+
+								
+								</tr>
+							<% end %>
+						</tbody>
+					</table>
+				</div>
+
+			<% end %>
+		</div>
 	</div>
 
 

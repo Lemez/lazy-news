@@ -28,9 +28,9 @@ class StoriesController < ApplicationController
     @sources = [ @recent_musically,      
                  @recent_techcrunch_music,
                  @recent_venturebeat_music,
-                 @recent_learnegg,
+                 # @recent_learnegg,
                  @recent_techcrunch_edu,
-                 @recent_thenextweb_edu,
+                 # @recent_thenextweb_edu,
                  @recent_venturebeat_edu,
               ]
 

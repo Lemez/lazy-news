@@ -23,7 +23,7 @@ def self.a_to_z
 end
 
 def self.latest_order
-	self.ordered.limit(5)
+	self.ordered.limit(8)
 end
 
 def self.latest_order_hundred
