@@ -152,6 +152,7 @@ var IconDict = {
 			var theStorylink = $('tbody tr').find(myStoryId).find('a');
 
 			theStorylink.toggleClass("hovered"); // highlight the story in the table
+			$(this).toggleClass("hovered"); // add hovered state to the pic
 
 			var theStoryUrl = theStorylink.attr("href"); // get the story URL
 			$(this).parent().attr("href", theStoryUrl); // link the pic to the story
@@ -169,6 +170,8 @@ var IconDict = {
 				 .find(myStoryId)
 				 .find('a')
 				 .toggleClass("hovered"); // unhighlight the story	
+
+			$(this).toggleClass("hovered"); // remove hovered state from the pic
 		
 		});
 

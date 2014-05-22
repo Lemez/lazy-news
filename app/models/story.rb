@@ -31,12 +31,13 @@ def self.latest_order_hundred
 end
 
 # def self.to_icon
-# return "assets/icon_3688" if self == "education"
-# return "assets/icon_1231" if self == "music"
+	# return "assets/icon_3688" if self == "education"
+	# return "assets/icon_1231" if self == "music"
 # end
 
+# scope :this_week, -> {where()}
 
-
+# scope :is_valid_date, -> { where(modified: <Date.today)}
 
 scope :venturebeat, -> { where(source:"venturebeat") }
 scope :techcrunch, -> { where(source:"techcrunch") } 
@@ -47,10 +48,7 @@ scope :learnegg, -> { where(source:"learnegg") }
 scope :is_music, -> {where(area:"music")}
 scope :is_education, -> {where(area:"education")}
 
-# scope :this_week, -> {where()}
 
-
-# scope :is_valid_date, -> { where(modified: <Date.today)}
 
 
 

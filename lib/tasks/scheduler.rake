@@ -27,6 +27,28 @@ namespace :grab_tasks do
 
 
 
+desc "execute all"
+task :execute_all => :environment do
+
+  p "running musically"
+  Rake::Task["grab_tasks:grab_musically"].invoke
+
+  p "running vb music"
+  Rake::Task["grab_tasks:grab_venturebeat_music"].invoke
+
+  p "running vb edu"
+  Rake::Task["grab_tasks:grab_venturebeat_edu"].invoke
+
+  p "running tc music"
+  Rake::Task["grab_tasks:grab_techcrunch_music"].invoke
+
+  p "running tc music"
+  Rake::Task["grab_tasks:grab_techcrunch_edu"].invoke
+  
+end
+
+
+
 
 
   task :grab_musically => :environment do
@@ -125,7 +147,7 @@ task :grab_techcrunch_music => :environment do
     while i < titles.length
 
       @raw_parameters = { :source => "techcrunch",
-                        :area => "education",
+                        :area => "music",
                        :title => titles[i],
                        :url => urls[i],
                        :modified => modifieds[i],
@@ -507,7 +529,7 @@ task :grab_learnegg => :environment do
     #     end
 
     i = 0
-     while i < titles.length
+    while i < titles.length
 
       @raw_parameters = { :source => "learnegg",
                         :area => "education",
@@ -523,14 +545,9 @@ task :grab_learnegg => :environment do
       save_parameters
       i += 1
 
-     end
+    end
+  end
 
-    
-     end
-      desc "check working"
-     task :check => :environment do
-       p 'working'
- end 
 
  
   private
