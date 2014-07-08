@@ -4,7 +4,10 @@ class Story < ActiveRecord::Base
 
 # attr_reader :modified
 
-validates :title, presence: true
+validates :area, presence: true
+validates :source, presence: true
+validates :title, presence: true, uniqueness: true
+validates :pic_url, presence: true, uniqueness: true
 validates :url, presence: true, uniqueness: true
 
 # has_attached_file :pic, :styles => { :medium => "300x300>", :thumb => "100x100>" }
