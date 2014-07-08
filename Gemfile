@@ -9,7 +9,7 @@ group :development, :test do
 end
 
 group :production do
-    gem 'thin'
+    # gem 'thin'
     gem 'pg'
 end
 
