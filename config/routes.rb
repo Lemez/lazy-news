@@ -1,6 +1,6 @@
 News::Application.routes.draw do
 
-  get "article/index"
+  # get "article/index"
 root 'stories#index'
 
 end
