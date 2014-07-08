@@ -172,17 +172,17 @@ nav button:hover {
 
 .mainpic {
 	float:left;
-	width: 120%;
+	width: 110%;
 	/*height: 20%;*/
 	position: fixed;
-	overflow: scroll;
+	display: inline-block;
 }
 
 .mainpic img {
 	margin-left: 1px;
 	height: 100px;
 	/*width: 100px;*/
-	opacity: 0.5;
+	opacity: 0.75;
 }
 
 .content {
@@ -194,7 +194,6 @@ nav button:hover {
 	height: 60%;
 	border-top: 2px dashed gray;
 }
-
 
 table {
 	text-align: left;
@@ -210,7 +209,6 @@ thead th {
 	padding-left: 10px;
 	padding-bottom: 10px;
 }
-
 
 tbody a, a:visited {
 	font-family: 'Oxygen', sans-serif;
