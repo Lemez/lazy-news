@@ -92,7 +92,7 @@ namespace :grab_tasks do
 
       title_selector = "h2.st-result-title a"
       url_selector = "h2.st-result-title a"
-      img_selector = ".block-content img"
+      img_selector = ".article-entry img"
       date_selector = ".byline time"
 
       imgs = []
@@ -166,7 +166,7 @@ namespace :grab_tasks do
 
       title_selector = "h2.st-result-title a"
       url_selector = "h2.st-result-title a"
-      img_selector = ".block-content img"
+      img_selector = ".article-entry img"
       date_selector = ".byline time"
 
       imgs = []
@@ -237,7 +237,7 @@ namespace :grab_tasks do
      xdoc = doc.css('article.post div a')
      ydoc = doc.css('article.post')
 
-       p 'thinking' # ap xdoc.search('img').map{ |a| [a['src'], a.text] }[0, 9]
+      # ap xdoc.search('img').map{ |a| [a['src'], a.text] }[0, 9]
           imgs = []
           xdoc.xpath("//*[contains(@class, 'river')]").each {|node| imgs << node["src"] if node["src"]  }
 
@@ -251,15 +251,12 @@ namespace :grab_tasks do
             end
           end
         end
-        p urls
-
-        p 'thinking more'
-
+       
          titles = []
-          xdoc.xpath('//h1/a').each {|node| titles << node.text }
+          xdoc.xpath('//h2/a').each {|node| titles << node.text }
 
           modifieds = []
-          xdoc.xpath("//*[contains(@class, 'the-time')]").each {|node| modifieds << node.text.to_date }
+          doc.xpath("//*[contains(@class, 'the-time')]").each {|node| modifieds << node.text.to_date }
 
           fulltexts=[]
           urls.each do |article|
@@ -287,10 +284,10 @@ namespace :grab_tasks do
                              :pic_url => imgs[i],
                              :full_text => fulltexts[i]}
 
-            # p @raw_parameters  
-            # p '___________'
+            p @raw_parameters  
+            p '___________'
             
-            # save_parameters
+            save_parameters
             i += 1
 
           end
@@ -318,7 +315,7 @@ namespace :grab_tasks do
       end
 
      titles = []
-      doc.xpath('//h1/a').each {|node| titles << node.text }
+      doc.xpath('//h2/a').each {|node| titles << node.text }
 
       modifieds = []
       doc.xpath("//*[contains(@class, 'the-time')]").each {|node| modifieds << node.text.to_date }

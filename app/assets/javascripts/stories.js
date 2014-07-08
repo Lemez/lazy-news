@@ -2,15 +2,17 @@ $(document).ready(function () {
 
 	// SLICK - image carousel
 
-	$('.mainpic').slick({
-  slidesToShow: 10,
-  slidesToScroll: 5
-});
+// 	$('.mainpic').slick({
+//   slidesToShow: 10,
+//   slidesToScroll: 5
+// });
 
 
 	// $("#music").dotdotdot({
 	// 		The HTML to add as ellipsis. 
 	// 	ellipsis	: '... ' )};
+
+
 
 // set up the dictionary of class to color values
 var myDict = {
@@ -88,6 +90,7 @@ var IconDict = {
 			myDate = "N/A";
 		} 
 
+		// $('.slick-track').css("visibility", "visible");
 		
  		
 		// get image value
@@ -139,7 +142,7 @@ var IconDict = {
 		$(this).find("td").css("visibility", "hidden");
 
 		$(this).closest('div.content').siblings().children().children().css("visibility", "hidden");
-	
+		// $('.slick-track').css("visibility", "visible");
 		});
 
 
@@ -184,28 +187,28 @@ var IconDict = {
 	 	// $('.all_by_date').parent('div').next().children('div').show();
 	 });
 
-	    $('button#all_by_a_to_z').click(function() {
-	 	$('.all_by_a_to_z').show(500);
-	 	$(this).addClass('active');
-	 	$('.all_by_a_to_z').siblings('div').hide();
-	 	$(this).siblings('button').removeClass('active');
-	 	// $('.all_by_date').parent('div').next().children('div').show();
+	  //   $('button#all_by_a_to_z').click(function() {
+	 	// $('.all_by_a_to_z').show(500);
+	 	// $(this).addClass('active');
+	 	// $('.all_by_a_to_z').siblings('div').hide();
+	 	// $(this).siblings('button').removeClass('active');
+	 	// // $('.all_by_date').parent('div').next().children('div').show();
 
 
-			for(var index = 0; index < $('tbody th').length; index++){
+			// for(var index = 0; index < $('tbody th').length; index++){
 
-				var myArea = $.trim($("th").eq(index).find("span.tag").text());
+			// 	var myArea = $.trim($("th").eq(index).find("span.tag").text());
 
-				var myIcon = IconDict[myArea];
+			// 	var myIcon = IconDict[myArea];
 
-				$('th').eq(index)
-	 				.find("img.tag")
-					.attr("src", myIcon)
-					.css("display", "inline")
-					.css("visibility", "visible"); // display logo
+			// 	$('th').eq(index)
+	 	// 			.find("img.tag")
+			// 		.attr("src", myIcon)
+			// 		.css("display", "inline")
+			// 		.css("visibility", "visible"); // display logo
 				
-			}
-		 });
+			// }
+		 // });
 
 	    $('button#music').click(function() {
 	 		$('.by_source').show(500);

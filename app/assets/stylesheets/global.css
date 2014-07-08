@@ -40,6 +40,8 @@ div#mydate, div#mysource {
 	width: 100%;
 }
 
+
+
 img#logo {
 	padding-left: 5%;
 	width: 150px;
@@ -168,8 +170,29 @@ nav button:hover {
 	padding-left: 5%;
 }
 
-#mainpic {
+.mainpic {
 	float:left;
+	width: 120%;
+	/*height: 20%;*/
+	position: fixed;
+	overflow: scroll;
+}
+
+.mainpic img {
+	margin-left: 1px;
+	height: 100px;
+	/*width: 100px;*/
+	opacity: 0.5;
+}
+
+.content {
+	width: 90%;
+	top: 40%;
+	float: left;
+	position: fixed;
+	overflow: scroll;
+	height: 60%;
+	border-top: 2px dashed gray;
 }
 
 
@@ -252,9 +275,10 @@ div#music {
 }
 
 img.hovered {
-	margin: 0 5px 0 5x;
+	/*margin: 0 5px 0 5x;
 	border-top: 5px solid white;
-	border-bottom: 5px solid white;
+	border-bottom: 5px solid white;*/
+	opacity: 1;
 }
 
 /*img.uparrow {

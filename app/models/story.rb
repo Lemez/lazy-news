@@ -26,9 +26,14 @@ def self.latest_order
 	self.ordered.limit(8)
 end
 
-def self.latest_order_hundred
-	self.ordered.limit(100)
+def self.latest_order_18
+	self.ordered.limit(18)
 end
+
+def self.last_month
+    where(:created_at => 5.weeks.ago.beginning_of_week.advance(:days => -1)..Time.now).order("created_at desc")
+end
+
 
 # def self.to_icon
 	# return "assets/icon_3688" if self == "education"

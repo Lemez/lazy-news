@@ -4,12 +4,11 @@ class StoriesController < ApplicationController
 
     @stories = Story.all
     @stories.each {|story| story.title = story.title.chomp!}
+    @source_keys = []
 
-     @source_keys = []
-     @stories.latest_order.each do |story|
+    @stories.latest_order.each do |story|
       @source_keys << story.area unless @source_keys.include?(story.area)
-     end
-
+    end
 
     @recent_musically = @stories.musically.latest_order
     @recent_techcrunch_edu = @stories.techcrunch.is_education.latest_order
@@ -22,7 +21,7 @@ class StoriesController < ApplicationController
     @music_sources = @stories.is_music.latest_order
     @education_sources = @stories.is_education.latest_order
 
-    @all_by_date = @stories.latest_order_hundred
+    @all_by_date = @stories.last_month.latest_order_18
     @all_by_a_to_z = @all_by_date.a_to_z
 
     @sources = [ @recent_musically,      

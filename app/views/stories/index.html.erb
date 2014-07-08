@@ -3,17 +3,19 @@
 	<div class="all_by_date" id="music">
 		<div class = 'sixteen columns offset-by-one'>
 		
-		<br class="clear" />
+		<!-- <br class="clear" /> -->
 
 		
 
 			<div class="row">
 				<div class='mainpic'>
 					<% @all_by_date.each do |story| %>
-						<div><%= link_to image_tag(story.pic_url, :id => story.id, :width =>100, :height=> 100) %></div>
+						<%= link_to image_tag(story.pic_url, :id => story.id) %>
 					<% end %>
 				</div>
-				
+			</div>
+
+			<div class="row">
 				<div class = 'content'>
 					<table>
 						<tbody>
