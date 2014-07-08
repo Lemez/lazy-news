@@ -13,8 +13,19 @@ namespace :grab_tasks do
    @story.title = @raw_parameters[:title]
    @story.url = @raw_parameters[:url]
    @story.modified = @raw_parameters[:modified]
-   @story.pic_url = @raw_parameters[:pic_url]
-   @story.full_text = @raw_parameters[:full_text]
+
+    if @raw_parameters[:pic_url]
+    @story.pic_url = @raw_parameters[:pic_url]
+   else
+    @story.pic_url = "assets/breaking_news.png"
+   end
+
+    if @raw_parameters[:pic_url]
+    @story.full_text = @raw_parameters[:full_text]
+   else
+    @story.full_text = ""
+   end
+
    @story.save
    p "saved"
   end
