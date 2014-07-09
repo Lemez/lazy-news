@@ -20,11 +20,11 @@ namespace :grab_tasks do
     @story.pic_url = "assets/breaking_news.png"
    end
 
-    if @raw_parameters[:full_text]
-    @story.full_text = @raw_parameters[:full_text]
-   else
-    @story.full_text = ""
-   end
+   #  if @raw_parameters[:full_text]
+   #  @story.full_text = @raw_parameters[:full_text]
+   # else
+   #  @story.full_text = ""
+   # end
 
    @story.save
    p "saved"
@@ -47,11 +47,11 @@ namespace :grab_tasks do
     p "running vb edu"
     Rake::Task["grab_tasks:grab_venturebeat_edu"].invoke
 
-    p "running tc music"
-    Rake::Task["grab_tasks:grab_techcrunch_music"].invoke
+    # p "running tc music"
+    # Rake::Task["grab_tasks:grab_techcrunch_music"].invoke
 
-    p "running tc music"
-    Rake::Task["grab_tasks:grab_techcrunch_edu"].invoke
+    # p "running tc edu"
+    # Rake::Task["grab_tasks:grab_techcrunch_edu"].invoke
   end
 
   task :grab_musically => :environment do
@@ -88,7 +88,8 @@ namespace :grab_tasks do
                           :url => url,
                           :modified => modified,
                           :pic_url => pic_url,
-                          :full_text => full_text}
+                          :full_text => full_text
+                        }
 
         # p @raw_parameters
         save_parameters
