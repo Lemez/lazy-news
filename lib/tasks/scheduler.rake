@@ -20,7 +20,7 @@ namespace :grab_tasks do
     @story.pic_url = "assets/breaking_news.png"
    end
 
-    if @raw_parameters[:pic_url]
+    if @raw_parameters[:full_text]
     @story.full_text = @raw_parameters[:full_text]
    else
     @story.full_text = ""
