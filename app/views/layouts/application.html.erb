@@ -31,7 +31,7 @@
 
 
 				<!-- <h3> FILTER: AREA </h3> -->
-				<% @source_keys.reverse.each do |area| %>
+				<% @source_keys.each do |area| %>
 					<button class='sources' 
 							id='<%=area.strip%>'
 					 		onclick="location.href='#';">

@@ -1,0 +1,36 @@
+/Users/JW/.rvm/rubies/ruby-2.0.0-p353/bin/ruby extconf.rb 
+checking for xmlNewDoc() in -lxml2... yes
+checking for nokogiri.h in /Users/JW/Websites/lazynews/vendor/bundle/ruby/2.0.0/gems/nokogiri-1.6.2.1/ext/nokogiri... yes
+checking for nokogiri.h in /Users/JW/Websites/lazynews/vendor/bundle/ruby/2.0.0/gems/nokogiri-1.6.2.1/ext/nokogiri... yes
+checking for gumbo_parse() in -lgumbo... no
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+compiling attribute.c
+compiling char_ref.c
+compiling error.c
+compiling nokogumbo.c
+In file included from nokogumbo.c:28:
+/Users/JW/Websites/lazynews/vendor/bundle/ruby/2.0.0/gems/nokogiri-1.6.2.1/ext/nokogiri/nokogiri.h:13:9: warning: '_GNU_SOURCE' macro redefined
+#define _GNU_SOURCE
+        ^
+/Users/JW/.rvm/rubies/ruby-2.0.0-p353/include/ruby-2.0.0/x86_64-darwin12.5.0/ruby/config.h:17:9: note: previous definition is here
+#define _GNU_SOURCE 1
+        ^
+1 warning generated.
+compiling parser.c
+compiling string_buffer.c
+compiling string_piece.c
+compiling tag.c
+compiling tokenizer.c
+compiling utf8.c
+compiling util.c
+compiling vector.c
+linking shared-object nokogumboc.bundle
+ld: warning: directory not found for option '-L/Users/mpapis/.sm/pkg/active/lib'
+
+make "DESTDIR=" install
+/usr/bin/install -m 0755 nokogumboc.bundle ./.gem.20140708-55175-1s276l0
+installing default nokogumboc libraries

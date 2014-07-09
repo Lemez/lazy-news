@@ -58,7 +58,7 @@ gem 'httparty'
 gem 'nokogiri'
 
 # skeleton for RSS
-gem "feedzirra"
+gem "feedjira"
 
 # schedule cron tasks for rake
 gem 'whenever', :require => false
