@@ -52,6 +52,7 @@ scope :techcrunch, -> { where(source:"techcrunch") }
 scope :musically, -> { where(source:"musically") }
 scope :thenextweb, -> { where(source:"thenextweb") }
 scope :learnegg, -> { where(source:"learnegg") }
+scope :cmu, -> { where(source:"cmu") }
 
 scope :is_music, -> {where(area:"music")}
 scope :is_education, -> {where(area:"education")}

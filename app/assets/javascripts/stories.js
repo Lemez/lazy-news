@@ -13,6 +13,20 @@ $(document).ready(function () {
 	// 	ellipsis	: '... ' )};
 
 
+	function hideStuff() {
+		 $(document)
+		 .find("div#mydate")
+		 .css("visibility", "hidden"); // hide date
+
+		 $(document)
+		 .find("div#mysource")
+		 .css("visibility", "hidden"); // hide date
+
+		 $(document)
+		 .find("img#logo")
+		 .css("visibility", "hidden"); // hide logo
+	}
+
 
 // set up the dictionary of class to color values
 var myDict = {
@@ -20,7 +34,8 @@ var myDict = {
 					  "techcrunch" : "darkgreen",
 					  "thenextweb" : "orangered",
 					  "venturebeat" : "red",
-					  "learnegg" : "black"
+					  "learnegg" : "black",
+					  "cmu" : "mediumblue"
 					  
 					};
 
@@ -29,7 +44,8 @@ var allSources = {
 					  "techcrunch" : "TECHCRUNCH",
 					  "thenextweb" : "THE NEXT WEB",
 					  "venturebeat" : "VENTUREBEAT",
-					  "learnegg" : "LEARNEGG"
+					  "learnegg" : "LEARNEGG",
+					  "cmu" : "CMU"
 }
 
 var LogoDict = {
@@ -37,7 +53,8 @@ var LogoDict = {
 					  "techcrunch" : "assets/tc.png",
 					  "venturebeat" : "assets/VB_logo.jpg",
 					  "thenextweb" : "assets/TheNextWeb.png",
-					  "learnegg" : "assets/learnegg.png"
+					  "learnegg" : "assets/learnegg.png",
+					  "cmu" : "assets/cmu.jpg"
 					  
 					};
 
@@ -180,10 +197,14 @@ var IconDict = {
 
 
 	 $('button#all_by_date').click(function() {
-	 	$('.all_by_date').show(500);
+	 	$('.all_by_date').show();
 	 	$(this).addClass('active');
 	 	$('.all_by_date').siblings('div').hide();
 	 	$(this).siblings('button').removeClass('active');
+
+	 	hideStuff();
+	 	return false;
+
 	 	// $('.all_by_date').parent('div').next().children('div').show();
 	 });
 
@@ -216,11 +237,15 @@ var IconDict = {
 	 		$('.by_source').find('div#source_education').hide();
 	 		$('.by_source').find('div#source_music').show();
 
+	 		hideStuff();
 
 
 	 		$(this).addClass('active');
 	 		$(this).siblings('button').removeClass('active');
-	 		// $('.all_by_date').parent('div').next().children('div').show();
+
+	 			// $('.all_by_date').parent('div').next().children('div').show();
+		 	return false;
+	 	
 	 });
 
 	    $('button#education').click(function() {
@@ -229,9 +254,14 @@ var IconDict = {
 		 	$('.by_source').find('div#source_music').hide();
 		 	$('.by_source').find('div#source_education').show();
 
+		 	hideStuff();
+
 		 	$(this).addClass('active');
 		 	$(this).siblings('button').removeClass('active');
+
 		 	// $('.all_by_date').parent('div').next().children('div').show();
+		 	return false;
+		 	
 	 });
 
 //wip
@@ -244,34 +274,34 @@ var IconDict = {
 
 
 
-	  $('button.types').click(function() {
-	 	$('button_options').toggle();
-    	$(this).toggleClass('active');
+	//   $('button.types').click(function() {
+	//  	$('button_options').toggle();
+ //    	$(this).toggleClass('active');
     
-		var type = $(this).attr("id");
-		var name = TypeDict[type];
+	// 	var type = $(this).attr("id");
+	// 	var name = TypeDict[type];
 
-		for (var i=0;i<name.length;i++) { 
-			var item = name[i];
-			$(document).find('th.' + item).fadeToggle(500);
-			}
+	// 	for (var i=0;i<name.length;i++) { 
+	// 		var item = name[i];
+	// 		$(document).find('th.' + item).fadeToggle(500);
+	// 		}
 		
-		return false;
+	// 	return false;
 
-	 });
+	//  });
 
 
-	$('button.sources').click(function() {
-    	$('button_options').toggle();
-    	$(this).toggleClass('active');
+	// $('button.sources').click(function() {
+ //    	$('button_options').toggle();
+ //    	$(this).toggleClass('active');
     
-		var name = $(this).attr("id");
-		var n = name.split(" ")[0];
+	// 	var name = $(this).attr("id");
+	// 	var n = name.split(" ")[0];
 		
-		$(document).find('th.' + name).fadeToggle(500);
+	// 	$(document).find('th.' + name).fadeToggle(500);
 
-		return false;
+	// 	return false;
 
-	});
+	// });
 
 });

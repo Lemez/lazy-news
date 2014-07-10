@@ -157,8 +157,8 @@ nav button:hover {
 	left: 30%;
 	z-index: 10;
 	display: inline-block;
-	height: 50px;
-	line-height: 5;
+/*	height: 50px;*/
+	/*line-height: 5;*/
 }
 
 #mydate h4, #mysource h4{
@@ -172,10 +172,11 @@ nav button:hover {
 
 .mainpic {
 	float:left;
-	width: 110%;
-	/*height: 20%;*/
+	width: 90%;
+	height: 200px;
 	position: fixed;
 	display: inline-block;
+	overflow: hidden;
 }
 
 .mainpic img {
@@ -192,7 +193,7 @@ nav button:hover {
 	position: fixed;
 	overflow: scroll;
 	height: 60%;
-	border-top: 2px dashed gray;
+	border-top: 2px dashed white;
 }
 
 table {
@@ -215,7 +216,7 @@ tbody a, a:visited {
 	padding-top: 2px;
 	line-height: 1.5;
 	text-decoration: none;
-	color: darkgray;
+	color: rgba(0,0,0,0.6);
 }
 
 tbody td {
@@ -320,6 +321,22 @@ img.downarrow {
     background-color: slategray;
     color: white;
 }
+
+.cmu tr {
+    border-bottom: 2px solid mediumblue;
+}
+
+.cmu ul li span {
+    color: mediumblue;
+}
+
+.cmu .square,
+    /*button#mondomix, */
+.cmu a:hover, .cmu a.hovered {
+    background-color: mediumblue;
+    color: white;
+}
+
 
 .techcrunch tr {
     border-bottom: 2px solid darkgreen;

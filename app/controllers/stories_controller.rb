@@ -11,6 +11,7 @@ class StoriesController < ApplicationController
     end
 
     @recent_musically = @stories.musically.latest_order
+    @recent_cmu = @stories.cmu.latest_order
     @recent_techcrunch_edu = @stories.techcrunch.is_education.latest_order
     @recent_techcrunch_music = @stories.techcrunch.is_music.latest_order
     @recent_venturebeat_edu = @stories.venturebeat.is_education.latest_order
@@ -24,7 +25,8 @@ class StoriesController < ApplicationController
     @all_by_date = @stories.last_month.latest_order_18
     @all_by_a_to_z = @all_by_date.a_to_z
 
-    @sources = [ @recent_musically,      
+    @sources = [ @recent_musically, 
+                 @recent_cmu,     
                  @recent_techcrunch_music,
                  @recent_venturebeat_music,
                  # @recent_learnegg,

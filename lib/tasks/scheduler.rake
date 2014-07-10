@@ -6,6 +6,15 @@ namespace :grab_tasks do
   require 'selenium-webdriver'
   require 'phantomjs'
 
+  def set_up_parameters
+    @imgs = []
+    @titles = []
+    @urls = []
+    @full_texts = []
+    @modifieds = []
+  end
+
+
   def save_parameters
    @story = Story.new
    @story.source = @raw_parameters[:source]
@@ -17,7 +26,7 @@ namespace :grab_tasks do
     if @raw_parameters[:pic_url]
     @story.pic_url = @raw_parameters[:pic_url]
    else
-    @story.pic_url = "assets/breaking_news.png"
+    @story.pic_url = "breaking_news.png"
    end
 
    #  if @raw_parameters[:full_text]
@@ -46,6 +55,9 @@ namespace :grab_tasks do
 
     p "running vb edu"
     Rake::Task["grab_tasks:grab_venturebeat_edu"].invoke
+
+    p "running cmu music"
+    Rake::Task["grab_tasks:grab_cmu"].invoke
 
     # p "running tc music"
     # Rake::Task["grab_tasks:grab_techcrunch_music"].invoke
@@ -365,6 +377,38 @@ namespace :grab_tasks do
         i += 1
 
       end
+  end
+
+
+  task :grab_cmu => :environment do
+    response = HTTParty.get('http://www.completemusicupdate.com/topstories/')
+     doc = Nokogiri::HTML(response)
+      set_up_parameters
+
+      doc.xpath("//*[contains(@class, 'srp-thumbnail-box')]/a/img").each {|node| @imgs << node["src"] if node["src"]}
+      doc.xpath("//*[contains(@class, 'srp-post-title')]/a").each {|node| @urls << node["href"] if node["href"]}
+      doc.xpath("//*[contains(@class, 'srp-post-title')]/a").each {|node| @titles << node.text if node.text}
+      doc.xpath("//*[contains(@class, 'srp-widget-date')]").each {|node| @modifieds << node.text if node.text}
+
+       i = 0
+       while i < @titles.length
+
+        @raw_parameters = { :source => "cmu",
+                          :area => "music",
+                         :title => @titles[i],
+                         :url => @urls[i],
+                         :modified => @modifieds[i],
+                         :pic_url => @imgs[i],
+                         # :full_text => fulltexts[i]
+                       }
+
+         p @raw_parameters  
+         p '___________'
+        
+        save_parameters
+        i += 1
+      end
+
   end
 
   #work in progress 
