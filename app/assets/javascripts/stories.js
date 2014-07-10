@@ -239,7 +239,6 @@ var IconDict = {
 
 	 		hideStuff();
 
-
 	 		$(this).addClass('active');
 	 		$(this).siblings('button').removeClass('active');
 

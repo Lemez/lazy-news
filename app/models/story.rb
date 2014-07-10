@@ -37,6 +37,14 @@ def self.last_month
     where(:created_at => 5.weeks.ago.beginning_of_week.advance(:days => -1)..Time.now).order("created_at desc")
 end
 
+def self.last_week
+    where(:created_at => 1.week.ago.beginning_of_week.advance(:days => -1)..Time.now).order("created_at desc")
+end
+
+# def latest_tags
+# 	get_histogram
+# end
+
 
 # def self.to_icon
 	# return "assets/icon_3688" if self == "education"

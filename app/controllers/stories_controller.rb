@@ -35,44 +35,13 @@ class StoriesController < ApplicationController
                  @recent_venturebeat_edu,
               ]
 
-  
-
-    # make_histogram
+    # make_histogram moved to application controller
 
   end
 
 
 
-  def make_histogram
-      #   @words = Array.new
 
-  #   @sources.each do |source|
-  #     source.each do |story|
-  #       story = story.full_text.split(" ") rescue story = story.title.split(" ")
-  #       story.each do |word|
-  #         @words.push(word) unless word[-2..-1] == "/'s"
-  #         @words.push(word[0...-2]) if word[-2..-1] == "/'s"
-  #       end
-  #     end
-  #   end
- 
-  # @wf = Hash.new(0)
-  # @histogram = Hash.new(0)
-  # @words.each { |word| @wf[word] += 1 }
-  # @wf = @wf.sort_by{|k, v| v}.reverse
-
-  # @wf.each do |item|
-  #   word = item[0].gsub(/\W+/, '')
-  #   @histogram[word]=item[1] #unless word.downcase.not_valid_for_cloud? or word.not_proper?
-  # end
-
-  #   @histogram.each do |word,freq|
-  #     if @histogram.include?(word) && @histogram.include?(word + 's')
-  #       @histogram[word] = freq + @histogram[word + 's'].to_i
-  #       @histogram.delete(word+'s')
-  #     end
-  #   end
-  end
 
   private
   def story_params
