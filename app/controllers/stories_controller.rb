@@ -37,6 +37,8 @@ class StoriesController < ApplicationController
 
     # make_histogram moved to application controller
 
+    @top_stories = ApplicationController.new.make_histogram
+
   end
 
 

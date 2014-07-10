@@ -13,6 +13,10 @@ validates :url, presence: true, uniqueness: true
 # has_attached_file :pic, :styles => { :medium => "300x300>", :thumb => "100x100>" }
 # , :default_url => "/images/womex.jpg"
 
+# def is_hot?
+# 	where(id:)
+# end
+
 def self.is_valid?
 	# self.modified < Date.today
 end

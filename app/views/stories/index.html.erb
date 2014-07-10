@@ -53,7 +53,7 @@
 
 	</div>
 
-	<div class="all_by_a_to_z" id="music">
+	<!-- <div class="top_stories" id="music">
 		<div class = 'sixteen columns offset-by-one'>
 
 		<div class="row">
@@ -61,32 +61,34 @@
 			<div class = 'content'>
 					<table>
 						<tbody>
-						<% @all_by_a_to_z.each do |story| %>
+						<% @top_stories.each do |tag| %>
+							<% 0..tag[1].times do |story| %>
 						
 							<tr>
-								<td>
-									<%= story.source %>
+								<td> 
+									<%= tag[0] %> 
 								</td>
 							
 								<th>
-									<span id="<%= story.area.strip %>">
+									<span id="<%# story.area.strip %>">
 
 										<span class="intext">
-											<% t=story.modified %>
-											<%=  t.strftime("%d.%m.%Y").strip if t %> 
+											<%# t=story.modified %>
+											<%#  t.strftime("%d.%m.%Y").strip if t %> 
 										</span> 
 
 										<img class='tag' src='' width = '20' />
 										
 										<span class='tag'>
-											<%= story.area.upcase.strip %>	
+											<%# story.area.upcase.strip %>	
 										</span>
 										
-										<%= link_to story.title, story.url, :target => "_blank" %>
+										<%# link_to story.title, story.url, :target => "_blank" %>
 									</span>
 									
 								</th>
 							</tr>
+							<% end %>
 							<% end %>
 						</tbody>
 					</table>
@@ -94,7 +96,7 @@
 			</div>
 		</div>
 
-	</div>
+	</div> -->
 
 
 	<div class="by_source">
