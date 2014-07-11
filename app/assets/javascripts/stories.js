@@ -199,7 +199,7 @@ var IconDict = {
 
 
 	 $('button#all_by_date').click(function() {
-	 	$('tr').css("display", "block");
+	 	$('tr').css("display", "inline-block");
 
 
 	 	$('.all_by_date').show();
@@ -239,7 +239,7 @@ var IconDict = {
 		 // });
 
 	    $('button#music').click(function() {
-	    	$('tr').css("display", "block");
+	    	$('tr').css("display", "inline");
 
 
 	 		$('.by_source').show(500);
@@ -259,7 +259,7 @@ var IconDict = {
 	 });
 
 	    $('button#education').click(function() {
-	    	$('tr').css("display", "block");
+	    	$('tr').css("display", "inline");
 
 
 	 		$('.by_source').show(500);
@@ -282,7 +282,6 @@ var IconDict = {
 	    	$('.by_source').hide();
 	 		$('.top_stories').show();
 	 		$('.all_by_date').hide();
-		 	
 		 
 		 	hideStuff();
 
@@ -291,7 +290,8 @@ var IconDict = {
 		 	$(this).addClass('active');
 		 	$(this).siblings('button').removeClass('active');
 
-		 	// $('.all_by_date').parent('div').next().children('div').show();
+		 	$('div#keyword_tags').first().trigger('click');
+
 		 	return false;
 		 	
 	 });
