@@ -197,10 +197,15 @@ var IconDict = {
 
 
 	 $('button#all_by_date').click(function() {
+	 	$('tr').css("display", "block");
+
+
 	 	$('.all_by_date').show();
 	 	$(this).addClass('active');
 	 	$('.all_by_date').siblings('div').hide();
 	 	$(this).siblings('button').removeClass('active');
+
+
 
 	 	hideStuff();
 	 	return false;
@@ -232,7 +237,11 @@ var IconDict = {
 		 // });
 
 	    $('button#music').click(function() {
+	    	$('tr').css("display", "block");
+
+
 	 		$('.by_source').show(500);
+	 		$('.top_stories').hide();
 	 		$('.by_source').siblings('div').hide();
 	 		$('.by_source').find('div#source_education').hide();
 	 		$('.by_source').find('div#source_music').show();
@@ -248,7 +257,11 @@ var IconDict = {
 	 });
 
 	    $('button#education').click(function() {
+	    	$('tr').css("display", "block");
+
+
 	 		$('.by_source').show(500);
+	 		$('.top_stories').hide();
 		 	$('.by_source').siblings('div').hide();
 		 	$('.by_source').find('div#source_music').hide();
 		 	$('.by_source').find('div#source_education').show();
@@ -261,6 +274,40 @@ var IconDict = {
 		 	// $('.all_by_date').parent('div').next().children('div').show();
 		 	return false;
 		 	
+	 });
+
+	    $('button.hot').click(function() {
+	    	$('.by_source').hide();
+	 		$('.top_stories').show();
+	 		$('.all_by_date').hide();
+		 	
+		 
+		 	hideStuff();
+
+		 	$('tr').css("display", "none");
+
+		 	$(this).addClass('active');
+		 	$(this).siblings('button').removeClass('active');
+
+		 	// $('.all_by_date').parent('div').next().children('div').show();
+		 	return false;
+		 	
+	 });
+
+	    // show relevant stories after click on keyword
+	     $('div#keyword_tags').click(function() {
+
+	     	$(this).addClass('active');
+	     	$(this).siblings('div').removeClass('active');
+	 
+	 		var keyword = $.trim($(this).text());
+	 		var keywordClass = '.' + keyword;
+	 		
+	 		$(document).find(keywordClass).siblings('tr').css("display", "none");
+		 	$(document).find(keywordClass).css("display", "block");
+
+
+		 				
 	 });
 
 //wip

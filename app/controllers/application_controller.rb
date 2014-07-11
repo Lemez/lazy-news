@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
-def make_histogram
+def get_top_stories
 
     @stories = Story.all
 
@@ -14,7 +14,6 @@ def make_histogram
     @current_sources = []
     @relevant_stories.each {|story| @current_sources << story.source unless @current_sources.include?(story.source)}
     
-
     @relevant_stories.each do |story|
 
     	id = story.id
@@ -66,6 +65,8 @@ def make_histogram
 	@freqs.each {|item| @stories_of_the_week << item if item[1] > minimum_frequency}
 
 	return @stories_of_the_week
+
+	
 # check tags and stories are not overlapping - ie Amazon and Prime
 	# @stories_of_the_week.each do |story|
 	# 	@stories_of_the_week.each do |otherstory|

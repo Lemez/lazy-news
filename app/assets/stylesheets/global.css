@@ -149,6 +149,23 @@ nav button.tags {
 	display: none;
 }
 
+.top-stories {
+	display: block;
+}
+
+#keyword_tags {
+	margin: 0 1px 0 1px;
+}
+
+#keyword_tags:hover {
+	background-color: gold;
+	cursor: pointer;
+} 
+
+#keyword_tags.active {
+	background-color: pink;
+}
+
 
 .container h1 {
 	font-family: 'Oxygen', sans-serif;
@@ -298,7 +315,7 @@ img.downarrow {
 }*/
 
 .learnegg tr {
-    border-bottom: 2px solid white;
+    /*border-bottom: 2px solid white;*/
 }
 
 .learnegg ul li span {
@@ -313,7 +330,7 @@ img.downarrow {
 }
 
 .musically tr {
-    border-bottom: 2px solid slategray;
+    /*border-bottom: 2px solid slategray;*/
 }
 
 .musically ul li span {
@@ -328,7 +345,7 @@ img.downarrow {
 }
 
 .cmu tr {
-    border-bottom: 2px solid mediumblue;
+    /*border-bottom: 2px solid mediumblue;*/
 }
 
 .cmu ul li span {
@@ -344,7 +361,7 @@ img.downarrow {
 
 
 .techcrunch tr {
-    border-bottom: 2px solid darkgreen;
+    /*border-bottom: 2px solid darkgreen;*/
 }
 
 .techcrunch ul li span {
@@ -359,7 +376,7 @@ img.downarrow {
 }
 
 .thenextweb tr {
-    border-bottom: 2px solid orangered;
+    /*border-bottom: 2px solid orangered;*/
 }
 
 .thenextweb ul li span {
@@ -374,7 +391,7 @@ img.downarrow {
 }
 
 .venturebeat tr {
-    border-bottom: 2px solid red;
+    /*border-bottom: 2px solid red;*/
 }
 
 .venturebeat ul li span {

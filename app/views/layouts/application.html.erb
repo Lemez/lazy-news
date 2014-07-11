@@ -44,9 +44,9 @@
 				<button class='hot'>
 					WHAT'S HOT
 				</button>
-				
+
 				<!-- <h3> FILTER: TAG </h3> -->
-				<% @top_stories.each do |story| %>
+				<% @top_stories_array.each do |story| %>
 					<button class='tags' 
 							id='<%=story[0]%>'
 							frequency='<%=story[1]%>'

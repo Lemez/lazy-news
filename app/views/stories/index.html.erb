@@ -53,42 +53,60 @@
 
 	</div>
 
-	<!-- <div class="top_stories" id="music">
+	<div class="top_stories" id="music">
 		<div class = 'sixteen columns offset-by-one'>
 
 		<div class="row">
+				<!-- put logic for links and keywords here -->
+				<!-- ["Google", 8, [994, 983, 941, 930, 927, 926, 909, 898] -->
+				<% @top_stories_array.each do |compiled_array| %>
+						<% @keyword = compiled_array[0].strip %>
+							<% @frequency = compiled_array[1] %>
+							<% @size = @frequency * 10 %>
+
+							<div id='keyword_tags' key='<%= @keyword %>' style="font-size:<%=@size%>px; display: inline;">
+								<%= @keyword %>
+							</div>
+
+				<% end %>
+				
+
 			
 			<div class = 'content'>
 					<table>
 						<tbody>
-						<% @top_stories.each do |tag| %>
-							<% 0..tag[1].times do |story| %>
+						<% @top_stories.each do |array| %>
 						
-							<tr>
+							<% @keyword = array[0].strip %>
+							<% @frequency = array[1] %>
+							<% @story = array[2].first %>
+
+
+							<tr class="<%= @keyword %>">
 								<td> 
-									<%= tag[0] %> 
+									<%= @story.source %>
 								</td>
 							
 								<th>
-									<span id="<%# story.area.strip %>">
+									<span id="<%= @story.area.strip %>">
 
 										<span class="intext">
-											<%# t=story.modified %>
-											<%#  t.strftime("%d.%m.%Y").strip if t %> 
+											<% t=@story.modified %>
+											<%=  t.strftime("%d.%m.%Y").strip if t %> 
 										</span> 
 
-										<img class='tag' src='' width = '20' />
+										<img class='tag' src='<%=@story.pic_url%>' width = '20' />
 										
 										<span class='tag'>
-											<%# story.area.upcase.strip %>	
+											<%# @story.area.upcase.strip %>	
 										</span>
-										
-										<%# link_to story.title, story.url, :target => "_blank" %>
+										<%# @keyword %>
+										<%= link_to @story.title, @story.url, :target => "_blank" %>
 									</span>
 									
 								</th>
 							</tr>
-							<% end %>
+				
 							<% end %>
 						</tbody>
 					</table>
@@ -96,7 +114,7 @@
 			</div>
 		</div>
 
-	</div> -->
+	</div>
 
 
 	<div class="by_source">

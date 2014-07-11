@@ -35,9 +35,29 @@ class StoriesController < ApplicationController
                  @recent_venturebeat_edu,
               ]
 
-    # make_histogram moved to application controller
+    # make_histogram renamed to get_top_stories and moved to application controller
 
-    @top_stories = ApplicationController.new.make_histogram
+    @top_stories_array = ApplicationController.new.get_top_stories
+
+     # ["Google", 8, [994, 983, 941, 930, 927, 926, 909, 898]
+
+     @top_stories = []
+
+     # turn it into an array with the stories inside
+
+    @top_stories_array.each do |array|
+      array[2].each do |story_id| 
+        @current_story = Story.where(id:story_id) if story_id
+        @top_stories << [array[0], array[1], @current_story]
+      end
+      
+    end
+
+    i = 0
+    while i < @top_stories.length
+      @top_stories[i][2] = @top_stories[i][2].order("modified DESC")
+      i += 1
+    end
 
   end
 
