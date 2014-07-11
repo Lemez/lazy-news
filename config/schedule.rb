@@ -21,11 +21,6 @@
 
 # set :output, {:error => "log/cron_error_log.log", :standard => "log/cron_log.log"}
 
-# every 12.hours do
-# 	rake "grab_womex"
-# 	rake "grab_guardian"
-# 	rake "grab_npr"
-# 	rake "grab_songlines"
-# 	rake "grab_wmce"
-# 	rake "grab_afropop"
-# end
+every 2.hours do
+	rake "grab_tasks:execute_all"
+end
