@@ -185,7 +185,7 @@ namespace :grab_tasks do
 
   task :grab_techcrunch_edu => :environment do
 
-      uri =  'http://techcrunch.com/search/education+language+learning#stq=education language+learning&stp=1'
+      uri =  'http://techcrunch.com/search/"language+learning"#stq="language learning"&stp=1'
       encoded_uri = URI.encode(uri)
 
       title_selector = "h2.st-result-title a"
@@ -203,7 +203,8 @@ namespace :grab_tasks do
 
       driver = Selenium::WebDriver.for :firefox
       driver.get(uri)
-      driver.switch_to.default_content
+      # driver.switch_to.default_content
+      driver.find_element(:id,'recent-sort-selector').click
 
       # get image
       items = driver.find_elements(:css, img_selector)

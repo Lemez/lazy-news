@@ -33,13 +33,14 @@ def get_top_stories
 			else
 				# p word + ": rejected"
 			end
+
 		end
         	 
-       end
+    end
 
     
  
-	  @wf = Hash.new(0)
+	@wf = Hash.new(0)
 
 	  # @histogram = Hash.new(0)
 

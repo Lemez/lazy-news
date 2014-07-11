@@ -168,6 +168,10 @@ nav button.tags {
 }
 
 
+.container {
+	width: 200%;
+}
+
 .container h1 {
 	font-family: 'Oxygen', sans-serif;
 	font-weight: 700;

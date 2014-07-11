@@ -33,6 +33,10 @@ def self.latest_order
 	self.ordered.limit(8)
 end
 
+def self.latest_fifty
+	self.ordered.limit(50)
+end
+
 def self.latest_order_18
 	self.ordered.limit(18)
 end

@@ -6,7 +6,7 @@ class StoriesController < ApplicationController
     @stories.each {|story| story.title = story.title.chomp!}
     @source_keys = []
 
-    @stories.latest_order.each do |story|
+    @stories.latest_fifty.each do |story|
       @source_keys << story.area unless @source_keys.include?(story.area)
     end
 
@@ -25,10 +25,11 @@ class StoriesController < ApplicationController
     @all_by_date = @stories.last_month.latest_order_18
     @all_by_a_to_z = @all_by_date.a_to_z
 
-    @sources = [ @recent_musically, 
-                 @recent_cmu,     
+    @sources = [  
                  @recent_techcrunch_music,
+                 @recent_musically,
                  @recent_venturebeat_music,
+                 @recent_cmu, 
                  # @recent_learnegg,
                  @recent_techcrunch_edu,
                  # @recent_thenextweb_edu,

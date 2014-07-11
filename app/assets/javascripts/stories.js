@@ -239,7 +239,7 @@ var IconDict = {
 		 // });
 
 	    $('button#music').click(function() {
-	    	$('tr').css("display", "inline");
+	    	$('tr').css("display", "block");
 
 
 	 		$('.by_source').show(500);
@@ -259,7 +259,7 @@ var IconDict = {
 	 });
 
 	    $('button#education').click(function() {
-	    	$('tr').css("display", "inline");
+	    	$('tr').css("display", "block");
 
 
 	 		$('.by_source').show(500);
