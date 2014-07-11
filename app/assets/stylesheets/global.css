@@ -149,6 +149,7 @@ nav button.tags {
 	display: none;
 }
 
+
 .top-stories {
 	display: block;
 }
@@ -342,6 +343,8 @@ img.downarrow {
 .musically a:hover, .musically a.hovered {
     background-color: slategray;
     color: white;
+    -webkit-transition: background-color 0.5s;
+    -moz-transition: background-color 0.5s;
 }
 
 .cmu tr {
@@ -357,6 +360,8 @@ img.downarrow {
 .cmu a:hover, .cmu a.hovered {
     background-color: mediumblue;
     color: white;
+    -webkit-transition: background-color 0.5s;
+    -moz-transition: background-color 0.5s;
 }
 
 
@@ -373,6 +378,8 @@ img.downarrow {
 .techcrunch a:hover, .techcrunch a.hovered {
     background-color: darkgreen;
     color: white;
+    -webkit-transition: background-color 0.5s;
+    -moz-transition: background-color 0.5s;
 }
 
 .thenextweb tr {
@@ -403,6 +410,8 @@ img.downarrow {
 .venturebeat a:hover, .venturebeat a.hovered {
     background-color: red;
     color: white;
+    -webkit-transition: background-color 0.5s;
+    -moz-transition: background-color 0.5s;
 }
 
 

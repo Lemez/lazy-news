@@ -172,11 +172,13 @@ var IconDict = {
 			var theStorylink = $('tbody tr').find(myStoryId).find('a');
 
 			theStorylink.toggleClass("hovered"); // highlight the story in the table
+			theStorylink.trigger( "mouseenter" ); // trigger action of mouseenter
 			$(this).toggleClass("hovered"); // add hovered state to the pic
 
 			var theStoryUrl = theStorylink.attr("href"); // get the story URL
 			$(this).parent().attr("href", theStoryUrl); // link the pic to the story
 			$(this).parent().attr("target", "_blank"); // force open in a new tab
+
 		
 		});
 
