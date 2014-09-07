@@ -174,7 +174,6 @@ var IconDict = {
 			theStorylink.toggleClass("hovered"); // highlight the story in the table
 			theStorylink.trigger( "mouseenter" ); // trigger action of mouseenter
 			$(this).toggleClass("hovered"); // add hovered state to the pic
-			console.log(this);
 
 			var theStoryUrl = theStorylink.attr("href"); // get the story URL
 			$(this).parent().attr("href", theStoryUrl); // link the pic to the story
@@ -195,7 +194,6 @@ var IconDict = {
 				 .toggleClass("hovered"); // unhighlight the story	
 
 			$(this).toggleClass("hovered"); // remove hovered state from the pic
-			
 		
 		});
 
