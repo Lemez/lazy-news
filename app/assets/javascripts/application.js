@@ -11,6 +11,10 @@
 // about supported directives.
 //
 //= require jquery
+
+
+//= require jquery_ujs
 //= require isotope
+//= require jqcloud
 //= require turbolinks
 //= require_tree .
