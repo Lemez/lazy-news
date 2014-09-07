@@ -8,10 +8,9 @@ group :development, :test do
     gem 'sqlite3'
 end
 
-group :production do
-    # gem 'thin'
+# group :production do
     gem 'pg'
-end
+# end
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -84,6 +83,8 @@ gem "phantomjs", "~> 1.9.2.0"
 group :development do
   gem "better_errors"
 end
+
+gem 'rails_12factor', group: :production
 
 
 
