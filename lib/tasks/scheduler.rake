@@ -66,6 +66,7 @@ namespace :grab_tasks do
     # Rake::Task["grab_tasks:grab_techcrunch_edu"].invoke
   end
 
+
   task :grab_musically => :environment do
      response = HTTParty.get('http://musically.com/features-2/')
      doc = Nokogiri::HTML(response)
@@ -111,7 +112,7 @@ namespace :grab_tasks do
 
   task :grab_techcrunch_music => :environment do
 
-      uri =  'http://techcrunch.com/search/music+industry#stq=music industry&stp=1'
+      uri =  'http://techcrunch.com/search/music#stq=music&stp=1'
       encoded_uri = URI.encode(uri)
 
       title_selector = "h2.st-result-title a"
@@ -185,7 +186,7 @@ namespace :grab_tasks do
 
   task :grab_techcrunch_edu => :environment do
 
-      uri =  'http://techcrunch.com/search/"language+learning"#stq="language learning"&stp=1'
+      uri =  'http://techcrunch.com/search/"language"#stq="language"&stp=1'
       encoded_uri = URI.encode(uri)
 
       title_selector = "h2.st-result-title a"

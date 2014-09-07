@@ -9,8 +9,9 @@
 
 			<div class="row">
 				<div class='mainpic'>
+
 					<% @all_by_date.each do |story| %>
-						<%= link_to image_tag(story.pic_url, :id => story.id) %>
+						<%= link_to image_tag(story.pic_url, :id => story.id, :height => 80) %>
 					<% end %>
 				</div>
 			</div>
@@ -61,7 +62,7 @@
 				<% @top_stories_array.each do |compiled_array| %>
 						<% @keyword = compiled_array[0].strip %>
 							<% @frequency = compiled_array[1] %>
-							<% @size = @frequency * 10 %>
+							<% @size = @frequency * 16 %>
 
 							<div id='keyword_tags' key='<%= @keyword %>' style="font-size:<%=@size%>px; display: inline;">
 								<%= @keyword %>
@@ -71,7 +72,7 @@
 				
 
 			
-			<div class = 'content'>
+			<div class = 'content' id='top_stories'>
 					<table>
 						<tbody>
 						<% @top_stories.each do |array| %>

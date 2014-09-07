@@ -9,7 +9,7 @@ def get_top_stories
 
     @words = Array.new
 
-    @relevant_stories = @stories.is_music.last_week
+    @relevant_stories = @stories.last_month
 
     @current_sources = []
     @relevant_stories.each {|story| @current_sources << story.source unless @current_sources.include?(story.source)}
@@ -63,7 +63,7 @@ def get_top_stories
 
 	minimum_frequency = 1
 
-	@freqs.each {|item| @stories_of_the_week << item if item[1] > minimum_frequency}
+	@freqs.each {|item| @stories_of_the_week << item if item[1] >= minimum_frequency}
 
 	return @stories_of_the_week
 

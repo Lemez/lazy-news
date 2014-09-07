@@ -199,25 +199,34 @@ nav button.tags {
 
 .mainpic {
 	float:left;
-	width: 90%;
-	height: 200px;
-	position: fixed;
+	padding-right: 5%;
+	width: 97%;
+	/*height: 200px;*/
+	/*position: fixed;*/
 	display: inline-block;
 	overflow: hidden;
 }
 
 .mainpic img {
 	margin-left: 1px;
-	height: 100px;
+	/*height: 100px;*/
 	/*width: 100px;*/
 	opacity: 0.75;
 }
 
+#top_stories {
+	margin-top: 5%;
+}
+
+#keyword_tags {
+	margin: 0 2px 0 2px;
+}
+
 .content {
 	width: 90%;
-	top: 40%;
+	/*top: 40%;*/
 	float: left;
-	position: fixed;
+	/*position: fixed;*/
 	overflow: scroll;
 	height: 60%;
 	border-top: 2px dashed white;
