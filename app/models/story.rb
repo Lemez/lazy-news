@@ -21,6 +21,10 @@ def self.is_valid?
 	# self.modified < Date.today
 end
 
+def self.source
+	@source
+end
+
 def self.ordered
 	self.order(modified: :desc) #.is_valid?
 end
