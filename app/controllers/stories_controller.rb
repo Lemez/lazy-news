@@ -31,7 +31,7 @@ class StoriesController < ApplicationController
                  @recent_musically,
                  @recent_venturebeat_music,
                  @recent_cmu, 
-                 @recent_edsurge, 
+                 # @recent_edsurge, 
                  # @recent_learnegg,
                  # @recent_techcrunch_edu,
                  # @recent_thenextweb_edu,
