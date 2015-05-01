@@ -16,18 +16,28 @@ namespace :grab_tasks do
 
 
   def save_parameters
-   @story = Story.new
-   @story.source = @raw_parameters[:source]
-   @story.area = @raw_parameters[:area]
-   @story.title = @raw_parameters[:title]
-   @story.url = @raw_parameters[:url]
-   @story.modified = @raw_parameters[:modified]
 
-    if @raw_parameters[:pic_url]
-    @story.pic_url = @raw_parameters[:pic_url]
-   else
-    @story.pic_url = "breaking_news.png"
-   end
+    @story = Story.where(:url => @raw_parameters[:url]).first
+
+    if @story.nil?
+      @story = Story.where(:url => @raw_parameters[:url]).first_or_create
+      @story.source = @raw_parameters[:source]
+      @story.area = @raw_parameters[:area]
+      @story.title = @raw_parameters[:title]
+      @story.url = @raw_parameters[:url]
+      @story.modified = @raw_parameters[:modified]
+
+    else
+      p "Story #{@raw_parameters[:title]} already exists"
+
+      if @raw_parameters[:pic_url]
+        @story.pic_url = @raw_parameters[:pic_url]
+      else
+        @story.pic_url = "breaking_news.png"
+      end
+      @story.save!
+
+    end
 
    #  if @raw_parameters[:full_text]
    #  @story.full_text = @raw_parameters[:full_text]
@@ -35,7 +45,6 @@ namespace :grab_tasks do
    #  @story.full_text = ""
    # end
 
-   @story.save
    p "saved"
   end
 
@@ -58,6 +67,9 @@ namespace :grab_tasks do
 
     p "running cmu music"
     Rake::Task["grab_tasks:grab_cmu"].invoke
+
+    p "running edsurge edu"
+    Rake::Task["grab_tasks:grab_edsurge"].invoke
 
     # p "running tc music"
     # Rake::Task["grab_tasks:grab_techcrunch_music"].invoke
