@@ -1,0 +1,54 @@
+<div class="by_source">
+		<div class="sixteen columns offset-by-one">
+				<!-- <div class="top">
+					<div id = 'mydate' class="alpha"></div>
+					<div id = 'mysource' class="omega"></div>
+				</div> -->
+			<% @sources.each do |s| %>
+
+				<div class="<%= s[0].source %>" id = "source_<%= s[0].area %>">
+					<table>
+						<thead>
+							<tr>
+								<th>
+									<%= s[0].area.upcase %>
+									<span class='square'></span>
+									<%= s[0].source.upcase %>
+
+									<span id='date'></span>
+								</th>
+								<td>
+									<!-- SOURCE -->
+									
+								</td>
+							</tr>
+						</thead>
+						<tbody>
+							<% s.each do |story| %>
+								<% @shorttitle = story.title %>
+								<tr>
+									<th>
+										<span class="intext">
+											<% t=story.modified %>
+											<%=  t.strftime("%d.%m.%Y").strip if t %> 
+										</span>
+										
+										<%= link_to @shorttitle, story.url, :target => "_blank" %>
+										<span id='id'></span>
+										<!-- <%= story.id %>  -->
+									</th>
+									<td>
+									<!-- SOURCE -->
+									<%= story.source %>
+								</td>
+
+								
+								</tr>
+							<% end %>
+						</tbody>
+					</table>
+				</div>
+
+			<% end %>
+		</div>
+	</div>
