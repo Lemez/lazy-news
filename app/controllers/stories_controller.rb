@@ -35,7 +35,7 @@ class StoriesController < ApplicationController
                  # @recent_learnegg,
                  # @recent_techcrunch_edu,
                  # @recent_thenextweb_edu,
-                 @recent_venturebeat_edu,
+                 @recent_venturebeat_edu
               ]
 
     # make_histogram renamed to get_top_stories and moved to application controller
