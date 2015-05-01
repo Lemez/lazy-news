@@ -69,6 +69,7 @@ scope :musically, -> { where(source:"musically") }
 scope :thenextweb, -> { where(source:"thenextweb") }
 scope :learnegg, -> { where(source:"learnegg") }
 scope :cmu, -> { where(source:"cmu") }
+scope :edsurge, -> { where(source:"edsurge") }
 
 scope :is_music, -> {where(area:"music")}
 scope :is_education, -> {where(area:"education")}

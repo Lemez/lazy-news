@@ -427,6 +427,23 @@ img.downarrow {
     -moz-transition: background-color 0.5s;
 }
 
+.edsurge tr {
+    /*border-bottom: 2px solid red;*/
+}
+
+.edsurge ul li span {
+    color: maroon;
+}
+
+.edusurge .square,
+    /*button#mondomix, */
+.edsurge a:hover, .edusurge a.hovered {
+    background-color: maroon;
+    color: white;
+    -webkit-transition: background-color 0.5s;
+    -moz-transition: background-color 0.5s;
+}
+
 
 
 .all_by_date {

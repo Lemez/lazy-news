@@ -477,6 +477,54 @@ namespace :grab_tasks do
         #   end
   end
 
+  task :grab_edsurge => :environment do
+    root = "https://www.edsurge.com"
+    response = HTTParty.get(root)
+    doc = Nokogiri::HTML(response)
+    # xdoc = doc.search("[text()*='Trending Articles']")
+    doc.css('div.post__numbered-post-content')[0..3].each do |path|
+
+      title = path.at('span.generic-item__name').children.text
+      url = "#{root}#{path.parent.parent["href"]}"
+      modified = url[root.length+3...root.length+13]
+
+      response2 = HTTParty.get(url)
+      doc2 = Nokogiri::HTML(response2)
+
+      pic_url = doc2.css("div.post__cover-image img").first["src"]
+      full_text = doc2.css("div.textblock p").text
+
+         @raw_parameters = { :source => "edsurge",
+                          :area => "education",
+                         :title => title,
+                         :url => url,
+                         :modified => modified,
+                         :pic_url => pic_url,
+                         :full_text => full_text
+                       }
+
+        p @raw_parameters
+        p '___________'
+        
+        save_parameters
+
+       
+    end
+
+
+    links = []
+    titles = []
+
+    # xdoc.xpath("//*[contains(@class, 'generic-item')]").each{|a| links << a["href"] if a["href"]}
+    # xdoc.xpath("//*[contains(@class, 'generic-item__name')]").each{|a| titles << a.content if a.content}
+  
+    # links.length.times do |i|
+    #   p "Link: #{links[i]}; \n Title: #{titles[i]}"
+    # end
+ 
+
+  end
+
   task :grab_nextweb_edu => :environment do
      response = HTTParty.get('http://thenextweb.com/?s=edtech&fq=&sort=date&order=desc#!y6Yk6')
      doc = Nokogiri::HTML(response)

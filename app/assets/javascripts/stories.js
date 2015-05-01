@@ -35,7 +35,8 @@ var myDict = {
 					  "thenextweb" : "orangered",
 					  "venturebeat" : "red",
 					  "learnegg" : "black",
-					  "cmu" : "mediumblue"
+					  "cmu" : "mediumblue",
+					  "edsurge" : "maroon"
 					  
 					};
 
@@ -45,7 +46,8 @@ var allSources = {
 					  "thenextweb" : "THE NEXT WEB",
 					  "venturebeat" : "VENTUREBEAT",
 					  "learnegg" : "LEARNEGG",
-					  "cmu" : "CMU"
+					  "cmu" : "CMU",
+					  "edsurge" : "EDSURGE"
 }
 
 var LogoDict = {
@@ -54,7 +56,8 @@ var LogoDict = {
 					  "venturebeat" : "assets/VB_logo.jpg",
 					  "thenextweb" : "assets/TheNextWeb.png",
 					  "learnegg" : "assets/learnegg.png",
-					  "cmu" : "assets/cmu.jpg"
+					  "cmu" : "assets/cmu.jpg",
+					  "edsurge" : "assets/edsurge.jpg"
 					  
 					};
 
