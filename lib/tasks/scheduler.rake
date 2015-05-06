@@ -17,9 +17,9 @@ namespace :grab_tasks do
 
   def save_parameters
 
-    @story = Story.where(:url => @raw_parameters[:url]).first
+    # @story = Story.where(:url => @raw_parameters[:url]).first
 
-    if @story.nil?
+    # if @story.nil?
       @story = Story.where(:url => @raw_parameters[:url]).first_or_create
       @story.source = @raw_parameters[:source]
       @story.area = @raw_parameters[:area]
@@ -27,17 +27,18 @@ namespace :grab_tasks do
       @story.url = @raw_parameters[:url]
       @story.modified = @raw_parameters[:modified]
 
-    else
-      p "Story #{@raw_parameters[:title]} already exists"
+    # else
+    #   p "Story #{@raw_parameters[:title]} already exists"
 
       if @raw_parameters[:pic_url]
         @story.pic_url = @raw_parameters[:pic_url]
       else
         @story.pic_url = "breaking_news.png"
       end
-      @story.save!
 
-    end
+      p "saved" if @story.save!
+
+    # end
 
    #  if @raw_parameters[:full_text]
    #  @story.full_text = @raw_parameters[:full_text]
@@ -45,7 +46,7 @@ namespace :grab_tasks do
    #  @story.full_text = ""
    # end
 
-   p "saved"
+   
   end
 
   def self.tc_img
@@ -506,13 +507,14 @@ namespace :grab_tasks do
       pic_url = doc2.css("div.post__cover-image img").first["src"]
       full_text = doc2.css("div.textblock p").text
 
-         @raw_parameters = { :source => "edsurge",
+         @raw_parameters = { 
+                          :source => "edsurge",
                           :area => "education",
-                         :title => title,
-                         :url => url,
-                         :modified => modified,
-                         :pic_url => pic_url,
-                         :full_text => full_text
+                          :title => title,
+                          :url => url,
+                          :modified => modified,
+                          :pic_url => pic_url,
+                          :full_text => full_text
                        }
 
         p @raw_parameters
