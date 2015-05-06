@@ -170,7 +170,9 @@ var IconDict = {
 
 			var myStory = $(this).attr("id");
 			
-			var myStoryId = "span#" + parseInt(myStory);
+			var myStoryId = "span#" + myStory;
+
+			console.log(myStoryId);
 			
 			var theStorylink = $('tbody tr').find(myStoryId).find('a');
 
