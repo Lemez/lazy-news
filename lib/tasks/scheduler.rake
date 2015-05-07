@@ -33,7 +33,7 @@ namespace :grab_tasks do
       if @raw_parameters[:pic_url]
         @story.pic_url = @raw_parameters[:pic_url]
       else
-        @story.pic_url = "breaking_news.png"
+        @story.pic_url = "assets/breaking_news.png"
       end
 
       p "saved" if @story.save!
