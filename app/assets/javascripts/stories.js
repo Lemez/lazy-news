@@ -170,7 +170,7 @@ var IconDict = {
 
 			var myStory = $(this).attr("id");
 			
-			var myStoryId = "span#" + parseInt(myStory);
+			var myStoryId = "span#story" + parseInt(myStory);
 			
 			var theStorylink = $('tbody tr').find(myStoryId).find('a');
 
@@ -182,6 +182,8 @@ var IconDict = {
 			$(this).parent().attr("href", theStoryUrl); // link the pic to the story
 			$(this).parent().attr("target", "_blank"); // force open in a new tab
 
+			console.log(theStorylink);
+
 		
 		});
 
@@ -189,7 +191,7 @@ var IconDict = {
 
 			var myStory = $(this).attr("id");
 			
-			var myStoryId = "span#" + parseInt(myStory);
+			var myStoryId = "span#story" + parseInt(myStory);
 			
 			 $('tbody tr')
 				 .find(myStoryId)

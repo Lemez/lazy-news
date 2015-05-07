@@ -214,6 +214,11 @@ nav button.tags {
 	opacity: 0.75;
 }
 
+.mainpic a {
+	height: 80px;
+	min-height: 100px;
+}
+
 #top_stories {
 	margin-top: 5%;	
 }
@@ -437,7 +442,7 @@ img.downarrow {
 
 .edsurge .square,
     /*button#mondomix, */
-.edsurge a:hover, .edusurge a.hovered {
+.edsurge a:hover, .edsurge a.hovered {
     background-color: maroon;
     color: white;
     -webkit-transition: background-color 0.5s;
