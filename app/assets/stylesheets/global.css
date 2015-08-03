@@ -1,5 +1,6 @@
 @import url(//fonts.googleapis.com/css?family=Oxygen:400,700);
 @import url(//fonts.googleapis.com/css?family=Lily+Script+One);
+@import url(http://fonts.googleapis.com/css?family=Lora:400,700);
 
 html, body {
 	font-family: 'Oxygen', sans-serif;
@@ -7,92 +8,41 @@ html, body {
 	width: 100%;
 }
 
-header {
-	position: fixed;
-	top: 0;
-	width: 100%;
-	z-index: 10;
-	display: block;
-	/*background-color: #95a5a6;*/
-}
-
-header h1 {
-	font-family: 'Lily Script One', sans-serif;
-	font-size: 32px;
-	padding: 0 0 0 30px;
-	color: rgba(0,0,0,0.5);
-	display: inline;
-	line-height: 2;
-	text-align: center;
-}
-
-a:visited {
-  color:inherit;
-  text-decoration: none;
- }
-
-
-div#mydate, div#mysource {
-	color: black;
-	display: block;
-	text-align: center;
-	padding-left: 10%;
-	width: 100%;
-}
-
-
-
-img#logo {
-	padding-left: 5%;
-	width: 150px;
-	height: 60px;
-	text-align: center;
-	max-width: 100%;
-}
-
-/*nav {
-	margin-left: 5%;
-	padding-top: -20%;
-}*/
-
-nav img {
-	z-index: 20;
-	padding-top: 50px;
-	visibility: hidden;
-}
-
-/*nav div#buttons {
-	float: left;
-	top: 300;
-}*/
-
-/*header span {
-	display: inline;
-	font-size: 30px;
-	text-align: center;
-}*/
-
-article {
-	margin-top: 50px;
-}
-
 nav {
 	font-family: 'Oxygen', sans-serif;
-	width: 10%;
-	top: 10%;
+	width: 100%;
 	left: 2%;
-/*	display: block;*/
+	display: inline;
 	position: fixed;
 	color: #2c3e50;
 	text-align: center;
+	line-height: 2em;
+	background-color: white;
+	z-index: 50;
 /*	float: left;*/
+}
+
+nav h1 {
+	font-family: 'Lily Script One', sans-serif;
+	font-size: 32px;
+	color: rgba(0,0,0,0.5);
+	float: left;
+	left: 0;
+}
+
+nav h1.h1-l {
+	text-align: left;
+}
+nav h1.h1-r {
+	text-align: right;
 }
 
 nav h3 {
 	font-family: 'Oxygen', sans-serif;
 	font-size: 14px;
-/*	padding: 20px 0 10px 5px;
-*/}
+/*	padding: 20px 0 10px 5px;*/
+}
+
 /*
 nav h4 {
 	font-family: 'Oxygen', sans-serif;
@@ -102,33 +52,24 @@ nav h4 {
 
 }*/
 
-nav button {
+nav button, h1 {
 	border: none;
 /*  	background-repeat:no-repeat;
   	background-size: 100% 100%;*/
-  	width: 30%;
-  	line-height: 1.5;
+  	/*width: 30%;*/
+  	/*line-height: 1.5;*/
   	background-color: transparent;
   	margin: 5px 0 5px 5px;
-  	display: inline-block;
+  	display: inline;
   	cursor: pointer;
 }
-
-
-/*
-nav button#mailandguardian
-{
-  background-image:url(magsa.jpg);
-}*/
-
 
 nav button {
 	font-family: 'Oxygen', sans-serif;
 	font-size: 18px;
-	width: 110%;
+	width: 120px;
 	font-weight: 700;
 	cursor: pointer;
-	bottom: 20%;
 	padding: 0;
 	color: gray;
 
@@ -137,7 +78,6 @@ nav button {
 nav button.active {
 	background-color: red;
 	color: white;
-
 }
 
 nav button:hover {
@@ -149,10 +89,50 @@ nav button.tags {
 	display: none;
 }
 
+.story_info {
 
-.top-stories {
-	display: block;
+	top: 30%;
+ 	width: 30%;
+ 	position: fixed;
+  	/*line-height: 1.5;*/
+
+  	margin: 5px 0 5px 5px;
+  	display: inline-block;
+	left: 0;
+	color: rgba(0,0,0,0.5);
+	font-family: 'Oxygen', sans-serif;
+	padding-left: 2%;
 }
+
+a:visited {
+  color:inherit;
+  text-decoration: none;
+ }
+
+.storyinfo img {
+	z-index: 20;
+	padding-top: 50px;
+	visibility: hidden;
+}
+
+
+div#mydate, div#mysource {
+	font-size: 18px;
+/*	width: 100%;*/
+}
+
+img#logo {
+	width: 150px;
+	height: 60px;
+	text-align: center;
+	/*max-width: 100%;*/
+}
+
+
+#down {
+	padding-top: 60px;
+}
+
 
 #keyword_tags {
 	margin: 0 1px 0 1px;
@@ -168,9 +148,11 @@ nav button.tags {
 }
 
 
-.container {
+/*.container {
+	top: 10%;
 	width: 200%;
-}
+	margin-top: 20%;
+}*/
 
 .container h1 {
 	font-family: 'Oxygen', sans-serif;
@@ -178,24 +160,24 @@ nav button.tags {
 	line-height: 1.5;
 }
 
-.top {
+/*.top {
 	width: 100%;
 	position: fixed;
 	left: 30%;
-	z-index: 10;
+
 	display: inline-block;
 /*	height: 50px;*/
 	/*line-height: 5;*/
-}
 
-#mydate h4, #mysource h4{
+
+/*#mydate h4, #mysource h4{
 	color: #2c3e50;
 	line-height: 1.5;
 	text-align: center;
 	font-family: 'Oxygen', sans-serif;
 	font-size: 12px;
 	padding-left: 5%;
-}
+}*/
 
 .mainpic {
 	float:left;
@@ -220,7 +202,7 @@ nav button.tags {
 }
 
 #top_stories {
-	margin-top: 5%;	
+	margin-top: 1%;	
 }
 
 #keyword_tags {
@@ -310,9 +292,9 @@ span .on, .on li {
     top: 1%;
 }
 
-div#music {
+/*div#music {
 	padding: 20px 0 20px 40px;
-}
+}*/
 
 img.hovered {
 	/*margin: 0 5px 0 5x;
@@ -534,3 +516,19 @@ section.lightbox #descriptor {
 	background: rgba(0, 0, 0, 0.3);
 
 }
+
+
+    .slicknav_menu {
+        display:none;
+    }
+    
+    @media screen and (max-width: 40em) {
+        /* #menu is the original menu */
+        .js #menu {
+            display:none;
+        }
+        
+        .js .slicknav_menu {
+            display:block;
+        }
+    }

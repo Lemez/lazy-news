@@ -1,0 +1,31 @@
+<div class="row">
+	<div class = 'content'>
+		<table>
+			<tbody>
+				<% @all_by_date.each do |story| %>
+			
+					<tr>
+						<td><%= story.source %></td>
+						<!-- story -->
+						<th>
+							<span class="intext">
+								<% t=story.modified %>
+								<%=  t.strftime("%d.%m.%Y").strip if t %> 
+							</span>
+
+							<!-- <span class="pic_url">
+								<%# image_tag(story.pic_url) %>
+							</span> -->
+
+							<span id='story<%= story.id %>'>
+
+								<%= link_to story.title, story.url, :target => "_blank" %>
+							</span>
+
+						</th>
+					</tr>
+				<% end %>
+			</tbody>
+		</table>
+	</div>
+</div>

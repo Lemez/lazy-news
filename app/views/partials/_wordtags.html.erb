@@ -1,0 +1,16 @@
+<div>
+	<!-- put logic for links and keywords here -->
+	<!-- ["Google", 8, [994, 983, 941, 930, 927, 926, 909, 898] -->
+	<% @top_stories_array.each do |compiled_array| %>
+
+			<% @keyword = compiled_array[0].strip %>
+			<% @frequency = compiled_array[1] %>
+			<% @size = @frequency * 8 %>
+			<% @size = 12 if @frequency == 1 %>
+
+			<div id='keyword_tags' key='<%= @keyword %>' style="font-size:<%=@size%>px; display: inline;">
+					<%= @keyword %>
+			</div>
+
+	<% end %>
+</div>
