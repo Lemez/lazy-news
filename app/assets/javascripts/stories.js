@@ -1,12 +1,6 @@
 $(document).ready(function () {
 
-	// SLICK - image carousel
-
-// 	$('.mainpic').slick({
-//   slidesToShow: 10,
-//   slidesToScroll: 5
-// });
-
+		loadtheduck();
 
 	// $("#music").dotdotdot({
 	// 		The HTML to add as ellipsis. 
@@ -136,7 +130,9 @@ var IconDict = {
 		 $(document)
 		 .find("img#logo")
 		 .attr("src", myLogo)
-		 .attr("width", "100")
+		 .css("width", "120")
+		 .css("height", "60")
+		 .show()
 		 .css("visibility", "visible"); // display logo
 
 		 // $(document)
@@ -211,8 +207,6 @@ var IconDict = {
 	 	$(this).addClass('active');
 	 	$('.all_by_date').siblings('div').hide();
 	 	$(this).siblings('button').removeClass('active');
-
-
 
 	 	hideStuff();
 	 	return false;
@@ -313,9 +307,20 @@ var IconDict = {
 	 		$(document).find(keywordClass).siblings('tr').css("display", "none");
 		 	$(document).find(keywordClass).css("display", "block");
 
-
-		 				
+		 	var divHeight = $('#top_half').css('height');
+		 	$('#top_stories').css('margin-top',divHeight);
+		
 	 });
+
+	     $('button').click(function(){
+	    
+	    	loadtheduck();
+	     });
+
+	     function loadtheduck(){
+	     	 $("div.story_info img#logo")
+				 .hide(); // display logo
+	     }
 
 //wip
 // $('button#keywords').click(function() {

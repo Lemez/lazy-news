@@ -11,7 +11,7 @@ html, body {
 nav {
 	font-family: 'Oxygen', sans-serif;
 	width: 100%;
-	left: 2%;
+	left: 1%;
 	display: inline;
 	position: fixed;
 	color: #2c3e50;
@@ -22,9 +22,18 @@ nav {
 /*	float: left;*/
 }
 
+#duck {
+	background-image: url('duck2.png');
+	background-repeat: no-repeat;
+	background-size: 30px 30px;	
+	height: 30px;
+	margin-left: 200px;
+
+}
+
 nav h1 {
 	font-family: 'Lily Script One', sans-serif;
-	font-size: 32px;
+	font-size: 24px;
 	color: rgba(0,0,0,0.5);
 	float: left;
 	left: 0;
@@ -49,7 +58,6 @@ nav h4 {
 	font-size: 24px;
 	padding: 20px 0 10px 15px;
 	text-align: center;
-
 }*/
 
 nav button, h1 {
@@ -72,7 +80,7 @@ nav button {
 	cursor: pointer;
 	padding: 0;
 	color: gray;
-
+	margin-top: 15px;
 }
 
 nav button.active {
@@ -109,11 +117,11 @@ a:visited {
   text-decoration: none;
  }
 
-.storyinfo img {
+/*.storyinfo img {
 	z-index: 20;
 	padding-top: 50px;
 	visibility: hidden;
-}
+}*/
 
 
 div#mydate, div#mysource {
@@ -127,6 +135,7 @@ img#logo {
 	text-align: center;
 	/*max-width: 100%;*/
 }
+
 
 
 #down {
@@ -146,7 +155,6 @@ img#logo {
 #keyword_tags.active {
 	background-color: pink;
 }
-
 
 /*.container {
 	top: 10%;
@@ -170,14 +178,12 @@ img#logo {
 	/*line-height: 5;*/
 
 
-/*#mydate h4, #mysource h4{
+#mydate h2, #mysource h2{
 	color: #2c3e50;
 	line-height: 1.5;
-	text-align: center;
 	font-family: 'Oxygen', sans-serif;
-	font-size: 12px;
-	padding-left: 5%;
-}*/
+	font-size: 18px;
+}
 
 .mainpic {
 	float:left;
@@ -207,6 +213,13 @@ img#logo {
 
 #keyword_tags {
 	margin: 0 2px 0 2px;
+}
+
+#top_half {
+	position: fixed;
+	z-index: 5;
+	background-color: #ecf0f1;
+	border-bottom: 2px white dashed;
 }
 
 .content {
@@ -447,6 +460,7 @@ img.downarrow {
 }
 
 
+
 /* ISOTOPE ANIMATIONS */
 
 .isotope,
@@ -532,3 +546,7 @@ section.lightbox #descriptor {
             display:block;
         }
     }
+
+img[src='Error.src']{
+    display: none;
+}
