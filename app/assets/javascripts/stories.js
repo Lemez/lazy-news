@@ -7,7 +7,7 @@ $(document).ready(function () {
 	// 	ellipsis	: '... ' )};
 
 
-	function hideStuff() {
+	function hideSidebar() {
 		 $(document)
 		 .find("div#mydate")
 		 .css("visibility", "hidden"); // hide date
@@ -19,6 +19,21 @@ $(document).ready(function () {
 		 $(document)
 		 .find("img#logo")
 		 .css("visibility", "hidden"); // hide logo
+	}
+
+	function toggleMyandOthersActiveState(e, type){
+		$(e).addClass('active');
+		$(e).siblings(type).removeClass('active');
+	}
+
+	function toggleDivStates(e){
+		$(e).addClass('active');
+		$(e).siblings('div').removeClass('active');
+	}
+	function showMeandHideOthers(me) {
+		$('tr').css("display", "block");
+	 	$(me).siblings('div').hide();
+	 	$(me).show();
 	}
 
 
@@ -77,7 +92,6 @@ var IconDict = {
     		var myClass = $.trim($('td').eq(index).text());
 			var myColor = myDict[myClass];
 			
-
 			// add source as a class 
 			$('th').eq(index)
 					.addClass(myClass)
@@ -87,14 +101,8 @@ var IconDict = {
  						.addClass(myClass);
 		 
  			$('.all_by_date').siblings('div').hide();
-
- 			// set the page divs up to scroll properly
-
-
 			} 
-	} else {
-				console.log($("header nav span#date").html());
-			}
+	}
 
 
 	$('tbody tr').mouseenter(function () {
@@ -166,9 +174,7 @@ var IconDict = {
 	 	$('.mainpic img').mouseenter(function () {
 
 			var myStory = $(this).attr("id");
-			
 			var myStoryId = "span#story" + parseInt(myStory);
-			
 			var theStorylink = $('tbody tr').find(myStoryId).find('a');
 
 			theStorylink.toggleClass("hovered"); // highlight the story in the table
@@ -178,16 +184,12 @@ var IconDict = {
 			var theStoryUrl = theStorylink.attr("href"); // get the story URL
 			$(this).parent().attr("href", theStoryUrl); // link the pic to the story
 			$(this).parent().attr("target", "_blank"); // force open in a new tab
-
-			console.log(theStorylink);
-
 		
 		});
 
 			$('.mainpic img').mouseleave(function () {
 
 			var myStory = $(this).attr("id");
-			
 			var myStoryId = "span#story" + parseInt(myStory);
 			
 			 $('tbody tr')
@@ -200,107 +202,48 @@ var IconDict = {
 		});
 
 
-	 $('button#all_by_date').click(function() {
-	 	$('tr').css("display", "inline-block");
-
-
-	 	$('.all_by_date').show();
-	 	$(this).addClass('active');
-	 	$('.all_by_date').siblings('div').hide();
-	 	$(this).siblings('button').removeClass('active');
-
-	 	hideStuff();
-	 	return false;
-
-	 	// $('.all_by_date').parent('div').next().children('div').show();
-	 });
-
-	  //   $('button#all_by_a_to_z').click(function() {
-	 	// $('.all_by_a_to_z').show(500);
-	 	// $(this).addClass('active');
-	 	// $('.all_by_a_to_z').siblings('div').hide();
-	 	// $(this).siblings('button').removeClass('active');
-	 	// // $('.all_by_date').parent('div').next().children('div').show();
-
-
-			// for(var index = 0; index < $('tbody th').length; index++){
-
-			// 	var myArea = $.trim($("th").eq(index).find("span.tag").text());
-
-			// 	var myIcon = IconDict[myArea];
-
-			// 	$('th').eq(index)
-	 	// 			.find("img.tag")
-			// 		.attr("src", myIcon)
-			// 		.css("display", "inline")
-			// 		.css("visibility", "visible"); // display logo
-				
-			// }
-		 // });
-
-	    $('button#music').click(function() {
-	    	$('tr').css("display", "block");
-
-
-	 		$('.by_source').show(500);
-	 		$('.top_stories').hide();
-	 		$('.by_source').siblings('div').hide();
-	 		$('.by_source').find('div#source_education').hide();
-	 		$('.by_source').find('div#source_music').show();
-
-	 		hideStuff();
-
-	 		$(this).addClass('active');
-	 		$(this).siblings('button').removeClass('active');
-
-	 			// $('.all_by_date').parent('div').next().children('div').show();
-		 	return false;
-	 	
-	 });
-
-	    $('button#education').click(function() {
-	    	$('tr').css("display", "block");
-
-
-	 		$('.by_source').show(500);
-	 		$('.top_stories').hide();
-		 	$('.by_source').siblings('div').hide();
-		 	$('.by_source').find('div#source_music').hide();
-		 	$('.by_source').find('div#source_education').show();
-
-		 	hideStuff();
-
-		 	$(this).addClass('active');
-		 	$(this).siblings('button').removeClass('active');
-
-		 	// $('.all_by_date').parent('div').next().children('div').show();
-		 	return false;
+		$('button#all_by_date').click(function() {
 		 	
+		 	toggleMyandOthersActiveState(this, 'button');
+		 	hideSidebar();
+
+		 	showMeandHideOthers('.all_by_date');
+		 	
+		 	return false;
+		 });
+
+
+	    $('button#music, button#education').click(function(e) {
+	    	
+	    	toggleMyandOthersActiveState(this, 'button');
+	 		hideSidebar();
+
+	 		var myDiv = '.source_'+ $(this).attr('id');
+
+	 		showMeandHideOthers('.by_source');
+	 		showMeandHideOthers(myDiv);
+	    	
+		 	return false;
 	 });
+
 
 	    $('button.hot').click(function() {
-	    	$('.by_source').hide();
-	 		$('.top_stories').show();
-	 		$('.all_by_date').hide();
+
+	    	toggleMyandOthersActiveState(this, 'button');
+	    	hideSidebar();
+
+	    	showMeandHideOthers('.top_stories');
 		 
-		 	hideStuff();
-
 		 	$('tr').css("display", "none");
-
-		 	$(this).addClass('active');
-		 	$(this).siblings('button').removeClass('active');
-
 		 	$('div#keyword_tags').first().trigger('click');
 
 		 	return false;
-		 	
 	 });
 
 	    // show relevant stories after click on keyword
 	     $('div#keyword_tags').click(function() {
 
-	     	$(this).addClass('active');
-	     	$(this).siblings('div').removeClass('active');
+	     	toggleMyandOthersActiveState(this, 'div');
 	 
 	 		var keyword = $.trim($(this).text());
 	 		var keywordClass = '.' + keyword;

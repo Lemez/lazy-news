@@ -1,15 +1,12 @@
-<div class="by_source">
-	<div class="sixteen columns offset-by-one" id='down'>
-		<% @sources.each do |s| %>
-			<div class="<%= s[0].source %>" id = "source_<%= s[0].area %>">
-				<table>
-					<%= render 'partials/source_heading', mystory:s  %>
 
-					<tbody>
-						<%= render 'partials/source_headlines', mystory:s  %>
-					</tbody>
-				</table>
-			</div>
-		<% end %>
+<% @sources.each do |s| %>
+	<div class="<%= [s[0].source, ('source_' + s[0].area)].join(' ') %>">
+		<table>
+			<%= render 'partials/source_heading', mystory:s  %>
+
+			<tbody>
+				<%= render 'partials/source_headlines', mystory:s  %>
+			</tbody>
+		</table>
 	</div>
-</div>
+<% end %>

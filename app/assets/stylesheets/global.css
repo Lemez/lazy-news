@@ -140,6 +140,9 @@ img#logo {
 	padding-top: 60px;
 }
 
+#keyword_div {
+	margin-right: 2%;
+}
 
 #keyword_tags {
 	margin: 0 1px 0 1px;
@@ -221,7 +224,6 @@ img#logo {
 }
 
 .content {
-	width: 90%;
 	/*top: 40%;*/
 	float: left;
 	/*position: fixed;*/
