@@ -1,6 +1,7 @@
 $(document).ready(function () {
 
 		loadtheduck();
+		var top = $('.content').css('margin-top');
 
 	// $("#music").dotdotdot({
 	// 		The HTML to add as ellipsis. 
@@ -184,8 +185,18 @@ var IconDict = {
 			var theStoryUrl = theStorylink.attr("href"); // get the story URL
 			$(this).parent().attr("href", theStoryUrl); // link the pic to the story
 			$(this).parent().attr("target", "_blank"); // force open in a new tab
+
+			var storyPosition = $(myStoryId).position().top;
+			console.log(storyPosition);
+			// $('.content').animate({
+			// 	scrollTop : storyPosition
+			// }, 500);
 		
 		});
+
+		$(document).scroll(function () {
+			console.log($('tr').scrollTop());
+		})
 
 			$('.mainpic img').mouseleave(function () {
 
@@ -271,7 +282,21 @@ var IconDict = {
 			 	$(bottom).css('margin-top',divHeight);
 	     }
 
+	     function resizeHeights(top,bottom ){
+	     		var divHeightTop = parseInt($(top).height());
+			 	var divHeightBottom = parseInt($(bottom).css('height'));
+			 	var calc = $(window).height() - divHeightTop;
+			 	console.log(calc);
+			 	if (calc < 300) {
+			 		// $(top).css('height', $(window).height()/2);
+			 	}
+	     }
+
 	     $(window).load(function(){prepareHeights('#imagewalldiv','#allstoriesdiv');});
+	     $(window).resize(function() {
+	     	prepareHeights('#imagewalldiv','#allstoriesdiv');
+	     	// resizeHeights('#imagewalldiv','#allstoriesdiv');
+	     });
 
 //wip
 // $('button#keywords').click(function() {

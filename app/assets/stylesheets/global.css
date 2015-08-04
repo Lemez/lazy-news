@@ -25,8 +25,11 @@ nav {
 	background-image: url('duck2.png');
 	background-repeat: no-repeat;
 	background-size: 30px 30px;	
+	min-height: 30px;
+	min-width: 30px;
 	height: 30px;
-	margin-left: 200px;
+	float: right;
+	margin: 10px 50px 0 0;
 
 }
 
@@ -99,7 +102,7 @@ nav button.tags {
 .story_info {
 
 	top: 30%;
- 	width: 30%;
+ 	width: 160px;
  	position: fixed;
   	/*line-height: 1.5;*/
 
@@ -135,8 +138,10 @@ img#logo {
 	/*max-width: 100%;*/
 }
 
-#down {
+.down {
 	padding-top: 60px;
+	left: 100px;
+	position: absolute;
 }
 
 #keyword_div {
@@ -195,17 +200,38 @@ img#logo {
 	overflow: hidden;
 }*/
 
+.mainpic {
+	width: 80%;
+	margin-right: 20%;
+	height: auto;
+	overflow-x: hidden;
+}
+
+.picdiv {
+	max-width:150px;
+	max-height:80px;
+	float: left;
+	display: inline;
+	
+}
+
 .mainpic img {
-	margin-left: 1px;
+	margin-left: 5px;
 	/*height: 100px;*/
 	/*width: 100px;*/
 	opacity: 0.75;
+	max-width: 100%;
+    height: 80px;
+    width: auto\9;
 }
 
 .mainpic a {
 	height: 80px;
 	min-height: 100px;
+	display: inline-block;
 }
+
+
 /*
 .top_stories {
 	margin-top: 1%;	
@@ -220,14 +246,15 @@ img#logo {
 	z-index: 5;
 	background-color: #ecf0f1;
 	border-bottom: 2px white dashed;
+	max-height: 35%;
 }
 
 .content {
 	/*top: 40%;*/
 	float: left;
 	/*position: fixed;*/
-	overflow: scroll;
-	height: 60%;
+	overflow-y: scroll;
+	height: 65%;
 	border-top: 2px dashed white;
 }
 
@@ -292,6 +319,21 @@ span .on, .on li {
 .all_by_a_to_z {
 	display: inline;
 }
+
+
+.all_by_date {
+	display: none;
+}
+
+
+.all_by_date h2 {
+	display: inline;
+}
+
+.source span {
+	display: inline-block;
+}
+
 .tag {
 	font-size: 10px;
 	display: none;
@@ -304,43 +346,10 @@ span .on, .on li {
     top: 1%;
 }
 
-/*div#music {
-	padding: 20px 0 20px 40px;
-}*/
-
 img.hovered {
-	/*margin: 0 5px 0 5x;
-	border-top: 5px solid white;
-	border-bottom: 5px solid white;*/
 	opacity: 1;
 }
 
-/*img.uparrow {
-	padding-top: 50px;
-	text-align: center;
-}
-
-img.downarrow {
-	text-align: center;
-	transform: rotate(180deg);
-   -moz-transform: rotate(180deg);
-   -webkit-transform: rotate(180deg);
-}*/
-
-.learnegg tr {
-    /*border-bottom: 2px solid white;*/
-}
-
-.learnegg ul li span {
-    color: white;
-}
-
-.learnegg .square,
-    /*button#mondomix, */
-.learnegg a:hover, .learnegg a.hovered {
-    background-color: white;
-    color: gray;
-}
 
 .musically tr {
     /*border-bottom: 2px solid slategray;*/
@@ -385,29 +394,6 @@ img.downarrow {
     color: darkgreen;
 }
 
-.techcrunch .square,
-    /*button#mondomix, */
-.techcrunch a:hover, .techcrunch a.hovered {
-    background-color: darkgreen;
-    color: white;
-    -webkit-transition: background-color 0.5s;
-    -moz-transition: background-color 0.5s;
-}
-
-.thenextweb tr {
-    /*border-bottom: 2px solid orangered;*/
-}
-
-.thenextweb ul li span {
-    color: orangered;
-}
-
-.thenextweb .square,
-    /*button#mondomix, */
-.thenextweb a:hover, .thenextweb a.hovered {
-    background-color: orangered;
-    color: white;
-}
 
 .venturebeat tr {
     /*border-bottom: 2px solid red;*/
@@ -444,107 +430,6 @@ img.downarrow {
 }
 
 
-
-.all_by_date {
-	display: none;
-}
-
-
-.all_by_date h2 {
-	display: inline;
-}
-
-.source span {
-	display: inline-block;
-}
-
-
-
-/* ISOTOPE ANIMATIONS */
-
-.isotope,
-.isotope .isotope-item {
-  /* change duration value to whatever you like */
-  -webkit-transition-duration: 0.8s;
-     -moz-transition-duration: 0.8s;
-      -ms-transition-duration: 0.8s;
-       -o-transition-duration: 0.8s;
-          transition-duration: 0.8s;
-}
-
-.isotope {
-  -webkit-transition-property: height, width;
-     -moz-transition-property: height, width;
-      -ms-transition-property: height, width;
-       -o-transition-property: height, width;
-          transition-property: height, width;
-}
-
-.isotope .isotope-item {
-  -webkit-transition-property: -webkit-transform, opacity;
-     -moz-transition-property:    -moz-transform, opacity;
-      -ms-transition-property:     -ms-transform, opacity;
-       -o-transition-property:      -o-transform, opacity;
-          transition-property:         transform, opacity;
-}
-
-
-
-.lightbox {
-	position: fixed;  /* not position: absolute which is fixed to the initial page load area */
-	top: 0;
-	left: 0;
-
-	width: 100%;
-	height: 100%;
-
-	background: rgba(0, 0, 0, 0.8);
-
-	text-align: center; /*get the image in the centre of the page*/
-
-	display: none; /* hide it by default */
-
-}
-
-section.lightbox img {
-	height: 600px;
-	margin: 20px 0 0 0;
-
-}
-
-section.lightbox #descriptor {
-
-	width: 100%;
-	line-height: 60px;
-
-	position: absolute;  /* not position: absolute which is fixed to the initial page load area */
-	top: 0;
-	left: 0;
-
-	text-align: center;
-	font-size: 48px;
-	font-weight: 900;
-
-	color: white;
-	background: rgba(0, 0, 0, 0.3);
-
-}
-
-
-    .slicknav_menu {
-        display:none;
-    }
-    
-    @media screen and (max-width: 40em) {
-        /* #menu is the original menu */
-        .js #menu {
-            display:none;
-        }
-        
-        .js .slicknav_menu {
-            display:block;
-        }
-    }
 
 img[src='Error.src']{
     display: none;
