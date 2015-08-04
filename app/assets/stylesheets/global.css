@@ -1,6 +1,6 @@
-@import url(//fonts.googleapis.com/css?family=Oxygen:400,700);
-@import url(//fonts.googleapis.com/css?family=Lily+Script+One:400,700);
-@import url(//fonts.googleapis.com/css?family=Lora:400,700);
+@import url('//fonts.googleapis.com/css?family=Oxygen:400,700');
+@import url('//fonts.googleapis.com/css?family=Lily+Script+One:400,700');
+@import url('//fonts.googleapis.com/css?family=Lora:400,700');
 
 html, body {
 	font-family: 'Oxygen', sans-serif;
@@ -32,7 +32,7 @@ nav {
 }
 
 nav h1 {
-	font-family: 'Lily Script One', sans-serif;
+	font-family: 'Lily Script One', 'Lora', 'Verdana', sans-serif;
 	font-size: 24px;
 	color: rgba(0,0,0,0.5);
 	float: left;
