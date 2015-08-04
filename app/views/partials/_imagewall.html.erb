@@ -1,9 +1,9 @@
-<div class="row">
-	<div class='mainpic'>
+
+	<div class='top_half mainpic' id='imagewalldiv'>
 		<% @all_by_date.each do |story| %>
 			<%= link_to image_tag(story.pic_url, :id => story.id, :height => 80) %>
 		<% end %>
 	</div>
-</div>
+
 
 

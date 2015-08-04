@@ -36,7 +36,7 @@ nav h1 {
 	font-size: 24px;
 	color: rgba(0,0,0,0.5);
 	float: left;
-	left: 0;
+	margin-left: 20px;
 }
 
 nav h1.h1-l {
@@ -136,8 +136,6 @@ img#logo {
 	/*max-width: 100%;*/
 }
 
-
-
 #down {
 	padding-top: 60px;
 }
@@ -185,15 +183,15 @@ img#logo {
 	font-size: 18px;
 }
 
-.mainpic {
+/*.mainpic {
 	float:left;
 	padding-right: 5%;
 	width: 97%;
-	/*height: 200px;*/
-	/*position: fixed;*/
+	height: 200px;
+	position: fixed;
 	display: inline-block;
 	overflow: hidden;
-}
+}*/
 
 .mainpic img {
 	margin-left: 1px;
@@ -206,16 +204,16 @@ img#logo {
 	height: 80px;
 	min-height: 100px;
 }
-
-#top_stories {
+/*
+.top_stories {
 	margin-top: 1%;	
-}
+}*/
 
 #keyword_tags {
 	margin: 0 2px 0 2px;
 }
 
-#top_half {
+.top_half {
 	position: fixed;
 	z-index: 5;
 	background-color: #ecf0f1;

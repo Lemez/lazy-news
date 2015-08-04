@@ -86,8 +86,9 @@ var IconDict = {
    		 	$('td').eq(index)
  						.addClass(myClass);
 		 
-
  			$('.all_by_date').siblings('div').hide();
+
+ 			// set the page divs up to scroll properly
 
 
 			} 
@@ -157,7 +158,7 @@ var IconDict = {
 
 		$(this).find("td").css("visibility", "hidden");
 
-		$(this).closest('div.content').siblings().children().children().css("visibility", "hidden");
+		// $(this).closest('div.content').siblings().children().children().css("visibility", "hidden");
 		// $('.slick-track').css("visibility", "visible");
 		});
 
@@ -307,8 +308,8 @@ var IconDict = {
 	 		$(document).find(keywordClass).siblings('tr').css("display", "none");
 		 	$(document).find(keywordClass).css("display", "block");
 
-		 	var divHeight = $('#top_half').css('height');
-		 	$('#top_stories').css('margin-top',divHeight);
+		 	// set the page divs up to scroll properly
+ 			prepareHeights('#keyword_div','#keywordstoriesdiv');
 		
 	 });
 
@@ -321,6 +322,13 @@ var IconDict = {
 	     	 $("div.story_info img#logo")
 				 .hide(); // display logo
 	     }
+
+	     function prepareHeights(top,bottom ){
+	     		var divHeight = $(top).css('height');
+			 	$(bottom).css('margin-top',divHeight);
+	     }
+
+	     $(window).load(function(){prepareHeights('#imagewalldiv','#allstoriesdiv');});
 
 //wip
 // $('button#keywords').click(function() {

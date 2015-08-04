@@ -1,0 +1,16 @@
+<% mystory.each do |story| %>
+	<% @shorttitle = story.title %>
+	<tr>
+		<th>
+			<span class="intext">
+				<% t=story.modified %>
+				<%=  t.strftime("%d.%m.%Y").strip if t %> 
+			</span>
+			
+			<%= link_to @shorttitle, story.url, :target => "_blank" %>
+			<span id='id'></span>
+			<!-- <%= story.id %>  -->
+		</th>
+		<td><%= story.source %></td>
+	</tr>
+<% end %>
