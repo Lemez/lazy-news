@@ -21,3 +21,4 @@ class UserMailer < ActionMailer::Base
 		end
 	end
 end
+
