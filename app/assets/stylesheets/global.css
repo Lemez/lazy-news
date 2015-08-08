@@ -30,12 +30,11 @@ nav {
 	height: 30px;
 	float: right;
 	margin: 10px 50px 0 0;
-
 }
 
 nav h1 {
 	font-family: 'Lily Script One', sans-serif;
-	font-size: 24px;
+	font-size: 32px;
 	color: rgba(0,0,0,0.5);
 	float: left;
 	margin-left: 20px;
@@ -132,8 +131,8 @@ div#mydate, div#mysource {
 }
 
 img#logo {
-	width: 150px;
-	height: 60px;
+/*	width: 5em;
+	height: 3em;*/
 	text-align: center;
 	/*max-width: 100%;*/
 }
@@ -260,6 +259,7 @@ img#logo {
 
 table {
 	text-align: left;
+	font-size: 18px;
 }
 
 thead td {
@@ -276,7 +276,7 @@ thead th {
 tbody a, a:visited {
 	font-family: 'Oxygen', sans-serif;
 	padding-top: 2px;
-	line-height: 1.5;
+	/*line-height: 1.5;*/
 	text-decoration: none;
 	color: rgba(0,0,0,0.6);
 }
@@ -313,7 +313,7 @@ span .on, .on li {
 }
 
 .intext, .source, .all_source, .pic_url {
-	display: none;
+	/*display: none;*/
 }
 
 .all_by_a_to_z {
@@ -434,3 +434,34 @@ img.hovered {
 img[src='Error.src']{
     display: none;
 }
+
+@media (max-width: 800px) {
+	.story_info, .mainpic {
+		display: none;
+	}
+
+
+	#allstoriesdiv {
+		margin-top: 0;
+	}
+
+	.down {
+		left: 0;
+		padding-top: 0;
+	}
+
+	#duck {
+		display: none;
+	}
+}
+
+@media (max-width: 500px) {
+
+	nav button {
+		font-size: 14px;
+		width: auto;
+	}
+
+	table {
+		font-size: 18px;
+	}

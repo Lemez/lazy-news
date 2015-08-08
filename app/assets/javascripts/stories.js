@@ -140,8 +140,8 @@ var IconDict = {
 		 $(document)
 		 .find("img#logo")
 		 .attr("src", myLogo)
-		 .css("width", "120")
-		 .css("height", "60")
+		 // .css("width", "120")
+		 .css("height", "3em")
 		 .show()
 		 .css("visibility", "visible"); // display logo
 
@@ -292,11 +292,12 @@ var IconDict = {
 			 	}
 	     }
 
-	     $(window).load(function(){prepareHeights('#imagewalldiv','#allstoriesdiv');});
-	     $(window).resize(function() {
-	     	prepareHeights('#imagewalldiv','#allstoriesdiv');
-	     	// resizeHeights('#imagewalldiv','#allstoriesdiv');
-	     });
+	     if ($('.mainpic').css('display') != 'none')
+	     {$(window).load(function(){prepareHeights('#imagewalldiv','#allstoriesdiv');});
+	      	    } // $(window).resize(function() {
+	     // 	prepareHeights('#imagewalldiv','#allstoriesdiv');
+	     // 	// resizeHeights('#imagewalldiv','#allstoriesdiv');
+	     // });
 
 //wip
 // $('button#keywords').click(function() {
