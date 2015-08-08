@@ -9,6 +9,10 @@ $git commit -m "msg"
 $git push heroku master
 
 
+To preview the mailer:
+
+http://0.0.0.0:3000/mailer/preview_welcome
+
 
 
 This README would normally document whatever steps are necessary to get the

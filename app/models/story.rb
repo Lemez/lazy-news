@@ -46,7 +46,7 @@ def self.last_month
 end
 
 def self.last_week
-    where(:created_at => 1.week.ago.beginning_of_week.advance(:days => -1)..Time.now).order("created_at desc")
+    where(:modified => 1.week.ago..Time.now).order("created_at desc")
 end
 
 # def latest_tags

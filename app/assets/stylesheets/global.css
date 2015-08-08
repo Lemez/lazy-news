@@ -111,6 +111,7 @@ nav button.tags {
 	color: rgba(0,0,0,0.5);
 	font-family: 'Oxygen', sans-serif;
 	padding-left: 2%;
+	display: none;
 }
 
 a:visited {
@@ -139,7 +140,7 @@ img#logo {
 
 .down {
 	padding-top: 60px;
-	left: 100px;
+/*	left: 100px;*/
 	position: absolute;
 }
 
@@ -207,8 +208,8 @@ img#logo {
 }
 
 .picdiv {
-	max-width:150px;
-	max-height:80px;
+	max-width:100px;
+	max-height:50px;
 	float: left;
 	display: inline;
 	
@@ -246,6 +247,7 @@ img#logo {
 	background-color: #ecf0f1;
 	border-bottom: 2px white dashed;
 	max-height: 35%;
+	overflow: hidden;
 }
 
 .content {
@@ -440,14 +442,13 @@ img[src='Error.src']{
 		display: none;
 	}
 
-
 	#allstoriesdiv {
 		margin-top: 0;
 	}
 
 	.down {
 		left: 0;
-		padding-top: 0;
+/*		padding-top: 0;*/
 	}
 
 	#duck {

@@ -87,7 +87,7 @@ end
 
 gem 'rails_12factor', group: :production
 
-
+ gem 'roadie-rails', '~> 1.0.6'
 
 
 

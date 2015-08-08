@@ -1,0 +1,21 @@
+    <% @logos = {'musically' => 'music_ally.png', 'cmu' => 'cmu.jpg'} %>
+
+    <% @stories.each do |story|%>
+    <tr>
+
+      <td width="100" valign="top"> 
+        <%= story.modified.strftime("%d.%m.%Y").strip %>
+      </td>
+   
+      
+    
+      <td width="100" valign="top">
+        <%= image_tag @logos[story.source], width: '100' %>
+      </td>
+
+      <td width="600" valign="top">  
+        <%= link_to story.title, story.url %>
+      </td>
+    </tr>
+    <% end %>
+ 

@@ -140,8 +140,8 @@ var IconDict = {
 		 $(document)
 		 .find("img#logo")
 		 .attr("src", myLogo)
-		 // .css("width", "120")
-		 .css("height", "3em")
+		 .css("width", "120")
+		 .css("height", "60")
 		 .show()
 		 .css("visibility", "visible"); // display logo
 
