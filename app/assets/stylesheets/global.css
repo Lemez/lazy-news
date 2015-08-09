@@ -352,71 +352,17 @@ img.hovered {
 	opacity: 1;
 }
 
-
-.musically tr {
-    /*border-bottom: 2px solid slategray;*/
-}
-
-.musically ul li span {
-    color: slategray;
-}
-
-.musically .square,
-    /*button#mondomix, */
-.musically a:hover, .musically a.hovered {
-    background-color: slategray;
-    color: white;
-    -webkit-transition: background-color 0.5s;
-    -moz-transition: background-color 0.5s;
-}
-
-.cmu tr {
-    /*border-bottom: 2px solid mediumblue;*/
-}
-
-.cmu ul li span {
-    color: mediumblue;
-}
-
-.cmu .square,
-    /*button#mondomix, */
-.cmu a:hover, .cmu a.hovered {
-    background-color: mediumblue;
-    color: white;
+.row-hover {
+	color: white;
     -webkit-transition: background-color 0.5s;
     -moz-transition: background-color 0.5s;
 }
 
 
-.techcrunch tr {
-    /*border-bottom: 2px solid darkgreen;*/
-}
 
-.techcrunch ul li span {
-    color: darkgreen;
-}
-
-
-.venturebeat tr {
+/*/*.edsurge tr {
     /*border-bottom: 2px solid red;*/
-}
-
-.venturebeat ul li span {
-    color: red;
-}
-
-.venturebeat .square,
-    /*button#mondomix, */
-.venturebeat a:hover, .venturebeat a.hovered {
-    background-color: red;
-    color: white;
-    -webkit-transition: background-color 0.5s;
-    -moz-transition: background-color 0.5s;
-}
-
-.edsurge tr {
-    /*border-bottom: 2px solid red;*/
-}
+/*}
 
 .edsurge ul li span {
     color: maroon;
@@ -424,14 +370,12 @@ img.hovered {
 
 .edsurge .square,
     /*button#mondomix, */
-.edsurge a:hover, .edsurge a.hovered {
+/*.edsurge a:hover, .edsurge a.hovered {
     background-color: maroon;
     color: white;
     -webkit-transition: background-color 0.5s;
     -moz-transition: background-color 0.5s;
-}
-
-
+}*/
 
 img[src='Error.src']{
     display: none;

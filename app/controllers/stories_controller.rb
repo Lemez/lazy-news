@@ -1,8 +1,13 @@
 class StoriesController < ApplicationController
 
+  #need to get our user controller directions into our stories controller
+
+
   def index
 
-    @stories = Story.all
+    @flash= { :success => "It worked!", :error => "It failed. :-(" }
+
+    @stories = Story.all.uniq(&:url)
     @stories.each {|story| story.title = story.title.chomp!}
     @source_keys = []
 
@@ -19,22 +24,27 @@ class StoriesController < ApplicationController
     @recent_thenextweb_edu = @stories.thenextweb.is_education.latest_order
     @recent_learnegg = @stories.learnegg.is_education.latest_order
     @recent_edsurge = @stories.edsurge.is_education.latest_order
+    @recent_mbw = @stories.mbw.latest_order
+    @recent_rollingstone = @stories.rollingstone.latest_order
 
     @music_sources = @stories.is_music.latest_order
     @education_sources = @stories.is_education.latest_order
 
-    @all_by_date = @stories.last_month.latest_order_18
-    @all_by_a_to_z = @all_by_date.a_to_z
+    @all_by_date = @stories.last_week
+    # @all_by_a_to_z = @all_by_date.a_to_z
 
     @sources = [  
                  # @recent_techcrunch_music,
                  @recent_musically,
+                 @recent_mbw,
+                 @recent_rollingstone,
                  @recent_venturebeat_music,
                  @recent_cmu, 
                  @recent_edsurge, 
                  # @recent_learnegg,
                  # @recent_techcrunch_edu,
                  # @recent_thenextweb_edu,
+                 
                  @recent_venturebeat_edu
               ]
 
@@ -88,6 +98,10 @@ class StoriesController < ApplicationController
     #   i += 1
     # end
 
+  end
+
+  def mailer
+    
   end
 
 

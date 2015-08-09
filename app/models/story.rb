@@ -2,7 +2,7 @@ class Story < ActiveRecord::Base
 
 # include ActiveModel::ForbiddenAttributesProtection
 
-# attr_reader :modified
+# attr_accessor :modified, :url, :pic_url, :source, :title, :area, :full_text, :title
 
 validates :area, presence: true
 validates :source, presence: true
@@ -46,8 +46,9 @@ def self.last_month
 end
 
 def self.last_week
-    where(:modified => 1.week.ago..Time.now).order("created_at desc")
+    where(:modified => 1.week.ago..Time.now).order(:modified).reverse
 end
+
 
 # def latest_tags
 # 	get_histogram
@@ -70,6 +71,8 @@ scope :thenextweb, -> { where(source:"thenextweb") }
 scope :learnegg, -> { where(source:"learnegg") }
 scope :cmu, -> { where(source:"cmu") }
 scope :edsurge, -> { where(source:"edsurge") }
+scope :mbw, -> { where(source:"musicbusinessworldwide") }
+scope :rollingstone, -> { where(source:"rollingstone") }
 
 scope :is_music, -> {where(area:"music")}
 scope :is_education, -> {where(area:"education")}

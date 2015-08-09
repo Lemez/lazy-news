@@ -43,11 +43,12 @@ var myDict = {
 					  "musically" : "slategray",
 					  "techcrunch" : "darkgreen",
 					  "thenextweb" : "orangered",
-					  "venturebeat" : "red",
+					  "venturebeat" : "#c0392b",
 					  "learnegg" : "black",
-					  "cmu" : "mediumblue",
-					  "edsurge" : "maroon"
-					  
+					  "cmu" : "#2980b9",
+					  "edsurge" : "#2c3e50",
+					  "rollingstone" : "cornflowerblue",
+					  "musicbusinessworldwide" : "#16a085"
 					};
 
 var allSources = {
@@ -57,7 +58,9 @@ var allSources = {
 					  "venturebeat" : "VENTUREBEAT",
 					  "learnegg" : "LEARNEGG",
 					  "cmu" : "CMU",
-					  "edsurge" : "EDSURGE"
+					  "edsurge" : "EDSURGE",
+					  "rollingstone" : "ROLLING STONE",
+					  "musicbusinessworldwide" : "MUSIC BUSINESS WORLDWIDE"
 }
 
 var LogoDict = {
@@ -67,8 +70,9 @@ var LogoDict = {
 					  "thenextweb" : "assets/TheNextWeb.png",
 					  "learnegg" : "assets/learnegg.png",
 					  "cmu" : "assets/cmu.jpg",
-					  "edsurge" : "assets/edsurge.jpg"
-					  
+					  "edsurge" : "assets/edsurge.jpg",
+					  "rollingstone" : "assets/rollingstone.png",
+					  "musicbusinessworldwide" : "assets/mbw.png"
 					};
 
 var TypeDict = {
@@ -100,7 +104,9 @@ var IconDict = {
 
    		 	$('td').eq(index)
  						.addClass(myClass);
-		 
+
+ 			 $('span.intext').css('color', 'black');
+
  			$('.all_by_date').siblings('div').hide();
 			} 
 	}
@@ -126,7 +132,10 @@ var IconDict = {
 		var myColor = myDict[myClass];
 		var myLogo = LogoDict[myClass];
 
-	
+		$(this).find('a')
+					.css("background-color", myColor)
+					.addClass("row-hover");
+
 		 $(document)
 		 .find("div#mydate")
 		 .html("<h2>" + myDate + "</h2>")
@@ -166,6 +175,8 @@ var IconDict = {
 				.removeClass("on");
 
 		$(this).find("td").css("visibility", "hidden");
+
+		$(this).find('a').removeClass("row-hover").css("background-color", 'inherit');
 
 		// $(this).closest('div.content').siblings().children().children().css("visibility", "hidden");
 		// $('.slick-track').css("visibility", "visible");
@@ -233,7 +244,14 @@ var IconDict = {
 
 	 		showMeandHideOthers('.by_source');
 	 		showMeandHideOthers(myDiv);
+
+	 		myColor = myDict[$('span.square').closest('th').attr('class')];
 	    	
+	 		// add squares css
+	 		$('span.square').css('color', 'black').css('background-color', myColor);
+
+
+
 		 	return false;
 	 });
 

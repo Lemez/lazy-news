@@ -63,14 +63,20 @@ namespace :grab_tasks do
     p "running vb music"
     Rake::Task["grab_tasks:grab_venturebeat_music"].invoke
 
-    p "running vb edu"
-    Rake::Task["grab_tasks:grab_venturebeat_edu"].invoke
-
     p "running cmu music"
     Rake::Task["grab_tasks:grab_cmu"].invoke
 
+    p "running rollingstone music"
+    Rake::Task["grab_tasks:grab_rs"].invoke
+
+    p "running Music Business Worldwide music"
+    Rake::Task["grab_tasks:grab_mbw"].invoke
+
     p "running edsurge edu"
     Rake::Task["grab_tasks:grab_edsurge"].invoke
+
+    p "running vb edu"
+    Rake::Task["grab_tasks:grab_venturebeat_edu"].invoke
 
     # p "running tc music"
     # Rake::Task["grab_tasks:grab_techcrunch_music"].invoke
@@ -424,6 +430,74 @@ namespace :grab_tasks do
         i += 1
       end
 
+  end
+
+
+  task :grab_rs => :environment do
+     response = HTTParty.get('http://www.rollingstone.com/music')
+     root = 'http://www.rollingstone.com'
+     doc = Nokogiri::HTML(response)
+
+     doc.css('ul.picks-list li.rs-pick div.feature-well').each do |item|
+
+    
+
+      url = root + item.at('div.img-container a')['href']
+      pic_url = item.at('div.img-container a img')['data-src']
+      title =  item.at('header.dek a h2').content
+
+      newdoc = Nokogiri::HTML(HTTParty.get(url))
+      modified = newdoc.at('div.article-contributor time').content
+
+      full_text = ''
+      newdoc.search('div.article-content p').each {|p| full_text += p.content}
+
+      @raw_parameters = { :source => "rollingstone",
+                          :area => "music",
+                          :title => title,
+                          :url => url,
+                          :modified => modified,
+                          :pic_url => pic_url,
+                          :full_text => full_text
+                        }
+
+        p @raw_parameters
+        save_parameters
+
+     end
+  end
+
+  task :grab_mbw => :environment do 
+
+     response = HTTParty.get('http://www.musicbusinessworldwide.com/category/analysis/')
+     root = 'http://www.musicbusinessworldwide.com'
+     doc = Nokogiri::HTML(response)
+
+      doc.css('article.mb-listing').each do |item|
+        url = item.at('a.pull-left')['href']
+        encodedpicurl = item.at('a.pull-left div.media-object')['style']
+        pic_url = encodedpicurl[encodedpicurl.index('http')..-4]
+        title = item.at('h4.media-heading a').content
+
+        newdoc = Nokogiri::HTML(HTTParty.get(url))
+        modified = newdoc.at('div.mb-block time').content
+
+        full_text = ''
+        newdoc.search('div[itemprop="articleBody"] p').each {|p| full_text += p.content} 
+
+        @raw_parameters = { :source => "musicbusinessworldwide",
+                          :area => "music",
+                          :title => title,
+                          :url => url,
+                          :modified => modified,
+                          :pic_url => pic_url,
+                          :full_text => full_text
+                        }
+
+        p @raw_parameters
+        save_parameters
+
+    end
   end
 
   #work in progress 
