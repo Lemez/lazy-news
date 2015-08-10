@@ -13,10 +13,14 @@
            <td width="50" valign="top" style="<%=@style['date']%>"> 
         <%= startup.modified.strftime("%d.%m.%Y").strip %>
       </td>
-   
-          <td><strong><%= startup.name %></strong></br></br>
-         <%= startup.strapline %></td>
-           <td></td>
+
+       <td width="500" valign="top" style="<%=@style['td']%>">
+         <a href="<%=startup.twitter%>" target="_blank">
+            <strong><%= startup.name %></strong></br><%= startup.strapline %>
+         </a>  
+       
+      </td>
+      <td></td>
            
         </tr>
         <% end %>
@@ -50,4 +54,6 @@
      <% @lastsource = story.source %>
 
     <% end %>
+
+
  
