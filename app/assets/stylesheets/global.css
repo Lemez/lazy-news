@@ -353,9 +353,8 @@ img.hovered {
 }
 
 .row-hover {
-	color: white;
-    -webkit-transition: background-color 0.5s;
-    -moz-transition: background-color 0.5s;
+    -webkit-transition: background-color 0.1s;
+    -moz-transition: background-color 0.1s;
 }
 
 
@@ -424,6 +423,10 @@ img[src='Error.src']{
 	 color: white;
 }
 
+.startup-title, .startup-title a {
+	color: white;
+}
+
 .startup-strapline, .startup-strapline-background  {
 	top: 50%;
 	text-align: center;
@@ -442,6 +445,7 @@ img[src='Error.src']{
 }
 
 .startup-text {
+	color: white;
 	display: none;
 }
 

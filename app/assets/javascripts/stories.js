@@ -90,6 +90,9 @@ var IconDict = {
 
 		$('button#all_by_date').siblings('button').removeClass('active');
 		$('button#all_by_date').addClass('active');
+		$('.all_by_date').siblings('div').hide();
+
+		$('span.intext').css('color', 'black');
 
 		for(var index = 0; index < $('tbody th').length; index++){
 
@@ -97,17 +100,14 @@ var IconDict = {
     		var myClass = $.trim($('td').eq(index).text());
 			var myColor = myDict[myClass];
 			
-			// add source as a class 
-			$('th').eq(index)
-					.addClass(myClass)
- 					.css("border-bottom", "2px dotted " + myColor);
+			// add source as a class  					
 
-   		 	$('td').eq(index)
+   		 	$('tr').eq(index)
+   		 				.find('th')
+ 						.css("border-bottom", "2px dotted " + myColor);
+
+ 			$('td').eq(index)
  						.addClass(myClass);
-
- 			 $('span.intext').css('color', 'black');
-
- 			$('.all_by_date').siblings('div').hide();
 			} 
 	}
 
@@ -128,12 +128,13 @@ var IconDict = {
 		var myPicId = $(this).find("span#id").text();
 		var myPicUrl = $(this).find("a").attr("href");
 		var mySource = allSources[$.trim($(this).find("td").text())];
-		var myClass = $.trim($(this).children('th').attr("class"));
+		var myClass = $.trim($(this).children('td').attr("class"));
 		var myColor = myDict[myClass];
 		var myLogo = LogoDict[myClass];
 
 		$(this).find('a')
 					.css("background-color", myColor)
+					.css('color','white')
 					.addClass("row-hover");
 
 		 $(document)
@@ -176,7 +177,7 @@ var IconDict = {
 
 		$(this).find("td").css("visibility", "hidden");
 
-		$(this).find('a').removeClass("row-hover").css("background-color", 'inherit');
+		$(this).find('a').removeClass("row-hover").css("background-color", 'inherit').css('color','inherit');
 
 		// $(this).closest('div.content').siblings().children().children().css("visibility", "hidden");
 		// $('.slick-track').css("visibility", "visible");
