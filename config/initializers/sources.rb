@@ -1,3 +1,6 @@
+SOURCE_KEYS=["music","education"]
+
+
 # ALLSOURCES = {}
 # ALLSOURCES = [ 
 # 	  "afrobeat",

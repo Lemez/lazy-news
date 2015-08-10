@@ -5,5 +5,6 @@ root 'stories#index'
 
 get 'mailer(/:action(/:id(.:format)))' => 'mailer#:action'
 
-
+resources :users
+resources :startups
 end

@@ -15,6 +15,29 @@ http://0.0.0.0:3000/mailer/preview_welcome
 
 
 
+      Prefix Verb   URI Pattern                       Controller#Action
+        root GET    /                                 stories#index
+             GET    /mailer(/:action(/:id(.:format))) mailer#:action
+       users GET    /users(.:format)                  users#index
+             POST   /users(.:format)                  users#create
+    new_user GET    /users/new(.:format)              users#new
+   edit_user GET    /users/:id/edit(.:format)         users#edit
+        user GET    /users/:id(.:format)              users#show
+             PATCH  /users/:id(.:format)              users#update
+             PUT    /users/:id(.:format)              users#update
+             DELETE /users/:id(.:format)              users#destroy
+    startups GET    /startups(.:format)               startups#index
+             POST   /startups(.:format)               startups#create
+ new_startup GET    /startups/new(.:format)           startups#new
+edit_startup GET    /startups/:id/edit(.:format)      startups#edit
+     startup GET    /startups/:id(.:format)           startups#show
+             PATCH  /startups/:id(.:format)           startups#update
+             PUT    /startups/:id(.:format)           startups#update
+             DELETE /startups/:id(.:format)           startups#destroy
+
+
+
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 

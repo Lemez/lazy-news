@@ -5,15 +5,14 @@ class StoriesController < ApplicationController
 
   def index
 
-    @flash= { :success => "It worked!", :error => "It failed. :-(" }
-
+    
     @stories = Story.all.uniq(&:url)
     @stories.each {|story| story.title = story.title.chomp!}
-    @source_keys = []
-
-    @stories.latest_fifty.each do |story|
-      @source_keys << story.area unless @source_keys.include?(story.area)
-    end
+    # defined for now as a constant
+    # @source_keys = []
+    # @stories.latest_fifty.each do |story|
+    #   @source_keys << story.area unless @source_keys.include?(story.area)
+    # end
 
     @recent_musically = @stories.musically.latest_order
     @recent_cmu = @stories.cmu.latest_order
@@ -30,7 +29,7 @@ class StoriesController < ApplicationController
     @music_sources = @stories.is_music.latest_order
     @education_sources = @stories.is_education.latest_order
 
-    @all_by_date = @stories.last_week
+    @all_by_date = @stories.last_month
     # @all_by_a_to_z = @all_by_date.a_to_z
 
     @sources = [  

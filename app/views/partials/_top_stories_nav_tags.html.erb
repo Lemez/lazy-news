@@ -1,0 +1,11 @@
+<% @top_stories_array.each do |story| %>
+	<button class='tags' 
+			id='<%=story[0]%>'
+			frequency='<%=story[1]%>'
+	 		onclick="location.href='#';">
+
+	 		 <%= story[0] %>
+	 		 : 
+	 		 <%= story[1] %>
+	</button>
+<% end %>

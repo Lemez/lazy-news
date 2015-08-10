@@ -42,7 +42,7 @@ def self.latest_order_18
 end
 
 def self.last_month
-    where(:created_at => 5.weeks.ago.beginning_of_week.advance(:days => -1)..Time.now).order("created_at desc")
+    where(:created_at => 5.weeks.ago.beginning_of_week.advance(:days => -1)..Time.now).order(:modified).reverse
 end
 
 def self.last_week

@@ -3,7 +3,7 @@ class UserMailer < ActionMailer::Base
 	default from: "lemez9@gmail.com"
 
   	def weekly_email(user)
-	    @useremail = "lemez9@gmail.com"
+	    @useremail = user.email
 	    @stories = Story.is_music.where(:modified => 1.week.ago..Time.now).order(:modified).order(source: :desc).reverse
    		@genre = 'music'
 	    roadie_mail (to: @useremail, subject: subject_for_user(@genre)) do |format|]
@@ -15,7 +15,7 @@ class UserMailer < ActionMailer::Base
 
 	private
 		def subject_for_user(user)
-			I18n.translate 'emails.weekly_email.subject', name: @name
+			I18n.translate 'emails.weekly_email.subject'
 		end
 	end
 end

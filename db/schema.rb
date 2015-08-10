@@ -11,7 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150809131817) do
+ActiveRecord::Schema.define(version: 20150810095757) do
+
+  create_table "startups", force: true do |t|
+    t.string   "source"
+    t.string   "area"
+    t.string   "name"
+    t.string   "strapline"
+    t.string   "twitter"
+    t.datetime "modified"
+    t.string   "pic_url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "stories", force: true do |t|
     t.string   "title"

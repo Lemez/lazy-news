@@ -16,3 +16,6 @@
 /tmp
 /vendor/bundle
 /app/assets/javascripts/stories.js.erb
+
+# Ignore application configuration
+/config/application.yml
