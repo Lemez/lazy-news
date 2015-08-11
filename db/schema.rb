@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150810095757) do
+ActiveRecord::Schema.define(version: 20150811042843) do
 
   create_table "startups", force: true do |t|
     t.string   "source"
@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 20150810095757) do
     t.string   "pic_url"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "url"
   end
 
   create_table "stories", force: true do |t|

@@ -1,11 +1,12 @@
-<thead>
-	<tr>
-		<th>
-			<%= mystory[0].area.upcase %>
-			<span class='square'></span>
-			<%= mystory[0].source.upcase %>
+ <% @logos = {'musically' => 'music_ally.png', 'cmu' => 'completemusicupdate.jpg', 'rollingstone' => 'rollingstone.png', 'musicbusinessworldwide' => 'musicbusinessworldwide.jpg', 'wired' => 'wired.png', 'venturebeat' => 'venturebeat.jpeg'} %>
+ <% item = mystory[0].source %>
 
-			<span id='date'></span>
-		</th>
-	</tr>
+
+<thead>
+	<th>
+	<%= image_tag(@logos[item], width: '250') %>
+	<!-- <span class='square'></span> -->
+	<%# item.upcase %>
+	</th>
 </thead>
+

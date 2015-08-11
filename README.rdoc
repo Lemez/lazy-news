@@ -8,6 +8,10 @@ $git add .
 $git commit -m "msg" 
 $git push heroku master
 
+Command line - see local CRON:
+
+$EDITOR=sublime crontab -e
+
 
 To preview the mailer:
 

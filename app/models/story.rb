@@ -2,7 +2,7 @@ class Story < ActiveRecord::Base
 
 # include ActiveModel::ForbiddenAttributesProtection
 
-# attr_accessor :modified, :url, :pic_url, :source, :title, :area, :full_text, :title
+attr_accessible :modified, :url, :pic_url, :source, :title, :area, :full_text, :title
 
 validates :area, presence: true
 validates :source, presence: true
@@ -30,7 +30,7 @@ def self.a_to_z
 end
 
 def self.latest_order
-	self.ordered.limit(8)
+	self.ordered.limit(10)
 end
 
 def self.latest_fifty
@@ -73,7 +73,7 @@ scope :cmu, -> { where(source:"cmu") }
 scope :edsurge, -> { where(source:"edsurge") }
 scope :mbw, -> { where(source:"musicbusinessworldwide") }
 scope :rollingstone, -> { where(source:"rollingstone") }
-
+scope :wired, -> { where(source:"wired") }
 scope :is_music, -> {where(area:"music")}
 scope :is_education, -> {where(area:"education")}
 

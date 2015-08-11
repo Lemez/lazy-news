@@ -260,6 +260,7 @@ img#logo {
 }
 
 table {
+	width: 100%;
 	text-align: left;
 	font-size: 18px;
 }
@@ -278,9 +279,11 @@ thead th {
 tbody a, a:visited {
 	font-family: 'Oxygen', sans-serif;
 	padding-top: 2px;
+	padding-left: 5px;
 	/*line-height: 1.5;*/
 	text-decoration: none;
 	color: rgba(0,0,0,0.6);
+	font-weight: 400;
 }
 
 tbody td {
@@ -339,6 +342,10 @@ span .on, .on li {
 .tag {
 	font-size: 10px;
 	display: none;
+}
+
+.by_source thead th {
+	text-align: center;
 }
 
 .square {

@@ -25,8 +25,9 @@ namespace :grab_tasks do
   def save_parameters
 
      Story.where(url: @raw_parameters[:url]).first_or_create do |s|
-        s.update(@raw_parameters)
+        
         @raw_parameters[:pic_url] ? s.pic_url = @raw_parameters[:pic_url] : s.pic_url = "assets/breaking_news.png"
+        s.update!(@raw_parameters)
          p "saved: #{@raw_parameters}"
     end
   end
@@ -75,6 +76,62 @@ namespace :grab_tasks do
   end
 
 
+  task :grab_wired_music => :environment do 
+     response = HTTParty.get('http://www.wired.co.uk/search/news?q=music')
+     doc = Nokogiri::HTML(response)
+     root = 'http://www.wired.co.uk'
+
+     doc.css('li.searchResultItem').each do |link|
+      title = link.at('h2 a').content
+      next if title.include?("WIRED")
+
+      url = root + link.at('h2 a')['href']
+      modified = link.at('ul li.last').content
+      pic_url = link.at('div.body img')['src']
+
+      new_response = HTTParty.get(url)
+      newdoc = Nokogiri::HTML(new_response)
+      full_text = ''
+
+      newdoc.css('div.mainCopy p').each{|c| full_text += c.content unless c.content.include?("}") }
+      p "---------------------------------  "
+      
+
+       @raw_parameters = { :source => "wired",
+                          :area => "music",
+                          :title => title,
+                          :url => url,
+                          :modified => modified,
+                          :pic_url => pic_url,
+                          :full_text => full_text
+                        }
+
+        p @raw_parameters 
+       save_parameters
+
+     end
+
+  end
+  
+
+
+  task :grab_betalist_url => :environment do 
+   
+   response = HTTParty.get('http://betalist.com/markets/music')
+     doc = Nokogiri::HTML(response)
+     root = 'http://betalist.com'
+    doc.css('div.startupGridItem').each do |item|
+      title = item.at('a.startupGridItem__name').content
+      startup = Startup.where(name:title).first
+
+      destination = root + item.at('a.startupGridItem__pitch')['href'] + "/visit"
+      startup.url = Net::HTTP.get_response(URI(destination))['location']
+      p startup.url
+      startup.save!
+
+    end
+  end
+
 
   task :grab_betalist => :environment do 
 
@@ -93,17 +150,18 @@ namespace :grab_tasks do
         meta.nil? ? twitter_handle = '' : twitter_handle = 'http://twitter.com/' + meta['content'] 
         modified = newdoc.at('time.age')['datetime']
 
+        url = Net::HTTP.get_response(URI(destination+'/visit'))['location']
 
         @raw_parameters = { :source => "betalist",
                           :area => "music",
                           :name => title,
                           :strapline => strapline,
                           :twitter => twitter_handle,
+                          :url => url,
                           :modified => modified,
                           :pic_url => pic_url
                         }
 
-        p @raw_parameters
         save_startup_parameters
 
     end
