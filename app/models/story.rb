@@ -74,6 +74,7 @@ scope :edsurge, -> { where(source:"edsurge") }
 scope :mbw, -> { where(source:"musicbusinessworldwide") }
 scope :rollingstone, -> { where(source:"rollingstone") }
 scope :wired, -> { where(source:"wired") }
+scope :mit, -> { where(source:"mit") }
 scope :is_music, -> {where(area:"music")}
 scope :is_education, -> {where(area:"education")}
 

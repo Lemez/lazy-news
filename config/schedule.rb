@@ -5,7 +5,7 @@
 
 # Example:
 #
-set :output, Rails.root/log/cron_log.log
+set :output, "#{path}/log/cron.log"
 #
 # every 2.hours do
 #   command "/usr/bin/some_great_command"
@@ -22,5 +22,5 @@ set :output, Rails.root/log/cron_log.log
 # set :output, {:error => "log/cron_error_log.log", :standard => "log/cron_log.log"}
 
 every 2.hours do
-	rake "grab_tasks:execute_all"
+	rake "execute_all"
 end

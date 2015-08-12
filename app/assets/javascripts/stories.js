@@ -90,7 +90,8 @@ $(document).ready(function () {
 						  "edsurge" : "#2c3e50",
 						  "rollingstone" : "#c0392b",
 						  "musicbusinessworldwide" : "#e67e22",
-						  "wired" : "black"
+						  "wired" : "black",
+						  "mit" : "#27ae60"
 						};
 
 	var allSources = {
@@ -103,6 +104,7 @@ $(document).ready(function () {
 						  "edsurge" : "EDSURGE",
 						  "rollingstone" : "ROLLING STONE",
 						  "musicbusinessworldwide" : "MUSIC BUSINESS WORLDWIDE"
+
 	}
 
 	var LogoDict = {

@@ -1,22 +1,14 @@
 class UserMailer < ActionMailer::Base
-	include Roadie::Rails::Automatic
 	default from: "lemez9@gmail.com"
 
   	def weekly_email(user)
-	    @useremail = user.email
+  		@user = user
 	    @stories = Story.is_music.where(:modified => 1.week.ago..Time.now).order(:modified).order(source: :desc).reverse
    		@genre = 'music'
-	    roadie_mail (to: @useremail, subject: subject_for_user(@genre)) do |format|]
+   		@companies = Startup.order(:modified).reverse[0..4]
+   		@names = {'musically' => 'Music Ally', 'cmu' => 'Complete Music Update', 'rollingstone' => 'Rolling Stone', 'musicbusinessworldwide' => 'Music Business Worldwide', 'wired' => 'WIRED', 'mit' => 'MIT Technology Review'}
 
-	    	format.html { render layout: 'mailer_layout' }
-	      	format.text
-
+   		mail(to: @user.email, subject: "Lazy News: #{@genre}")
   	end
-
-	private
-		def subject_for_user(user)
-			I18n.translate 'emails.weekly_email.subject'
-		end
-	end
 end
 

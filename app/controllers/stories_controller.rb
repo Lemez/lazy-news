@@ -19,10 +19,12 @@ class StoriesController < ApplicationController
     @recent_mbw = @stories.mbw.latest_order
     @recent_rollingstone = @stories.rollingstone.latest_order
     @recent_wired = @stories.wired.latest_order
+    @recent_mit = @stories.mit.latest_order
 
        @sources = [  
                  @recent_musically,
                  @recent_wired,
+                 @recent_mit,
                  @recent_mbw,
                  @recent_rollingstone,
                  @recent_venturebeat_music,

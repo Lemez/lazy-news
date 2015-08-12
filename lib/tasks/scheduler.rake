@@ -24,10 +24,10 @@ namespace :grab_tasks do
 
   def save_parameters
 
+    @raw_parameters[:pic_url] = "assets/breaking_news.png" if @raw_parameters[:pic_url].empty?
+
      Story.where(url: @raw_parameters[:url]).first_or_create do |s|
-        
-        @raw_parameters[:pic_url] ? s.pic_url = @raw_parameters[:pic_url] : s.pic_url = "assets/breaking_news.png"
-        s.update!(@raw_parameters)
+        s.update(@raw_parameters)
          p "saved: #{@raw_parameters}"
     end
   end
@@ -44,6 +44,12 @@ namespace :grab_tasks do
     p "running musically"
     Rake::Task["grab_tasks:grab_musically"].invoke
 
+    p "running wired"
+    Rake::Task["grab_tasks:grab_wired_music"].invoke
+
+    p "running mit"
+    Rake::Task["grab_tasks:grab_mit"].invoke
+
     p "running vb music"
     Rake::Task["grab_tasks:grab_venturebeat_music"].invoke
 
@@ -59,11 +65,11 @@ namespace :grab_tasks do
     p "running Music Business Worldwide Interviews music"
     Rake::Task["grab_tasks:grab_mbw_interviews"].invoke
 
-    p "running edsurge edu"
-    Rake::Task["grab_tasks:grab_edsurge"].invoke
+    # p "running edsurge edu"
+    # Rake::Task["grab_tasks:grab_edsurge"].invoke
 
-    p "running vb edu"
-    Rake::Task["grab_tasks:grab_venturebeat_edu"].invoke
+    # p "running vb edu"
+    # Rake::Task["grab_tasks:grab_venturebeat_edu"].invoke
 
     p "running Betalist"
     Rake::Task["grab_tasks:grab_betalist"].invoke
@@ -74,6 +80,37 @@ namespace :grab_tasks do
     # p "running tc edu"
     # Rake::Task["grab_tasks:grab_techcrunch_edu"].invoke
   end
+
+  task :grab_mit => :environment do 
+     response = HTTParty.get('http://www.technologyreview.com/search/site/music/')
+     doc = Nokogiri::HTML(response)
+     root = 'http://www.technologyreview.com'
+
+     doc.css('div.story-info').each do |link|
+      modified = link.at('time')['title']
+      title = link.at('h4 a').content
+      url = link.at('h4 a')['href']
+
+      new_response = HTTParty.get(url)
+      newdoc = Nokogiri::HTML(new_response)
+      full_text = ''
+      newdoc.css('section.body p').each{|c| full_text += c.content }
+      pic_url = newdoc.at('section.body img')['src'] rescue ''
+      # p "#{title}: #{pic_url}"
+
+         @raw_parameters = { :source => "mit",
+                          :area => "music",
+                          :title => title,
+                          :url => url,
+                          :modified => modified,
+                          :pic_url => pic_url,
+                          :full_text => full_text
+                        }
+
+      save_parameters
+
+     end
+   end
 
 
   task :grab_wired_music => :environment do 
@@ -94,7 +131,6 @@ namespace :grab_tasks do
       full_text = ''
 
       newdoc.css('div.mainCopy p').each{|c| full_text += c.content unless c.content.include?("}") }
-      p "---------------------------------  "
       
 
        @raw_parameters = { :source => "wired",
@@ -106,7 +142,6 @@ namespace :grab_tasks do
                           :full_text => full_text
                         }
 
-        p @raw_parameters 
        save_parameters
 
      end
@@ -361,67 +396,6 @@ namespace :grab_tasks do
       driver.quit
   end
 
-  task :grab_venturebeat_edu => :environment do
-     response = HTTParty.get('http://venturebeat.com/category/education/')
-     doc = Nokogiri::HTML(response)
-     xdoc = doc.css('article.post div a')
-     ydoc = doc.css('article.post')
-
-      # ap xdoc.search('img').map{ |a| [a['src'], a.text] }[0, 9]
-          imgs = []
-          xdoc.xpath("//*[contains(@class, 'river')]").each {|node| imgs << node["src"] if node["src"]  }
-
-          @url = ''
-          urls = []
-          doc.css('article.post div a').each do |item|
-          if item['rel'] == 'bookmark'
-            if @url != item['href']
-              @url = item['href']
-              urls << @url
-            end
-          end
-        end
-       
-         titles = []
-          xdoc.xpath('//h2/a').each {|node| titles << node.text }
-
-          modifieds = []
-          doc.xpath("//*[contains(@class, 'the-time')]").each {|node| modifieds << node.text.to_date }
-
-          fulltexts=[]
-          urls.each do |article|
-            text = []
-            doc = Nokogiri::HTML(HTTParty.get(article))
-            doc.xpath("//*[contains(@class, 'post-content')]/p").each {|node| text << node.text }
-            fulltexts << text.join(" ")
-          end
-
-            # p titles.length
-            # p urls.length
-            # p modifieds.length
-            # p imgs.length # images getting far too many inputs
-            # p fulltexts.length
-
-
-          i = 0
-           while i < titles.length
-
-            @raw_parameters = { :source => "venturebeat",
-                              :area => "education",
-                             :title => titles[i],
-                             :url => urls[i],
-                             :modified => modifieds[i],
-                             :pic_url => imgs[i],
-                             :full_text => fulltexts[i]}
-
-            # p @raw_parameters  
-            # p '___________'
-            
-            save_parameters
-            i += 1
-
-          end
-  end 
 
   task :grab_venturebeat_music => :environment do
      response = HTTParty.get('http://venturebeat.com/tag/music/')
@@ -519,20 +493,21 @@ namespace :grab_tasks do
 
 
   task :grab_rs => :environment do
+
      response = HTTParty.get('http://www.rollingstone.com/music')
      root = 'http://www.rollingstone.com'
      doc = Nokogiri::HTML(response)
 
      doc.css('ul.picks-list li.rs-pick div.feature-well').each do |item|
 
-    
-
       url = root + item.at('div.img-container a')['href']
       pic_url = item.at('div.img-container a img')['data-src']
-      title =  item.at('header.dek a h2').content
-
+      title = item.at('header.dek a h2').content
+   
       newdoc = Nokogiri::HTML(HTTParty.get(url))
-      modified = newdoc.at('div.article-contributor time').content
+      try1 = newdoc.at('div.article-contributor time')
+      try2 = newdoc.at('.byline span.timestamp')
+      try1.nil? ? modified = try2.content : modified = try1.content
 
       full_text = ''
       newdoc.search('div.article-content p').each {|p| full_text += p.content}
@@ -546,8 +521,8 @@ namespace :grab_tasks do
                           :full_text => full_text
                         }
 
-        # p @raw_parameters
-        # save_parameters
+         # p @raw_parameters
+        save_parameters
 
      end
   end
@@ -686,6 +661,59 @@ namespace :grab_tasks do
 
         #   end
   end
+
+  task :grab_venturebeat_edu => :environment do
+     response = HTTParty.get('http://venturebeat.com/category/education/')
+     doc = Nokogiri::HTML(response)
+     xdoc = doc.css('article.post div a')
+     ydoc = doc.css('article.post')
+
+      # ap xdoc.search('img').map{ |a| [a['src'], a.text] }[0, 9]
+          imgs = []
+          xdoc.xpath("//*[contains(@class, 'river')]").each {|node| imgs << node["src"] if node["src"]  }
+
+          @url = ''
+          urls = []
+          doc.css('article.post div a').each do |item|
+          if item['rel'] == 'bookmark'
+            if @url != item['href']
+              @url = item['href']
+              urls << @url
+            end
+          end
+        end
+       
+         titles = []
+          xdoc.xpath('//h2/a').each {|node| titles << node.text }
+
+          modifieds = []
+          doc.xpath("//*[contains(@class, 'the-time')]").each {|node| modifieds << node.text.to_date }
+
+          fulltexts=[]
+          urls.each do |article|
+            text = []
+            doc = Nokogiri::HTML(HTTParty.get(article))
+            doc.xpath("//*[contains(@class, 'post-content')]/p").each {|node| text << node.text }
+            fulltexts << text.join(" ")
+          end
+
+          i = 0
+           while i < titles.length
+
+            @raw_parameters = { :source => "venturebeat",
+                              :area => "education",
+                             :title => titles[i],
+                             :url => urls[i],
+                             :modified => modifieds[i],
+                             :pic_url => imgs[i],
+                             :full_text => fulltexts[i]}
+                             
+            save_parameters
+            i += 1
+
+          end
+  end 
+
 
   task :grab_edsurge => :environment do
     root = "https://www.edsurge.com"

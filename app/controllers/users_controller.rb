@@ -8,12 +8,15 @@ class UsersController < ApplicationController
 	end
 
 	def create
-		@user = User.new(params[:user]) 
+		@user = User.where(params[:user]).first_or_create
 		if @user.save
-      		flash[:success] = "Thanks for signing up!"
-      		#  send the welcome mail
+      		flash[:notice] = "Thanks for signing up!"
+      		# Sends email to user when user is created.
+      		UserMailer.weekly_email(@user).deliver
+      		p "++++++++++ DELIVERED++++++++++++"
 		else
-     		flash[:error] = "Something is wrong :("
+     		flash[:alert] = "Something is wrong :("
+     			p "++++++++++ no++++++++++++"
 	 	end
 	 	redirect_to root_path
 	 end
