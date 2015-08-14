@@ -1,0 +1,28 @@
+<div class = 'content' id='allstoriesdivmobile'>
+
+	<% @all_by_date.each do |story| %>
+	<article>
+		<div class="story-image">
+			<%= image_tag story.pic_url, :height => 200 %>
+		</div>
+	</br>
+			
+		<div class='story-data'>	
+			<div class='story-source'>
+				<%= story.source %>
+			</div>
+			
+			<div class="story-modified">
+					<% t=story.modified %>
+					<%= t.strftime("%d.%m.%Y").strip if t %> 
+			</div>
+
+			<div class='story-title' id='story<%= story.id %>'>
+				<%= link_to story.title, story.url, :target => "_blank" %>
+			</div>
+		</div>
+	</article>
+
+	<% end %>
+
+</div>

@@ -1,6 +1,7 @@
 @import url('//fonts.googleapis.com/css?family=Oxygen:400,700');
 @import url('//fonts.googleapis.com/css?family=Lora:400,700');
 
+
 html, body {
 	font-family: 'Oxygen', sans-serif;
 	background-color: #ecf0f1;
@@ -197,7 +198,7 @@ img#logo {
 	position: fixed;
 	display: inline-block;
 	overflow: hidden;
-}*/
+}
 
 .mainpic {
 	width: 80%;
@@ -217,7 +218,7 @@ img#logo {
 .mainpic img {
 	margin-left: 5px;
 	/*height: 100px;*/
-	/*width: 100px;*/
+	/*width: 100px;
 	opacity: 0.75;
 	max-width: 100%;
     height: 80px;
@@ -231,7 +232,7 @@ img#logo {
 }
 
 
-/*
+
 .top_stories {
 	margin-top: 1%;	
 }*/
@@ -326,7 +327,7 @@ span .on, .on li {
 }
 
 
-.all_by_date h2 {
+.all_by_date_ h2 {
 	display: inline;
 }
 
@@ -435,33 +436,92 @@ img[src='Error.src']{
     display: none;
 }
 
+<<<<<<< Updated upstream
 @media (max-width: 800px) {
 	.story_info, .mainpic {
 		display: none;
 	}
+=======
+@media (min-width: 750px) {
+	.mobile, #allstoriesdivmobile {
+		display: none;
+	}
+}
+
+/* guardian break 750px width - from 3/4 to one column */
+ /* all the way to mobile */
+
+
+@media (max-width: 750px) {
+
+>>>>>>> Stashed changes
 
 
 	#allstoriesdiv {
 		margin-top: 0;
+
 	}
 
 	.down {
 		left: 0;
+<<<<<<< Updated upstream
 		padding-top: 0;
+=======
+>>>>>>> Stashed changes
 	}
 
 	#duck {
 		display: none;
 	}
+
+	table#desktoptable {
+		display: none;
+	}
+
+	.mobile {
+		display: block;
+	}
+
+	.story-image {
+		width: 100%;
+
+	}
+<<<<<<< Updated upstream
+=======
+
+	.story-image img{
+		width: 30%;
+		text-align: center;
+	}
+
+	.story-data {
+		width: 50%;
+		font-family: 'Oxygen', sans-serif;
+		text-decoration: none;
+		color: rgba(0,0,0,0.6);
+
+	}
+
+	.story-modified {
+		float: left;
+		width: 100px;
+	}
+
+	.story-source {
+		float: right;
+		width: 100px;
+	}
+	.story-title {
+		clear: both;
+		width: 100%;
+	}
+
+
 }
 
-@media (max-width: 500px) {
 
-	nav button {
-		font-size: 14px;
-		width: auto;
-	}
 
-	table {
-		font-size: 18px;
-	}
+
+
+
+>>>>>>> Stashed changes

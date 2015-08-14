@@ -17,7 +17,11 @@ namespace :grab_tasks do
 
   def save_parameters
 
+<<<<<<< Updated upstream
     # @story = Story.where(:url => @raw_parameters[:url]).first
+=======
+    @raw_parameters[:pic_url] = "breaking_news.png" if @raw_parameters[:pic_url].empty?
+>>>>>>> Stashed changes
 
     # if @story.nil?
       @story = Story.where(:url => @raw_parameters[:url]).first_or_create
