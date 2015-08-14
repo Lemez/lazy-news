@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
 
 def get_top_stories
 
-    @stories = Story.all
+    @stories = Story.all.uniq(&:url)
 
     @words = Array.new
 

@@ -11,7 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140308111139) do
+ActiveRecord::Schema.define(version: 20150811042843) do
+
+  create_table "startups", force: true do |t|
+    t.string   "source"
+    t.string   "area"
+    t.string   "name"
+    t.string   "strapline"
+    t.string   "twitter"
+    t.datetime "modified"
+    t.string   "pic_url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "url"
+  end
 
   create_table "stories", force: true do |t|
     t.string   "title"
@@ -28,5 +41,13 @@ ActiveRecord::Schema.define(version: 20140308111139) do
     t.text     "full_text"
     t.string   "area"
   end
+
+  create_table "users", force: true do |t|
+    t.string   "email"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "users", ["email"], name: "index_users_on_email", unique: true
 
 end

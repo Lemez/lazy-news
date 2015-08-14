@@ -2,43 +2,28 @@
 		<!-- <div id='duck'></div>	 -->
 			<div id="buttons">
 
-				<h1>Lazy News</h1>
-
+				<h1>Lazy News</h1> 
 
 				<!-- <h3> FILTER: DATE </h3> -->
-				<button id="all_by_date" onclick="location.href='#';">	LATEST </button>
+				<button id="all_by_date" onclick="location.href='/latest';">LATEST</button>
 				<!-- <button id="all_by_a_to_z" onclick="location.href='#';">	A-Z </button> -->
 
 
 				<!-- <h3> FILTER: AREA </h3> -->
-				<% @source_keys.each do |area| %>
+				<%# ["music","education"].each do |area| %>
 					<button class='sources' 
-							id='<%=area.strip%>'
-					 		onclick="location.href='#';">
-					 		 <%=area.upcase! %>
-					</button>
-				<% end %>
+							id='music'
+					 		onclick="location.href='/music';">MUSIC</button>
+				<%# end %>
 
-				<button class='hot'>HOT</button>
+				<!-- <button class='hot'>HOT</button> -->
+				<button onclick="location.href='/startups';">STARTUPS</button>
+				<button onclick="location.href='<%=new_user_path%>'">SIGNUP</button>
+
 				<div id='duck' ></div>
 
 				<!-- <h3> FILTER: TAG </h3> -->
-				<% @top_stories_array.each do |story| %>
-					<button class='tags' 
-							id='<%=story[0]%>'
-							frequency='<%=story[1]%>'
-					 		onclick="location.href='#';">
-
-					 		 <%= story[0] %>
-					 		 : 
-					 		 <%= story[1] %>
-					</button>
-
-				<% end %>
-				
-	
+				<%# render 'partials/top_stories_nav_tags' %>
 			
-				
 			</div>
-
 		</nav>

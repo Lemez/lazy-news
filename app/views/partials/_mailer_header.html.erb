@@ -1,0 +1,15 @@
+<% @names = {'musically' => 'Music Ally', 'cmu' => 'Complete Music Update', 'rollingstone' => 'Rolling Stone', 'musicbusinessworldwide' => 'Music Business Worldwide', 'wired' => 'WIRED', 'mit' => 'MIT Technology Review'} %>
+
+ <tr height="10"></tr>
+ <tr style="border-top:2px slategray solid;background-color:rgba(255,255,255,0.75);">
+
+ 	 
+     
+      <td></td>
+       <td></td>
+      <td style='font-size:1.5em;text-align:center;'><strong><%=@names[@story.source].upcase %></strong></td>
+      
+       <td style='vertical-align:middle;' >
+        <%= image_tag @logos[@story.source], height: '50', width: '150', style: @style['logo']  %>
+      </td>
+ </tr>

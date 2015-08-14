@@ -1,0 +1,9 @@
+
+	<%= form_for @user, url: {action: "create"}, html: {class: "form"} do |f| %> 
+
+				<%= f.label :email %> 
+				<%= f.text_field :email %>
+				<%= f.submit "Sign up" %> 
+
+	<% 	end %>
+

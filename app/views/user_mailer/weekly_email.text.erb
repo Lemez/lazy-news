@@ -1,0 +1,22 @@
+   <% @logos = {'musically' => 'music_ally.png', 'cmu' => 'cmu.jpg', 'rollingstone' => 'rollingstone.png', 'musicbusinessworldwide' => 'mbw.png', 'wired' => 'wired.png', 'mit' => 'mit.png'} %>
+<% @style={'td'=>"padding:2px 10px 0 0;line-height:1.5;border-bottom:2px dotted white;vertical-align:middle;font-size:18px;", 'logo' => "margin: 4px 2px 2px 4px;border-radius:6px;", 'img'=>"padding:2px auto 0 0;", 'date'=> "padding:2px 10px 0 0;line-height:1.5;border-bottom:2px dotted white;vertical-align:middle;font-style: italic;font-size: 10px;"} %>
+
+
+Music startups just launched:
+
+<% @companies.each do |startup| %>
+<%= startup.modified.strftime("%d.%m.%Y").strip %>: <%= startup.name %>
+<%= startup.strapline %>
+
+<% end %>
+<% @lastsource = '' %>
+<% @stories.each do |story|%>
+
+<% if story.source != @lastsource  %>
+<%= @names[story.source].upcase %>
+<% end %>
+
+<%= story.modified.strftime("%d.%m.%Y").strip %>:<%= link_to story.title, story.url, :target => "_blank" %>
+<% @lastsource = story.source %>
+
+<% end %>

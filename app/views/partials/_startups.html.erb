@@ -1,0 +1,28 @@
+
+<% @startups.each do |s| %>
+	<div class='startups' style="width:20%;">
+		<div class="startup-pic">
+			<a href="<%=s.url%>" target="_blank">
+				<img src="<%=s.pic_url%>" />
+			</a>
+
+			<div class='startup-text'>
+				<a href="<%=s.url%>" target="_blank">
+					<div class='startup-title-background'></div>
+				</a>
+
+				<div class='startup-title' style='color:white;'>
+					<a href="<%=s.url%>" target="_blank" style="color:white;">
+						<%= s.name %>
+					</a>
+				</div>
+	<!-- 		<div class='startup-strapline-background'></div> -->
+				<a href="<%=s.url%>" target="_blank">
+					<div class='startup-strapline'><%= s.strapline %></div>
+				</a>
+			</div>
+		
+		</div>
+	</div>
+<% end %>
+		

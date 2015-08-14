@@ -112,6 +112,7 @@ nav button.tags {
 	color: rgba(0,0,0,0.5);
 	font-family: 'Oxygen', sans-serif;
 	padding-left: 2%;
+	display: none;
 }
 
 a:visited {
@@ -140,7 +141,7 @@ img#logo {
 
 .down {
 	padding-top: 60px;
-	left: 100px;
+/*	left: 100px;*/
 	position: absolute;
 }
 
@@ -208,8 +209,8 @@ img#logo {
 }
 
 .picdiv {
-	max-width:150px;
-	max-height:80px;
+	max-width:100px;
+	max-height:50px;
 	float: left;
 	display: inline;
 	
@@ -247,6 +248,7 @@ img#logo {
 	background-color: #ecf0f1;
 	border-bottom: 2px white dashed;
 	max-height: 35%;
+	overflow: hidden;
 }
 
 .content {
@@ -259,6 +261,7 @@ img#logo {
 }
 
 table {
+	width: 100%;
 	text-align: left;
 	font-size: 18px;
 }
@@ -277,9 +280,11 @@ thead th {
 tbody a, a:visited {
 	font-family: 'Oxygen', sans-serif;
 	padding-top: 2px;
+	padding-left: 5px;
 	/*line-height: 1.5;*/
 	text-decoration: none;
 	color: rgba(0,0,0,0.6);
+	font-weight: 400;
 }
 
 tbody td {
@@ -340,6 +345,10 @@ span .on, .on li {
 	display: none;
 }
 
+.by_source thead th {
+	text-align: center;
+}
+
 .square {
 	display: inline-block;
 	height: 20px;
@@ -351,71 +360,16 @@ img.hovered {
 	opacity: 1;
 }
 
-
-.musically tr {
-    /*border-bottom: 2px solid slategray;*/
-}
-
-.musically ul li span {
-    color: slategray;
-}
-
-.musically .square,
-    /*button#mondomix, */
-.musically a:hover, .musically a.hovered {
-    background-color: slategray;
-    color: white;
-    -webkit-transition: background-color 0.5s;
-    -moz-transition: background-color 0.5s;
-}
-
-.cmu tr {
-    /*border-bottom: 2px solid mediumblue;*/
-}
-
-.cmu ul li span {
-    color: mediumblue;
-}
-
-.cmu .square,
-    /*button#mondomix, */
-.cmu a:hover, .cmu a.hovered {
-    background-color: mediumblue;
-    color: white;
-    -webkit-transition: background-color 0.5s;
-    -moz-transition: background-color 0.5s;
+.row-hover {
+    -webkit-transition: background-color 0.1s;
+    -moz-transition: background-color 0.1s;
 }
 
 
-.techcrunch tr {
-    /*border-bottom: 2px solid darkgreen;*/
-}
 
-.techcrunch ul li span {
-    color: darkgreen;
-}
-
-
-.venturebeat tr {
+/*/*.edsurge tr {
     /*border-bottom: 2px solid red;*/
-}
-
-.venturebeat ul li span {
-    color: red;
-}
-
-.venturebeat .square,
-    /*button#mondomix, */
-.venturebeat a:hover, .venturebeat a.hovered {
-    background-color: red;
-    color: white;
-    -webkit-transition: background-color 0.5s;
-    -moz-transition: background-color 0.5s;
-}
-
-.edsurge tr {
-    /*border-bottom: 2px solid red;*/
-}
+/*}
 
 .edsurge ul li span {
     color: maroon;
@@ -423,21 +377,107 @@ img.hovered {
 
 .edsurge .square,
     /*button#mondomix, */
-.edsurge a:hover, .edsurge a.hovered {
+/*.edsurge a:hover, .edsurge a.hovered {
     background-color: maroon;
     color: white;
     -webkit-transition: background-color 0.5s;
     -moz-transition: background-color 0.5s;
-}
-
-
+}*/
 
 img[src='Error.src']{
     display: none;
 }
 
+.form {
+	padding-top: 200px;
+}
+
+.startups {
+	position: relative;
+	float: left;
+	top: 2.5em;
+}
+
+
+.startup-pic {
+	z-index: 1;
+}
+
+.startup-title, .startup-strapline {
+	position: absolute;
+	 z-index: 3;
+    width: 90%;
+    text-align: center;
+    top: 2%;
+}
+
+
+.startup-title-background, .startup-strapline-background  {
+	width: 90%;
+    top: 0;
+    min-height: 100%;
+	position: absolute;
+	z-index: 2;
+/*    color: #000;*/
+    background-color: #34495e;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+    filter: alpha(opacity=75);
+    opacity: 0.75;
+}
+
+
+.startup-title a, .startup-strapline {
+	 text-decoration: none;
+	 color: white;
+}
+
+.startup-title, .startup-title a {
+	color: white;
+}
+
+.startup-strapline, .startup-strapline-background  {
+	top: 50%;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.startup-title {
+	font-size: 1em;
+	font-weight: bold;
+}
+
+.startup-strapline {
+	font-size: 0.75em;
+
+	/*background-color: rgba(0,0,0,0.5);*/
+}
+
+.startup-text {
+	color: white;
+	display: none;
+}
+
+.startup-pic:hover .startup-text {
+	display: block;
+} 
+
+
+.mailer {
+	width: 100%;
+	text-align: center;
+	top: 20%;
+	font-size: 24px;
+}
+
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+||||||| merged common ancestors
+=======
+
+
+
+>>>>>>> master
 @media (max-width: 800px) {
 	.story_info, .mainpic {
 		display: none;
@@ -460,9 +500,14 @@ img[src='Error.src']{
 <<<<<<< Updated upstream
 >>>>>>> Stashed changes
 
+<<<<<<< HEAD
 =======
 >>>>>>> Stashed changes
 
+||||||| merged common ancestors
+
+=======
+>>>>>>> master
 	#allstoriesdiv {
 		margin-top: 0;
 
@@ -470,6 +515,7 @@ img[src='Error.src']{
 
 	.down {
 		left: 0;
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 		padding-top: 0;
@@ -477,6 +523,11 @@ img[src='Error.src']{
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
+||||||| merged common ancestors
+		padding-top: 0;
+=======
+/*		padding-top: 0;*/
+>>>>>>> master
 	}
 
 	#duck {
@@ -511,6 +562,7 @@ img[src='Error.src']{
 		color: rgba(0,0,0,0.6);
 
 	}
+<<<<<<< HEAD
 
 =======
 
@@ -563,3 +615,8 @@ img[src='Error.src']{
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
+||||||| merged common ancestors
+=======
+
+}
+>>>>>>> master

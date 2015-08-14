@@ -2,7 +2,7 @@ class Story < ActiveRecord::Base
 
 # include ActiveModel::ForbiddenAttributesProtection
 
-# attr_reader :modified
+attr_accessible :modified, :url, :pic_url, :source, :title, :area, :full_text, :title
 
 validates :area, presence: true
 validates :source, presence: true
@@ -30,7 +30,7 @@ def self.a_to_z
 end
 
 def self.latest_order
-	self.ordered.limit(8)
+	self.ordered.limit(10)
 end
 
 def self.latest_fifty
@@ -42,12 +42,13 @@ def self.latest_order_18
 end
 
 def self.last_month
-    where(:created_at => 5.weeks.ago.beginning_of_week.advance(:days => -1)..Time.now).order("created_at desc")
+    where(:created_at => 5.weeks.ago.beginning_of_week.advance(:days => -1)..Time.now).order(:modified).reverse
 end
 
 def self.last_week
-    where(:created_at => 1.week.ago.beginning_of_week.advance(:days => -1)..Time.now).order("created_at desc")
+    where(:modified => 1.week.ago..Time.now).order(:modified).reverse
 end
+
 
 # def latest_tags
 # 	get_histogram
@@ -70,7 +71,10 @@ scope :thenextweb, -> { where(source:"thenextweb") }
 scope :learnegg, -> { where(source:"learnegg") }
 scope :cmu, -> { where(source:"cmu") }
 scope :edsurge, -> { where(source:"edsurge") }
-
+scope :mbw, -> { where(source:"musicbusinessworldwide") }
+scope :rollingstone, -> { where(source:"rollingstone") }
+scope :wired, -> { where(source:"wired") }
+scope :mit, -> { where(source:"mit") }
 scope :is_music, -> {where(area:"music")}
 scope :is_education, -> {where(area:"education")}
 

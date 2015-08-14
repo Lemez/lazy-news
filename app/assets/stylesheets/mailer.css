@@ -1,0 +1,56 @@
+@import url('//fonts.googleapis.com/css?family=Oxygen:400,700');
+
+html, body {
+	font-family: 'Oxygen', sans-serif;
+	background-color: #ecf0f1;
+	width: 100%;
+}
+
+table {
+	text-align: left;
+	font-size: 18px;
+}
+
+thead td {
+	padding-left: 10px;
+	display: inline-block;
+}
+
+thead th {
+	font-family: 'Oxygen', sans-serif;
+	padding-left: 10px;
+	padding-bottom: 10px;
+}
+
+tbody a, a:visited {
+	font-family: 'Oxygen', sans-serif;
+	padding-top: 2px;
+	/*line-height: 1.5;*/
+	text-decoration: none;
+	color: rgba(0,0,0,0.6);
+}
+
+tbody td {
+	font-family: 'Oxygen', sans-serif;
+	padding: 2px 10px 0 0;
+	line-height: 1.5;
+	display: none;
+}
+
+tbody span img {
+	display: none;
+}
+
+tbody th {
+	padding-left: 10px;
+	line-height: 1.35;
+}
+
+
+span #date {
+	display: none;
+	line-height: inherit;
+	font-size: 28px;
+}
+
+
