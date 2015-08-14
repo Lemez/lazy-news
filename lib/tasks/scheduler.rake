@@ -18,6 +18,7 @@ namespace :grab_tasks do
   def save_parameters
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     # @story = Story.where(:url => @raw_parameters[:url]).first
 =======
     @raw_parameters[:pic_url] = "breaking_news.png" if @raw_parameters[:pic_url].empty?
@@ -41,6 +42,9 @@ namespace :grab_tasks do
       end
 
       p "saved" if @story.save!
+=======
+    @raw_parameters[:pic_url] = "breaking_news.png" if @raw_parameters[:pic_url].empty?
+>>>>>>> Stashed changes
 
     # end
 

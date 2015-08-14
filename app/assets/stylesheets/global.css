@@ -437,11 +437,14 @@ img[src='Error.src']{
 }
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 @media (max-width: 800px) {
 	.story_info, .mainpic {
 		display: none;
 	}
 =======
+=======
+>>>>>>> Stashed changes
 @media (min-width: 750px) {
 	.mobile, #allstoriesdivmobile {
 		display: none;
@@ -454,8 +457,11 @@ img[src='Error.src']{
 
 @media (max-width: 750px) {
 
+<<<<<<< Updated upstream
 >>>>>>> Stashed changes
 
+=======
+>>>>>>> Stashed changes
 
 	#allstoriesdiv {
 		margin-top: 0;
@@ -465,7 +471,10 @@ img[src='Error.src']{
 	.down {
 		left: 0;
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 		padding-top: 0;
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 	}
@@ -477,6 +486,7 @@ img[src='Error.src']{
 	table#desktoptable {
 		display: none;
 	}
+<<<<<<< Updated upstream
 
 	.mobile {
 		display: block;
@@ -502,6 +512,31 @@ img[src='Error.src']{
 
 	}
 
+=======
+
+	.mobile {
+		display: block;
+	}
+
+	.story-image {
+		width: 100%;
+
+	}
+
+	.story-image img{
+		width: 30%;
+		text-align: center;
+	}
+
+	.story-data {
+		width: 50%;
+		font-family: 'Oxygen', sans-serif;
+		text-decoration: none;
+		color: rgba(0,0,0,0.6);
+
+	}
+
+>>>>>>> Stashed changes
 	.story-modified {
 		float: left;
 		width: 100px;
@@ -524,4 +559,7 @@ img[src='Error.src']{
 
 
 
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
