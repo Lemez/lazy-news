@@ -4,8 +4,8 @@ class StoriesController < ApplicationController
 
 
   def latest
-    @stories = Story.all
-    @all_by_date = @stories.where.not(source:'rollingstone').order(:modified).last_month
+    @stories = Story.all.where.not(source:'rollingstone')
+    @all_by_date = @stories.order(:modified).last_month
     flash[:notice] = ''
   end
 
