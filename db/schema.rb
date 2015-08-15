@@ -11,7 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150811042843) do
+ActiveRecord::Schema.define(version: 20150815081609) do
+
+  create_table "clicks", force: true do |t|
+    t.integer  "story_id"
+    t.integer  "clicks"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "startups", force: true do |t|
     t.string   "source"
