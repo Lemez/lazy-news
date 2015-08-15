@@ -1,4 +1,9 @@
 class String
+
+	def fix_asset_path
+		self.split("/").reject{|c| c=='assets'}.join("/")
+	end
+
 	def is_common
 		self == "The" ||
 		self == "Company" ||

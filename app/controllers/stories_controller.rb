@@ -4,9 +4,8 @@ class StoriesController < ApplicationController
 
 
   def latest
-    @stories = Story.all.uniq(&:url)
-    @stories.each {|story| story.title = story.title.chomp!}
-    @all_by_date = @stories.last_month
+    @stories = Story.scoped
+    @all_by_date = @stories.where.not(source:'rollingstone').order(:modified).last_month
   end
 
   def music
@@ -26,7 +25,7 @@ class StoriesController < ApplicationController
                  @recent_wired,
                  @recent_mit,
                  @recent_mbw,
-                 @recent_rollingstone,
+                 # @recent_rollingstone,
                  @recent_venturebeat_music,
                  @recent_cmu
                ]

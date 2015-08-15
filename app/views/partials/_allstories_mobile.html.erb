@@ -1,16 +1,15 @@
-<div class = 'content' id='allstoriesdivmobile'>
+<div id='allstoriesdivmobile'>
 
-	<% @all_by_date.each do |story| %>
-	<article>
+	<% @all_by_date.each_with_index do |story, index| %>
+
+	<% index%3==0 ? @class='big' : @class='small' %> 
+	<article class="<%=@class%>">
 		<div class="story-image">
-			<%= image_tag story.pic_url, :height => 200 %>
-		</div>
-	</br>
+			<%= link_to (image_tag story.pic_url.fix_asset_path, :height => 200), story.url, :target => "_blank" %>
+		</div>	
 			
 		<div class='story-data'>	
-			<div class='story-source'>
-				<%= story.source %>
-			</div>
+		
 			
 			<div class="story-modified">
 					<% t=story.modified %>
@@ -20,6 +19,10 @@
 			<div class='story-title' id='story<%= story.id %>'>
 				<%= link_to story.title, story.url, :target => "_blank" %>
 			</div>
+
+				<!-- <div class='story-source'>
+				<%# story.source %>
+			</div> -->
 		</div>
 	</article>
 

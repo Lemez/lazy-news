@@ -15,71 +15,15 @@ namespace :grab_tasks do
   end
 
 
-<<<<<<< HEAD
-  def save_parameters
-
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-    # @story = Story.where(:url => @raw_parameters[:url]).first
-=======
-    @raw_parameters[:pic_url] = "breaking_news.png" if @raw_parameters[:pic_url].empty?
->>>>>>> Stashed changes
-
-    # if @story.nil?
-      @story = Story.where(:url => @raw_parameters[:url]).first_or_create
-      @story.source = @raw_parameters[:source]
-      @story.area = @raw_parameters[:area]
-      @story.title = @raw_parameters[:title]
-      @story.url = @raw_parameters[:url]
-      @story.modified = @raw_parameters[:modified]
-
-    # else
-    #   p "Story #{@raw_parameters[:title]} already exists"
-
-      if @raw_parameters[:pic_url]
-        @story.pic_url = @raw_parameters[:pic_url]
-      else
-        @story.pic_url = "assets/breaking_news.png"
-      end
-
-      p "saved" if @story.save!
-=======
-    @raw_parameters[:pic_url] = "breaking_news.png" if @raw_parameters[:pic_url].empty?
->>>>>>> Stashed changes
-||||||| merged common ancestors
-  def save_parameters
-
-    # @story = Story.where(:url => @raw_parameters[:url]).first
-
-    # if @story.nil?
-      @story = Story.where(:url => @raw_parameters[:url]).first_or_create
-      @story.source = @raw_parameters[:source]
-      @story.area = @raw_parameters[:area]
-      @story.title = @raw_parameters[:title]
-      @story.url = @raw_parameters[:url]
-      @story.modified = @raw_parameters[:modified]
-
-    # else
-    #   p "Story #{@raw_parameters[:title]} already exists"
-
-      if @raw_parameters[:pic_url]
-        @story.pic_url = @raw_parameters[:pic_url]
-      else
-        @story.pic_url = "assets/breaking_news.png"
-      end
-
-      p "saved" if @story.save!
-=======
   def save_startup_parameters
     Startup.where(name: @raw_parameters[:name]).first_or_create do |s|
         s.update!(@raw_parameters)
          p "saved: #{@raw_parameters}"
     end
   end
->>>>>>> master
+
 
   def save_parameters
-
     @raw_parameters[:pic_url] = "assets/breaking_news.png" if @raw_parameters[:pic_url].empty?
 
      Story.where(url: @raw_parameters[:url]).first_or_create do |s|
