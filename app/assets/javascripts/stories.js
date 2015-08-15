@@ -3,6 +3,7 @@ $(document).ready(function () {
 	// loadtheduck();
 	var top = $('.content').css('margin-top');
 
+
 	// $("#music").dotdotdot({
 	// 		The HTML to add as ellipsis. 
 	// 	ellipsis	: '... ' )};
@@ -19,6 +20,8 @@ $(document).ready(function () {
     
 
     $(window).load(function () {
+
+    	$('.notice').fadeOut(2000);
 
     	$('body').bind('touchstart', function() {});
     	

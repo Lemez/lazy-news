@@ -482,6 +482,12 @@ img[src='Error.src']{
 	font-size: 24px;
 }
 
+.notice {
+	position: fixed;
+	top: 10%;
+	z-index: 10;
+}
+
 /*.mailer > tr:nth-of-type(odd) { 
   background: #eee; 
 }*/

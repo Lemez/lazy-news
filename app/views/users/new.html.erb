@@ -2,9 +2,6 @@
 	<%# render "partials/source_sidebar" %>
 	<section>
 		<div class='mailer'>
-			 <% flash.each do |key, value| %>
-		        <div class="alert alert-<%= key %>"><%= value %></div>
-		      <% end %>
 		<%= render 'partials/mailing_list_form' %>
 		<a type='button' href='/mailer/preview_welcome' target="_blank">Click here to see last week's mailout</a>
 		</div>
