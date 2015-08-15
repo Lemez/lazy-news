@@ -33,7 +33,7 @@
     <tr>
        
         <td width="100" valign="top" style="<%=@style['td']%>"> 
-        <%= image_tag story.pic_url, alt: story.title, class: "image_fix", width: '120', height: '70',style: @style['img']  %>
+        <%= image_tag story.pic_url.fix_asset_path, alt: story.title, class: "image_fix", width: '120', height: '70',style: @style['img']  %>
       </td>
     <!--   <td width="50" valign="top" style="<%#@style['date']%>"> 
         <%# story.modified.strftime("%d.%m.%Y").strip %>
