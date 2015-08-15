@@ -19,6 +19,9 @@ $(document).ready(function () {
     
 
     $(window).load(function () {
+
+    	$('body').bind('touchstart', function() {});
+    	
     	var articleId = $('article').attr('id');
     	var buttons = document.getElementsByTagName("button");
 

@@ -25,7 +25,7 @@ class StoriesController < ApplicationController
                  @recent_wired,
                  @recent_mit,
                  @recent_mbw,
-                 # @recent_rollingstone,
+                 @recent_rollingstone,
                  @recent_venturebeat_music,
                  @recent_cmu
                ]
