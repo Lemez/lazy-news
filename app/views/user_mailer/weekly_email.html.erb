@@ -7,14 +7,13 @@ http://www.emailology.org/#2 -->
     <% @lastsource = '' %>
 
 <table cellpadding="0" cellspacing="0" border="0" align="center" font-size='18px'>
-      <tr width="600" font-size='28px'>
-        Lazy News
-      </tr>
+   
       <br />
       <br />
-      <tr width="600" font-size='48px'>
-        You are signed up to Lazy News, along with <%= User.all.size %> other subscribers. Good for you!</br> If you prefer to see this in the browser, click 
-        <%= link_to "here!", "#{Rails.root}/mailer/preview_welcome" %>
+      <tr width="600" font-size='48px' bgcolor="#ffffff">
+        <h4 style="font-size:24px;line-height:24px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;margin-top:0;margin-bottom:0;padding-top:0;padding-bottom:0;font-weight:normal;color:#444444!important">
+        Welcome to this week's <em>Lazy News</em>, for music heads with less time than sense. This week, we are <%= User.all.size %> strong! <br /><br /> If you prefer to see this in the browser, click 
+        <%= link_to "here.", "#{Rails.root}/mailer/preview_welcome" %></h4>
       
       </tr>
         <br />
