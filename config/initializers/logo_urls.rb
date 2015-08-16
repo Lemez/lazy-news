@@ -6,5 +6,8 @@ ABSOLUTE_LOGO_URLS = {
 'musicbusinessworldwide' => 'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSIj9YTCQsW2-DSHdy9gk1sreakygnYjESe8yBn-NC1-0iLmDvhs-TPaKU',
 'cmu' => 'http://jennaleepr.com/wp-content/uploads/2015/05/CMU-Logo1.jpg',
 'rollingstone' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReALB-6YWAAHqU-Y4LkSyQ_BNKHzfn40Eft39BOK_CLH7mger5mA',
-'venturebeat' => 'https://www.defcon.org/images/defcon-main/VB-logo.jpg'
+'venturebeat' => 'https://www.defcon.org/images/defcon-main/VB-logo.jpg',
+'empty' => 'http://freemusicarchive.org/file/images/curators/Video_-_20110913125656080.jpg?width=476&height=269'
 }
+
+RELATIVE_IMAGES = ['betalist.png', 'music_ally.png', 'mit.png', 'cmu.jpg', 'rollingstone.png', 'venturebeat.jpeg', 'wired.png','completemusicupdate.jpg','mbw.png']

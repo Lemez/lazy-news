@@ -1,6 +1,7 @@
 class MailerController < ApplicationController
 
   def preview_welcome
+  	@users = User.all
   	@companies = Startup.order(:modified).reverse[0..4]
 	@stories = Story.is_music.where(:modified => 1.week.ago..Time.now).where.not(source:'rollingstone').order(:modified).order(source: :desc).reverse
     @genre = 'music'
