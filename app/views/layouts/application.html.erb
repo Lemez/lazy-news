@@ -10,7 +10,7 @@
 	</head>
 	<body>
 			<%= render "partials/nav" %>
-			<%= render "partials/flash" %>
+			<%= render "partials/flash", :locals => {:flash => flash} %>
 		<%= yield %>
 	</body>
 </html>

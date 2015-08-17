@@ -1,8 +1,5 @@
 class StartupsController < ApplicationController
-
 	def index
-		@startups = Startup.all
+		@startups = Startup.all.order(:modified).reverse
 	end
-
-	
 end

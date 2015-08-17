@@ -5,7 +5,7 @@
 
 # Example:
 #
-set :output, "#{path}/log/cron.log"
+# set :output, "#{path}/log/cron.log"
 #
 # every 2.hours do
 #   command "/usr/bin/some_great_command"
@@ -19,8 +19,13 @@ set :output, "#{path}/log/cron.log"
 
 # Learn more: http://github.com/javan/whenever
 
-# set :output, {:error => "log/cron_error_log.log", :standard => "log/cron_log.log"}
+set :output, {:error => "#{path}/log/cron_error_log.log", :standard => "#{path}/log/cron_log.log"}
+set :environment, "development"
 
-every 2.hours do
-	rake "execute_all"
+job_type :rake,  "cd :path && :environment_variable=:environment :bundle_command rake :task :output"
+
+every 60.minutes do
+	rake "grab_tasks:execute_all"
 end
+
+# update with `whenever -w`

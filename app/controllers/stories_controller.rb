@@ -6,7 +6,7 @@ class StoriesController < ApplicationController
   def latest
     @stories = Story.all.where.not(source:'rollingstone')
     @all_by_date = @stories.order(:modified).last_month
-    flash[:notice] = ''
+  p flash
   end
 
   def music
@@ -30,7 +30,6 @@ class StoriesController < ApplicationController
                  @recent_venturebeat_music,
                  @recent_cmu
                ]
-
 
   end
 
