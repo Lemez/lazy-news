@@ -24,7 +24,7 @@ http://www.emailology.org/#2 -->
 
 <table cellpadding="0" cellspacing="0" border="0" align="center" font-size='18px'>
 
-     <%= render "partials/startups_header" %> 
+     <%= render "partials/mailer/startups_header" %> 
 
       <% @companies.each do |startup| %>
         <tr>
@@ -50,7 +50,7 @@ http://www.emailology.org/#2 -->
     <% @stories.each do |story|%>
 
       <% @story = story %>
-      <%= render "partials/mailer_header" if @story.source != @lastsource  %>
+      <%= render "partials/mailer/mailer_header" if @story.source != @lastsource  %>
     
     <tr>
        

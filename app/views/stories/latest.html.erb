@@ -3,10 +3,15 @@
 	<section>
 
 		<div class="all_by_date desktop down" id="music">
-				<%= render "partials/allstories" %>
+				<%= render "partials/latest/allstories" %>
 		</div>
+
+		<div class="all_by_date tablet down" >
+				<%= render "partials/latest/allstories_tablet" %>
+		</div>
+
 		<div class="all_by_date mobile down" >
-				<%= render "partials/allstories_mobile" %>
+				<%= render "partials/latest/allstories_mobile" %>
 		</div>
 
 	</section>

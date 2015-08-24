@@ -1,0 +1,38 @@
+<div id='allstoriesdivtablet'>
+
+	<% @all_by_date.each_with_index do |story, index| %>
+
+		<% case index%6 %>
+		<% when 0 %>
+			<% @class='medium tablet-left' %>
+		<% when 1 %>
+			<% @class='medium tablet-right' %>
+		<% else %>
+			<% @class='small' %> 
+		<% end %>
+		<article class="<%=@class%>">
+			<div class="story-image">
+				<%= link_to (image_tag story.pic_url.fix_asset_path, :height => 200), story.url, :target => "_blank" %>
+			</div>	
+				
+			<div class='story-data'>	
+			
+				
+				<div class="story-modified">
+						<% t=story.modified %>
+						<%= t.strftime("%d.%m.%Y").strip if t %> 
+				</div>
+
+				<div class='story-title' id='story<%= story.id %>'>
+					<%= link_to story.title, story.url, :target => "_blank" %>
+				</div>
+
+					<!-- <div class='story-source'>
+					<%# story.source %>
+				</div> -->
+			</div>
+		</article>
+
+	<% end %>
+
+</div>

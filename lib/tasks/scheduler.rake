@@ -28,8 +28,14 @@ namespace :grab_tasks do
 
      Story.where(url: @raw_parameters[:url]).first_or_create do |s|
         s.update(@raw_parameters)
+
          p "saved: #{@raw_parameters}"
+         tweet_story(@raw_parameters[:title], @raw_parameters[:url], @raw_parameters[:pic_url])
     end
+  end
+
+  def tweet_story(title,url,pic)
+    Rake::Task["bot:tweetstory"].invoke(title,url,pic)
   end
 
 

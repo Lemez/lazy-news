@@ -9,8 +9,8 @@
   		<%= csrf_meta_tags %>
 	</head>
 	<body>
-			<%= render "partials/nav" %>
-			<%= render "partials/flash", :locals => {:flash => flash} %>
+			<%= render "partials/other/nav" %>
+			<%= render "partials/other/flash", :locals => {:flash => flash} %>
 		<%= yield %>
 	</body>
 </html>

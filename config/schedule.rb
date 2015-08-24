@@ -24,8 +24,19 @@ set :environment, "development"
 
 job_type :rake,  "cd :path && :environment_variable=:environment :bundle_command rake :task :output"
 
-every 60.minutes do
+every 15.minutes do
+	p "\n\n #{Time.now} : grab_tasks:execute_all \n\n"
 	rake "grab_tasks:execute_all"
+end
+
+every 16.hours do
+	p "\n\n #{Time.now} : bot:follow \n\n"
+	rake "bot:follow"
+end
+
+every 12.hours do
+	p "\n\n #{Time.now} : bot:fave \n\n"
+	rake "bot:fave"
 end
 
 # update with `whenever -w`

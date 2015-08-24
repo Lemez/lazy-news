@@ -105,6 +105,11 @@ group :test do
 end
 
 gem 'chatterbot'
+gem 'twitter'
+
+gem "secure_headers", :require => 'secure_headers'
+
+gem 'rsemantic'
 
 
 
