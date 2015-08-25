@@ -3,10 +3,10 @@
 
 Each time you make changes on your CSS you need to run the following commands on the terminal:
 
-$bundle exec rake assets:precompile
-$git add . 
-$git commit -m "msg" 
-$git push heroku master
+bundle exec rake assets:precompile
+git add . 
+git commit -m "rake precompile" 
+git push heroku master
 
 Command line - see local CRON:
 
