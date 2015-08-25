@@ -107,9 +107,9 @@ end
 gem 'chatterbot'
 gem 'twitter'
 
-gem "secure_headers", :require => 'secure_headers'
+# gem "secure_headers", :require => 'secure_headers'
 
-gem 'rsemantic'
+# gem 'rsemantic'
 
 
 
