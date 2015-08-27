@@ -1,6 +1,10 @@
-
+<% puts "LENGTH: #{@sources.size}" %>
 <% @sources.each do |s| %>
-	
+	<% puts "OBJECT: #{s}" %>
+	<% puts "CLASS: #{s.class}" %>
+	<% puts "ITEM: #{s[0]}" %>
+	<% puts "ITEMCLASS: #{s[0].class}" %>
+	<% puts "ITEM SOURCE: #{s[0].source}" %>
 	<% source,area = s[0].source,s[0].area %>
 	<div class="<%= [source, area].join(' ') %>">
 		<table>
