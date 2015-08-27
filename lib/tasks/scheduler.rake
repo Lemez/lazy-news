@@ -112,7 +112,7 @@ namespace :grab_tasks do
                           :pic_url => pic_url,
                           :full_text => full_text
                         }
-      p raw_parameters
+      p @raw_parameters
       save_parameters
 
      end
