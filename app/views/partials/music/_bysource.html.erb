@@ -1,8 +1,8 @@
 
 <% @sources.each do |s| %>
-<% p s[0] %>
+<% p s.source %>
 
-	<% source,area = s[0].source,s[0].area %>
+	<% source,area = s.source,s.area %>
 	<div class="<%= [source, area].join(' ') %>">
 		<table>
 			<%= render 'partials/music/source_heading', mystory:s  %>
