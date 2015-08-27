@@ -1,7 +1,8 @@
 
 <% @sources.each do |s| %>
-	<% puts "#{@sources}" %> 
-	<div class="<%= [s[0].source, ('source_' + s[0].area)].join(' ') %>">
+	
+	<% source,area = s[0].source,s[0].area %>
+	<div class="<%= [source, area].join(' ') %>">
 		<table>
 			<%= render 'partials/music/source_heading', mystory:s  %>
 
