@@ -1,15 +1,15 @@
 
 <% @sources.each do |s| %>
-<% p s.source %>
+	<%= s %>
 
-	<% source,area = s.source,s.area %>
-	<div class="<%= [source, area].join(' ') %>">
+	<%# source,area = s.source,s.area %>
+<!-- 	<div class="<%# [source, area].join(' ') %>">
 		<table>
-			<%= render 'partials/music/source_heading', mystory:s  %>
+			<%# render 'partials/music/source_heading', mystory:s  %>
 
 			<tbody>
-				<%= render 'partials/music/source_headlines', mystory:s  %>
+				<%# render 'partials/music/source_headlines', mystory:s  %>
 			</tbody>
 		</table>
-	</div>
+	</div> -->
 <% end %>
